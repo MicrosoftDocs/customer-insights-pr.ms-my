@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Keupayaan Insights khalayak dalam Dynamics 365 Customer Insights
+summary: Inges, satukan dan susun data pelanggan daripada berbilang sumber. Cipta dan urus profil pelanggan dan segmenan masa nyata. Menyepadukan data pelanggan dengan sistem lain untuk menjadikan ia lebih tidak boleh dilaksanakan.
+metadata:
+  title: Dokumentasi Insights khalayak
+  description: Hab bantuan dengan pautan utama untuk Insights khalayak.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ms-MY
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406470"
+landingContent:
+- title: Tentang Insights khalayak
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Ikhtisar produk
+      url: overview.md
+    - text: Ciri baharu dan dikemas kini
+      url: whats-new-audience-insights.md
+    - text: Tapak komuniti
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Menyerap sumber data
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Tambah sumber data
+      url: data-sources.md
+    - text: Segar semula tokokan
+      url: incremental-refresh-data-sources.md
+    - text: Memahami entiti
+      url: entities.md
+- title: Satukan data
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Petakan
+      url: map-entities.md
+    - text: Padankan
+      url: match-entities.md
+    - text: Gabungkan
+      url: merge-entities.md
+- title: Menapis profil pelanggan
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurasi perhubungan
+      url: relationships.md
+    - text: Senaraikan aktiviti pelanggan
+      url: activities.md
+    - text: Bawa model pembelajaran mesin anda sendiri
+      url: custom-models.md
+- title: Eksport data pelanggan
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sediakan destinasi eksport
+      url: export-destinations.md
+    - text: Kad pelanggan dalam aplikasi Dynamics 365
+      url: customer-card-add-in.md
+    - text: Penyambung Power BI
+      url: export-power-bi.md
+- title: Tadbir aplikasi
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurasikan sistem
+      url: system.md
+    - text: Takrifkan keizinan pengguna
+      url: permissions.md
+    - text: Uruskan berbilang persekitaran
+      url: manage-environments.md

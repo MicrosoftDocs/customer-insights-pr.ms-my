@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Hab bantuan untuk Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Cari artikel berkaitan untuk bermula dengan kandungan bantuan.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ms-MY
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406487"
+title: Dokumentasi Dynamics 365 Customer Insights
+summary: Cari sumber berguna untuk memulakan dan mengetahui tentang ciri dan keupayaan Customer Insights.
+landingContent:
+- title: Kenali Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Gambaran keseluruhan Customer Insights
+      url: overview.md
+    - text: Pelan keluaran
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Akses persekitaran anda
+      url: https://home.ci.ai.dynamics.com/
+- title: Mari bermula dengan Insights khalayak
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Daftar untuk percubaan
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Ciri baharu
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Dokumentasi Insights khalayak
+      url: audience-insights/index.yml
+- title: Berhubung
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Sertai komuniti Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Kongsi idea anda
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Laporkan isu
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Tutorial Insights khalayak
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Cipta persekitaran baru
+      url: audience-insights/home.md
+    - text: Cipta profil pelanggan disatukan
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Gunakan sebarang aplikasi
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Eksport data Insights khalayak
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sediakan destinasi eksport
+      url: audience-insights/export-destinations.md
+    - text: Kad pelanggan dalam aplikasi Dynamics 365
+      url: audience-insights/customer-card-add-in.md
+    - text: Penyambung Power BI
+      url: audience-insights/export-power-bi.md
+- title: Mentadbir Insights khalayak
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurasikan sistem
+      url: audience-insights/system.md
+    - text: Takrifkan keizinan pengguna
+      url: audience-insights/permissions.md
+    - text: Uruskan berbilang persekitaran
+      url: audience-insights/manage-environments.md
+- title: Tentang Insights penglibatan (pratonton)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Gambaran keseluruhan keupayaan
+      url: engagement-insights/overview.md
+    - text: Terma dan konsep
+      url: engagement-insights/glossary.md
+    - text: Mari Bermula
+      url: engagement-insights/get-started.md
+- title: Laporan untuk Insights penglibatan (pratonton)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Lihat laporan
+      url: engagement-insights/view-reports.md
+    - text: Cipta laporan tersuai
+      url: engagement-insights/custom-reports.md
+    - text: Lihat laporan profil disatukan
+      url: engagement-insights/profile-reports.md
+- title: Peristiwa untuk Insights penglibatan (pratonton)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Cipta peristiwa yang diperhalus
+      url: engagement-insights/refined-events.md
+    - text: Eksport peristiwa
+      url: engagement-insights/export-events.md
+    - text: Padam dan eksport data peribadi
+      url: engagement-insights/delete-export-personal-data.md
