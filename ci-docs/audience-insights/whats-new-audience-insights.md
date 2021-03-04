@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650015"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270443"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
@@ -31,6 +31,77 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="january-2021-updates"></a>Kemas kini Januari 2021
+
+Kemas kini pada Januari 2021 termasuk beberapa ciri, peningkatan prestasi dan pembetulan pepijat.
+
+#### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Fungsi lanjutan dan prestasi yang dipertingkatkan untuk eksport SFTP** Anda kini boleh mengeksport semua entiti output dari Customer Insights ke hos SFTP. Sebelum ini, eksport terhad kepada entiti segmen. Di samping itu, prestasi eksport SFTP membolehkan lebih banyak jumlah data dalam masa yang kurang, bergantung kepada prestasi hos SFTP anda.    
+  Untuk maklumat lanjut, lihat [Penyambung untuk SFTP (pratonton)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmen
+
+- **Pembelajaran mesin dikuasakan telah mencadangkan segmen untuk meningkatkan metrik** Ada cara baharu untuk menemui dan mencipta segmen. Sistem menggunakan model AI untuk mencadangkan segmen yang boleh membantu meningkatkan KPI (ukuran) yang anda sudah jejaki. Kami menunjukkan sejauh mana pengaruh atribut yang anda pilih pada ukuran atau atribut utama lain. Maklumat ini membantu mencari segmen yang berpotensi yang membentangkan peluang.    
+  Untuk maklumat lanjut, lihat [Segmen yang dicadangkan (pratonton)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Penyatuan data
+
+- **Pengalaman padanan dipertingkatkan** Dalam kawasan penyatuan data, pengalaman sepadan telah dikemas kini. Ia membolehkan anda mengkonfigurasi dan melihat peraturan padanan, termasuk statistik terperinci untuk menerangkan lebih lanjut cara padanan berfungsi. Terdapat pilihan untuk menyahdayakan peraturan padanan supaya ia tidak lagi aktif sambil mengekalkan peraturan konfigurasi, seret dan lepas padanan, dan banyak lagi.
+  Untuk maklumat lanjut, lihat [Padanan entiti](match-entities.md).
+
+- **Output diduakan daripada proses padanan boleh didapati sebagai entiti** Output proses penduaani daripada proses padanana kini ditulis ke dalam entiti yang berasingan untuk analisis lanjut. Entiti ini terdiri daripada medan yang digunakan dalam proses penduaan dan rekod pemenang dan rekod alternatif yang sepadan yang digabungkan dengan rekod pemenang.
+  Untuk maklumat lanjut, lihat [Output penduaan sebagai entiti](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Pentadbiran sistem
+
+- **Kongsi data dengan lancar kepada Microsoft Dataverse** Anda kini boleh berkongsi output Customer Insights dengan aplikasi Microsoft Dataverse menggunakan Data Lake Microsoft Dataverse Terurus. Sebaik sahaja anda mengaitkan persekitaran Dataverse dengan Customer Insights, anda mendapat pilihan untuk mendayakan perkongsian data.
+  Untuk maklumat lanjut, lihat [Uruskan persekitaran](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Kemas kini Disember 2020
+
+Kemas kini pada Disember 2020 termasuk beberapa ciri, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Ciri baharu dan yang dikemas kini pada Disember 2020
+
+#### <a name="data-enrichment"></a>Pengayaan data
+
+- **Pengayaan Jenama Dipertingkat dan Pertalian minat**
+  
+  Kami mempermudahkan skor pertalian kami untuk menjadikannya lebih mudah difahami dan digunakan. Anda kini boleh mengenal pasti pelanggan dengan cepat berdasarkan bilangan pertalian yang mereka ada untuk jenama atau minat yang diberikan.
+
+  Di samping itu, kami telah menambah pilihan konfigurasi baharu untuk mengawal dengan lebih baik cara anda mahu profil pelanggan anda diperkaya. 
+
+  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md).
+
+- **Kawal profil mana yang hendak diperkaya**
+
+  Anda kini boleh memperkayakan hanya subset profil pelanggan anda dengan pilihan untuk memilih entiti segmen dan bukannya entiti pelanggan lalai. Cipta segmen dengan profil pelanggan yang anda ingin perkayakan dan pilih dalam konfigurasi pengayaan untuk set data pelanggan anda.
+  Ciri ini hanya tersedia untuk pengayaan yang disediakan oleh Experian dan HERE Technologies. Kami akan membolehkan keupayaan ini untuk lebih banyak pengayaan tidak lama lagi.
+
+  Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan demografi dari Experian](enrichment-experian.md) atau [Pengayaan profil pelanggan dengan HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Aktifkan segmen anda melalui Autopilot**
+
+  Eksport segmen ke Autopilot dan gunakan segmen ini untuk tujuan pemasaran. Untuk maklumat lanjut, lihat [Penyambung untuk Autopilot (pratonton)](export-autopilot.md).
+
+- **Aktifkan segmen anda melalui SendGrid**
+
+  Eksport segmen ke SendGrid dan gunakan segmen ini untuk tujuan pemasaran. Untuk mendapatkan maklumat lanjut, lihat [Penyambung untuk SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Pentadbiran sistem
+
+- **Pengalaman pengurusan persekitaran terkini**
+  
+  Anda kini boleh mencipta, mengedit, memadam dan menetapkan semula persekitaran secara langsung daripada pemilih persekitaran dalam pengepala aplikasi. 
+  
+  Di samping itu, persekitaran yang anda gunakan akan dipin di bahagian atas panel persekitaran supaya anda tidak perlu mencarinya lagi.
+
+  Untuk maklumat lanjut, lihat [Uruskan persekitaran](manage-environments.md).
+
 ## <a name="november-2020-updates"></a>Kemas kini November 2020
 
 Kemas kini pada November 2020 termasuk beberapa ciri, peningkatan prestasi dan pembetulan pepijat.
@@ -41,7 +112,7 @@ Kemas kini pada November 2020 termasuk beberapa ciri, peningkatan prestasi dan p
 
 - **Bawa data pengayaan anda sendiri melalui import tersuai Protokol Pemindahan Fail Selamat (SFTP)**
   
-  Import tersuai SFTP membolehkan anda untuk mengimport data pengayaan yang tidak perlu melalui proses penyatuan data. Ketahui lebih lanjut tentang import tersuai SFTP.
+  Import tersuai SFTP membolehkan anda mengimport data pengayaan yang tidak perlu melalui proses penyatuan data. Ketahui lebih lanjut tentang import tersuai SFTP.
 
   Untuk mendapatkan maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data tersuai (pratonton)](enrichment-SFTP-custom-import.md).
  
@@ -165,7 +236,7 @@ Untuk mendapatkan maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan 
 Anak tetingkap butiran tugas membolehkan anda melihat butiran mengenai tugas yang sistem jalankan. Ini adalah cara yang berguna untuk mengenal pasti isu dengan konfigurasi dan mencari penyelesaian.
 Semak mesej ralat lihat cara anda menangani isu berpotensi.
  
-- **Memproses maklumat yang ditambah ke halaman tambahan**
+- **Maklumat pemprosesan ditambah ke lebih banyak halaman**
 
 Peningkatan ini menambahkan maklumat mengenai status entiti anda pada halaman **Entiti** dan **Pelanggan**.
  
@@ -202,9 +273,9 @@ Kemas kini pada Ogos 2020 termasuk beberapa ciri, peningkatan prestasi dan pembe
 
 #### <a name="enrichment"></a>Pengayaan
 
-- **Pengayaan afiniti kepentingan yang tersedia dalam pasaran tambahan**
+- **Perkayaan pertalian faedah tersedia di lebih banyak pasaran**
 
-  Kami meluaskan ketersediaan pengayaan afiniti kepentingan di luar Amerika Syarikat untuk lima pasaran tambahan: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan sambungan ini, anda boleh memperkayakan data pelanggan anda dengan minat tambahan yang berkaitan dengan pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang terletak di pasaran ini menggunakan data proprietari tempatan daripada Microsoft Graph.
+  Kami melanjutkan ketersediaan pengayaan pertalian faedah di luar Amerika Syarikat kepada lima pasaran lain: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan pelanjutan ini, anda boleh memperkayakan data pelanggan anda dengan lebih banyak minat yang dikenakan kepada pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang terletak di pasaran ini menggunakan data proprietari tempatan daripada Microsoft Graph.
   Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ Kemas kini pada Julai 2020 termasuk beberapa ciri, peningkatan prestasi dan pemb
 
 #### <a name="enrichment"></a>Pengayaan
 
-- **Pengayaan afiniti jenama tersedia dalam pasaran tambahan**
+- **Pengayaan pertalian jenama tersedia di lebih banyak pasaran**
 
-  Kami memperluaskan ketersediaan pengayaan afiniti jenama melangkaui Amerika Syarikat kepada lima pasaran tambahan: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan perluasan ini, anda boleh memperkayakan data pelanggan anda dengan jenama tempatan dalam pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang terletak di pasaran ini menggunakan data proprietari tempatan daripada Microsoft Graph.
+  Kami melanjutkan ketersediaan pengayaan pertalian jenama di luar Amerika Syarikat kepada lima pasaran lain: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan perluasan ini, anda boleh memperkayakan data pelanggan anda dengan jenama tempatan dalam pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang terletak di pasaran ini menggunakan data proprietari tempatan daripada Microsoft Graph.
   Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Kemas kini Jun 2020
@@ -238,7 +309,7 @@ Kemas kini pada Jun 2020 termasuk beberapa ciri, peningkatan prestasi dan pembet
 
 - **Pengayaan dengan data syarikat daripada Leadspace**
   
-  Takrifkan medan dalam profil pelanggan yang disatukan yang digunakan untuk mencari data syarikat berkaitan daripada Leadspace. Selepas menjalankan proses pengayaan, profil B2B diperkayakan dengan atribut tambahan termasuk saiz, lokasi, industri syarikat dan banyak lagi.    
+  Takrifkan medan dalam profil pelanggan yang disatukan yang digunakan untuk mencari data syarikat berkaitan daripada Leadspace. Selepas menjalankan proses pengayaan, profil B2B diperkaya dengan lebih banyak sifat termasuk saiz syarikat, lokasi, industri dan banyak lagi.    
   Kerjasama ini membolehkan anda menambah baik kualiti data anda dengan input daripada perkhidmatan pihak ketiga. Untuk menggunakan pengayaan ini, anda memerlukan lesen daripada Leadspace untuk mengakses data syarikat B2Bnya. Sistem akan menggunakan lesen itu untuk memastikan data anda diperkayakan secara berterusan.    
   Untuk maklumat lanjut, lihat [Pengayaan profil syarikat dengan Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Kemas kini pada Jun 2020 termasuk beberapa ciri, peningkatan prestasi dan pembet
   Kawalan baharu pada Tambahan Kad Pelanggan Dynamics 365 membolehkan anda menunjukkan pengayaan jenama dan kepentingan pada kenalan anda dalam aplikasi penglibatan pelanggan dalam Dynamics 365.    
   Untuk mendapatkan maklumat lanjut, lihat [Tambahan Kad Pelanggan](customer-card-add-in.md).
 
-- **Pencetus Power Automate tambahan**
+- **Lebih banyak pencertus Power Automate**
 
   Kami telah memperluaskan pencetus kami untuk Power Automate dan telah menambahkan pencetus yang berikut:
   - Dapatkan pemberitahuan atau lakukan tindakan apabila segar semula penuh yang diautomatikkan (sumber data, penyatuan, segmen, ukuran, eksport) lengkap
@@ -295,12 +366,12 @@ Kemas kini pada Jun 2020 termasuk beberapa ciri, peningkatan prestasi dan pembet
   
   Cari pelanggan serupa dalam pangkalan pelanggan anda menggunakan kecerdikan buatan. Model pembelajaran mesin pengelasan perduaan menguntukkan skor keserupaan kepada pelanggan dalam segmen yang dikembangkan. Skor berasaskan pada persamaan kepada pelanggan dalam segmen sumber. Bergantung pada skor keserupaan, profil pelanggan ditambahkan pada segmen yang baharu dicipta.
 
-  Kadang-kala dirujuk sebagai pemodelan serupa dalam pemasaran digital, ia menggunakan model AI untuk membantu mencari pelanggan yang serupa dengan segmen lain pelanggan anda dengan pemfaktoran dalam atribut tambahan. Ia bukan sahaja membolehkan anda memilih atribut tetapi juga membolehkan anda menentukan bilangan maksimum pelanggan yang patut berada dalam segmen baharu ini. Model AI kemudian akan mengira skor keserupaan untuk setiap pelanggan berdasarkan atribut yang anda pilih dan mencari pelanggan dengan skor keserupaan purata yang lebih tinggi. Segmen yang terhasil akan mengandungi pelanggan yang nampak serupa dengan pelanggan dalam segmen asal anda.    
+  Kadang-kadang dirujuk sebagai pemodelan serupa dalam pemasaran digital, ia menggunakan model AI untuk membantu mencari pelanggan yang serupa dengan segmen pelanggan anda yang lain dengan memfaksirkan lebih banyak atribut. Ia bukan sahaja membolehkan anda memilih atribut tetapi juga membolehkan anda menentukan bilangan maksimum pelanggan yang patut berada dalam segmen baharu ini. Model AI kemudian akan mengira skor keserupaan untuk setiap pelanggan berdasarkan atribut yang anda pilih dan mencari pelanggan dengan skor keserupaan purata yang lebih tinggi. Segmen yang terhasil akan mengandungi pelanggan yang nampak serupa dengan pelanggan dalam segmen asal anda.    
   Untuk maklumat lanjut, lihat [Pelanggan Serupa](find-similar-customer-segments.md).
 
 - **Tindanan dan pembeza segmen**
 
-  Tindanan segmen membolehkan anda melihat jumlah dan pelanggan yang sama dengan dua atau lebih segmen. Contohnya, cara segmen orang berbelanja tinggi bertindan dengan segmen pelanggan kepuasan tinggi atau cara segmen pelanggan penggodakan bertindan dengan segmen pelanggan kepuasan rendah. Selain itu, anda boleh menganalisis cara tindanan berubah berdasarkan atribut tambahan pilihan anda.
+  Tindanan segmen membolehkan anda melihat jumlah dan pelanggan yang sama dengan dua atau lebih segmen. Contohnya, cara segmen orang berbelanja tinggi bertindan dengan segmen pelanggan kepuasan tinggi atau cara segmen pelanggan penggodakan bertindan dengan segmen pelanggan kepuasan rendah. Selain itu, anda boleh menganalisis cara pertindihan berubah berdasarkan atribut tambahan pilihan anda.
 
   Pembeza segmen mendedahkan perkara yang membezakan satu segmen daripada pelanggan anda yang lain atau daripada segmen yang lain. Anda hanya perlu mengenal pasti segmen dan sistem akan mengenal pasti atribut dan ukuran profil yang membezakan segmen dalam bentuk senarai kedudukan pembeza—dari pembeza paling kuat hingga paling lemah.    
   Untuk maklumat lanjut, lihat [Cerapan segmen (pratonton)](segment-insights.md).
@@ -333,7 +404,7 @@ Kemas kini pada Mei 2020 termasuk beberapa ciri, peningkatan prestasi dan pembet
 
 - **Garis masa dan penghalaman yang dikemas kini pada Tambahan Kad Pelanggan**
 
-  Garis masa penyelesaian Tambahan Kad Pelanggan sepadan dengan garis masa aktiviti. Penghalaman garis masa yang dipertingkatkan, menunjukkan sehingga 50 aktiviti sekaligus. Ia juga membolehkan aktiviti tambahan dimuatkan dalam garis masa.    
+  Garis masa penyelesaian Tambahan Kad Pelanggan sepadan dengan garis masa aktiviti. Penghalaman garis masa yang dipertingkatkan, menunjukkan sehingga 50 aktiviti sekaligus. Ia juga membolehkan memuatkan lebih banyak aktiviti dalam garis masa.    
   Untuk mendapatkan maklumat lanjut, lihat [Tambahan Kad Pelanggan](customer-card-add-in.md).
 
 - **Power Automate mencetuskan perubahan bahagian**
@@ -412,7 +483,7 @@ Kemas kini pada April 2020 termasuk beberapa ciri, peningkatan prestasi dan pemb
 
 - **Eksport ke LiveRamp**
 
-  Aktifkan data anda dalam LiveRamp® untuk connect dengan lebih 500 platform merentasi ekosistem digital, sosial, dan TV. Manfaatkan data anda dalam LiveRamp untuk mensasarkan, menekan dan memperibadikan kempen iklan.    
+  Aktifkan data anda dalam LiveRamp® untuk connect dengan lebih 500 platform merentasi ekosistem digital, sosial, dan TV. Gunakan data anda dalam LiveRamp untuk penyasaran, menekan dan memperibadikan kempen iklan.    
   Untuk maklumat lanjut, lanjut [LiveRamp&reg; penyambung](export-liveramp.md).
 
 - **Tambahan Pasukan Customer Insights**
@@ -431,9 +502,9 @@ Kemas kini pada April 2020 termasuk beberapa ciri, peningkatan prestasi dan pemb
   
   Pengguna boleh mencipta, mengedit dan memadamkan langkah berdasarkan langkah lain. Sebagai contoh, langkah dibina pada langkah lain yang dibina pada langkah ketiga.
 
-#### <a name="segments"></a>Bahagian
+#### <a name="segments"></a>Segmen
 
-- **Operator tambahan**
+- **Pengendali lain**
   
   Operator dalam set membolehkan pembahagian untuk pelanggan dengan beberapa nilai rentetan yang mungkin. Sebelum operator ini ditambah, anda perlu membina bahagian tersebut dengan pelbagai ATAU syarat. Operator dalam set ini membenarkan anda melakukannya dengan satu syarat.    
   Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
@@ -444,3 +515,6 @@ Kemas kini pada April 2020 termasuk beberapa ciri, peningkatan prestasi dan pemb
   
   Salin konfigurasi anda daripada satu persekitaran kepada yang lain. Semasa mencipta persekitaran baharu, anda boleh memilih persekitaran sedia ada yang anda ingini untuk menyalin konfigurasi. Pada masa ini, kami menyokong sumber data, penyatuan data, perhubungan, langkah dan bahagian untuk disalin. Kelayakan sumber data dan data sebenar tidak disalin.    
   Untuk maklumat lanjut, lihat [Uruskan persekitaran](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

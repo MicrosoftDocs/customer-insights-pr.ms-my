@@ -1,20 +1,20 @@
 ---
 title: Perkayakan profil pelanggan dengan Microsoft Graph
 description: Gunakan data proprietari daripada Microsoft Graph untuk mengayakan data pelanggan anda dengan persamaan jenama dan kepentingan .
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406446"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269341"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Mengayakan profil pelanggan dengan persamaan jenama dan kepentingan (pratonton)
 
@@ -35,16 +35,21 @@ Kami menggunakan data carian dalam talian daripada Microsoft Graph untuk mencari
 
 [Ketahui lebih lanjut tentang Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Skor dan keyakinan afiniti
+## <a name="affinity-level-and-score"></a>Tahap dan skor perkaitan
 
-**Skor afiniti** dikira berdasarkan skala 100 mata, dengan 100 mewakili segmen yang mempunyai perkaitan tertinggi untuk jenama atau kepentingan.
+Pada setiap profil pelanggan yang diperkaya, kami menyediakan dua nilai yang berkaitan – tahap perkaitan dan skor perkaitan. Nilai ini membantu anda menentukan kekuatan perkaitan itu untuk bahagian demografi profil, untuk jenama atau minat, berbanding dengan segmen demografi lain.
 
-**Keyakinan persamaan** juga dikira berdasarkan skala 100 mata. Ia menunjukkan tahap keyakinan sistem yang segmen mempunyai persamaan untuk jenama atau kepentingan. Tahap keyakinan adalah berdasarkan saiz bahagian dan granulariti bahagian. Saiz bahagian ditentukan oleh jumlah data yang kami ada untuk bahagian tertentu. Perincian segmen ditentukan berdasarkan bilangan atribut (umur, jantina, lokasi) yang tersedia dalam profil.
+*Tahap perkaitan* terdiri daripada empat peringkat dan *skor perkaitan* akan dikira berdasarkan skala 100 mata yang memetakan kepada tahap perkaitan.
 
-Kami tidak paling menormalkan skor untuk set data anda. Oleh itu, anda tidak boleh melihat semua nilai skor afiniti yang mungkin untuk set data anda. Sebagai contoh, mungkin tiada profil pelanggan diperkaya dengan skor persamaan 100 dalam data anda. Ini mungkin jika tiada pelanggan wujud dalam segmen demografi yang menjaringkan 100 untuk jenama atau minat yang diberikan.
 
-> [!TIP]
-> Apabila [mencipta bahagian](segments.md) menggunakan skor afiniti, semak pengagihan skor afiniti untuk set data anda sebelum membuat keputusan pada ambang skor yang sesuai. Sebagai contoh, skor afiniti sebanyak 10 boleh dianggap signifikan dalam set data yang mempunyai skor perkaitan tertinggi hanya 25 untuk jenama atau kepentingan yang diberikan.
+|Peringkat perkaitan |Skor perkaitan  |
+|---------|---------|
+|Sangat tinggi     | 85-100       |
+|Tinggi     | 70-84        |
+|Sederhana     | 35-69        |
+|Rendah     | 1-34        |
+
+Bergantung pada butiran yang anda mahu untuk mengukur perkaitan, anda boleh menggunakan sama ada tahap atau skor perkaitan. Skor perkaitan memberikan anda kawalan yang lebih tepat.
 
 ## <a name="supported-countriesregions"></a>Negara/rantau yang disokong
 
@@ -54,17 +59,13 @@ Untuk memilih negara, buka **Pengayaan jenama** atau **Pengayaan minat** dan pil
 
 ### <a name="implications-related-to-country-selection"></a>Implikasi berkaitan dengan pemilihan negara
 
-- Apabila [memilih jenama anda sendiri](#define-your-brands-or-interests), kami akan menyediakan cadangan berasaskan pada negara/rantau yang dipilih.
+- Apabila [memilih jenama anda sendiri](#define-your-brands-or-interests), sistem memberikan cadangan berdasarkan negara atau rantau yang dipilih.
 
-- Apabila [memilih industri](#define-your-brands-or-interests), kami akan mentakrifkan jenama atau minat yang paling relevan berasaskan pada negara/rantau yang dipilih.
+- Apabila [memilih industri](#define-your-brands-or-interests), anda akan mendapat jenama atau minat yang paling berkaitan berdasarkan negara atau rantau yang dipilih.
 
-- Semasa [memetakan medan anda](#map-your-fields), jika medan Negara/Rantau tidak dipetakan, kami akan menggunakan data Microsoft Graph daripada negara/rantau yang dipilih untuk memperkayakan profil pelanggan anda. Kami juga akan menggunakan pemilihan itu untuk memperkayakan profil pelanggan yang tidak tersedia negara/rantau.
-
-- Semasa [memperkayakan profil](#refresh-enrichment), kami akan memperkayakan profil pelanggan yang kami sediakan data Microsoft Graph untuk jenama dan minat yang dipilih termasuk profil yang tidak berada dalam negara/rantau yang dipilih. Contohnya, jika anda memilih Jerman, kami akan memperkayakan profil yang terletak dalam Amerika Syarikat jika kami mempunyai data Microsoft Graph tersedia untuk jenama dan minat yang dipilih dalam Amerika Syarikat.
+- Apabila [memperkayakan profil](#refresh-enrichment), kami akan memperkayakan semua profil pelanggan yang membolehkan kami mendapatkan data untuk jenama dan minat yang dipilih. Termasuk profil yang tidak berada dalam negara atau rantau yang dipilih. Contohnya, jika anda memilih Jerman, kami akan memperkayakan profil yang terletak dalam Amerika Syarikat jika kami mempunyai data Microsoft Graph tersedia untuk jenama dan minat yang dipilih dalam Amerika Syarikat.
 
 ## <a name="configure-enrichment"></a>Konfigurasikan Pengayaan
-
-Mengkonfigurasikan pengayaan jenama dan kepentingan terdiri daripada dua langkah:
 
 ### <a name="define-your-brands-or-interests"></a>Takrifkan jenama dan kepentingan anda
 
@@ -75,9 +76,19 @@ Pilih salah satu daripada pilihan berikut:
 
 Untuk menambah jenama atau kepentingan, masukkannya ke dalam kawasan input untuk mendapatkan cadangan berdasarkan terma yang sepadan. Jika kami tidak menyenaraikan jenama atau minat yang anda cari, hantar maklum balas kepada kami menggunakan pautan **Cadangkan**.
 
+### <a name="review-enrichment-preferences"></a>Semak keutamaan pengayaan
+
+Semak keutamaan pengayaan lalai anda dan kemas kini apabila diperlukan.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Tangkapan skrin tetingkap keutamaan pengayaan.":::
+
+### <a name="select-entity-to-enrich"></a>Pilih entiti untuk memperkaya
+
+Pilih **Entiti diperkayakan** dan pilih set data yang anda ingin perkayakan dengan data syarikat daripada Microsoft Graph. Anda boleh memilih entiti Pelanggan untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
+
 ### <a name="map-your-fields"></a>Petakan medan anda
 
-Peta medan daripada entiti pelanggan disatukan anda kepada sekurang-kurangnya dua atribut untuk mentakrifkan segmen demografi yang anda mahu kami gunakan untuk mengayakan data pelanggan anda. Pilih **Edit** untuk mentakrifkan pemetaan medan dan pilih **Gunakan** apabila anda selesai. Pilih **Simpan** untuk melengkapkan pemetaan medan.
+Medan peta daripada entiti pelanggan disatukan anda untuk mentakrifkan segmen demografi yang anda mahu sistem gunakan untuk memperkaya data pelanggan anda. Peta Negara/Rantau dan sekurang-kurangnya atribut Tarikh Lahir atau Jantina. Di samping itu, anda mesti memetakan sekurang-kurangnya satu daripada Bandar (dan Negeri/Wilayah) atau Poskod. Pilih **Edit** untuk mentakrifkan pemetaan medan dan pilih **Gunakan** apabila anda selesai. Pilih **Simpan** untuk melengkapkan pemetaan medan.
 
 Format dan nilai berikut disokong, nilai bukan sensitif huruf:
 
@@ -120,3 +131,6 @@ Jenama dan afiniti berkepentingan juga boleh dilihat pada kad pelanggan individu
 ## <a name="next-steps"></a>Langkah seterusnya
 
 Bina di atas data pelanggan anda yang diperkaya. Cipta [Langkah-langkah](segments.md), [Bahagain](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman peribadi kepada pelanggan anda.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406458"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267782"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambung kepada sumber data Power Query
 
@@ -28,7 +28,10 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 
 1. Pilih kaedah **Import data** dan pilih **Seterusnya**.
 
-1. Berikan **Nama** untuk sumber data dan pilih **Seterusnya** untuk mencipta sumber data.
+1. Berikan **Nama** untuk sumber data dan pilih **Seterusnya** untuk mencipta sumber data. Namakan garis panduan: 
+   - Bermula dengan huruf.
+   - Gunakan huruf dan nombor sahaja. Aksara khas dan ruang idak dibenarkan.
+   - Gunakan antara 3 dan 64 aksara.
 
 1. Pilih salah satu [penyambung yang tersedia](#available-power-query-data-sources). Untuk contoh ini, kami pilih penyambung **Text/CSV**.
 
@@ -77,3 +80,6 @@ Penyambung dengan tanda semak dalam lajur **Customer Insights (Alir data)** ters
 3. Gunakan perubahan dan transformasi anda dalam dialog **Power Query - Edit pertanyaan** seperti yang diterangkan dalam bahagian [Cipta bahagian sumber data baharu](#create-a-new-data-source).
 
 4. Pilih **Simpan** dalam Power Query selepas melengkapkan pengeditan anda untuk menyimpan perubahan anda.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

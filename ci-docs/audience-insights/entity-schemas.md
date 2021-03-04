@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643919"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269295"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
 
@@ -45,3 +45,6 @@ Untuk maklumat lanjut, lihat dokumentasi tentang [Skim entiti Customer Insights 
 Anda boleh melihat entiti dalam [Navigasi Entiti Common Data Model](https://microsoft.github.io/CDM/). Pilih **Muat dari GitHub!** butang dan navigasi ke **foundationCommon** > **crmCommon** > **penyelesaian** > **customerInsights** tempat anda akan dapati senarai entiti Customer Insights dan definisi mereka.
 > [!div class="mx-imgBorder"]
 > ![Pengemudi Entiti CDM menunjukkan entiti CustomerActivity](media/CDM-entity-navigator.png "Pengemudi Entiti CDM menunjukkan entiti CustomerActivity")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

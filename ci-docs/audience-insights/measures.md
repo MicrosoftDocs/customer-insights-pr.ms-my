@@ -1,7 +1,7 @@
 ---
-title: Cipta dan edit ukuran
-description: Takrif ukuran berkaitan pelanggan untuk menganalisis dan menunjukkan prestasi bagi beberapa bidang perniagaan.
-ms.date: 10/15/2020
+title: Cipta dan urus tindakan
+description: Takrifkan ukuran untuk menganalisis dan mencerminkan prestasi perniagaan anda.
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,105 +9,111 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406477"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269939"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
-**Ukuran** mewakili penunjuk prestasi utama (KPIs) yang menunjukkan prestasi dan kesihatan bagi bidang perniagaan tertentu. Wawasan khalayak memberikan pengalaman intuitif untuk membina pelbagai jenis langkah, menggunakan pembina pertanyaan yang tidak memerlukan anda untuk kod atau mengesahkan langkah anda secara manual. Anda boleh menjejak ukuran perniagaan anda pada halaman **Laman Utama**, lihat ukuran untuk pelanggan tertentu pada **Kad Pelanggan**, dan guna ukuran untuk menakrifkan bahagian pada halaman **Bahagian**.
+Ukuran membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan dengan mendapatkan nilai yang relevan dari [profil disatukan](data-unification.md). Contohnya, sebuah perniagaan ingin melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu. Atau ukuran *jumlah jualan keseluruhan syarikat* untuk memahami perolehan peringkat agregat dalam keseluruhan perniagaan.  
+
+Ukuran dicipta menggunakan pembina ukuran, platform pertanyaan data dengan pelbagai pengendali dan pilihan pemetaan yang mudah. Ia membolehkan anda menapis data, mengumpulkan hasil, mengesan [laluan perhubungan entiti](relationships.md) dan pratonton output.
+
+Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada data pelanggan dan mendapatkan wawasan. Sebagai contoh, mencipta ukuran *jumlah perbelanjaan setiap pelanggan* dan *jumlah pulangan setiap pelanggan* membantu mengenal pasti kumpulan pelanggan yang mempunyai perbelanjaan tinggi tetapi pulangan tinggi. Anda boleh [mencipta segmen](segments.md) untuk memacu tindakan terbaik seterusnya. 
 
 ## <a name="create-a-measure"></a>Cipta ukuran
 
-Bahagian ini membimbing anda mencipta ukuran daripada awal. Anda boleh membina ukuran dengan data daripada berbilang sumber data yang disambungkan melalui entiti Pelanggan. Sesetengah [had perkhidmatan](service-limits.md) diguna pakai.
+Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membina ukuran dengan atribut data daripada entiti data yang mempunyai persediaan untuk berhubung dengan entiti Pelanggan. 
 
 1. Dalam wawasan khalayak, pergi ke **Ukuran**.
 
-2. Pilih **Ukuran baharu**.
+1. Pilih **Baharu**.
 
-3. Pilih ukuran **Jenis**:
-
-   - **Atribut Pelanggan**: Medan tunggal bagi setiap pelanggan yang menunjukkan skor, nilai, atau keadaan bagi pelanggan. Atribut pelanggan dicipta sebagai atribut dalam entiti dijana sistem dipanggil **Ukuran_Pelanggan**.
-
-   - **Ukuran pelanggan**: Wawasan pada tingkah laku pelanggan dengan pecahan mengikut dimensi terpilih. Entiti baharu dijana untuk setiap ukuran, berpotensi dengan berbilang rekod bagi setiap pelanggan.
-
-   - **Ukuran perniagaan**: Jejak prestasi dan kesihatan perniagaan anda. Ukuran perniagaan boleh mempunyai dua output yang berbeza: output numerik yang ditunjukkan pada halaman **Laman Utama** atau entiti baharu yang anda temui pada halaman **Entiti**.
-
-4. Berikan **Nama** dan **Nama paparan** optional, kemudian pilih **Seterusnya**.
-
-5. Pada bahagian **Entiti**, pilih entiti pertama daripada senarai juntai bawah. Pada peringkat ini, Anda perlu membuat keputusan sama ada memerlukan entiti tambahan sebagai sebahagian definisi ukuran anda.
-
-   > [!div class="mx-imgBorder"]
-   > ![Definisi ukuran](media/measure-definition.png "Definisi langkah")
-
-   Untuk menambah lebih banyak entiti, pilih **Tambah entiti** dan pilih entiti yang anda mahu gunakan untuk ukuran.
-
+1. Pilih **Edit nama** dan berikan **Nama** untuk langkah itu. 
    > [!NOTE]
-   > Anda hanya boleh memilih entiti yang mempunyai hubungan dengan entiti permulaan anda. Untuk maklumat lanjut tentang menakrif perhubungan, lihat [Perhubungan](relationships.md).
+   > Jika konfigurasi ukuran baharu anda hanya mempunyai dua medan, sebagai contog, CustomerID dan satu pengiraan, output akan ditambah sebagai lajur baharu kepada entiti yang dijana oleh sistem yang dipanggil Customer_Measure. Dan anda akan dapat melihat nilai ukuran dalam profil pelanggan disatukan. Ukuran lain akan menjana entiti mereka sendiri.
 
-6. Secara pilihan, anda boleh mengkonfigurasikan pemboleh ubah. Dalam bahagian **Pemboleh ubah**, pilih **Pemboleh ubah baharu**.
+1. Dalam kawasan konfigurasi, pilih fungsi pengagregatan daripada menu ke bawah **Pilih Fungsi**. Fungsi pengagregatan termasuk: 
+   - **Sum**
+   - **Purata**
+   - **Bilangan**
+   - **Kira Unik**
+   - **Maksimum**
+   - **Min**
+   - **Pertama**: mengambil kira nilai pertama bagi rekod data
+   - **Terakhir**: ambil nilai terakhir yang ditambah ke rekod data
 
-   Pemboleh ubah adalah pengiraan yang dibuat pada setiap rekod pilihan anda. Contohnya, menambah mata jualan (POS) dan jualan dalam talian untuk setiap rekod pelanggan anda.
+   :::image type="content" source="media/measure-operators.png" alt-text="Operator untuk mengukur pengiraan.":::
 
-7. Berikan **Nama** untuk pemboleh ubah.
+1. Pilih **Tambah atribut** untuk memilih data yang anda perlukan untuk mencipta ukuran ini.
+   
+   1. Pilih tab **Atribut**. 
+   1. Entiti data: Pilih entiti yang termasuk atribut yang anda mahu ukur. 
+   1. Atribut data: Pilih atribut yang anda mahu gunakan dalam fungsi pengagregatan untuk mengira ukuran. Anda hanya boleh memilih satu atribut pada satu masa.
+   1. Anda juga boleh memilih atribut data daripada ukuran sedia ada dengan memilih tab **Ukuran**. Atau, anda boleh mencari nama entiti atau ukuran. 
+   1. Pilih **Tambah** untuk menambah atribut terpilih pada ukuran.
 
-8. Dalam kawasan **Ungkapan**, pilih medan untuk memulakan pengiraan anda.
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Pilih atribut untuk digunakan dalam pengiraan.":::
 
-9. Taip ungkapan dalam kawasan **Ungkapan** semasa memilih lebih banyak medan untuk dimasukkan dalam pengiraan.
+1. Untuk membina lebih banyak ukuran rumit, anda boleh menambah lebih banyak atribut atau menggunakan operator matematik dalam fungsi ukuran anda.
 
-   > [!NOTE]
-   > Pada masa ini, hanya ungkapan yang aritmetik disokong. Selain itu, pengiraan pemboleh ubah tidak menyokong entiti daripada [laluan entiti](relationships.md) yang berbeza.
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Cipta ukuran rumit dengan operator matematik.":::
 
-10. Pilih **Selesai**.
+1. Untuk menambah penapis, pilih **Penapis** dalam kawasan konfigurasi. 
+  
+   1. Dalam bahagian **Tambah atribut** bagi anak tetingkap **Penapis**, pilih atribut yang anda mahu gunakan untuk mencipta penapis.
+   1. Tetapkan operator penapis untuk mentakrifkan penapis bagi setiap atribut yang dipilih.
+   1. Pilih **Gunakan** untuk menambah penapis terpilih pada ukuran.
 
-11. Dalam bahagian **Definisi ukuran**, anda akan menakrif bagaimana entiti yang dipilih dan pemboleh ubah dikira diagregat dalam entiti ukuran atau atribut baharu.
+1. Untuk menambah dimensi pilih **Dimensi** dalam kawasan konfigurasi. Dimensi akan ditunjukkan sebagai lajur dalam mengukur entiti output.
+   1. Pilih **Edit dimensi** untuk menambah atribut data yang anda mahu kumpulkan nilai ukuran. Sebagai contoh, bandar atau jantina. Secara lalai, dimensi *CustomerID* dipilih untuk mencipta *ukuran peringkat pelanggan*. Anda boleh mengalih keluar dimensi lalai jika anda mahu mencipta *ukuran peringkat perniagaan*.
+   1. Pilih **Selesai** untuk menambah dimensi pada ukuran.
 
-12. Pilih **Dimensi baharu**. Anda boleh memikirkan dimensi sebagai fungsi *himpun mengikut*. Output data untuk entiti atau atribut Ukuran anda akan dihimpun mengikut semua dimensi yang ditakrif oleh anda.
+1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dan entiti Pelanggan, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih.
+   1. Pilih **Keutamaan data** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti langkah anda.
+   1. Pilih **Selesai** untuk menggunakan pilihan anda. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Pilih kitaran agregat](media/measures-businessreport-measure-definition2.png "Pilih kitaran agregat")
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Pilih laluan entiti untuk ukuran.":::
 
-    Pilih atau masukkan maklumat berikut sebagai sebahagian definisi dimensi anda:
+1. Untuk menambah lebih banyak pengiraan untuk ukuran, pilih **Pengiraan baharu**. Anda hanya boleh menggunakan entiti pada laluan entiti yang sama untuk pengiraan baharu. Lebih banyak pengiraan akan ditunjukkan sebagai lajur baharu dalam mengukur entiti output.
 
-    - **Entiti**: Jika anda menakrif entiti Ukuran, ia hendaklah memasukkan sekurang-kurangnya satu atribut. Jika anda menakrifkan atribut Ukuran, ia hendaklah memasukkan sekurang-kurangnya satu atribut secara lalai. Pemilihan ini adalah tentang memilih entiti yang memasukkan atribut itu.
-    - **Medan**: Pilih atribut tertentu untuk dimasukkan sama ada dalam entiti atau atribut Ukuran anda.
-    - **Baldi**: Pilih sama ada anda mahu mengumpulkan data secara harian, bulanan, atau tahunan. Ia adalah pilihan yang diperlukan hanya jika anda telah memilih atribut jenis Tarikh.
-    - **Sebagai**: Takrifkan nama medan baharu anda.
-    - **Nama paparan**: Takrifkan nama paparan medan anda.
+1. Pilih **...** pada pengiraan untuk **Duplikasi**, **Nama semula** atau **Alih keluar** pengiraan daripada ukuran.
 
-    > [!NOTE]
-    > Ukuran perniagaan anda akan disimpan sebagai entiti nombor tunggal dan akan dipaparkan pada halaman **Laman Utama** melainkan anda menambah lebih banyak dimensi pada ukuran anda. Selepas menambah lebih banyak dimensi, ukuran *tidak* akan ditunjukkan pada halaman **Laman Utama**.
+1. Dalam kawasan **Pratonton**, anda akan melihat skema data bagi entiti output ukuran, termasuk penapis dan dimensi. Pratonton bertindak balas secara dinamik kepada perubahan dalam konfigurasi.
 
-13. Secara pilihan, tambah fungsi pengagregatan. Sebarang pengagregatan yang anda cipta hasilnya dalam nilai baharu antara entiti atau atribut Ukuran anda. Fungsi pengagregatan yang disokong ialah: **Minimum**, **Maksimum**, **Purata**, **Median**, **Jumlah**, **Unik Kiraan**, **Pertama** (mengambil rekod pertama bagi nilai dimensi), dan **Akhir** (mengambil kira rekod terakhir ditambah pada nilai dimensi).
+1. Pilih **Jalankan** untuk mengira hasil bagi langkah yang dikonfigurasikan. Pilih **Simpan dan tutup** jika anda mahu menyimpan konfigurasi semasa dan jalankan ukuran kemudian.
 
-14. Pilih **Simpan** untuk menggunakan perubahan anda pada ukuran.
+1. Pergi ke **Langkah** untuk melihat langkah yang baharu dicipta dalam senarai.
 
 ## <a name="manage-your-measures"></a>Urus tindakan anda
 
-Selepas mencipta sekurang-kurangnya satu ukuran, anda akan melihat senarai ukuran pada halaman **Langkah**.
+Selepas [mencipta ukuran](#create-a-measure), anda akan melihat senarai ukuran pada halaman **Langkah**.
 
-Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh dan masa penciptaan, tarikh dan masa edit terakhir, status (sama ada ukuran aktif, tidak aktif, atau gagal), dan tarikh dan masa penyegaran semula terakhir. Apabila anda memilih tindakan daripada senarai, anda boleh melihat pratonton output.
+Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh penciptaan, status dan keadaan. Apabila anda memilih ukuran daripada senarai, anda boleh pratonton output dan muat turun fail .CSV.
 
 Untuk menyegarkan semula semua tindakan pada masa yang sama, pilih **Segar semula semua** tanpa memilih tindakan khusus.
 
 > [!div class="mx-imgBorder"]
 > ![Tindakan untuk mengurus langkah tunggal](media/measure-actions.png "Tindakan untuk mengurus langkah tunggal")
 
-Secara alternatif, pilih tindakan daripada senarai dan lakukan salah satu daripada tindakan berikut:
+Pilih ukuran daripada senarai untuk pilihan berikut:
 
 - Pilih nama langkah untuk melihat butiran.
 - **Edit** konfigurasi langkah.
+- **Segar semula** ukuran berdasarkan data terkini.
 - **Nama semula** langkah.
 - **Padam** langkah.
-- Pilih elipsis (...) dan kemudian **Segar semula** untuk memulakan proses segar semula untuk tindakan.
-- Pilih elipsis (...) dan kemudian **Muat turun** untuk mendapatkan Fail .CSV tindakan.
+- **Aktifkan** atau **Nyahaktifkan**. Langkah tidak aktif tidak akan dapat disegar semula semasa [segar semula yang dijadualkan](system.md#schedule-tab).
 
 > [!TIP]
 > Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
 
 ## <a name="next-step"></a>Langkah seterusnya
 
-Anda boleh menggunakan ukuran sedia ada untuk mencipta bahagian pelanggan pertama pada halaman **Bahagian**. Untuk maklumat lanjut, lihat [Bahagian](segments.md).
+Anda boleh menggunakan ukuran sedia ada untuk mencipta [segmen pelanggan](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

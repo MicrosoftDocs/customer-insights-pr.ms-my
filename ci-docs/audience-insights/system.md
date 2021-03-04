@@ -1,7 +1,7 @@
 ---
 title: Konfigurasi sistem dalam cerapan khalayak
 description: Ketahui tentang tetapan sistem dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406478"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267351"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
 
-Halaman **Sistem** termasuk empat tab: **Status**, **Jadual**, **Perihal** dan **Umum**.
+Halaman **Sistem** termasuk tab berikut:
+- [Status](#status-tab)
+- [Jadual](#schedule-tab)
+- [Penggunaan API](#api-usage-tab)
+- [Perihal](#about-tab)
+- [Umum](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Halaman Sistem](media/system-tabs.png "Halaman Sistem")
 
 ## <a name="status-tab"></a>Tab status
 
-**Tab status** membolehkan anda menjejaki kemajuan pengingesan data, eksport data dan beberapa proses produk penting. Semak semula maklumat pada tab ini untuk memastikan kesempurnaan proses aktif.
+**Tab status** membolehkan anda menjejaki pengingesan data, eksport data dan beberapa proses produk penting lain. Semak semula maklumat pada tab ini untuk memastikan kesempurnaan proses aktif.
 
-Tab ini termasuk jadual status untuk **Sumber data**, **Proses sistem** dan **Persediaan data**. Setiap jadual menjejaki **Nama** tugas dan entitinya yang sepadan, **Status** jalanannya paling terkini dan masa ia **Dikemas kini terakhir**.
+Tab ini termasuk jadual dengan status dan pemprosesan maklumat untuk pelbagai proses. Setiap jadual menjejaki **Nama** tugas dan entitinya yang sepadan, **Status** jalanannya paling terkini dan masa ia **Dikemas kini terakhir**.
 
 Lihat butiran jalanan beberapa tugas terakhir dengan memilih namanya.
 
@@ -40,7 +45,7 @@ Terdapat enam jenis status untuk tugas. Jenis status yang berikut juga ditunjukk
 - **Dilangkau:** Tugas telah dilangkau. Satu atau lebih proses hiliran yang diharapkan oleh tugas ini telah gagal atau dilangkau.
 - **Kegagalan:** Pemprosesan tugas telah gagal.
 - **Dibatalkan:** Pemprosesan telah dibatalkan oleh pengguna sebelum ia selesai.
-- **Dibaris gilir:** Pemprosesan sedang dibaris gilir dan akan bermula sebaik sahaja semua tugas hilir dilengkapkan. Untuk maklumat lanjut, lihat [Segar semula dasar](#refresh-policies).
+- **Beratur dalam baris:** Pemprosesan sedang dibariskan dan akan bermula sebaik sahaja semua tugas huluan diselesaikan. Untuk maklumat lanjut, lihat [Segar semula dasar](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Segar semula dasar
 
@@ -89,4 +94,17 @@ Pilih **Simpan** untuk mengesahkan pilihan anda.
 
 ## <a name="api-usage-tab"></a>Tab penggunaan API
 
-Cari butiran tentang penggunaan API masa nyata dan lihat peristiwa yang terjadi dalam julat masa yang diberikan. Untuk maklumat lanjut, lihat [Pengingesan data masa nyata](real-time-data-ingestion.md).
+Cari butiran tentang penggunaan API masa nyata dan lihat peristiwa yang berlaku dalam tempoh masa yang diberikan. Anda memilih tempoh masa dalam menu ke bawah **Pilih tempoh masa**. 
+
+**Penggunaan API** mengandungi tiga bahagian: 
+- **Panggilan API** - sebuah carta yang membayangkan bilangan panggilan teragregrat kepada API dalam tempoh masa yang dipilih.
+
+- **Pemindahan data** - sebuah carta yang menunjukkan jumlah data yang dipindahkan melalui API dalam tempoh masa yang dipilih.
+
+-  **Operasi** - sebuah jadual dengan baris untuk setiap operasi API tersedia dan butiran mengenai penggunaan operasi. Anda boleh memilih nama operasi untuk pergi ke [rujukan API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operasi yang menggunakan [pengingesan data masa nyata](real-time-data-ingestion.md) akan mengandungi butang dengan simbol binokular untuk melihat penggunaan API masa nyata. Pilih butang untuk membuka anak tetingkap sisi yang mengandungi butiran penggunaan untuk penggunaan API masa nyata dalam persekitaran semasa.   
+   Gunakan kotak **Kumpulan mengikut** dalam anak tetingkap **Penggunaan API masa nyata** untuk memilih cara terbaik untuk menunjukkan interaksi masa nyata anda. Anda boleh mengumpulkan data mengikut kaedah API, nama dilayakkan entiti (entiti yang diinges), dicipta oleh (sumber peristiwa), hasil (berjaya atau gagal) atau kod ralat. Data tersedia sebagai carta sejarah dan sebagai jadual.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

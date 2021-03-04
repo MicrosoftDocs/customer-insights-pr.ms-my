@@ -5,16 +5,16 @@ ms.date: 11/18/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: jdahl
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 59f7f05ca0825ba147e9e93f10fa3508ec3a16dd
-ms.sourcegitcommit: ff824bbbd31fd666ab0da682bf48ea31580d242c
+ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4568477"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269617"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
 
@@ -107,3 +107,6 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md), [ukuran](measures.md) dan [eksport data](export-destinations.md) untuk menyampaikan pengalaman diperibadikan kepada pelanggan anda.
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

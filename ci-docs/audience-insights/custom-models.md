@@ -4,16 +4,16 @@ description: Kerja dengan model tersuai daripada Azure Machine Learning dalam Dy
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668914"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267245"
 ---
 # <a name="custom-machine-learning-models"></a>Model pembelajaran mesin tersuai
 
@@ -46,15 +46,15 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 
 1. Pilih perkhidmatan web Studio Pembelajaran Mesin (klasik) atau talian paip Pembelajaran Mesin Azure dalam juntai bawah **Perkhidmatan web yang mengandungi model anda**. Kemudian pilih **Seterusnya**.
    - Ketahui lebih lanjut tentang [menerbitkan perkhidmatan web Studio Pembelajaran Mesin (klasik)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Ketahui lebih lanjut tentang [menerbitkan talian paip dalam Pembelajaran Mesin Azure menggunakan pereka bentuk](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Talian paip anda mesti diterbitkan di bawah [titik tamat talian paip](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Ketahui lebih lanjut tentang [menerbitkan talian paip dalam Pembelajaran Mesin Azure menggunakan pereka bentuk](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Talian paip anda mesti diterbitkan di bawah [titik tamat talian paip](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Untuk setiap **Input perkhidmatan web**, pilih **Entiti** yang berpadanan daripada wawasan khalayak dan pilih **Seterusnya**.
+   > [!NOTE]
+   > Aliran kerja model tersuai akan menggunakan heuristik untuk memetakan medan input perkhidmatan web kepada atribut entiti berdasarkan nama dan jenis data medan. Anda akan melihat ralat jika medan perkhidmatan web tidak dapat dipetakan kepada entiti.
 
    > [!div class="mx-imgBorder"]
    > ![Konfigurasikan aliran kerja](media/intelligence-screen2-updated.png "Konfigurasikan aliran kerja")
-
+   
 1. Dalam langkah **Parameter Output Model**, tetapkan ciri berikut:
    - Studio Pembelajaran Mesin (klasik)
       1. Masukkan output **Nama entiti** yang anda mahu hasil output perkhidmatan web mengalir masuk.
@@ -112,3 +112,6 @@ Aliran kerja anda juga berjalan secara automatik dengan setiap muat semula berja
 1. Pilih **Padam** dan sahkan pemadaman anda.
 
 Aliran kerja anda akan dipadamkan. [Entiti](entities.md) yang telah dicipta apabila anda mencipta aliran kerja berlanjutan dan boleh dilihat daripada halaman **Entiti**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689186"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270291"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Pengingesan data masa nyata (pratonton)
 
@@ -83,6 +83,7 @@ Butiran API ini, termasuk parameter dan respons, boleh didapati dalam seksyen **
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami pengguna masa nyata anda dengan telemetri
 
-Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#api-usage-tab) dengan pergi ke **Pentadbir** > **Sistem** > **Penggunaan API**. Dalam jadual **Operasi**, baris untuk operasi API yang menggunakan kaedah masa nyata mengandungi butang untuk melihat penggunaan API masa nyata. Butang ini divisualisasikan dengan simbol binokular. Pilih butang untuk membuka anak tetingkap sisi yang mengandungi butiran penggunaan untuk penggunaan API masa nyata dalam persekitaran semasa.
+Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#api-usage-tab). 
 
-Gunakan pemilih **Kumpulkan mengikut** untuk memilih cara yang terbaik untuk mewujudkan interaksi masa nyata anda pada garis masa dari 24 jam terakhir hingga 30 hari terakhir. Anda boleh mengumpulkan data mengikut kaedah API, nama dilayakkan entiti (entiti yang diinges), dicipta oleh (sumber peristiwa), hasil (berjaya atau gagal) atau kod ralat. Data tersedia sebagai carta sejarah dan sebagai jadual.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

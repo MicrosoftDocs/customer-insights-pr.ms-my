@@ -4,17 +4,17 @@ description: Bekerja dengan data Common Data Model menggunakan Azure Data Lake S
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643469"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267871"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model menggunakan akaun Azure Data Lake
 
@@ -38,17 +38,25 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
 
 1. Pilih **Tambah sumber data**.
 
-1. Pilih **Sambung ke folder Common Data Model**, masukkan **Nama** untuk sumber data dan pilih **Seterusnya**.
+1. Pilih **Sambung ke folder Common Data Model**, masukkan **Nama** untuk sumber data dan pilih **Seterusnya**. Namakan garis panduan: 
+   - Bermula dengan huruf.
+   - Gunakan huruf dan nombor sahaja. Aksara khas dan ruang idak dibenarkan.
+   - Gunakan antara 3 dan 64 aksara.
 
 1. Anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Masukkan maklumat **Bekas** dan pilih **Seterusnya**.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan butiran sambungan untuk Azure Data Lake](media/enter-new-storage-details.png)
-
-1. Dalam dialog **Pilih folder Common Data Modelr**, pilih fail model.json untuk mengimport data daripada, dan pilih **Seterusnya**.
+   > ![Kotak dialog untuk memasukkan butiran sambungan baharu untuk Data Lake Azure](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Sebarang fail model.json yang berkaitan dengan sumber data lain dalam persekitaran tidak akan ditunjukkan dalam senarai.
+   > Anda memerlukan salah satu peranan yang berikut sama ada kepada bekas atau akaun storan yang dirujuk di atas untuk bersambung kepada dan mencipta sumber data:
+   >  - Pembaca Data Blob Storan
+   >  - Pemilik Data Blob Storan
+   >  - Penyumbang Blob Data Storan
 
-1. Anda akan mendapat senarai entiti yang tersedia dalam fail model.json yang dipilih. Anda boleh menyemak semula dan memilih daripada senarai entiti yang tersedia dan pilih **Simpan**. Semua entiti yang dipilih akan dinges daripada sumber data baharu.
+1. Dalam dialog **Pilih folder Common Data Model**, pilih fail model.json atau manifest.json untuk mengimport data daripada, dan pilih **Seterusnya**.
+   > [!NOTE]
+   > Sebarang fail model.json atau manifest.json yang berkaitan dengan sumber data lain dalam persekitaran tidak akan ditunjukkan dalam senarai.
+
+1. Anda akan mendapat senarai entiti yang tersedia dalam fail model.json atau manifest.json yang dipilih. Anda boleh menyemak semula dan memilih daripada senarai entiti yang tersedia dan pilih **Simpan**. Semua entiti yang dipilih akan dinges daripada sumber data baharu.
    > [!div class="mx-imgBorder"]
    > ![Kotak dialog yang menunjukkan senarai entiti daripada fail model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
 9. Selepas menyimpan pilihan anda, halaman **Sumber data** dibuka. Kini anda patut melihat sambungan folder Common Data Model sebagai sumber data.
 
 > [!NOTE]
-> Fail model. json hanya boleh mengaitkan dengan satu sumber data dalam persekitaran yang sama. Walau bagaimanapun, fail model.json boleh digunakan untuk sumber data dalam berbilang persekitaran.
+> Fail model.json atau manifest.json hanya boleh mengaitkan dengan satu sumber data dalam persekitaran yang sama. Walau bagaimanapun, fail model.json atau manifest.json boleh digunakan untuk sumber data dalam berbilang persekitaran.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Edit sumber data folder Common Data Model
 
-Anda boleh mengemas kini kekunci akses untuk akaun storan yang mengandungi folder Common Data Model. Anda juga boleh mengubah fail model.json. Untuk menyambung kepada bekas berbeza daripada akaun storan anda, atau mengubah nama akaun, [mencipta sambungan sumber data baharu](#connect-to-a-common-data-model-folder).
+Anda boleh mengemas kini kekunci akses untuk akaun storan yang mengandungi folder Common Data Model. Anda juga boleh mengubah fail model.json atau manifest.json. Untuk menyambung kepada bekas berbeza daripada akaun storan anda, atau mengubah nama akaun, [mencipta sambungan sumber data baharu](#connect-to-a-common-data-model-folder).
 
 1. Dalam cerapan khalayak, pergi ke **Data** > **Sumber data**.
 
@@ -77,13 +85,24 @@ Anda boleh mengemas kini kekunci akses untuk akaun storan yang mengandungi folde
 
 5. Secara alternatif, anda boleh mengemas kini dari sambungan utama akaun kepada sambungan berasaskan sumber atau langganan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Anda tidak boleh mengubah maklumat **Bekas** semasa mengemas kini sambungan.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan butiran sambungan untuk Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Secara alternatif, pilih model yang berbeza fail model.json dengan set entiti yang berbeza daripada bekas.
+   > ![Kotak dialog untuk memasukkan butiran sambungan untuk Data Lake Azure ke akaun storan sedia ada](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Anda memerlukan salah satu peranan yang berikut sama ada kepada bekas atau akaun storan yang dirujuk di atas untuk bersambung kepada dan mencipta sumber data:
+   >  - Pembaca Data Blob Storan
+   >  - Pemilik Data Blob Storan
+   >  - Penyumbang Blob Data Storan
+
+
+6. Secara alternatif, pilih fail model.json atau manifest.json lainl dengan set entiti yang berbeza daripada bekas.
 
 7. Secara alternatif, anda boleh memilih entiti tambahan untuk diinges. Anda juga boleh mengalih keluar sebarang entiti yang sudah dipilih jika tiada kebergantungan.
 
    > [!IMPORTANT]
-   > Jika terdapat pergantungan pada fail model.json sedia ada dan set entiti, anda akan melihat mesej ralat dan tidak boleh memilih fail model.json berbeza. Keluarkan kebergantungan sebelum mengubah fail model. json atau cipta sumber data baharu dengan fail model. json yang anda mahu gunakan untuk mengelakkan daripada mengeluarkan kebergantungan.
+   > Jika terdapat pergantungan pada fail model.json atau manifest.json sedia ada dan set entiti, anda akan melihat mesej ralat dan tidak boleh memilih fail model.json atau manifest.json yang berbeza. Keluarkan kebergantungan sebelum mengubah fail model.json atau manifest.json atau cipta sumber data baharu dengan fail model.json atau manifest.json yang anda mahu gunakan untuk mengelakkan daripada mengeluarkan kebergantungan.
 
 8. Secara alternatif, anda boleh memilih atribut atau entiti tambahan untuk mendayakan pemprofilan data atau menyahdayakan yang sudah dipilih.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

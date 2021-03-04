@@ -4,17 +4,17 @@ description: Import data daripada danau data terurus Common Data Service.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643409"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267825"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Sambung ke data dalam data lake terurus Common Data Service
 
@@ -34,7 +34,10 @@ Data disimpan dalam perkhidmatan dalam talian seperti Azure Data Lake Storage, m
 
 3. Pilih **Sambung ke Common Data Service** dan pilih **Seterusnya**.
 
-4. Masukkan **Name** untuk sumber data dan kemudian pilih **Seterusnya**.
+4. Masukkan **Name** untuk sumber data dan kemudian pilih **Seterusnya**. Namakan garis panduan: 
+   - Bermula dengan huruf.
+   - Gunakan huruf dan nombor sahaja. Aksara khas dan ruang idak dibenarkan.
+   - Gunakan antara 3 dan 64 aksara.
 
 5. Berikan **Alamat pelayan** untuk organisasi Common Data Service anda dan pilih **Daftar masuk**.
 
@@ -65,3 +68,6 @@ Untuk mencipta Common Data Service berbeza, [cipta sumber data baharu](#connect-
 3. Pilih pilihan **Edit** daripada senarai.
 
 4. Pilih entiti tambahan daripada senarai entiti yang tersedia dan pilih **Simpan**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

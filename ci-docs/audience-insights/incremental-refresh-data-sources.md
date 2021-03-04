@@ -5,16 +5,16 @@ ms.date: 09/28/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b7e834f5f2fd1328563139675d7f850008348734
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406469"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268559"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Segar semula peningkatan untuk sumber data berasaskan Power Query
 
@@ -54,3 +54,6 @@ Insights khalayak membenarkan segar semula tokokan untuk sumber data yang diimpo
    - **Semak untuk setiap kemas kini**: Tentukan tempoh masa yang anda mahu untuk tempoh masa segar semula tokokan.
 
 1. Pilih **Simpan** untuk melengkapkan penciptaan sumber data. Segar semula data awal akan menjadi segar semula sepenuhnya. Selepas itu, segar semula data tokokan berlaku seperti yang dikonfigurasikan dalam langkah sebelumnya.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

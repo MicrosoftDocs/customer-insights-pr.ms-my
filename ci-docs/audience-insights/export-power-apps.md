@@ -1,20 +1,20 @@
 ---
 title: Penyambung Power Apps
 description: Sambung dengan Power Apps and Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406436"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268927"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Penyambung Microsoft Power Apps (pratonton)
 
@@ -31,7 +31,7 @@ Rujuk kepada dokumentasi Power Apps untuk mengetahui cara untuk [menambah sambun
 Selepas menambah Customer Insights sebagai sambungan data, anda boleh memilih entiti berikut dalam Power Apps:
 
 - Pelanggan: untuk menggunakan data daripada [profil pelanggan disatukan](customer-profiles.md).
-- Aktiviti Pelanggan Disatukan: untuk memaparkan [garis masa](activities.md) pada aplikasi.
+- UnifiedActivity: untuk memaparkan [garis masa aktiviti](activities.md) pada aplikasi.
 
 ## <a name="limitations"></a>Had
 
@@ -72,3 +72,6 @@ Sebagai contoh, anda menambahkan profil pelanggan ke [kawalan galeri](https://do
 1. Untuk memaparkan garis masa yang disatukan untuk pelanggan, tambahan elemen Galeri dan tambahkan sifat Item: **Penapis('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Contoh: Penapis('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

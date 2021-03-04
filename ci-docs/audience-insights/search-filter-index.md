@@ -1,7 +1,7 @@
 ---
 title: Cari dan tapis profil pelanggan
 description: Cari maklumat dengan cepat tentang profil pelanggan disatukan dan tapis untuk atribut tertentu.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406481"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270077"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks carian & tapis
 
@@ -28,14 +28,6 @@ Hasil daripada menyatukan data pelanggan anda ialah entiti Profil Pelanggan yang
 Jika ia ialah kali pertama anda mentakrifkan atribut yang boleh dicari sebagai pentadbir, anda perlu mentakrifkan medan berindeks terlebih dahulu. Kami mencadangkan anda memilih semua atribut yang pengguna boleh mencari dan menapis pelanggan pada halaman **Pelanggan**. Anda hanya boleh menentukan atribut yang wujud di dalam entiti Profil Pelanggan yang anda cipta semasa proses penyatuan data.
 
 1. Buka halaman **Pelanggan** dan pilih **Cari & indeks penapis**.
-
-> [!NOTE]
-> Kami mencipta konfigurasi indeks carian lalai pada atribut yang tersedia dalam entiti Pelanggan daripada jenis semantik yang berikut seperti yang ditakrifkan pada halaman Peta.
-> - Nama pertama, Nama keluarga, Nama tengah, Nama tengah orang
-> - Nama Organisasi
-> - Alamat e-mel
-> - Nombor telefon
-> - Maklumat lokasi
 
 2. Pilih **+ Tambah** untuk menentukan medan yang berindeks.
 
@@ -65,3 +57,10 @@ Menu **Penapis** pada halaman **Pelanggan** boleh termasuk bilangan peringkat at
 2. Pilih **Simpan** untuk menggunakan perubahan anda.
 
 3. Pilih **Jalankan** sebaik sahaja anda bersedia untuk menggunakan tetapan anda.
+
+## <a name="next-steps"></a>Langkah seterusnya
+
+Pergi ke halaman **Pelanggan** untuk mencari profil pelanggan atau menggunakan medan diindeks untuk melihat subset semua profil pelanggan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

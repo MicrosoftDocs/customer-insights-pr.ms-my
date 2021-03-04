@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406465"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268697"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan Hak Subjek Data (DSR) di bawah GDPR
 
@@ -75,3 +75,6 @@ Pentadbir penyewa boleh mengikuti langkah-langkah ini untuk mengeksport data:
 1. Hantar e-mel kepada D365CI@microsoft.com untuk menentukan alamat e-mel pengguna di dalam permintaan. Pasukan Customer Insights akan menghantar e-mel kepada alamat e-mel pentadbir penyewa berdaftar, meminta pengesahan untuk mengeksport data.
 2. Memberitahu pengesahan untuk mengeksport data untuk pengguna yang diminta.
 3. Menerima data yang dieksport melalui alamat e-mel pentadbir penyewa.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

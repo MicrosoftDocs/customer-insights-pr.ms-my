@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643964"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269709"
 ---
-# <a name="overview-about-data-sources"></a>Gambaran keseluruhan tentang sumber data
+# <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Anda akan melihat nama setiap sumber data yang ditelan, status dan masa terakhir
 |Menyegar semula    |Kemasukan data sedang berjalan. Anda boleh membatalkan operasi ini dengan memilih **Hentikan menyegar semula** di dalam lajur **Tindakan**. Hentikan segar semula sumber data akan kembali ke keadaan segar semula terakhir.       |
 |Gagal     |Kemasukan data mempunyai ralat.         |
 
-Pilih **Status segar semula** untuk menyemak lebih banyak butiran tentang status segar semula termasuk butiran ralat dan kemas kini proses hiliran.
+Pilih nilai dalam lajur **Status** bagi sebarang sumber data untuk menyemak butiran lanjut. Dalam anak tetingkap **Butiran kemajuan**, kembangkan **Sumber data**. Pilih **Lihat butiran** untuk maklumat lanjut tentang status segar semula termasuk butiran ralat dan kemas kini proses hiliran.
 
 Muatan data boleh mengambil masa sedikit. Selepas segar semula berjaya, data yang dimasukkan boleh disemak daripada halaman **Entiti**. Untuk maklumat lanjut, lihat [Entiti](entities.md).
 
@@ -76,3 +76,6 @@ Untuk menyegar semula sumber data mengikut permintaan, ikuti langkah ini:
 2. Pilih elipsis menegak bersebelahan dengan sumber data yang anda mahu alih keluar dan pilih **Padam** daripada menu juntai bawah.
 
 3. Sahkan pemadaman anda.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

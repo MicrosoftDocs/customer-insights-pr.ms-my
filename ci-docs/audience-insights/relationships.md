@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406480"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269892"
 ---
 # <a name="relationships-between-entities"></a>Perhubungan antara entiti
 
@@ -28,8 +28,8 @@ Semasa proses padan dan gabung, perhubungan sistem dicipta di belakang tabir ber
 > ![Penciptaan perhubungan](media/relationships-entities-merge.png "Penciptaan perhubungan")
 
 - **Perhubungan *CustomerToContact*** dicipta antara entiti Pelanggan dan entiti Kenalan. Entiti Pelanggan memperoleh medan kekunci **Contact_contactId** untuk mengaitkan dengan medan kekunci entiti Kenalan **contactId**.
-- **Perhubungan _CustomerToAccount_** dicipta antara entiti Pelanggan dengan entiti Akaun. Entiti Pelanggan memperoleh medan kekunci **Account_accountId** untuk mengaitkan dengan medan kekunci entiti Akaun **accountId**.
-- **Perhubungan _CustomerToWebAccount_** dicipta antara entiti Pelanggan dengan entiti WebAccount. Entiti Pelanggan memperoleh medan kekunci **WebAccount_webaccountId** untuk mengaitkan dengan medan kekunci entiti WebAccount **webaccountId**.
+- **Perhubungan *CustomerToAccount*** dicipta antara entiti Pelanggan dengan entiti Akaun. Entiti Pelanggan memperoleh medan kekunci **Account_accountId** untuk mengaitkan dengan medan kekunci entiti Akaun **accountId**.
+- **Perhubungan *CustomerToWebAccount*** dicipta antara entiti Pelanggan dengan entiti WebAccount. Entiti Pelanggan memperoleh medan kekunci **WebAccount_webaccountId** untuk mengaitkan dengan medan kekunci entiti WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Cipta perhubungan
 
@@ -69,3 +69,6 @@ Takrif perhubungan tersuai pada halaman **Perhubungan**. Setiap perhubungan meng
 ## <a name="next-step"></a>Langkah seterusnya
 
 Perhubungan sistem dan tersuai digunakan untuk mencipta bahagian berasaskan berbilang sumber data yang tidak lagi silo. Untuk maklumat lanjut, lihat [Bahagian](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

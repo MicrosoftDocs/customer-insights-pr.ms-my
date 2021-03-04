@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643874"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477144"
 ---
-# <a name="export-destinations-preview"></a>Destinasi eksport (pratonton)
+# <a name="export-destinations-preview-overview"></a>Gamabaran keseluruhan destinasi eksport (pratonton)
 
 Halaman **Destinasi eksport** menunjukkan anda semua lokasi yang telah anda sediakan untuk mengeksport data. Anda juga boleh menambah destinasi baharu untuk eksport. Selain itu, ia menunjukkan eksport adalah pilihan yang tersedia. Dapatkan gambaran pantas, keterangan dan ketahui perkara yang boleh anda lakukan dengan setiap pilihan kebolehpanjangan. Eksport profil, langkah dan segmen disatukan kepada aplikasi yang disokong untuk perniagaan anda.
 
@@ -27,10 +27,13 @@ Pergi ke **Pentadbir** > **Destinasi eksport** untuk mencari pilihan kebolehpanj
 - [Penyambung Power Automate](export-power-automate.md)
 - [Penyambung Power Apps](export-power-apps.md)
 - [Penyambung Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
-- [Jualan Dynamics 365](export-dynamics365-sales.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Storan Blob Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg; penyambung](export-liveramp.md)
 - [Bot untuk Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Untuk mengalih keluar Eksport destinasi, mulakan dari halaman **Eksport destinas
 2. Pilih **Alih keluar** daripada menu juntai bawah.
 
 3. Sahkan pengalihan keluar dengan memilih **Alih keluar** pada skrin pengesahan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

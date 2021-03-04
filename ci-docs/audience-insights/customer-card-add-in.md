@@ -1,7 +1,7 @@
 ---
 title: Pasang dan konfigurasi Tambahan Kad Pelanggan
 description: Pasang dan konfigurasi tambahan Kad Pelanggan untuk Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644054"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268055"
 ---
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
 
@@ -28,7 +28,7 @@ Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dyna
 - Profil pelanggan yang [diinges daripada aplikasi Dynamics 365 yang menggunakan Common Data Service](connect-power-query.md).
 - Pengguna Tambahan Kad Pelanggan perlu [ditambah sebagai pengguna](permissions.md) dalam cerapan khalayak.
 - [Mengkonfigurasi keupayaan carian dan penapis](search-filter-index.md).
-- Kawalan demografi: Medan demografi, seperti umur atau jantina boleh didapati dalam profil pelanggan disatukan.
+- Kawalan demografi: Medan demografi (seperti umur atau jantina) boleh didapati dalam profil pelanggan disatukan.
 - Kawalan pengayaan: Memerlukan [pengayaan](enrichment-hub.md) aktif digunakan pada profil pelanggan.
 - Kawalan kepintaran: Memerlukan data yang dihasilkan menggunakan Pembelajaran Mesin Azure ([Ramalan](predictions.md) atau [Model Tersuai](custom-models.md))
 - Langkah kawalan: Memerlukan [langkah yang dikonfigurasikan](measures.md).
@@ -92,10 +92,26 @@ Ia boleh mengambil sedikit masa untuk penyelesaian dipasangkan ke persekitaran a
 
 1. Di dalam dialog **Ciri-Ciri Medan**, kosongkan kotak semak **Label paparan pada borang**.
 
-1. Pilih pilihan **Web** untuk kawalan. Untuk kawalan Pengayaan, pilih jenis pengayaan yang anda mahu paparkan dengan mengkonfigurasikan medan **enrichmentType**. Anda perlu menambah kawalan pengayaan berasingan untuk setiap jenis pengayaan.
+1. Pilih pilihan **Web** untuk kawalan. Untuk kawalan Pengayaan, pilih jenis pengayaan yang anda mahu paparkan dengan mengkonfigurasikan medan **enrichmentType**. Tambah kawalan pengayaan berasingan untuk setiap jenis pengayaan.
 
 1. Pilih **Simpan** dan **Terbitkan** untuk menerbitkan borang kenalan yang dikemas kini.
 
 1. Pergi ke borang kenalan yang diterbitkan. Anda akan nampak kawalan yang baru ditambah. Anda mungkin perlu log masuk pertama kali anda menggunakannya.
 
 1. Untuk sesuaikan apa yang anda mahu tunjukkan pada kawalan tersuai, pilih butang edit di sudut kanan atas.
+
+## <a name="upgrade-customer-card-add-in"></a>Naik Taraf Tambahan Kad Pelanggan
+Tambahan Kad Pelanggan tidak naik taraf secara automatik. Untuk naik taraf kepada versi terkini, ikuti prosedur ini dalam aplikasi Dynamics 365 yang mempunyai Tambahan yang dipasang.
+
+1. Dalam aplikasi Dynamics 365, pergi ke **Tetapan** > **Penyesuaian** dan pilih **Penyelesaian**.
+
+1. Dalam jadual tambahan, cari **CustomerInsightsCustomerCard** dan pilih baris.
+
+1. Pilih **Gunakan Naik Taraf Penyelesaian** dalam bar tindakan.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Naik taraf penyelesaian dalam kawasan Penyesuaian aplikasi Dynamics 365":::
+
+1. Selepas memulakan proses naik taraf, anda akan melihat penunjuk memuat sehingga naik taraf selesai. Jika tiada versi lebih baharu, naik taraf itu akan menunjukkan mesej ralat.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Padan entiti untuk mencipta profil pelanggan disatukan.
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406475"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267489"
 ---
 # <a name="match-entities"></a>Padankan entiti
 
@@ -22,7 +22,7 @@ Selepas melengkapkan peringkat pemetaan, anda sudah bersedia untuk memadankan en
 
 ## <a name="specify-the-match-order"></a>Tentukan pesanan padanan
 
-Pergi ke **Satukan** > **Padan** dan pilih **Tetapkan pesanan** untuk memulakan peringkat pemadanan.
+Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Tetapkan pesanan** untuk memulakan fasa perlawanan.
 
 Setiap padanan menyatukan dua atau lebih entiti ke entiti tunggal, sementara meneruskan setiap rekod pelanggan unik. Dalam contoh berikut, kami memilih tiga entiti: **ContactCSV: TestData** sebagai entiti **Utama**, **WebAccountCSV: TestData** sebagai **Entity 2**, dan **CallRecordSmall: TestData** sebagai **Entity 3**. Diagram di atas pemilihan menerangkan bagaimana pesanan padanan akan dilaksanakan.
 
@@ -136,7 +136,7 @@ Selepas rekod dinyahpendua dikenal pasti, rekod tersebut akan digunakan dalam pr
 
 1. Jalankan proses pemadanan sekarang mengumpulkan rekod berdasarkan syarat yang ditakrifkan dalam peraturan nyahpenduaan. Selepas mengumpulkan rekod, dasar penggabungan digunakan untuk mengenal pasti rekod pemenang.
 
-1. Rekod pemenang ini kemudian diserahkan kepada pemadanan silang entiti.
+1. Rekod pemenang ini kemudian diserahkan kepada pemadanan silang entiti, bersama dengan rekod bukan pemenang (contohnya, ID alternatif) untuk meningkatkan kualiti pemadanan.
 
 1. Sebarang peraturan padanan tersuai yang ditakrifkan untuk sentiasa padan dan tidak sepadan menolak peraturan nyahpenduaan. Jika peraturan nyahpenduaan mengenal pasti padanan rekod dan peraturan padanan tersuai ditetapkan untuk tidak sepadan dengan rekod tersebut, kedua-dua rekod ini tidak akan dipadankan.
 
@@ -157,6 +157,17 @@ Proses padanan pertama menghasilkan penciptaan entiti induk disatukan. Semua pad
 
 > [!TIP]
 > Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+
+## <a name="deduplication-output-as-an-entity"></a>Penyahduplikasi output sebagai entiti
+Selain entiti induk disatukan yang dicipta sebagai sebahagian daripada pemadanan entiti silang, proses penyahduplikasi juga menjana entiti baharu untuk setiap entiti daripada pesanan perlawanan untuk mengenal pasti rekod yang dinyahduplikasi. Entiti ini boleh ditmeui bersama dengan **ConflationMatchPairs:CustomerInsights** dalam bahagian **Sistem** dalam halaman **Entiti**, dengan nama **Deduplication_Datasource_Entity**.
+
+Entiti output penyahduplikasi mengandungi maklumat berikut:
+- ID / Kekunci
+  - Medan penting utama dan medan ID alternatif. Medan ID alternatif terdiri daripada semua ID alternatif yang dikenal pasti untuk rekod.
+  - Medan Deduplication_GroupId menunjukkan kumpulan atau kluster yang dikenal pasti dalam sesebuah entiti yang mengumpulkan semua rekod yang serupa berdasarkan medan penyahduplikasi yang ditetapkan. Ini digunakan untuk tujuan pemprosesan sistem. Jika tiada peraturan penyahduplikasi secara manual yang ditetapkan dan peraturan penyahduplikasi yang ditakrifkan sistem diguna pakai, anda tidak akan menemui medan ini dalam entiti keluaran penyahduplikasi.
+  - Deduplication_WinnerId: Medan ini mengandungi ID pemenang daripada kumpulan atau kluster yang dikenal pasti. Jika Deduplication_WinnerId adalah sama dengan nilai penting Utama untuk rekod, ia bermaksud bahawa rekod ialah rekod pemenang.
+- Medan yang digunakan untuk mentakrifkan peraturan penyahduplikasi.
+- Medan Peraturan dan Skor untuk menunjukkan yang peraturan penyahduplikasi telah diguna pakai dan skor yang dikembalikan oleh algoritma sepadan.
 
 ## <a name="review-and-validate-your-matches"></a>Semak semula dan sahkan padanan anda
 
@@ -200,6 +211,11 @@ Tingkatkan kualiti dengan mengkonfigurasi semula sesetengah parameter padanan an
   > [!div class="mx-imgBorder"]
   > ![Duplikasi peraturan](media/configure-data-duplicate-rule.png "Duplikasi peraturan")
 
+- **Menyahaktifkan peraturan** untuk mengekalkan peraturan perlawanan semasa mengecualikan daripada proses pemadanan.
+
+  > [!div class="mx-imgBorder"]
+  > ![Menyahaktifkan peraturan](media/configure-data-deactivate-rule.png "Menyahaktifkan peraturan")
+
 - **Edit peraturan anda** dengan memilih simbol **Edit**. Anda boleh gunakan perubahan berikut:
 
   - Ubah atribut syarat: Pilih atribut baharu dalam baris syarat tertentu.
@@ -229,10 +245,12 @@ Anda boleh menentukan syarat bagi rekod tertentu haruslah sentiasa sepadan atau 
     - Entity2Key: 34567
 
    Fail templat yang sama boleh menentukan rekod padanan tersuai daripada berbilang entiti.
+   
+   Jika anda mahu menentukan pemadanan tersuai untuk penyahduplikasi pada entiti, menyediakan entiti yang sama dengan kedua-dua Entity1 dan Entity2 dan menetapkan nilai kunci utama yang berbeza.
 
 5. Selepas menambah kesemua penggantian yang anda mahu gunakan, simpan fail templat.
 
-6.Pergi ke **Data** > **Sumber data** dan inges fail templat sebagai entiti baharu. Sebaik sahaja diinges, anda boleh menggunakannya untuk menentukan konfigurasi Padanan.
+6. Pergi ke **Data** > **Sumber data** dan inges fail templat sebagai entiti baharu. Sebaik sahaja diinges, anda boleh menggunakannya untuk menentukan konfigurasi Padanan.
 
 7. Selepas memuat naik fail dan entiti tersedia, pilih pilihan **Padanan tersuai** semula. Anda akan dapat melihat pilihan untuk menentukan entiti yang anda hendak masukkan. Pilih entiti yang diperlukan daripada menu juntai bawah.
 
@@ -250,3 +268,6 @@ Anda boleh menentukan syarat bagi rekod tertentu haruslah sentiasa sepadan atau 
 ## <a name="next-step"></a>Langkah seterusnya
 
 Selepas proses pemadanan selesai untuk sekurang-kurangnya satu pasangan padanan, anda boleh selesaikan kemungkinan percanggahan dalam data anda dengan menyemak lalu topik [**Gabung**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

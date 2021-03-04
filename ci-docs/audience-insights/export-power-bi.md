@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406439"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477099"
 ---
 # <a name="connector-for-power-bi-preview"></a>Penyambung untuk Power BI (pratonton)
 
@@ -31,7 +31,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 
 1. Pilih **Lihat lebih** dan cari **Dynamics 365 Customer Insights**
 
-1. Pilih hasilnya dan pilih **Sambung**.
+1. Pilih **Connect**.
 
 1. **Log masuk** dengan akaun organisasi yang sama anda gunakan untuk Customer Insights dan pilih **Sambung**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Penyambung Customer Insights Power BI direka untuk berfungsi bagi data set yang 
 ### <a name="work-with-a-subset-of-data"></a>Bekerja dengan subset data
 
 Pertimbangkan untuk bekerja dengan subset data anda. Sebagai contoh, anda boleh mencipta [segmen](segments.md) daripada mengeksport semua rekod pelanggan ke Power BI.
+
+## <a name="troubleshooting"></a>Pencarisilapan
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Persekitaran Customer Insights tidak dipaparkan dalam Power BI
+
+Persekitaran yang mempunyai lebih daripada satu [perhubungan](relationships.md) yang ditakrifkan antara dua entiti yang sama dalam wawasan khalayak tidak akan tersedia dalam penyambung Power BI.
+
+Anda boleh mengenal pasti dan mengalih keluar perhubungan pendua.
+
+1. Dalam wawasan khalayak, pergi ke **Data** > **Perhubungan** pada persekitaran yang anda tiada dalam Power BI.
+2. Kenal pasti hubungan pendua:
+   - Semak sama ada terdapat lebih daripada satu perhubungan yang ditakrifkan antara dua entiti yang sama.
+   - Semak sama ada terdapat hubungan yang dicipta antara dua entiti yang kedua-duanya dimasukkan dalam proses penyatuan. Terdapat perhubungan tersirat yang ditakrifkan antara semua entiti yang disertakan dalam proses penyatuan.
+3. Alih keluar sebarang perhubungan pendua yang dikenal pasti.
+
+Selepas penyingkiran perhubungan pendua, cuba konfigurasi penyambung Power BI sekali lagi. Persekitarannya sepatutnya boleh tersedia sekarang.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

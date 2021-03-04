@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643604"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269801"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan transaksi (pratonton)
 
@@ -43,13 +43,13 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
 
 1. Kemas kini jenis data untuk lajur yang disenaraikan di bawah:
 
-   - **DateOfBirth** : Tarikh
-   - **CreatedOn**: Tarikh/Masa/Zon
+   - **DateOfBirth**: Tarikh
+   - **CreatedOn**: Zon waktu tarikh
 
    [!div class="mx-imgBorder"]
    ![Ubah Tarikh Lahir kepada Tarikh](media/ecommerce-dob-date.PNG "ubah tarikh lahir kepada tarikh ini")
 
-1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
+1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
 
 1. Simpan sumber data.
 
@@ -66,7 +66,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **PurchasedOn** : Tarikh/Masa
    - **TotalPrice** : Mata Wang
    
-1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**.
+1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**.
 
 1. Simpan sumber data.
 
@@ -80,11 +80,11 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
 
 1. Kemas kini jenis data untuk lajur yang disenaraikan di bawah:
 
-   - **DateOfBirth** : Tarikh
+   - **DateOfBirth**: Tarikh
    - **RewardsPoints**: Nombor Bulat
    - **CreatedOn**: Tarikh/Masa
 
-1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
+1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
 
 1. Simpan sumber data.
 
@@ -166,7 +166,7 @@ Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pu
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Pilih tuil model Tetingkap Ramalan dan Takrifan Pulangan.":::
 
-1. Pilih **Sejarah Pembelian (diperlukan)** dan pilih **Tambah data** untuk sejarah langganan.
+1. Pilih **Sejarah Pembelian (diperlukan)** dan pilih **Tambah data** untuk sejarah pembelian.
 
 1. Tambah entiti **eCommercePurchases : e-Dagang** dan petakan medan daripada e-Dagang kepada medan berkaitan yang diperlukan oleh model.
 
@@ -204,3 +204,6 @@ Anda boleh mencipta segmen baharu berdasarkan entiti yang dicipta oleh model.
 Kini anda mempunyai segmen yang dikemas kini secara dinamik yang mengenal pasti pelanggan risiko pulangan tinggi untuk perniagaan langganan ini.
 
 Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

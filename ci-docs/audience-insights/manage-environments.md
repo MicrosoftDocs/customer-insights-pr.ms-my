@@ -1,20 +1,20 @@
 ---
 title: Cipta dan urus persekitaran
 description: Ketahui cara untuk mendaftar untuk perkhidmatan dan cara untuk menguruskan persekitaran.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644144"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270123"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -46,9 +46,9 @@ Terdapat dua cara untuk mencipta persekitaran baharu. Anda boleh sama ada menent
 
 Untuk mencipta persekitaran:
 
-1. Pilih simbol **Tetapan** dalam pengepala aplikasi.
+1. Pilih pemilih **Persekitaran** dalam pengepala aplikasi.
 
-1. Pilih **Persekitaran baharu**.
+1. Pilih **Baharu**.
 
    > [!div class="mx-imgBorder"]
    > ![Tetapan persekitaran](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Untuk mencipta persekitaran:
 
    - Untuk pilihan Azure Data Lake Storage Gen2, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Container** tidak boleh ditukar dan akan menjadi "customerinsights".
    
-   - Jika anda mahu menggunakan [ramalan](predictions.md), masukkan URL tika Common Data Service dalam medan **Alamat pelayan** di bawah **Gunakan ramalan**.
+   - Jika anda mahu menggunakan [ramalan](predictions.md) atau mengkonfigurasi perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, berikan Microsoft Dataverse URL persekitaran di bawah **Konfigurasikan perkongsian data dengan Microsoft Dataverse dan mendayakan keupayaan tambahan**. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Microsoft Dataverse Data Lake Terurus.
+
+     > [!NOTE]
+     > - Perkongsian data dengan Microsoft Dataverse Data Lake Terurus pada masa ini tidak disokong apabila anda menyimpan semua data ke Azure Data Lake Storage anda sendiri.
+     > - [Ramalan nilai hilang dalam entiti](predictions.md) tidak disokong buat masa ini apabila anda mendayakan perkongsian data dengan Microsoft Dataverse Data Lake Terurus.
+
+     > [!div class="mx-imgBorder"]
+     > ![Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan model. fail JSON akan dicipta dan ditambah ke subfolder yang berkaitan berdasarkan proses yang anda jalankan.
 
@@ -86,7 +93,7 @@ Untuk mencipta persekitaran:
 Tetapan konfigurasi berikut disalin:
 
 - Konfigurasi ciri
-- Sumber data yang diinges/diimport
+- Sumber data yang diingeskan/diimport
 - Konfigurasi penyatuan data (Peta, Padan, Cantum)
 - Bahagian
 - Langkah
@@ -120,11 +127,11 @@ Apabila data penyatuan selesai, pergi ke **Langkah-langkah** dan **Segmen** untu
 
 Anda boleh mengedit beberapa butiran persekitaran sedia ada.
 
-1. Pergi ke **Pentadbir** > **Sistem** > **Tentang**.
+1.  Pilih pemilih **Persekitaran** dalam pengepala aplikasi.
 
-2. Pilih **Edit**.
+2.  Pilih ikon **Edit**.
 
-3. Anda boleh mengemas kini **Nama paparan** persekitaran tetapi anda boleh boleh mengubah **Rantau** atau **Jenis**.
+3. Dalam kotak **Edit persekitaran**, anda boleh mengemas kini **Nama paparan**, tetapi anda tidak boleh menukar **Rantau** atau **Jenis**.
 
 4. Jika persekitaran dikonfigurasikan untuk menyimpan data dalam Azure Data Lake Storage Gen2, anda boleh mengemas kini **Kunci akaun**. Walau bagaimanapun, anda tidak boleh mengubah **Nama akaun** atau nama **Bekas**.
 
@@ -132,19 +139,27 @@ Anda boleh mengedit beberapa butiran persekitaran sedia ada.
 
 ## <a name="reset-an-existing-environment"></a>Tetap semula persekitaran sedia ada
 
-Anda boleh menetapkan semula persekitaran kepada keadaan kosong jika anda mahu memadam semua konfigurasi dan mengalih keluar data yang diinges.
+Sebagai pentadbir, anda boleh menetapkan semula persekitaran kepada keadaan kosong jika anda mahu memadam semua konfigurasi dan mengalih keluar data yang diinges.
 
-1.  Pergi ke **Pentadbir** > **Sistem** > **Tentang**.
+1.  Pilih pemilih **Persekitaran** dalam pengepala aplikasi. 
 
-2.  Pilih **Tetap semula**. 
+2.  Pilih persekitaran yang anda mahu tetap semula dan pilih elipsis **...**. 
 
-3.  Untuk mengesahkan pemadaman, masukkan nama persekitaran dan pilih **Tetap semula**.
+3. Pilih pilihan **Tetap semula**. 
+
+4.  Untuk mengesahkan pemadaman, masukkan nama persekitaran dan pilih **Tetap semula**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Padam persekitaran sedia ada (tersedia hanya untuk pentadbir)
+
+Sebagai pentadbir, anda boleh memadamkan persekitaran yang anda tadbir.
+
+1.  Pilih pemilih **Persekitaran** dalam pengepala aplikasi.
+
+2.  Pilih persekitaran yang anda mahu tetap semula dan pilih elipsis **...**. 
+
+3. Pilih pilihan **Padam**. 
+
+4.  Untuk mengesahkan pemadaman, masukkan nama persekitaran dan pilih **Padam**.
 
 
-## <a name="delete-an-existing-environment"></a>Padam persekitaran sedia ada
-
-1. Pergi ke **Pentadbir** > **Sistem** > **Tentang**.
-
-1. Pilih **Padam**.
-
-1. Untuk mengesahkan pemadaman, masukkan nama persekitaran dan pilih **Padam**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Sambung kepada akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan
 description: Gunakan prinsipal perkhidmatan Azure untuk cerapan khalayak untuk menyambung ke data lake anda apabila memasukkannya ke cerapan khalayak.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644099"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267733"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure untuk cerapan khalayak
 
@@ -22,7 +22,9 @@ Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keiz
 
 Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [mencipta persekitaran sedia ada atau kemas kini](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Anda memerlukan keizinan pentadbir untuk langganan Azure anda untuk mencipta prinsipal perkhidmatan.
+> [!IMPORTANT]
+> - Akaun Storan Gen2 Data Lake Azure yang bertujuan untuk menggunakan prinsipal perkhidmatan mesti mempunyai [Ruang Nama Hierarki (HNS) didayakan](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Anda memerlukan keizinan pentadbir untuk langganan Azure anda untuk mencipta prinsipal perkhidmatan.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Cipta prinsipal perkhidmatan Azure untuk cerapan khalayak
 
@@ -83,7 +85,7 @@ Lampirkan akaun storan Azure Data Lake cerapan khalayak untuk [menyimpan data ou
 
 Ikuti langkah di bawah untuk menyediakan maklumat yang diperlukan tentang pendekatan yang dipilih.
 
-### <a name="resounce-based-storage-account-connection"></a>Sambungan akaun storan berdasarkan sumber
+### <a name="resource-based-storage-account-connection"></a>Sambungan akaun storan berdasarkan sumber
 
 1. Pergi ke [Portal pentadbir Azure](https://portal.azure.com), daftar masuk ke langganan anda dan buka akaun storan anda.
 
@@ -108,7 +110,8 @@ Ikuti langkah di bawah untuk menyediakan maklumat yang diperlukan tentang pendek
 1. Semak **Langganan**, **Kumpulan sumber** dan **Nama** akaun storan untuk memastikan anda memilih nilai yang sesuai dalam cerapan khalayak.
 
 1. Dalam cerapan khalayak, pilih nilai atau untuk medan berkaitan apabila melampirkan akaun storan.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Masukkan maklumat ID sumber akaun storan.":::
    
 1. Teruskan dengan langkah selebihnya dalam cerapan khalayak untuk melampirkan akaun storan.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
