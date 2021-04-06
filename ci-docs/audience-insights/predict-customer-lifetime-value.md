@@ -2,19 +2,19 @@
 title: Ramalan nilai sepanjang hayat pelanggan (CLV)
 description: Meramalkan potensi pendapatan untuk pelanggan aktif pada masa akan datang.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268605"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595820"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Ramalan nilai sepanjang hayat pelanggan (CLV) (Pratonton)
 
@@ -194,11 +194,11 @@ Terdapat tiga bahagian utama data dalam halaman hasil.
   
   - **Kadar kejayaan dalam meramalkan pelanggan bernilai tinggi**
 
-  Lihat perbezaan dalam meramalkan pelanggan bernilai tinggi menggunakan model AI berbanding model asas. Sebagai contoh, kadar kejayaan 84% bermakna bahawa daripada semua pelanggan bernilai tinggi dalam data latihan, model AI dapat menangkap 84% secara tepat. Kami kemudian membandingkan kadar kejayaan ini dengan kadar kejayaan model asas untuk melaporkan perubahan relatif. Nilai ini digunakan untuk menugaskan gred kepada model.
+    Lihat perbezaan dalam meramalkan pelanggan bernilai tinggi menggunakan model AI berbanding model asas. Sebagai contoh, kadar kejayaan 84% bermakna bahawa daripada semua pelanggan bernilai tinggi dalam data latihan, model AI dapat menangkap 84% secara tepat. Kami kemudian membandingkan kadar kejayaan ini dengan kadar kejayaan model asas untuk melaporkan perubahan relatif. Nilai ini digunakan untuk menugaskan gred kepada model.
 
   - **Metrik ralat**
     
-  Metrik lain membolehkan anda menyemak prestasi keseluruhan model dari segi kesilapan dalam meramalkan nilai masa depan. Kami menggunakan metrik Ralat Dikuasakan Min Punca (RMSE) keseluruhan untuk menilai kesilapan ini. RMSE ialah cara standard untuk mengukur kesilapan model dalam meramalkan data kuantitatif. RMSE model AI dibandingkan dengan RMSE model asas dan perbezaan relatif dilaporkan.
+    Metrik lain membolehkan anda menyemak prestasi keseluruhan model dari segi kesilapan dalam meramalkan nilai masa depan. Kami menggunakan metrik Ralat Dikuasakan Min Punca (RMSE) keseluruhan untuk menilai kesilapan ini. RMSE ialah cara standard untuk mengukur kesilapan model dalam meramalkan data kuantitatif. RMSE model AI dibandingkan dengan RMSE model asas dan perbezaan relatif dilaporkan.
 
   Model AI mengutamakan kedudukan pelanggan yang tepat mengikut nilai yang mereka bawa ke perniagaan anda. Jadi, hanya kadar kejayaan meramalkan pelanggan bernilai tinggi digunakan untuk mendapatkan gred model akhir. Metrik RMSE sensitif kepada orang luar. Dalam senario di mana anda mempunyai peratusan kecil pelanggan dengan nilai pembelian yang sangat tinggi, metrik RMSE keseluruhan mungkin tidak memberikan gambaran penuh prestasi model.   
 

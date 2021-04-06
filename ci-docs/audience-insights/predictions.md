@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268283"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595912"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Lengkapkan data separa anda dengan ramalan
 
@@ -31,7 +31,7 @@ Ramalan membolehkan anda mencipta nilai ramalan dengan mudah yang boleh meningka
 
 Sebelum organisasi anda boleh menggunakan ciri ramalan, prasyarat berikut mesti dipenuhi:
 
-1. Organisasi anda mempunyai tika yang [disediakan dalam Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama dengan Customer Insights.
+1. Organisasi anda mempunyai tika yang [disediakan dalam Common Data Service](/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama dengan Customer Insights.
 
 2. Persekitaran anda dilampirkan pada tika Common Data Service anda.
 
@@ -120,7 +120,7 @@ Selepas anda mencipta ramalan, anda boleh sesuaikan model dalam the AI Builder u
 
 4. Pilih **Sesuaikan dalam AI Builder**.
 
-5. Kemas kini model anda dalam AI Builder. [Ketahui lebih lanjut tentang mengurus model dalam AI builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Kemas kini model anda dalam AI Builder. [Ketahui lebih lanjut tentang mengurus model dalam AI builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Jalanan ramalan anda yang seterusnya akan menggunakan model dikemas kini yang anda cipta.
 

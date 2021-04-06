@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267917"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597430"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berasaskan Pembelajaran Mesin Azure
 
@@ -29,9 +29,9 @@ Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk memb
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Sediakan ruang kerja Pembelajaran Mesin Azure
 
-1. Lihat [cipta ruang kerja Pembelajaran Mesin Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) bagi pilihan berbeza untuk mencipta ruang kerja. Untuk prestasi terbaik, cipta ruang kerja dalam rantau Azure yang geografi paling hampir dengan persekitaran Customer Insights anda.
+1. Lihat [cipta ruang kerja Pembelajaran Mesin Azure](/azure/machine-learning/concept-workspace#-create-a-workspace) bagi pilihan berbeza untuk mencipta ruang kerja. Untuk prestasi terbaik, cipta ruang kerja dalam rantau Azure yang geografi paling hampir dengan persekitaran Customer Insights anda.
 
-1. Akses ruang kerja anda melalui [Studio Pembelajaran Mesin Azure](https://ml.azure.com/). Terdapat beberapa [cara untuk berinteraksi](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) dengan ruang kerja anda.
+1. Akses ruang kerja anda melalui [Studio Pembelajaran Mesin Azure](https://ml.azure.com/). Terdapat beberapa [cara untuk berinteraksi](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) dengan ruang kerja anda.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Gunakan pereka bentuk Pembelajaran Mesin Azure
 
@@ -39,13 +39,13 @@ Pereka bentuk Pembelajaran Mesin Azure menyediakan kanvas visual, tempat anda bo
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Gunakan SDK Pembelajaran Mesin Azure
 
-Ahli sains data dan pembangun AI menggunakan [SDK Pembelajaran Mesin Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) untuk membina aliran kerja pembelajaran mesin. Buat masa ini, model yang dilatih menggunakan SDK tidak boleh disepadukan secara langsung dengan Customer Insights. Talian paip inferens kelompok yang menggunakan model tersebut diperlukan untuk penyepaduan dengan Customer Insights.
+Ahli sains data dan pembangun AI menggunakan [SDK Pembelajaran Mesin Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) untuk membina aliran kerja pembelajaran mesin. Buat masa ini, model yang dilatih menggunakan SDK tidak boleh disepadukan secara langsung dengan Customer Insights. Talian paip inferens kelompok yang menggunakan model tersebut diperlukan untuk penyepaduan dengan Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Keperluan talian paip kelompok untuk bersepadu dengan Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfigurasi set data
 
-Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Insights ke talian paip inferens kelompok anda. Set data ini perlu didaftarkan dalam ruang kerja. Buat masa ini, kami hanya menyokong [set data berjadual](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .csv. Set data yang sesuai dengan data entiti perlu diparameterkan sebagai parameter talian paip.
+Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Insights ke talian paip inferens kelompok anda. Set data ini perlu didaftarkan dalam ruang kerja. Buat masa ini, kami hanya menyokong [set data berjadual](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .csv. Set data yang sesuai dengan data entiti perlu diparameterkan sebagai parameter talian paip.
    
 * Parameter set data dalam Pereka Bentuk
    
@@ -76,7 +76,7 @@ Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Ins
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Import data talian paip ke dalam Customer Insights
 
-* Pereka bentuk menyediakan [modul Data Eksport](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
+* Pereka bentuk menyediakan [modul Data Eksport](/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
    > [!div class="mx-imgBorder"]
    > ![Eksport Konfigurasi Modul Data](media/intelligence-designer-importdata.png "Eksport Konfigurasi Modul Data")
    

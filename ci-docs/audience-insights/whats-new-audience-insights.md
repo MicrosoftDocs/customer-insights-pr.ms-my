@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270443"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598455"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](https://docs.microsoft.com/dynamics365/release-plans/).
+Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](/dynamics365/release-plans/).
 
 Anda juga boleh menonton video berikut untuk mengetahui lebih lanjut tentang keupayaan yang dirancang untuk enam bulan yang lalu.
 
@@ -30,6 +30,40 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Kemas kini Februari 2021
+
+Kemas kini pada Februari 2021 termasuk beberapa ciri, peningkatan prestasi dan pembetulan pepijat.
+
+#### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport segmen ke AdRoll**
+
+  Kami telah melanjutkan destinasi eksport kami untuk menyertakan AdRoll. Anda kini boleh mengeksport segmen daripada Customer Insights ke khalayak AdRoll dan menggunakan segmen tersebut sebagai garis dasar untuk pengiklanan anda. Untuk mendapatkan maklumat lanjut, lihat [Penyambung untuk AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmen
+ 
+- **Duplikasikan segmen**
+  
+  Untuk mencipta segmen baharu berdasarkan segmen yang sedia ada, anda kini boleh menduplikasikan segmen dan mengedit segmen yang diduplikasikan untuk memperhalusi segmen tersebut dengan lebih lanjut. 
+
+- **Tambah atribut tambahan ke segmen**
+
+  Anda kini boleh menyertakan atribut dalam output segmen anda, walaupun atribut ini bukan sebahagian daripada profil pelanggan. Contohnya, termasuk ID langganan dalam segmen walaupun ia merupakan sebahagian daripada entiti langganan yang mempunyai perhubungan M:1 dengan entiti pelanggan. Selagi atribut dimiliki oleh entiti yang berkaitan dengan entiti pelanggan, anda kini boleh menyertakan atribut ini.  
+
+#### <a name="predictions"></a>Ramalan
+
+- **Cipta pengesyoran produk ramalan**
+
+  Memahami perkara yang pelanggan berminat untuk membeli adalah salah satu langkah pertama yang diperlukan untuk meningkatkan pendapatan perniagaan dan membina kesetiaan pelanggan melalui pemeribadian dan penglibatan. Memberikan pengesyoran untuk produk yang tidak sejajar dengan kepentingan pelanggan anda boleh mencipta rasa hubungan terputus antara pelanggan dengan perniagaan anda dan akhirnya mengehadkan keseluruhan hasil dan pengalaman yang berpotensi untuk pelanggan. 
+
+  Menggunakan data anda sendiri, anda kini boleh mencipta ramalan untuk produk yang bakal dibeli oleh pelanggan anda pada masa hadapan. Untuk mendapatkan maklumat lanjut, lihat [Ramalan pengesyoran produk](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Pentadbiran sistem
+
+- **Salin persekitaran yang menyokong lebih banyak jenis sumber data**
+
+  Pentadbir boleh menyalin konfigurasi persekitaran ke persekitaran baharu dalam organisasi yang sama. Ciri ini melanjutkan fungsi persekitaran salinan untuk kes yang sumber data berdasarkan himpunan data Common Data Service atau folder Common Data Model digunakan.
 
 ## <a name="january-2021-updates"></a>Kemas kini Januari 2021
 

@@ -2,25 +2,25 @@
 title: Skema entiti Customer Insights dalam Common Data Model
 description: Bekerja dengan entiti dalam Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269295"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596372"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Model Data Lazim](https://docs.microsoft.com/common-data-model/) ialah pengisytiharan spesifikasi, dan definisi bagi entiti standard yang mewakili konsep yang digunakan secara lazim dan aktiviti merentasi perniagaan dan aplikasi produktiviti. Model ini dilanjutkan kepada data pemerhatian dan analisis juga. Model Data Lazim menyediakan entiti perniagaan yang ditakrif dengan jelas, bermodul, dan boleh diperluaskan—seperti Akaun, Unit Perniagaan, Kes, Kenalan, Bakal Pelanggan, Peluang, dan Produk—serta interaksi dengan vendor, pekerja, dan pelanggan—seperti aktiviti dan perjanjian peringkat perkhidmatan. Sesiapa sahaja boleh membina dan melanjutkan definisi Model Data Biasa untuk merekodkan idea khusus perniagaan tambahan.
+[Model Data Lazim](/common-data-model/) ialah pengisytiharan spesifikasi, dan definisi bagi entiti standard yang mewakili konsep yang digunakan secara lazim dan aktiviti merentasi perniagaan dan aplikasi produktiviti. Model ini dilanjutkan kepada data pemerhatian dan analisis juga. Model Data Lazim menyediakan entiti perniagaan yang ditakrif dengan jelas, bermodul, dan boleh diperluaskan—seperti Akaun, Unit Perniagaan, Kes, Kenalan, Bakal Pelanggan, Peluang, dan Produk—serta interaksi dengan vendor, pekerja, dan pelanggan—seperti aktiviti dan perjanjian peringkat perkhidmatan. Sesiapa sahaja boleh membina dan melanjutkan definisi Model Data Biasa untuk merekodkan idea khusus perniagaan tambahan.
 
 Model data yang dikongsi ini membolehkan aplikasi dan penyepadu data bekerjasama dengan lebih mudah dengan menyediakan definisi data yang disatukan. Model Data Lazim termasuk sistem metadata yang kaya dengan entiti standard, perhubungan, hierarki, sifat, dan banyak lagi. Ia berasal dari aplikasi Dynamics 365 dan bersumber terbuka pada GitHub dengan lebih daripada 260 entiti standard. Sistem besar rakan kongsi dalaman dan luaran menyumbang konsep khusus industri kepada Model Data Lazim.
 
@@ -32,13 +32,13 @@ Untuk mewujudkan pandangan 360 darjah pelanggan dan membuat model Customer Insig
 
 | Entiti | Perihalan |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Aktiviti yang dilaksanakan oleh pengguna yang mempunyai nilai pemerhatian terhadap perniagaan. |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Seseorang atau organisasi yang sama ada melaksanakan atau mempunyai potensi untuk terlibat dalam aktiviti perniagaan. |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definisi KPI yang dibahagikan dengan sifar atau lebih banyak dimensi (seperti Pengguna Aktif Bulanan, Jumlah Belanja Mengikut Pelanggan, Purata Kos Pemerolehan Pelanggan) |
-|[Bahagian](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Mentakrifkan sekumpulan ahli yang mempunyai sifat umum. |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Ahli yang menyertai dalam bahagian diberikan. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Aktiviti yang dilaksanakan oleh pengguna yang mempunyai nilai pemerhatian terhadap perniagaan. |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Seseorang atau organisasi yang sama ada melaksanakan atau mempunyai potensi untuk terlibat dalam aktiviti perniagaan. |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definisi KPI yang dibahagikan dengan sifar atau lebih banyak dimensi (seperti Pengguna Aktif Bulanan, Jumlah Belanja Mengikut Pelanggan, Purata Kos Pemerolehan Pelanggan) |
+|[Bahagian](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Mentakrifkan sekumpulan ahli yang mempunyai sifat umum. |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Ahli yang menyertai dalam bahagian diberikan. |
 
-Untuk maklumat lanjut, lihat dokumentasi tentang [Skim entiti Customer Insights dalam Model Data Lazim](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Untuk maklumat lanjut, lihat dokumentasi tentang [Skim entiti Customer Insights dalam Model Data Lazim](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Lihat entiti menggunakan Pengemudi Entiti Model Data Biasa
 

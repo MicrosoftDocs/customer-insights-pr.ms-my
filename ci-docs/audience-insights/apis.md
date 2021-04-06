@@ -1,20 +1,20 @@
 ---
 title: Kerja dengan API
 description: Gunakan API dan fahami pengehadan.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267535"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710471"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
@@ -36,7 +36,7 @@ Artikel ini membimbing anda untuk mengakses Customer Insights API, mencipta Pend
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Dayakan Customer Insights API":::
 
-1. Pilih **Terokai API kami** untuk mencuba API.
+1. Pilih **Terokai API kami** untuk [mencuba API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Pilih operasi API dan pilih **Cuba**.
 
@@ -47,6 +47,9 @@ Artikel ini membimbing anda untuk mengakses Customer Insights API, mencipta Pend
 1. Tatal ke bahagian bawah tetingkap sisi dan pilih **Hantar**.
 
 Respons HTTP tidak lama lagi akan muncul di bawah.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Gif animasi menunjukkan cara memilih ujian API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Cipta pendaftaran aplikasi baharu dalam portal Azure
 
@@ -61,6 +64,8 @@ Langkah ini membantu anda mula menggunakan Customer Insights API dalam aplikasi 
 
 1. Pada pendaftaran Aplikasi baharu anda, pergi ke **Keizinan API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animasi untuk menetapkan keizinan API dalam pendaftaran aplikasi.":::
+
 1. Pilih **Tambah keizinan** dan pilih **Customer Insights** dalam tetingkap sisi.
 
 1. Untuk **Jenis keizinan**, pilih **Keizinan yang diwakilkan** dan pilih keizinan **user_impersonation**.
@@ -71,9 +76,11 @@ Langkah ini membantu anda mula menggunakan Customer Insights API dalam aplikasi 
 
 Anda boleh menggunakan Aplikasi/ID Klien untuk pendaftaran aplikasi ini dengan Pustaka Pengesahan Microsoft (MSAL) untuk mendapatkan token pembawa untuk menghantar dengan permintaan anda kepada API.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animasi untuk memberi persetujuan pentadbir.":::
+
 Untuk mendapatkan maklumat lanjut tentang MSAL, lihat [Gambaran Keseluruhan Pustaka Pengesahan Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Untuk mendapatkan maklumat lanjut tentang pendaftaran aplikasi dalam Azure, lihat [Pengalaman pendaftaran aplikasi portal Azure yang baharu](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Untuk mendapatkan maklumat lanjut tentang pendaftaran aplikasi dalam Azure, lihat [Pengalaman pendaftaran aplikasi portal Azure yang baharu](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pustaka klien Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pu
 
 1. Pilih **Berikan keizinan pentadbir untuk...** untuk melengkapkan pendaftaran aplikasi.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animasi untuk memberi persetujuan pentadbir.":::
+
 1. Untuk menyimpulkan, kami perlu menambah nama pendaftaran aplikasi sebagai pengguna dalam Customer Insights.    
    Buka Customer Insights, pergi ke **Pentadbir** > **Keizinan** dan pilih **Tambah pengguna**.
 
@@ -108,7 +117,7 @@ Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pu
 
 ## <a name="customer-insights-client-libraries"></a>Pustaka klien Customer Insights
 
-Bahagian ini membantu anda mula menggunakan pustaka klien yang tersedia untuk Customer Insights API.
+Bahagian ini membantu anda mula menggunakan pustaka klien yang tersedia untuk Customer Insights API. Semua kod sumber pustaka dan aplikasi sampel boleh ditemui pada [halaman Customer Insights GitHub](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
 
 #### <a name="use-the-c-client-library"></a>Gunakan pustaka klien C#
 
-1. Gunakan [Pustaka Pengesahan Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) untuk memperoleh `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) anda yang sedia ada.
+1. Gunakan [Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) untuk memperoleh `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) anda yang sedia ada.
 
 1. Selepas berjaya mengesahkan dan memperolehi token, bina `HttpClient` yang baharu atau gunakan yang sedia ada dengan **"Pengesahan" DefaultRequestHeaders** tambahan ditetapkan kepada **<access token> Pembawa** dan **Ocp-Apim-Subscription-Key** ditetapkan kepada [**kunci langganan** daripada persekitaran Customer Insights anda](#get-started-trying-the-customer-insights-apis).    
    Tetapkan semula pengepala **Pengesahan** apabila sesuai. Contohnya, apabila token tamat tempoh.
@@ -141,5 +150,12 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
 1. Respons mungkin akan menjadi jenis `object` kerana kaedah boleh kembali pelbagai jenis (contohnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk menyemak jenis pengembalian, anda boleh menyiarkan objek dengan selamat ke dalam jenis respons yang ditentukan pada [halaman butiran API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) untuk operasi tersebut.    
    Jika maklumat lanjut mengenai permintaan diperlukan, gunakan **kaedah mesej http** untuk mengakses objek respons mentah.
 
+### <a name="nodejs-package"></a>Pakej NodeJS
+
+Gunakan pustaka klien NodeJS yang tersedia melalui NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Pakej Python
+
+Gunakan pustaka klien Python yang tersedia melalui PyPi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

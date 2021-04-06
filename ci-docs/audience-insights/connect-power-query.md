@@ -2,23 +2,23 @@
 title: Inges data melalui penyambung Power Query
 description: Penyambung untuk sumber data berdasarkan Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267782"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596924"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambung kepada sumber data Power Query
 
-Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyakan penyambung ini disokong oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan penyambung Power Query secara amnya mengikut langkah yang digariskan dalam bahagian seterusnya. Walau bagaimanapun, bergantung pada penyambung yang anda gunakan, maklumat berbeza diperlukan. Untuk mendapatkan maklumat lanjut, lihat dokumentasi mengenai penyambung individu dalam [rujukan penyambung Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyakan penyambung ini disokong oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan penyambung Power Query secara amnya mengikut langkah yang digariskan dalam bahagian seterusnya. Walau bagaimanapun, bergantung pada penyambung yang anda gunakan, maklumat berbeza diperlukan. Untuk mendapatkan maklumat lanjut, lihat dokumentasi mengenai penyambung individu dalam [rujukan penyambung Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Cipta sumber data baharu
 
@@ -44,7 +44,7 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
    > [!div class="mx-imgBorder"]
    > ![Edit dialog pertanyaan](media/data-manager-configure-edit-queries.png "Edit dialog pertanyaan")
 
-1. Anda juga boleh mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan pilihan dalam tetingkap Power Query untuk menggunakan transformasi. Setiap transformasi akan disenaraikan di bawah **Langkah yang digunakan**. Power Query menyediakan pelbagai pilihan transformasi yang dibina terlebih dahulu. Untuk maklumat lebih lanjut, lihat [Transformasi Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Anda juga boleh mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan pilihan dalam tetingkap Power Query untuk menggunakan transformasi. Setiap transformasi akan disenaraikan di bawah **Langkah yang digunakan**. Power Query menyediakan pelbagai pilihan transformasi yang dibina terlebih dahulu. Untuk maklumat lebih lanjut, lihat [Transformasi Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Anda boleh tambah entiti tambahan ke sumber data anda dengan memilih **Dapatkan data** di dalam dialog **Edit pertanyaan**.
 
@@ -59,7 +59,7 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 
 ## <a name="available-power-query-data-sources"></a>Sedia sumber data Power Query
 
-Lihat [Rujukan penyambung Power Query](https://docs.microsoft.com/power-query/connectors/) untuk senarai penyambung terkini yang boleh anda pilih untuk mengimport data pada Customer Insights. 
+Lihat [Rujukan penyambung Power Query](/power-query/connectors/) untuk senarai penyambung terkini yang boleh anda pilih untuk mengimport data pada Customer Insights. 
 
 Penyambung dengan tanda semak dalam lajur **Customer Insights (Alir data)** tersedia untuk mencipta sumber data baharu berdasarkan Power query. Semak semula dokumentasi bagi penyambung khusus untuk mengetahui lebih lanjut tentang prasyarat, had dan butiran lain.
 

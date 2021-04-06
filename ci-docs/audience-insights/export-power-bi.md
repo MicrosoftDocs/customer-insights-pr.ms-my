@@ -2,19 +2,19 @@
 title: Penyambung Power BI
 description: Ketahui cara menggunakan penyambung Dynamics 365 Customer Insights dalam Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477099"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596050"
 ---
 # <a name="connector-for-power-bi-preview"></a>Penyambung untuk Power BI (pratonton)
 
@@ -23,7 +23,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 ## <a name="prerequisites"></a>Prasyarat
 
 - Anda mempunyai profil pelanggan disatukan.
-- Versi terkini [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) dipasang pada komputer anda. [Ketahui lebih lanjut tentang Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Versi terbaru [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) dipasang pada komputer anda. [Ketahui lebih lanjut tentang Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfigurasi penyambung untuk Power BI
 
@@ -47,7 +47,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 
 ## <a name="large-data-sets"></a>Set data yang besar
 
-Penyambung Customer Insights Power BI direka untuk berfungsi bagi data set yang mengandungi hingga 1 juta profil pelanggan. Mengimport set data yang lebih besar mungkin boleh tetapi ianya mengambil masa yang lama. Selain itu, proses mungkin berjalan ke masa keluar kerana had Power BI. Untuk maklumat lanjut, lihat [Power BI: Pengesyoran untuk set data yang lebih besar](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Penyambung Customer Insights Power BI direka untuk berfungsi bagi data set yang mengandungi hingga 1 juta profil pelanggan. Mengimport set data yang lebih besar mungkin boleh tetapi ianya mengambil masa yang lama. Selain itu, proses mungkin berjalan ke masa keluar kerana had Power BI. Untuk maklumat lanjut, lihat [Power BI: Pengesyoran untuk set data yang lebih besar](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Bekerja dengan subset data
 
@@ -70,4 +70,3 @@ Anda boleh mengenal pasti dan mengalih keluar perhubungan pendua.
 Selepas penyingkiran perhubungan pendua, cuba konfigurasi penyambung Power BI sekali lagi. Persekitarannya sepatutnya boleh tersedia sekarang.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

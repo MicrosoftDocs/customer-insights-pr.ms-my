@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267733"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596510"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure untuk cerapan khalayak
 
@@ -23,7 +23,7 @@ Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keiz
 Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [mencipta persekitaran sedia ada atau kemas kini](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Akaun Storan Gen2 Data Lake Azure yang bertujuan untuk menggunakan prinsipal perkhidmatan mesti mempunyai [Ruang Nama Hierarki (HNS) didayakan](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Akaun Storan Gen2 Data Lake Azure yang bertujuan untuk menggunakan prinsipal perkhidmatan mesti mempunyai [Ruang Nama Hierarki (HNS) didayakan](/azure/storage/blobs/data-lake-storage-namespace).
 > - Anda memerlukan keizinan pentadbir untuk langganan Azure anda untuk mencipta prinsipal perkhidmatan.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Cipta prinsipal perkhidmatan Azure untuk cerapan khalayak
@@ -48,7 +48,7 @@ Sebelum mencipta prinsipal perkhidmatan baharu untuk cerapan khalayak, semak sam
 
 ### <a name="create-a-new-service-principal"></a>Cipta prinsipal perkhidmatan baharu
 
-1. Pasang versi terkini bagi **Azure Active Directory PowerShell untuk Graf**. Untuk maklumat lanjut, lihat [Pasang Azure Active Directory PowerShell untuk Graf](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Pasang versi terkini bagi **Azure Active Directory PowerShell untuk Graf**. Untuk maklumat lanjut, lihat [Pasang Azure Active Directory PowerShell untuk Graf](/powershell/azure/active-directory/install-adv2).
    - Pada PC anda, pilih kekunci Windows pada papan kekunci anda dan gelintar untuk **Windows PowerShell** dan **Jalankan sebagai Pentadbir**.
    
    - Dalam tetingkap PowerShell yang terbuka, masukkan `Install-Module AzureAD`.

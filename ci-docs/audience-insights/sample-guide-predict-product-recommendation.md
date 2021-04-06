@@ -2,19 +2,19 @@
 title: Panduan sampel ramalan pengesyoran produk
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pengesyoran produk di luar kotak.
 ms.date: 02/10/2021
-ms.reviewer: digranad
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 0ee873d9b7caa5f891cb2d5b8c665dec90ad0e59
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270516"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595284"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel untuk ramalan pengesyoran produk (pratonton)
 

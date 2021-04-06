@@ -1,20 +1,20 @@
 ---
 title: Cipta dan urus segmen
 description: Cipta bahagian pelanggan untuk mengumpul mereka berasaskan pelbagai atribut.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270367"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597065"
 ---
 # <a name="create-and-manage-segments"></a>Cipta dan urus segmen
 
@@ -35,19 +35,19 @@ Segmen diuruskan pada halaman **Segmen**.
 
 1. Dalam cerapan khalayak, pergi ke halaman **Segmen**.
 
-2. Pilih **Baharu** > **Segmen kosong**.
+1. Pilih **Baharu** > **Segmen kosong**.
 
-3. Dalam anak tetingkap **Bahagian baharu**, pilih jenis bahagian dan berikan **Nama**.
+1. Dalam anak tetingkap **Bahagian baharu**, pilih jenis bahagian dan berikan **Nama**.
 
    Secara pilihan, berikan nama paparan, dan description yang membantu mengenal pasti bahagian.
 
-4. Pilih **Seterusnya** untuk mendapatkan halaman **Pembina bahagian** di mana anda menakrif kumpulan. Kumpulan ialah set pelanggan.
+1. Pilih **Seterusnya** untuk mendapatkan halaman **Pembina bahagian** di mana anda menakrif kumpulan. Kumpulan ialah set pelanggan.
 
-5. Pilih entiti yang merangkumi atribut yang anda mahu dibahagikan.
+1. Pilih entiti yang merangkumi atribut yang anda mahu dibahagikan.
 
-6. Pilih atribut untuk segmen mengikut. Atribut ini boleh mempunyai salah satu daripada empat jenis nilai: berangka, rentetan, tarikh atau Boolean.
+1. Pilih atribut untuk segmen mengikut. Atribut ini boleh mempunyai salah satu daripada empat jenis nilai: berangka, rentetan, tarikh atau Boolean.
 
-7. Pilih operator dan nilai untuk atribut yang dipilih.
+1. Pilih operator dan nilai untuk atribut yang dipilih.
 
    > [!div class="mx-imgBorder"]
    > ![Penapis kumpulan tersuai](media/customer-group-numbers.png "Penapis kumpulan pelanggan")
@@ -64,9 +64,14 @@ Segmen diuruskan pada halaman **Segmen**.
    > [!div class="mx-imgBorder"]
    > ![Laluan perhubungan semasa penciptaan segmen](media/segments-multiple-relationships.png "Laluan perhubungan semasa penciptaan segmen")
 
-9. Pilih **Simpan** untuk menyimpan bahagian anda. Bahagian anda akan disimpan dan diproses jika semua keperluan disahkan. Jika tidak, ia akan disimpan sebagai draf.
+1. Secara lalai, segmen menjana entiti output yang mengandungi semua atribut profil pelanggan yang sepadan dengan penapis yang ditentukan. Jika segmen berdasarkan entiti lain daripada entiti *Pelanggan*, anda boleh menambahkan lebih banyak atribut daripada entiti tersebut kepada entiti output. Pilih **Atribut projek** untuk memilih atribut yang akan ditambah pada entiti output.  
 
-10. Pilih **Kembali ke segmen** untuk kembali ke halaman **Segmen**.
+   
+   Contoh: Segmen berdasarkan entiti yang mengandungi data aktiviti pelanggan yang berkaitan dengan entiti *Pelanggan*. Segmen mencari semua pelanggan yang memanggil meja bantuan dalam masa 60 hari yang lalu. Anda boleh memilih untuk menambah tempoh panggilan dan bilangan panggilan kepada semua rekod pelanggan yang sepadan dalam entiti output. Maklumat ini mungkin berguna untuk menghantar e-mel dengan pautan berguna ke artikel bantuan dalam talian dan soalan lazim kepada pelanggan yang sering membuat panggilan.
+
+1. Pilih **Simpan** untuk menyimpan bahagian anda. Bahagian anda akan disimpan dan diproses jika semua keperluan disahkan. Jika tidak, ia akan disimpan sebagai draf.
+
+1. Pilih **Kembali ke segmen** untuk kembali ke halaman **Segmen**.
 
 ## <a name="manage-existing-segments"></a>Mengurus bahagian sedia ada
 
@@ -85,6 +90,7 @@ Tindakan yang berikut tersedia apabila anda memilih segmen:
 
 - **Lihat** butiran segmen, termasuk trend kiraan ahli pratonton ahli segmen.
 - **Edit** segmen untuk mengubah sifatnya.
+- **Cipta duplikasi** segmen. Anda boleh memilih untuk mengedit sifat dengan serta-merta atau hanya menyimpan duplikasi.
 - **Segar semula** segmen untuk memasukkan data terkini.
 - **Aktifkan** atau **Nyahaktifkan** segmen. Segmen mempunyai dua keadaan yang mungkin - aktif atau tidak aktif. Keadaan ini berguna apabila mengedit segmen. Untuk segmen tidak aktif, takrifan segmen wujud tetapi ia tidak mengandungi sebarang pelanggan lagi. Apabila anda mengaktifkan segmen, keadaannya berubah daripada 'tidak aktif' kepada 'aktif" dan ia mula mencari pelanggan yang sepadan dengan takrifan segmen. Jika [segar semula berjadual](system.md#schedule-tab) dikonfigurasikan, segmen yang tidak aktif mempunyai **Status** yang disenaraikan sebagai **Dilangkau**, menunjukkan bahawa segar semula tidak pernah dicuba. Apabila segmen yang tidak aktif diaktifkan, ia akan menyegar semula dan akan disertakan dalam segar semula berjadual.
   Secara alternatif, anda boleh menggunakan kefungsian **Jadual kemudian** dalam juntai bawah **Aktifkan/Nyahaktifkan** untuk menetapkan tarikh dan masa pada masa depan untuk pengaktifan dan penyahaktifan segmen tertentu.

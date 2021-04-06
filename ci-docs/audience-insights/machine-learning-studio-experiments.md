@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270215"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598350"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Gunakan model berdasarkan Azure Machine Learning Studio (klasik)
 
@@ -37,7 +37,7 @@ Dalam langkah pertama, kita perlu mencipta ruang kerja dan buka Machine Learning
 
 1. Cari **Ruang Kerja Studio Pembelajaran Mesin** dan pilih **Cipta**.
 
-1. Masukkan butiran yang diperlukan untuk [mencipta ruang kerja](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Pilih **Peringkat penetapan harga pelan Perkhidmatan web** berdasarkan jumlah data yang anda rancang untuk diimport. Untuk prestasi terbaik, pilih **Lokasi** geografi yang paling dekat dengan anda.
+1. Masukkan butiran yang diperlukan untuk [mencipta ruang kerja](/azure/machine-learning/studio/create-workspace). Pilih **Peringkat penetapan harga pelan Perkhidmatan web** berdasarkan jumlah data yang anda rancang untuk diimport. Untuk prestasi terbaik, pilih **Lokasi** geografi yang paling dekat dengan anda.
 
 1. Selepas mencipta sumber, papan pemuka ruang kerja Studio Pembelajaran Mesin akan dipaparkan. Pilih **Lancarkan Studio Pembelajaran Mesin**.
 
@@ -65,7 +65,7 @@ Kini anda boleh mencipta percubaan baharu atau mengimport templat percubaan sedi
 
    ![Sediakan perkhidmatan web ramalan](media/predictive-webservice-control.png)
 
-1. Sebaik sahaja percubaan perkhidmatan web ramalan berjaya, anda boleh menggunakannya untuk penjadualan automatik. Untuk membolehkan perkhidmatan web digunakan bersama Customer Insights, pilih **Gunakan Perkhidmatan Web** > **Gunakan Pratonton Perkhidmatan Web [Baharu]**. [Ketahui lebih lanjut tentang menggunakan perkhidmatan web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Sebaik sahaja percubaan perkhidmatan web ramalan berjaya, anda boleh menggunakannya untuk penjadualan automatik. Untuk membolehkan perkhidmatan web digunakan bersama Customer Insights, pilih **Gunakan Perkhidmatan Web** > **Gunakan Pratonton Perkhidmatan Web [Baharu]**. [Ketahui lebih lanjut tentang menggunakan perkhidmatan web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Gunakan perkhidmatan web ramalan](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Imej berikut menunjukkan saluran paip latihan dan penilaian model daripada Studi
 
 ![Model pulangan pelanggan dalam Studio Pembelajaran Mesin Azure](media/azure-machine-learning-model.png)
 
-Kami juga menggunakan teknik yang dipanggil **Kepentingan Ciri Pilih Atur**, aspek penting pengoptimuman model. Model terbina dalam mempunyai sedikit wawasan untuk mempengaruhi sebarang ciri khusus pada ramalan akhir. Kalkulator kepentingan ciri menggunakan algoritma tersuai untuk mengira pengaruh ciri individu pada keputusan untuk model tertentu. Kepentingan ciri ini telah dinormalkan antara +1 hingga -1. Pengaruh negatif bermaksud ciri yang berkaitan mempunyai pengaruh intuitif lawan ke atas hasilnya dan perlu dialih keluar daripada model. Pengaruh positif menunjukkan ciri ini menyumbang secara besar-besaran terhadap ramalan. Nilai ini tidak koefisien korelasi kerana ia adalah metrik yang berbeza. Untuk maklumat lanjut, lihat [Kepentingan Ciri Pilih Atur](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Kami juga menggunakan teknik yang dipanggil **Kepentingan Ciri Pilih Atur**, aspek penting pengoptimuman model. Model terbina dalam mempunyai sedikit wawasan untuk mempengaruhi sebarang ciri khusus pada ramalan akhir. Kalkulator kepentingan ciri menggunakan algoritma tersuai untuk mengira pengaruh ciri individu pada keputusan untuk model tertentu. Kepentingan ciri ini telah dinormalkan antara +1 hingga -1. Pengaruh negatif bermaksud ciri yang berkaitan mempunyai pengaruh intuitif lawan ke atas hasilnya dan perlu dialih keluar daripada model. Pengaruh positif menunjukkan ciri ini menyumbang secara besar-besaran terhadap ramalan. Nilai ini tidak koefisien korelasi kerana ia adalah metrik yang berbeza. Untuk maklumat lanjut, lihat [Kepentingan Ciri Pilih Atur](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Keseluruhan [percubaan pulangan pelanggan tersedia dalam Galeri AI Azure](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Keseluruhan [percubaan pengesyoran produk boleh diakses dalam Galeri AI Azure.](
 
 ## <a name="integrate-custom-models"></a>Mengintegrasikan model tersuai
 
-Untuk menggunakan ramalan ini dalam Customer Insights, anda perlu **mengeksport** ramalan bersama dengan ID pelanggan. [Eksportkannya ke lokasi storan Blob Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) yang anda eksport data sumber. Perkhidmatan web ramalan boleh dijadualkan berjalan secara kerap dan kemas kini skor.
+Untuk menggunakan ramalan ini dalam Customer Insights, anda perlu **mengeksport** ramalan bersama dengan ID pelanggan. [Eksportkannya ke lokasi storan Blob Azure](/azure/storage/common/storage-import-export-data-from-blobs) yang anda eksport data sumber. Perkhidmatan web ramalan boleh dijadualkan berjalan secara kerap dan kemas kini skor.
 
 Data yang dijana oleh model tersuai boleh digunakan untuk memperkaya data pelanggan anda. Untuk mendapatkan maklumat lanjut, lihat [Model pembelajaran mesin tersuai](custom-models.md).
 

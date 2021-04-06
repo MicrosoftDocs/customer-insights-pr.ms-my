@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269939"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654743"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
@@ -72,8 +72,8 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
    1. Pilih **Edit dimensi** untuk menambah atribut data yang anda mahu kumpulkan nilai ukuran. Sebagai contoh, bandar atau jantina. Secara lalai, dimensi *CustomerID* dipilih untuk mencipta *ukuran peringkat pelanggan*. Anda boleh mengalih keluar dimensi lalai jika anda mahu mencipta *ukuran peringkat perniagaan*.
    1. Pilih **Selesai** untuk menambah dimensi pada ukuran.
 
-1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dan entiti Pelanggan, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih.
-   1. Pilih **Keutamaan data** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti langkah anda.
+1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dengan entiti *Pelanggan*, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih. 
+   1. Pilih **Keutamaan data** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti langkah anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
    1. Pilih **Selesai** untuk menggunakan pilihan anda. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Pilih laluan entiti untuk ukuran.":::

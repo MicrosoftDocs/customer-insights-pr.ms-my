@@ -2,19 +2,19 @@
 title: Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 description: Gambaran keseluruhan wawasan khalayak untuk Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477006"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598641"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pe
 - **Menghapuskan data silo dan menyatukan data pelanggan**
 
   - Sambung dan satukan data anda dengan mudah—masukkan data transaksi, pemerhatian dan tingkah laku daripada [sumber data popular dengan menggunakan penyambung yang dibina awal](data-sources.md).
-  - Mengubah data pelanggan dengan pintar—bina penyatuan profil pelanggan selaras dengan [Common Data Model](https://docs.microsoft.com/common-data-model/). Selesaikan identiti pelanggan dengan pengesyoran yang didorong AI/ML.
+  - Mengubah data pelanggan dengan pintar—bina penyatuan profil pelanggan selaras dengan [Common Data Model](/common-data-model/). Selesaikan identiti pelanggan dengan pengesyoran yang didorong AI/ML.
 
 - **Memperkaya dengan kepintaran khalayak yang terkandung dalam Microsoft Graph**
 
@@ -42,7 +42,7 @@ Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pe
 - **Penganalisis data / pentadbir:**
 
   - Akses kepada koleksi yang banyak penyambung untuk memasukkan semua data pelanggan anda.
-  - Keupayaan untuk menyatukan data pelanggan dan mengubahnya ke dalam format [Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Keupayaan untuk menyatukan data pelanggan dan mengubahnya ke dalam format [Common Data Model](/common-data-model/).
   - Memperkayakan maklumat pelanggan dengan wawasan daripada kecerdasan khalayak yang terkandung dalam Microsoft graf, seperti perkaitan jenama dan minat.
   - Konfigurasi "Klik-bukan-kod" dan pengalaman penyahpepijatan untuk membantu mengkonfigurasi wawasan pelanggan dengan mudah dan mengenal pasti isu yang berpotensi.
   - Membersih dan menyeragamkan data pelanggan merentasi sumber yang berbeza dengan saranan AI-powered.  
