@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595667"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906913"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Ramalan pulangan langganan (pratonton)
 
@@ -49,6 +49,12 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
         - **Cap masa:** Tarikh dan masa peristiwa dikenal pasti oleh kunci utama.
         - **Peristiwa:** Nama peristiwa yang anda mahu gunakan. Contohnya, medan yang dipanggil "UserAction" dalam perkhidmatan penstriman video boleh mempunyai nilai "Dilihat".
         - **Butiran:** Maklumat terperinci tentang peristiwa. Contohnya, medan yang dipanggil "ShowTitle" dalam perkhidmatan penstriman video boleh mempunyai nilai video yang ditonton pelanggan.
+- Ciri data yang disyorkan:
+    - Data sejarah yang mencukupi: Data langganan sekurang-kurangnya dua kali ganda tetingkap masa yang dipilih. Sebaik-baiknya, dua hingga tiga tahun data langganan.
+    - Status langganan: Data termasuk langganan aktif dan tidak aktif untuk setiap pelanggan supaya terdapat beberapa entri bagi setiap ID pelanggan.
+    - Bilangan pelanggan: Sekurang-kurangnya 10 profil pelanggan, sebaik-baiknya lebih daripada 1,000 pelanggan unik. Model ini akan gagal dengan kurang daripada 10 pelanggan dan data sejarah yang tidak mencukupi.
+    - Kesempurnaan data: Kurang daripada 20% daripada nilai yang hilang dalam medan data entiti yang disediakan.
+   
    > [!NOTE]
    > Pengiraan pengeluaran yang anda mahu kira memerlukan sekurang-kurangnya dua rekod aktiviti untuk 50% daripada pelanggan.
 
@@ -67,7 +73,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 ### <a name="define-customer-churn"></a>Takrifkan pulangan pelanggan
 
 1. Masukkan bilangan **Hari sejak langganan berakhir** yang perniagaan anda pertimbangkan pelanggan akan berada dalam keadaan mempunyai pulangan. Tempoh ini pada lazimnya disukai untuk aktiviti perniagaan seperti tawaran atau usaha pemasaran lain yang cuba mengelakkan kerugian pelanggan.
-1. Masukkan bilangan **Hari yang dijangkakan untuk meramalkan pengeluaran** bagi menetapkan tetingkap untuk ramalan pengeluarannya. Contohnya, untuk meramal risiko pengeluaran untuk pelanggan anda dalam tempoh 90 hari yang akan datang bagi menyelaraskan usaha pengekalan pemasaran anda. Meramal risiko pengeluaran untuk tempoh masa yang lebih panjang atau lebih pendek boleh menjadikannya lebih sukar untuk menangani faktor dalam profil risiko pengeluaran anda, tetapi ini amat bergantung kepada keperluan perniagaan tertentu anda. Pilih **Seterusnya** untuk teruskan
+1. Masukkan bilangan **Hari yang dijangkakan untuk meramalkan pengeluaran** bagi menetapkan tetingkap untuk ramalan pengeluarannya. Contohnya, untuk meramal risiko pengeluaran untuk pelanggan anda dalam tempoh 90 hari yang akan datang bagi menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih lama atau lebih singkat boleh menjadikannya lebih sukar untuk menangani faktor-faktor dalam profil risiko pulangan, bergantung kepada keperluan perniagaan khusus anda. Pilih **Seterusnya** untuk teruskan
    >[!TIP]
    > Anda boleh memilih **Simpan dan tutup** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
 
@@ -113,7 +119,8 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 1. Pilih ramalan yang anda mahu semak semula.
    - **Nama ramalan:** Nama ramalan yang disediakan apabila menciptanya.
    - **Jenis ramalan:** Jenis model yang digunakan untuk ramalan
-   - **Entiti output:** Nama entiti untuk menyimpan output ramalan. Anda boleh menemui entiti dengan nama ini pada **Data** > **Entiti**.
+   - **Entiti output:** Nama entiti untuk menyimpan output ramalan. Anda boleh menemui entiti dengan nama ini pada **Data** > **Entiti**.    
+     Dalam entiti output, *ChurnScore* adalah kebarangkalian yang diramalkan untuk pulangan dan *IsChurn* adalah label binari berdasarkan *ChurnScore* dengan ambang 0.5. Ambang lalai mungkin tidak berfungsi untuk senario anda. [Cipta segmen baharu](segments.md#create-a-new-segment) dengan ambang pilihan anda.
    - **Medan yang diramal:** Medan ini diisi hanya untuk beberapa jenis ramalan dan tidak digunakan dalam ramalan pulangan langganan.
    - **Status:** Status semasa jalanan ramalan.
         - **Dibaris gilir:** Ramalan pada masa ini menunggu proses lain untuk berjalan.

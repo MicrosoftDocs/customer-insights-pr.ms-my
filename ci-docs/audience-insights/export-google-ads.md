@@ -1,67 +1,35 @@
 ---
 title: Eksport data Customer Insights ke Google Ads
-description: Ketahui cara mengkonfigurasi sambungan ke Google ads.
-ms.date: 11/18/2020
-ms.reviewer: mhart
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Google Ads.
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d9a25af3913e755cccec745c532b35aef3cccf9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f4c094e486577d00d8c0c64e8527829820b335f6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598258"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759704"
 ---
-# <a name="connector-for-google-ads-preview"></a>Penyambung untuk Google Ads (pratonton)
+# <a name="export-segments-to-google-ads-preview"></a>Eksport segmen ke Google ads (pratonton)
 
 Eksport segmen profil pelanggan disatukan ke senarai khalayak Google Ads dan gunakannya untuk mengiklan pada Google Search, Gmail, YouTube dan Google Display Network. 
 
-## <a name="prerequisites"></a>Prasyarat
+## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
 -   Anda mempunyai [Akaun Google Ads](https://ads.google.com/) dan kelayakan pentadbir yang berkaitan.
+-   Anda mempunyai [token Pembangun Google ads yang diluluskan](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
+-   Anda memenuhi keperluan [Dasar Padanan Pelanggan](https://support.google.com/adspolicy/answer/6299717)
+-   Anda memenuhi keperluan [saiz senarai pemasaran semula](https://support.google.com/google-ads/answer/7558048) 
+
 -   Terdapat khalayak sedia ada dalam Google Ads dan ID yang berkaitan. Untuk maklumat lanjut, lihat [Khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Anda telah [mengkonfigurasi segmen](segments.md)
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel, nama pertama dan nama akhir
-
-## <a name="connect-to-google-ads"></a>Sambungkan dengan Google Ads
-
-1. Pergi ke **Pentadbir** > **Destinasi Eksport**.
-
-1. Di bawah **Google Ads**, pilih **Sediakan**.
-
-1. Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.
-
-1. Masukkan **[ID pelanggan Google Ads](https://support.google.com/google-ads/answer/1704344)** anda.
-
-1. Masukkan **[Token pembangun diluluskan Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)** anda.
-
-1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
-
-1. Masukkan **[ID khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** anda dan pilih **Sambung** untuk memulakan sambungan ke Google Ads.
-
-1. Pilih **Sahkan dengan Google Ads** dan berikan kelayakan Google ads anda..
-
-1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
-
-   :::image type="content" source="media/export-segments-googleads.PNG" alt-text="Eksport petikan skrin untuk sambungan Google Ads":::
-
-1. Pilih **Seterusnya** untuk konfigurasi eksport.
-
-## <a name="configure-the-connector"></a>Konfigurasi penyambung
-
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan **Nama pertama** and **Nama akhir**.
-
-1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta profil pelanggan dalam jumlah keseluruhan Google ads.
-
-1. Pilih **Simpan**.
-
-## <a name="export-the-data"></a>Mengeksport data
-
-Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab). Dalam Google ads, anda kini boleh mencari segmen anda di bawah [Khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en/).
 
 ## <a name="known-limitations"></a>Had diketahui
 
@@ -69,6 +37,48 @@ Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga 
 - Mengeksport ke Google Ads adalah terhad kepada segmen.
 - Mengeksport segmen dengan jumlah 1 juta profil boleh mengambil masa hingga 5 minit kerana had pada bahagian pembekal. 
 - Pemadanan dalam Google Ads boleh mengambil masa hingga 48 jam.
+
+## <a name="set-up-connection-to-google-ads"></a>Sediakan sambungan ke Google Ads
+
+1. Pergi ke **Pentadbir** > **Sambungan**.
+
+1. Pilih **Tambah sambungan** dan pilih **Google Ads** untuk mengkonfigurasikan sambungan.
+
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
+
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Masukkan **[ID pelanggan Google Ads](https://support.google.com/google-ads/answer/1704344)** anda.
+
+1. Masukkan **[Token pembangun diluluskan Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)** anda.
+
+1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
+
+1. Pilih **Sahkan dengan Google Ads** dan berikan kelayakan Google ads anda..
+
+1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
+
+1. Pilih **Simpan** untuk melengkapkan sambungan. 
+
+## <a name="configure-an-export"></a>Konfigurasikan eksport
+
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Pergi ke **Data** > **Eksport**.
+
+1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
+
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Google Ads. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+
+1. Masukkan **[ID khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** anda dan pilih **Sambung** untuk memulakan sambungan ke Google Ads.
+
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan **Nama pertama** and **Nama akhir**.
+
+1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta profil pelanggan dalam jumlah keseluruhan Google ads.
+
+Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
+
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

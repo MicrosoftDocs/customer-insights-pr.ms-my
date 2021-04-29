@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597844"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896522"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -83,7 +83,7 @@ Jika ia bukan kali pertama anda menjalankan dengan berjaya, semua proses hilir, 
 
 ## <a name="next-step"></a>Langkah Seterusnya
 
-Konfigurasikan [aktiviti](activities.md), [pengayaan](enrichment-microsoft-graph.md) atau [perhubungan](relationships.md) untuk mendapatkan wawasan lanjut tentang pelanggan anda.
+Konfigurasikan [aktiviti](activities.md), [pengayaan](enrichment-hub.md) atau [perhubungan](relationships.md) untuk mendapatkan wawasan lanjut tentang pelanggan anda.
 
 Jika anda sudah mengkonfigurasi aktiviti, pengayaan atau perhubungan, atau jika anda mentakrifkan segmen, ia akan diproses secara automatik untuk menggunakan data pelanggan terkini.
 

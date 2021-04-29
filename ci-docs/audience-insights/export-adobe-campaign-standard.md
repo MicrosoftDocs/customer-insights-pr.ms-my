@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Adobe Campaign Standard
 description: Ketahui cara menggunakan segmen wawasan khalayak dalam Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596326"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760292"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Gunakan segmen Customer Insights dalam Adobe Campaign Standard (pratonton)
 
@@ -48,15 +48,21 @@ E-mel tawaran yang ingin anda hantar akan mengandungi nama pertama, nama akhir d
 
 ## <a name="export-your-target-audience"></a>Eksport khalayak sasaran anda
 
+### <a name="configure-a-connection"></a>Konfigurasikan sambungan
+
 Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan eksport daripada wawasan khalayak ke akaun Storan Blob Azure.
 
-1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
+1. Dalam wawasan khalayak, pergi ke **Pergi ke** > **Sambungan**.
 
-1. Dalam jubin **Adobe Campaign**, pilih **Sediakan**.
+1. Pilih **Tambah sambungan** dan pilih **Adobe Campaign** untuk mengkonfigurasikan sambungan atau pilih **Sediakan** dalam jubin **Adobe Campaign**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Jubin konfigurasi untuk Adobe Campaign Standard.":::
 
-1. Berikan **Nama paparan** untuk destinasi eksport baharu ini dan kemudian masukkan **Nama akaun**, **Kunci akaun** dan **Bekas** akaun Storan Blob Azure tempat yang ingin anda eksport segmen itu.  
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
+
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Masukkan **Nama akaun**, **Kekunci akaun**, dan **Bekas** untuk akaun Storan Blob Azure anda di tempat anda mahu mengeksport segmen.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Petikan skrin konfigurasi akaun storan. "::: 
 
@@ -64,7 +70,17 @@ Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan e
 
    - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Pilih **Seterusnya**.
+1. Pilih **Simpan** untuk melengkapkan sambungan.
+
+### <a name="configure-an-export"></a>Konfigurasikan eksport
+
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Pergi ke **Data** > **Eksport**.
+
+1. Untuk mencipta eksport baharu, pilih **Tambah eksport**.
+
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Adobe Campaign. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
 1. Pilih segmen yang ingin anda eksport. Dalam contoh ini, ia **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan e
 
 1. Pilih **Simpan**.
 
-Selepas menyimpan destinasi eksport, anda dapati ia di **Pentadbir** > **Eksport** > **Destinasi eksport saya**.
+Selepas menyimpan destinasi eksport, anda akan menemuinya dalam **Data** > **Eksport**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Petikan skrin dengan senarai eksport dan segmen sampel yang diserlahkan.":::
-
-Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#export-data-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
+Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#run-exports-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
 
 > [!NOTE]
 > Pastikan bilangan rekod dalam segmen yang dieksport berada dalam had lesen Adobe Campaign Standard anda yang dibenarkan.

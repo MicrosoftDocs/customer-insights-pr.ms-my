@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597476"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896430"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Mengintegrasikan data web daripada wawasan penglibatan dengan wawasan khalayak
 
@@ -46,7 +46,7 @@ Pertimbangan apabila mencipta peristiwa yang ditapis:
     - Signal.Action.Name - menunjukkan butiran aktiviti
     - Signal.User.Id - digunakan untuk memetakan dengan ID pelanggan
     - Isyarat. lihat. URI - digunakan sebagai alamat web sebagai asas untuk segmen atau langkah
-    - Signal.Export.Id - untuk menggunakan sebagai kunci utama bagi peristiwa <!-- system generated, do we need to list?-->
+    - Signal.Export.Id - untuk menggunakan sebagai kunci utama bagi peristiwa
     - Isyarat. Cap waktu - untuk menentukan tarikh dan masa aktiviti
 
 Pilih penapis untuk fokus pada acara dan halaman yang penting untuk kes kegunaan anda. Dalam contoh ini, kami akan menggunakan nama tindakan "Promosi e-mel".

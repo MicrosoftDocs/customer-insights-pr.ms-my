@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598641"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896476"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pe
   - Sambung dan satukan data anda dengan mudah—masukkan data transaksi, pemerhatian dan tingkah laku daripada [sumber data popular dengan menggunakan penyambung yang dibina awal](data-sources.md).
   - Mengubah data pelanggan dengan pintar—bina penyatuan profil pelanggan selaras dengan [Common Data Model](/common-data-model/). Selesaikan identiti pelanggan dengan pengesyoran yang didorong AI/ML.
 
-- **Memperkaya dengan kepintaran khalayak yang terkandung dalam Microsoft Graph**
+- **Perkayakan dengan kecerdasan khalayak**
 
-  - Bina profil pelanggan yang lebih kaya dengan [menggabungkan kecerdasan khalayak yang terkandung dalam Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Bina profil pelanggan yang lebih kaya dengan [menggabungkan data yang diperkaya](enrichment-hub.md).  
 
 - **Kuasakan proses perniagaan dan pengalaman pelanggan peribadi anda**
 
@@ -43,7 +43,7 @@ Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pe
 
   - Akses kepada koleksi yang banyak penyambung untuk memasukkan semua data pelanggan anda.
   - Keupayaan untuk menyatukan data pelanggan dan mengubahnya ke dalam format [Common Data Model](/common-data-model/).
-  - Memperkayakan maklumat pelanggan dengan wawasan daripada kecerdasan khalayak yang terkandung dalam Microsoft graf, seperti perkaitan jenama dan minat.
+  - Perkayakan maklumat pelanggan dengan wawasan daripada kecerdasan khalayak seperti perkaitan jenama dan minat.
   - Konfigurasi "Klik-bukan-kod" dan pengalaman penyahpepijatan untuk membantu mengkonfigurasi wawasan pelanggan dengan mudah dan mengenal pasti isu yang berpotensi.
   - Membersih dan menyeragamkan data pelanggan merentasi sumber yang berbeza dengan saranan AI-powered.  
 

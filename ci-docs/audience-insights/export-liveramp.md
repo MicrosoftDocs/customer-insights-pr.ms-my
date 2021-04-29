@@ -1,7 +1,7 @@
 ---
 title: LiveRamp penyambung
-description: Ketahui cara untuk mengeksport data ke LiveRamp.
-ms.date: 12/02/2020
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597568"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760338"
 ---
-# <a name="liverampreg-connector-preview"></a>Penyambung LiveRamp&reg; (pratonton)
+# <a name="export-segments-to-liverampreg-preview"></a>Eksport segmen ke LiveRamp&reg; (pratonton)
 
-Aktifkan data anda dalam LiveRamp untuk menyambung dengan 500 platform merentasi ekosistem digital, sosial, dan TV. Bekerja dengan data anda dalam LiveRamp untuk mensasar, menahan, dan memperibadikan kempen iklan.
+Aktifkan data anda dalam LiveRamp untuk berhubung dengan lebih daripada 500 platform merentasi digital, sosial, dan TV. Bekerja dengan data anda dalam LiveRamp untuk mensasar, menahan, dan memperibadikan kempen iklan.
 
-## <a name="prerequisites"></a>Prasyarat
+## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
 
 - Anda memerlukan langganan LiveRamp untuk menggunakan penyambung ini.
 - Untuk mendapatkan langganan, [hubungi LiveRamp](https://liveramp.com/contact/) secara terus. [Ketahui lanjut tentang Penyertaan LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Sambung ke LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Sediakan sambungan ke LiveRamp
 
-1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Dalam jubin **LiveRamp**, pilih **Sediakan**.
+1. Pilih **Tambah sambungan** dan pilih **LiveRamp** untuk mengkonfigurasikan sambungan.
 
-1. Berikan destinasi anda nama yang dikenali dalam medan **Nama paparan**.
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
+
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Sediakan **Nama Pengguna** dan **Kata Laluan** untuk akaun LiveRamp Secure FTP (SFTP).
 Kelayakan ini berkemungkinan berbeza daripada kelayakan Penyertaan LiveRamp anda.
@@ -40,15 +42,25 @@ Kelayakan ini berkemungkinan berbeza daripada kelayakan Penyertaan LiveRamp anda
 
 1. Selepas pengesahan berjaya, sediakan keizinan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
 
-1. Pilih **Seterusnya** untuk menyediakan penyambung LiveRamp.
+1. Pilih **Simpan** untuk melengkapkan sambungan.
 
-## <a name="configure-the-connector"></a>Konfigurasi penyambung
+## <a name="configure-an-export"></a>Konfigurasikan eksport
+
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Pergi ke **Data** > **Eksport**.
+
+1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
+
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian LiveRamp. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
 1. Dalam medan **Pilih pengecam kunci anda**, pilih **E-mel**,  **Nama dan alamat**, atau **Telefon** untuk menghantar ke LiveRamp untuk penyelesaian identiti.
+   > [!div class="mx-imgBorder"]
+   > ![Penyambung LiveRamp dengan atribut pemetaan](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
 
 1. Petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk pengecam kunci yang dipilih.
 
-1. Pilih **Tambah atribut** untuk memetakan atribut tambahan untuk dihantar ke LiveRamp.
+1. Pilih **Tambah atribut** untuk memetakan lebih banyak atribut untuk dihantar ke LiveRamp.
 
    > [!TIP]
    > Menghantar lebih banyak atribut pengecam kunci ke LiveRamp mempunyai kemungkinan besar untuk anda mendapatkan kadar pemadanan yang tinggi.
@@ -57,13 +69,10 @@ Kelayakan ini berkemungkinan berbeza daripada kelayakan Penyertaan LiveRamp anda
 
 1. Pilih **Simpan**.
 
-> [!div class="mx-imgBorder"]
-> ![Penyambung LiveRamp dengan atribut pemetaan](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
+Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
-## <a name="export-the-data"></a>Mengeksport data
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
 
-Eksport akan bermula sebentar lagi jika kesemua prasyarat untuk mengeksport telah lengkap. Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).
-Sebaik sahaja eksport berjaya diselesaikan, anda boleh mendaftar masuk ke Penyertaan LiveRamp untuk mengaktifkan dan mengedarkan data anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

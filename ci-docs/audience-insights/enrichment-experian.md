@@ -1,7 +1,7 @@
 ---
 title: Pengayaan dengan Experian pengayaan pihak ketiga
 description: Maklumat umum tentang pengayaan pihak ketiga Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597798"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896384"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Perkayakan profil pelanggan dengan demografik daripada Experian (pratonton)
 
@@ -25,10 +25,10 @@ Experian adalah peneraju global dalam pelaporan kredit pengguna dan perniagaan s
 Untuk mengkonfigurasikan Experian, prasyarat berikut mesti dipenuhi:
 
 - Anda mempunyai langganan Experian yang aktif. Untuk mendapatkan langganan, [hubungi Experian](https://www.experian.com/marketing-services/contact) secara terus. [Ketahui lanjut tentang Pengayaan Data Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Anda mempunyai ID pengguna, ID Pihak dan Nombor Model untuk akaun Pengangkutan Selamat (ST) didayakan SSH yang telah dicipta oleh Experian untuk anda.
-- Anda mempunyai keizinan [Pentadbir](permissions.md#administrator) dalam wawasan khalayak.
 
-## <a name="configuration"></a>Konfigurasi
+- Sambungan Experian telah dikonfigurasikan oleh pentadbir *atau* anda mempunyai keizinan [pentadbir](permissions.md#administrator). Anda juga memerlukan ID pengguna, ID Parti dan Nombor Model untuk akaun Pengangkutan Selamat (ST) yang Didayakan oleh SSH yang dicipta oleh Experian untuk anda.
+
+## <a name="configure-the-enrichment"></a>Konfigurasikan pengayaan
 
 1. Pergi ke **Data** > **Pengayaan** dan pilih tab **Terokai**.
 
@@ -36,26 +36,46 @@ Untuk mengkonfigurasikan Experian, prasyarat berikut mesti dipenuhi:
 
    > [!div class="mx-imgBorder"]
    > ![Jubin Experian](media/experian-tile.png "Jubin Experian")
+   > 
 
-1. Pilih **Mari bermula** dan masukkan ID Pengguna, ID Pihak dan Nombor Model untuk akaun Pengangkutan Selamat Experian anda. Semak semula dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**. Sahkan semua input dengan memilih **Gunakan**.
+1. Pilih [sambungan](connections.md) daripada menu juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih Experian daripada menu juntai bawah. 
 
-## <a name="map-your-fields"></a>Petakan medan anda
+1. Pilih **Sambung ke Experian** untuk mengesahkan pilihan penyambungan.
 
-1.  Pilih **Tambah data** dan pilih **Set data pelanggan** yang anda ingin perkayakan dengan data demografi daripada Experian. Anda boleh memilih entiti **Pelanggan** untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
+1.  Pilih **Seterusnya** dan pilih **Set data pelanggan** yang anda mahu perkayakan dengan data demografi daripada Experian. Anda boleh memilih entiti **Pelanggan** untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
 
-1. Pilih pengecam utama anda daripada **Nama dan Alamat**, **E-mel** atau **Telefon** untuk dihantar ke Experian bagi resolusi identiti.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Tangkapan skrin apabila memilih set data pelanggan.":::
 
-   > [!TIP]
-   > Lebih atribut pengecam kunci yang dihantar kepada Experian mungkin akan menghasilkan kadar padanan yang lebih tinggi.
+1. Pilih **Seterusnya** dan tentukan jenis medan daripada profil anda yang disatukan yang perlu digunakan untuk mencari data demografi yang sepadan daripada Experian. Sekurang-kurangnya salah satu medan **Nama dan alamat**, **Telefon** atau **E-mel** diperlukan. Untuk mendapatkan ketepatan padanan yang lebih tinggi, maksimum dua medan lain boleh ditambah. Pemilihan ini akan mempengaruhi medan pemetaan yang anda boleh akses dalam langkah seterusnya.
 
-1. Pilih **Seterusnya** dan petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk medan pengecam kunci yang dipilih.
+    > [!TIP]
+    > Lebih atribut pengecam kunci yang dihantar kepada Experian mungkin akan menghasilkan kadar padanan yang lebih tinggi.
 
-1. Pilih **Tambah atribut** untuk memetakan sebarang atribut tambahan yang anda mahu hantar ke Experian.
+1. Pilih **Seterusnya** untuk memulakan pemetaan medan.
 
-1.  Pilih **Simpan** untuk melengkapkan pemetaan medan.
+1. Tentukan jenis medan daripada profil anda yang disatukan yang perlu digunakan untuk mencari data demografi yang sepadan daripada Experian. Medan yang diperlukan ditandakan.
 
-    > [!div class="mx-imgBorder"]
-    > ![Memetakan medan Experian](media/experian-field-mapping.png "Memetakan medan Experian")
+1. Berikan nama untuk pengayaan dan nama untuk entiti output.
+
+1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda.
+
+## <a name="configure-the-connection-for-experian"></a>Konfigurasikan sambungan untuk Experian 
+
+Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah sambungan** apabila mengkonfigurasikan pengayaan *atau* pergi ke **Pentadbir** > **Sambungan** dan pilih **Sediakan** pada jubin Experian.
+
+1. Pilih **Mulakan**.
+
+1. Masukkan nama untuk sambungan dalam kotak **Nama paparan**.
+
+1. Masukkan ID Pengguna, ID Parti dan Nombor Model yang sah untuk akaun Pengangkutan Selamat Experian anda.
+
+1. Semak dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
+
+1. Pilih **Sahkan** untuk mengesahkan konfigurasi.
+
+1. Selepas melengkapkan pengesahan, pilih **Simpan**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Anak tetingkap konfigurasi sambungan Experian.":::
 
 ## <a name="enrichment-results"></a>Keputusan pengayaan
 

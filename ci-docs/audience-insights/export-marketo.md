@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Marketo
-description: Ketahui cara mengkonfigurasi sambungan ke Marketo.
-ms.date: 11/12/2020
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Marketo.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,59 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597982"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759832"
 ---
-# <a name="connector-for-marketo-preview"></a>Penyambung untuk Marketo (pratonton)
+# <a name="export-segments-to-marketo-preview"></a>Eksport segmen ke Marketo (pratonton)
 
 Eksport segmen profil pelanggan disatukan untuk menjana kempen, menyediakan pemasaran e-mel dan gunakan kumpulan pelanggan tertentu dengan Marketo.
 
-## <a name="prerequisites"></a>Prasyarat
+## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
 -   Anda mempunyai [Akaun Marketo](https://login.marketo.com/) dan kelayakan pentadbir yang berkaitan.
 -   Terdapat senarai sedia ada dalam Marketo dan ID yang berkaitan. Untuk maklumat lanjut, lihat [Senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Anda telah [mengkonfigurasi segmen](segments.md).
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
-
-## <a name="connect-to-marketo"></a>Sambung ke Marketo
-
-1. Pergi ke **Pentadbir** > **Destinasi Eksport**.
-
-1. Di bawah **Marketo**, pilih **Sediakan**.
-
-1. Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.
-
-1. Masukkan **[ID klien Marketo, Rahsia pelanggan dan Nama hos Titik tamat REST](https://developers.marketo.com/rest-api/authentication/)** anda.
-
-1. Masukkan **[ID senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** anda 
-
-1. Pilih **Saya setuju** untuk mengesahkan **Privasi data dan pematuhan** dan pilih **Sambung** untuk memulakan sambungan ke Marketo.
-
-1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
-
-   :::image type="content" source="media/export-connect-marketo.png" alt-text="Eksport tangkap skrin untuk sambungan Marketo":::
-
-1. Pilih **Seterusnya** untuk konfigurasi eksport.
-
-## <a name="configure-the-connector"></a>Konfigurasi penyambung
-
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
-
-1. Secara alternatif, anda boleh mengeksport **Nama pertama**, **Nama akhir**, **Bandar**, **Negeri**, dan **Negara/Rantau** sebagai medan tambahan untuk mencipta lebih banyak e-mel peribadi. Pilih **Tambah atribut** untuk memetakan medan ini.
-
-1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta jumlah profil pelanggan ke Marketo.
-
-   :::image type="content" source="media/export-segment-marketo.png" alt-text="Pilih medan dan segmen untuk eksport ke Marketo":::
-
-1. Pilih **Simpan**.
-
-## <a name="export-the-data"></a>Mengeksport data
-
-Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab). Dalam Marketo, anda kini boleh mencari segmen anda di bawah [Senarai Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 ## <a name="known-limitations"></a>Had diketahui
 
@@ -69,6 +33,49 @@ Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga 
 - Mengeksport ke Marketo adalah terhad kepada segmen.
 - Mengeksport segmen dengan sejumlah 1 juta profil boleh mengambil masa sehingga 3 jam. 
 - Bilangan profil yang boleh anda eksport ke Marketo bergantung dan terhad pada kontrak anda dengan Marketo.
+
+## <a name="set-up-connection-to-marketo"></a>Sediakan sambungan ke Marketo
+
+1. Pergi ke **Pentadbir** > **Sambungan**.
+
+1. Pilih **Tambah sambungan** dan pilih **Marketo** untuk mengkonfigurasikan sambungan.
+
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
+
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Masukkan **[ID klien Marketo, Rahsia pelanggan dan Nama Hos Titik Tamat REST](https://developers.marketo.com/rest-api/authentication/)** anda.
+
+1. Pilih **Saya setuju** untuk mengesahkan **Privasi data dan pematuhan** dan pilih **Sambung** untuk memulakan sambungan ke Marketo.
+
+1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
+
+1. Pilih **Simpan** untuk melengkapkan sambungan.
+
+## <a name="configure-an-export"></a>Konfigurasikan eksport
+
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Pergi ke **Data** > **Eksport**.
+
+1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
+
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Marketo. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+
+1. Masukkan **[ID senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** anda 
+
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
+
+1. Selain itu, anda boleh mengeksport **Nama pertama**, **Nama terakhir**, **Bandar**, **Negeri**, dan **Negeri/Rantau**  untuk mencipta e-mel yang diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
+
+1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta jumlah profil pelanggan ke Marketo.
+
+1. Pilih **Simpan**.
+
+Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
+
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). Dalam Marketo, anda kini boleh mencari segmen anda di bawah [Senarai Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

@@ -1,7 +1,7 @@
 ---
 title: Pengayaan profil syarikat dengan ruang pengayaan pihak ketiga Leadspace
 description: Maklumat umum tentang pengayaan pihak ketiga Leadspace.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597660"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895924"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil syarikat dengan Leadspace (pratonton)
 
-Leadspace ialah syarikat sains data yang menyediakan Platform Data Pelanggan B2B. Ia membolehkan pelanggan dengan profil pelanggan yang disatukan untuk syarikat mengayakan data mereka. Pengayaan merangkumi atribut tambahan seperti saiz syarikat, lokasi, industri dan banyak lagi.
+Leadspace ialah syarikat sains data yang menyediakan Platform Data Pelanggan B2B. Ia membolehkan pelanggan dengan profil pelanggan yang disatukan untuk syarikat mengayakan data mereka. Pengayaan termasuk lebih banyak atribut seperti saiz syarikat, lokasi, industri dan banyak lagi.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Untuk mengkonfigurasikan Leadspace, prasyarat yang berikut mesti dipenuhi:
 
-- Anda mempunyai lesen Leadspace yang aktif dan “kunci kekal” (dirujuk sebagai **Token Leadspace**). Hubungi terus [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) untuk butiran tentang produk mereka.
-- Anda mempunyai keizinan [Pentadbir](permissions.md#administrator).
+- Anda mempunyai lesen Leadspace yang aktif.
 - Anda mempunyai [profil pelanggan yang disatukan](customer-profiles.md) untuk syarikat.
+- Sambungan Leadspace telah dikonfigurasikan oleh pentadbir atau anda mempunyai keizinan [pentadbir](permissions.md#administrator) dan "kunci kekal" (dirujuk sebagai **token Leadspace**). Hubungi [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) secara langsung untuk maklumat mengenai produk mereka.
 
-## <a name="configuration"></a>Konfigurasi
+## <a name="configure-the-enrichment"></a>Konfigurasikan pengayaan
 
 1. Dalam wawasan khalayak, pergi ke **Data** > **Pengayaan**.
 
-1. Pilih **Perkayakan data saya** pada jubin Leadspace.
+1. Pilih **Perkayakan data saya** pada jubin Leadspace dan pilih **Mari bermula**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Petikan skrin jubin Leadspace.":::
 
-1. Pilih **Mari Bermula** dan kemudian masukkan **token Leadspace** aktif (kunci kekal). Semak semula dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**. Sahkan kedua-dua input dengan memilih **Sambung ke Leadspace**.
+1. Pilih [sambungan](connections.md) daripada menu juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih **Leadspace**. 
 
-1. Pilih **Petakan data** dan pilih set data yang anda ingin perkayakan dengan data syarikat daripada Leadspace. Anda boleh memilih entiti *Pelanggan* untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
+1. Pilih **Sambung ke Leadspace** untuk mengesahkan sambungan.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Pilih antara profil pelanggan dan pengayaan segmen":::
+1. Pilih **Seterusnya** dan pilih **Set data pelanggan** yang anda mahu perkayakan dengan data syarikat daripada Leadspace. Anda boleh memilih entiti **Pelanggan** untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
 
-1. Klik **Setersunya** dan takrifkan medan yang hendak digunakan daripada profil disatukan untuk memadankan data syarikat Leadspace. Medan **Nama syarikat** diperlukan. Untuk ketepatan padanan yang lebih tinggi hingga dua medan yang lain, **Tapak web syarikat** dan **Lokasi syarikat** boleh ditambah.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Tangkapan skrin apabila memilih set data pelanggan.":::
+
+1. Pilih **Seterusnya** dan tentukan jenis medan daripada profil anda yang disatukan yang digunakan untuk mencari data demografi yang sepadan daripada Leadspace. Medan **Nama syarikat** diperlukan. Untuk ketepatan padanan yang lebih tinggi hingga dua medan yang lain, **Tapak web syarikat** dan **Lokasi syarikat** boleh ditambah.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Anak tetingkap pemetaan medan Leadspace.":::
-   
-1. Pilih **Gunakan** untuk melengkapkan pemetaan medan.
 
-1. Pilih **Jalankan** untuk mengayakan profil syarikat. Tempoh yang diambil oleh pengayaan bergantung kepada bilangan profil pelanggan disatukan.
+1. Pilih **Seterusnya** untuk melengkapkan pemetaan medan.
+
+1. Berikan nama untuk pengayaan dan pilih **Simpan pengayaan** selepas menyemak pilihan anda.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Konfigurasikan sambungan untuk Leadspace 
+
+Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah sambungan** apabila mengkonfigurasikan pengayaan *atau* pergi ke **Pentadbir** > **Sambungan** dan pilih **Sediakan** pada jubin Leadspace.
+
+1. Pilih **Mari Bermula** 
+
+1. Masukkan nama untuk sambungan dalam kotak **Nama paparan**.
+
+1. Berikan token Leadspace yang sah.
+
+1. Semak dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
+
+1. Pilih **Sahkan** untuk mengesahkan konfigurasi.
+
+1. Selepas melengkapkan pengesahan, pilih **Simpan**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Halaman konfigurasi sambungan Leadspace.":::
 
 ## <a name="enrichment-results"></a>Keputusan pengayaan
 

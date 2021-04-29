@@ -1,6 +1,6 @@
 ---
-title: Eksport data Customer Insights ke AdRoll
-description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke AdRoll.
+title: Eksport data Customer Insight ke RollWorks
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke RollWorks.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,36 +9,36 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 4979f0147dea2270f11342c1bb6b0693f3c24aea
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895970"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760593"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Eksport senarai segmen ke AdRoll (pratonton)
+# <a name="export-segment-lists-to-rollworks-preview"></a>Eksport senarai segmen ke RollWorks (pratonton)
 
-Eksport segmen profil pelanggan yang disatukan ke AdRoll dan gunakan segmen tersebut untuk pengiklanan. 
+Eksport segmen profil pelanggan yang disatukan ke RollWorks dan gunakannya untuk pengiklanan. 
 
 ## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
 
--   Anda mempunyai [Akaun AdRoll](https://www.adroll.com/) dan kelayakan pentadbir yang berkaitan.
+-   Anda mempunyai [akaun RollWorks](https://www.rollworks.com/) dan kelayakan pentadbir yang sepadan.
 -   Anda mempunyai [segmen yang dikonfigurasi](segments.md) dalam wawasan khalayak.
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 250,000 profil bagi setiap eksport ke AdRoll.
-- Anda tidak boleh mengeksport segmen yang kurang daripada 100 profil ke AdRoll. 
-- Mengeksport ke AdRoll adalah terhad kepada segmen.
-- Mengeksport hingga 250,000 profil ke AdRoll mungkin mengambil masa hingga 10 minit untuk selesai. 
-- Bilangan profil yang boleh anda eksport ke AdRoll bergantung dan terhad pada kontrak anda dengan AdRoll.
+- Anda boleh mengeksport hingga 250,000 profil dalam setiap eksport ke RollWorks.
+- Anda tidak boleh mengeksport segmen yang kurang daripada 100 profil ke RollWorks. 
+- Mengeksport ke RollWorks dihadkan kepada segmen.
+- Mengeksport hingga 250,000 profil ke RollWorks boleh mengambil masa hingga 10 minit untuk diselesaikan. 
+- Bilangan profil yang boleh anda eksport ke RollWorks adalah bergantung dan terhad pada kontrak anda dengan RollWorks.
 
-## <a name="set-up-connection-to-adroll"></a>Sediakan sambungan ke AdRoll
+## <a name="set-up-connection-to-rollworks"></a>Sediakan sambungan ke RollWorks
 
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pilih **Tambah sambungan** dan pilih **AdRoll** untuk mengkonfigurasikan sambungan.
+1. Pilih **Tambah sambungan** dan pilih **RollWorks** untuk mengkonfigurasikan sambungan.
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
@@ -46,9 +46,9 @@ Eksport segmen profil pelanggan yang disatukan ke AdRoll dan gunakan segmen ters
 
 1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
 
-1. Pilih **Sambung** untuk memulakan sambungan ke AdRoll.
+1. Pilih **Sambung** untuk memulakan sambungan ke RollWorks.
 
-1. Pilih **Sahkan dengan AdRoll** dan berikan kelayakan pentadbir anda untuk AdRoll. 
+1. Pilih **Sahkan dengan RollWorks** dan berikan kelayakan pentadbir anda untuk RollWorks.
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
@@ -62,11 +62,11 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian AdRoll. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian RollWorks. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
-1. Masukkan **ID Pengiklan AdRoll**. Untuk mendapatkan maklumat lanjut, lihat [Profil Pengiklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Masukkan **ID Pengiklan RollWorks** [RollWorks Boleh Diiklankan](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke AdRoll.
+3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke RollWorks.
 
 1. Pilih segmen yang ingin anda eksport. Pilih segmen dengan sekurang-kurangnya 100 ahli. Anda tidak boleh mengeksport segmen yang lebih kecil. Selain itu, saiz maksimum segmen untuk mengeksport ialah 250,000 ahli bagi setiap eksport. 
 
@@ -79,6 +79,6 @@ Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedul
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke AdRoll, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif yang berpotensi seperti Data Peribadi. Microsoft akan memindahkan data sedemikian mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa AdRoll memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Apabila anda mendayakan Dynamics 365 Customer Insights untuk memindahkan data ke RollWorks, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif berpotensi seperti Data Peribadi. Microsoft akan memindahkan data tersebut atas arahan anda, tetapi anda bertanggungjawab untuk memastikan RollWorks memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.

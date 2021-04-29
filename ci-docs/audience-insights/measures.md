@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus tindakan
 description: Takrifkan ukuran untuk menganalisis dan mencerminkan prestasi perniagaan anda.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654743"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887951"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
-Ukuran membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan dengan mendapatkan nilai yang relevan dari [profil disatukan](data-unification.md). Contohnya, sebuah perniagaan ingin melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu. Atau ukuran *jumlah jualan keseluruhan syarikat* untuk memahami perolehan peringkat agregat dalam keseluruhan perniagaan.  
+Langkah ini membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan. Mereka melihat nilai yang relevan daripada [profil disatukan](data-unification.md). Contohnya, perniagaan mahu melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu atau mengukur *jumlah jualan syarikat* untuk memahami perolehan peringkat agregat dalam perniagaan keseluruhan.  
 
 Ukuran dicipta menggunakan pembina ukuran, platform pertanyaan data dengan pelbagai pengendali dan pilihan pemetaan yang mudah. Ia membolehkan anda menapis data, mengumpulkan hasil, mengesan [laluan perhubungan entiti](relationships.md) dan pratonton output.
 
 Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada data pelanggan dan mendapatkan wawasan. Sebagai contoh, mencipta ukuran *jumlah perbelanjaan setiap pelanggan* dan *jumlah pulangan setiap pelanggan* membantu mengenal pasti kumpulan pelanggan yang mempunyai perbelanjaan tinggi tetapi pulangan tinggi. Anda boleh [mencipta segmen](segments.md) untuk memacu tindakan terbaik seterusnya. 
 
-## <a name="create-a-measure"></a>Cipta ukuran
+## <a name="build-your-own-measure-from-scratch"></a>Bina ukuran anda sendiri dari mula
 
 Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membina ukuran dengan atribut data daripada entiti data yang mempunyai persediaan untuk berhubung dengan entiti Pelanggan. 
 
 1. Dalam wawasan khalayak, pergi ke **Ukuran**.
 
-1. Pilih **Baharu**.
+1. Pilih **Baharu** dan pilih **Bina yang anda sendiri**.
 
 1. Pilih **Edit nama** dan berikan **Nama** untuk langkah itu. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
    1. Pilih **Edit dimensi** untuk menambah atribut data yang anda mahu kumpulkan nilai ukuran. Sebagai contoh, bandar atau jantina. Secara lalai, dimensi *CustomerID* dipilih untuk mencipta *ukuran peringkat pelanggan*. Anda boleh mengalih keluar dimensi lalai jika anda mahu mencipta *ukuran peringkat perniagaan*.
    1. Pilih **Selesai** untuk menambah dimensi pada ukuran.
 
+1. Jika terdapat nilai dalam data anda yang anda perlu gantikan dengan integer, contohnya, gantikan *nol* dengan *0*, pilih **Peraturan**. Konfigurasikan peraturan dan pastikan anda memilih hanya nombor keseluruhan sebagai pengganti.
+
 1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dengan entiti *Pelanggan*, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih. 
    1. Pilih **Keutamaan data** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti langkah anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
    1. Pilih **Selesai** untuk menggunakan pilihan anda. 
@@ -88,9 +90,57 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 1. Pergi ke **Langkah** untuk melihat langkah yang baharu dicipta dalam senarai.
 
+## <a name="use-a-template-to-build-a-measure"></a>Gunakan templat untuk membina langkah
+
+Anda boleh menggunakan templat pratakrif untuk langkah yang biasa digunakan untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
+
+Templat langkah yang tersedia: 
+- Purata nilai transaksi (ATV)
+- Jumlah nilai transaksi
+- Purata hasil harian
+- Purata hasil tahunan
+- Kiraan transaksi
+- Mata kesetiaan diperoleh
+- Mata kesetiaan ditebus
+- Baki mata kesetiaan
+- Jangka hayat pelanggan aktif
+- Tempoh keahlian kesetiaan
+- Masa sejak pembelian terakhir
+
+Prosedur berikut menggariskan langkah untuk membina langkah baharu menggunakan templat.
+
+1. Dalam wawasan khalayak, pergi ke **Ukuran**.
+
+1. Pilih **Baharu** dan pilih **Pilih templat**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Tangkapan skrin menu juntai bawah apabila mencipta langkah baharu dengan serlahan pada templat.":::
+
+1. Cari templat yang sesuai dengan keperluan anda dan pilih **Pilih templat**.
+
+1. Semak data yang diperlukan dan pilih **Mari bermula** jika anda mempunyai semua data di tempatnya.
+
+1. Dalam anak tetingkap **Edit nama**, tetapkan nama untuk langkah anda dan entiti output. 
+
+1. Pilih **Selesai**.
+
+1. Dalam bahagian **Tetapkan tempoh masa**, takrifkan tempoh masa data untuk digunakan. Pilih jika anda mahu langkah baharu meliputi seluruh data yang ditetapkan dengan memilih **Semua masa**. Atau jika anda mahu langkah itu menumpukan pada **Tempoh masa tertentu**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Tangkapan skrin menunjukkan bahagian tempoh masa apabila mengkonfigurasikan langkah daripada templat.":::
+
+1. Dalam bahagian seterusnya, pilih **Tambah data** untuk memilih aktiviti dan memetakan data yang sepadan daripada entiti *Aktiviti Disatukan* anda.
+
+    1. Langkah 1 daripada 2: Di bawah **Jenis aktiviti**, pilih jenis entiti yang anda mahu gunakan. Untuk **Aktiviti**, pilih entiti yang anda mahu petakan.
+    1. Langkah 2 daripada 2: Pilih atribut daripada entiti *Aktiviti Disatukan* untuk komponen yang diperlukan oleh formula. Contohnya, untuk nilai transaksi Purata, ia merupakan atribut yang mewakili nilai Transaksi. Untuk **Cap waktu aktiviti**, pilih atribut daripada entiti Aktiviti Disatukan yang mewakili tarikh dan masa aktiviti.
+   
+1. Sebaik sahaja pemetaan data berjaya, anda boleh melihat status sebagai **Lengkap** dan nama aktiviti dan atribut yang dipetakan.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Tangkapan skrin konfigurasi templat langkah yang lengkap.":::
+
+1. Anda kini boleh memilih **Jalankan** untuk mengira keputusan ukuran. Untuk memperhalusi kemudian, pilih **Simpan draf**.
+
 ## <a name="manage-your-measures"></a>Urus tindakan anda
 
-Selepas [mencipta ukuran](#create-a-measure), anda akan melihat senarai ukuran pada halaman **Langkah**.
+Anda boleh mendapatkan senarai langkah pada halaman **Langkah**.
 
 Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh penciptaan, status dan keadaan. Apabila anda memilih ukuran daripada senarai, anda boleh pratonton output dan muat turun fail .CSV.
 

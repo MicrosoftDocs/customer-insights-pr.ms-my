@@ -1,7 +1,7 @@
 ---
 title: Uruskan keizinan pengguna
 description: Ketahui mengenai keizinan dan peranan pengguna.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595713"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760384"
 ---
 # <a name="user-permissions"></a>Keizinan pengguna
 
@@ -31,7 +31,7 @@ Terdapat tiga jenis peranan:
 - Lihat dan terokai halaman **Pengayaan**.
 - Teroka dan eksport entiti menggunakan halaman **Entiti**.
 - Lihat status proses sistem menggunakan halaman **Sistem**.
-- Eksport segmen dari halaman **Segmen**.
+- Lihat eksport dalam halaman **Eksport**.
 - Pasang dan gunakan papan pemuka **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Penyumbang
@@ -43,6 +43,7 @@ Terdapat tiga jenis peranan:
 - Cipta segmen menggunakan halaman **Segmen**.
 - Cipta ukuran menggunakan halaman **Ukuran**.
 - Urus konfigurasi dan perkayakan profil pelanggan daripada halaman **Pengayaan** (untuk pengayaan pihak pertama sahaja).
+- Urus dan cipta eksport berdasarkan sambungan yang dikongsi dengan penyumbang. [Ketahui lebih lanjut tentang cara pentadbir membenarkan penyumbang menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Pentadbir
 
@@ -50,8 +51,9 @@ Terdapat tiga jenis peranan:
 - Tetapan ubah pada halaman **Sistem**, termasuk bahasa bekerja dan jadual segar semula untuk proses sistem anda.
 - Lihat dan tambah keizinan menggunakan halaman **Keizinan**.
 - Tetapkan takrifan carian dan penapis untuk halaman Pelanggan menggunakan halaman **Carian & tapis indeks** (boleh diakses melalui halaman **Pelanggan**).
-- Takrifkan destinasi segmen Dynamics 365 Sales menggunakan halaman **Destinasi eksport**.
+- Uruskan sambungan dan benarkannya untuk peranan pengguna lain pada halaman **Sambungan**.
 - Urus konfigurasi dan perkayakan profil pelanggan daripada halaman **Pengayaan** (untuk semua pengayaan).
+- Urus dan cipta eksport pada halaman **Eksport**.
 - Pasang dan guna **Tambahan Kad Pelanggan**.
 - Tambah dan gunakan **Power Apps penyambung**.
 - Mendayakan penggunaan [Customer Insights API](apis.md).

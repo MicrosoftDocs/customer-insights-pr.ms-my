@@ -1,7 +1,7 @@
 ---
 title: Pengayaan dengan import tersuai SFTP
 description: Maklumat umum tentang pengayaan import tersuai SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595866"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896292"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
 
-Import tersuai Protokol Pemindahan Fail Selamat (SFTP) mendayakan anda mengimport data yang tidak perlu melalui proses penyatuan data. Ia adalah cara yang fleksibel, selamat dan mudah untuk membawa masuk data anda. Import tersuai SFTP boleh digunakan dalam kombinasi dengan [Eksport SFTP](export-sftp.md) membolehkan anda mengeksport data profil pelanggan yang diperlukan untuk pengayaan. Data kemudian boleh diproses, diperkaya dan import tersuai SFTP boleh digunakan untuk membawa data yang diperkaya kembali kepada keupayaan wawasan khalayak Dynamics 365 Customer Insights.
+Import tersuai Protokol Pemindahan Fail Selamat (SFTP) membolehkan anda mengimport data yang tidak perlu melalui proses penyatuan data. Ia adalah cara yang fleksibel, selamat dan mudah untuk membawa masuk data anda. Import tersuai SFTP boleh digunakan dalam kombinasi dengan [Eksport SFTP](export-sftp.md) membolehkan anda mengeksport data profil pelanggan yang diperlukan untuk pengayaan. Data kemudian boleh diproses, diperkaya dan import tersuai SFTP boleh digunakan untuk membawa data yang diperkaya kembali kepada keupayaan wawasan khalayak Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 Untuk mengkonfigurasi import tersuai SFTP, prasyarat berikut mesti dipenuhi:
 
-- Anda mempunyai kelayakan pengguna (nama pengguna dan kata laluan) untuk lokasi SFTP data yang akan diimport.
-- Anda mempunyai URL dan nombor port (kebiasaannya 22) untuk hos STFP.
-- Anda mempunyai nama fail dan lokasi fail untuk diimport pada hos SFTP.
-- Terdapat fail *model.json* yang menentukan skema untuk data yang akan diimport. Fail ini mestilah dalam direktori yang sama dengan fail untuk diimport.
-- Anda mempunyai keizinan [Pentadbir](permissions.md#administrator).
+- Anda mempunyai nama fail dan lokasi (laluan) fail yang akan diimport pada hos SFTP.
+- Terdapat fail *model.json* yang menentukan [skema Common Data Model](/common-data-model/) untuk data yang akan diimport. Fail ini mestilah dalam direktori yang sama dengan fail untuk diimport.
+- Sambungan SFTP telah dikonfigurasikan oleh pentadbir *atau* anda mempunyai keizinan [pentadbir](permissions.md#administrator). Anda memerlukan kelayakan pengguna, URL dan nombor port untuk lokasi SFTP yang mahu diimport data.
 
-## <a name="configuration"></a>Konfigurasi
+
+## <a name="configure-the-import"></a>Konfigurasikan import
 
 1. Pergi ke **Data** > **Pengayaan** dan pilih tab **Terokai**.
 
-1. Pada **Jubin import tersuai SFTP**, pilih **Perkayakan data saya**.
+1. Pada **jubin import tersuai SFTP**, pilih **Perkayakan data saya** dan kemudian pilih **Mari bermula**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Jubin Import tersuai SFTP](media/SFTP_Custom_Import_tile.png "Jubin Import tersuai SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Jubin import tersuai SFTP.":::
 
-1. Pilih **Mari Bermula** dan berikan kelayakan dan alamat untuk pelayan SFTP. Contohnya, sftp://mysftpserver.com:22.
+1. Pilih [sambungan](connections.md) daripada menu juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih **Import Tersuai SFTP** daripada menu juntai bawah.
 
-1. Masukkan nama fail yang mengandungi data dan laluan ke fail pada pelayan SFTP jika ia bukan dalam folder induk.
+1. Pilih **Sambung ke Import Tersuai** untuk mengesahkan sambungan yang dipilih.
 
-1. Sahkan semua input dengan memilih **Sambung ke Import Tersuai**.
+1.  Pilih **Seterusnya** dan masukkan **Nama Fail** dan **Laluan** dalam fail data yang anda mahu import.
 
-   > [!div class="mx-imgBorder"]
-   > ![Terbang keluar Konfigurasi Import Tersuai SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Terbang keluar Konfigurasi Import Tersuai SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Tangkapan skrin semasa memasuki lokasi data.":::
+
+1. Pilih **Seterusnya** dan berikan nama untuk pengayaan dan nama untuk entiti output. 
+
+1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurasikan sambungan untuk Import Tersuai SFTP 
+
+Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah sambungan** apabila mengkonfigurasikan pengayaan *atau* pergi ke **Pentadbir** > **Sambungan** dan pilih **Sediakan** pada jubin Import Tersuai.
+
+1. Masukkan nama untuk sambungan dalam kotak **Nama paparan**.
+
+1. Masukkan nama pengguna, kata laluan dan hos URL yang sah untuk pelayan STFP data yang akan diimport tinggal.
+
+1. Semak semula dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
+
+1. Pilih **Sahkan** untuk mengesahkan konfigurasi.
+
+1. Setelah pengesahan selesai, sambungan boleh disimpan dengan mengklik **Simpan**.
+
+> [!div class="mx-imgBorder"]
+   > ![Halaman konfigurasi sambungan Experian](media/enrichment-SFTP-connection.png "Halaman konfigurasi sambungan Experian")
+
 
 ## <a name="defining-field-mappings"></a>Mentakrifkan pemetaan medan 
 
@@ -105,8 +124,5 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 ## <a name="next-steps"></a>Langkah seterusnya
 
 Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md), [ukuran](measures.md) dan [eksport data](export-destinations.md) untuk menyampaikan pengalaman diperibadikan kepada pelanggan anda.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598455"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896246"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598455"
 
 Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](/dynamics365/release-plans/).
 
-Anda juga boleh menonton video berikut untuk mengetahui lebih lanjut tentang keupayaan yang dirancang untuk enam bulan yang lalu.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tertentu mungkin melihat ciri sebelum orang lain. Melainkan dinyatakan berbeza, anda tidak perlu mengambil sebarang tindakan dan kami akan mengemas kini aplikasi secara automatik tanpa masa henti.
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Kemas kini Mac 2021
+
+Kemas kini pada bulan Mac 2021 termasuk beberapa ciri, peningkatan prestasi, dan pembaikan pepijat.
+
+### <a name="activities"></a>Aktiviti
+
+- **Wizard aktiviti dan jenis semantik** Kami telah meningkatkan dan mengemas kini pengalaman pemetaan aktiviti kami untuk membimbing dan memudahkan penciptaan pemetaan aktiviti. Dalam pengalaman baharu ini, pengguna mendapat pengalaman berpandu untuk membantu melengkapkan setiap langkah proses. Pada langkah pemetaan aktiviti, selain memilih dari pelbagai jenis aktiviti, pengguna boleh memilih untuk memetakan data secara semantik untuk *Langganan* dan/atau *SalesOrderLine* kepada skema standard industri, yang boleh digunakan untuk penggunaan hiliran.    
+  Untuk maklumat lanjut, lihat [Aktiviti pelanggan](activities.md).
+
+### <a name="data-ingestion"></a>Pengingesan data
+
+- **Sambung ke sumber data di premis menggunakan aliran data dan get laluan Power Platform** Kami berbesar hati untuk mengumumkan pratonton untuk aliran data Power Platform dan kesambungan di premis menggunakan get laluan dalam Customer Insights dengan persekitaran Power Platform atau Dataverse yang berkaitan. Sebarang sumber data baharu yang dicipta dalam persekitaran Customer Insights dengan persekitaran Dataverse akan dilalaikan kepada aliran data Power Platform yang dibawa dalam kesambungan data di premis dan set sambungan yang kaya serta keupayaan transformasi.
+
+### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport diatur dalam sambungan dan eskport** Kami telah mengubah nama halaman **Destinasi eksport** kepada **Sambungan** dan menambah halaman berasingan untuk **Eksport**. Sebagai sebahagian daripada kemas kini ini, kami akan mengalih eksport sedia ada ke dalam pasangan sambungan dan eksport menggunakan sambungan tersebut. Pentadbir kini mempunyai lebih banyak kejelasan mengenai data keluar pada halaman **Sambungan**. Semua peranan pengguna mempunyai akses ke halaman **Eksport**, tetapi hanya pentadbir boleh memilih untuk membenarkan penyumbang untuk mengedit eksport tertentu dengan sambungan yang dikongsi.     
+  Untuk maklumat lanjut, lihat [Gambaran keseluruhan sambungan](connections.md) dan [Gambaran keseluruhan eksport](export-destinations.md).
+
+- **Eksport segmen ke Campaign Monitor** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Campaign Monitor. Anda kini boleh mengeksport segmen daripada senarai Customer Insights ke Campaign Monitor dan menggunakannya sebagai garis dasar untuk kempen pemasaran anda.    
+   Untuk maklumat lanjut, sila lihat [Eksport ke Campaign Monitor](export-campaign-monitor.md).
+
+- **Eksport segmen ke Constant Contact** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Constant Contact. Anda kini boleh mengeksport segmen daripada senarai Customer Insights ke Constant Contact dan menggunakannya sebagai garis dasar untuk kempen pemasaran anda.   
+   Untuk maklumat lanjut, sila lihat [Eksport ke Constant Contact](export-constant-contact.md).
+
+- **Eksport segmen ke RollWorks** Kami telah memperluaskan destinasi eksport kami untuk merangkumi RollWorks. Anda kini boleh mengeksport segmen daripada khalayak Customer Insights ke RollWorks dan menggunakannya sebagai garis dasar untuk pengiklanan B2B anda.    
+   Untuk maklumat lanjut, sila lihat [Eksport ke RollWorks](export-rollworks.md).
+
+- **Eksport segmen ke Snapchat** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Snapchat. Anda kini boleh mengeksport segmen daripada khalayak Customer Insights ke Snapchat dan menggunakannya sebagai garis dasar untuk pengiklanan anda.     
+   Untuk maklumat lanjut, sila lihat [Eksport ke Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Ramalan
+
+- **Gunakan penapis produk dalam pengesyoran produk ramalan** Kami telah menambah keupayaan untuk menggunakan penapis produk dalam model pengesyoran produk kami. Anda kini boleh mencipta ramalan yang hanya menggunakan subset produk anda.    
+   Untuk maklumat lanjut, lihat [Konfigurasikan penapis produk](predict-product-recommendation.md#configure-product-filters).
+
+- **Cipta segmen daripada ramalan model** Kami telah menambah cara yang cepat untuk mencipta segmen menggunakan hasil model ramalan. Dari halaman hasil model, anda boleh mencipta segmen baharu dengan mudah dengan membuat pilihan **Cipta segmen** baharu.    
+  Untuk maklumat lanjut, lihat [Cipta segmen berdasarkan model ramalan](prediction-based-segment.md).
+
+- **Penjelasan untuk pengesyoran produk** Kami telah menambah maklumat yang menjelaskan faktor utama yang dipelajari oleh model AI untuk menjana pengesyoran produk dan sejauh mana faktor-faktor tersebut menyumbang ke arah pengesyoran produk. Maklumat ini ditambah pada skrin hasil model.    
+   Untuk mendapatkan maklumat lanjut, lihat [Semak semula status dan keputusan ramalan](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Kemas kini Februari 2021
 
@@ -107,7 +144,7 @@ Kemas kini pada Disember 2020 termasuk beberapa ciri, peningkatan prestasi dan p
 
   Di samping itu, kami telah menambah pilihan konfigurasi baharu untuk mengawal dengan lebih baik cara anda mahu profil pelanggan anda diperkaya. 
 
-  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md).
+  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md).
 
 - **Kawal profil mana yang hendak diperkaya**
 
@@ -309,8 +346,8 @@ Kemas kini pada Ogos 2020 termasuk beberapa ciri, peningkatan prestasi dan pembe
 
 - **Perkayaan pertalian faedah tersedia di lebih banyak pasaran**
 
-  Kami melanjutkan ketersediaan pengayaan pertalian faedah di luar Amerika Syarikat kepada lima pasaran lain: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan pelanjutan ini, anda boleh memperkayakan data pelanggan anda dengan lebih banyak minat yang dikenakan kepada pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang terletak di pasaran ini menggunakan data proprietari tempatan daripada Microsoft Graph.
-  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md)
+  Kami melanjutkan ketersediaan pengayaan pertalian faedah di luar Amerika Syarikat kepada lima pasaran lain: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan pelanjutan ini, anda boleh memperkayakan data pelanggan anda dengan lebih banyak minat yang dikenakan kepada pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang berada dalam pasaran ini dengan menggunakan data proprietari tempatan daripada Microsoft.
+  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Kemas kini Julai 2020
@@ -330,8 +367,8 @@ Kemas kini pada Julai 2020 termasuk beberapa ciri, peningkatan prestasi dan pemb
 
 - **Pengayaan pertalian jenama tersedia di lebih banyak pasaran**
 
-  Kami melanjutkan ketersediaan pengayaan pertalian jenama di luar Amerika Syarikat kepada lima pasaran lain: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan perluasan ini, anda boleh memperkayakan data pelanggan anda dengan jenama tempatan dalam pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang terletak di pasaran ini menggunakan data proprietari tempatan daripada Microsoft Graph.
-  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md)
+  Kami melanjutkan ketersediaan pengayaan pertalian jenama di luar Amerika Syarikat kepada lima pasaran lain: Kanada, Australia, United Kingdom, Perancis dan Jerman. Dengan perluasan ini, anda boleh memperkayakan data pelanggan anda dengan jenama tempatan dalam pasaran ini. Kami juga akan memperkayakan profil pelanggan anda yang berada dalam pasaran ini dengan menggunakan data proprietari tempatan daripada Microsoft.
+  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Kemas kini Jun 2020
 
@@ -355,7 +392,7 @@ Kemas kini pada Jun 2020 termasuk beberapa ciri, peningkatan prestasi dan pembet
 - **Asingkan pengayaan afiniti jenama dan kepentingan**
 
   Afiniti jenama dan kepentingan kini tersedia sebagai dua pengayaan yang bebas. Pengayaan yang diasingkan memberikan anda fleksibiliti untuk mengkonfigurasikan dan menguruskannya secara individu, bergantung pada keperluan perniagaan anda.    
-  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md).
+  Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Muai
 

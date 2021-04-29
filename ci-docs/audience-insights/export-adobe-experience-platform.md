@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Platform Pengalaman Adobe
 description: Ketahui cara menggunakan segmen wawasan khalayak dalam Platform Pengalaman Adobe.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596280"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760112"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Gunakan segmen Customer Insights dalam Platform Pengalaman Adobe (pratonton)
 
@@ -51,21 +51,36 @@ E-mel tawaran yang ingin anda hantar akan mengandungi nama pertama, nama akhir d
 
 Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan eksport daripada wawasan khalayak ke akaun Storan Blob Azure.
 
-1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
+### <a name="configure-a-connection"></a>Konfigurasikan sambungan
 
-1. Dalam jubin **Storan Blob Azure**, pilih **Sediakan**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Jubin konfigurasi untuk Storan Blob Azure.":::
+1. Pilih **Tambah sambungan** dan pilih **Storan Blob Azure** atau pilih **Sediakan** dalam jubin **Storan Blob Azure**:
 
-1. Berikan **Nama paparan** untuk destinasi eksport baharu ini dan kemudian masukkan **Nama akaun**, **Kunci akaun** dan **Bekas** akaun Storan Blob Azure tempat yang ingin anda eksport segmen itu.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Jubin konfigurasi untuk Storan Blob Azure."::: Untuk mengkonfigurasikan sambungan.
+
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
+
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Masukkan **Nama akaun**, **Kekunci akaun**, dan **Bekas** untuk akaun storan Blob anda di tempat anda mahu mengeksport segmen.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Petikan skrin konfigurasi akaun storan. "::: 
+   
+    - Untuk mengetahui lebih lanjut tentang cara untuk mencari nama akaun dan kekunci akaun storan Blob, lihat [Urus tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
+    - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Untuk mengetahui lanjut tentang cara mencari nama akaun dan kunci akaun storan Blob Azure, lihat [Urus tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
+1. Pilih **Simpan** untuk melengkapkan sambungan. 
 
-   - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Konfigurasikan eksport
 
-1. Pilih **Seterusnya**.
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Pergi ke **Data** > **Eksport**.
+
+1. Untuk mencipta eksport baharu, pilih **Tambah eksport**.
+
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Storan Blob Azure. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
 1. Pilih segmen yang ingin anda eksport. Dalam contoh ini, ia **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan e
 
 1. Pilih **Simpan**.
 
-Selepas menyimpan destinasi eksport, anda dapati ia di **Pentadbir** > **Eksport** > **Destinasi eksport saya**.
+Selepas menyimpan destinasi eksport, anda akan menemuinya dalam **Data** > **Eksport**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Petikan skrin dengan senarai eksport dan segmen sampel yang diserlahkan.":::
-
-Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#export-data-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
+Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#run-exports-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
 
 > [!NOTE]
 > Pastikan bilangan rekod dalam segmen yang dieksport berada dalam had lesen Adobe Campaign Standard anda yang dibenarkan.

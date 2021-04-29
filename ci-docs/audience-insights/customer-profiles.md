@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596878"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896338"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -59,7 +59,7 @@ Butiran pelanggan termasuk:
 
 -   **Jubin profil pelanggan:** Jubin ini menunjukkan nilai berbeza daripada entiti profil pelanggan disatukan. Butiran ini boleh termasuk alamat e-mel, nama, bandar dan sebagainya. 
 
--   **Kemungkinan minat, bakal jenama:** Menunjukkan jika anda mengkonfigurasi pengayaan pihak pertama. Ia mewakili kepentingan yang berkemungkinan dan afiniti untuk jenama pelanggan dengan profil yang serupa dengan pelanggan ini mungkin miliki. Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md).
+-   **Kemungkinan minat, bakal jenama:** Menunjukkan jika anda mengkonfigurasi pengayaan pihak pertama. Ia mewakili kepentingan yang berkemungkinan dan afiniti untuk jenama pelanggan dengan profil yang serupa dengan pelanggan ini mungkin miliki. Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md).
 
 -   **Langkah:** Menunjukkan jika anda mengkonfigurasi satu atau lebih langkah daripada jenis khusus: langkah atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
 

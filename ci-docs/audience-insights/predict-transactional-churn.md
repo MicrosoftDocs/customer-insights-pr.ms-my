@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597200"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906867"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Ramalan pulangan transaksi (pratonton)
 
@@ -46,6 +46,14 @@ Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membe
         - **Cap masa:** Tarikh dan masa peristiwa dikenal pasti oleh kunci utama.
         - **Peristiwa:** Nama peristiwa yang anda mahu gunakan. Contohnya, medan yang dipanggil "UserAction" di dalam stor runcit mungkin kupon yang digunakan oleh pelanggan.
         - **Butiran:** Maklumat terperinci tentang peristiwa. Contohnya, medan yang dipanggil "CouponValue" dalam stor runcit mungkin nilai mata wang kupon tersebut.
+- Ciri data yang disyorkan:
+    - Data sejarah yang mencukupi: Data transaksi sekurang-kurangnya dua kali ganda tetingkap masa yang dipilih. Sebaik-baiknya, dua hingga tiga tahun data langganan. 
+    - Berbilang pembelian bagi setiap pelanggan: Sesuai sekurang-kurangnya dua urus niaga bagi setiap pelanggan.
+    - Bilangan pelanggan: Sekurang-kurangnya 10 profil pelanggan, sebaik-baiknya lebih daripada 1,000 pelanggan unik. Model ini akan gagal dengan kurang daripada 10 pelanggan dan data sejarah yang tidak mencukupi.
+    - Kesempurnaan data: Kurang daripada 20% daripada nilai yang hilang dalam medan data entiti yang disediakan.
+
+> [!NOTE]
+> Untuk perniagaan yang mempunyai kekerapan pembelian pelanggan yang tinggi (setiap beberapa minggu), anda disyorkan untuk memilih tetingkap ramalan yang lebih pendek dan definisi pulangan. Untuk kekerapan pembelian rendah (setiap beberapa bulan atau sekali setahun), pilih tetingkap ramalan lebih panjang dan definisi pulangan.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Cipta ramalan pulangan transaksi
 
@@ -129,7 +137,9 @@ Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membe
 1. Pilih ramalan yang anda mahu semak semula.
    - **Nama ramalan:** Nama ramalan yang diberikan apabila menciptanya.
    - **Jenis ramalan:** Jenis model yang digunakan untuk ramalan
-   - **Entiti output:** Nama entiti untuk menyimpan output ramalan. Anda boleh menemui entiti dengan nama ini pada **Data** > **Entiti**.
+   - **Entiti output:** Nama entiti untuk menyimpan output ramalan. Anda boleh menemui entiti dengan nama ini pada **Data** > **Entiti**.    
+     Dalam entiti output, *ChurnScore* adalah kebarangkalian yang diramalkan untuk pulangan dan *IsChurn* adalah label binari berdasarkan *ChurnScore* dengan ambang 0.5. Ambang lalai mungkin tidak berfungsi untuk senario anda. [Cipta segmen baharu](segments.md#create-a-new-segment) dengan ambang pilihan anda.
+     Tidak semua pelanggan semestinya pelanggan aktif. Sebahagian daripada mereka mungkin tidak mempunyai apa-apa aktiviti untuk jangka masa panjang dan dianggap sebagai sudah dipulangkan, berdasarkan kepada definisi pulangan anda. Meramalkan risiko pulangan untuk pelanggan yang sudah dipulangkan tidak berguna kerana tidak mempunyai khalayak yang berkepentingan.
    - **Medan ramalan:** Medan ini diisikan hanya untuk beberapa jenis ramalan, dan tidak digunakan dalam ramalan pulangan.
    - **Status:** Status jalanan ramalan.
         - **Dibariskan:** Ramalan sedang menunggu proses lain untuk berjalan.
