@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Mailchimp
-description: Ketahui cara mengkonfigurasi sambungan ke Mailchimp.
-ms.date: 10/26/2020
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Mailchimp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,71 +9,78 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598212"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759889"
 ---
-# <a name="connector-for-mailchimp-preview"></a><span data-ttu-id="bb98a-103">Penyambung untuk Mailchimp (pratonton)</span><span class="sxs-lookup"><span data-stu-id="bb98a-103">Connector for Mailchimp (preview)</span></span>
+# <a name="export-segment-lists-to-mailchimp-preview"></a><span data-ttu-id="fa918-103">Eksport senarai segmen ke Mailchimp (pratonton)</span><span class="sxs-lookup"><span data-stu-id="fa918-103">Export segment lists to Mailchimp (preview)</span></span>
 
-<span data-ttu-id="bb98a-104">Segmen eksport profil pelanggan disatukan ke Mailchimp untuk mencipta surat berita dan kempen e-mel.</span><span class="sxs-lookup"><span data-stu-id="bb98a-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
+<span data-ttu-id="fa918-104">Segmen eksport profil pelanggan disatukan ke Mailchimp untuk mencipta surat berita dan kempen e-mel.</span><span class="sxs-lookup"><span data-stu-id="fa918-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="bb98a-105">Prasyarat</span><span class="sxs-lookup"><span data-stu-id="bb98a-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="fa918-105">Prasyarat untuk sambungan</span><span class="sxs-lookup"><span data-stu-id="fa918-105">Prerequisites for connection</span></span>
 
--   <span data-ttu-id="bb98a-106">Anda mempunyai [Akaun Mailchimp](https://mailchimp.com/) dan kelayakan pentadbir yang berkaitan.</span><span class="sxs-lookup"><span data-stu-id="bb98a-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="bb98a-107">Terdapat khalayak sedia ada dalam Mailchimp dan ID yang berkaitan.</span><span class="sxs-lookup"><span data-stu-id="bb98a-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="bb98a-108">Untuk maklumat lanjut, lihat [Khalayak Mailchimp](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="bb98a-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
--   <span data-ttu-id="bb98a-109">Anda telah [mengkonfigurasi segmen](segments.md)</span><span class="sxs-lookup"><span data-stu-id="bb98a-109">You have [configured segments](segments.md)</span></span>
--   <span data-ttu-id="bb98a-110">Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.</span><span class="sxs-lookup"><span data-stu-id="bb98a-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="fa918-106">Anda mempunyai [Akaun Mailchimp](https://mailchimp.com/) dan kelayakan pentadbir yang berkaitan.</span><span class="sxs-lookup"><span data-stu-id="fa918-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="fa918-107">Terdapat khalayak sedia ada dalam Mailchimp dan ID yang berkaitan.</span><span class="sxs-lookup"><span data-stu-id="fa918-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="fa918-108">Untuk maklumat lanjut, lihat [Khalayak Mailchimp](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="fa918-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+-   <span data-ttu-id="fa918-109">Anda telah [mengkonfigurasi segmen](segments.md)</span><span class="sxs-lookup"><span data-stu-id="fa918-109">You have [configured segments](segments.md)</span></span>
+-   <span data-ttu-id="fa918-110">Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.</span><span class="sxs-lookup"><span data-stu-id="fa918-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-mailchimp"></a><span data-ttu-id="bb98a-111">Sambung kepada Mailchimp</span><span class="sxs-lookup"><span data-stu-id="bb98a-111">Connect to Mailchimp</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="fa918-111">Had diketahui</span><span class="sxs-lookup"><span data-stu-id="fa918-111">Known limitations</span></span>
 
-1. <span data-ttu-id="bb98a-112">Pergi ke **Pentadbir** > **Destinasi Eksport**.</span><span class="sxs-lookup"><span data-stu-id="bb98a-112">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="fa918-112">Hingga 1 juta profil bagi setiap eksport ke Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="fa918-112">Up to 1 million profiles per export to Mailchimp.</span></span>
+- <span data-ttu-id="fa918-113">Mengeksport ke Mailchimp adalah terhad kepada segmen.</span><span class="sxs-lookup"><span data-stu-id="fa918-113">Exporting to Mailchimp is limited to segments.</span></span>
+- <span data-ttu-id="fa918-114">Mengeksport segmen dengan 1 juta profil boleh mengambil masa sehingga tiga jam.</span><span class="sxs-lookup"><span data-stu-id="fa918-114">Exporting segments with 1 million profiles can take up to three hours.</span></span> 
+- <span data-ttu-id="fa918-115">Bilangan profil yang boleh anda eksport ke Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="fa918-115">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
 
-1. <span data-ttu-id="bb98a-113">Di bawah **Mailchimp**, pilih **Sediakan**.</span><span class="sxs-lookup"><span data-stu-id="bb98a-113">Under **Mailchimp**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-mailchimp"></a><span data-ttu-id="fa918-116">Sediakan sambungan ke Mailchimp</span><span class="sxs-lookup"><span data-stu-id="fa918-116">Set up connection to Mailchimp</span></span>
 
-1. <span data-ttu-id="bb98a-114">Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.</span><span class="sxs-lookup"><span data-stu-id="bb98a-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="fa918-117">Pergi ke **Pentadbir** > **Sambungan**.</span><span class="sxs-lookup"><span data-stu-id="fa918-117">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="bb98a-115">Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.</span><span class="sxs-lookup"><span data-stu-id="bb98a-115">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="fa918-118">Pilih **Tambah sambungan** dan pilih **Autopilot** untuk mengkonfigurasikan sambungan.</span><span class="sxs-lookup"><span data-stu-id="fa918-118">Select **Add connection** and choose **Autopilot** to configure the connection.</span></span>
 
-1. <span data-ttu-id="bb98a-116">Masukkan **[ID khalayak Mailchimp](https://mailchimp.com/help/find-audience-id/)** anda dan pilih **Sambung** untuk memulakan sambungan ke Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bb98a-116">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)** and select **Connect** to initialize the connection to Mailchimp.</span></span>
+1. <span data-ttu-id="fa918-119">Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**.</span><span class="sxs-lookup"><span data-stu-id="fa918-119">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="fa918-120">Nama dan jenis sambungan menerangkan sambungan ini.</span><span class="sxs-lookup"><span data-stu-id="fa918-120">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="fa918-121">Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.</span><span class="sxs-lookup"><span data-stu-id="fa918-121">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="bb98a-117">Pilih **Sahkan dengan Mailchimp** dan berikan kelayakan Mailchimp anda.</span><span class="sxs-lookup"><span data-stu-id="bb98a-117">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
+1. <span data-ttu-id="fa918-122">Pilih individu yang boleh menggunakan sambungan ini.</span><span class="sxs-lookup"><span data-stu-id="fa918-122">Choose who can use this connection.</span></span> <span data-ttu-id="fa918-123">Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir.</span><span class="sxs-lookup"><span data-stu-id="fa918-123">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="fa918-124">Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="fa918-124">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="bb98a-118">Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.</span><span class="sxs-lookup"><span data-stu-id="bb98a-118">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="fa918-125">Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.</span><span class="sxs-lookup"><span data-stu-id="fa918-125">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Eksport tangkap skrin untuk sambungan Customer Insights":::
+1. <span data-ttu-id="fa918-126">Pilih **Sambung** untuk memulakan sambungan ke Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="fa918-126">Select **Connect** to initialize the connection to Mailchimp.</span></span>
 
-1. <span data-ttu-id="bb98a-120">Pilih **Seterusnya** untuk konfigurasi eksport.</span><span class="sxs-lookup"><span data-stu-id="bb98a-120">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="fa918-127">Pilih **Sahkan dengan Mailchimp** dan berikan kelayakan Mailchimp anda.</span><span class="sxs-lookup"><span data-stu-id="fa918-127">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="bb98a-121">Konfigurasi penyambung</span><span class="sxs-lookup"><span data-stu-id="bb98a-121">Configure the connector</span></span>
+1. <span data-ttu-id="fa918-128">Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.</span><span class="sxs-lookup"><span data-stu-id="fa918-128">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-1. <span data-ttu-id="bb98a-122">Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan.</span><span class="sxs-lookup"><span data-stu-id="bb98a-122">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
+1. <span data-ttu-id="fa918-129">Pilih **Simpan** untuk melengkapkan sambungan.</span><span class="sxs-lookup"><span data-stu-id="fa918-129">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="bb98a-123">Secara alternatif, anda boleh mengeksport **Nama pertama** dan **Nama akhir** sebagai medan tambahan untuk mencipta lebih banyak e-mel peribadi.</span><span class="sxs-lookup"><span data-stu-id="bb98a-123">Optionally, you can export **First name** and **Last name** as additional fields to create more personalized emails.</span></span> <span data-ttu-id="bb98a-124">Pilih **Tambah atribut** untuk memetakan medan ini.</span><span class="sxs-lookup"><span data-stu-id="bb98a-124">Select **Add attribute** to map these fields.</span></span>
+## <a name="configure-the-connector"></a><span data-ttu-id="fa918-130">Konfigurasi penyambung</span><span class="sxs-lookup"><span data-stu-id="fa918-130">Configure the connector</span></span>
 
-1. <span data-ttu-id="bb98a-125">Pilih segmen yang ingin anda eksport.</span><span class="sxs-lookup"><span data-stu-id="bb98a-125">Select the segments you want to export.</span></span> <span data-ttu-id="bb98a-126">Anda boleh mengeksport hingga 1 juta jumlah profil pelanggan ke Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bb98a-126">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
+<span data-ttu-id="fa918-131">Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini.</span><span class="sxs-lookup"><span data-stu-id="fa918-131">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="fa918-132">Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="fa918-132">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Pilih medan dan segmen untuk eksport ke Mailchimp":::
+1. <span data-ttu-id="fa918-133">Pergi ke **Data**> **Eksport**.</span><span class="sxs-lookup"><span data-stu-id="fa918-133">Go to **Data**> **Exports**.</span></span>
 
-1. <span data-ttu-id="bb98a-128">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="bb98a-128">Select **Save**.</span></span>
+1. <span data-ttu-id="fa918-134">Untuk mencipta eksport baharu, pilih **Tambah destinasi**.</span><span class="sxs-lookup"><span data-stu-id="fa918-134">To create a new export, select **Add destination**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="bb98a-129">Mengeksport data</span><span class="sxs-lookup"><span data-stu-id="bb98a-129">Export the data</span></span>
+1. <span data-ttu-id="fa918-135">Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="fa918-135">In the **Connection for export** field, choose a connection from the Mailchimp section.</span></span> <span data-ttu-id="fa918-136">Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.</span><span class="sxs-lookup"><span data-stu-id="fa918-136">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-<span data-ttu-id="bb98a-130">Anda boleh [eksport data atas permintaan](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="bb98a-130">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="bb98a-131">Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="bb98a-131">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="bb98a-132">Dalam Mailchimp, anda kini boleh mencari segmen anda di bawah [Khalayak Mailchimp](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="bb98a-132">In Mailchimp, you can now find your segments under [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+1. <span data-ttu-id="fa918-137">Masukkan **[ID khalayak Mailchimp](https://mailchimp.com/help/find-audience-id/)**</span><span class="sxs-lookup"><span data-stu-id="fa918-137">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)**</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="bb98a-133">Had diketahui</span><span class="sxs-lookup"><span data-stu-id="bb98a-133">Known limitations</span></span>
+3. <span data-ttu-id="fa918-138">Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan.</span><span class="sxs-lookup"><span data-stu-id="fa918-138">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
 
-- <span data-ttu-id="bb98a-134">Hingga 1 juta profil bagi setiap eksport ke Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bb98a-134">Up to 1 million profiles per export to Mailchimp.</span></span>
-- <span data-ttu-id="bb98a-135">Mengeksport ke Mailchimp adalah terhad kepada segmen.</span><span class="sxs-lookup"><span data-stu-id="bb98a-135">Exporting to Mailchimp is limited to segments.</span></span>
-- <span data-ttu-id="bb98a-136">Mengeksport segmen dengan 1 juta jumlah profil boleh mengambil masa hingga tiga jam kerana had pada bahagian pembekal.</span><span class="sxs-lookup"><span data-stu-id="bb98a-136">Exporting segments with a total of 1 million profiles can take up to three hours due to limitations on the provider side.</span></span> 
-- <span data-ttu-id="bb98a-137">Bilangan profil yang boleh anda eksport ke Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bb98a-137">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
+1. <span data-ttu-id="fa918-139">Selain itu, anda boleh mengeksport **Nama pertama** dan **Nama keluarga** untuk mencipta e-mel yang lebih diperibadikan.</span><span class="sxs-lookup"><span data-stu-id="fa918-139">Optionally, you can export **First name** and **Last name** to create more personalized emails.</span></span> <span data-ttu-id="fa918-140">Pilih **Tambah atribut** untuk memetakan medan ini.</span><span class="sxs-lookup"><span data-stu-id="fa918-140">Select **Add attribute** to map these fields.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="bb98a-138">Privasi data dan pematuhan</span><span class="sxs-lookup"><span data-stu-id="bb98a-138">Data privacy and compliance</span></span>
+1. <span data-ttu-id="fa918-141">Pilih segmen yang ingin anda eksport.</span><span class="sxs-lookup"><span data-stu-id="fa918-141">Select the segments you want to export.</span></span> <span data-ttu-id="fa918-142">Anda boleh mengeksport hingga 1 juta jumlah profil pelanggan ke Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="fa918-142">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
 
-<span data-ttu-id="bb98a-139">Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke Mailchimp, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif berpotensi seperti Data Peribadi.</span><span class="sxs-lookup"><span data-stu-id="bb98a-139">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="bb98a-140">Microsoft akan memindahkan data sedemikian mengikut arahan anda tetapi anda bertanggungjawab untuk memastikan bahawa Mailchimp memenuhi sebarang kewajipan privasi atau keselamatan yang anda mungkin miliki.</span><span class="sxs-lookup"><span data-stu-id="bb98a-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="bb98a-141">Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="bb98a-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="bb98a-142">Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.</span><span class="sxs-lookup"><span data-stu-id="bb98a-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+1. <span data-ttu-id="fa918-143">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="fa918-143">Select **Save**.</span></span>
 
+<span data-ttu-id="fa918-144">Menyimpan eksport tidak menjalankan eksport dengan serta-merta.</span><span class="sxs-lookup"><span data-stu-id="fa918-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="fa918-145">Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="fa918-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="fa918-146">Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="fa918-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="fa918-147">Privasi data dan pematuhan</span><span class="sxs-lookup"><span data-stu-id="fa918-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="fa918-148">Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke Mailchimp, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif berpotensi seperti Data Peribadi.</span><span class="sxs-lookup"><span data-stu-id="fa918-148">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="fa918-149">Microsoft akan memindahkan data sedemikian mengikut arahan anda tetapi anda bertanggungjawab untuk memastikan bahawa Mailchimp memenuhi sebarang kewajipan privasi atau keselamatan yang anda mungkin miliki.</span><span class="sxs-lookup"><span data-stu-id="fa918-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="fa918-150">Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="fa918-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="fa918-151">Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.</span><span class="sxs-lookup"><span data-stu-id="fa918-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

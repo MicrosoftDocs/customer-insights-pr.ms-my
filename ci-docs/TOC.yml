@@ -32,7 +32,7 @@
           href: audience-insights/data-sources.md
         - name: Tambah sumber data melalui penyambung Power Query
           href: audience-insights/connect-power-query.md
-        - name: Tambah folder Model Data Biasa sebagai sumber data
+        - name: Tambah folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
         - name: Tambah data lake yang diuruskan Common Data Service
           href: audience-insights/connect-common-data-service-lake.md
@@ -65,7 +65,7 @@
         - name: Memperkayakan profil pelanggan
           href: audience-insights/enrichment-hub.md
         - name: Afiniti jenama dan kepentingan
-          href: audience-insights/enrichment-microsoft-graph.md
+          href: audience-insights/enrichment-microsoft.md
         - name: Perkayakan dengan HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Perkayakan dengan Leadspace
@@ -104,6 +104,8 @@
           href: audience-insights/predict-product-recommendation.md
         - name: Panduan sampel untuk ramalan pengesyoran produk
           href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Cipta segmen berdasarkan ramalan
+          href: audience-insights/prediction-based-segment.md
         - name: Laksanakan model pembelajaran mesin
           href: audience-insights/custom-models.md
         - name: Percubaan dengan Pembelajaran Mesin Azure
@@ -112,58 +114,72 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Pilihan eksport
       items:
-        - name: Gambaran keseluruhan destinasi eksport
-          href: audience-insights/export-destinations.md
-        - name: AdRoll
-          href: audience-insights/export-adroll.md
-        - name: Adobe Campaign Standard
-          href: audience-insights/export-adobe-campaign-standard.md
-        - name: Platform Pengalaman Adobe
-          href: audience-insights/export-adobe-experience-platform.md
-        - name: Autopilot
-          href: audience-insights/export-autopilot.md
-        - name: Azure Blob Storage
-          href: audience-insights/export-azure-blob-storage.md
-        - name: Azure Data Lake Storage Gen2
-          href: audience-insights/export-azure-data-lake-storage-gen2.md
-        - name: DotDigital
-          href: audience-insights/export-dotdigital.md
-        - name: Dynamics 365 Customer Service (Tambahan)
-          href: audience-insights/customer-card-add-in.md
-        - name: Dynamics 365 Marketing
-          href: audience-insights/export-dynamics365-marketing.md
-        - name: Jualan Dynamics 365
-          href: audience-insights/export-dynamics365-sales.md
-        - name: Hab Dynamics 365 Sales (Tambahan)
-          href: audience-insights/customer-card-add-in.md
-        - name: Facebook Pengurus iklan
-          href: audience-insights/export-facebook.md
-        - name: Google Ads
-          href: audience-insights/export-google-ads.md
-        - name: LiveRamp
-          href: audience-insights/export-liveramp.md
-        - name: Mailchimp
-          href: audience-insights/export-mailchimp.md
-        - name: Microsoft Teams (bot)
-          href: audience-insights/export-teams-bot.md
-        - name: Marketo
-          href: audience-insights/export-marketo.md
-        - name: Power BI
-          href: audience-insights/export-power-bi.md
-        - name: Power Apps
-          href: audience-insights/export-power-apps.md
-        - name: Power Automate
-          href: audience-insights/export-power-automate.md
-        - name: SendGrid
-          href: audience-insights/export-sendgrid.md
-        - name: SFTP
-          href: audience-insights/export-sftp.md
+        - name: Eksport
+          items:
+            - name: Eksport gambaran keseluruhan (pratonton)
+              href: audience-insights/export-destinations.md
+            - name: AdRoll
+              href: audience-insights/export-adroll.md
+            - name: Autopilot
+              href: audience-insights/export-autopilot.md
+            - name: Azure Blob Storage
+              href: audience-insights/export-azure-blob-storage.md
+            - name: Azure Data Lake Storage Gen2
+              href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Adobe Campaign Standard
+              href: audience-insights/export-adobe-campaign-standard.md
+            - name: Platform Pengalaman Adobe
+              href: audience-insights/export-adobe-experience-platform.md
+            - name: Campaign Monitor
+              href: audience-insights/export-campaign-monitor.md
+            - name: Constant Contact
+              href: audience-insights/export-constant-contact.md
+            - name: DotDigital
+              href: audience-insights/export-dotdigital.md
+            - name: Dynamics 365 Marketing
+              href: audience-insights/export-dynamics365-marketing.md
+            - name: Dynamics 365 Sales
+              href: audience-insights/export-dynamics365-sales.md
+            - name: Facebook Pengurus iklan
+              href: audience-insights/export-facebook.md
+            - name: Google Ads
+              href: audience-insights/export-google-ads.md
+            - name: LiveRamp
+              href: audience-insights/export-liveramp.md
+            - name: Mailchimp
+              href: audience-insights/export-mailchimp.md
+            - name: Marketo
+              href: audience-insights/export-marketo.md
+            - name: RollWorks
+              href: audience-insights/export-rollworks.md
+            - name: SendGrid
+              href: audience-insights/export-sendgrid.md
+            - name: Snapchat
+              href: audience-insights/export-snapchat.md
+            - name: SFTP
+              href: audience-insights/export-sftp.md
+        - name: Kegunaan lain
+          items:
+            - name: Dynamics 365 Customer Service (Tambahan)
+              href: audience-insights/customer-card-add-in.md
+            - name: Hab Dynamics 365 Sales (Tambahan)
+              href: audience-insights/customer-card-add-in.md
+            - name: Microsoft Teams (bot)
+              href: audience-insights/export-teams-bot.md
+            - name: Power Apps
+              href: audience-insights/export-power-apps.md
+            - name: Power Automate
+              href: audience-insights/export-power-automate.md
+            - name: Power BI
+              href: audience-insights/export-power-bi.md
     - name: Pentadbiran
       items:
         - name: Sediakan konfigurasi sistem
           href: audience-insights/system.md
         - name: Tugaskan keizinan pengguna
           href: audience-insights/permissions.md
+        - name: Gambaran keseluruhan sambungan (pratonton)
+          href: audience-insights/connections.md
         - name: Uruskan berbilang persekitaran
           href: audience-insights/manage-environments.md
         - name: Sambung kepada akaun storan ADLS menggunakan Prinsipal Perkhidmatan
@@ -174,7 +190,7 @@
       items:
         - name: Mengintegrasikan data web daripada wawasan penglibatan
           href: audience-insights/integrate-engagement-insights.md
-        - name: Semak semula skema entiti dalam Model Data Biasa
+        - name: Semak semula skema entiti dalam Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Kerja dengan API
           href: audience-insights/apis.md
@@ -216,6 +232,10 @@
           href: engagement-insights/custom-reports.md
         - name: Cipta laporan profil disatukan
           href: engagement-insights/profile-reports.md
+    - name: Analitis perjalanan
+      items:
+        - name: Cipta dan urus laporan corong
+          href: engagement-insights/funnel-reports.md
     - name: Sumber pembangun
       items:
         - name: Gambaran keseluruhan sumber pembangun

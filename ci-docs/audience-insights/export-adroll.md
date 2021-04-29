@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke AdRoll
-description: Ketahui cara mengkonfigurasikan sambungan ke AdRoll.
-ms.date: 02/15/2021
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke AdRoll.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,67 +9,76 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
+ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697085"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895970"
 ---
-# <a name="connector-for-adroll-preview"></a><span data-ttu-id="9d1fd-103">Penyambung untuk AdRoll (pratonton)</span><span class="sxs-lookup"><span data-stu-id="9d1fd-103">Connector for AdRoll (preview)</span></span>
+# <a name="export-segment-lists-to-adroll-preview"></a><span data-ttu-id="510c1-103">Eksport senarai segmen ke AdRoll (pratonton)</span><span class="sxs-lookup"><span data-stu-id="510c1-103">Export segment lists to AdRoll (preview)</span></span>
 
-<span data-ttu-id="9d1fd-104">Eksport segmen profil pelanggan yang disatukan ke AdRoll dan gunakan segmen tersebut untuk pengiklanan.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
+<span data-ttu-id="510c1-104">Eksport segmen profil pelanggan yang disatukan ke AdRoll dan gunakan segmen tersebut untuk pengiklanan.</span><span class="sxs-lookup"><span data-stu-id="510c1-104">Export segments of unified customer profiles to AdRoll and use them for advertising.</span></span> 
 
-## <a name="prerequisites"></a><span data-ttu-id="9d1fd-105">Prasyarat</span><span class="sxs-lookup"><span data-stu-id="9d1fd-105">Prerequisites</span></span>
+## <a name="prerequisites-for-a-connection"></a><span data-ttu-id="510c1-105">Prasyarat untuk sambungan</span><span class="sxs-lookup"><span data-stu-id="510c1-105">Prerequisites for a connection</span></span>
 
--   <span data-ttu-id="9d1fd-106">Anda mempunyai [Akaun AdRoll](https://www.adroll.com/) dan kelayakan pentadbir yang berkaitan.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="9d1fd-107">Anda mempunyai [segmen yang dikonfigurasi](segments.md) dalam wawasan khalayak.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-107">You have [configured segments](segments.md) in audience insights.</span></span>
--   <span data-ttu-id="9d1fd-108">Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="510c1-106">Anda mempunyai [Akaun AdRoll](https://www.adroll.com/) dan kelayakan pentadbir yang berkaitan.</span><span class="sxs-lookup"><span data-stu-id="510c1-106">You have an [AdRoll account](https://www.adroll.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="510c1-107">Anda mempunyai [segmen yang dikonfigurasi](segments.md) dalam wawasan khalayak.</span><span class="sxs-lookup"><span data-stu-id="510c1-107">You have [configured segments](segments.md) in audience insights.</span></span>
+-   <span data-ttu-id="510c1-108">Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.</span><span class="sxs-lookup"><span data-stu-id="510c1-108">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-adroll"></a><span data-ttu-id="9d1fd-109">Sambung kepada AdRoll</span><span class="sxs-lookup"><span data-stu-id="9d1fd-109">Connect to AdRoll</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="510c1-109">Had diketahui</span><span class="sxs-lookup"><span data-stu-id="510c1-109">Known limitations</span></span>
 
-1. <span data-ttu-id="9d1fd-110">Pergi ke **Pentadbir** > **Destinasi Eksport**.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-110">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="510c1-110">Anda boleh mengeksport hingga 250,000 profil bagi setiap eksport ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-110">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
+- <span data-ttu-id="510c1-111">Anda tidak boleh mengeksport segmen yang kurang daripada 100 profil ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-111">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
+- <span data-ttu-id="510c1-112">Mengeksport ke AdRoll adalah terhad kepada segmen.</span><span class="sxs-lookup"><span data-stu-id="510c1-112">Exporting to AdRoll is limited to segments.</span></span>
+- <span data-ttu-id="510c1-113">Mengeksport hingga 250,000 profil ke AdRoll mungkin mengambil masa hingga 10 minit untuk selesai.</span><span class="sxs-lookup"><span data-stu-id="510c1-113">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
+- <span data-ttu-id="510c1-114">Bilangan profil yang boleh anda eksport ke AdRoll bergantung dan terhad pada kontrak anda dengan AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-114">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
 
-1. <span data-ttu-id="9d1fd-111">Di bawah **AdRoll**, pilih **Sediakan**.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-111">Under **AdRoll**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-adroll"></a><span data-ttu-id="510c1-115">Sediakan sambungan ke AdRoll</span><span class="sxs-lookup"><span data-stu-id="510c1-115">Set up connection to AdRoll</span></span>
 
-1. <span data-ttu-id="9d1fd-112">Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-112">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="510c1-116">Pergi ke **Pentadbir** > **Sambungan**.</span><span class="sxs-lookup"><span data-stu-id="510c1-116">Go to **Admin** > **Connections**.</span></span>
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="Anak tetingkap konfigurasi untuk sambungan AdRoll.":::
+1. <span data-ttu-id="510c1-117">Pilih **Tambah sambungan** dan pilih **AdRoll** untuk mengkonfigurasikan sambungan.</span><span class="sxs-lookup"><span data-stu-id="510c1-117">Select **Add connection** and choose **AdRoll** to configure the connection.</span></span>
 
-1. <span data-ttu-id="9d1fd-114">Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="510c1-118">Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**.</span><span class="sxs-lookup"><span data-stu-id="510c1-118">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="510c1-119">Nama dan jenis sambungan menerangkan sambungan ini.</span><span class="sxs-lookup"><span data-stu-id="510c1-119">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="510c1-120">Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.</span><span class="sxs-lookup"><span data-stu-id="510c1-120">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="9d1fd-115">Pilih **Sambung** untuk memulakan sambungan ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-115">Select **Connect** to initialize the connection to AdRoll.</span></span>
+1. <span data-ttu-id="510c1-121">Pilih individu yang boleh menggunakan sambungan ini.</span><span class="sxs-lookup"><span data-stu-id="510c1-121">Choose who can use this connection.</span></span> <span data-ttu-id="510c1-122">Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir.</span><span class="sxs-lookup"><span data-stu-id="510c1-122">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="510c1-123">Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="510c1-123">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="9d1fd-116">Pilih **Sahkan dengan AdRoll** dan berikan kelayakan pentadbir anda untuk AdRoll.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-116">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
+1. <span data-ttu-id="510c1-124">Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.</span><span class="sxs-lookup"><span data-stu-id="510c1-124">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-1. <span data-ttu-id="9d1fd-117">Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-117">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="510c1-125">Pilih **Sambung** untuk memulakan sambungan ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-125">Select **Connect** to initialize the connection to AdRoll.</span></span>
 
-1. <span data-ttu-id="9d1fd-118">Masukkan **ID Pengiklan AdRoll** anda [AdRoll yang Boleh Diiklankan](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span><span class="sxs-lookup"><span data-stu-id="9d1fd-118">Enter your **AdRoll Advertiser ID** [AdRoll Advertisable](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).</span></span>
+1. <span data-ttu-id="510c1-126">Pilih **Sahkan dengan AdRoll** dan berikan kelayakan pentadbir anda untuk AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-126">Select **Authenticate with AdRoll** and provide your admin credentials for AdRoll.</span></span> 
 
-1. <span data-ttu-id="9d1fd-119">Pilih **Seterusnya** untuk konfigurasi eksport.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-119">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="510c1-127">Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.</span><span class="sxs-lookup"><span data-stu-id="510c1-127">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="9d1fd-120">Konfigurasi penyambung</span><span class="sxs-lookup"><span data-stu-id="9d1fd-120">Configure the connector</span></span>
+1. <span data-ttu-id="510c1-128">Pilih **Simpan** untuk melengkapkan sambungan.</span><span class="sxs-lookup"><span data-stu-id="510c1-128">Select **Save** to complete the connection.</span></span>
 
-1. <span data-ttu-id="9d1fd-121">Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-121">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="9d1fd-122">Ia diperlukan untuk mengeksport segmen ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-122">It's required to export segments to AdRoll.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="510c1-129">Konfigurasikan eksport</span><span class="sxs-lookup"><span data-stu-id="510c1-129">Configure an export</span></span>
 
-1. <span data-ttu-id="9d1fd-123">Pilih segmen yang ingin anda eksport.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-123">Select the segments you want to export.</span></span> <span data-ttu-id="9d1fd-124">Pilih segmen dengan sekurang-kurangnya 100 ahli.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-124">Select a segment with a least 100 members.</span></span> <span data-ttu-id="9d1fd-125">Anda tidak boleh mengeksport segmen yang lebih kecil.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-125">You can't export smaller segments.</span></span> <span data-ttu-id="9d1fd-126">Selain itu, saiz maksimum segmen untuk mengeksport ialah 250,000 ahli bagi setiap eksport.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-126">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
+<span data-ttu-id="510c1-130">Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini.</span><span class="sxs-lookup"><span data-stu-id="510c1-130">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="510c1-131">Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="510c1-131">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-1. <span data-ttu-id="9d1fd-127">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-127">Select **Save**.</span></span>
+1. <span data-ttu-id="510c1-132">Pergi ke **Data** > **Eksport**.</span><span class="sxs-lookup"><span data-stu-id="510c1-132">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="9d1fd-128">Mengeksport data</span><span class="sxs-lookup"><span data-stu-id="9d1fd-128">Export the data</span></span>
+1. <span data-ttu-id="510c1-133">Untuk mencipta eksport baharu, pilih **Tambah destinasi**.</span><span class="sxs-lookup"><span data-stu-id="510c1-133">To create a new export, select **Add destination**.</span></span>
 
-<span data-ttu-id="9d1fd-129">Anda boleh [eksport data atas permintaan](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="9d1fd-129">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="9d1fd-130">Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="9d1fd-130">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="510c1-134">Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-134">In the **Connection for export** field, choose a connection from the AdRoll section.</span></span> <span data-ttu-id="510c1-135">Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.</span><span class="sxs-lookup"><span data-stu-id="510c1-135">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="9d1fd-131">Had diketahui</span><span class="sxs-lookup"><span data-stu-id="9d1fd-131">Known limitations</span></span>
+1. <span data-ttu-id="510c1-136">Masukkan **ID Pengiklan AdRoll**. Untuk mendapatkan maklumat lanjut, lihat [Profil Pengiklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span><span class="sxs-lookup"><span data-stu-id="510c1-136">Enter your **AdRoll Advertiser ID** For more information, see [AdRoll Advertiser Profiles](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).</span></span>
 
-- <span data-ttu-id="9d1fd-132">Anda boleh mengeksport hingga 250,000 profil bagi setiap eksport ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-132">You can export up to 250'000 profiles in per export to AdRoll.</span></span>
-- <span data-ttu-id="9d1fd-133">Anda tidak boleh mengeksport segmen yang kurang daripada 100 profil ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-133">You can't export segments with fewer than 100 profiles to AdRoll.</span></span> 
-- <span data-ttu-id="9d1fd-134">Mengeksport ke AdRoll adalah terhad kepada segmen.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-134">Exporting to AdRoll is limited to segments.</span></span>
-- <span data-ttu-id="9d1fd-135">Mengeksport hingga 250,000 profil ke AdRoll mungkin mengambil masa hingga 10 minit untuk selesai.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-135">Exporting up to 250'000 profiles to AdRoll can take up to 10 minutes to complete.</span></span> 
-- <span data-ttu-id="9d1fd-136">Bilangan profil yang boleh anda eksport ke AdRoll bergantung dan terhad pada kontrak anda dengan AdRoll.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-136">The number of profiles that you can export to AdRoll is dependent and limited on your contract with AdRoll.</span></span>
+3. <span data-ttu-id="510c1-137">Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan.</span><span class="sxs-lookup"><span data-stu-id="510c1-137">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> <span data-ttu-id="510c1-138">Ia diperlukan untuk mengeksport segmen ke AdRoll.</span><span class="sxs-lookup"><span data-stu-id="510c1-138">It's required to export segments to AdRoll.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="9d1fd-137">Privasi data dan pematuhan</span><span class="sxs-lookup"><span data-stu-id="9d1fd-137">Data privacy and compliance</span></span>
+1. <span data-ttu-id="510c1-139">Pilih segmen yang ingin anda eksport.</span><span class="sxs-lookup"><span data-stu-id="510c1-139">Select the segments you want to export.</span></span> <span data-ttu-id="510c1-140">Pilih segmen dengan sekurang-kurangnya 100 ahli.</span><span class="sxs-lookup"><span data-stu-id="510c1-140">Select a segment with a least 100 members.</span></span> <span data-ttu-id="510c1-141">Anda tidak boleh mengeksport segmen yang lebih kecil.</span><span class="sxs-lookup"><span data-stu-id="510c1-141">You can't export smaller segments.</span></span> <span data-ttu-id="510c1-142">Selain itu, saiz maksimum segmen untuk mengeksport ialah 250,000 ahli bagi setiap eksport.</span><span class="sxs-lookup"><span data-stu-id="510c1-142">Additionally the maximum size of a segment to export is 250'000 members per export.</span></span> 
 
-<span data-ttu-id="9d1fd-138">Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke AdRoll, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif yang berpotensi seperti Data Peribadi.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-138">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="9d1fd-139">Microsoft akan memindahkan data sedemikian mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa AdRoll memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-139">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="9d1fd-140">Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="9d1fd-140">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+1. <span data-ttu-id="510c1-143">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="510c1-143">Select **Save**.</span></span>
 
-<span data-ttu-id="9d1fd-141">Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.</span><span class="sxs-lookup"><span data-stu-id="9d1fd-141">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+<span data-ttu-id="510c1-144">Menyimpan eksport tidak menjalankan eksport dengan serta-merta.</span><span class="sxs-lookup"><span data-stu-id="510c1-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="510c1-145">Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="510c1-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="510c1-146">Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="510c1-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="510c1-147">Privasi data dan pematuhan</span><span class="sxs-lookup"><span data-stu-id="510c1-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="510c1-148">Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke AdRoll, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif yang berpotensi seperti Data Peribadi.</span><span class="sxs-lookup"><span data-stu-id="510c1-148">When you enable Dynamics 365 Customer Insights to transmit data to AdRoll, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="510c1-149">Microsoft akan memindahkan data sedemikian mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa AdRoll memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki.</span><span class="sxs-lookup"><span data-stu-id="510c1-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that AdRoll meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="510c1-150">Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="510c1-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+
+<span data-ttu-id="510c1-151">Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.</span><span class="sxs-lookup"><span data-stu-id="510c1-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>

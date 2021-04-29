@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Dynamics 365 Sales
-description: Ketahui bagaimana mengkonfigur sambungan ke Dynamics 365 Sales.
-ms.date: 02/01/2021
+description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Dynamics 365 Sales.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,49 +9,60 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fc1a05ba4d21d96aa1a9724d158687bbb86949b6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598120"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759615"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a><span data-ttu-id="1273d-103">Penyambung untuk Dynamics 365 Sales (pratonton)</span><span class="sxs-lookup"><span data-stu-id="1273d-103">Connector for Dynamics 365 Sales (preview)</span></span>
+# <a name="use-segments-in-dynamics-365-sales-preview"></a><span data-ttu-id="5538e-103">Gunakan segmen dalam Dynamics 365 Sales (pratonton)</span><span class="sxs-lookup"><span data-stu-id="5538e-103">Use segments in Dynamics 365 Sales (preview)</span></span>
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-<span data-ttu-id="1273d-104">Gunakan data pelanggan anda untuk mencipta senarai pemasaran, menyusuli aliran kerja dan menghantar promosi dengan Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="1273d-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
+<span data-ttu-id="5538e-104">Gunakan data pelanggan anda untuk mencipta senarai pemasaran, menyusuli aliran kerja dan menghantar promosi dengan Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="5538e-104">Use your customer data to create marketing lists, follow up workflows, and send out promotions with Dynamics 365 Sales.</span></span>
 
-## <a name="prerequisite"></a><span data-ttu-id="1273d-105">Prasyarat</span><span class="sxs-lookup"><span data-stu-id="1273d-105">Prerequisite</span></span>
+## <a name="prerequisite-for-connection"></a><span data-ttu-id="5538e-105">Prasyarat untuk sambungan</span><span class="sxs-lookup"><span data-stu-id="5538e-105">Prerequisite for connection</span></span>
 
-1. <span data-ttu-id="1273d-106">Rekod kenalan mesti wujud dalam Dynamics 365 Sales sebelum anda boleh mengeksport segmen daripada Customer Insights ke Jualan.</span><span class="sxs-lookup"><span data-stu-id="1273d-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="1273d-107">Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Sales menggunakan Common Data Services](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="1273d-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
+1. <span data-ttu-id="5538e-106">Rekod kenalan mesti wujud dalam Dynamics 365 Sales sebelum anda boleh mengeksport segmen daripada Customer Insights ke Jualan.</span><span class="sxs-lookup"><span data-stu-id="5538e-106">Contact records must be present in Dynamics 365 Sales before you can export a segment from Customer Insights to Sales.</span></span> <span data-ttu-id="5538e-107">Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Sales menggunakan Common Data Services](connect-power-query.md).</span><span class="sxs-lookup"><span data-stu-id="5538e-107">Read more on how to ingest contacts in [Dynamics 365 Sales using Common Data Services](connect-power-query.md).</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="1273d-108">Mengeksport segmen daripada wawasan khalayak kepada Jualan tidak akan mencipta rekod kenalan baharu dalam tika Jualan.</span><span class="sxs-lookup"><span data-stu-id="1273d-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="1273d-109">Rekod kenalan daripada Jualan mesti diinges dalam wawasan khalayak dan digunakan sebagai sumber data.</span><span class="sxs-lookup"><span data-stu-id="1273d-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="1273d-110">Mereka juga perlu dimasukkan dalam entiti Pelanggan disatukan untuk memetakan ID pelanggan kepada ID kenalan sebelum segmen boleh dieksport.</span><span class="sxs-lookup"><span data-stu-id="1273d-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
+   > <span data-ttu-id="5538e-108">Mengeksport segmen daripada wawasan khalayak kepada Jualan tidak akan mencipta rekod kenalan baharu dalam tika Jualan.</span><span class="sxs-lookup"><span data-stu-id="5538e-108">Exporting segments from audience insights to Sales will not create new contact records in the Sales instances.</span></span> <span data-ttu-id="5538e-109">Rekod kenalan daripada Jualan mesti diinges dalam wawasan khalayak dan digunakan sebagai sumber data.</span><span class="sxs-lookup"><span data-stu-id="5538e-109">The contact records from Sales must be ingested in audience insights and used as a data source.</span></span> <span data-ttu-id="5538e-110">Mereka juga perlu dimasukkan dalam entiti Pelanggan disatukan untuk memetakan ID pelanggan kepada ID kenalan sebelum segmen boleh dieksport.</span><span class="sxs-lookup"><span data-stu-id="5538e-110">They also need to be included in the unified Customer entity to map customer IDs to contact IDs before segments can be exported.</span></span>
 
-## <a name="configure-the-connector-for-sales"></a><span data-ttu-id="1273d-111">Konfigur penyambung untuk Jualan</span><span class="sxs-lookup"><span data-stu-id="1273d-111">Configure the connector for Sales</span></span>
+## <a name="set-up-the-connection-to-sales"></a><span data-ttu-id="5538e-111">Sediakan sambungan ke Sales</span><span class="sxs-lookup"><span data-stu-id="5538e-111">Set up the connection to Sales</span></span>
 
-1. <span data-ttu-id="1273d-112">Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.</span><span class="sxs-lookup"><span data-stu-id="1273d-112">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="5538e-112">Pergi ke **Pentadbir** > **Sambungan**.</span><span class="sxs-lookup"><span data-stu-id="5538e-112">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="1273d-113">Di bawah **Dynamics 365 Sales**, pilih **Sediakan**.</span><span class="sxs-lookup"><span data-stu-id="1273d-113">Under **Dynamics 365 Sales**, select **Set up**.</span></span>
+1. <span data-ttu-id="5538e-113">Pilih **Tambah sambungan** dan pilih **Dynamics 365 Sales** untuk mengkonfigurasikan sambungan.</span><span class="sxs-lookup"><span data-stu-id="5538e-113">Select **Add connection** and choose **Dynamics 365 Sales** to configure the connection.</span></span>
 
-1. <span data-ttu-id="1273d-114">Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.</span><span class="sxs-lookup"><span data-stu-id="1273d-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="5538e-114">Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**.</span><span class="sxs-lookup"><span data-stu-id="5538e-114">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="5538e-115">Nama dan jenis sambungan menerangkan sambungan ini.</span><span class="sxs-lookup"><span data-stu-id="5538e-115">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="5538e-116">Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.</span><span class="sxs-lookup"><span data-stu-id="5538e-116">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="1273d-115">Masukkan URL Jualan organisasi anda dalam medan **Alamat pelayan**.</span><span class="sxs-lookup"><span data-stu-id="1273d-115">Enter your organization's Sales URL in the **Server address** field.</span></span>
+1. <span data-ttu-id="5538e-117">Pilih individu yang boleh menggunakan sambungan ini.</span><span class="sxs-lookup"><span data-stu-id="5538e-117">Choose who can use this connection.</span></span> <span data-ttu-id="5538e-118">Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir.</span><span class="sxs-lookup"><span data-stu-id="5538e-118">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="5538e-119">Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="5538e-119">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="1273d-116">Dalam bahagian **Akaun pentadbir pelayan**, pilih **Daftar masuk** dan pilih akaun Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="1273d-116">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
+1. <span data-ttu-id="5538e-120">Masukkan URL Jualan organisasi anda dalam medan **Alamat pelayan**.</span><span class="sxs-lookup"><span data-stu-id="5538e-120">Enter your organization's Sales URL in the **Server address** field.</span></span>
 
-1. <span data-ttu-id="1273d-117">Petakan medan ID pelanggan ke ID Kenalan Dynamics 365.</span><span class="sxs-lookup"><span data-stu-id="1273d-117">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
+1. <span data-ttu-id="5538e-121">Dalam bahagian **Akaun pentadbir pelayan**, pilih **Daftar masuk** dan pilih akaun Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="5538e-121">In the **Server admin account** section, select **Sign in** and choose a Dynamics 365 Sales account.</span></span>
 
-1. <span data-ttu-id="1273d-118">Pilih **Seterusnya**.</span><span class="sxs-lookup"><span data-stu-id="1273d-118">Select **Next**.</span></span>
+1. <span data-ttu-id="5538e-122">Petakan medan ID pelanggan ke ID Kenalan Dynamics 365.</span><span class="sxs-lookup"><span data-stu-id="5538e-122">Map a customer ID field to the Dynamics 365 Contact ID.</span></span>
 
-1. <span data-ttu-id="1273d-119">Pilih satu atau lebih segmen.</span><span class="sxs-lookup"><span data-stu-id="1273d-119">Choose one or more segments.</span></span>
+1. <span data-ttu-id="5538e-123">Pilih **Simpan** untuk melengkapkan sambungan.</span><span class="sxs-lookup"><span data-stu-id="5538e-123">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="1273d-120">Pilih **Simpan**.</span><span class="sxs-lookup"><span data-stu-id="1273d-120">Select **Save**.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="5538e-124">Konfigurasikan eksport</span><span class="sxs-lookup"><span data-stu-id="5538e-124">Configure an export</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="1273d-121">Mengeksport data</span><span class="sxs-lookup"><span data-stu-id="1273d-121">Export the data</span></span>
+<span data-ttu-id="5538e-125">Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini.</span><span class="sxs-lookup"><span data-stu-id="5538e-125">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="5538e-126">Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="5538e-126">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-<span data-ttu-id="1273d-122">Anda boleh [eksport data atas permintaan](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="1273d-122">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="1273d-123">Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="1273d-123">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="5538e-127">Pergi ke **Data** > **Eksport**.</span><span class="sxs-lookup"><span data-stu-id="5538e-127">Go to **Data** > **Exports**.</span></span>
 
+1. <span data-ttu-id="5538e-128">Untuk mencipta eksport baharu, pilih **Tambah destinasi**.</span><span class="sxs-lookup"><span data-stu-id="5538e-128">To create a new export, select **Add destination**.</span></span>
+
+1. <span data-ttu-id="5538e-129">Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Dynamics 365 Sales.</span><span class="sxs-lookup"><span data-stu-id="5538e-129">In the **Connection for export** field, choose a connection from the Dynamics 365 Sales section.</span></span> <span data-ttu-id="5538e-130">Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.</span><span class="sxs-lookup"><span data-stu-id="5538e-130">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="5538e-131">Pilih satu atau lebih segmen.</span><span class="sxs-lookup"><span data-stu-id="5538e-131">Choose one or more segments.</span></span>
+
+1. <span data-ttu-id="5538e-132">Pilih **Simpan**</span><span class="sxs-lookup"><span data-stu-id="5538e-132">Select **Save**</span></span>
+
+<span data-ttu-id="5538e-133">Menyimpan eksport tidak menjalankan eksport dengan serta-merta.</span><span class="sxs-lookup"><span data-stu-id="5538e-133">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="5538e-134">Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="5538e-134">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="5538e-135">Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="5538e-135">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
