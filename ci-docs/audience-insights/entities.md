@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596418"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049405"
 ---
 # <a name="entities-in-audience-insights"></a>Entiti dalam wawasan khalayak
 
@@ -37,12 +37,12 @@ Pilih entiti untuk menerokai medan dan rekod yang berbeza termasuk dalam entiti 
 > [!div class="mx-imgBorder"]
 > ![Pilih entiti](media/data-manager-entities-data.png "Pilih entiti")
 
-- Tab **Data** dipilih secara lalai dan menunjukkan butiran penyenaraian jadual mengenai rekod individu entiti.
+- Tab **Data** menunjukkan butiran penyenaraian jadual tentang rekod individu entiti.
 
 > [!div class="mx-imgBorder"]
 > ![Jadual medan](media/data-manager-entities-fields.PNG "Jadual medan")
 
-- Tab **Medan** menunjukkan jadual untuk mengkaji semula butiran entiti yang dipilih, seperti nama medan, jenis data dan jenis. Lajur **Jenis** menunjukkan jenis berkaitan Model Data Lazim, yang mana sama ada dikenal pasti secara automatik oleh sistem atau [dipetakan secara manual](map-entities.md) oleh pengguna. Ini ialah jenis semantik yang mungkin berbeza daripada jenis data atribut—contohnya, medan *e-mel* di bawah mempunyai jenis data *Teks* tetapi jenis Model Data Lazim (semantik) berkemungkinan *E-mel* atau *AlamatE-mel*.
+- Tab **Atribut** dipilih secara lalai dan menunjukkan jadual untuk menyemak butiran bagi entiti yang dipilih seperti nama medan, jenis data dan jenis. Lajur **Jenis** menunjukkan jenis berkaitan Model Data Lazim, yang mana sama ada dikenal pasti secara automatik oleh sistem atau [dipetakan secara manual](map-entities.md) oleh pengguna. Ini ialah jenis semantik yang mungkin berbeza daripada jenis data atribut—contohnya, medan *e-mel* di bawah mempunyai jenis data *Teks* tetapi jenis Model Data Lazim (semantik) berkemungkinan *E-mel* atau *AlamatE-mel*.
 
 > [!NOTE]
 > Kedua-dua jadual menunjukkan hanya sampel data entiti anda. Untuk melihat set data lengkap, pergi ke halaman **Sumber data**, pilih entiti, pilih **Edit** dan lihat data entiti ini dengan editor Power Query seperti yang diterangkan dalam [Sumber data](data-sources.md).

@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759832"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059327"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Eksport segmen ke Marketo (pratonton)
 
@@ -44,7 +44,7 @@ Eksport segmen profil pelanggan disatukan untuk menjana kempen, menyediakan pema
 
 1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Masukkan **[ID klien Marketo, Rahsia pelanggan dan Nama Hos Titik Tamat REST](https://developers.marketo.com/rest-api/authentication/)** anda.
+1. Masukkan **[ID klien Marketo, Rahsia pelanggan dan Nama Hos Titik Tamat REST](https://developers.marketo.com/rest-api/authentication/)** anda. Nama hos Titik tamat REST adalah nama hos sahaja tanpa `https://`. Contoh: `xyz-abc-123.mktorest.com`. 
 
 1. Pilih **Saya setuju** untuk mengesahkan **Privasi data dan pematuhan** dan pilih **Sambung** untuk memulakan sambungan ke Marketo.
 
@@ -62,7 +62,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Marketo. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
-1. Masukkan **[ID senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** anda 
+1. Masukkan **[ID senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** anda. ID senarai adalah semata-mata nilai berangka. Contohnya, jika ID senarai Marketo anda ialah ST12345A7, alih keluar aksara sebelum dan selepas angka dan masukkan `12345`. 
 
 1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
 
@@ -74,7 +74,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). Dalam Marketo, anda kini boleh mencari segmen anda di bawah [Senarai Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). Dalam Marketo, anda kini boleh mencari segmen anda di bawah [Senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595820"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954590"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Ramalan nilai sepanjang hayat pelanggan (CLV) (Pratonton)
 
@@ -38,11 +38,11 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
 - Pengecam Pelanggan: Pengecam unik untuk memadankan transaksi kepada pelanggan individu
 
 - Sejarah Transaksi: Log transaksi sejarah dengan skema data semantik di bawah
-    - ID Transaksi: Pengecam unik bagi setiap transaksi
-    - Tarikh transaksi: Tarikh, sebaik-baiknya cap masa setiap transaksi
-    - Amaun transaksi: Nilai kewangan (contohnya, hasil atau margin keuntungan) bagi setiap transaksi
-    - Label yang diperuntukkan kepada pulangan (pilihan): Nilai Boolean menandakan sama ada transaksi itu adalah pulangan 
-    - ID Produk (pilihan): ID Produk bagi produk yang terlibat dalam transaksi
+    - **ID Transaksi**: Pengecam unik bagi setiap transaksi
+    - **Tarikh transaksi**: Tarikh, sebaik-baiknya cap masa bagi setiap transaksi
+    - **Amaun transaksi**: Nilai kewangan (contohnya, hasil atau margin untung) bagi setiap transaksi
+    - **Label yang ditugaskan untuk pulangan**  (pilihan): Nilai boolean menandakan sama ada transaksi adalah pulangan 
+    - **ID Produk** (pilihan): ID Produk bagi produk yang terlibat dalam transaksi
 
 - Data tambahan (pilihan), sebagai contoh
     - Aktiviti web: sejarah lawatan tapak web, sejarah e-mel
@@ -53,10 +53,20 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
     - Pengecam pelanggan untuk memetakan aktiviti kepada pelanggan anda
     - Maklumat aktiviti yang mengandungi nama dan tarikh aktiviti
     - Skema data semantik untuk aktiviti termasuk: 
-        - Kunci utama: Pengecam unik untuk aktiviti
-        - Cap masa: Tarikh dan masa peristiwa dikenal pasti oleh kunci utama
-        - Peristiea (nama aktiviti): Nama peristiwa yang anda mahu gunakan
-        - Butiran (jumlah atau nilai): Butiran tentang aktiviti pelanggan
+        - **Kunci utama:**: Pengecam unik untuk aktiviti
+        - **Cap masa**: Tarikh dan masa peristiwa yang dikenal pasti oleh kunci utama
+        - **Peristiwa (nama aktiviti)**: Nama peristiwa yang anda mahu gunakan
+        - **Butiran (amaun atau nilai)**: Butiran tentang aktiviti pelanggan
+
+- Ciri data yang disyorkan:
+    - Data sejarah yang mencukupi: Sekurang-kurangnya satu tahun data transaksi. Sebaik-baiknya dua hingga tiga tahun data transaksi untuk meramalkan CLV bagi satu tahun.
+    - Berbilang pembelian setiap pelanggan: Secara ideal, sekurang-kurangnya dua hingga tiga transaksi setiap ID pelanggan, sebaik-baiknya merentas berbilang tarikh.
+    - Bilangan pelanggan: Sekurang-kurangnya 100 pelanggan unik, sebaik-baiknya lebih daripada 10,000 pelanggan. Model ini akan gagal dengan kurang daripada 100 pelanggan dan data sejarah yang tidak mencukupi
+    - Kesempurnaan data: Kurang daripada 20% nilai hilang dalam medan yang diperlukan dalam data input   
+
+> [!NOTE]
+> - Model ini memerlukan sejarah transaksi pelanggan anda. Hanya satu entiti sejarah transaksi boleh dikonfigurasikan buat masa ini. Jika terdapat berbilang entiti pembelian/transaksi, anda boleh satukannya dalam Power Query sebelum pengingesan data.
+> - Untuk data aktiviti pelanggan tambahan (pilihan), bagaimanapun anda boleh menambah sebanyak mungkin entiti aktiviti pelanggan yang anda mahu untuk pertimbangan oleh model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Cipta ramalan Nilai Sepanjang Hayat Pelanggan (CLV)
 
@@ -76,7 +86,7 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
    Secara lalai, unit ini ditetapkan sebagai bulan. Anda boleh mengubahnya kepada tahun untuk melihat lebih jauh pada masa akan datang.
 
    > [!TIP]
-   > Untuk meramalkan CLV dengan tepat bagi tempoh masa yang anda tetapkan, anda memerlukan tempoh setanding data sejarah. Sebagai contoh, jika anda ingin meramalkan untuk 12 bulan akan datang, adalah disyorkan bahawa anda mempunyai sekurang-kurangnya 18 – 24 bulan data sejarah.
+   > Untuk meramalkan CLV dengan tepat bagi tempoh masa yang anda tetapkan, anda memerlukan tempoh setanding data sejarah. Contohnya, jika anda ingin meramalkan CLV untuk 12 bulan akan datang, disyorkan anda mempunyai sekurang-kurangnya 18 – 24 bulan data sejarah.
 
 1. Tentukan maksud **Pelanggan aktif** untuk perniagaan anda. Tetapkan tempoh masa di mana pelanggan mesti mempunyai sekurang-kurangnya satu transaksi untuk dianggap aktif. Model hanya akan meramalkan CLV untuk pelanggan aktif. 
    - **Biarkan model mengira selang pembelian (disyorkan)**: Model menganalisis data anda dan menentukan tempoh masa berdasarkan pada pembelian sejarah.
@@ -181,14 +191,14 @@ Terdapat tiga bahagian utama data dalam halaman hasil.
   Menggunakan definisi pelanggan bernilai tinggi yang disediakan sambil mengkonfigurasi ramalan, sistem menilai cara model AI yang dilaksanakan dalam meramalkan pelanggan bernilai tinggi berbanding dengan model asas.    
 
   Gred ditentukan berdasarkan peraturan berikut:
-  - A apabila model ini meramalkan secara tepat sekurang-kurangnya 5% lebih banyak pelanggan bernilai tinggi berbanding dengan model asas.
-  - B apabila model ini meramalkan secara tepat antara 0-5% lebih banyak pelanggan bernilai tinggi berbanding dengan model asas.
-  - C apabila model ini meramalkan secara tepat kurang pelanggan bernilai tinggi berbanding dengan model asas.
+  - **A** apabila model ini meramalkan secara tepat sekurang-kurangnya 5% lebih banyak pelanggan bernilai tinggi berbanding dengan model garis dasar.
+  - **B** apabila model ini meramalkan secara tepat antara 0-5% lebih banyak pelanggan bernilai tinggi berbanding dengan model garis dasar.
+  - **C** apabila model ini meramalkan secara tepat kurang pelanggan bernilai tinggi berbanding dengan model garis dasar.
 
   Anak tetingkap **Penarafan model** menunjukkan butiran lanjut tentang prestasi model AI dan model garis dasar. Model asas menggunakan pendekatan berasaskan bukan AI untuk mengira nilai seumur hidup pelanggan berdasarkan pembelian sejarah yang dibuat oleh pelanggan.     
   Formula standard yang digunakan untuk mengira CLV mengikut model garis dasar:    
 
-  *CLV untuk setiap pelanggan = Purata pembelian bulanan yang dibuat oleh pelanggan dalam tetingkap pelanggan aktif * Bilangan bulan dalam tempoh ramalan CLV * Kadar pengekalan keseluruhan semua pelanggan*
+  _**CLV untuk setiap pelanggan** = Purata pembelian bulanan yang dibuat oleh pelanggan dalam tetingkap pelanggan aktif * Bilangan bulan dalam tempoh ramalan CLV * Kadar pengekalan keseluruhan semua pelanggan*_
 
   Model AI dibandingkan dengan model asas berdasarkan pada dua metrik prestasi model.
   

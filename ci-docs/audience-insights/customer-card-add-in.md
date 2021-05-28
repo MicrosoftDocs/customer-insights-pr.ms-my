@@ -1,7 +1,7 @@
 ---
-title: Pasang dan konfigurasi Tambahan Kad Pelanggan
-description: Pasang dan konfigurasi tambahan Kad Pelanggan untuk Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Kad Pelanggan Tambahan untuk aplikasi Dynamics 365
+description: Tunjukkan data daripada wawasan khalayak dalam aplikasi Dynamics 365 dengan tambahan ini.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597338"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059599"
 ---
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dynamics 365. Lihat demografi, wawasan dan tempoh masa aktiviti dengan Tambahan Kad Pelanggan.
+Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dynamics 365. Dengan Kad Pelanggan Tambahan dipasang dalam aplikasi Dynamics 365 yang disokong, anda boleh memilih untuk memaparkan demografi, wawasan dan garis masa aktiviti. Tambahan akan mendapatkan data daripada Customer Insights tanpa mempengaruhi data dalam aplikasi Dynamics 365 yang disambung. 
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Aplikasi Dynamics 365 (seperti Hab Jualan atau Hab Customer Service), versi 9.0 dan kemudian dengan Antara Muka Disatukan didayakan.
-- Profil pelanggan yang [diinges daripada aplikasi Dynamics 365 yang menggunakan Common Data Service](connect-power-query.md).
-- Pengguna Tambahan Kad Pelanggan perlu [ditambah sebagai pengguna](permissions.md) dalam cerapan khalayak.
-- [Mengkonfigurasi keupayaan carian dan penapis](search-filter-index.md).
-- Kawalan demografi: Medan demografi (seperti umur atau jantina) boleh didapati dalam profil pelanggan disatukan.
-- Kawalan pengayaan: Memerlukan [pengayaan](enrichment-hub.md) aktif digunakan pada profil pelanggan.
-- Kawalan kepintaran: Memerlukan data yang dihasilkan menggunakan Pembelajaran Mesin Azure ([Ramalan](predictions.md) atau [Model Tersuai](custom-models.md))
-- Langkah kawalan: Memerlukan [langkah yang dikonfigurasikan](measures.md).
-- Kawalan garis masa: Memerlukan [aktiviti yang dikonfigurasikan](activities.md).
+- Tambahan hanya berfungsi dengan aplikasi berpandukan model Dynamics 365 seperti Jualan atau Khidmat Pelanggan versi 9.0 dan kemudian.
+- Untuk memetakan data Dynamics 365 anda ke profil pelanggan wawasan khalayak, data perlu [diinges daripada aplikasi Dynamics 365 menggunakan penyambung Common Data Service](connect-power-query.md).
+- Semua pengguna Dynamics 365 bagi Kad Pelanggan Tambahan mesti [ditambah sebagai pengguna](permissions.md) dalam wawasan khalayak untuk melihat data.
+- [Keupayaan carian dan penapis yang dikonfigurasi](search-filter-index.md) dalam wawasan khalayak diperlukan bagi mencari data untuk berfungsi.
+- Setiap kawalan tambahan bergantung pada data tertentu dalam wawasan khalayak:
+  - Langkah kawalan: Memerlukan [langkah yang dikonfigurasikan](measures.md).
+  - Kawalan kecerdasan: Memerlukan data yang dijana menggunakan [ramalan](predictions.md) atau [model tersuai](custom-models.md).
+  - Kawalan demografi: Medan demografi (seperti umur atau jantina) boleh didapati dalam profil pelanggan disatukan.
+  - Kawalan pengayaan: Memerlukan [pengayaan](enrichment-hub.md) aktif digunakan pada profil pelanggan.
+  - Kawalan garis masa: Memerlukan [aktiviti yang dikonfigurasikan](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Pasangkan Tambahan Kad Pelanggan
 
@@ -56,9 +57,9 @@ Ia boleh mengambil sedikit masa untuk penyelesaian dipasangkan ke persekitaran a
    > [!NOTE]
    > Periksa sama ada penghalang timbul pelayar tidak menyekat tetingkap pengesahan apabila anda memilih butang **Log masuk**.
 
-1. Pilih persekitaran yang ingin anda ambil data daripadanya.
+1. Pilih persekitaran Customer Insights yang anda mahu ambil data daripadanya.
 
-1. Takrifkan pemetaan medan kepada rekod dalam aplikasi Dynamics 365.
+1. Takrifkan pemetaan medan ke rekod dalam aplikasi Dynamics 365. Bergantung pada data anda dalam Customer Insights yang anda boleh pilih untuk memetakan pilihan berikut:
    - Untuk memetakan dengan kenalan, pilih medan dalam entiti Pelanggan yang sepadan dengan ID entiti kenalan anda.
    - Untuk memetakan dengan akaun, pilih medan dalam entiti Pelanggan yang sepadan dengan ID entiti kenalan anda.
 

@@ -1,7 +1,7 @@
 ---
 title: Kerja dengan API
 description: Gunakan API dan fahami pengehadan.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873673"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016631"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
@@ -90,19 +90,13 @@ Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pu
 
 1. Pada pendaftaran Aplikasi anda dalam portal Azure, pergi ke **Keizinan API**.
 
-1. Pilih **Tambah keizinan** dan pilih **Customer Insights** dalam tetingkap sisi.
+1. Pilih **Tambah keizinan**. 
+
+1. Pilih tab **API organisasi saya menggunakan** dan pilih **Dynamics 365 AI untuk Customer Insights** daripada senarai. 
 
 1. Untuk **Jenis keizinan**, pilih **Keizinan aplikasi** dan pilih keizinan **CustomerInsights.Api.All**.
 
 1. Pilih **Tambah keizinan**.
-
-1. Untuk memberikan keizinan pentadbir pada keizinan Aplikasi ini, anda perlu menambah prinsipal Perkhidmatan.
-
-   1. Pasang modul Azure Active Directory (AD) PowerShell: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Sambung ke akaun AD anda: `Connect-AzureAD -TenantId <your tenant id>`. Anda boleh mencari ID penyewa anda di **Gambaran keseluruhan** > **Azure Active Directory**.
-   1. Jalankan perintah berikut untuk menambahkan Prinsipal Perkhidmatan Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Parameter AppId berkaitan dengan aplikasi Customer Insights API.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Sampel prinsipal perkhidmatan":::
 
 1. Kembali ke **Keizinan API** untuk pendaftaran aplikasi anda.
 

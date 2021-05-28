@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887951"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049261"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
@@ -34,7 +34,7 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 1. Pilih **Edit nama** dan berikan **Nama** untuk langkah itu. 
    > [!NOTE]
-   > Jika konfigurasi ukuran baharu anda hanya mempunyai dua medan, sebagai contog, CustomerID dan satu pengiraan, output akan ditambah sebagai lajur baharu kepada entiti yang dijana oleh sistem yang dipanggil Customer_Measure. Dan anda akan dapat melihat nilai ukuran dalam profil pelanggan disatukan. Ukuran lain akan menjana entiti mereka sendiri.
+   > Jika konfigurasi ukuran baharu anda hanya mempunyai dua medan, contohnya CustomerID dan satu pengiraan, output akan ditambah sebagai lajur baharu ke entiti yang dijana sistem dipanggil Customer_Measure. Dan anda akan dapat melihat nilai ukuran dalam profil pelanggan disatukan. Ukuran lain akan menjana entiti mereka sendiri.
 
 1. Dalam kawasan konfigurasi, pilih fungsi pengagregatan daripada menu ke bawah **Pilih Fungsi**. Fungsi pengagregatan termasuk: 
    - **Sum**

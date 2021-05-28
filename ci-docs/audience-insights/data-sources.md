@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887905"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085541"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
@@ -36,11 +36,9 @@ Anda boleh menambah sumber data dalam tiga cara utama:
 
 Pengingesan data daripada sumber data di premis dalam Wawasan Khalayak disokong berdasarkan aliran data Power Platform. Aliran data boleh didayakan dalam Customer Insights dengan [menyediakan URL persekitaran Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) semasa menyediakan persekitaran.
 
-Sumber data yang dicipta selepas mengaitkan persekitaran Dataverse dengan Customer Insights akan menggunakan aliran data [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara lalai. Aliran data menyokong kesambungan on-prem menggunakan get laluan data. Alih keluar dan cipta semula sumber data yang wujud sebelum persekitaran Dataverse dikaitkan dengan penggunaan get laluan data di premis.
+Sumber data yang dicipta selepas mengaitkan persekitaran Dataverse dengan Customer Insights akan menggunakan aliran data [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Alih keluar dan cipta semula sumber data yang wujud sebelum persekitaran Dataverse  dikaitkan ke [guna get laluan data di premis](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan kelihatan dan anda boleh menggunakan semula dalam Customer Insights. Halaman sumber data menunjukkan pautan untuk pergi ke persekitaran Power Platform di mana anda boleh melihat dan mengkonfigurasikan get laluan data di premis.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Tangkapan skrin halaman sumber data menunjukkan pautan yang menunjuk kepada persekitaran Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Semak data yang ditelan
 

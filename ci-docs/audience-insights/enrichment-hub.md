@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896016"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954498"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -29,6 +29,7 @@ Pada tab **Temui**, anda akan menemui pengayaan yang berikut:
 
 - [Jenama](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
+- [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
 - [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Demografik](enrichment-experian.md) disediakan oleh Experian
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies

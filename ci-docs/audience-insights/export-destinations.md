@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896154"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016625"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
 Halaman **Eksport** menunjukkan semua eksport yang dikonfigurasikan. Eksport berkongsi data tertentu dengan pelbagai aplikasi. Ia termasuk profil pelanggan atau entiti, skema, dan butiran pemetaan. Setiap eksport memerlukan [sambungan, yang disediakan oleh pentadbir, untuk menguruskan pengesahan dan akses](connections.md).
-
-> [!NOTE]
-> Sehingga Mac 2021, eksport mencipta sambungan ke perkhidmatan yang sepadan secara automatik. Eksport kini memerlukan [sambungan, dicipta dan dikongsi oleh pentadbir](connections.md) sebelum anda boleh menciptanya.
 
 Pergi ke **Data** > **Eksport** untuk melihat halaman eksport. Semua peranan pengguna mempunyai akses untuk melihat eksport yang dikonfigurasikan. Penggunaan medan carian dalam bar perintah untuk mencari eksport dengan nama, nama sambungan atau jenis sambungan mereka.
 

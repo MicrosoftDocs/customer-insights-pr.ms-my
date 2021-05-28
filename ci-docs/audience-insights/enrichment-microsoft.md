@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6f19033236190547f68d2b91ec6b32074bf7912a
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
+ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896613"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "6064902"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Mengayakan profil pelanggan dengan persamaan jenama dan kepentingan (pratonton)
 
@@ -31,7 +31,7 @@ Untuk mengkonfigurasikan pengayaan afiniti kepentingan, pergi ke tab **Temui** d
 
 ## <a name="how-we-determine-affinities"></a>Cara kami menentukan afiniti
 
-Kami menggunakan data carian dalam talian Microsoft untuk mencari afiniti untuk jenama dan minat merentasi pelbagai segmen demografik (ditakrifkan mengikut umur, jantina atau lokasi). Jumlah carian dalam talian untuk sesebuah jenama atau faedah menentukan jumlah persamaan bahagian demografi berbanding segmen lain yang mempunyai persamaan jenama atau kepentingan. Jenama atau minat.
+Kami menggunakan data carian dalam talian Microsoft untuk mencari afiniti untuk jenama dan minat merentasi pelbagai segmen demografik (ditakrifkan mengikut umur, jantina atau lokasi). Jumlah carian dalam talian untuk sesebuah jenama atau faedah menentukan jumlah persamaan bahagian demografi berbanding segmen lain yang mempunyai persamaan jenama atau kepentingan.
 
 ## <a name="affinity-level-and-score"></a>Tahap dan skor perkaitan
 

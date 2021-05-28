@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595575"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085633"
 ---
 # <a name="match-entities"></a>Padankan entiti
 
@@ -103,6 +103,18 @@ Peraturan padanan mewakili set syarat. Untuk memadankan entiti berdasarkan syara
 
 > [!NOTE]
 > Urutan peraturan diambil kira. Algoritma yang sepadan cuba dipadankan berdasarkan peraturan pertama anda dan terus ke peraturan kedua hanya jika tiada perlawanan dikenal pasti dengan peraturan pertama.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Tukar pesanan entiti dalam peraturan padanan
+
+Anda boleh menyusun semula entiti untuk peraturan padanan bagi mengubah pesanan diproses. Peraturan yang berkonflik disebabkan oleh pesanan yang ditukar akan dialih keluar. Anda perlu mencipta semula peraturan yang dialih keluar dengan konfigurasi dikemas kini.
+
+1. Pergi ke **Data** > **Satukan** > **Padankan** dan pilih **Edit**.
+
+1. Dalam anak tetingkap **Peraturan edit**, pilih kawalan **Alih ke atas/ke bawah** atau seret dan lepaskan entiti untuk menukar pesanan.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Pilihan untuk mengubah dalam entiti pesanan yang diproses dalam fasa padanan.":::
+
+1. Pilih **Selesai** untuk menyimpan peraturan.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Takrifkan penyahpenduaan pada entiti padan
 
