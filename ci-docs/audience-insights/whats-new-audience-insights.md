@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988931"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263262"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Kemas kini Mei 2021
+
+Kemas kini pada bulan Mei 2021 termasuk beberapa ciri, peningkatan prestasi dan pembaikan pepijat.
+
+### <a name="data-ingestion"></a>Pengingesan data
+
+- **Lihat atau ubah suai definisi metadata atau entiti apabila melampirkan data daripada Azure Data Lake Storage** Anda kini boleh melihat dan mengedit definisi metadata atau entiti dalam cerapan khalayak apabila melampirkan data daripada folder Common Data Model dalam Azure Data Lake Storage anda. Keupayaan ini menyediakan maklum balas masa nyata, pengesahan model dan semakan ralat. Ia membolehkan anda mengedit model.json dan manifest.json dengan lancar.
+
+### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport segmen yang dipertingkat, jadual tersuai dan duplikasi** Anda kini boleh [melihat semua eksport untuk segmen tertentu](export-destinations.md#view-exports-and-export-details) dalam senarai. Pandangan baharu ini membantu untuk menguruskan cara segmen tertentu digunakan dan menyesuaikan eksport yang sedia ada atau mencipta eksport baharu.    
+  Anda boleh [menentukan jadual segar semula tersuai](export-destinations.md#schedule-and-run-exports) untuk eksport individu atau beberapa eksport secara serentak. Sehingga kini, semua eksport dijalankan dengan setiap segar semula sistem.    
+  Daripada mencipta eksport baharu dari awal, anda boleh bermula berdasarkan eksport yang sedia ada untuk menjimatkan sedikit masa.
+
+- **Eksport segmen ke Microsoft Advertising** Kami telah memperluaskan destinasi eksport kami untuk menyertakan Microsoft Advertising. Cipta khalayak Padanan Pelanggan pada Microsoft Advertising dengan data profil pelanggan disatukan anda dan gunakan khalayak ini untuk kempen pengiklanan anda. Untuk mendapatkan maklumat lanjut, lihat [Eksport segmen ke Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Eksport segmen ke LinkedIn Ads** Kami telah memperluaskan destinasi eksport kami untuk menyertakan LinkedIn Ads dan membolehkan anda membuka kunci Sasaran Kenalan serta Sasaran Syarikat melalui LinkedIn dengan mengeksport data profil pelanggan anda yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Eksport segmen ke LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Eksport segmen ke Omnisend** Kami telah memperluaskan destinasi eksport kami untuk menyertakan Omnisend. Gunakan segmen yang dicipta dalam cerapan khalayak untuk menjana kempen, menyediakan pemasaran e-mel dan menggunakan kumpulan pelanggan khusus dengan Omnisend. Untuk mendapatkan maklumat lanjut, lihat [Eksport segmen ke Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Ramalan
+
+- **Laporan Kebolehgunaan Data Input** Laporan kebolehgunaan data input memberikan pandangan ralat yang disatukan dan amaran bahawa ramalan luar kotak anda mungkin menjana. Ia juga memberi pengesyoran cara meningkatkan prestasi model.    
+  Laporan tersedia selepas model selesai proses latihan. Ia dicipta untuk setiap model secara berasingan, tidak kira sama ada ia berjaya dilengkapkan atau tidak.
+  Pada masa ini, ciri ini hanya tersedia untuk model Pulangan Transaksi. Untuk mendapatkan maklumat lanjut, lihat [Laporan kebolehgunaan data input](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Hubungan
+
+- **Penampak perhubungan** Pandangan penampak perhubungan membolehkan anda melihat semua perhubungan yang sedia ada antara entiti dengan kekardinalan mereka. Perhubungan kini diatur dalam kumpulan: pengguna dicipta, sistem dan perhubungan yang diwarisi. Anda juga boleh mengeksport pandangan sebagai imej. Untuk mendapatkan maklumat lanjut, lihat [Lihat perhubungan](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Kemas kini April 2021
 

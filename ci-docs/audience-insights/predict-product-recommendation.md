@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906775"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095567"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ramalan pengesyoran produk (pratonton)
 
@@ -205,33 +205,9 @@ Kadang-kadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis ram
        > [!div class="mx-imgBorder"]
        > ![Senarai menunjukkan cadangan keyakinan tinggi untuk set pelanggan individu yang terpilih](media/product-recommendation-highconfidence.PNG "Senarai menunjukkan cadangan keyakinan tinggi untuk set pelanggan individu yang terpilih")
 
-## <a name="fix-a-failed-prediction"></a>Betulkan ramalan yang gagal
+## <a name="manage-predictions"></a>Urus ramalan
 
-1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
-
-1. Pilih ramalan yang anda ingin lihat log ralatnya dan pilih **Log**.
-
-1. Semak semula semua ralat. Terdapat beberapa jenis ralat yang boleh berlaku dan ia menghuraikan keadaan yang menyebabkan ralat tersebut. Sebagai contoh, ralat bahawa tidak ada data yang mencukupi untuk meramalkan dengan tepat biasanya diselesaikan dengan memuatkan lebih banyak data ke dalam Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Segar semula ramalan
-
-Ramalan menyegar semula secara automatik pada jadual yang sama [jadualkan segar semula data anda](system.md#schedule-tab) seperti yang dikonfigurasikan dalam tetapan.
-
-1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
-
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu segar semula.
-
-1. Pilih **Segar Semula**.
-
-## <a name="delete-a-prediction"></a>Padamkan ramalan
-
-Memadam ramalan juga akan mengalih keluar entiti outputnya.
-
-1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
-
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu padamkan.
-
-1. Pilih **Padam**.
+Ada kemungkinan untuk mengoptimumkan, menyelesaikan masalah, menyegarkan semula atau memadam ramalan. Semak laporan kebolehgunaan data input untuk mengetahui cara membuat ramalan lebih cepat dan lebih dipercayai. Untuk mendapatkan maklumat lanjut, lihat [Urus ramalan](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

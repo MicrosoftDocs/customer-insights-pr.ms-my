@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus persekitaran
 description: Ketahui cara untuk mendaftar untuk perkhidmatan dan cara untuk menguruskan persekitaran.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887997"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259110"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -76,9 +76,9 @@ Untuk mencipta persekitaran:
    > Kami hanya menyokong akaun Azure Data Lake Storage Gen2 dari rantau Azure yang sama yang anda pilih apabila mencipta persekitaran.
    > Kami hanya menyokong hanya Ruang Nama Berhierarki (HNS) Azure Data Lake Gen2 yang didayakan untuk akaun storan.
 
-   - Untuk pilihan Azure Data Lake Storage Gen2, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Container** tidak boleh ditukar dan akan menjadi "customerinsights".
+   - Untuk pilihan Azure Data Lake Storage Gen2, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Bekas** tidak boleh ditukar dan akan menjadi `customerinsights`.
    
-   - Jika anda ingin menggunakan [ramalan](predictions.md), konfigurasikan perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, atau dayakan pencernaan data daripada sumber data di premis, sediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasi perkongsian data dengan Microsoft Dataverse dan dayakan keupayaan tambahan**. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Microsoft Dataverse Data Lake Terurus.
+   - Jika anda ingin menggunakan [ramalan](predictions.md), konfigurasikan perkongsian data dengan Microsoft Dataverse atau dayakan pengingesan data daripada sumber data di premis, sediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasi perkongsian data dengan Microsoft Dataverse dan dayakan keupayaan tambahan**. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Microsoft Dataverse Data Lake Terurus.
 
      > [!NOTE]
      > - Perkongsian data dengan Microsoft Dataverse Data Lake Terurus pada masa ini tidak disokong apabila anda menyimpan semua data ke Azure Data Lake Storage anda sendiri.
@@ -87,7 +87,7 @@ Untuk mencipta persekitaran:
      > [!div class="mx-imgBorder"]
      > ![Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan model. fail JSON akan dicipta dan ditambah ke subfolder yang berkaitan berdasarkan proses yang anda jalankan.
+   Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan fail model.json akan dicipta dan ditambah pada folder berdasarkan nama proses.
 
    Jika anda mencipta berbilang persekitaran Customer Insights dan memilih untuk menyimpan entiti output daripada persekitaran tersebut dalam akaun storan anda, folder berasingan akan dicipta untuk setiap persekitaran dengan ci_<environmentid> dalam container.
 
@@ -140,13 +140,13 @@ Anda boleh mengedit beberapa butiran persekitaran sedia ada.
 
 5. Secara alternatif, anda boleh mengemas kini dari sambungan berasaskan kunci akaun kepada sambungan berasaskan sumber atau langganan. Sebaik sahaja dinaik taraf, anda tidak boleh kembali kepada kunci akaun selepas kemas kini. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Anda tidak boleh mengubah maklumat **Bekas** semasa mengemas kini sambungan.
 
-6. Selain itu, anda boleh menyediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasikan perkongsian data Microsoft Dataverse dan dayakan keupayaan tambahan**. Keupayaan ini termasuk perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, pengingesan daripada sumber data di premis, atau penggunaan [ramalan](predictions.md). Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Data Lake Terurus Microsoft Dataverse.
+6. Selain itu, anda boleh menyediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasikan perkongsian data Microsoft Dataverse dan dayakan keupayaan tambahan**. Keupayaan ini termasuk perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, pengingesan data daripada sumber data di premis atau penggunaan [ramalan](predictions.md). Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Data Lake Terurus Microsoft Dataverse.
 
    > [!NOTE]
    > - Perkongsian data dengan Microsoft Dataverse Data Lake Terurus pada masa ini tidak disokong apabila anda menyimpan semua data ke Azure Data Lake Storage anda sendiri.
    > - [Ramalan nilai yang hilang dalam entiti](predictions.md) pada masa ini tidak disokong apabila anda mendayakan perkongsian data dengan Data Lake Terurus Microsoft Dataverse.
 
-   Setelah anda mendayakan perkongsian data dengan Microsoft Dataverse, segar semula sepenuhnya sumber data anda dan proses lain akan tercetus. Jika proses sedang berjalan dan dalam baris gilir pada masa ini, anda tidak akan dapat melihat pilihan untuk mendayakan perkongsian data dengan Microsoft Dataverse. Anda boleh menunggu sehingga proses selesai atau membatalkannya untuk mendayakan perkongsian data. 
+   Selepas mendayakan perkongsian data dengan Microsoft Dataverse, segar semula sepenuhnya sumber data anda dan proses lain akan bermula. Jika proses sedang berjalan, anda tidak melihat pilihan untuk mendayakan perkongsian data dengan Microsoft Dataverse. Tunggu sehingga proses tersebut selesai atau batalkan proses untuk mendayakan perkongsian data. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
    

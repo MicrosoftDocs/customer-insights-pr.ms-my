@@ -9,14 +9,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3663a48955f0b1db8a96e25403e5f8947bc6a220
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 000b44dc8e5cc419132bd17e359fbdd5879caf1b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976950"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124330"
 ---
-# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a>Eksport senarai segmen dan data lain ke SFTP (pratonton)
+# <a name="export-segments-and-other-data-to-sftp-preview"></a>Eksport segmen dan data lain ke SFTP (pratonton)
 
 Gunakan data pelanggan anda dalam aplikasi pihak ketiga dengan mengeksportnya ke lokasi Protokol Pemindahan Fail Selamat (SFTP).
 

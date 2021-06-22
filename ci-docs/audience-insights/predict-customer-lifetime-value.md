@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954590"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095521"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Ramalan nilai sepanjang hayat pelanggan (CLV) (Pratonton)
 
@@ -149,7 +149,6 @@ Data mencerminkan interaksi pelanggan utama (seperti log web, khidmat pelanggan 
 
 1. Pilih **Seterusnya**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Semak dan jalankan konfigurasi model
 
 1. Dalam langkah **Semak butiran model anda**, sahkan konfigurasi ramalan. Anda boleh kembali ke mana-mana bahagian konfigurasi ramalan dengan memilih **Edit** di bawah nilai yang ditunjukkan. Anda juga boleh memilih langkah konfigurasi daripada penunjuk kemajuan.
@@ -170,11 +169,10 @@ Data mencerminkan interaksi pelanggan utama (seperti log web, khidmat pelanggan 
 - **Status**: Status jalanan ramalan.
     - **Dibariskan**: Ramalan sedang menunggu proses lain untuk selesai.
     - **Menyegar semula**: Ramalan sedang berjalan untuk mengcipta keputusan yang akan mengalir ke dalam entiti output.
-    - **Gagal**: Jalanan ramalan gagal. [Ulasan log](#troubleshoot-a-failed-prediction) untuk maklumat lanjut.
+    - **Gagal**: Jalanan ramalan gagal. [Ulasan log](manage-predictions.md#troubleshoot-a-failed-prediction) untuk maklumat lanjut.
     - **Berjaya**: Ramalan telah berjaya. Pilih **Lihat** di bawah elips menegak untuk menyemak ramalan anda.
 - **Diedit**: Tarikh konfigurasi untuk ramalan telah diubah.
 - **Terakhir disegar semula**: Tarikh ramalan menyegar semula hasil dalam entiti output.
-
 
 ### <a name="review-prediction-results"></a>Semak hasil ramalan
 
@@ -216,28 +214,8 @@ Terdapat tiga bahagian utama data dalam halaman hasil.
 
 - **Faktor paling berpengaruh**: Pelbagai faktor dipertimbangkan semasa mencipta ramalan CLV anda berdasarkan data input yang diberikan kepada model AI. Setiap faktor mempunyai kepentingannya yang dikira untuk ramalan teragregat yang dicipta oleh model. Anda boleh menggunakan faktor ini untuk membantu mengesahkan hasil ramalan anda. Faktor-faktor ini juga memberi lebih banyak pandangan mengenai faktor-faktor yang paling berpengaruh yang menyumbang ke arah meramalkan CLV di semua pelanggan anda.
 
-## <a name="refresh-a-prediction"></a>Segar semula ramalan
+## <a name="manage-predictions"></a>Urus ramalan
 
-Ramalan menyegar semula secara automatik pada jadual yang sama [jadualkan segar semula data anda](system.md#schedule-tab) seperti yang dikonfigurasikan dalam tetapan. Anda boleh juga menyegarkannya semula secara manual.
-
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
-2. Pilih elipsis menegak di sebelah ramalan yang anda mahu segar semula.
-3. Pilih **Segar Semula**.
-
-## <a name="delete-a-prediction"></a>Padamkan ramalan
-
-Memadamkan ramalan juga mengalih keluar entiti outputnya.
-
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
-2. Pilih elipsis menegak di sebelah ramalan yang anda mahu padamkan.
-3. Pilih **Padam**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Selesaikan ramalan yang gagal
-
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
-2. Pilih elipsis menegak bersebelahan dengan ramalan yang anda mahu lihat log ralatnya.
-3. Pilih **Log**.
-4. Semak semula semua ralat. Terdapat beberapa jenis ralat yang boleh berlaku dan ia menghuraikan keadaan yang menyebabkan ralat tersebut. Contohnya, ralat yang tidak mencukupi data untuk meramal secara tepat biasanya diselesaikan dengan memuatkan lebih banyak data ke dalam wawasan khalayak.
-
+Ada kemungkinan untuk mengoptimumkan, menyelesaikan masalah, menyegarkan semula atau memadam ramalan. Semak laporan kebolehgunaan data input untuk mengetahui cara membuat ramalan lebih cepat dan lebih dipercayai. Untuk mendapatkan maklumat lanjut, lihat [Urus ramalan](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

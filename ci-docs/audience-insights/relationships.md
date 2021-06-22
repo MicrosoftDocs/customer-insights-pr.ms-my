@@ -1,74 +1,110 @@
 ---
 title: Hubungan antara entiti dan laluan entiti
 description: Cipta dan urus hubungan antara entiti daripada berbilang sumber data.
-ms.date: 04/14/2020
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: mukeshpo
-ms.author: mukeshpo
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: c25bfcb8e2a8223498dd1a5e8cfb3712a40ab85e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595223"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171175"
 ---
 # <a name="relationships-between-entities"></a>Perhubungan antara entiti
 
-Perhubungan membantu anda connect entiti dan menjana graf data apabila entiti berkongsi pengecam lazim (kekunci asing) yang boleh menjadi rujukan daripada satu entiti ke entiti yang lain. Entiti yang bersambung membolehkan anda menakrif bahagian dan ukuran berasaskan pada berbilang sumber data.
+Perhubungan menghubungkan entiti dan mentakrifkan graf data anda apabila entiti berkongsi pengecam biasa, iaitu kunci asing. Kunci asing ini boleh dirujuk daripada satu entiti ke entiti lain. Entiti yang berhubung membolehkan definisi segmen dan ukuran berdasarkan berbilang sumber data.
 
-Terdapat dua jenis perhubungan. Perhubungan sistem tidak boleh diedit, yang dicipta secara automatik, dan perhubungan tersuai yang dicipta dan dikonfigurasikan oleh pengguna.
+Terdapat tiga jenis perhubungan: 
+- Perhubungan sistem tidak boleh diedit, yang dicipta oleh sistem sebagai sebahagian daripada proses penyatuan data
+- Perhubungan yang diwarisi dan tidak boleh diedit, yang dicipta secara automatik daripada pengingesan sumber data 
+- Perhubungan tersuai boleh diedit, yang dicipta dan dikonfigurasikan oleh pengguna
 
-Semasa proses padan dan gabung, perhubungan sistem dicipta di belakang tabir berasaskan pada pemadanan pintar. Perhubungan ini membantu mengaitkan rekod Profil Pelanggan dengan rekod entiti lain yang sepadan. Diagram berikut menerangkan penciptaan tiga perhubungan sistem apabila entiti pelanggan sepadan dengan entiti tambahan untuk mengeluarkan entiti Profil Pelanggan akhir.
+## <a name="non-editable-system-relationships"></a>Perhubungan sistem tidak boleh diedit
 
-> [!div class="mx-imgBorder"]
-> ![Penciptaan perhubungan](media/relationships-entities-merge.png "Penciptaan perhubungan")
+Semasa penyatuan data, perhubungan sistem dicipta secara automatik berdasarkan padanan pintar. Perhubungan ini membantu untuk mengaitkan rekod profil pelanggan dengan rekod yang sepadan. Gambar rajah berikut menggambarkan penciptaan tiga perhubungan berdasarkan sistem. Entiti pelanggan dipadankan dengan entiti lain untuk menghasilkan entiti *Pelanggan* disatukan.
 
-- **Perhubungan *CustomerToContact*** dicipta antara entiti Pelanggan dan entiti Kenalan. Entiti Pelanggan memperoleh medan kekunci **Contact_contactId** untuk mengaitkan dengan medan kekunci entiti Kenalan **contactId**.
-- **Perhubungan *CustomerToAccount*** dicipta antara entiti Pelanggan dengan entiti Akaun. Entiti Pelanggan memperoleh medan kekunci **Account_accountId** untuk mengaitkan dengan medan kekunci entiti Akaun **accountId**.
-- **Perhubungan *CustomerToWebAccount*** dicipta antara entiti Pelanggan dengan entiti WebAccount. Entiti Pelanggan memperoleh medan kekunci **WebAccount_webaccountId** untuk mengaitkan dengan medan kekunci entiti WebAccount **webaccountId**.
+:::image type="content" source="media/relationships-entities-merge.png" alt-text="Gambar rajah dengan laluan hubungan untuk entiti pelanggan dengan tiga hubungan 1-n.":::
 
-## <a name="create-a-relationship"></a>Cipta perhubungan
+- **Perhubungan *CustomerToContact*** dicipta antara entiti *Pelanggan* dengan entiti *Kenalan*. Entiti *Pelanggan* memperoleh medan kunci **Contact_contactID** untuk mengaitkan dengan entiti *Kenalan* medan kunci **contactID**.
+- **Perhubungan *CustomerToAccount*** dicipta antara entiti *Pelanggan* dengan entiti *Akaun*. Entiti *Pelanggan* memperoleh medan kunci **Account_accountID** untuk mengaitkan dengan entiti *Akaun* medan kunci **accountID**.
+- **Perhubungan *CustomerToWebAccount*** dicipta antara entiti *Pelanggan* dengan entiti *WebAccount*. Entiti *Pelanggan* memperoleh medan kekunci **WebAccount_webaccountID** untuk mengaitkan dengan entiti *WebAccount* medan kekunci **webaccountID**.
 
-Takrif perhubungan tersuai pada halaman **Perhubungan**. Setiap perhubungan mengandungi entiti Sumber (entiti yang memegang kekunci asing) dan entiti Sasaran (entiti yang kekunci asing bagi entiti sumber dirujuk).
+## <a name="non-editable-inherited-relationships"></a>Perhubungan yang diwarisi dan tidak boleh diedit
+
+Semasa proses pengingesan data, sistem menyemak sumber data untuk perhubungan sedia ada. Jika tiada perhubungan wujud, sistem mencipta perhubungan secara automatik. Perhubungan ini juga digunakan dalam proses hiliran.
+
+## <a name="create-a-custom-relationship"></a>Cipta perhubungan tersuai
+
+Perhubungan terdiri daripada *entiti sumber* yang mengandungi kunci asing dan *entiti sasaran* yang dihalakan ke kunci asing entiti sumber. 
 
 1. Dalam wawasan khalayak, pergi ke **Data** > **Hubungan**.
 
 2. Pilih **Perhubungan baharu**.
 
-3. Dalam anak tetingkap **Tambah perhubungan**, berikan maklumat berikut:
+3. Dalam anak tetingkap **Perhubungan baharu**, berikan maklumat berikut:
 
-   > [!div class="mx-imgBorder"]
-   > ![Masukkan butiran perhubungan](media/relationships-add.png "Masukkan butiran perhubungan")
+   :::image type="content" source="media/relationship-add.png" alt-text="Anak tetingkap sisi perhubungan baharu dengan medan input kosong.":::
 
-   - **Nama perhubungan**: Nama yang menggambarkan tujuan perhubungan (contohnya, **AccountWebLogs**).
+   - **Nama perhubungan**: Nama yang mencerminkan tujuan perhubungan. Contoh: CustomerToSupportCase.
    - **Description**: Description bagi perhubungan.
-   - **Entiti Sumber**: Pilih entiti yang digunakan sebagai sumber dalam perhubungan (contohnya, WebLog).
-   - **Kekardinalan**: Pilih kekardinalan bagi rekod entiti sumber. Contohnya, “banyak” bermaksud rekod Weblog berbilang berkait dengan satu WebAccount.
-   - **Medan kekunci sumber**: Ini mewakili medan kekunci asing dalam entiti sumber. Contohnya, WebLog mempunyai medan kekunci asing **accountId**.
-   - **Entiti sasaran**: Pilih entiti yang digunakan sebagai sasaran dalam perhubungan (contohnya, WebAccount).
-   - **Kekardinalan sasaran**: Pilih kekardinalan rekod entiti sasaran. Contohnya, “satu” bermaksud rekod Weblog berbilang berkait dengan satu WebAccount.
-   - **Medan kekunci sasaran**: Medan ini mewakili medan kekunci bagi entiti sasaran. Contohnya, WebAccount mempunyai medan kekunci **accountId**.
+   - **Entiti sumber**: Entiti yang digunakan sebagai sumber dalam perhubungan. Contoh: SupportCase.
+   - **Entiti sasaran**: Entiti yang digunakan sebagai sasaran dalam perhubungan. Contoh: Pelanggan.
+   - **Kekardinalan sumber**: Tentukan kekardinalan entiti sumber. Kekardinalan menerangkan bilangan elemen yang mungkin dalam satu set. Ia sentiasa berkaitan dengan kekardinalan sasaran. Anda boleh memilih antara **Satu** dengan **Banyak**. Hanya perhubungan banyak-ke-satu dan satu-ke-satu disokong.  
+     - Banyak kepada satu: Berbilang rekod sumber boleh berkaitan dengan satu rekod sasaran. Contoh: Berbilang kes sokongan daripada pelanggan tunggal.
+     - Satu kepada satu: Rekod sumber tunggal berkaitan dengan satu rekod sasaran. Contoh: Satu ID kesetiaan untuk pelanggan tunggal.
 
-> [!NOTE]
-> Hanya perhubungan banyak-ke-satu dan satu-ke-satu disokong. Perhubungan banyak-ke-banyak boleh dicipta menggunakan dua perhubungan banyak-ke-satu dan entiti pautan (entiti yang digunakan untuk connect entiti sumber dan entiti sasaran).
+     > [!NOTE]
+     > Perhubungan banyak kepada banyak boleh dicipta menggunakan dua perhubungan banyak kepada satu dan entiti pemautan, yang menghubungkan entiti sumber dan entiti sasaran.
 
-## <a name="delete-a-relationship"></a>Memadam perhubungan
+   - **Kekardinalan sasaran**: Pilih kekardinalan rekod entiti sasaran. 
+   - **Medan kunci sumber**: Medan kunci asing dalam entiti sumber. Contoh: SupportCase boleh menggunakan CaseID sebagai medan kunci asing.
+   - **Medan kunci sasaran**: Medan kunci entiti sasaran. Contoh Pelanggan boleh menggunakan medan kunci **CustomerID**.
 
-1. Dalam wawasan khalayak, pergi ke **Data** > **Hubungan**.
+4. Pilih **Simpan** untuk mencipta perhubungan tersuai.
 
-2. Pilih kotak semak untuk perhubungan yang anda mahu padam.
+## <a name="view-relationships"></a>Lihat perhubungan
 
-3. Pilih **Padam** pada bahagian atas jadual **Perhubungan**.
+Halaman Perhubungan menyenaraikan semua perhubungan yang telah dicipta. Setiap baris mewakili perhubungan, yang juga termasuk butiran tentang entiti sumber, entiti sasaran dan kekardinalan. 
 
-4. Sahkan pemadaman anda.
+:::image type="content" source="media/relationships-list.png" alt-text="Senarai perhubungan dan pilihan dalam bar tindakan halaman Perhubungan.":::
+
+Halaman ini menawarkan satu set pilihan untuk perhubungan sedia ada dan baharu: 
+- **Perhubungan Baharu**: [Cipta perhubungan tersuai](#create-a-custom-relationship).
+- **Penampak**: [Terokai penampak perhubungan](#explore-the-relationship-visualizer) untuk melihat gambar rajah rangkaian perhubungan yang sedia ada dan kekardinalan.
+- **Tapis mengikut**: Pilih jenis perhubungan untuk ditunjukkan dalam senarai.
+- **Cari perhubungan**: Gunakan carian berdasarkan teks pada sifat perhubungan.
+
+### <a name="explore-the-relationship-visualizer"></a>Terokai penampak perhubungan
+
+Penampak perhubungan menunjukkan gambar rajah rangkaian perhubungan yang sedia ada antara entiti yang berhubung dengan kekardinalan.
+
+Untuk menyesuaikan pandangan, anda boleh mengubah kedudukan kotak dengan menyeret kotak pada kanvas.
+
+:::image type="content" source="media/relationship-visualizer.png" alt-text="Syot layar gambar rajah rangkaian penampak perhubungan dengan sambungan antara entiti yang berkaitan.":::
+
+Pilihan yang tersedia: 
+- **Eksport sebagai imej**: Simpan pandangan semasa sebagai fail imej.
+- **Tukar kepada tataletak mendatar/menegak**: Tukar penjajaran entiti dan perhubungan.
+- **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
+
+## <a name="manage-existing-relationships"></a>Urus perhubungan yang sedia ada 
+
+Pada halaman Perhubungan, setiap perhubungan diwakili oleh baris. 
+
+Pilih perhubungan dan pilih salah satu daripada pilihan berikut: 
+ 
+- **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
+- **Padam**: Padam perhubungan tersuai.
+- **Lihat**: Lihat perhubungan yang dicipta sistem dan diwarisi. 
 
 ## <a name="next-step"></a>Langkah seterusnya
 
-Perhubungan sistem dan tersuai digunakan untuk mencipta bahagian berasaskan berbilang sumber data yang tidak lagi silo. Untuk maklumat lanjut, lihat [Bahagian](segments.md).
-
+Perhubungan sistem dan tersuai digunakan untuk [mencipta segmen](segments.md) berdasarkan berbilang sumber data yang tidak lagi silo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

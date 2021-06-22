@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906867"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095613"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Ramalan pulangan transaksi (pratonton)
 
@@ -144,7 +144,7 @@ Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membe
    - **Status:** Status jalanan ramalan.
         - **Dibariskan:** Ramalan sedang menunggu proses lain untuk berjalan.
         - **Menyegarkan semula**: Ramalan sedang berjalan untuk menghasilkan keputusan yang akan mengalir ke dalam entiti output.
-        - **Gagal:** Jalanan ramalan gagal. [Ulasan log](#troubleshoot-a-failed-prediction) untuk maklumat lanjut.
+        - **Gagal:** Jalanan ramalan gagal. [Ulasan log](manage-predictions.md#troubleshoot-a-failed-prediction) untuk maklumat lanjut.
         - **Berjaya:** Ramalan telah berjaya. Pilih **Pandangan** di bawah elipsis menegak untuk menyemak semula langganan
    - **Diedit:** Tarikh konfigurasi untuk ramalan telah diubah.
    - **Terakhir disegar semula:** Tarikh ramalan menyegar semula hasil dalam entiti output.
@@ -168,35 +168,9 @@ Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membe
        
     1. **Faktor paling mempengaruhi:** Terdapat banyak faktor yang diambil kira apabila mencipta ramalan anda. Setiap faktor mempunyai kepentingannya yang dikira untuk ramalan teragregat yang dicipta oleh model. Anda boleh menggunakan faktor ini untuk membantu mengesahkan hasil ramalan anda. Atau anda boleh menggunakan maklumat ini kemudian untuk [mencipta segmen](segments.md) yang dapat membantu mempengaruhi risiko pulangan untuk pelanggan.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Selesaikan ramalan yang gagal
+## <a name="manage-predictions"></a>Urus ramalan
 
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
-
-1. Pilih elipsis menegak bersebelahan dengan ramalan yang anda mahu lihat log ralatnya.
-
-1. Pilih **Log**.
-
-1. Semak semula semua ralat. Terdapat beberapa jenis ralat yang boleh berlaku dan ia menghuraikan keadaan yang menyebabkan ralat tersebut. Contohnya, ralat bahawa data tidak mencukupi untuk meramal secara tepat pada lazimnya diselesaikan dengan memuatkan data tambahan ke dalam Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Segar semula ramalan
-
-Ramalan akan menyegar semula secara automatik pada [jadual yang sama data anda menyegar semula](system.md#schedule-tab) seperti yang dikonfigurasikan dalam tetapan. Anda boleh juga menyegarkannya semula secara manual.
-
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
-
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu segar semula.
-
-1. Pilih **Segar Semula**.
-
-## <a name="delete-a-prediction"></a>Padamkan ramalan
-
-Memadamkan ramalan juga mengalih keluar entiti outputnya.
-
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
-
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu padamkan.
-
-1. Pilih **Padam**.
+Ada kemungkinan untuk mengoptimumkan, menyelesaikan masalah, menyegarkan semula atau memadam ramalan. Semak laporan kebolehgunaan data input untuk mengetahui cara membuat ramalan lebih cepat dan lebih dipercayai. Untuk mendapatkan maklumat lanjut, lihat [Urus ramalan](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034023"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111398"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
@@ -32,22 +32,13 @@ Terdapat berbilang cara untuk mencipta segmen baharu:
 - Cadangan dikuasai AI berdasarkan pada ukuran atau atribut: [Segmen yang dicadangkan untuk meningkatkan ukuran](suggested-segments.md)
 - Cadangan berdasarkan pada aktiviti: [Segmen yang dicadangkan berdasarkan pada aktiviti pelanggan](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Dapatkan wawasan pada segmen sedia ada
-
-Terokai maklumat tambahan sekitar segmen sedia ada dengan [Wawasan segmen](segment-insights.md). Ketahui apa yang membezakan dua segmen atau apa persamaan mereka.
-
-## <a name="find-similar-customers"></a>Cari pelanggan serupa
-
-Cari pelanggan yang serupa dengan ahli bagi segmen yang dipilih dengan bantuan kecerdasan buatan. Untuk maklumat lanjut, lihat [pelanggan serupa](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Mengurus bahagian sedia ada
 
 Pergi ke halaman **Segmen** untuk anda melihat semua segmen yang disimpan dan mengurus segmen.
 
 Setiap segmen diwakili oleh baris yang menyertakan maklumat tambahan tentang segmen.
 
-> [!div class="mx-imgBorder"]
-> ![Pilihan untuk menguruskan segmen sedia ada](media/segments-selected-segment.png "Pilihan untuk menguruskan segmen sedia ada")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan senarai juntai bawah pilihan dan pilihan yang tersedia.":::
 
 Tindakan yang berikut tersedia apabila anda memilih segmen:
 
@@ -59,7 +50,7 @@ Tindakan yang berikut tersedia apabila anda memilih segmen:
   Secara alternatif, anda boleh menggunakan kefungsian **Jadual kemudian** dalam juntai bawah **Aktifkan/Nyahaktifkan** untuk menetapkan tarikh dan masa pada masa depan untuk pengaktifan dan penyahaktifan segmen tertentu.
 - **Nama semula** segmen.
 - **Muat turun** senarai ahli sebagai fail .CSV.
-- Pilihan **Tambahkan pada** menghantar senarai ID Pelanggan dalam segmen untuk pemprosesan dalam aplikasi lain.
+- **Urus eksport** untuk melihat segmen berkaitan eksport dan uruskan eksport tersebut. [Ketahui lebih lanjut tentang eksport.](export-destinations.md)
 - **Padamkan** segmen.
 
 ## <a name="refresh-segments"></a>Segar semula segmen
@@ -68,6 +59,24 @@ Anda boleh memuatkan semula semua segmen serentak dengan memilih **Muat semula s
 
 > [!TIP]
 > Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+
+## <a name="export-segments"></a>Bahagian eksport
+
+Anda boleh mengeksport segmen daripada halaman segmen atau [halaman eksport](export-destinations.md). 
+
+1. Pergi ke halaman **Bahagian**.
+
+1. Pilih **Tunjukkan lagi [...]** untuk segmen yang ingin anda eksport.
+
+1. Pilih **Urus eksport** daripada senarai juntai bawah tindakan.
+
+1. Halaman **Eksport (pratonton) untuk segmen** dibuka. Anda boleh melihat semua eksport yang dikonfigurasikan dikumpulkan oleh eksport yang mengandungi segmen semasa atau tidak mengandungi segmen.
+
+   1. Untuk menambah segmen yang dipilih ke eksport, pilih eksport dalam senarai dan pilih **Tambah segmen**.
+
+   1. Untuk mencipta eksport baharu dengan segmen yang dipilih, pilih **Tambah eksport**. Untuk mendapatkan maklumat lanjut tentang mencipta eksport, lihat [Sediakan eksport baharu](export-destinations.md#set-up-a-new-export).
+
+1. Pilih **Kembali** untuk kembali ke halaman utama untuk segmen.
 
 ## <a name="view-processing-history-and-segment-members"></a>Lihat sejarah pemprosesan dan ahli bahagian
 

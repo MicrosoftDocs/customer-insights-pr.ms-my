@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906913"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095659"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Ramalan pulangan langganan (pratonton)
 
@@ -147,30 +147,9 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
        > [!div class="mx-imgBorder"]
        > ![Senarai yang menunjukkan faktor yang mempengaruhi dan kepentingannya dalam meramal hasil pulangan](media/subscription-churn-influentialfactors.PNG "Senarai yang menunjukkan faktor yang mempengaruhi dan kepentingannya dalam meramal hasil pulangan")
 
-## <a name="fix-a-failed-prediction"></a>Betulkan ramalan yang gagal
+## <a name="manage-predictions"></a>Urus ramalan
 
-1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
-1. Pilih ramalan yang anda ingin lihat log ralatnya dan pilih **Log**.
-   > [!div class="mx-imgBorder"]
-   > ![Pandangan bar menu hasil termasuk butang tutup, edit model dan log](media/subscription-churn-logsbutton.PNG "Pandangan bar menu hasil termasuk butang tutup, edit model dan log")
-1. Semak semula semua ralat. Terdapat beberapa jenis ralat yang boleh berlaku dan ia menghuraikan keadaan yang menyebabkan ralat tersebut. Contohnya, ralat yang tidak mencukupi data untuk meramal secara tepat biasanya diselesaikan dengan memuatkan data tambahan.
-
-## <a name="refresh-a-prediction"></a>Segar semula ramalan
-
-Ramalan akan menyegar semula secara automatik pada [jadual yang sama data anda menyegar semula](system.md#schedule-tab) seperti yang dikonfigurasikan dalam tetapan.
-
-1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu segar semula.
-1. Pilih **Segar Semula**.
-
-## <a name="delete-a-prediction"></a>Padamkan ramalan
-
-1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu padamkan.
-1. Pilih **Padam**.
-
-> [!NOTE]
-> Memadam ramalan akan mengalih keluar entiti outputnya.
+Ada kemungkinan untuk mengoptimumkan, menyelesaikan masalah, menyegarkan semula atau memadam ramalan. Semak laporan kebolehgunaan data input untuk mengetahui cara membuat ramalan lebih cepat dan lebih dipercayai. Untuk mendapatkan maklumat lanjut, lihat [Urus ramalan](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
