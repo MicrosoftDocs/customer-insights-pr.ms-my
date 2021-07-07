@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965589"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305443"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang dipertingkatkan
 
@@ -22,11 +22,11 @@ Alamat dalam data anda boleh tidak berstruktur, tidak lengkap atau tidak betul. 
 
 ## <a name="how-we-enhance-addresses"></a>Cara kami mempertingkatkan alamat
 
-Model kami akan melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia menghuraikan alamat untuk mengenal pasti komponennya dan menempatkannya ke dalam format berstruktur. Kemudian kami menggunakan kecerdasan buatan untuk membetulkan, melengkapkan dan menyeragamkan nilai dalam alamat.
+Model kami akan melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia menghuraikan alamat untuk mengenal pasti komponennya dan menempatkannya ke dalam format berstruktur. Kemudian, kami menggunakan AI untuk membetulkan, melengkapkan dan menyeragamkan nilai dalam alamat.
 
 ### <a name="example"></a>Contoh
 
-Maklumat alamat mungkin dalam format yang tidak standard dan mengandungi ralat ejaan. Model boleh membetulkan isu ini dan mencipta alamat yang konsisten dalam profil pelanggan disatukan.
+Maklumat alamat mungkin dalam format bukan standard dan mengandungi ralat ejaan. Model boleh membetulkan isu ini dan mencipta alamat yang konsisten dalam profil pelanggan disatukan.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Alamat yang dipertingkatkan hanya berfungsi dengan nilai yang sudah wujud dalam 
 2. Sahkan Jika sebarang nilai seperti poskod atau nama jalan adalah sah.
 3. Tukar nilai yang tidak dikenali.
 
-Model menggunakan teknik berasaskan pembelajaran mesin untuk meningkatkan alamat. Walaupun kami menggunakan ambang keyakinan tinggi apabila model mengubah nilai input seperti dengan mana-mana model yang berasaskan ML, ketepatan 100% tidak dijamin.
+Model menggunakan teknik berasaskan pembelajaran mesin untuk meningkatkan alamat. Walaupun kami menggunakan ambang keyakinan yang tinggi apabila model mengubah nilai input, seperti mana-mana model berasaskan pembelajaran mesin, ketepatan 100 peratus tidak dijamin.
 
 ## <a name="supported-countries-or-regions"></a>Negara atau rantau yang disokong
 
@@ -76,7 +76,7 @@ Alamat mesti mengandungi nilai negara/rantau. Kami tidak memproses alamat untuk 
 1. Pilih cara alamat diformatkan dalam set data anda. Pilih **Alamat atribut tunggal** jika alamat dalam data anda menggunakan medan tunggal. Pilih **Alamat berbilang atribut** jika alamat dalam data anda menggunakan lebih daripada satu medan data.
 
    > [!NOTE]
-   > Negara/Rantau adalah mandatori dalam kedua-dua alamat atribut tunggal dan berbilang atribut. Alamat yang tidak mengandungi nilai negara/rantau yang sah atau disokong tidak akan diperkaya
+   > Negara/Rantau adalah wajib dalam kedua-dua alamat satu atribut dan berbilang atribut. Alamat yang tidak mengandungi nilai yang sah atau nilai negara/rantau yang disokong tidak akan diperkaya.
 
 1.  Petakan medan alamat daripada entiti pelanggan disatukan anda.
 
@@ -98,6 +98,6 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md), [ukur](measures.md) dan juga [eksport data](export-destinations.md) untuk menghantar pengalaman diperibadikan kepada pelanggan anda.
+Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

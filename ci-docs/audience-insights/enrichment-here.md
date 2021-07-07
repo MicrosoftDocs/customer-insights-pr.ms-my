@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896062"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305305"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Pengayaan profil pelanggan dengan HERE Technologies (pratonton)
 
@@ -24,7 +24,7 @@ HERE Technologies adalah syarikat platform lokasi yang menyediakan data dan perk
 
 Untuk mengkonfigurasi pengayaan HERE Technologies, prasyarat berikut mesti dipenuhi:
 
-- Anda mempunyai langganan HERE Technologies yang aktif. Untuk mendapatkan langganan, anda boleh [daftar di sini](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) atau [hubungi HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) secara terus. [Ketahui lebih lanjut tentang Pengayaan Lokasi HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- Anda mempunyai langganan HERE Technologies yang aktif. Untuk mendapatkan langganan, anda boleh [mendaftar di sini](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) atau [hubungi HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) secara terus. [Ketahui lebih lanjut tentang Pengayaan Lokasi HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
 - [Sambungan](connections.md) HERE tersedia *atau* anda mempunyai keizinan [pentadbir](permissions.md#administrator) dan kekunci API HERE Technologies.
 
@@ -37,7 +37,7 @@ Untuk mengkonfigurasi pengayaan HERE Technologies, prasyarat berikut mesti dipen
    > [!div class="mx-imgBorder"]
    > ![Jubin HERE Technologies](media/HERE-tile.png "Jubin HERE Technologies")
 
-1. Pilih [sambungan](connections.md) daripada menu juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan**. Pilih **HERE Technologies** dari menu juntai bawah. 
+1. Pilih [sambungan](connections.md) daripada senarai juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan**. Pilih **HERE Technologies** daripada senarai juntai bawah. 
 
 1. Pilih **Sambung ke HERE Technologies** untuk mengesahkan pilihan.
 
@@ -66,13 +66,13 @@ Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah 
 
 1. Sediakan kekunci API HERE Technologies yang sah.
 
-1. Semak dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
+1. Semak dan berikan persetujuan anda untuk **privasi dan pematuhan Data** dengan memilih **Saya bersetuju**.
 
 1. Pilih **Sahkan** untuk mengesahkan konfigurasi.
 
 1. Selepas melengkapkan pengesahan, pilih **Simpan**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Halaman konfigurasi sambungan HERE Technologies](media/enrichment-HERE-connection.png "Halaman konfigurasi sambungan HERE Technologies")
 
 ## <a name="enrichment-results"></a>Keputusan pengayaan
@@ -85,7 +85,7 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md), [ukur](measures.md) dan juga [eksport data](export-destinations.md) untuk menghantar pengalaman diperibadikan kepada pelanggan anda.
+Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

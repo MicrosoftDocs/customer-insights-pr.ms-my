@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866418"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304937"
 ---
 # <a name="customer-activities"></a>Aktiviti pelanggan
 
@@ -45,7 +45,7 @@ Sumber data anda boleh termasuk entiti dengan data transaksi dan aktiviti daripa
 
    - **Pertama**: Medan asing dalam entiti aktiviti anda yang akan digunakan untuk mewujudkan perhubungan dengan entiti lain.
    - **Kedua**: Entiti pelanggan sumber yang sepadan dengan entiti aktiviti anda yang akan berada dalam perhubungan. Anda hanya boleh dikaitkan dengan entiti pelanggan sumber yang digunakan dalam proses penyatuan data.
-   - **Ketiga**: Jika perhubungan antara entiti aktiviti ini dan entiti pelanggan sumber yang dipilih telah wujud, nama perhubungan akan berada dalam mod baca sahaja. Jika tiada perhubungan sedemikian wujud, perhubungan baharu akan dicipta dengan nama yang anda berikan dalam kotak ini.
+   - **Ketiga**: Jika perhubungan antara entiti aktiviti ini dan entiti pelanggan sumber yang dipilih telah wujud, nama perhubungan akan berada dalam mod baca sahaja. Jika tiada hubungan sedemikian wujud, hubungan baharu akan dicipta dengan nama yang anda berikan dalam kotak ini.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Takrifkan perhubungan entiti.":::
 
@@ -53,23 +53,23 @@ Sumber data anda boleh termasuk entiti dengan data transaksi dan aktiviti daripa
 
 1. Dalam langkah **Penyatuan aktiviti**, pilih peristiwa aktiviti dan masa mula aktiviti anda. 
    - **Medan diperlukan**
-      1. **Aktiviti peristiwa**: Medan untuk peristiwa bagi aktiviti ini
-      2. **Cap waktu**: Medan yang mewakili masa mula aktiviti anda.
+      - **Aktiviti peristiwa**: Medan untuk peristiwa bagi aktiviti ini.
+      - **Cap waktu**: Medan yang mewakili masa mula aktiviti anda.
 
    - **Medan pilihan**
-      1. **Butiran tambahan**: Medan dengan maklumat berkaitan untuk aktiviti ini.
-      2. **Ikon**: Ikon yang terbaik mewakili jenis aktiviti ini.
-      3. **Alamat web**: Medan yang mengandungi URL dengan maklumat tentang aktiviti ini. Contohnya, sistem transaksi yang memberi sumber untuk aktiviti ini. URL ini boleh menjadi mana-mana medan daripada sumber data atau ia boleh dibina sebagai medan baharu menggunakan perubahan Pertanyaan Kuasa. Data URL akan disimpan dalam entiti *Aktiviti yang Disatukan* yang boleh digunakan secara hiliran menggunakan [API](apis.md).
+      - **Butiran tambahan**: Medan dengan maklumat berkaitan untuk aktiviti ini.
+      - **Ikon**: Ikon yang terbaik mewakili jenis aktiviti ini.
+      - **Alamat web**: Medan yang mengandungi URL dengan maklumat tentang aktiviti ini. Contohnya, sistem transaksi yang memberi sumber untuk aktiviti ini. URL ini boleh menjadi mana-mana medan daripada sumber data atau ia boleh dibina sebagai medan baharu menggunakan perubahan Pertanyaan Kuasa. Data URL akan disimpan dalam entiti *Aktiviti yang Disatukan* yang boleh digunakan secara hiliran menggunakan [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Tentukan data aktiviti pelanggan dalam entiti Aktiviti yang Disatukan.":::
 
 1. Pilih **Seterusnya** untuk beralih ke langkah yang seterusnya. Anda boleh memilih **Selesai dan semak** untuk menyimpan aktiviti sekarang dengan jenis aktiviti yang ditetapkan kepada **Lain-lain**. 
 
-1. Dalam langkah **Jenis Aktiviti**, pilih jenis aktiviti dan secara pilihan, pilih jika anda mahu memetakan secara semantik sebahagian daripada jenis aktiviti untuk digunakan dalam bahagian lain dalam Customer Insights. Pada masa ini, jenis aktiviti *Langganan* & *SalesOrderLine* boleh dipetakan secara semantik selepas bersetuju untuk memetakan petak. Jika jenis aktiviti tidak berkaitan dengan aktiviti baharu, anda boleh memilih *Lain-lain* atau *Cipta baharu* untuk jenis aktiviti yang tersuai.
+1. Dalam langkah **Jenis Aktiviti**, pilih jenis aktiviti dan secara pilihan, pilih jika anda mahu memetakan secara semantik sebahagian daripada jenis aktiviti untuk digunakan dalam bahagian lain dalam Customer Insights. Pada masa ini, aktiviti *Langganan* dan *SalesOrderLine* boleh dipetakan secara semantik selepas bersetuju untuk memetakan medan. Jika jenis aktiviti tidak berkaitan dengan aktiviti baharu, anda boleh memilih *Lain-lain* atau *Cipta baharu* untuk jenis aktiviti yang tersuai.
 
 1. Pilih **Seterusnya** untuk beralih ke langkah yang seterusnya. 
 
-1. Dalam langkah **Semak**, sahkan pilihan anda. Anda kembali ke mana-mana langkah sebelumnya dan mengemas kini maklumat jika perlu.
+1. Dalam langkah **Semak**, sahkan pilihan anda. Kembali ke mana-mana langkah sebelumnya dan kemas kini maklumat jika perlu.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Semak medan khusus untuk aktiviti.":::
    
@@ -89,7 +89,7 @@ Tindakan berikut tersedia apabila anda memilih aktiviti.
 
 - **Edit**: Buka persediaan aktiviti pada langkah tinjauan. Anda boleh mengubah sebarang atau semua konfigurasi semasa daripada langkah ini. Selepas mengubah konfigurasi, pilih **Simpan aktiviti** dan kemudian pilih **Jalankan** untuk memproses perubahan.
 
-- **Namakan semula**: Buka dialog di tempat untuk memasukkan nama lain untuk aktiviti yang dipilih. Pilih **Simpan** untuk menggunakan perubahan anda.
+- **Namakan semula**: Buka dialog untuk anda memasukkan nama lain bagi aktiviti yang dipilih. Pilih **Simpan** untuk menggunakan perubahan anda.
 
 - **Padam**: Buka dialog untuk mengesahkan pemadaman aktiviti yang dipilih. Anda juga boleh memadamkan lebih daripada satu aktiviti sekaligus dengan memilih aktiviti dan kemudian memilih ikon padam. Pilih **Padam** untuk mengesahkan pemadaman.
 

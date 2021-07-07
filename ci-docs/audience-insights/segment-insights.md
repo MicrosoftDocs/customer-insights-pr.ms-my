@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595345"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306085"
 ---
 # <a name="segment-insights-preview"></a>Wawasan segmen (pratonton)
 
@@ -50,7 +50,7 @@ Pilih wawasan untuk melihat hasil analisis:
 
 - Bilangan ahli bertindih segmen yang dipilih untuk analisis.
 - Bilangan ahli yang termasuk dalam salah satu segmen tetapi tidak berada dalam segmen yang lain.
-- Jika anda memilih medan semasa mengkonfigurasikan analisis bertindih, anda akan dapati mereka dalam tab yang berkaitan. Anda boleh menggunakan juntai bawah penapis untuk memilih sebarang tahap atribut kepentingan dan jadual di bahagian bawah akan menunjukkan data yang berkaitan.
+- Jika anda memilih medan semasa mengkonfigurasikan analisis bertindih, anda akan dapati mereka dalam tab yang berkaitan. Anda boleh menggunakan penapis juntai bawah untuk memilih mana-mana tahap atribut kepentingan dan jadual di bahagian bawah akan menunjukkan data yang sepadan.
 
 ## <a name="segment-differentiators"></a>Pembezaan bahagian
 

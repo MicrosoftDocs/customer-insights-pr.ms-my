@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253051"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305489"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
 Halaman **Eksport** menunjukkan semua eksport yang dikonfigurasikan. Eksport berkongsi data tertentu dengan pelbagai aplikasi. Ia termasuk profil pelanggan atau entiti, skema, dan butiran pemetaan. Setiap eksport memerlukan [sambungan, yang disediakan oleh pentadbir, untuk menguruskan pengesahan dan akses](connections.md).
 
-Pergi ke **Data** > **Eksport** untuk melihat halaman eksport. Semua peranan pengguna mempunyai akses untuk melihat eksport yang dikonfigurasikan. Penggunaan medan carian dalam bar perintah untuk mencari eksport dengan nama, nama sambungan atau jenis sambungan mereka.
+Pergi ke **Data** > **Eksport** untuk melihat halaman eksport. Semua peranan pengguna boleh melihat eksport yang dikonfigurasikan. Gunakan medan carian dalam bar perintah untuk mencari eksport mengikut nama, nama sambungan atau jenis sambungan.
 
 ## <a name="set-up-a-new-export"></a>Sediakan eksport baharu
 
@@ -65,7 +65,7 @@ Selepas mencipta destinasi eksport, ia disenaraikan dalam **Data** > **Eksport**
 
 1. Pergi ke **Data** > **Eksport**.
 
-1. Pengguna tanpa keizinan edit, pilih **Lihat** dan bukannya **Edit**. Lihat butiran eksport.
+1. Pengguna tanpa keizinan mengedit, pilih **Lihat** dan bukannya **Edit** untuk melihat butiran eksport.
 
 1. Anak tetingkap sisi menunjukkan konfigurasi eksport. Tanpa keizinan edit, anda tidak boleh mengubah nilai. Pilih **Tutup** untuk kembali ke halaman eksport.
 
@@ -73,7 +73,7 @@ Selepas mencipta destinasi eksport, ia disenaraikan dalam **Data** > **Eksport**
 
 Setiap eksport yang dikonfigurasikan mempunyai jadual segar semula. Semasa segar semula, sistem mencari data baharu atau yang dikemas kini untuk disertakan dalam eksport. Secara lalai, eksport dijalankan sebagai sebahagian daripada setiap [segar semula sistem yang dijadualkan](system.md#schedule-tab). Anda boleh menyesuaikan jadual segar semula atau mematikan proses itu untuk menjalankan eksport secara manual.
 
-Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini pada [kebergantungan](system.md#refresh-policies) yang sedang berjalan apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kebergantungan terlebih dahulu dan kemudian menjalankan eksport. Anda boleh melihat masa eksport disegarkan semula buat kali terakhir dalam lajur **Disegar semula**.
+Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-policies) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Anda boleh melihat masa eksport disegarkan semula buat kali terakhir dalam lajur **Disegar semula**.
 
 ### <a name="schedule-exports"></a>Jadualkan eksport
 

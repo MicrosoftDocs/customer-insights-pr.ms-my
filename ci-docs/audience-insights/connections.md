@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896108"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304983"
 ---
 # <a name="connections-preview-overview"></a>Gambaran keseluruhan sambungan (pratonton)
 
@@ -42,7 +42,7 @@ Untuk menambah sambungan, anda perlu mempunyai [keizinan pentadbir](permissions.
 
 1. Pergi ke tab **Sambungan**.
 
-1. Pilih **Tambah sambungan** untuk mencipta sambungan baharu. Pilih daripada menu juntai bawah untuk jenis sambungan yang anda mahu cipta.
+1. Pilih **Tambah sambungan** untuk mencipta sambungan baharu. Pilih daripada menu juntai bawah jenis sambungan yang mahu anda cipta.
 
 1. Dalam anak tetingkap **Sediakan sambungan**, berikan butiran yang diperlukan. 
    1. **Nama paparan** dan jenis sambungan yang menerangkan sambungan. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan ini.
@@ -74,7 +74,9 @@ Apabila menyediakan atau mengedit sambungan eksport, anda memilih pengguna yang 
 
 ## <a name="remove-a-connection"></a>Alih keluar sambungan
 
-Jika sambungan yang anda keluarkan digunakan oleh pengayaan atau eksport, anda perlu mengalih atau mengalihnya keluar. Dialog yang dialih keluar akan membimbing anda kepada pengayaan atau eksport yang berkaitan. Pengayaan dan eksport yang dialih menjadi tidak aktif. Anda mengaktifkan semula dengan menambah sambungan lain kepadanya pada halaman [Pengayaan](enrichment-hub.md) atau [Eksport](export-destinations.md).
+Jika sambungan yang anda keluarkan digunakan oleh pengayaan atau eksport, anda perlu mengalih atau mengalihnya keluar. Dialog yang dialih keluar akan membimbing anda kepada pengayaan atau eksport yang berkaitan. 
+
+Pengayaan dan eksport yang dialih menjadi tidak aktif. Anda mengaktifkan semula dengan menambah sambungan lain kepadanya pada halaman [Pengayaan](enrichment-hub.md) atau [Eksport](export-destinations.md).
 
 1. Pergi ke **Pentadbir** > **Sambungan (pratonton)**.
 

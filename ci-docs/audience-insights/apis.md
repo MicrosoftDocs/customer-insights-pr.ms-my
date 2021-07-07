@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016631"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304753"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
 Dynamics 365 Customer Insights menyediakan API untuk membina aplikasi anda sendiri berdasarkan data anda dalam Customer Insights.
 
 > [!IMPORTANT]
-> Butiran API ini, disenaraikan pada [rujukan Customer Insights API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Ia termasuk maklumat tambahan mengenai operasi, parameter dan respons.
+> Butiran API ini, disenaraikan pada [rujukan API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Ia termasuk maklumat tambahan mengenai operasi, parameter dan respons.
 
-Artikel ini membimbing anda untuk mengakses Customer Insights API, mencipta Pendaftaran Aplikasi Azure dan membantu anda bermula dengan pustaka klien yang tersedia.
+Artikel ini menerangkan cara mengakses API Customer Insights, mencipta Pendaftaran Aplikasi Azure dan bermula dengan pustaka klien yang tersedia.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Mula mencuba Customer Insights API
 
@@ -32,6 +32,7 @@ Artikel ini membimbing anda untuk mengakses Customer Insights API, mencipta Pend
 1. Untuk mendayakan API pada persekitaran Customer Insights anda, pergi ke **Pentadbir** > **Keizinan**. Anda memerlukan keizinan pentadbir untuk berbuat demikian.
 
 1. Pergi ke tab **API** dan pilih butang **Daya**.    
+ 
    Mendayakan API mencipta kunci langganan utama dan sekunder untuk tika anda yang akan digunakan dalam permintaan API. Anda boleh menjana semula kunci dengan memilih **Jana semula utama** atau **Jana semula sekunder** pada **Pentadbir** > **Keizinan** > **API**.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Dayakan Customer Insights API":::
@@ -40,7 +41,7 @@ Artikel ini membimbing anda untuk mengakses Customer Insights API, mencipta Pend
 
 1. Pilih operasi API dan pilih **Cuba**.
 
-1. Dalam anak tetingkap sisi, tetapkan nilai dalam menu juntai bawah **Pengesahan** untuk **tersirat**. Pengepala `Authorization` mendapat dengan token pembawa yang ditambah. Kunci langganan anda akan diisi secara automatik.
+1. Dalam anak tetingkap sisi, tetapkan nilai dalam menu juntai bawah **Kebenaran** untuk **tersirat**. Pengepala `Authorization` akan ditambahkan dengan token pembawa. Kunci langganan anda akan diisi secara automatik.
   
 1. Secara alternatif, tambah semua parameter pertanyaan yang perlu.
 
@@ -48,27 +49,27 @@ Artikel ini membimbing anda untuk mengakses Customer Insights API, mencipta Pend
 
 Respons HTTP tidak lama lagi akan muncul di bawah.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="Gif animasi menunjukkan cara memilih ujian API.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="Cara menguji API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Cipta pendaftaran aplikasi baharu dalam portal Azure
 
-Langkah ini membantu anda mula menggunakan Customer Insights API dalam aplikasi Azure menggunakan keizinan yang diwakilkan. Pastikan untuk melengkapkan [bahagian Bermula](#get-started-trying-the-customer-insights-apis) terlebih dahulu.
+Langkah-langkah ini membantu anda bermula dengan menggunakan API Customer Insights dalam aplikasi Azure menggunakan keizinan yang ditugaskan. Pastikan untuk melengkapkan [bahagian Bermula](#get-started-trying-the-customer-insights-apis) terlebih dahulu.
 
 1. Daftar masuk ke [portal Azure](https://portal.azure.com) dengan akaun yang boleh mengakses data Customer Insights.
 
 1. Di sebelah kiri, pilih **Pendaftaran aplikasi**.
 
 1. Pilih **Pendaftaran baharu**, berikan nama aplikasi dan pilih jenis akaun.
+ 
    Secara alternatif, tambah URL hala semula. http://localhost adalah mencukupi untuk membangunkan aplikasi pada komputer tempatan anda.
 
 1. Pada pendaftaran Aplikasi baharu anda, pergi ke **Keizinan API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animasi untuk menetapkan keizinan API dalam pendaftaran aplikasi.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Cara menetapkan keizinan API dalam pendaftaran Aplikasi.":::
 
 1. Pilih **Tambah keizinan** dan pilih **Customer Insights** dalam tetingkap sisi.
 
-1. Untuk **Jenis keizinan**, pilih **Keizinan yang diwakilkan** dan pilih keizinan **user_impersonation**.
+1. Untuk **Jenis keizinan**, pilih **Keizinan yang ditugaskan** dan kemudian pilih keizinan **user_impersonation**.
 
 1. Pilih **Tambah keizinan**. Jika anda perlu mengakses API tanpa mendaftar masuk pengguna, semak bahagian [Keizinan aplikasi pelayan ke pelayan](#server-to-server-application-permissions).
 
@@ -76,13 +77,13 @@ Langkah ini membantu anda mula menggunakan Customer Insights API dalam aplikasi 
 
 Anda boleh menggunakan Aplikasi/ID Klien untuk pendaftaran aplikasi ini dengan Pustaka Pengesahan Microsoft (MSAL) untuk mendapatkan token pembawa untuk menghantar dengan permintaan anda kepada API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animasi untuk memberi persetujuan pentadbir.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan pentadbir.":::
 
 Untuk mendapatkan maklumat lanjut tentang MSAL, lihat [Gambaran Keseluruhan Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Untuk mendapatkan maklumat lanjut tentang pendaftaran aplikasi dalam Azure, lihat [Pengalaman pendaftaran aplikasi portal Azure yang baharu](/azure/active-directory/develop/app-registration-portal-training-guide).
+Untuk mendapatkan maklumat lanjut tentang pendaftaran aplikasi dalam Azure, lihat [Daftar aplikasi](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pustaka klien Customer Insights](#customer-insights-client-libraries).
+Untuk mendapatkan maklumat tentang penggunaan API dalam pustaka klien kami, lihat [Pustaka klien Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Keizinan aplikasi pelayan ke pelayan
 
@@ -94,7 +95,7 @@ Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pu
 
 1. Pilih tab **API organisasi saya menggunakan** dan pilih **Dynamics 365 AI untuk Customer Insights** daripada senarai. 
 
-1. Untuk **Jenis keizinan**, pilih **Keizinan aplikasi** dan pilih keizinan **CustomerInsights.Api.All**.
+1. Untuk **Jenis keizinan**, pilih **Keizinan aplikasi** dan kemudian pilih keizinan **CustomerInsights.Api.All**.
 
 1. Pilih **Tambah keizinan**.
 
@@ -102,9 +103,10 @@ Untuk mendapatkan maklumat mengenai penggunaan API pustaka klien kami, lihat [Pu
 
 1. Pilih **Berikan keizinan pentadbir untuk...** untuk melengkapkan pendaftaran aplikasi.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Gif animasi untuk memberi persetujuan pentadbir.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan pentadbir.":::
 
-1. Untuk menyimpulkan, kami perlu menambah nama pendaftaran aplikasi sebagai pengguna dalam Customer Insights.    
+1. Untuk menyimpulkan, kami perlu menambah nama pendaftaran aplikasi sebagai pengguna dalam Customer Insights.  
+   
    Buka Customer Insights, pergi ke **Pentadbir** > **Keizinan** dan pilih **Tambah pengguna**.
 
 1. Cari nama pendaftaran aplikasi anda, pilih nama daripada hasil carian dan pilih **Simpan**.
@@ -124,6 +126,7 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
 1. Cari **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Pilih **Pasang** untuk menambah pakej ke projek.
+ 
    Secara alternatif, jalankan perintah ini dalam **Konsol Pengurus Pakej NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambah pakej NuGet ke projek Visual Studio":::
@@ -132,16 +135,18 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
 
 1. Gunakan [Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) untuk memperoleh `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) anda yang sedia ada.
 
-1. Selepas berjaya mengesahkan dan memperolehi token, bina `HttpClient` yang baharu atau gunakan yang sedia ada dengan **"Pengesahan" DefaultRequestHeaders** tambahan ditetapkan kepada **<access token> Pembawa** dan **Ocp-Apim-Subscription-Key** ditetapkan kepada [**kunci langganan** daripada persekitaran Customer Insights anda](#get-started-trying-the-customer-insights-apis).    
+1. Selepas berjaya mengesahkan dan memperolehi token, bina `HttpClient` yang baharu atau gunakan yang sedia ada dengan **"Pengesahan" DefaultRequestHeaders** tambahan ditetapkan kepada **<access token> Pembawa** dan **Ocp-Apim-Subscription-Key** ditetapkan kepada [**kunci langganan** daripada persekitaran Customer Insights anda](#get-started-trying-the-customer-insights-apis).   
+ 
    Tetapkan semula pengepala **Pengesahan** apabila sesuai. Contohnya, apabila token tamat tempoh.
 
 1. Hantar `HttpClient` ini ke dalam pembinaan klien `CustomerInsights`.
 
    :::image type="content" source="media/httpclient-sample.png" alt-text="Sampel httpclient":::
 
-1. Buat panggilan dengan klien ke "kaedah lanjutan", contohnya, `GetAllInstancesAsync`. Jika akses kepada `Microsoft.Rest.HttpOperationResponse` dasar diutamakan, gunakan "kaedah mesej http", contohnya, `GetAllInstancesWithHttpMessagesAsync`.
+1. Buat panggilan dengan klien pada "kaedah lanjutan"—contohnya, `GetAllInstancesAsync`. Jika akses kepada dasar `Microsoft.Rest.HttpOperationResponse` diutamakan, gunakan "kaedah mesej http"—contohnya, `GetAllInstancesWithHttpMessagesAsync`.
 
 1. Respons mungkin akan menjadi jenis `object` kerana kaedah boleh kembali pelbagai jenis (contohnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk menyemak jenis pengembalian, anda boleh menyiarkan objek dengan selamat ke dalam jenis respons yang ditentukan pada [halaman butiran API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) untuk operasi tersebut.    
+   
    Jika maklumat lanjut mengenai permintaan diperlukan, gunakan **kaedah mesej http** untuk mengakses objek respons mentah.
 
 ### <a name="nodejs-package"></a>Pakej NodeJS

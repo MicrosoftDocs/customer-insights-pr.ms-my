@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595437"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306131"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan transaksi (pratonton)
 
-Panduan ini akan menerangkan kepada anda contoh menyeluruh ramalan Pulangan Transaksi dalam Customer Insights menggunakan data yang disediakan di bawah. Semua data yang digunakan dalam panduan ini bukan data pelanggan sebenar dan merupakan sebahagian daripada set data Contoso yang ditemui dalam persekitaran *Demo* dalam Langganan Customer Insights anda.
+Panduan ini akan menerangkan kepada anda contoh menyeluruh ramalan Pulangan Transaksi dalam Customer Insights menggunakan data yang disediakan di bawah. Semua data yang digunakan dalam panduan ini bukan data pelanggan sebenar dan merupakan sebahagian daripada set data Contoso yang terdapat dalam persekitaran *Demo* dalam Langganan Customer Insights anda.
 
 ## <a name="scenario"></a>Senario
 
-Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang mereka jual melalui laman web Contoso Coffee mereka. Matlamat mereka adalah untuk mengetahui pelanggan yang biasanya membeli produk mereka secara tetap, akan berhenti menjadi pelanggan aktif dalam masa 60 hari akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
+Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang menjual melalui laman web Contoso Coffee mereka. Matlamat mereka adalah untuk mengetahui pelanggan yang biasanya membeli produk mereka secara tetap, akan berhenti menjadi pelanggan aktif dalam masa 60 hari akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -109,9 +109,9 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
 
-1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : e-Dagang** sebagai sumber utama dan menyertakan semua rekod.
+1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
 
-1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan menyertakan semua rekod.
+1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Menyatukan padanan e-Dagang dan Kesetiaan.":::
 
@@ -119,16 +119,16 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Tambah syarat pertama anda menggunakan FullName.
 
-   * Untuk eCommerceContacts pilih **FullName** dalam senarai juntai bawah.
-   * Untuk loyCustomers, pilih **FullName** dalam senarai juntai bawah.
+   * Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
+   * Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
    * Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
    * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
 1. Masukkan nama **FullName, Email** untuk peraturan baharu.
 
    * Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   * Untuk entiti eCommerceContacts, pilih **EMail** dalam senarai juntai bawah.
-   * Untuk entiti loyCustomers, pilih **EMail** dalam senarai juntai bawah. 
+   * Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
+   * Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah. 
    * Biarkan Menormalkan kosong. 
    * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 

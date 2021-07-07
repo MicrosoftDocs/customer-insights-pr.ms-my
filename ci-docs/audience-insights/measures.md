@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049261"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304811"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
-Langkah ini membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan. Mereka melihat nilai yang relevan daripada [profil disatukan](data-unification.md). Contohnya, perniagaan mahu melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu atau mengukur *jumlah jualan syarikat* untuk memahami perolehan peringkat agregat dalam perniagaan keseluruhan.  
+Langkah ini membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan. Mereka melihat nilai yang relevan daripada [profil disatukan](data-unification.md). Contohnya, perniagaan ingin melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu atau mengukur *jumlah jualan syarikat* untuk memahami hasil peringkat agregat dalam keseluruhan perniagaan.  
 
 Ukuran dicipta menggunakan pembina ukuran, platform pertanyaan data dengan pelbagai pengendali dan pilihan pemetaan yang mudah. Ia membolehkan anda menapis data, mengumpulkan hasil, mengesan [laluan perhubungan entiti](relationships.md) dan pratonton output.
 
@@ -34,9 +34,9 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 1. Pilih **Edit nama** dan berikan **Nama** untuk langkah itu. 
    > [!NOTE]
-   > Jika konfigurasi ukuran baharu anda hanya mempunyai dua medan, contohnya CustomerID dan satu pengiraan, output akan ditambah sebagai lajur baharu ke entiti yang dijana sistem dipanggil Customer_Measure. Dan anda akan dapat melihat nilai ukuran dalam profil pelanggan disatukan. Ukuran lain akan menjana entiti mereka sendiri.
+   > Jika konfigurasi ukuran baharu anda hanya mempunyai dua medan—contohnya, CustomerID dan satu pengiraan—output akan ditambahkan sebagai lajur baharu pada entiti dijana sistem yang dipanggil Customer_Measure. Dan anda akan dapat melihat nilai ukuran dalam profil pelanggan disatukan. Ukuran lain akan menjana entiti mereka sendiri.
 
-1. Dalam kawasan konfigurasi, pilih fungsi pengagregatan daripada menu ke bawah **Pilih Fungsi**. Fungsi pengagregatan termasuk: 
+1. Dalam kawasan konfigurasi, pilih fungsi pengagregatan daripada menu juntai bawah **Pilih Fungsi**. Fungsi pengagregatan termasuk: 
    - **Sum**
    - **Purata**
    - **Bilangan**
@@ -64,17 +64,19 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 1. Untuk menambah penapis, pilih **Penapis** dalam kawasan konfigurasi. 
   
-   1. Dalam bahagian **Tambah atribut** bagi anak tetingkap **Penapis**, pilih atribut yang anda mahu gunakan untuk mencipta penapis.
+   1. Dalam bahagian **Tambah atribut** anak tetingkap **Penapis**, pilih atribut yang mahu anda gunakan untuk mencipta penapis.
    1. Tetapkan operator penapis untuk mentakrifkan penapis bagi setiap atribut yang dipilih.
    1. Pilih **Gunakan** untuk menambah penapis terpilih pada ukuran.
 
 1. Untuk menambah dimensi pilih **Dimensi** dalam kawasan konfigurasi. Dimensi akan ditunjukkan sebagai lajur dalam mengukur entiti output.
+ 
    1. Pilih **Edit dimensi** untuk menambah atribut data yang anda mahu kumpulkan nilai ukuran. Sebagai contoh, bandar atau jantina. Secara lalai, dimensi *CustomerID* dipilih untuk mencipta *ukuran peringkat pelanggan*. Anda boleh mengalih keluar dimensi lalai jika anda mahu mencipta *ukuran peringkat perniagaan*.
    1. Pilih **Selesai** untuk menambah dimensi pada ukuran.
 
-1. Jika terdapat nilai dalam data anda yang anda perlu gantikan dengan integer, contohnya, gantikan *nol* dengan *0*, pilih **Peraturan**. Konfigurasikan peraturan dan pastikan anda memilih hanya nombor keseluruhan sebagai pengganti.
+1. Jika terdapat nilai dalam data anda yang perlu anda gantikan dengan integer—contohnya, gantikan *nol* dengan *0*—pilih **Peraturan**. Konfigurasikan peraturan dan pastikan anda memilih hanya nombor keseluruhan sebagai pengganti.
 
 1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dengan entiti *Pelanggan*, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih. 
+   
    1. Pilih **Keutamaan data** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti langkah anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
    1. Pilih **Selesai** untuk menggunakan pilihan anda. 
 
@@ -113,7 +115,7 @@ Prosedur berikut menggariskan langkah untuk membina langkah baharu menggunakan t
 
 1. Pilih **Baharu** dan pilih **Pilih templat**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Tangkapan skrin menu juntai bawah apabila mencipta langkah baharu dengan serlahan pada templat.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Syot layar menu juntai bawah apabila mencipta ukuran baharu dengan serlahkan pada templat.":::
 
 1. Cari templat yang sesuai dengan keperluan anda dan pilih **Pilih templat**.
 
@@ -123,7 +125,7 @@ Prosedur berikut menggariskan langkah untuk membina langkah baharu menggunakan t
 
 1. Pilih **Selesai**.
 
-1. Dalam bahagian **Tetapkan tempoh masa**, takrifkan tempoh masa data untuk digunakan. Pilih jika anda mahu langkah baharu meliputi seluruh data yang ditetapkan dengan memilih **Semua masa**. Atau jika anda mahu langkah itu menumpukan pada **Tempoh masa tertentu**.
+1. Dalam bahagian **Tetapkan tempoh masa**, takrifkan tempoh masa data untuk digunakan. Pilih jika anda mahu ukuran baharu untuk merangkumi keseluruhan set data dengan memilih **Sepanjang masa**, atau jika anda mahu ukuran itu memberikan tumpuan kepada **Tempoh masa tertentu**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Tangkapan skrin menunjukkan bahagian tempoh masa apabila mengkonfigurasikan langkah daripada templat.":::
 
@@ -142,12 +144,12 @@ Prosedur berikut menggariskan langkah untuk membina langkah baharu menggunakan t
 
 Anda boleh mendapatkan senarai langkah pada halaman **Langkah**.
 
-Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh penciptaan, status dan keadaan. Apabila anda memilih ukuran daripada senarai, anda boleh pratonton output dan muat turun fail .CSV.
+Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh penciptaan, status dan keadaan. Apabila anda memilih ukuran daripada senarai, anda boleh pratonton output dan memuat turun fail CSV.
 
 Untuk menyegarkan semula semua tindakan pada masa yang sama, pilih **Segar semula semua** tanpa memilih tindakan khusus.
 
 > [!div class="mx-imgBorder"]
-> ![Tindakan untuk mengurus langkah tunggal](media/measure-actions.png "Tindakan untuk mengurus langkah tunggal")
+> ![Tindakan untuk menguruskan langkah tunggal.](media/measure-actions.png "Tindakan untuk menguruskan langkah tunggal.")
 
 Pilih ukuran daripada senarai untuk pilihan berikut:
 
@@ -159,11 +161,11 @@ Pilih ukuran daripada senarai untuk pilihan berikut:
 - **Aktifkan** atau **Nyahaktifkan**. Langkah tidak aktif tidak akan dapat disegar semula semasa [segar semula yang dijadualkan](system.md#schedule-tab).
 
 > [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda akan menemukan maklumat tambahan: masa pemprosesan, tarikh pemprosesan terakhir serta semua ralat dan amaran yang berkaitan dengan tugas.
 
 ## <a name="next-step"></a>Langkah seterusnya
 
-Anda boleh menggunakan ukuran sedia ada untuk mencipta [segmen pelanggan](segments.md).
+Anda boleh menggunakan langkah sedia ada untuk mencipta [segmen pelanggan](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

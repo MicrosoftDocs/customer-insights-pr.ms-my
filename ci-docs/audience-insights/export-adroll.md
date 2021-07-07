@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124376"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304844"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Eksport segmen ke AdRoll (pratonton)
 
@@ -28,11 +28,11 @@ Eksport segmen profil pelanggan yang disatukan ke AdRoll dan gunakan segmen ters
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 250,000 profil bagi setiap eksport ke AdRoll.
+- Anda boleh mengeksport hingga 250,000 profil pada satu masa ke AdRoll.
 - Anda tidak boleh mengeksport segmen yang kurang daripada 100 profil ke AdRoll. 
 - Mengeksport ke AdRoll adalah terhad kepada segmen.
 - Mengeksport hingga 250,000 profil ke AdRoll mungkin mengambil masa hingga 10 minit untuk selesai. 
-- Bilangan profil yang boleh anda eksport ke AdRoll bergantung dan terhad pada kontrak anda dengan AdRoll.
+- Bilangan profil yang boleh anda eksport ke AdRoll bergantung pada kontrak anda dengan AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Sediakan sambungan ke AdRoll
 
@@ -62,9 +62,9 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian AdRoll. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian AdRoll. Jika anda tidak melihat nama bahagian ini, maka tiada sambungan jenis ini tersedia untuk anda.
 
-1. Masukkan **ID Pengiklan AdRoll**. Untuk mendapatkan maklumat lanjut, lihat [Profil Pengiklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Masukkan **ID Pengiklan AdRoll anda**. Untuk mendapatkan maklumat lanjut, lihat [Profil Pengiklan AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke AdRoll.
 
@@ -74,7 +74,9 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). 
+
+Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan

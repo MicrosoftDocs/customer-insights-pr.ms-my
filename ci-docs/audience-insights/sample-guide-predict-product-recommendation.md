@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129910"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306177"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel untuk ramalan pengesyoran produk (pratonton)
 
@@ -105,9 +105,9 @@ Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencip
 
 1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
 
-2. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : e-Dagang** sebagai sumber utama dan menyertakan semua rekod.
+2. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
 
-3. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan menyertakan semua rekod.
+3. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
 
    ![Menyatukan padanan e-Dagang dan Kesetiaan.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencip
 
 5. Tambah syarat pertama anda menggunakan FullName.
 
-   - Untuk eCommerceContacts pilih **FullName** dalam senarai juntai bawah.
-   - Untuk loyCustomers, pilih **FullName** dalam senarai juntai bawah.
+   - Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
+   - Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
    - Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
    - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
 6. Masukkan nama **FullName, Email** untuk peraturan baharu.
 
    - Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   - Untuk entiti eCommerceContacts, pilih **EMail** dalam senarai juntai bawah.
-   - Untuk entiti loyCustomers, pilih **EMail** dalam senarai juntai bawah.
+   - Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
+   - Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah.
    - Biarkan Menormalkan kosong.
    - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 

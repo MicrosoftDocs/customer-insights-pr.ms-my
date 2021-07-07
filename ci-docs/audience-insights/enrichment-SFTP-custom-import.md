@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896292"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304661"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
 
-Import tersuai Protokol Pemindahan Fail Selamat (SFTP) membolehkan anda mengimport data yang tidak perlu melalui proses penyatuan data. Ia adalah cara yang fleksibel, selamat dan mudah untuk membawa masuk data anda. Import tersuai SFTP boleh digunakan dalam kombinasi dengan [Eksport SFTP](export-sftp.md) membolehkan anda mengeksport data profil pelanggan yang diperlukan untuk pengayaan. Data kemudian boleh diproses, diperkaya dan import tersuai SFTP boleh digunakan untuk membawa data yang diperkaya kembali kepada keupayaan wawasan khalayak Dynamics 365 Customer Insights.
+Import tersuai Protokol Pemindahan Fail Selamat (SFTP) mendayakan anda mengimport data yang tidak perlu melalui proses penyatuan data. Ia adalah cara yang fleksibel, selamat dan mudah untuk membawa masuk data anda. Import tersuai SFTP boleh digunakan dalam kombinasi dengan [Eksport SFTP](export-sftp.md) membolehkan anda mengeksport data profil pelanggan yang diperlukan untuk pengayaan. Data kemudiannya boleh diproses dan diperkaya, dan import SFTP tersuai boleh digunakan untuk membawa data yang diperkaya kembali kepada keupayaan cerapan khalayak Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -37,11 +37,11 @@ Untuk mengkonfigurasi import tersuai SFTP, prasyarat berikut mesti dipenuhi:
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Jubin import tersuai SFTP.":::
 
-1. Pilih [sambungan](connections.md) daripada menu juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih **Import Tersuai SFTP** daripada menu juntai bawah.
+1. Pilih [sambungan](connections.md) daripada senarai juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih **Import SFTP Tersuai** daripada senarai juntai bawah.
 
 1. Pilih **Sambung ke Import Tersuai** untuk mengesahkan sambungan yang dipilih.
 
-1.  Pilih **Seterusnya** dan masukkan **Nama Fail** dan **Laluan** dalam fail data yang anda mahu import.
+1.  Pilih **Seterusnya** dan masukkan **Laluan** dan **Nama fail** bagi fail data yang mahu diimport.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Tangkapan skrin semasa memasuki lokasi data.":::
 
@@ -55,21 +55,21 @@ Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah 
 
 1. Masukkan nama untuk sambungan dalam kotak **Nama paparan**.
 
-1. Masukkan nama pengguna, kata laluan dan hos URL yang sah untuk pelayan STFP data yang akan diimport tinggal.
+1. Masukkan nama pengguna, kata laluan dan hos URL yang sah untuk pelayan SFTP yang data akan diimport berada.
 
 1. Semak semula dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
 
 1. Pilih **Sahkan** untuk mengesahkan konfigurasi.
 
-1. Setelah pengesahan selesai, sambungan boleh disimpan dengan mengklik **Simpan**.
+1. Setelah pengesahan selesai, sambungan boleh disimpan dengan memilih **Simpan**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Halaman konfigurasi sambungan Experian](media/enrichment-SFTP-connection.png "Halaman konfigurasi sambungan Experian")
 
 
 ## <a name="defining-field-mappings"></a>Mentakrifkan pemetaan medan 
 
-Direktori yang mengandungi fail untuk diimport pada pelayan SFTP juga mesti mengandungi fail *model.json*. Fail ini mentakrifkan skema untuk digunakan bagi mengimport data. Skema perlu menggunakan [Model Data Tersuai](/common-data-model/) untuk menentukan pemetaan medan. Contoh mudah fail model.json kelihatan seperti ini:
+Direktori yang mengandungi fail untuk diimport pada pelayan SFTP juga mesti mengandungi fail *model.json*. Fail ini mentakrifkan skema untuk digunakan bagi mengimport data. Skema perlu menggunakan [Common Data Model](/common-data-model/) untuk menentukan pemetaan medan. Contoh mudah fail model.json kelihatan seperti ini:
 
 ```
 {
@@ -123,6 +123,6 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md), [ukuran](measures.md) dan [eksport data](export-destinations.md) untuk menyampaikan pengalaman diperibadikan kepada pelanggan anda.
+Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) serta [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

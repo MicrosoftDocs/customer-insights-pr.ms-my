@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896338"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304615"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -57,13 +57,13 @@ Pilih sebarang jubin pelanggan untuk membuka **halaman butiran pelanggan**. Pand
 
 Butiran pelanggan termasuk:
 
--   **Jubin profil pelanggan:** Jubin ini menunjukkan nilai berbeza daripada entiti profil pelanggan disatukan. Butiran ini boleh termasuk alamat e-mel, nama, bandar dan sebagainya. 
+-   **Jubin profil pelanggan:** Jubin ini menunjukkan nilai yang berbeza daripada entiti profil pelanggan disatukan. Butiran ini boleh termasuk alamat e-mel, nama, bandar dan sebagainya. 
 
--   **Kemungkinan minat, bakal jenama:** Menunjukkan jika anda mengkonfigurasi pengayaan pihak pertama. Ia mewakili kepentingan yang berkemungkinan dan afiniti untuk jenama pelanggan dengan profil yang serupa dengan pelanggan ini mungkin miliki. Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md).
+-   **Minat berpotensi, jenama berpotensi**: Menunjukkan jika anda mengkonfigurasikan pengayaan pihak pertama. Ia mewakili kepentingan yang berkemungkinan dan afiniti untuk jenama pelanggan dengan profil yang serupa dengan pelanggan ini mungkin miliki. Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md).
 
--   **Langkah:** Menunjukkan jika anda mengkonfigurasi satu atau lebih langkah daripada jenis khusus: langkah atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
+-   **Langkah**: Menunjukkan jika anda mengkonfigurasikan satu atau lebih langkah daripada jenis khusus: langkah atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
 
--   **Garis masa aktiviti:** Menunjukkan jika anda telah mengkonfigurasi aktiviti. Pandangan garis masa mengandungi aktiviti yang disusun secara kronologi pada pelanggan ini, bermula dengan aktiviti paling terkini. Untuk maklumat lanjut, lihat [Aktiviti pelanggan](activities.md).
+-   **Garis masa aktiviti**: Menunjukkan jika anda telah mengkonfigurasikan aktiviti. Pandangan garis masa mengandungi aktiviti yang disusun secara kronologi pada pelanggan ini, bermula dengan aktiviti paling terkini. Untuk maklumat lanjut, lihat [Aktiviti pelanggan](activities.md).
 
 Pilih **kembali ke Pelanggan** untuk kembali ke halaman carian pelanggan.
 

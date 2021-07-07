@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976329"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305351"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Eksport segmen ke Google ads (pratonton)
 
-Eksport segmen profil pelanggan disatukan ke senarai khalayak Google Ads dan gunakannya untuk mengiklan pada Google Search, Gmail, YouTube dan Google Display Network. 
+Eksport segmen profil pelanggan disatukan pada senarai khalayak Google Ads dan gunakan segmen itu untuk mengiklankan di Carian Google, Gmail YouTube dan Rangkaian Paparan Google. 
 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
 -   Anda mempunyai [Akaun Google Ads](https://ads.google.com/) dan kelayakan pentadbir yang berkaitan.
--   Anda mempunyai [token Pembangun Google ads yang diluluskan](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Anda memenuhi keperluan [Dasar Padanan Pelanggan](https://support.google.com/adspolicy/answer/6299717)
--   Anda memenuhi keperluan [saiz senarai pemasaran semula](https://support.google.com/google-ads/answer/7558048) 
-
+-   Anda mempunyai [token Pembangun Google Ads yang diluluskan](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Anda memenuhi keperluan [Dasar Padanan Pelanggan](https://support.google.com/adspolicy/answer/6299717).
+-   Anda memenuhi keperluan [saiz senarai pemasaran semula](https://support.google.com/google-ads/answer/7558048).
 -   Terdapat khalayak sedia ada dalam Google Ads dan ID yang berkaitan. Untuk maklumat lanjut, lihat [Khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Anda telah [mengkonfigurasi segmen](segments.md)
--   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel, nama pertama dan nama akhir
+-   Anda telah [mengkonfigurasi segmen](segments.md).
+-   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel, nama pertama dan nama akhir.
 
 ## <a name="known-limitations"></a>Had diketahui
 
@@ -68,17 +67,19 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Google Ads. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Google Ads. Jika anda tidak melihat nama bahagian ini, maka tiada sambungan jenis ini tersedia untuk anda.
 
 1. Masukkan **[ID khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** anda dan pilih **Sambung** untuk memulakan sambungan ke Google Ads.
 
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan **Nama pertama** and **Nama akhir**.
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulang langkah yang sama untuk medan **Nama pertama** dan **Nama akhir**.
 
 1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta profil pelanggan dalam jumlah keseluruhan Google ads.
 
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). 
+
+Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

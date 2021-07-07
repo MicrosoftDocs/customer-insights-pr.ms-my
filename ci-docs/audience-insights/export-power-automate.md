@@ -1,7 +1,7 @@
 ---
 title: Penyambung Power Automate | Microsoft Docs
 description: Cipta aliran dalam Microsoft Power Automate daripada Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 57be0a204ef920b7a4bb31cf9a5b3a77f96eca0d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976099"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305075"
 ---
 # <a name="power-automate-connector-preview"></a>Penyambung Power Automate (pratonton)
 
@@ -27,13 +27,14 @@ Gunakan pencetus untuk mencipta aliran awan dan mengautomasikan tugas berulang, 
 - Pencetus apabila muat semula sumber data gagal. 
 - Pencetus apabila muat semula sumber data berjaya.
 - Pencetus apabila ambang bersilang pada segmen. Pencetus dihadkan untuk melintas di atas ambang.
-- Pencetus apabila ambang bersilang pada ukuran perniagaan. Hanya ukuran perniagaan tanpa dimensi disokong. Pencetus dihadkan melintas di atas ambang.
-- Tercetus apabila segar semula penuh (sumber data, segmen, langkah,...) telah dilengkapkan.
+- Pencetus apabila ambang bersilang pada ukuran perniagaan. Hanya ukuran perniagaan tanpa dimensi disokong. Pencetus dihadkan untuk melintas di atas ambang.
+- Tercetus apabila segar semula penuh (sumber data, segmen, langkah,...) telah selesai.
 - Tercetus apabila segar semula proses penyatuan (peta, padan, cantum) selesai.
 
-[Konfigurasikan pencetus anda dalam Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Konfigurasikan pencetus anda dalam Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Power Automate tindakan
+
 Penyambung Power Automate menyediakan tindakan lain selain pencetus yang tersedia. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Cipta aliran Power Automate

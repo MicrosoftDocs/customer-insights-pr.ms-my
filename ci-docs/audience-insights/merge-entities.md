@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085587"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305660"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -34,7 +34,7 @@ Untuk melihat atribut yang disertakan dalam salah satu atribut yang digabungkan 
 
 Anda boleh mengubah cara sistem memproses atribut yang digabungkan untuk menjana profil pelanggan disatukan. Pilih **Tunjukkan lagi** dan pilih perkara yang anda mahu ubah.
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Pilihan dalam menu juntai bawah Tunjukkan lagi untuk mengurus atribut yang digabungkan.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Pilihan dalam menu Tunjukkan lagi juntai bawah untuk menguruskan atribut yang digabungkan.":::
 
 Untuk maklumat lanjut, lihat bahagian berikut.
 

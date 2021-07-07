@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129956"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306360"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Panduan sampel ramalan nilai sepanjang hayat pelanggan (CLV)
 
@@ -123,9 +123,9 @@ Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencip
 
 1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
 
-1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : e-Dagang** sebagai sumber utama dan menyertakan semua rekod.
+1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
 
-1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan menyertakan semua rekod.
+1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
 
    ![Menyatukan padanan e-Dagang dan Kesetiaan.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencip
 
 1. Tambah syarat pertama anda menggunakan FullName.
 
-   - Untuk eCommerceContacts pilih **FullName** dalam senarai juntai bawah.
-   - Untuk loyCustomers, pilih **FullName** dalam senarai juntai bawah.
-   - Pilih senarai juntai bawah **Normalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
+   - Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
+   - Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
+   - Pilih juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat,...)**.
    - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
 1. Masukkan nama **FullName, Email** untuk peraturan baharu.
 
    - Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   - Untuk entiti eCommerceContacts, pilih **EMail** dalam senarai juntai bawah.
-   - Untuk entiti loyCustomers, pilih **EMail** dalam senarai juntai bawah.
+   - Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
+   - Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah.
    - Biarkan Menormalkan kosong.
    - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 

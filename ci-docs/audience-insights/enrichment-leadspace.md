@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895924"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305213"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil syarikat dengan Leadspace (pratonton)
 
@@ -36,7 +36,7 @@ Untuk mengkonfigurasikan Leadspace, prasyarat yang berikut mesti dipenuhi:
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Petikan skrin jubin Leadspace.":::
 
-1. Pilih [sambungan](connections.md) daripada menu juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih **Leadspace**. 
+1. Pilih [sambungan](connections.md) daripada senarai juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih **Leadspace**. 
 
 1. Pilih **Sambung ke Leadspace** untuk mengesahkan sambungan.
 
@@ -57,13 +57,13 @@ Untuk mengkonfigurasikan Leadspace, prasyarat yang berikut mesti dipenuhi:
 
 Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah sambungan** apabila mengkonfigurasikan pengayaan *atau* pergi ke **Pentadbir** > **Sambungan** dan pilih **Sediakan** pada jubin Leadspace.
 
-1. Pilih **Mari Bermula** 
+1. Pilih **Mulakan**. 
 
 1. Masukkan nama untuk sambungan dalam kotak **Nama paparan**.
 
 1. Berikan token Leadspace yang sah.
 
-1. Semak dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**.
+1. Semak dan berikan persetujuan anda untuk **privasi dan pematuhan Data** dengan memilih **Saya bersetuju**.
 
 1. Pilih **Sahkan** untuk mengesahkan konfigurasi.
 
@@ -81,7 +81,7 @@ Untuk maklumat lanjut, lihat [API Leadspace](https://support.leadspace.com/hc/en
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md), [ukur](measures.md) dan juga [eksport data](export-destinations.md) untuk menghantar pengalaman diperibadikan kepada pelanggan anda.
+Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

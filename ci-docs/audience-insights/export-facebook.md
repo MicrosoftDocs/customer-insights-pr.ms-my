@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976053"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305121"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Eksport senarai segmen ke Facebook Ads Manager (pratonton)
 
@@ -22,12 +22,12 @@ Eksport segmen profil pelanggan disatukan ke Pengurus Iklan Facebook untuk menci
 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
-- Anda perlu mempunyai [Akaun iklan **Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) yang termasuk [Akaun Perniagaan **Facebook**](https://business.facebook.com/).
-- Anda perlu menjadi pentadbir pada [Akaun Iklan **Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Anda perlu mempunyai [**Akaun Iklan Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) yang menyertakan [**Akaun Perniagaan Facebook**](https://business.facebook.com/).
+- Anda perlu menjadi pentadbir bagi [**Akaun Iklan Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Sehingga 10 juta profil pelanggan bagi setiap eksport ke Facebook Ads Manager.
+- Sehingga 10 juta profil pelanggan bagi setiap eksport ke Pengurus Iklan Facebook.
 - Eksport ke Facebook Ads Manager adalah terhad kepada segmen.
 - Cipta atau kemas kini khalayak tersuai dalam Facebook bagi jenis *senarai pelanggan* sahaja.
 - Mengeksport segmen dengan jumlah 10 juta profil boleh mengambil masa sehingga 90 minit untuk diselesaikan.
@@ -42,19 +42,19 @@ Sebelum pengguna boleh mencipta eksport, pentadbir mesti mengkonfigurasikan samb
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi **Pentadbir**. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Sahkan dengan Facebook Ads: 
 
-   1. Pilih **Teruskan dengan Facebook** untuk mendaftar masuk ke Akaun Iklan Facebook.
+   1. Pilih **Teruskan dengan Facebook** untuk log masuk ke akaun Iklan Facebook anda.
 
    1. Benarkan keizinan **ads_management** selepas pengesahan dengan Facebook.
 
    1. Pilih **Akaun Iklan Facebook** yang anda ingin kendalikan.
 
-   1. Pilih **Khalayak tersuai sedia ada** daripada senarai juntai bawah atau cipta **Khalayak tersuai baharu**. Untuk maklumat lanjut, lihat [**Khalayak dalam Pengurus Iklan Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Pilih **khalayak tersuai sedia ada** daripada senarai juntai bawah atau cipta **Khalayak tersuai baharu**. Untuk maklumat lanjut, lihat [**Khalayak dalam Pengurus Iklan Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Anda hanya boleh mencipta atau mengemas kini khalayak tersuai di Facebook untuk jenis *senarai pelanggan* dengan eksport ini. Dalam sesetengah kes, anda melihat khalayak tersuai untuk pelbagai jenis dalam senarai juntai bawah. Memilih jenis yang berbeza daripada *senarai pelanggan* akan menggagalkan eksport. 
+      > Anda hanya boleh mencipta atau mengemas kini khalayak tersuai di Facebook untuk jenis *senarai pelanggan* dengan eksport ini. Dalam sesetengah keadaan, anda melihat khalayak tersuai bagi jenis yang berbeza dalam senarai juntai bawah. Memilih jenis yang berbeza daripada *senarai pelanggan* akan menggagalkan eksport. 
 
 1. Semak **Privasi data dan pematuhan** dan pilih **Saya bersetuju**.
 
@@ -68,16 +68,17 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**. 
 
-1. Dalam **Sambungan untuk eksport**, pilih sambungan daripada bahagian **Facebook Ads Manager**. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+1. Dalam **Sambungan untuk eksport**, pilih sambungan daripada bahagian **Facebook Ads Manager**. Jika anda tidak melihat nama bahagian ini, maka tiada sambungan jenis ini tersedia untuk anda.
 
 1. Dalam **Pilih medan pengecam kunci anda**, pilih **E-mel**, **Nama dan alamat**, atau **Telefon** untuk dihantar ke Pengurus Iklan Facebook. 
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**.
 
 1. Petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk pengecam kunci yang dipilih.
-   > [TIP] Peluang terbaik untuk padanan berlaku jika anda memilih **E-mel** sebagai pengecam kunci. Menambah pengecam tambahan mungkin meningkatkan pemadanan.
+   > [!TIP]
+   > Peluang terbaik untuk padanan berlaku jika anda memilih **E-mel** sebagai pengecam kunci. Menambah pengecam tambahan mungkin meningkatkan pemadanan.
 
-1. Pilih **Tambah atribut** untuk memetakan lebih banyak atribut untuk dihantar kepada Facebook Ads Manager. Atribut daripada Facebook Ads Manager dipetakan pada nama mesra pengguna berikut: **FN** = **Nama Pertama**, **LN** = **Nama Keluarga**, **FI** = **Parap Pertama**, **PHONE** = **Telefon**, **GEN** = **Jantina**, **DOB** = **Tarikh Lahir**, **ST** = **Negeri**, **CT** = **Bandar**, **ZIP** = **Poskod/Kod Zip**, **COUNTRY** = **Negara/Rantau**
+1. Pilih **Tambah atribut** untuk memetakan lebih banyak atribut untuk dihantar kepada Facebook Ads Manager. Atribut daripada Pengurus Iklan Facebook dipetakan pada nama mesra pengguna berikut: **FN** = **Nama Pertama**, **LN** = **Nama Keluarga**, **FI** = **Parap Pertama**, **PHONE** = **Telefon**, **GEN** = **Jantina**, **DOB** = **Tarikh Lahir**, **ST** = **Negeri**, **CT** = **Bandar**, **ZIP** = **Poskod/Kod Zip**, **COUNTRY** = **Negara/Rantau**
 
 1. Pilih segmen yang ingin anda eksport.
 
@@ -85,7 +86,9 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). 
+
+Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 
