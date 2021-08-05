@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305305"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555318"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Pengayaan profil pelanggan dengan HERE Technologies (pratonton)
 
@@ -35,7 +35,7 @@ Untuk mengkonfigurasi pengayaan HERE Technologies, prasyarat berikut mesti dipen
 1. Pilih **Perkayakan data saya** pada jubin HERE Technologies dan pilih **Mari bermula**.
 
    > [!div class="mx-imgBorder"]
-   > ![Jubin HERE Technologies](media/HERE-tile.png "Jubin HERE Technologies")
+   > ![Jubin HERE Technologies.](media/HERE-tile.png "Jubin HERE Technologies")
 
 1. Pilih [sambungan](connections.md) daripada senarai juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan**. Pilih **HERE Technologies** daripada senarai juntai bawah. 
 
@@ -50,7 +50,7 @@ Untuk mengkonfigurasi pengayaan HERE Technologies, prasyarat berikut mesti dipen
 1. Takrifkan medan daripada profil disatukan yang perlu anda gunakan untuk mencari pemadanan data lokasi yang sepadan daripada HERE Technologies. Medan **Jalan 1** dan **Poskod** diperlukan untuk alamat utama dan/atau sekunder yang dipilih. Untuk ketepatan padanan yang lebih tinggi, lebih banyak medan boleh ditambah.
 
    > [!div class="mx-imgBorder"]
-   > ![Halaman konfigurasi pengayaan HERE Technologies](media/enrichment-HERE-configuration.png "Halaman konfigurasi pengayaan HERE Technologies")
+   > ![Halaman konfigurasi pengayaan HERE Technologies.](media/enrichment-HERE-configuration.png "Halaman konfigurasi pengayaan HERE Technologies")
 
 1. Pilih **Seterusnya** untuk melengkapkan pemetaan medan.
 
@@ -73,7 +73,7 @@ Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah 
 1. Selepas melengkapkan pengesahan, pilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Halaman konfigurasi sambungan HERE Technologies](media/enrichment-HERE-connection.png "Halaman konfigurasi sambungan HERE Technologies")
+   > ![Halaman konfigurasi sambungan HERE Technologies.](media/enrichment-HERE-connection.png "Halaman konfigurasi sambungan HERE Technologies")
 
 ## <a name="enrichment-results"></a>Keputusan pengayaan
 

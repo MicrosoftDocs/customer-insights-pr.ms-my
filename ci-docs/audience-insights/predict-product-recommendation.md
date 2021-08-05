@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095567"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556135"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ramalan pengesyoran produk (pratonton)
 
@@ -64,7 +64,7 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
 
 1. Pilih jubin **Model pengesyoran produk (pratonton)** dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
-   > ![Jubin model Pengesyoran Produk dengan butang Gunakan model ini](media/product-recommendation-usethismodel.PNG "Jubin model Pengesyoran Produk dengan butang Gunakan model ini")
+   > ![Jubin model Pengesyoran Produk dengan butang Gunakan model ini.](media/product-recommendation-usethismodel.PNG "Jubin model Pengesyoran Produk dengan butang Gunakan model ini")
 
 1. Semak maklumat tentang keperluan model. Jika anda mempunyai data yang diperlukan, pilih **Bermula**.
 
@@ -93,7 +93,7 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
 
 1. Petakan medan semantik kepada atribut dalam entiti sejarah pembelian anda dan pilih **Seterusnya**. Untuk perihalan medan, lihatlah [prasyarat](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Takrifkan perhubungan entiti](media/product-recommendation-purchasehistorymapping.PNG "Halaman sejarah pembelian menunjukkan atribut semantik yang dipetakan ke medan dalam entiti sejarah pembelian terpilih")
+   > ![Takrifkan perhubungan entiti.](media/product-recommendation-purchasehistorymapping.PNG "Halaman sejarah pembelian menunjukkan atribut semantik yang dipetakan ke medan dalam entiti sejarah pembelian terpilih")
 
 1. Jika medan tidak diisi, konfigurasikan hubungan daripada entiti sejarah pembelian anda kepada entiti *Pelanggan*.
     1. Pilih **Entiti sejarah pembelian**.
@@ -101,7 +101,7 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
     1. Pilih **Entiti pelanggan** yang memadankan entiti pelanggan utama anda.
     1. Masukkan nama yang menghuraikan perhubungan.
        > [!div class="mx-imgBorder"]
-       > ![Halaman sejarah pembelian menunjukkan penciptaan hubungan kepada pelanggan](media/model-purchase-join.png "Halaman sejarah pembelian menunjukkan penciptaan hubungan kepada pelanggan")
+       > ![Halaman sejarah pembelian menunjukkan penciptaan hubungan kepada pelanggan.](media/model-purchase-join.png "Halaman sejarah pembelian menunjukkan penciptaan hubungan kepada pelanggan")
 
 1. Pilih **Simpan**.
 
@@ -145,7 +145,7 @@ Kadang-kadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis ram
 
 1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
    > [!div class="mx-imgBorder"]
-   > ![Pandangan halaman Ramalan Saya](media/product-recommendation-mypredictions.PNG "Pandangan halaman Ramalan Saya")
+   > ![Pandangan halaman Ramalan Saya.](media/product-recommendation-mypredictions.PNG "Pandangan halaman Ramalan Saya")
 
 1. Pilih ramalan yang anda mahu semak semula.
    - **Nama ramalan:** Nama ramalan yang disediakan apabila menciptanya.
@@ -163,7 +163,7 @@ Kadang-kadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis ram
 
 1. Pilih elipsis menegak di sebelah ramalan yang anda mahu semak semula hasilnya dan pilih **Pandangan**.
    > [!div class="mx-imgBorder"]
-   > ![Pandangan pilihan dalam elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam](media/product-recommendation-verticalellipses.PNG "Pandangan pilihan dalam elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam")
+   > ![Pandangan pilihan dalam menu elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam.](media/product-recommendation-verticalellipses.PNG "Pandangan pilihan dalam elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam")
 
 1. Terdapat lima bahagian utama data dalam halaman keputusan:
     1. **Melatih prestasi model:** A, B atau C ialah skor yang mungkin. Skor ini menunjukkan prestasi ramalan dan boleh membantu anda membuat keputusan untuk menggunakan hasil yang disimpan dalam entiti output.
@@ -173,13 +173,13 @@ Kadang-kadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis ram
             - **C** Model ini akan dianggap kualiti **C** jika metrik "Kejayaan @ K" adalah 0% hingga 10% kurang daripada garis dasar.
                
                > [!div class="mx-imgBorder"]
-               > ![Pandangan hasil prestasi model](media/product-recommendation-modelperformance.PNG "Pandangan hasil prestasi model")
+               > ![Pandangan hasil prestasi model.](media/product-recommendation-modelperformance.PNG "Pandangan hasil prestasi model")
             - **Garis dasar**: Model ini mengambil produk yang paling disyorkan oleh kiraan pembelian merentasi semua pelanggan, dan menggunakan peraturan yang dipelajari yang dikenal pasti oleh model untuk mencipta satu set pengesyoran untuk pelanggan. Ramalan kemudiannya dibandingkan dengan produk teratas, seperti yang dikira oleh bilangan pelanggan yang telah membeli produk tersebut. Jika pelanggan mempunyai sekurang-kurangnya satu produk dalam produk yang disyorkan yang juga dilihat dalam produk yang dibeli teratas, mereka dianggap sebagai sebahagian daripada garis dasar. Jika terdapat 10 pelanggan ini yang mempunyai produk yang disyorkan yang dibeli daripada 100 jumlah pelanggan, garis dasar akan menjadi 10%.
             - **Kejayaan @ K**: Menggunakan satu set pengesahan tempoh masa transaksi, pengesyoran dicipta untuk semua pelanggan dan dibandingkan dengan set pengesahan transaksi. Sebagai contoh, dalam tempoh 12 bulan, bulan 12 mungkin diketepikan sebagai set pengesahan data. Jika model meramalkan sekurang-kurangnya satu perkara yang anda akan membeli dalam bulan 12 berdasarkan apa yang dipelajari daripada 11 bulan sebelumnya, pelanggan akan meningkatkan metrik "Kejayaan @ K".
     
     1. **Produk yang paling dicadangkan (dengan selaras):** Lima produk teratas yang diramalkan untuk pelanggan anda.
        > [!div class="mx-imgBorder"]
-       > ![Graf menunjukkan 5 produk teratas yang paling disyorkan](media/product-recommendation-topproducts.PNG "Graf menunjukkan 5 produk teratas yang paling disyorkan")
+       > ![Graf menunjukkan 5 produk teratas yang paling disyorkan.](media/product-recommendation-topproducts.PNG "Graf menunjukkan 5 produk teratas yang paling disyorkan")
     
     1. **Faktor pengesyoran utama**: Model ini menggunakan sejarah transaksi pelanggan untuk membuat pengesyoran produk. Ia mempelajari corak berdasarkan pembelian masa lalu dan mendapati persamaan antara pelanggan dan produk. Persamaan ini kemudiannya digunakan untuk menjana pengesyoran produk.
     Berikut adalah faktor-faktor yang boleh mempengaruhi pengesyoran produk yang dihasilkan oleh model. 
@@ -190,20 +190,20 @@ Kadang-kadang, hanya produk tertentu yang bermanfaat atau sesuai untuk jenis ram
         Setiap pengesyoran produk dipengaruhi oleh satu atau lebih faktor ini. Peratusan pengesyoran yang mana setiap faktor yang mempengaruhi dan memainkan peranan digambarkan dalam carta. Dalam contoh berikut, 100% daripada pengesyoran dipengaruhi oleh transaksi masa lalu, 60% oleh persamaan pelanggan dan 22% oleh persamaan produk. Tuding pada bar dalam carta untuk melihat peratusan yang tepat di tempat faktor yang mempengaruhi menyumbang.
 
         > [!div class="mx-imgBorder"]
-        > ![Faktor pengesyoran utama](media/product-recommendation-keyrecommendationfactors.png "Faktor pengesyoran utama yang dipelajari oleh model untuk menjana pengesyoran produk")
+        > ![Faktor pengesyoran utama.](media/product-recommendation-keyrecommendationfactors.png "Faktor pengesyoran utama yang dipelajari oleh model untuk menjana pengesyoran produk")
        
      
    1. **Statistik data**: Memberikan gambaran keseluruhan untuk bilangan transaksi, pelanggan, dan produk model yang dipertimbangkan. Ia berdasarkan data input yang digunakan untuk mempelajari corak dan menjana pengesyoran produk.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistik data](media/product-recommendation-datastatistics.png "Statistik data di sekeliling data masuk yang digunakan oleh model untuk mempelajari corak")
+      > ![Statistik data.](media/product-recommendation-datastatistics.png "Statistik data di sekeliling data masuk yang digunakan oleh model untuk mempelajari corak")
 
       Bahagian ini menunjukkan statistik di sekitar titik data yang digunakan oleh model untuk mempelajari corak dan menjana pengesyoran produk. Penapisan, seperti yang dikonfigurasikan dalam konfigurasi model, akan digunakan pada output yang dihasilkan oleh model. Walau bagaimanapun, model ini menggunakan semua data yang tersedia untuk mempelajari corak. Oleh itu, jika anda menggunakan penapisan produk dalam konfigurasi model, bahagian ini akan menunjukkan jumlah produk yang dianalisis model untuk mempelajari corak, yang mungkin berbeza daripada bilangan produk yang sepadan dengan kriteria penapisan yang ditakrifkan.
 
    1. **Pengesyoran produk keyakinan tinggi:** Sampel pengesyoran yang diberikan kepada pelanggan anda bahawa model ini percaya mungkin akan dibeli oleh pelanggan.    
       Jika katalog produk ditambah, ID produk akan digantikan dengan nama produk. Nama produk memberikan maklumat yang lebih boleh diambil tindakan dan intuitif mengenai ramalan.
        > [!div class="mx-imgBorder"]
-       > ![Senarai menunjukkan cadangan keyakinan tinggi untuk set pelanggan individu yang terpilih](media/product-recommendation-highconfidence.PNG "Senarai menunjukkan cadangan keyakinan tinggi untuk set pelanggan individu yang terpilih")
+       > ![Senarai menunjukkan cadangan keyakinan tinggi untuk set pelanggan individu yang terpilih.](media/product-recommendation-highconfidence.PNG "Senarai menunjukkan cadangan keyakinan tinggi untuk set pelanggan individu yang terpilih")
 
 ## <a name="manage-predictions"></a>Urus ramalan
 

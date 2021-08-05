@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305653"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554859"
 ---
 # <a name="custom-machine-learning-models"></a>Model pembelajaran mesin tersuai
 
@@ -42,7 +42,7 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 1. Berikan model tersuai anda nama yang mudah dikenali dalam medan **Nama**.
 
    > [!div class="mx-imgBorder"]
-   > ![Petikan skrin anak tetingkap aliran kerja Baharu](media/new-workflowv2.png "Petikan skrin anak tetingkap aliran kerja Baharu")
+   > ![Syot layar anak tetingkap aliran kerja Baharu.](media/new-workflowv2.png "Petikan skrin anak tetingkap aliran kerja Baharu")
 
 1. Pilih organisasi yang mengandungi perkhidmatan web dalam **Penyewa yang mengandungi perkhidmatan web anda**.
 
@@ -59,7 +59,7 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
    > Aliran kerja model tersuai akan menggunakan heuristik untuk memetakan medan input perkhidmatan web kepada atribut entiti berdasarkan nama dan jenis data medan. Anda akan melihat ralat jika medan perkhidmatan web tidak dapat dipetakan kepada entiti.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurasikan aliran kerja](media/intelligence-screen2-updated.png "Konfigurasikan aliran kerja")
+   > ![Konfigurasikan aliran kerja.](media/intelligence-screen2-updated.png "Konfigurasikan aliran kerja")
 
 1. Dalam langkah **Parameter Output Model**, tetapkan ciri berikut:
    - Studio Pembelajaran Mesin (klasik)
@@ -70,12 +70,12 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
       1. Pilih **Nama parameter Laluan Output** bagi talian paip kelompok daripada juntai bawah.
 
       > [!div class="mx-imgBorder"]
-      > ![Anak tetingkap Parameter Output Model](media/intelligence-screen3-outputparameters.png "Anak tetingkap Parameter Output Model")
+      > ![Anak tetingkap Parameter Output Model.](media/intelligence-screen3-outputparameters.png "Anak tetingkap Parameter Output Model")
 
 1. Pilih atribut sepadan daripada senarai juntai bawah **ID Pelanggan dalam hasil** yang mengenal pasti pelanggan dan pilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kaitkan hasil dengan anak tetingkap data Pelanggan](media/intelligence-screen4-relatetocustomer.png "Kaitkan hasil dengan anak tetingkap data Pelanggan")
+   > ![Kaitkan hasil dengan anak tetingkap data Pelanggan.](media/intelligence-screen4-relatetocustomer.png "Kaitkan hasil dengan anak tetingkap data Pelanggan")
 
 1. Anda akan melihat skrin **Aliran Kerja Disimpan** dengan butiran tentang aliran kerja tersebut.    
    Jika anda mengkonfigurasi aliran kerja untuk talian paip Pembelajaran Mesin Azure, wawasan khalayak akan dilampirkan ke ruang kerja yang mengandungi talian paip. Wawasan khalayak akan mendapat peranan **Penyumbang** pada ruang kerja Azure.

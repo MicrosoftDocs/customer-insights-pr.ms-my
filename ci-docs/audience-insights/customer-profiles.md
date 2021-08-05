@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304615"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554629"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -23,11 +23,11 @@ Halaman **Pelanggan** menunjukkan pandangan gabungan pelanggan anda, berdasarkan
 Pelanggan boleh individu atau organisasi (pratonton). Setiap profil pelanggan atau organisasi diwakili oleh jubin. Pilih jubin untuk melihat maklumat tambahan tentang pelanggan atau organisasi tertentu. Gunakan kawalan penomboran halaman pada bahagian bawah halaman untuk melihat rekod tambahan.
 
 > [!div class="mx-imgBorder"] 
-> ![Profil pelanggan B2C](media/profiles-customers.png "Profil pelanggan B2C")
+> ![Profil pelanggan B2C.](media/profiles-customers.png "Profil pelanggan B2C")
 
 Organisasi (Pratonton)
 > [!div class="mx-imgBorder"] 
-> ![Profil pelanggan B2B](media/profile-customers-b2b.png "Profil pelanggan B2B")
+> ![Profil pelanggan B2B.](media/profile-customers-b2b.png "Profil pelanggan B2B")
 
 > [!NOTE]
 > Jika anda tidak dapat melihat jubin apabila anda memilih **Pelanggan** dalam navigasi, pentadbir anda perlu untuk [mentakrifkan sekurang-kurangnya satu atribut yang boleh dicari](search-filter-index.md) pada **Indeks carian & penapis**.
@@ -47,7 +47,7 @@ Anda boleh menapis pelanggan dengan medan entiti Profil Pelanggan. Sama seperti 
 2. Tandakan kotak di sebelah atribut bagi menapis pelanggan mengikut kemahuan anda.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profil pelanggan](media/profiles-customers3.png "Profil pelanggan")
+   > ![Profil pelanggan.](media/profiles-customers3.png "Profil pelanggan")
 
 3. Alih keluar penapis anda dengan memilih **Kosongkan penapis** pada halaman **Pelanggan**.
 

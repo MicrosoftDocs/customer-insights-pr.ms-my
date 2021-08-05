@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights pada Salesforce Marketing Cloud
 description: Ketahui cara mengkonfigurasikan sambungan dan mengeksport pada Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 8ce243918c2388e931a98df3bbe576ddf692f707
+ms.sourcegitcommit: 4823684a1399fd66ffecfce21735f2bc90a1733c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314648"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6660278"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Segmen eksport dan data lain pada Salesforce Marketing Cloud (pratonton)
 
@@ -23,11 +23,6 @@ Gunakan data pelanggan anda dalam Salesforce Marketing Cloud dengan mengeksport 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
 - Ketersediaan hos SFTP dan kelayakan pentadbir yang sepadan. [Cara menyediakan lokasi SFTP untuk Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Had diketahui
-
-- Masa jalanan eksport bergantung pada prestasi sistem anda. Kami mengesyorkan dua CPU teras dan 1 Gb memori sebagai konfigurasi minimum pelayan anda. 
-- Mengeksport entiti dengan sehingga 100 juta profil pelanggan boleh mengambil masa 90 minit apabila menggunakan konfigurasi minimum yang disyorkan. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Sediakan sambungan kepada Salesforce Marketing Cloud
 

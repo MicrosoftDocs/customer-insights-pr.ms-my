@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595912"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692538"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Lengkapkan data separa anda dengan ramalan
 
@@ -31,11 +31,11 @@ Ramalan membolehkan anda mencipta nilai ramalan dengan mudah yang boleh meningka
 
 Sebelum organisasi anda boleh menggunakan ciri ramalan, prasyarat berikut mesti dipenuhi:
 
-1. Organisasi anda mempunyai tika yang [disediakan dalam Common Data Service](/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama dengan Customer Insights.
+1. Organisasi anda mempunyai tika [yang disediakan dalam Microsoft Dataverse](/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama seperti Customer Insights.
 
-2. Persekitaran anda dilampirkan pada tika Common Data Service anda.
+2. Persekitaran cerapan khalayak anda dilampirkan pada tika Dataverse anda.
 
-Jika anda sedang [mencipta persekitaran baharu](manage-environments.md), konfigurasikannya dalam dialog **Cipta persekitaran** dan pilih **Lanjutan**. Jika anda telah mencipta persekitaran, pergi ke tetapannya dan pilih **Lanjutan**. Walau apa pun, dalam bahagian **Gunakan ramalan**, masukkan URL tika Common Data Service yang anda mahu lampirkan pada persekitaran anda.
+Jika anda sedang [mencipta persekitaran baharu](get-started-paid.md), konfigurasikannya dalam dialog **Cipta persekitaran** dan pilih **Lanjutan**. Jika anda telah mencipta persekitaran, pergi ke tetapannya dan pilih **Lanjutan**. Walau apa pun, dalam bahagian **Gunakan ramalan**, masukkan URL tika Dataverse yang anda mahu lampirkan pada persekitaran anda.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Cipta ramalan dalam entiti Pelanggan
 
@@ -47,17 +47,17 @@ Jika anda sedang [mencipta persekitaran baharu](manage-environments.md), konfigu
 
 4. Cari nama atribut yang anda ingin ramalkan nilai, kemudian pilih ikon **Gambaran Keseluruhan** dalam lajur **Ringkasan**.
    > [!div class="mx-imgBorder"]
-   > ![Ikon gambaran keseluruhan](media/intelligence-overviewicon.png "Ikon gambaran keseluruhan")
+   > ![Ikon gambaran keseluruhan.](media/intelligence-overviewicon.png "Ikon gambaran keseluruhan")
 
 5. Jika terdapat kadar nilai tidak diisi yang tinggi bagi atribut anda, pilih **Ramal nilai yang tidak diisi** untuk meneruskan dengan ramalan anda.
    > [!div class="mx-imgBorder"]
-   > ![Status gambaran keseluruhan dengan butang nilai yang tidak diisi ditunjukkan](media/intelligence-overviewpredictmissingvalues.png "Status gambaran keseluruhan dengan butang ramalan nilai hilang ditunjukkan")
+   > ![Status gambaran keseluruhan dengan butang ramalkan nilai yang tidak diisi ditunjukkan.](media/intelligence-overviewpredictmissingvalues.png "Status gambaran keseluruhan dengan butang ramalan nilai hilang ditunjukkan")
 
 6. Sediakan **Nama paparan** dan **Nama entiti output** untuk hasil ramalan.
 
 7. Senarai pra-penuhi bagi pilihan akan menunjukkan di mana anda boleh memetakan nilai untuk kategori diramalkan. Dalam kes ini, pilihan kategori anda hanyalah 0 atau 1 kerana ia memetakan ramalan benar/palsu atau bersifat binari. Dalam lajur Kategori, petakan nilai medan yang anda ingin klasifikasikan sebagai “0” dalam ramalan akhir kepada “0” dan item yang anda ingin klasifikasikan sebagai “1” dalam ramalan akhir kepada “1”.
    > [!div class="mx-imgBorder"]
-   > ![Contoh menunjukkan nilai medan yang dipetakan ke kategori](media/intelligence-categorymapping.png "Contoh menunjukkan nilai medan yang dipetakan ke kategori")
+   > ![Contoh menunjukkan nilai medan yang dipetakan kepada kategori.](media/intelligence-categorymapping.png "Contoh menunjukkan nilai medan yang dipetakan ke kategori")
 
 8. Pilih **Selesai** dan ramalan akan diproses. Pemprosesan akan mengambil sedikit masa, bergantung kepada saiz dan kekompleksan data. Hasil akan tersedia dalam entiti baharu berasaskan pada **Nama entiti output** bagi ramalan yang anda telah ciptakan.
 
@@ -77,7 +77,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 5. Jika bahagian yang baharu anda cipta mempunyai data yang tidak lengkap dalam medan sumber, anda boleh memilih untuk meramalkan nilai yang hilang.
    > [!div class="mx-imgBorder"]
-   > ![Butang ramalan](media/segments-predictoption.png "Butang ramalan")
+   > ![Butang ramalan.](media/segments-predictoption.png "Butang ramalan")
 
 6. Sediakan **Nama paparan** dan **Nama entiti output** untuk hasil ramalan.
 
@@ -93,7 +93,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 4. Anda akan melihat bilangan titik data dalam pandangan ramalan anda.
    > [!div class="mx-imgBorder"]
-   > ![Halaman ramalan](media/intelligence-predictionsviewpage.png "Halaman ramalan")
+   > ![Halaman ramalan.](media/intelligence-predictionsviewpage.png "Halaman ramalan")
 
    - **Nilai ramalan** menunjukkan pemetaan yang anda cipta semasa peringkat pemetaan nilai Medan ke kategori. Ini ialah nilai dalam set data yang telah dipetakan kepada kategori tertentu.
    -**Pempengaruh teratas** merupakan faktor dalam set data anda yang paling cenderung untuk mempengaruhi keyakinan ramalan bagi nilai Medan anda untuk dipetakan ke kategori tertentu.
@@ -139,7 +139,7 @@ Jalanan ramalan anda yang seterusnya akan menggunakan model dikemas kini yang an
 
 ## <a name="troubleshooting"></a>Penyelesaian masalah
 
-Jika anda tidak dapat melengkapkan proses lampir Common Data Service kerana ralat, anda boleh cuba melengkapkan proses itu secara manual. Terdapat dua isu diketahui yang boleh berlaku dalam proses lampir:
+Jika anda tidak dapat melengkapkan proses lampir Dataverse kerana ralat, anda boleh cuba melengkapkan proses itu secara manual. Terdapat dua isu diketahui yang boleh berlaku dalam proses lampir:
 
 - Penyelesaian Tambahan Kad Pelanggan tidak dipasang.
     1. Lengkapkan arahan untuk [memasang dan mengkonfigurasi penyelesaian](customer-card-add-in.md).

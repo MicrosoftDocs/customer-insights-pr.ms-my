@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596510"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692124"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure untuk cerapan khalayak
 
 Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Teruskan membaca untuk mengetahui cara untuk menyambungkan cerapan khalayak dengan akaun Azure Data Lake Storage Gen2 menggunakan prinsipal perkhidmatan Azure dan bukannya kekunci akaun storan. 
 
-Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [mencipta persekitaran sedia ada atau kemas kini](manage-environments.md#create-an-environment-in-an-existing-organization).
+Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Model sebagai sumber data](connect-common-data-model.md) atau [mencipta persekitaran sedia ada atau kemas kini](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Akaun Storan Gen2 Data Lake Azure yang bertujuan untuk menggunakan prinsipal perkhidmatan mesti mempunyai [Ruang Nama Hierarki (HNS) didayakan](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Prses boleh mengambil masa sehingga 15 minit menyebarkan perubahan.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Masukkan ID Sumber Azure atau butiran Langganan Azure dalam lampiran akaun storan kepada Audience Insights.
 
-Lampirkan akaun storan Azure Data Lake cerapan khalayak untuk [menyimpan data output](manage-environments.md) atau [menggunakannya sebagai sumber data](connect-common-data-service-lake.md). Memilih pilihan Azure Data Lake membolehkan anda memilih antara pendekatan berasaskan sumber atau berasaskan langganan.
+Lampirkan akaun storan Azure Data Lake cerapan khalayak untuk [menyimpan data output](manage-environments.md) atau [menggunakannya sebagai sumber data](connect-dataverse-managed-lake.md). Memilih pilihan Azure Data Lake membolehkan anda memilih antara pendekatan berasaskan sumber atau berasaskan langganan.
 
 Ikuti langkah di bawah untuk menyediakan maklumat yang diperlukan tentang pendekatan yang dipilih.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596556"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554905"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model menggunakan akaun Azure Data Lake
 
@@ -45,7 +45,7 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
 
 1. Anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Masukkan maklumat **Bekas** dan pilih **Seterusnya**.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog untuk memasukkan butiran sambungan baharu untuk Data Lake Azure](media/enter-new-storage-details.png)
+   > ![Kotak dialog untuk memasukkan butiran sambungan baharu untuk Data Lake Azure.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Anda memerlukan salah satu peranan yang berikut sama ada kepada bekas atau akaun storan yang dirujuk di atas untuk bersambung kepada dan mencipta sumber data:
    >  - Pembaca Data Blob Storan
@@ -58,11 +58,11 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
 
 1. Anda akan mendapat senarai entiti yang tersedia dalam fail model.json atau manifest.json yang dipilih. Anda boleh menyemak semula dan memilih daripada senarai entiti yang tersedia dan pilih **Simpan**. Semua entiti yang dipilih akan dinges daripada sumber data baharu.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog yang menunjukkan senarai entiti daripada fail model.json](media/review-entities.png)
+   > ![Kotak dialog yang menunjukkan senarai entiti daripada fail model.json.](media/review-entities.png)
 
 8. Menunjukkan entiti data yang mahu anda dayakan pemprofilan data dan pilih **Simpan**. Pemprofilan data membolehkan analitis dan keupayaan lain. Anda boleh memilih keseluruhan entiti yang memilih semua atribut daripada entiti atau memilih sifat tertentu pilihan anda. Secara lalai, tiada entiti didayakan untuk pemprofilan data.
    > [!div class="mx-imgBorder"]
-   > ![Kotak dialog menunjukkan pemprofilan data](media/dataprofiling-entities.png)
+   > ![Kotak dialog menunjukkan pemprofilan data.](media/dataprofiling-entities.png)
 
 9. Selepas menyimpan pilihan anda, halaman **Sumber data** dibuka. Kini anda patut melihat sambungan folder Common Data Model sebagai sumber data.
 
@@ -81,12 +81,12 @@ Anda boleh mengemas kini kekunci akses untuk akaun storan yang mengandungi folde
 
 4. Secara alternatif, kemas kini **Kunci akses** dan pilih **Seterusnya**.
 
-   ![Dialog untuk mengedit dan mengemas kini kekunci akses untuk sumber data sedia ada](media/edit-access-key.png)
+   ![Dialog untuk mengedit dan mengemas kini kunci capaian untuk sumber data sedia ada.](media/edit-access-key.png)
 
 5. Secara alternatif, anda boleh mengemas kini dari sambungan utama akaun kepada sambungan berasaskan sumber atau langganan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Anda tidak boleh mengubah maklumat **Bekas** semasa mengemas kini sambungan.
    > [!div class="mx-imgBorder"]
 
-   > ![Kotak dialog untuk memasukkan butiran sambungan untuk Data Lake Azure ke akaun storan sedia ada](media/enter-existing-storage-details.png)
+   > ![Kotak dialog untuk memasukkan butiran sambungan untuk Data Lake Azure kepada akaun storan sedia ada.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Anda memerlukan salah satu peranan yang berikut sama ada kepada bekas atau akaun storan yang dirujuk di atas untuk bersambung kepada dan mencipta sumber data:

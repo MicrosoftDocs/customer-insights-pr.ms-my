@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304707"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692446"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
@@ -30,13 +31,13 @@ Anda boleh menambah sumber data dalam tiga cara utama:
 
 - [Melalui berpuluh-puluh penyambung Power Query](connect-power-query.md)
 - [Daripada folder Common Data Model](connect-common-data-model.md)
-- [Daripada lake Microsoft Dataverse anda sendiri](connect-common-data-service-lake.md)
+- [Daripada lake Microsoft Dataverse anda sendiri](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Tambah data daripada sumber data di premis
 
-Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Aliran data boleh didayakan dalam Customer Insights dengan [menyediakan URL persekitaran Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) semasa menyediakan persekitaran.
+Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Aliran data boleh didayakan dalam Customer Insights dengan [menyediakan URL persekitaran Microsoft Dataverse](get-started-paid.md) semasa menyediakan persekitaran.
 
-Sumber data yang dicipta selepas mengaitkan persekitaran Dataverse dengan Customer Insights akan menggunakan aliran data [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Alih keluar dan cipta semula sumber data yang wujud sebelum persekitaran Dataverse  dikaitkan ke [guna get laluan data di premis](/data-integration/gateway/service-gateway-app.md).
+Sumber data yang dicipta selepas mengaitkan persekitaran Dataverse dengan Customer Insights akan menggunakan aliran data [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Alih keluar dan cipta semula sumber data yang wujud sebelum persekitaran Dataverse  dikaitkan ke [guna get laluan data di premis](/data-integration/gateway/service-gateway-app).
 
 Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan kelihatan dan anda boleh menggunakan semula dalam Customer Insights. Halaman sumber data menunjukkan pautan untuk pergi ke persekitaran Microsoft Power Platform yang anda boleh melihat dan mengkonfigurasikan get laluan data di premis.
 
@@ -45,9 +46,9 @@ Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan ke
 Anda akan melihat nama setiap sumber data yang ditelan, status dan masa terakhir data disegar semula untuk sumber tersebut. Anda boleh mengisih senarai sumber data mengikut setiap lajur.
 
 > [!div class="mx-imgBorder"]
-> ![Sumber Data ditambah](media/configure-data-datasource-added.png "Sumber Data ditambah")
+> ![Sumber data ditambah.](media/configure-data-datasource-added.png "Sumber Data ditambah")
 
-|Status  |Penerangan   |
+|Status  |Penerangan  |
 |---------|---------|
 |Berjaya   |Sumber data berjaya diinges jika masa disebutkan dalam lajur **Disegar semula**.
 |Belum dimulakan   |Sumber data belum mempunyai data diinges atau masih dalam mod draf.         |

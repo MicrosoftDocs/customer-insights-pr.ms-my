@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306131"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556272"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan transaksi (pratonton)
 
@@ -47,7 +47,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **CreatedOn**: Zon waktu tarikh
 
    [!div class="mx-imgBorder"]
-   ![Ubah Tarikh Lahir kepada Tarikh](media/ecommerce-dob-date.PNG "ubah tarikh lahir kepada tarikh ini")
+   ![Tukar Tarikh Lahir kepada Tarikh.](media/ecommerce-dob-date.PNG "ubah tarikh lahir kepada tarikh ini")
 
 1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305660"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650237"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -109,7 +109,7 @@ Sesetengah entiti mengandungi lebih banyak butiran daripada yang lain. Jika enti
 Sama ada anda menggabungkan atribut secara manual atau membiarkan sistem menggabungkannya, anda sentiasa boleh menjalankan gabungan anda. Pilih **Jalankan** pada halaman **Gabung** untuk memulakan proses.
 
 > [!div class="mx-imgBorder"]
-> ![Simpan dan Jalankan gabungan data](media/configure-data-merge-save-run.png "Simpan dan Jalankan Gabungan Data")
+> ![Simpan dan Jalankan gabungan data.](media/configure-data-merge-save-run.png "Simpan dan Jalankan Gabungan Data")
 
 Pilih **Jalankan Gabungan sahaja** jika anda hanya mahu melihat output yang ditunjukkan dalam entiti pelanggan disatukan. Proses hiliran akan disegar semula seperti yang [ditakrifkan dalam jadual segar semula](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Pilih **Jalankan proses Gabungan dan hiliran** untuk menyegar semula sistem deng
 Untuk membuat lebih banyak perubahan dan menjalankan semula langkah, anda boleh membatalkan penggabungan yang sedang dilaksanakan. Pilih teks **Menyegarkan semula ...** dan pilih **Batal kerja** di bahagian tepi tetingkap yang muncul.
 
 > [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+> Selepas menjalankan proses penggabungan, pilih status proses untuk membuka anak tetingkap **Butiran tugas**. Ia memberikan gambaran keseluruhan tentang masa pemprosesan, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas. Pilih **Lihat butiran** untuk melihat entiti yang mengambil bahagian dalam proses padanan, jika penyelesaian konflik berjaya dan jika kemas kini berjaya diterbitkan.  
+> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
 
 ## <a name="next-step"></a>Langkah Seterusnya
 

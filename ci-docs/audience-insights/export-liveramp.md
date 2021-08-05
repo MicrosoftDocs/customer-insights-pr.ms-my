@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760338"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555456"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Eksport segmen ke LiveRamp&reg; (pratonton)
 
@@ -56,7 +56,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Dalam medan **Pilih pengecam kunci anda**, pilih **E-mel**,  **Nama dan alamat**, atau **Telefon** untuk menghantar ke LiveRamp untuk penyelesaian identiti.
    > [!div class="mx-imgBorder"]
-   > ![Penyambung LiveRamp dengan atribut pemetaan](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
+   > ![Penyambung LiveRamp dengan atribut pemetaan.](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
 
 1. Petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk pengecam kunci yang dipilih.
 

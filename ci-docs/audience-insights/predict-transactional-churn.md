@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095613"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559416"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Ramalan pulangan transaksi (pratonton)
 
@@ -47,7 +47,7 @@ Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membe
         - **Peristiwa:** Nama peristiwa yang anda mahu gunakan. Contohnya, medan yang dipanggil "UserAction" di dalam stor runcit mungkin kupon yang digunakan oleh pelanggan.
         - **Butiran:** Maklumat terperinci tentang peristiwa. Contohnya, medan yang dipanggil "CouponValue" dalam stor runcit mungkin nilai mata wang kupon tersebut.
 - Ciri data yang disyorkan:
-    - Data sejarah yang mencukupi: Data transaksi sekurang-kurangnya dua kali ganda tetingkap masa yang dipilih. Sebaik-baiknya, dua hingga tiga tahun data langganan. 
+    - Data sejarah yang mencukupi: Data transaksi sekurang-kurangnya dua kali ganda tetingkap masa yang dipilih. Sebaik-baiknya, dua hingga tiga tahun sejarah transaksi. 
     - Berbilang pembelian bagi setiap pelanggan: Sesuai sekurang-kurangnya dua urus niaga bagi setiap pelanggan.
     - Bilangan pelanggan: Sekurang-kurangnya 10 profil pelanggan, sebaik-baiknya lebih daripada 1,000 pelanggan unik. Model ini akan gagal dengan kurang daripada 10 pelanggan dan data sejarah yang tidak mencukupi.
     - Kesempurnaan data: Kurang daripada 20% daripada nilai yang hilang dalam medan data entiti yang disediakan.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596372"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692316"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596372"
 
 Model data yang dikongsi ini membolehkan aplikasi dan penyepadu data bekerjasama dengan lebih mudah dengan menyediakan definisi data yang disatukan. Model Data Lazim termasuk sistem metadata yang kaya dengan entiti standard, perhubungan, hierarki, sifat, dan banyak lagi. Ia berasal dari aplikasi Dynamics 365 dan bersumber terbuka pada GitHub dengan lebih daripada 260 entiti standard. Sistem besar rakan kongsi dalaman dan luaran menyumbang konsep khusus industri kepada Model Data Lazim.
 
-Hari ini pelbagai sistem dan platform melaksanakan Model Data Lazim, termasuk aliran data Power BI dan Perkhidmatan Data Azure. Ia sudah disokong dalam Common Data Service, Dynamics 365, Power Apps, Power BI dan perkhidmatan data Azure yang akan datang, secara langsung mengumpul nilai ke arah [Inisiatif Data Terbuka](https://www.microsoft.com/open-data-initiative).
+Berbilang sistem dan platform melaksanakan Model Data Biasa hari ini, termasuk Perkhidmatan aliran data Power BI dan Data Azure. Ia telah disokong dalam Microsoft Dataverse, Dynamics 365, Power Apps, Power BI dan perkhidmatan data Azure yang akan datang, mengakru nilai secara langsung ke arah [Inisiatif Data Terbuka](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Skema entiti Customer Insights
 
@@ -44,7 +44,7 @@ Untuk maklumat lanjut, lihat dokumentasi tentang [Skim entiti Customer Insights 
 
 Anda boleh melihat entiti dalam [Navigasi Entiti Common Data Model](https://microsoft.github.io/CDM/). Pilih **Muat dari GitHub!** butang dan navigasi ke **foundationCommon** > **crmCommon** > **penyelesaian** > **customerInsights** tempat anda akan dapati senarai entiti Customer Insights dan definisi mereka.
 > [!div class="mx-imgBorder"]
-> ![Pengemudi Entiti CDM menunjukkan entiti CustomerActivity](media/CDM-entity-navigator.png "Pengemudi Entiti CDM menunjukkan entiti CustomerActivity")
+> ![Pengemudi Entiti CDM menunjukkan entiti CustomerActivity.](media/CDM-entity-navigator.png "Pengemudi Entiti CDM menunjukkan entiti CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

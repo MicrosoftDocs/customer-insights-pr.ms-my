@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597430"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554446"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berasaskan Pembelajaran Mesin Azure
 
@@ -52,7 +52,7 @@ Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Ins
      Dalam pereka bentuk, buka **Pilih Lajur dalam Set Data** dan pilih **Tetapkan sebagai parameter talian paip**, tempat anda menyediakan nama untuk parameter.
 
      > [!div class="mx-imgBorder"]
-     > ![Pemparameteran set data dalam pereka bentuk](media/intelligence-designer-dataset-parameters.png "Pemparameteran set data dalam pereka bentuk")
+     > ![Pemparameteran set data dalam pereka bentuk.](media/intelligence-designer-dataset-parameters.png "Pemparameteran set data dalam pereka bentuk")
    
 * Parameter set data dalam SDK (Python)
    
@@ -78,7 +78,7 @@ Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Ins
 
 * Pereka bentuk menyediakan [modul Data Eksport](/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
    > [!div class="mx-imgBorder"]
-   > ![Eksport Konfigurasi Modul Data](media/intelligence-designer-importdata.png "Eksport Konfigurasi Modul Data")
+   > ![Eksport Konfigurasi Modul Data.](media/intelligence-designer-importdata.png "Eksport Konfigurasi Modul Data")
    
 * Apabila menulis output inferens menggunakan kod, anda boleh memuat naik output kepada laluan dalam *storan data berdaftar* dalam ruang kerja. Jika laluan dan storan data adalah diparameterkan dalam talian paip, Customer insights akan dapat membaca dan mengimport output inferens. Buat masa ini, output berjadual tunggal dalam format csv disokong. Laluan mesti disertakan dengan direktori dan nama fail.
 

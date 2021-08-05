@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus segmen
 description: Cipta bahagian pelanggan untuk mengumpul mereka berasaskan pelbagai atribut.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064948"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685473"
 ---
 # <a name="create-and-manage-segments"></a>Cipta dan urus segmen
+
+> [!IMPORTANT]
+> Terdapat beberapa perubahan yang dilancarkan kepada pengalaman penciptaan segmen pada September 2021: 
+> - Pembina segmen akan kelihatan sedikit berbeza dengan elemen yang direka bentuk semula dan aliran pengguna yang dipertingkatkan.
+> - Operator tarikhmasa baharu dan pemilih tarikh yang dipertingkatkan didayakan dalam pembina segmen.
+> - Anda akan dapat menambah atau mengalih keluar syarat dan peraturan daripada segmen. 
+> - Peraturan bersarang yang bermula dengan syarat ATAU akan menjadi tersedia. Anda tidak lagi memerlukan syarat DAN pada lapisan paling luar.
+> - Anak tetingkap sisi untuk memilih atribut akan sentiasa tersedia.
+> - Pilihan untuk memilih laluan perhubungan entiti.
+> Untuk mencuba pembina segmen baharu, hantar e-mel dengan subjek "Permintaan untuk mendayakan pembina segmen baharu" kepada cihelp [at] microsoft.com. Sertakan nama organisasi anda dan ID persekitaran kotak pasir anda.
 
 Takrifkan penapis kompleks sekitar entiti pelanggan disatukan dan entiti yang berkaitan. Setiap segmen, selepas pemprosesan, mencipta set rekod pelanggan yang boleh anda eksport dan ambil tindakan padanya. Segmen diuruskan pada halaman **Segmen**. 
 
@@ -50,7 +60,7 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Ia akan disimpan sebagai segm
 1. Pilih operator dan nilai untuk atribut yang dipilih.
 
    > [!div class="mx-imgBorder"]
-   > ![Penapis kumpulan tersuai](media/customer-group-numbers.png "Penapis kumpulan pelanggan")
+   > ![Penapis kumpulan tersuai.](media/customer-group-numbers.png "Penapis kumpulan pelanggan")
 
    |Nombor |Definisi  |
    |---------|---------|
@@ -66,7 +76,7 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Ia akan disimpan sebagai segm
       - Operator **ATAU**: Salah satu syarat perlu dipenuhi sebagai sebahagian daripada proses pembahagian. Pilihan ini paling berguna apabila anda menakrif berbilang syarat untuk entiti yang sama.
 
       > [!div class="mx-imgBorder"]
-      > ![Operator ATAU di mana salah satu syarat perlu dipenuhi](media/segmentation-either-condition.png "Operator ATAU di mana salah satu syarat perlu dipenuhi")
+      > ![Operator ATAU yang salah satu syarat perlu dipenuhi.](media/segmentation-either-condition.png "Operator ATAU di mana salah satu syarat perlu dipenuhi")
 
       Pada masa ini berkemungkinan untuk menyarang operator **ATAU** di bawah operator **DAN**, tetapi tidak sebaliknya.
 
@@ -74,12 +84,12 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Ia akan disimpan sebagai segm
    Pilih **Tambah Kumpulan**.
 
       > [!div class="mx-imgBorder"]
-      > ![Kumpulan pelanggan tambah kumpulan](media/customer-group-add-group.png "Kumpulan pelanggan tambah kumpulan")
+      > ![Kumpulan pelanggan tambah kumpulan.](media/customer-group-add-group.png "Kumpulan pelanggan tambah kumpulan")
 
    1. Pilih salah satu operator set: **Kesatuan**, **Bersilang** atau **Kecuali**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kumpulan pelanggan tambah kesatuan](media/customer-group-union.png "Kumpulan pelanggan tambah kesatuan")
+   > ![Kumpulan pelanggan tambah kesatuan.](media/customer-group-union.png "Kumpulan pelanggan tambah kesatuan")
 
    - **Kesatuan** menyatukan dua kumpulan.
 
@@ -90,7 +100,7 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Ia akan disimpan sebagai segm
 1. Jika entiti disambungkan kepada entiti pelanggan disatukan melalui [perhubungan](relationships.md), anda perlu mentakrifkan laluan perhubungan untuk mencipta segmen yang sah. Tambah entiti daripada laluan perhubungan sehingga anda boleh memilih entiti **Pelanggan : CustomerInsights** daripada juntai bawah. Kemudian pilih **Semua rekod** untuk setiap langkah.
 
    > [!div class="mx-imgBorder"]
-   > ![Laluan perhubungan semasa penciptaan segmen](media/segments-multiple-relationships.png "Laluan perhubungan semasa penciptaan segmen")
+   > ![Laluan perhubungan semasa penciptaan segmen.](media/segments-multiple-relationships.png "Laluan perhubungan semasa penciptaan segmen")
 
 1. Secara lalai, segmen menjana entiti output yang mengandungi semua atribut profil pelanggan yang sepadan dengan penapis yang ditentukan. Jika segmen berdasarkan entiti lain daripada entiti *Pelanggan*, anda boleh menambahkan lebih banyak atribut daripada entiti tersebut kepada entiti output. Pilih **Atribut projek** untuk memilih atribut yang akan ditambah pada entiti output.  
   
@@ -127,7 +137,7 @@ Segmen pantas membolehkan anda membina segmen ringkas dengan operator tunggal de
 4. Sistem akan memberikan anda **saiz bahagian yang dianggarkan**. Anda boleh memilih sama ada untuk menjana bahagian yang anda takrif, atau kunjungi semula terlebih dahulu untuk mendapatkan saiz bahagian yang berbeza.
 
     > [!div class="mx-imgBorder"]
-    > ![Nama dan anggaran bagi bahagian pantas](media/quick-segment-name.png "Nama dan anggaran bagi bahagian pantas")
+    > ![Nama dan anggaran untuk segmen pantas.](media/quick-segment-name.png "Nama dan anggaran bagi bahagian pantas")
 
 5. Berikan **Nama** untuk bahagian anda. Secara pilihan, berikan **Nama paparan**.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095659"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556318"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Ramalan pulangan langganan (pratonton)
 
@@ -63,9 +63,9 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 1. Dalam wawasan khalayak, pergi ke **Kecerdasan** > **Ramalan**.
 1. Pilih jubin **Model pulangan langganan (pratonton)** dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
-   > ![Jubin model Pulangan Langganan dengan butang Gunakan model ini](media/subscription-churn-usethismodel.PNG "Jubin model Pulangan Langganan dengan butang Gunakan model ini")
+   > ![Jubin model Pulangan Langganan dengan butang Gunakan model ini.](media/subscription-churn-usethismodel.PNG "Jubin model Pulangan Langganan dengan butang Gunakan model ini")
 
-### <a name="name-model"></a>Namakan model
+### <a name="name-model"></a>Model nama
 
 1. Berikan nama untuk model bagi membezakannya daripada model lain.
 1. Berikan nama untuk entiti output menggunakan huruf dan nombor sahaja, tanpa sebarang ruang. Itulah nama yang entiti model akan gunakan. Kemudian pilih **Seterusnya**.
@@ -86,11 +86,11 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
     1. Pilih **Entiti pelanggan** yang memadankan entiti pelanggan utama anda.
     1. Masukkan nama yang menghuraikan perhubungan.
        > [!div class="mx-imgBorder"]
-       > ![Halaman sejarah langganan yang menunjukkan penciptaan perhubungan dengan pelanggan](media/subscription-churn-subscriptionhistoryrelationship.PNG "Halaman sejarah langganan yang menunjukkan penciptaan perhubungan dengan pelanggan")
+       > ![Halaman sejarah langganan yang menunjukkan penciptaan perhubungan dengan pelanggan.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Halaman sejarah langganan yang menunjukkan penciptaan perhubungan dengan pelanggan")
 1. Pilih **Seterusnya**.
 1. Petakan medan semantik untuk atribut dalam entiti sejarah langganan dan pilih **Simpan**. Untuk perihalan medan, lihatlah [prasyarat](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Halaman sejarah langganan yang menunjukkan atribut semantik yang dipetakan kepada medan dalam entiti sejarah langganan yang dipilih](media/subscription-churn-subscriptionhistorymapping.PNG "Halaman sejarah langganan yang menunjukkan atribut semantik yang dipetakan kepada medan dalam entiti sejarah langganan yang dipilih")
+   > ![Halaman sejarah langganan yang menunjukkan atribut semantik yang dipetakan kepada medan dalam entiti sejarah langganan yang dipilih.](media/subscription-churn-subscriptionhistorymapping.PNG "Halaman sejarah langganan yang menunjukkan atribut semantik yang dipetakan kepada medan dalam entiti sejarah langganan yang dipilih")
 1. Pilih **Tambahkan data** untuk **Aktiviti pelanggan** dan pilih entiti yang menyediakan maklumat aktiviti pelanggan seperti yang dihuraikan dalam prasyarat.
 1. Pilih jenis aktiviti yang sepadan dengan jenis aktiviti pelanggan yang anda konfigurasikan.  Pilih **Cipta baharu** dan berikan nama jika anda tidak melihat pilihan yang memadankan jenis aktiviti yang anda perlukan.
 1. Anda perlu mengkonfigurasikan perhubungan daripada entiti aktiviti pelanggan anda kepada entiti Pelanggan.
@@ -101,7 +101,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 1. Petakan medan semantik untuk atribut dalam entiti aktiviti pelanggan dan pilih **Simpan**. Untuk perihalan medan, lihatlah [prasyarat](#prerequisites).
 1. (Pilihan) Jika anda mempunyai sebarang aktiviti pelanggan lain yang anda ingin sertakan, ulangi langkah di atas.
    > [!div class="mx-imgBorder"]
-   > ![Takrifkan perhubungan entiti](media/subscription-churn-customeractivitiesmapping.PNG "Halaman aktiviti pelanggan yang menunjukkan atribut semantik yang dipetakan kepada medan dalam entiti aktiviti pelanggan yang dipilih")
+   > ![Takrifkan perhubungan entiti.](media/subscription-churn-customeractivitiesmapping.PNG "Halaman aktiviti pelanggan yang menunjukkan atribut semantik yang dipetakan kepada medan dalam entiti aktiviti pelanggan yang dipilih")
 1. Pilih **Seterusnya**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Tetapkan jadual dan konfigurasi ulasan
@@ -115,7 +115,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 
 1. Pergi ke tab **Ramalan saya** pada **Kecerdasan** > **Ramalan**.
    > [!div class="mx-imgBorder"]
-   > ![Pandangan halaman Ramalan Saya](media/subscription-churn-mypredictions.PNG "Pandangan halaman Ramalan Saya")
+   > ![Pandangan halaman Ramalan Saya.](media/subscription-churn-mypredictions.PNG "Pandangan halaman Ramalan Saya")
 1. Pilih ramalan yang anda mahu semak semula.
    - **Nama ramalan:** Nama ramalan yang disediakan apabila menciptanya.
    - **Jenis ramalan:** Jenis model yang digunakan untuk ramalan
@@ -131,7 +131,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
    - **Terakhir disegar semula:** Tarikh ramalan menyegar semula hasil dalam entiti output.
 1. Pilih elipsis menegak di sebelah ramalan yang anda mahu semak semula hasilnya dan pilih **Pandangan**.
    > [!div class="mx-imgBorder"]
-   > ![Pandangan pilihan dalam elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam](media/subscription-churn-verticalellipses.PNG "Pandangan pilihan dalam elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam")
+   > ![Pandangan pilihan dalam menu elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam.](media/subscription-churn-verticalellipses.PNG "Pandangan pilihan dalam elipsis menegak untuk ramalan termasuk edit, segar semula, pandangan, log dan padam")
 1. Terdapat tiga bahagian utama data dalam halaman hasil:
     1. **Melatih prestasi model:** A, B atau C ialah skor yang mungkin. Skor ini menunjukkan prestasi ramalan dan boleh membantu anda membuat keputusan untuk menggunakan hasil yang disimpan dalam entiti output.
         - Skor ditentukan berdasarkan peraturan yang berikut:
@@ -139,13 +139,13 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
             - **B** apabila model diramal dengan tepat sekurang-kurangnya 50% daripada jumlah ramalan dan apabila peratus ramalan yang tepat untuk pelanggan yang pulangannya sehingga 10% lebih besar daripada kadar peratusan pulangan terdahulu bagi kadar peratusan pulangan terdahulu.
             - **C** apabila model diramal dengan tepat kurang daripada 50% jumlah ramalan atau apabila peratus ramalan yang tepat untuk pelanggan yang pulangannya kurang daripada kadar purata pulangan terdahulu.
                > [!div class="mx-imgBorder"]
-               > ![Pandangan hasil prestasi model](media/subscription-churn-modelperformance.PNG "Pandangan hasil prestasi model")
+               > ![Pandangan hasil prestasi model.](media/subscription-churn-modelperformance.PNG "Pandangan hasil prestasi model")
     1. **Kemungkinan untuk pulangan (bilangan pelanggan):** Kumpulan pelanggan berdasarkan risiko pulangan mereka yang diramalkan. Data ini boleh membantu anda kemudian jika anda mahu mencipta segmen pelanggan dengan risiko pulangan yang tinggi. Segmen seperti ini dapat membantu memahami tempat penggalan anda yang sepatutnya bagi keahlian segmen.
        > [!div class="mx-imgBorder"]
-       > ![Graf yang menunjukkan taburan hasil pulangan, dibahagikan kepada julat dari 0-100%](media/subscription-churn-resultdistribution.PNG "Graf yang menunjukkan taburan hasil pulangan, dibahagikan kepada julat dari 0-100%")
+       > ![Graf yang menunjukkan pengagihan hasil pulangan, dibahagikan kepada julat daripada 0-100%.](media/subscription-churn-resultdistribution.PNG "Graf yang menunjukkan taburan hasil pulangan, dibahagikan kepada julat dari 0-100%")
     1. **Faktor paling mempengaruhi:** Terdapat banyak faktor yang diambil kira apabila mencipta ramalan anda. Setiap faktor mempunyai kepentingannya yang dikira untuk ramalan teragregat yang dicipta oleh model. Anda boleh menggunakan faktor ini untuk membantu mengesahkan hasil ramalan anda. Atau anda boleh menggunakan maklumat ini kemudian untuk [mencipta segmen](segments.md) yang dapat membantu mempengaruhi risiko pulangan untuk pelanggan.
        > [!div class="mx-imgBorder"]
-       > ![Senarai yang menunjukkan faktor yang mempengaruhi dan kepentingannya dalam meramal hasil pulangan](media/subscription-churn-influentialfactors.PNG "Senarai yang menunjukkan faktor yang mempengaruhi dan kepentingannya dalam meramal hasil pulangan")
+       > ![Senarai yang menunjukkan faktor yang mempengaruhi dan kepentingannya dalam meramal hasil pulangan.](media/subscription-churn-influentialfactors.PNG "Senarai yang menunjukkan faktor yang mempengaruhi dan kepentingannya dalam meramal hasil pulangan")
 
 ## <a name="manage-predictions"></a>Urus ramalan
 

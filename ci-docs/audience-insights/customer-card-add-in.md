@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059599"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692216"
 ---
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
 
@@ -25,7 +25,7 @@ Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dyna
 ## <a name="prerequisites"></a>Prasyarat
 
 - Tambahan hanya berfungsi dengan aplikasi berpandukan model Dynamics 365 seperti Jualan atau Khidmat Pelanggan versi 9.0 dan kemudian.
-- Untuk memetakan data Dynamics 365 anda ke profil pelanggan wawasan khalayak, data perlu [diinges daripada aplikasi Dynamics 365 menggunakan penyambung Common Data Service](connect-power-query.md).
+- Untuk memetakan data Dynamics 365 anda ke profil pelanggan wawasan khalayak, data perlu [diinges daripada aplikasi Dynamics 365 menggunakan penyambung Microsoft Dataverse](connect-power-query.md).
 - Semua pengguna Dynamics 365 bagi Kad Pelanggan Tambahan mesti [ditambah sebagai pengguna](permissions.md) dalam wawasan khalayak untuk melihat data.
 - [Keupayaan carian dan penapis yang dikonfigurasi](search-filter-index.md) dalam wawasan khalayak diperlukan bagi mencari data untuk berfungsi.
 - Setiap kawalan tambahan bergantung pada data tertentu dalam wawasan khalayak:
@@ -50,7 +50,7 @@ Ia boleh mengambil sedikit masa untuk penyelesaian dipasangkan ke persekitaran a
 1. Pilih pautan **Nama Paparan** untuk penyelesaian **(Pratonton) Tambahan Kad Pelanggan Dynamics 365 Customer Insights**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pilih nama paparan](media/select-display-name.png "Pilih nama paparan")
+   > ![Pilih nama paparan.](media/select-display-name.png "Pilih nama paparan")
 
 1. Pilih **Log masuk** dan masukkan kelayakan akaun pentadbir yang anda gunakan untuk mengkonfigurasi Customer Insights.
 
@@ -64,7 +64,7 @@ Ia boleh mengambil sedikit masa untuk penyelesaian dipasangkan ke persekitaran a
    - Untuk memetakan dengan akaun, pilih medan dalam entiti Pelanggan yang sepadan dengan ID entiti kenalan anda.
 
    > [!div class="mx-imgBorder"]
-   > ![Medan ID Kenalan](media/contact-id-field.png "Medan ID kenalan")
+   > ![Medan ID kenalan.](media/contact-id-field.png "Medan ID kenalan")
 
 1. Pilih **Simpan konfigurasi** untuk menyimpan tetapan.
 
@@ -83,7 +83,7 @@ Ia boleh mengambil sedikit masa untuk penyelesaian dipasangkan ke persekitaran a
 1. Pilih borang kenalan yang anda mahu tambah kawalan Kad Pelanggan.
 
     > [!div class="mx-imgBorder"]
-    > ![Pilih borang Kenalan](media/contact-active-forms.png "Pilih borang Kenalan")
+    > ![Pilih borang Kenalan.](media/contact-active-forms.png "Pilih borang Kenalan")
 
 1. Untuk menambah kawalan, di dalam editor borang, seret sebarang medan daripada **Peneroka Medan** ke tempat anda mahu kawalan tersebut timbul.
 
@@ -110,7 +110,7 @@ Tambahan Kad Pelanggan tidak naik taraf secara automatik. Untuk naik taraf kepad
 
 1. Pilih **Gunakan Naik Taraf Penyelesaian** dalam bar tindakan.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Naik taraf penyelesaian dalam kawasan Penyesuaian aplikasi Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Naik taraf penyelesaian dalam kawasan Penyesuaian aplikasi Dynamics 365.":::
 
 1. Selepas memulakan proses naik taraf, anda akan melihat penunjuk memuat sehingga naik taraf selesai. Jika tiada versi lebih baharu, naik taraf itu akan menunjukkan mesej ralat.
 

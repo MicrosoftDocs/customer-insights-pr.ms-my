@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259202"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650053"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights menyediakan pilihan untuk menjadikan entiti output tersedia da
 
 **Organisasi yang mempunyai persekitaran Dataverse yang sedia ada**
 
-Organisasi yang telah menggunakan Dataverse boleh [menggunakan salah satu persekitaran Dataverse mereka yang sedia ada](manage-environments.md#create-an-environment-in-an-existing-organization) apabila pentadbir menyediakan cerapan khalayak. Dengan menyediakan URL kepada persekitaran Dataverse, ia melampirkan persekitaran cerapan khalayak baharu mereka. Untuk memastikan prestasi terbaik, Customer Insights dan persekitaran Dataverse mesti dihoskan di kawasan yang sama.
+Organisasi yang telah menggunakan Dataverse boleh [menggunakan salah satu persekitaran Dataverse mereka yang sedia ada](get-started-paid.md) apabila pentadbir menyediakan cerapan khalayak. Dengan menyediakan URL kepada persekitaran Dataverse, ia melampirkan persekitaran cerapan khalayak baharu mereka. Untuk memastikan prestasi terbaik, Customer Insights dan persekitaran Dataverse mesti dihoskan di kawasan yang sama.
 
 Untuk melampirkan persekitaran Dataverse, kembangkan **Tetapan lanjutan** apabila mencipta persekitaran cerapan khalayak. Sediakan **URL persekitaran Microsoft Dataverse** dan pilih kotak semak untuk **Dayakan perkongsian data**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Organisasi baharu**
 

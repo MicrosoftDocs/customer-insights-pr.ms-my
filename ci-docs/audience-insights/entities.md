@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049405"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553986"
 ---
 # <a name="entities-in-audience-insights"></a>Entiti dalam wawasan khalayak
 
@@ -30,19 +30,19 @@ Halaman **Entiti** menyenaraikan entiti dan termasuk beberapa lajur:
 - **Kemas kini terakhir**: Tarikh dan masa kemas kini yang terakhir bagi entiti
 - **Segar semula terakhir**: Tarikh dan masa data terakhir segar semula
 
-## <a name="exploring-a-specific-entitys-data"></a>Menerokai data entiti khusus
+## <a name="explore-a-specific-entitys-data"></a>Terokai data entiti khusus
 
 Pilih entiti untuk menerokai medan dan rekod yang berbeza termasuk dalam entiti tersebut.
 
 > [!div class="mx-imgBorder"]
-> ![Pilih entiti](media/data-manager-entities-data.png "Pilih entiti")
+> ![Pilih entiti.](media/data-manager-entities-data.png "Pilih entiti")
 
 - Tab **Data** menunjukkan butiran penyenaraian jadual tentang rekod individu entiti.
 
 > [!div class="mx-imgBorder"]
-> ![Jadual medan](media/data-manager-entities-fields.PNG "Jadual medan")
+> ![Jadual medan.](media/data-manager-entities-fields.PNG "Jadual medan")
 
-- Tab **Atribut** dipilih secara lalai dan menunjukkan jadual untuk menyemak butiran bagi entiti yang dipilih seperti nama medan, jenis data dan jenis. Lajur **Jenis** menunjukkan jenis berkaitan Model Data Lazim, yang mana sama ada dikenal pasti secara automatik oleh sistem atau [dipetakan secara manual](map-entities.md) oleh pengguna. Ini ialah jenis semantik yang mungkin berbeza daripada jenis data atribut—contohnya, medan *e-mel* di bawah mempunyai jenis data *Teks* tetapi jenis Model Data Lazim (semantik) berkemungkinan *E-mel* atau *AlamatE-mel*.
+- Tab **Atribut** dipilih secara lalai dan menunjukkan jadual untuk menyemak butiran bagi entiti yang dipilih seperti nama medan, jenis data dan jenis. Lajur **Jenis** menunjukkan jenis berkaitan Model Data Lazim, yang mana sama ada dikenal pasti secara automatik oleh sistem atau [dipetakan secara manual](map-entities.md) oleh pengguna. Jenis ini ialah jenis semantik yang boleh berbeza daripada jenis data atribut. Sebagai contoh, medan *E-mel* di bawah mempunyai jenis data *Teks* tetapi jenis Common Data Model (semantik) mungkin *E-mel* atau *EmailAddress*.
 
 > [!NOTE]
 > Kedua-dua jadual menunjukkan hanya sampel data entiti anda. Untuk melihat set data lengkap, pergi ke halaman **Sumber data**, pilih entiti, pilih **Edit** dan lihat data entiti ini dengan editor Power Query seperti yang diterangkan dalam [Sumber data](data-sources.md).
@@ -52,11 +52,28 @@ Untuk mengetahui lebih lanjut tentang data yang dimasukkan di dalam entiti, laju
 Pilih ikon carta untuk melihat ringkasan data.
 
 > [!div class="mx-imgBorder"]
-> ![Simbol ringkasan](media/data-manager-entities-summary.png "Jadual ringkasan data")
+> ![Simbol ringkasan.](media/data-manager-entities-summary.png "Jadual ringkasan data")
 
-### <a name="next-step"></a>Langkah seterusnya
+## <a name="entity-specific-information"></a>Maklumat entiti tertentu
 
-Lihat topik [Menyatukan](data-unification.md) untuk mengetahui cara untuk *memetakan*, *padan* dan *menggabungkan* data yang dimasukkan.
+Bahagian berikut menyediakan maklumat tentang beberapa entiti yang dicipta sistem.
+
+### <a name="corrupted-data-sources"></a>Sumber data rosak
+
+Medan daripada sumber data yang diinges boleh mengandungi data yang rosak. Rekod dengan medan yang rosak terdedah dalam entiti yang dicipta sistem. Mengetahui tentang rekod rosak membantu anda mengenal pasti data yang perlu disemak dan dikemas kini pada sistem sumber. Selepas penyegaran semula sumber data seterusnya, rekod yang dibetulkan diinjes kepada Customer Insights dan diserahkan kepada proses hiliran. 
+
+Sebagai contoh, lajur 'hari jadi' mempunyai jenis data yang ditetapkan sebagai 'tarikh'. Rekod pelanggan mempunyai hari lahir mereka dimasukkan sebagai '01/01/19777'. Sistem akan membenderakan rekod ini sebagai rosak. Seseorang kini boleh menukar hari lahir dalam sistem sumber kepada '1977'. Selepas penyegaran semula sumber data automatik, medan kini mempunyai format yang sah dan rekod akan dialih keluar daripada entiti yang rosak. 
+
+Pergi ke **Data** > **Entiti** dan cari entiti yang rosak dalam bahagian **Sistem**. Penamaan skema entiti yang rosak: 'DataSourceName_EntityName_corrupt'.
+
+Customer Insights masih memproses rekod yang rosak. Walau bagaimanapun, ia mungkin menyebabkan isu semasa bekerja dengan data disatukan.
+
+Pemeriksaan berikut berjalan pada data yang diinjes untuk mendedahkan rekod rosak: 
+
+- Nilai medan tidak sepadan dengan jenis data lajurnya.
+- Medan mengandungi aksara yang menyebabkan lajur tidak sepadan dengan skema yang dijangkakan. Sebagai contoh: sebut harga yang diformatkan dengan salah, sebut harga yang tidak dilepaskan atau aksara baris baharu.
+- Jika terdapat lajur datetime/date/datetimeoffset, formatnya perlu ditentukan dalam model jika tidak mengikuti format ISO standard.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

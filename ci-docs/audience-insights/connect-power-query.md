@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305902"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554695"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambung kepada sumber data Power Query
 
@@ -42,7 +42,7 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 1. Dialog **Power Query - Edit pertanyaan** membolehkan anda menyemak semula dan memperhalusi data. Entiti yang dikenal pasti sistem dalam sumber data terpilih anda muncul dalam anak tetingkap kiri.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit dialog pertanyaan](media/data-manager-configure-edit-queries.png "Edit dialog pertanyaan")
+   > ![Edit dialog pertanyaan.](media/data-manager-configure-edit-queries.png "Edit dialog pertanyaan")
 
 1. Anda juga boleh mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan pilihan dalam tetingkap Power Query untuk menggunakan transformasi. Setiap transformasi akan disenaraikan di bawah **Langkah yang digunakan**. Power Query menyediakan pelbagai pilihan transformasi yang dibina terlebih dahulu. Untuk maklumat lebih lanjut, lihat [Transformasi Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Penyambung dengan tanda semak dalam lajur **Customer Insights (Alir data)** ters
 2. Pilih elipsis menegak di sebelah sumber data yang ingin anda ubah dan pilih **Edit** daripada menu juntai bawah.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit pilihan](media/edit-option-data-sources.png "Edit pilihan")
+   > ![Edit pilihan.](media/edit-option-data-sources.png "Edit pilihan")
 
 3. Gunakan perubahan dan transformasi anda dalam dialog **Power Query - Edit pertanyaan** seperti yang diterangkan dalam bahagian [Cipta bahagian sumber data baharu](#create-a-new-data-source).
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305167"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555502"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Mengayakan profil pelanggan dengan persamaan jenama dan kepentingan (pratonton)
 
@@ -27,7 +27,7 @@ Untuk mengkonfigurasikan pengayaan afiniti jenama pergi ke tab **Temui** dan pil
 Untuk mengkonfigurasikan pengayaan afiniti kepentingan, pergi ke tab **Temui** dan pilih **Perkayakan data saya** pada jubin **Kepentingan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Jubin Jenama dan Minat](media/BrandsInterest-tile-Hub.png "Jubin Jenama dan Minat")
+   > ![Jubin Jenama dan Minat.](media/BrandsInterest-tile-Hub.png "Jubin Jenama dan Minat")
 
 ## <a name="how-we-determine-affinities"></a>Cara kami menentukan afiniti
 
@@ -123,7 +123,7 @@ Bergantung pada saiz data pelanggan anda, ia mungkin mengambil masa beberapa min
 
 Selepas menjalankan proses pengayaan, pergi ke **Pengayaan saya** untuk menyemak semula jumlah bilangan pelanggan yang diperkayakan dan pecahan jenama dan kepentingan dalam proses pelanggan yang diperkayakan.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Pratonton keputusan selepas menjalankan proses pengayaan":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Pratonton hasil selepas menjalankan proses pengayaan.":::
 
 Kaji semula data yang diperkaya dengan memilih **Lihat data diperkaya** dalam carta. Data diperkaya untuk jenama pergi kepada entiti **PersamaanJenamaDaripadaMicrosoft**. Data untuk kepentingan adalah dalam entiti **PersamaanKepentinganDaripadaMicrosoft**. Anda juga akan menemui entiti ini yang disenaraikan dalam kumpulan **Pengayaan** dalam **Entiti** > **Data**.
 
@@ -131,7 +131,7 @@ Kaji semula data yang diperkaya dengan memilih **Lihat data diperkaya** dalam ca
 
 Jenama dan afiniti berkepentingan juga boleh dilihat pada kad pelanggan individu. Pergi ke **Pelanggan** dan pilih profil pelanggan. Dalam kad pelanggan, anda akan menemui carta untuk jenama atau kepentingan yang orang dalam profil demografik pelanggan mempunyai afiniti untuknya.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kad pelanggan dengan data diperkaya":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kad pelanggan dengan data diperkaya.":::
 
 ## <a name="next-steps"></a>Langkah seterusnya
 

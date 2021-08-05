@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306039"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650329"
 ---
 # <a name="match-entities"></a>Padankan entiti
 
@@ -138,7 +138,7 @@ Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan y
    - **Kurang terkini**: Mengenal pasti rekod pemenang berdasarkan kurang terkini. Memerlukan medan tarikh atau angka untuk mentakrifkan yang terkini.
  
    > [!div class="mx-imgBorder"]
-   > ![Langkah 1 peraturan nyahpenduaan](media/match-selfconflation.png "Langkah 1 peraturan nyahpenduaan")
+   > ![Langkah 1 peraturan nyahduplikasi.](media/match-selfconflation.png "Langkah 1 peraturan nyahpenduaan")
  
 1. Sebaik sahaja entiti dipilih dan keutamaan gabungan ditetapkan, pilih **Tambah peraturan** untuk mentakrifkan peraturan penyahduplikasi pada peringkat entiti.
    - **Pilih medan** menyenaraikan semua medan yang tersedia daripada entiti tersebut. Pilih medan yang anda mahu semak untuk duplikasi. Pilih medan yang mungkin unik untuk setiap pelanggan tunggal. Contohnya, alamat e-mel atau gabungan nama, bandar dan nombor telefon.
@@ -146,7 +146,7 @@ Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan y
    - Takrifkan lebih banyak syarat dengan memilih **Tambah syarat**.
  
    > [!div class="mx-imgBorder"]
-   > ![Langkah 2 peraturan nyahpenduaan](media/match-selfconflation-rules.png "Langkah 2 peraturan nyahpenduaan")
+   > ![Langkah 2 peraturan nyahduplikasi.](media/match-selfconflation-rules.png "Langkah 2 peraturan nyahpenduaan")
 
   Anda boleh mencipta berbilang peraturan nyahpenduaan untuk entiti. 
 
@@ -179,7 +179,9 @@ Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Jalankan** untuk memul
 Anda akan menemui hasil jalanan yang berjaya, entiti profil pelanggan yang disatukan, di halaman **Entiti**. Entiti pelanggan anda yang disatukan anda dipanggil **Pelanggan** dalam bahagian **Profil**. Jalanan padanan pertama yang berjaya mencipta entiti *Pelanggan* yang disatukan. Semua jalanan padanan yang berikutnya melanjutkan entiti itu.
 
 > [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+> Selepas menjalankan proses padanan, pilih status proses untuk membuka anak tetingkap **Butiran tugas**. Ia memberikan gambaran keseluruhan tentang masa pemprosesan, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas. Pilih **Lihat butiran** untuk melihat entiti yang mengambil bahagian dalam proses padanan, peraturan yang digunakan pada mereka dan jika kemas kini berjaya diterbitkan.  
+> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
 
 ## <a name="review-and-validate-your-matches"></a>Semak semula dan sahkan padanan anda
 

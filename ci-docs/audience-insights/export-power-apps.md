@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598166"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554124"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Penyambung Microsoft Power Apps (pratonton)
 
@@ -56,12 +56,12 @@ Sebagai contoh, anda menambahkan profil pelanggan ke [kawalan galeri](/powerapps
 1. Tambah kawalan **Galeri** kepada aplikasi yang anda sedang bina.
 
 > [!div class="mx-imgBorder"]
-> ![Tambah elemen galeri](media/connector-powerapps9.png "Tambah elemen galeri")
+> ![Tambah elemen galeri.](media/connector-powerapps9.png "Tambah elemen galeri")
 
 1. Pilih **Pelanggan** sebagai sumber data untuk item.
 
     > [!div class="mx-imgBorder"]
-    > ![Pilih sumber data](media/choose-datasource-powerapps.png "Pilih sumber data")
+    > ![Pilih sumber data.](media/choose-datasource-powerapps.png "Pilih sumber data")
 
 1. Anda boleh mengubah panel data pada bahagian kanan untuk memilih medan bagi entiti Pelanggan untuk ditunjukkan pada galeri.
 

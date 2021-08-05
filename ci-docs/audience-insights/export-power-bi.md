@@ -1,7 +1,7 @@
 ---
 title: Penyambung Power BI
 description: Ketahui cara menggunakan penyambung Dynamics 365 Customer Insights dalam Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596050"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661113"
 ---
 # <a name="connector-for-power-bi-preview"></a>Penyambung untuk Power BI (pratonton)
 
@@ -39,7 +39,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 
 1. Dalam kotak dialog **Pengemudi**. anda lihat senarai semua persekitaran yang anda mempunyai akses. Kembangkan persekitaran dan buka sebarang folder (entiti, langkah, segmen, pengayaan). Contoh, buka folder **Entiti** untuk melihat semua entiti yang boleh anda import.
 
-   ![Navigasi Penyambung Power BI](media/power-bi-navigator.png "Navigasi Penyambung Power BI")
+   ![Pengemudi Penyambung Power BI.](media/power-bi-navigator.png "Navigasi Penyambung Power BI")
 
 1. Pilih kotak semak bersebelahan dengan entiti untuk disertakan dan **Dimuatkan**. Anda boleh memilih entiti berbilang daripada persekitaran berbilang.
 
@@ -68,5 +68,11 @@ Anda boleh mengenal pasti dan mengalih keluar perhubungan pendua.
 3. Alih keluar sebarang perhubungan pendua yang dikenal pasti.
 
 Selepas penyingkiran perhubungan pendua, cuba konfigurasi penyambung Power BI sekali lagi. Persekitarannya sepatutnya boleh tersedia sekarang.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Ralat pada medan tarikh semasa memuatkan entiti dalam Power BI Desktop
+
+Apabila memuatkan entiti yang mengandungi medan dengan format tarikh seperti MM/DD/YYYY, anda boleh menghadapi ralat kerana disebabkan format bahasa yang tidak sepadan. Ketidaksepadanan ini berlaku apabila fail Power BI Desktop anda ditetapkan kepada bahasa lain selain daripada Bahasa Inggeris (Amerika Syarikat), kerana medan tarikh dalam cerapan khalayak disimpan dalam format AS.
+
+Fail Power BI Desktop ini mempunyai tetapan bahasa tunggal, yang digunakan apabila mendapatkan data. Dapatkan medan tarikh ini ditafsirkan dengan betul, tetapkan bahasa fail .BPI kepada Bahasa Inggeris (Amerika Syarikat). [Ketahui cara menukar bahasa fail Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

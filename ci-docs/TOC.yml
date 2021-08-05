@@ -2,6 +2,8 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
+- name: Cipta percubaan
+  href: audience-insights/get-started-trial.md
 - name: Akses persekitaran anda
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Cerapan khalayak
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Gambaran keseluruhan keupayaan
       href: audience-insights/overview.md
-    - name: Percubaan percuma
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Ciri baharu dan dikemas kini
       href: audience-insights/whats-new-audience-insights.md
-    - name: Cipta persekitaran baru
-      href: audience-insights/home.md
+    - name: Cipta persekitaran baharu
+      href: audience-insights/get-started-paid.md
     - name: Belajar modul
       items:
         - name: Inges data
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Tambah folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
-        - name: Tambah data lake yang diuruskan Common Data Service
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Tambah data lake yang diuruskan Dataverse
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Segar semula tambahan untuk sumber data
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Pengingesan data masa nyata
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Perkayakan dengan import tersuai SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmen dan ukuran
+    - name: Segmen
       items:
         - name: Gambaran keseluruhan segmen
           href: audience-insights/segments.md
-        - name: Cipta bahagian dan kumpulan pelanggan
+        - name: Cipta segmen
           href: audience-insights/segment-builder.md
         - name: Segmen yang dicadangkan berdasarkan pada ukuran
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Cipta dan ubah suai peristiwa
           href: engagement-insights/refined-events.md
+        - name: Kenal pasti peristiwa web daripada pelawat yang disahkan sebelumnya
+          href: engagement-insights/unknown-to-known.md
         - name: Eksport peristiwa
           href: engagement-insights/export-events.md
     - name: Laporan
@@ -304,6 +306,8 @@
       items:
         - name: Padam dan eksport data peribadi
           href: engagement-insights/delete-export-personal-data.md
+    - name: Ketersediaan rantau
+      href: engagement-insights/regional-availability.md
     - name: Had perkhidmatan
       href: engagement-insights/quotas.md
 - name: Hubungi sokongan

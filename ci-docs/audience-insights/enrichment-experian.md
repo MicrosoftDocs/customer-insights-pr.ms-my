@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309831"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555364"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Memperkaya profil pelanggan dengan demografi daripada Experian (pratonton)
 
@@ -39,7 +39,7 @@ Pada masa ini, kami menyokong pengayaan profil pelanggan di Amerika Syarikat sah
 1. Pilih **Perkayakan data saya** pada jubin Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian Jubin](media/experian-tile.png "Experian tile")
+   > ![Jubin Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Pilih [sambungan](connections.md) daripada senarai juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan memilih **Tambah sambungan** dan memilih Experian daripada senarai juntai bawah. 
