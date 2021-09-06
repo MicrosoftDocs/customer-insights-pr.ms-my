@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171175"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035242"
 ---
 # <a name="relationships-between-entities"></a>Perhubungan antara entiti
 
@@ -82,7 +82,7 @@ Halaman ini menawarkan satu set pilihan untuk perhubungan sedia ada dan baharu:
 
 ### <a name="explore-the-relationship-visualizer"></a>Terokai penampak perhubungan
 
-Penampak perhubungan menunjukkan gambar rajah rangkaian perhubungan yang sedia ada antara entiti yang berhubung dengan kekardinalan.
+Penampak perhubungan menunjukkan gambar rajah rangkaian perhubungan yang sedia ada antara entiti yang berhubung dengan kekardinalan. Ia juga menggambarkan laluan perhubungan.
 
 Untuk menyesuaikan pandangan, anda boleh mengubah kedudukan kotak dengan menyeret kotak pada kanvas.
 
@@ -92,6 +92,20 @@ Pilihan yang tersedia:
 - **Eksport sebagai imej**: Simpan pandangan semasa sebagai fail imej.
 - **Tukar kepada tataletak mendatar/menegak**: Tukar penjajaran entiti dan perhubungan.
 - **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
+
+### <a name="relationship-path"></a>Laluan perhubungan
+
+Laluan perhubungan menerangkan entiti yang disambungkan dengan perhubungan antara entiti sumber dan entiti sasaran. Ia digunakan apabila mencipta segmen atau ukuran yang termasuk entiti lain daripada entiti profil disatukan dan terdapat beberapa pilihan untuk mencapai entiti profil disatukan.
+
+Laluan perhubungan ini memberitahu sistem yang perhubungan untuk mengakses entiti profil disatukan. Laluan perhubungan yang berbeza boleh menghasilkan keputusan yang berbeza.
+
+Contohnya, entiti *eCommerce_eCommercePurchases* mempunyai perhubungan berikut kepada entiti *Pelanggan* profil disatukan:
+
+- eCommerce_eCommercePurchases > Pelanggan
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan 
+
+Laluan perhubungan menentukan entiti yang boleh anda gunakan apabila mencipta peraturan untuk ukuran atau segmen. Memilih pilihan dengan laluan perhubungan terpanjang mungkin menghasilkan kurang hasil kerana rekod yang sepadan perlu menjadi sebahagian daripada semua entiti. Dalam contoh ini, pelanggan perlu membeli barang melalui e-dagang(eCommerce_eCommercePurchases), pada tempat jualan (POS_posPurchases) dan mengambil bahagian dalam program kesetiaan kami (loyaltyScheme_loyCustomers). Apabila memilih pilihan pertama, anda mungkin akan mendapat lebih banyak keputusan kerana pelanggan perlu wujud dalam satu entiti tambahan.
 
 ## <a name="manage-existing-relationships"></a>Urus perhubungan yang sedia ada 
 
@@ -105,6 +119,6 @@ Pilih perhubungan dan pilih salah satu daripada pilihan berikut:
 
 ## <a name="next-step"></a>Langkah seterusnya
 
-Perhubungan sistem dan tersuai digunakan untuk [mencipta segmen](segments.md) berdasarkan berbilang sumber data yang tidak lagi silo.
+Sistem dan perhubungan tersuai digunakan untuk [mencipta segmen](segments.md) dan [ukuran](measures.md) berdasarkan sumber data berganda yang tidak lagi siloed.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

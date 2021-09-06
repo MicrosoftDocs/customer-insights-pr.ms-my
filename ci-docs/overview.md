@@ -3,21 +3,21 @@ title: Ikhtisar produk
 author: m-hartmann
 description: Dapatkan gambaran keseluruhan untuk Dynamics 365 Customer Insights dan keupayaannya.
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539400"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036522"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Gambaran keseluruhan produk untuk Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights adalah sebahagian daripada platform data pelanggan Microsoft (CDP) yang membantu menyampaikan pengalaman pelanggan diperibadikan. Keupayaan platform memberikan wawasan tentang siapa pelanggan anda dan cara mereka terlibat dengan platform anda. Menyatukan data pelanggan merentasi berbilang sumber untuk mendapatkan pandangan tunggal pelanggan.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) adalah sebahagian platform data pelanggan Microsoft (CDP) yang membantu menyampaikan pengalaman pelanggan diperibadikan. Keupayaan platform memberikan wawasan tentang siapa pelanggan anda dan cara mereka terlibat dengan platform anda. Menyatukan data pelanggan merentasi berbilang sumber untuk mendapatkan pandangan tunggal pelanggan.
 
 
 - [Wawasan khalayak](audience-insights/overview.md) membantu anda mengubah perniagaan anda menjadi organisasi yang berpusat kepada pelanggan. Pemasaran, jualan dan profesional perkhidmatan mempunyai wawasan yang mereka perlukan untuk memperibadikan pengalaman. Sambungkan data daripada sumber transaksi, tingkah laku dan pemerhatian untuk mencipta paparan pelanggan 360 darjah. Lihat hasil dengan lebih pantas dengan CDP yang direka untuk menyampaikan wawasan yang boleh bertindak ke atas. 

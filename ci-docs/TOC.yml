@@ -150,7 +150,7 @@
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Platform Pengalaman Adobe
+            - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Had perkhidmatan
       href: engagement-insights/quotas.md
-- name: Hubungi sokongan
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Menyepadukan khalayak dan cerapan penglibatan
+  items:
+    - name: Pautkan cerapan khalayak dan cerapan penglibatan
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Gunakan segmen cerapan khalayak dalam laporan cerapan penglibatan
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Gunakan dimensi demografi untuk data tingkah laku pemisahan
+      href: engagement-insights/curate-dimensions.md
+- name: Dapatkan sokongan
+  href: 'https://dynamics.microsoft.com/en-us/support/'

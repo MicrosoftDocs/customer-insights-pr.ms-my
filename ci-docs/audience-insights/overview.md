@@ -1,7 +1,7 @@
 ---
 title: Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 description: Gambaran keseluruhan wawasan khalayak untuk Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539126"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034371"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 
-Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pelanggan anda. Sambungkan data dari pelbagai sumber transaksi, tingkah laku dan pemerhatian untuk mencipta pandangan pelanggan 360 darjah. Gunakan wawasan ini untuk memacu pengalaman dan proses yang berpusatkan pelanggan. Menyatukan dan memahami data pelanggan dan memanfaatkannya untuk tindakan dan wawasan pintar.
+[Cerapan khalayak, keupayaan Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) membantu anda membina pemahaman yang lebih mendalam mengenai pelanggan anda. Sambungkan data dari pelbagai sumber transaksi, tingkah laku dan pemerhatian untuk mencipta pandangan pelanggan 360 darjah. Gunakan wawasan ini untuk memacu pengalaman dan proses yang berpusatkan pelanggan. Menyatukan dan memahami data pelanggan dan memanfaatkannya untuk tindakan dan wawasan pintar.
 
 ## <a name="main-benefits"></a>Faedah utama 
 
@@ -34,9 +34,9 @@ Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pe
 
 - **Kuasakan proses perniagaan dan pengalaman pelanggan peribadi anda**
 
-  - Memacu perikatan peribadi merentasi saluran—memberi kuasa pemasaran, jualan dan perkhidmatan profesional di luar kotak, wawasan pelanggan kontekstual dan kad profil pelanggan yang disesuaikan dimasukkan ke dalam aplikasi perniagaan mereka yang digunakan setiap hari
-  - Mengautomatikkan pengalaman dan proses yang mengutamakan pelanggan berdasarkan profil boleh disesuaikan, tindakan perniagaan dan bahagian.
-  - Mendayakan dan memperluaskan pengalaman perniagaan yang dibina pada [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bina aplikasi dengan cepat dengan wawasan terbenam menggunakan pendekatan kod rendah yang kuat dari PowerApps.  
+  - Memandu penglibatan diperibadikan merentasi saluran — memperkasakan pemasaran, jualan dan profesional perkhidmatan. Gunakan kad profil pelanggan yang disesuaikan, cerapan dan di luar kotak yang disepadukan dengan aplikasi perniagaan yang mereka sudah gunakan.
+  - Mengautomatikkan pengalaman dan proses berdasarkan pada profil boleh disesuaikan, ukuran perniagaan dan segmen.
+  - Mendayakan dan memperluaskan pengalaman perniagaan yang dibina pada [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bina aplikasi dengan cepat dengan wawasan terbenam menggunakan pendekatan kod rendah yang kuat dari Power Apps.  
 
 ## <a name="key-audiences"></a>Khalayak utama
 
@@ -50,13 +50,18 @@ Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pe
 
 - **Pengguna perniagaan:**
 
-  - Wawasan ke dalam profil pelanggan 360 darjah dan pandangan hujung ke hujung perjalanan pelanggan.
-  - Lihat data pelanggan 360 darjah dalam proses perniagaan Dynamics 365 dengan pakej yang dibina dahulu.
+  - Cerapan ke dalam profil pelanggan 360 darjah dan perjalanan pelanggan.
+  - Lihat data pelanggan 360 darjah dalam proses perniagaan Dynamics 365 dengan pakej prabina.
 
 - **Penganalisis perniagaan:**
 
   - Bina profil boleh disesuaikan, takrifkan tindakan dan cipta segmen, dan manfaat daripada analtisi ramalan untuk mendapatkan pandangan 360 darjah pelanggan anda, khusus untuk organisasi anda.  
-  - Gunakan penyambung di luar kotak untuk beberapa aplikasi Microsoft dan pihak ketiga atau API untuk memproses wawasan lebih lanjut.
+  - Gunakan penyambung di luar kotak untuk beberapa aplikasi pihak ketiga dan Microsoft atau API untuk memproses cerapan.
 
+## <a name="pricing-and-licensing"></a>Penentuan harga dan pelesenan
+
+Customer Insights telah dilesenkan setiap penyewa dan termasuk berbilang keupayaan. Kapasiti yang layak termasuk set profil, sistem harian penyegaran semula, permintaan Power Platform dan dua persekitaran. Anda boleh membeli kapasiti tambahan dan lesen untuk meningkatkan kuota lalai. 
+- Kapasiti terperinci dan kelayakan: [Panduan Pelesenan Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Gambaran keseluruhan harga: [Harga Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

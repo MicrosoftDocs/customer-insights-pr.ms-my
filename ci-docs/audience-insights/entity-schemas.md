@@ -1,7 +1,7 @@
 ---
 title: Skema entiti Customer Insights dalam Common Data Model
 description: Bekerja dengan entiti dalam Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692316"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380754"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
 
@@ -42,7 +42,7 @@ Untuk maklumat lanjut, lihat dokumentasi tentang [Skim entiti Customer Insights 
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Lihat entiti menggunakan Pengemudi Entiti Model Data Biasa
 
-Anda boleh melihat entiti dalam [Navigasi Entiti Common Data Model](https://microsoft.github.io/CDM/). Pilih **Muat dari GitHub!** butang dan navigasi ke **foundationCommon** > **crmCommon** > **penyelesaian** > **customerInsights** tempat anda akan dapati senarai entiti Customer Insights dan definisi mereka.
+Anda boleh melihat entiti dalam [Navigasi Entiti Common Data Model](https://microsoft.github.io/CDM/). Pilih entiti daripada bahagian Aplikasi Cerapan untuk mendapatkan senarai entiti Customer Insights dan definisi mereka.
 > [!div class="mx-imgBorder"]
 > ![Pengemudi Entiti CDM menunjukkan entiti CustomerActivity.](media/CDM-entity-navigator.png "Pengemudi Entiti CDM menunjukkan entiti CustomerActivity")
 

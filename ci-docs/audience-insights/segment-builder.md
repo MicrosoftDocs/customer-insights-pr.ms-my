@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685473"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377799"
 ---
 # <a name="create-and-manage-segments"></a>Cipta dan urus segmen
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685473"
 > - Anak tetingkap sisi untuk memilih atribut akan sentiasa tersedia.
 > - Pilihan untuk memilih laluan perhubungan entiti.
 > Untuk mencuba pembina segmen baharu, hantar e-mel dengan subjek "Permintaan untuk mendayakan pembina segmen baharu" kepada cihelp [at] microsoft.com. Sertakan nama organisasi anda dan ID persekitaran kotak pasir anda.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemen dalam pembina segmen." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Mengaturkan segmen anda dengan peraturan dan subperaturan. Setiap peraturan atau subperaturan terdiri daripada syarat. Gabungkan syarat dengan operator logik
+>
+> 2 - Pilih [laluan perhubungan](relationships.md) antara entiti yang digunakan pada peraturan. Laluan perhubungan menentukan atribut yang boleh digunakan dalam syarat.
+>
+> 3 - Uruskan peraturan dan subperaturan. Tukar kedudukan peraturan atau padamkan.
+>
+> 4 - Tambah syarat dan bina tahap penyarangan yang betul menggunakan subperaturan.
+>
+> 5 - Gunakan operasi tetapan untuk peraturan yang disambungkan.
+>
+> 6 - Gunakan anak tetingkap atribut untuk menambah atribut entiti tersedia atau cipta syarat berdasarkan atribut. Anak tetingkap menunjukkan senarai entiti dan atribut, berdasarkan laluan perhubungan yang dipilih, yang tersedia untuk peraturan yang dipilih.
+>
+> 7 - Tambah syarat berdasarkan atribut kepada peraturan sedia ada dan subperaturan atau menambahkannya ke peraturan baharu.
+>
+> 8 - Buat asal dan buat semula perubahan semasa membina segmen.
 
 Takrifkan penapis kompleks sekitar entiti pelanggan disatukan dan entiti yang berkaitan. Setiap segmen, selepas pemprosesan, mencipta set rekod pelanggan yang boleh anda eksport dan ambil tindakan padanya. Segmen diuruskan pada halaman **Segmen**. 
 
@@ -147,6 +164,6 @@ Segmen pantas membolehkan anda membina segmen ringkas dengan operator tunggal de
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-[Eksport bahagian](export-destinations.md) dan teroka [Kad Pelanggan](customer-card-add-in.md) dan [Penyambung](export-power-bi.md) untuk mendapatkan wawasan pada peringkat pelanggan.
+[Eksport segmen](export-destinations.md) dan terokai [penyepaduan Kad Pelanggan](customer-card-add-in.md) untuk menggunakan segmen dalam aplikasi lain.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
