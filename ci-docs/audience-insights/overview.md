@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034371"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474068"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 
@@ -57,11 +57,5 @@ ms.locfileid: "7034371"
 
   - Bina profil boleh disesuaikan, takrifkan tindakan dan cipta segmen, dan manfaat daripada analtisi ramalan untuk mendapatkan pandangan 360 darjah pelanggan anda, khusus untuk organisasi anda.  
   - Gunakan penyambung di luar kotak untuk beberapa aplikasi pihak ketiga dan Microsoft atau API untuk memproses cerapan.
-
-## <a name="pricing-and-licensing"></a>Penentuan harga dan pelesenan
-
-Customer Insights telah dilesenkan setiap penyewa dan termasuk berbilang keupayaan. Kapasiti yang layak termasuk set profil, sistem harian penyegaran semula, permintaan Power Platform dan dua persekitaran. Anda boleh membeli kapasiti tambahan dan lesen untuk meningkatkan kuota lalai. 
-- Kapasiti terperinci dan kelayakan: [Panduan Pelesenan Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Gambaran keseluruhan harga: [Harga Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Cipta pautan antara cerapan khalayak dan cerapan penglibatan
 description: Cipta pautan aktif antara cerapan khalayak dan cerapan penglibatan untuk mendayakan perkongsian dwiarah data.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461024"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487118"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Cipta pautan antara cerapan khalayak dan cerapan penglibatan
 
@@ -26,14 +26,14 @@ Gunakan profil dan segmen disatukan daripada cerapan khalayak untuk lebih banyak
 ## <a name="prerequisites"></a>Prasyarat
 
 - Profil cerapan khalayak mesti disimpan dalam akaun Azure Data Lake Storage yang anda miliki atau dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;data lake yang diuruskan. 
-
+- Persekitaran cerapan khalayak anda harus mempunyai persekitaran Dataverse yang berkaitan. Dan jika persekitaran tersebut juga menggunakan Dataverse untuk storan data, pastikan anda menyemak pilihan **Dayakan perkongsian data** dalam cerapan khalayak. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan konfigurasikan persekitaran berbayar dalam cerapan khalayak](../audience-insights/get-started-paid.md).
 - Anda memerlukan keizinan pentadbir untuk kedua-dua cerapan penglibatan dan persekitaran cerapan khalayak.
-
 - Persekitaran yang dipautkan mestilah dalam rantau geografi yang sama.
 
 > [!NOTE]
-> - Jika langganan cerapan khalayak anda ialah percubaan, yang menggunakan cerapan khalayak data lake yang diuruskan secara dalaman, hubungi [pirequest@microsoft.com](mailto:pirequest@microsoft.com) untuk bantuan. 
-> - Jika persekitaran cerapan khalayak anda menggunakan Azure Data Lake Storage anda sendiri untuk menyimpan data, anda perlu menambah cerapan penglibatan prinsipal perkhidmatan Azure ke akaun storan anda. Untuk mendapatkan butiran, pergi ke [Sambungkan kepada akaun Azure Data Lake Storage dengan prinsipal perkhidmatan Azure untuk cerapan khalayak](../audience-insights/connect-service-principal.md). Juga, persekitaran cerapan khalayak anda harus mempunyai persekitaran yang berkaitan [Persekitaran Dataverse](../audience-insights/get-started-paid.md). 
+> - Jika langganan cerapan khalayak anda ialah percubaan yang menggunakan cerapan khalayak Data Lake yang diuruskan secara dalaman, hubungi [pirequest@microsoft.com](mailto:pirequest@microsoft.com) untuk mendapatkan bantuan. 
+> - Jika persekitaran cerapan khalayak anda menggunakan Azure Data Lake Storage anda sendiri untuk menyimpan data, anda perlu menambah cerapan penglibatan prinsipal perkhidmatan Azure ke akaun storan anda. Untuk mendapatkan butiran, pergi ke [Sambungkan kepada akaun Azure Data Lake Storage dengan prinsipal perkhidmatan Azure untuk cerapan khalayak](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Cipta pautan persekitaran
 
@@ -75,6 +75,7 @@ Selepas memautkan persekitaran, anda boleh memilih ciri pilihan untuk persekitar
 
    > [!IMPORTANT]
    > Jika anda tidak secara eksplisit menambah pengguna dalam langkah ini, data akan disembunyikan daripada pengguna dalam cerapan penglibatan.
+   > Untuk segmen cerapan khalayak untuk muncul dalam cerapan penglibatan, anda mesti [jalankan proses gabungan dan hiliran](../audience-insights/merge-entities.md) terlebih dahulu. Proses hiliran adalah penting kerana ia menjana jadual unik yang menyediakan segmen cerapan khalayak untuk dikongsi dengan cerapan penglibatan. (Jika sistem segar semula dijadualkan, ia akan secara automatik memasukkan proses hiliran.)
 
 1. Semak pilihan anda dan kemudian pilih **Tamat**.
 

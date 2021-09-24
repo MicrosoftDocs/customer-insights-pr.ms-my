@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Keupayaan cerapan penglibatan (pratonton) dalam Dynamics 365 Customer Insights
+title: Keupayaan cerapan penglibatan dalam Dynamics 365 Customer Insights (pratonton)
 summary: Kumpulkan data untuk tapak web anda. Memahami interaksi pelanggan dan penggunaan merentasi tapak web anda, secara interaktif. Gunakan integrasi mendalam antara cerapan penglibatan dan cerapan khalayak untuk memperkayakan analitis tingkah laku masa nyata anda dengan laporan profil pelanggan. Perkayakan profil pelanggan dengan aktiviti web untuk mendapatkan data tingkah laku masa nyata bersama data pelanggan yang berkaitan. Ubah perniagaan anda untuk memperoleh nilai serta-merta daripada data pelanggan anda.
 metadata:
   title: Dokumentasi cerapan penglibatan (pratonton)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: ms-MY
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036249"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494195"
 landingContent:
 - title: Perihal
   linkLists:
   - linkListType: overview
     links:
-    - text: Gambaran keseluruhan keupayaan
+    - text: Manfaat keupayaan
       url: overview.md
-    - text: Terma dan konsep
+    - text: Glosari istilah
       url: glossary.md
-    - text: Terokai cerapan penglibatan
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Ciri baharu dan dikemas kini
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Penyertaan
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Instrumen laman web anda
       url: instrument-website.md
-- title: Laporan
+- title: Lihat dan tapis laporan
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Lihat laporan
       url: view-reports.md
-    - text: Cipta laporan tersuai
-      url: custom-reports.md
     - text: Lihat laporan profil disatukan
       url: profile-reports.md
-    - text: Cipta laporan corong
-      url: funnel-reports.md
-- title: Peristiwa
+    - text: Gunakan segmen khalayak untuk menapis laporan
+      url: integrate-audience-insights-segments.md
+- title: Analisis
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Cipta laporan corong
+      url: funnel-reports.md
+    - text: Menganalisis data tingkah laku
+      url: curate-dimensions.md
+    - text: Cipta laporan tersuai
+      url: custom-reports.md
     - text: Cipta peristiwa diperhalus
       url: refined-events.md
     - text: Eksport peristiwa
       url: export-events.md
-    - text: Padam dan eksport data peribadi
-      url: delete-export-personal-data.md
 - title: Sumber pembangun
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Urus persekitaran dan ruang kerja
       url: manage-environments-workspaces.md
     - text: Sambung kepada cerapan khalayak
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Urus kuki dan persetujuan pengguna
       url: user-consent-storage.md
+    - text: Padam dan eksport data peribadi
+      url: delete-export-personal-data.md
+    - text: Had perkhidmatan
+      url: ../service-limits.md

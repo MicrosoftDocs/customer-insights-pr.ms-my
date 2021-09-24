@@ -4,17 +4,17 @@ description: Ketahui cara memeribadikan dan menjalankan SDK iOS
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036884"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494241"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Mari bermula dengan SDK iOS
 
@@ -45,11 +45,36 @@ Mulakan proses dengan memilih ruang kerja untuk bekerja, memilih platform iOS mu
 
 - Jika anda tidak mempunyai ruang kerja yang sedia ada, pilih **Ruang Kerja Baharu** dan ikut langkah untuk mencipta [ruang kerja baharu](create-workspace.md).
 
+- Selepas anda mencipta ruang kerja, pergi ke **Pentadbir** > **Ruang Kerja** dan kemudian pilih **Panduan pemasangan**.
+
 ## <a name="configure-the-sdk"></a>Konfigurasikan SDK
 
-Setelah anda memuat turun SDK, anda boleh beker dengannya dalam Xcode untuk mendayakan dan menentukan peristiwa.
+Setelah anda memuat turun SDK, anda boleh beker dengannya dalam Xcode untuk mendayakan dan menentukan peristiwa. Terdapat dua cara untuk berbuat demikian
 
-1. Selepas anda mencipta ruang kerja, pergi ke **Pentadbir** > **Ruang Kerja** dan kemudian pilih **Panduan pemasangan**.
+### <a name="option-1-using-cocoapods-recommended"></a>Pilihan 1: Menggunakan CocoaPods (disyorkan)
+CocoaPods ialah pengurus pergantungan untuk projek Swift dan Objective-C Cocoa. Penggunaannya menjadikan integrasi SDK cerapan penglibatan untuk iOS lebih mudah. CocoaPods juga membolehkan anda menaik taraf kepada versi terkini SDK cerapan penglibatan. Berikut ialah cara menggunakan CocoaPods untuk mengintegrasikan SDK cerapan penglibatan SDK ke dalam projek Xcode anda. 
+
+1. Pasang CocoaPods. 
+
+1. Cipta fail baharu yang dipanggil Podfile dalam direktori akar projek anda dan tambahkan pernyataan yang berikut padanya.Gantikan YOUR_TARGET_PROJECT_NAME dengan nama projek Xcode anda. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Konfigurasi pod di atas mengandungi kedua-dua versi nyahpepijat dan keluaran SDK. Pilih yang terbaik untuk projek anda.
+
+1. Pasang pod dengan melaksanakan perintah berikut: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Pilihan 2: Menggunakan pautan muat turun
 
 1. Muat turun [cerapan penglibatan SDK iOS](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip), and letakkan fail `EIObjC.xcframework` dalam folder `Frameworks`.
 

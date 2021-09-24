@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033872"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466635"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Mengayakan profil pelanggan dengan persamaan jenama dan kepentingan (pratonton)
 
@@ -126,6 +126,8 @@ Selepas menjalankan proses pengayaan, pergi ke **Pengayaan saya** untuk menyemak
 :::image type="content" source="media/my-enrichments.png" alt-text="Pratonton hasil selepas menjalankan proses pengayaan.":::
 
 Kaji semula data yang diperkaya dengan memilih **Lihat data diperkaya** dalam carta. Data diperkaya untuk jenama pergi kepada entiti **PersamaanJenamaDaripadaMicrosoft**. Data untuk kepentingan adalah dalam entiti **PersamaanKepentinganDaripadaMicrosoft**. Anda juga akan menemui entiti ini yang disenaraikan dalam kumpulan **Pengayaan** dalam **Entiti** > **Data**.
+
+Anda akan melihat carta dengan sejumlah profil pelanggan yang diperkayakan dari semasa ke semasa dan pratonton entiti yang diperkayakan. Pilih **Tunjukkan lagi** dalam jubin pratonton untuk membuka entiti yang diperkaya.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Lihat data pengayaan pada kad pelanggan
 

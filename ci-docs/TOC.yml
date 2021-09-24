@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Ciri baharu dan dikemas kini
       href: audience-insights/whats-new-audience-insights.md
-    - name: Cipta persekitaran baharu
-      href: audience-insights/get-started-paid.md
+    - name: Mari Bermula
+      items:
+        - name: Panduan mula cepat
+          href: audience-insights/get-started.md
+        - name: Cipta persekitaran baharu
+          href: audience-insights/get-started-paid.md
+        - name: Teroka cerapan khalayak
+          href: audience-insights/home.md
     - name: Belajar modul
       items:
         - name: Inges data
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Alamat dipertingkatkan
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Memperkayakan dengan Azure Map
+          href: audience-insights/enrichment-azure-maps.md
         - name: Perkayakan dengan HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Perkayakan dengan Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Rujukan API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Had perkhidmatan
-      href: audience-insights/service-limits.md
-    - name: Permintaan DSR di bawah GDPR
-      href: audience-insights/gdpr.md
 - name: Cerapan penglibatan (pratonton)
   items:
     - name: Hab bantuan
       href: engagement-insights/index.yml
     - name: Gambaran keseluruhan keupayaan
       href: engagement-insights/overview.md
-    - name: Percubaan percuma
-      href: 'https://pi.dynamics.com/'
     - name: Mari Bermula
       items:
-        - name: Mari Bermula
+        - name: Panduan mula cepat
           href: engagement-insights/get-started.md
         - name: Cipta ruang kerja
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Urus persekitaran dan ruang kerja
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Konfigurasikan sambungan
-          href: engagement-insights/configure-connections.md
         - name: Urus kuki dan persetujuan pengguna
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Padam dan eksport data peribadi
-          href: engagement-insights/delete-export-personal-data.md
     - name: Ketersediaan rantau
       href: engagement-insights/regional-availability.md
-    - name: Had perkhidmatan
-      href: engagement-insights/quotas.md
 - name: Menyepadukan khalayak dan cerapan penglibatan
   items:
     - name: Pautkan cerapan khalayak dan cerapan penglibatan
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Gunakan dimensi demografi untuk data tingkah laku pemisahan
       href: engagement-insights/curate-dimensions.md
+- name: Had perkhidmatan
+  href: service-limits.md
+- name: Hak dan permintaan DSR
+  href: dsr-rights-requests.md
 - name: Dapatkan sokongan
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

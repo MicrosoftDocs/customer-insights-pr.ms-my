@@ -1,7 +1,7 @@
 ---
 title: Gabung entiti dalam penyatuan data
 description: Gabung entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035013"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494330"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -76,17 +76,40 @@ Kecualikan atribut daripada profil pelanggan disatukan. Jika medan digunakan dal
 
 Pada halaman **Gabung**, pilih **Medan yang dikecualikan** untuk melihat senarai semua medan yang dikecualikan. Anak tetingkap ini membenarkan anda menambah semula medan yang dikecualikan.
 
+## <a name="edit-a-merged-field"></a>Edit medan yang digabungkan
+
+1.  Pilih medan yang digabungkan.
+
+1.  Pilih **Tunjukkan lagi** dan pilih **Edit**.
+
+1.  Tentukan cara untuk menyatukan atau menggabungkan medan daripada satu daripada tiga pilihan:
+    - **Kepentingan**: Mengenal pasti nilai pemenang berdasarkan kedudukan kepentingan yang ditentukan untuk medan yang terlibat. Ia merupakan pilihan gabungan lalai. Pilih **Alih ke atas/bawah** untuk menetapkan kedudukan kepentingan.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Pilihan kepentingan dalam dialog medan gabungan."::: 
+    - **Terkini**: Mengenal pasti nilai pemenang berdasarkan paling keterkinian. Memerlukan tarikh atau medan angka untuk setiap entiti yang mengambil bahagian dalam skop medan gabungan untuk menentukan keterkinian.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Pilihan keterkinian dalam dialog medan gabungan.":::
+    - **Kurang terkini**: Mengenal pasti nilai pemenang berdasarkan kurang keterkinian. Memerlukan tarikh atau medan angka untuk setiap entiti yang mengambil bahagian dalam skop medan gabungan untuk menentukan keterkinian.
+
+1.  Anda boleh menambah medan tambahan untuk mengambil bahagian dalam proses gabungan.
+
+1.  Anda boleh menamakan semula medan yang digabungkan.
+
+1. Pilih **Selesai** untuk menggunakan perubahan anda.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
 ## <a name="manually-combine-fields"></a>Gabungkan medan secara manual
 
 Tentukan atribut yang digabungkan secara manual. 
 
 1. Pada halaman **Gabung**, pilih **Gabungkan medan**.
 
-1. Berikan **Nama** dan **Nama medan output**.
+1. Tentukan dasar pemenang gabungan dalam **Satukan medan mengikut** menu juntai bawah.
 
 1. Pilih medan untuk ditambah. Pilih **Tambah medan** untuk menggabungkan lebih medan.
 
-1. Sahkan pengecualian.
+1. Berikan **Nama** dan **Nama medan output**.
+
+1. Pilih **Selesai** untuk menggunakan perubahan tersebut.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
 
@@ -103,6 +126,27 @@ Sesetengah entiti mengandungi lebih banyak butiran daripada yang lain. Jika enti
 1. Sahkan perubahan.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
+
+## <a name="configure-customer-id-generation"></a>Konfigurasikan penjanaan ID Pelanggan 
+
+Selepas mengkonfigurasikan medan penggabungan, anda boleh menentukan cara menjana nilai CustomerId, pengecam profil pelanggan yang unik. Langkah gabungan dalam proses penyatuan data akan menjana pengecam profil pelanggan yang unik. Pengecam ialah CustomerId dalam entiti *Pelanggan* yang terhasil daripada proses penyatuan data. 
+
+CustomerId dalam entiti Pelanggan ialah berdasarkan cincang nilai pertama daripada kunci utama pemenang bukan nol. Kekunci ini berasal daripada entiti yang digunakan dalam fasa padanan dan gabungan, dan dipengaruhi oleh urutan padanan.Jadi CustomerID yang dijana boleh berubah apabila nilai kekunci utama berubah dalam entiti utama urutan padanan. Oleh itu, nilai kekunci utama mungkin tidak sentiasa mewakili pelanggan yang sama.
+
+Mengkonfigurasi Id pelanggan yang stabil membolehkan anda mengelakkan tingkah laku itu.
+
+**Konfigurasikan ID pelanggan unik**
+
+1. Pergi ke **Satukan** > **Gabung**.
+
+1. Pada halaman **Gabung**, pilih tab **Kekunci**. 
+
+1. Tuding pada baris **CustomerId** dan pilih pilihan **Konfigurasi**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kawalan untuk menyesuaikan penjanaan ID.":::
+
+1. Pilih hingga lima medan yang akan terdiri daripada ID pelanggan unik dan lebih stabil. Rekod yang tidak sepadan dengan konfigurasi anda menggunakan ID yang dikonfigurasikan sistem.  
+
+1. Pilih **Selesai** dan jalankan proses gabungan untuk menggunakan perubahan anda.
 
 ## <a name="run-your-merge"></a>Jalankan gabungan anda
 

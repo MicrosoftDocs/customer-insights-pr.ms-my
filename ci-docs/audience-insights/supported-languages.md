@@ -1,24 +1,23 @@
 ---
-title: Bahasa yang disokong untuk cerapan khalayak
+title: Bahasa yang disokong untuk Dynamics 365 Customer Insights
 description: Fahami dan konfigurasikan sokongan bahasa.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035150"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483353"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Bahasa yang disokong untuk keupayaan cerapan khalayak
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Bahasa yang disokong untuk Dynamics 365 Customer Insights
 
-Wawasan khalayak untuk Dynamics 365 Customer Insights diterjemahkan kepada banyak bahasa. Senarai berikut mengandungi bahasa dan maklumat yang tersedia tentang perkara yang diterjemahkan. Anda juga boleh mengetahui lebih lanjut tentang cara mengubah tetapan bahasa. 
+Dynamics 365 Customer Insights diterjemahkan kepada pelbagai bahasa. Senarai berikut mengandungi bahasa dan maklumat yang tersedia tentang perkara yang diterjemahkan. Anda juga boleh mengetahui lebih lanjut tentang cara mengubah tetapan bahasa. 
 
 ## <a name="languages"></a>Bahasa
 
@@ -69,7 +68,7 @@ Wawasan khalayak untuk Dynamics 365 Customer Insights diterjemahkan kepada banya
 
 ## <a name="whats-translated"></a>Apakah yang diterjemahkan
 
-Aplikasi ini menggunakan keutamaan bahasa anda untuk memaparkan elemen seperti menu, teks label dan mesej sistem dalam bahasa diutamakan anda.
+Customer Insights menggunakan keutamaan bahasa anda untuk memaparkan elemen seperti menu, teks label, dan mesej sistem dalam bahasa anda yang diutamakan.
 
 Oleh kerana kebanyakan ciri adalah berdasarkan data anda, sesetengah item kekal dalam bahasa asalnya. Contohnya:
 

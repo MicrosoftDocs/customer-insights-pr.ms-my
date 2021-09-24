@@ -4,17 +4,17 @@ description: Cara mencipta, menamakan semula dan memadam ruang kerja dan perseki
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034053"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486046"
 ---
 # <a name="manage-environments-and-workspaces"></a>Urus persekitaran dan ruang kerja
 
@@ -85,13 +85,11 @@ Memadamkan ruang kerja akan mengalih keluar semua kandungan, data, tetapan dan k
 
 1. Pilih **Tambah ahli** untuk memberikan akses dan [menugaskan peranan](user-roles.md). Pada masa ini, hanya **Pentadbir ruang kerja** tersedia.
 
-1. Jika anda menyediakan [sambungan kepada cerapan khalayak](configure-connections.md), anda boleh memilih **Benarkan akses kepada data profil** untuk membenarkan ahli melihat laporan berdasarkan [profil pengguna](profile-reports.md).
-
 1. Pilih **Tambah ahli** untuk menambahkan mereka pada ruang kerja anda.
 
 ## <a name="manage-an-environment"></a>Urus persekitaran
 
-Sebagai pentadbir Persekitaran, anda boleh mengakses persekitaran daripada anak tetingkap navigasi kiri. Anda boleh mengkonfigurasikan tetapan persekitaran, pentadbir Persekitaran, ruang kerja dan [sambungan kepada cerapan khalayak](configure-connections.md) lain. Pilih tab untuk beralih antara kawasan berbeza dalam pusat pentadbir.
+Sebagai pentadbir Persekitaran, anda boleh mengakses persekitaran daripada anak tetingkap navigasi kiri. Anda boleh mengkonfigurasikan tetapan persekitaran, pentadbir persekitaran lain dan ruang kerja. Pilih tab untuk beralih antara kawasan berbeza dalam pusat pentadbir.
 
 :::image type="content" source="media/New-environment.png" alt-text="Pusat pentadbiran persekitaran.":::
 
@@ -123,8 +121,6 @@ Sebagai pentadbir Persekitaran, anda boleh mengakses persekitaran daripada anak 
 
 1. Pilih **Tambah ahli** untuk mengemas kini ahli dan [menugaskan peranan](user-roles.md). Pada masa ini, hanya **Pentadbir persekitaran** tersedia.
 
-1. Jika anda menyediakan [sambungan kepada cerapan khalayak](configure-connections.md), anda boleh memilih **Benarkan akses kepada data profil** untuk membenarkan ahli melihat laporan berdasarkan [profil pengguna](profile-reports.md).
-
 1. Pilih **Tambah ahli** untuk menambahkan mereka pada persekitaran anda.
 
 ### <a name="delete-an-environment"></a>Padamkan persekitaran
@@ -143,7 +139,7 @@ Pentadbir persekitaran boleh memadamkan persekitaran. Sebelum anda boleh memadam
 
 Mewujudkan sambungan kepada cerapan khalayak membolehkan anda melihat laporan dalam cerapan penglibatan berdasarkan profil pelanggan disatukan. 
 
-Untuk mendapatkan maklumat lanjut, lihat [Konfigurasikan sambungan](configure-connections.md).
+Untuk maklumat lanjut, lihat [Cipta pautan antara cerapan khalayak dan cerapan penglibatan](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Urus data peribadi
 

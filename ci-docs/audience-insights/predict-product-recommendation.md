@@ -1,20 +1,20 @@
 ---
 title: Ramalan pengesyoran produk
 description: Meramalkan produk yang pelanggan mungkin akan beli atau berinteraksi dengannya.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034967"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494550"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Ramalan pengesyoran produk (pratonton)
 
@@ -89,23 +89,24 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
 
 ### <a name="add-required-data"></a>Tambah data yang diperlukan
 
-1. Pilih **Tambah data** untuk **Sejarah transaksi pelanggan** dan pilih entiti yang menyediakan maklumat sejarah transaksi/pembelian seperti yang diterangkan dalam [prasyarat](#prerequisites).
+1. Pilih **Tambah data** dan pilih jenis aktiviti pada anak tetingkap sisi yang mengandungi transaksi yang diperlukan atau maklumat sejarah pembelian.
 
-1. Petakan medan semantik kepada atribut dalam entiti sejarah pembelian anda dan pilih **Seterusnya**. Untuk perihalan medan, lihatlah [prasyarat](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Takrifkan perhubungan entiti.](media/product-recommendation-purchasehistorymapping.PNG "Halaman sejarah pembelian menunjukkan atribut semantik yang dipetakan ke medan dalam entiti sejarah pembelian terpilih")
+1. Di bawah **Pilih aktiviti**, pilih aktiviti khusus daripada aktiviti terpilih yang anda mahu pengiraan itu difokuskan.
 
-1. Jika medan tidak diisi, konfigurasikan hubungan daripada entiti sejarah pembelian anda kepada entiti *Pelanggan*.
-    1. Pilih **Entiti sejarah pembelian**.
-    1. Pilih **Medan** yang mengenal pasti pelanggan dalam entiti sejarah pembelian. Ia perlu dikaitkan kepada ID pelanggan utama bagi entiti *Pelanggan* anda.
-    1. Pilih **Entiti pelanggan** yang memadankan entiti pelanggan utama anda.
-    1. Masukkan nama yang menghuraikan perhubungan.
-       > [!div class="mx-imgBorder"]
-       > ![Halaman sejarah pembelian menunjukkan penciptaan hubungan kepada pelanggan.](media/model-purchase-join.png "Halaman sejarah pembelian menunjukkan penciptaan hubungan kepada pelanggan")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Anak tetingkap sisi menunjukkan pemilihan aktiviti tertentu di bawah jenis semantik.":::
+
+1. Jika anda belum memetakan aktiviti pada jenis semantik lagi, pilih **Edit** untuk berbuat demikian. Pengalaman berpandu untuk memetakan aktiviti semantik terbuka. Petakan data anda kepada medan yang sepadan dalam jenis aktiviti yang dipilih.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Halaman tetapan jenis aktiviti.":::
+
+1. Selepas pemetaan aktiviti pada jenis semantik yang sepadan, pilih **Seterusnya** untuk teruskan 
+ 
+1. Petakan atribut semantik pada medan yang diperlukan untuk menjalankan model.
 
 1. Pilih **Simpan**.
 
 1. Pilih **Seterusnya**.
+
 
 ### <a name="configure-product-filters"></a>Konfigurasikan penapis produk
 

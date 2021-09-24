@@ -4,17 +4,17 @@ description: Ketahui cara memeribadikan dan menjalankan SDK Android
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036929"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494286"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Mari bermula dengan SDK Android
 
@@ -35,17 +35,38 @@ Pilihan konfigurasi berikut boleh dihantar ke SDK:
 
 - Kunci pengingesan (lihat di bawah untuk arahan cara memperoleh)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>Langkah 1. Mengintegrasikan SDK ke dalam aplikasi anda
+## <a name="integrate-the-sdk-into-your-application"></a>Mengintegrasikan SDK ke dalam aplikasi anda
 Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android, dan memuat turun SDK Android.
 
 - Gunakan penukar ruang kerja dalam anak tetingkap navigasi kiri untuk memilih ruang kerja anda.
 
 - Jika anda tidak mempunyai ruang kerja yang sedia ada, pilih **Ruang Kerja Baharu** dan ikut langkah untuk mencipta [ruang kerja baharu](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>Langkah 2. Konfigurasikan SDK
+- Selepas anda mencipta ruang kerja, pergi ke **Pentadbir** > **Ruang Kerja** dan kemudian pilih **Panduan pemasangan**. 
 
-1. Selepas anda mencipta ruang kerja, pergi ke **Pentadbir** > **Ruang Kerja** dan kemudian pilih **Panduan pemasangan**. 
+## <a name="configure-the-sdk"></a>Konfigurasikan SDK
 
+Setelah anda memuat turun SDK, anda boleh bekerja dengannya dalam Android Studio untuk mendayakan dan menentukan peristiwa. Terdapat dua cara untuk berbuat demikian:
+### <a name="option-1-using-jitpack-recommended"></a>Pilihan 1: Menggunakan JitPack (disyorkan)
+1. Tambahkan repositori JitPack pada akar `build.gradle` anda:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Tambahkan kebersandaran:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>Pilihan 2: Menggunakan pautan muat turun
 1. Muat turun [cerapan penglibatan SDK Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan letakkan fail `eiandroidsdk-debug.aar` dalam folder `libs`.
 
 1. Buka fail `build.gradle` tahap projek anda dan tambah cebisan berikut:
@@ -62,7 +83,17 @@ Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android, 
     }
     ```
 
-1. Sediakan cerapan penglibatan konfigurasi SDK melalui fail `AndroidManifest.xml` anda yang terletak di bawah folder `manifests`. 
+1. Tambahkan keizinan untuk rangkaian dan Internet dalam fail `AndroidManifest.xml` anda yang terletak di bawah folder `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Sediakan cerapan penglibatan konfigurasi SDK melalui fail `AndroidManifest.xml` anda. 
+
+## <a name="enable-auto-instrumentation"></a>Dayakan autopengalatan
 1. Salin cebisan XML daripada **Panduan pemasangan**. `Your-Ingestion-Key` perlu diisi secara automatik.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android, 
    </application>
    ```
 
-1. Dayakan atau nyahdayakan autorekod peristiwa `View` dengan menetapkan medan `autoCapture` di atas kepada `true` atau `false`.
+1. Dayakan atau nyahdayakan autorekod peristiwa `View` dengan menetapkan medan `autoCapture` di atas kepada `true` atau `false`. Pada masa ini, peristiwa `Action` perlu ditambahkan secara manual.
 
 1. (Pilihan) Konfigurasi lain termasuk menetapkan URL pengumpul titik tamat. Tetapan ini boleh ditambah di bawah metadata utama pengingesan dalam `AndroidManifest.xml`:
     ```xml
@@ -94,9 +125,9 @@ Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android, 
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Langkah 3. Asalkan SDK daripada MainActivity 
+## <a name="implement-custom-events"></a>Melaksanakan peristiwa tersuai
 
-Selepas anda memulakan SDK, anda boleh bekerja dengan peristiwa dan sifat dalam persekitaran MainActivity.
+Selepas anda memulakan SDK, anda boleh bekerja dengan peristiwa dan sifat dalam persekitaran `MainActivity`.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Tetapkan butiran pengguna untuk peristiwa anda (pilihan)
+## <a name="set-user-details-for-your-event-optional"></a>Tetapkan butiran pengguna untuk peristiwa anda (pilihan)
 
 SDK membolehkan anda mentakrifkan maklumat pengguna yang boleh dihantar dengan setiap peristiwa. Anda boleh menentukan maklumat pengguna dengan memanggil API `setUser(user: User)` pada tahap `Analytics`.
 

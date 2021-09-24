@@ -4,17 +4,17 @@ description: Cara menggunakan laporan corong untuk memahami cara khalayak membua
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032266"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498653"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Cipta dan urus laporan corong
 
@@ -158,4 +158,21 @@ Anda boleh mengubah nama laporan corong, memadamkannya atau mengubah suai langka
 1. Pilih nama untuk membuka laporan.
 
 1. Pilih langkah yang anda mahu alih keluar dan kemudian pilih **Padam**.
+
+## <a name="funnel-insights"></a>Cerapan corong 
+
+Cerapan penglibatan kini menawarkan cerapan corong untuk pelanggan. Gunakan cerapan corong untuk mendapatkan cerapan mendalam berkaitan tingkah laku pelanggan tentang langkah dalam laporan corong anda. Apabila anda mencipta dan menyimpan laporan corong baharu, cerapan corong akan dijana secara automatik untuk laporan anda. 
+
+Anda boleh melihat cerapan corong daripada kategori yang berikut, pada peringkat utama dan peringkat langkah: 
+
+ - Kadar penukaran 
+ - Masa peralihan 
+ - Masa pelengkapan 
+
+Gunakan cerapan ini untuk teroka lebih mendalam berkaitan tingkah laku pelanggan dan memahami titik tolak serta penukaran dengan lebih baik untuk laporan corong anda. 
+
+Cerapan corong mengira semula setiap 24 jam atau apabila anda **Menyimpan** laporan corong anda. 
+
+> [!NOTE]
+> Untuk melihat cerapan untuk corong anda, anda mesti menyimpan laporan anda setiap kali anda membuat perubahan. 
 

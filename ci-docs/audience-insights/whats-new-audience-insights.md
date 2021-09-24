@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035974"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465216"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
@@ -26,6 +26,15 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2021-updates"></a>Kemas kini Ogos 2021
+
+Kemas kini pada Julai dan Ogos 2021 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport segmen kepada Klaviyo** Kami telah melanjutkan [destinasi eksport kami untuk menyertakan Klaviyo](export-klaviyo.md). Anda kini boleh mengeksport segmen untuk mencipta kempen, menjalankan pemasaran e-mel dan menggunakan kumpulan pelanggan khusus dengan Klaviyo. 
+
 
 ## <a name="june-2021-updates"></a>Kemas kini Jun 2021
 
