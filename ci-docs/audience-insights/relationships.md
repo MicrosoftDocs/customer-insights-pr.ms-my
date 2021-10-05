@@ -1,20 +1,20 @@
 ---
 title: Hubungan antara entiti dan laluan entiti
 description: Cipta dan urus hubungan antara entiti daripada berbilang sumber data.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035242"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557363"
 ---
 # <a name="relationships-between-entities"></a>Perhubungan antara entiti
 
@@ -93,11 +93,11 @@ Pilihan yang tersedia:
 - **Tukar kepada tataletak mendatar/menegak**: Tukar penjajaran entiti dan perhubungan.
 - **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
 
-### <a name="relationship-path"></a>Laluan perhubungan
+## <a name="relationship-paths"></a>Laluan perhubungan
 
-Laluan perhubungan menerangkan entiti yang disambungkan dengan perhubungan antara entiti sumber dan entiti sasaran. Ia digunakan apabila mencipta segmen atau ukuran yang termasuk entiti lain daripada entiti profil disatukan dan terdapat beberapa pilihan untuk mencapai entiti profil disatukan.
+Laluan perhubungan menerangkan entiti yang disambungkan dengan perhubungan antara entiti sumber dan entiti sasaran. Ia digunakan apabila mencipta segmen atau ukuran yang termasuk entiti lain daripada entiti profil disatukan dan terdapat beberapa pilihan untuk mencapai entiti profil disatukan. 
 
-Laluan perhubungan ini memberitahu sistem yang perhubungan untuk mengakses entiti profil disatukan. Laluan perhubungan yang berbeza boleh menghasilkan keputusan yang berbeza.
+Laluan perhubungan memberitahu sistem yang mana perhubungan untuk mengakses entiti profil bersepadu. Laluan perhubungan yang berbeza boleh menghasilkan keputusan yang berbeza.
 
 Contohnya, entiti *eCommerce_eCommercePurchases* mempunyai perhubungan berikut kepada entiti *Pelanggan* profil disatukan:
 
@@ -105,7 +105,43 @@ Contohnya, entiti *eCommerce_eCommercePurchases* mempunyai perhubungan berikut k
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan 
 
-Laluan perhubungan menentukan entiti yang boleh anda gunakan apabila mencipta peraturan untuk ukuran atau segmen. Memilih pilihan dengan laluan perhubungan terpanjang mungkin menghasilkan kurang hasil kerana rekod yang sepadan perlu menjadi sebahagian daripada semua entiti. Dalam contoh ini, pelanggan perlu membeli barang melalui e-dagang(eCommerce_eCommercePurchases), pada tempat jualan (POS_posPurchases) dan mengambil bahagian dalam program kesetiaan kami (loyaltyScheme_loyCustomers). Apabila memilih pilihan pertama, anda mungkin akan mendapat lebih banyak keputusan kerana pelanggan perlu wujud dalam satu entiti tambahan.
+Laluan perhubungan menentukan entiti yang anda boleh gunakan apabila mencipta peraturan untuk ukuran atau segmen. Memilih pilihan dengan laluan perhubungan terpanjang mungkin menghasilkan kurang hasil kerana rekod yang sepadan perlu menjadi sebahagian daripada semua entiti. Dalam contoh ini, pelanggan perlu membeli barang melalui e-dagang(eCommerce_eCommercePurchases), pada tempat jualan (POS_posPurchases) dan mengambil bahagian dalam program kesetiaan kami (loyaltyScheme_loyCustomers). Apabila memilih pilihan pertama, anda mungkin akan mendapat lebih banyak keputusan kerana pelanggan perlu wujud dalam satu entiti tambahan.
+
+### <a name="direct-relationship"></a>Perhubungan langsung
+
+Perhubungan dikelaskan sebagai **perhubungan langsung** apabila entiti sumber berkaitan dengan entiti sasaran dengan hanya satu perhubungan.
+
+Sebagai contoh, jika entiti aktiviti yang dipanggil *eCommerce_eCommercePurchases* menyambung kepada entiti sasaran *eCommerce_eCommerceContacts* hanya melalui entiti *ContactId* merupakan perhubungan langsung.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Entiti sumber menyambung secara langsung kepada entiti sasaran.":::
+
+#### <a name="multi-path-relationship"></a>Perhubungan berbilang laluan
+
+**Perhubungan berbilang laluan** adalah jenis perhubungan langsung khas yang menyambungkan entiti sumber kepada lebih daripada satu entiti sasaran.
+
+Sebagai contoh, jika entiti aktiviti yang dipanggil *eCommerce_eCommercePurchases* berkaitan dengan dua entiti, kedua-duanya *eCommerce_eCommerceContacts* dan *loyaltyScheme_loyCustomers* adalah perhubungan berbilang laluan.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Entiti sumber menyambung secara langsung kepada lebih daripada satu entiti sasaran melalui perhubungan berbilang hop.":::
+
+### <a name="indirect-relationship"></a>Perhubungan tidak langsung
+
+Perhubungan dikelaskan sebagai **perhubungan tidak langsung** apabila entiti sumber berkaitan dengan satu atau lebih entiti tambahan sebelum mengaitkan dengan entiti sasaran.
+
+#### <a name="multi-hop-relationship"></a>Perhubungan berbilang hop
+
+*Perhubungan berbilang hop* adalah *perhubungan tidak langsung* yang membolehkan anda menyambungkan entiti sumber kepada entiti sasaran melalui satu atau lebih entiti perantara lain.
+
+Sebagai contoh, jika entiti aktiviti yang dipanggil *eCommerce_eCommercePurchasesWest* menyambung ke entiti pertengahan yang dipanggil *eCommerce_eCommercePurchasesEast* dan kemudian menyambung ke entiti sasaran yang dipanggil *eCommerce_eCommerceContacts* adalah perhubungan berbilang hop.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Entiti sumber menyambung secara terus kepada entiti sasaran dengan entiti pertengahan.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Perhubungan berbilang hop, berbilang laluan
+
+Perhubungan berbilang hop dan berbilang laluan boleh digunakan bersama-sama untuk mencipta **perhubungan berbilang hop, berbilang laluan**. Jenis khas ini menggabungkan fungsi perhubungan **berbilang hop** dan **berbilang laluan**. Ini membolehkan anda menyambung kepada lebih daripada satu entiti sasaran semasa menggunakan entiti pertengahan.
+
+Sebagai contoh, jika entiti aktiviti dipanggil *eCommerce_eCommercePurchasesWest* menyambung ke entiti pertengahan dipanggil *eCommerce_eCommercePurchasesEast* dan kemudian menyambung ke dua entiti sasaran, kedua-duanya *eCommerce_eCommerceContacts* dan *loyaltyScheme_loyCustomers*, adalah perhubungan berbilang hop, berbilang laluan.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Entiti sumber menyambung secara terus kepada satu entiti sasaran dan menyambung ke entiti sasaran lain melalui entiti pertengahan.":::
 
 ## <a name="manage-existing-relationships"></a>Urus perhubungan yang sedia ada 
 

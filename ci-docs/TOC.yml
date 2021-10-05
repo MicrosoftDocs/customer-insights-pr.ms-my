@@ -242,7 +242,7 @@
   items:
     - name: Hab bantuan
       href: engagement-insights/index.yml
-    - name: Gambaran keseluruhan keupayaan
+    - name: Tentang cerapan penglibatan
       href: engagement-insights/overview.md
     - name: Mari Bermula
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Ketersediaan rantau
       href: engagement-insights/regional-availability.md
-- name: Menyepadukan khalayak dan cerapan penglibatan
+- name: Kongsi data antara keupayaan
   items:
     - name: Pautkan cerapan khalayak dan cerapan penglibatan
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Hak dan permintaan DSR
   href: dsr-rights-requests.md
-- name: Dapatkan sokongan
-  href: 'https://dynamics.microsoft.com/support/'

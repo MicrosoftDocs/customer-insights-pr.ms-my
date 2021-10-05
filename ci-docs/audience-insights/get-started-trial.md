@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035426"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558834"
 ---
 # <a name="set-up-a-trial-environment"></a>Sediakan persekitaran percubaan 
 
@@ -95,7 +95,7 @@ Anda kini boleh menggunakan data yang diinges untuk menyesuaikan Customer Insigh
 
 - Percubaan aktif selama 30 hari secara lalai. Walau bagaimanapun, anda boleh melanjutkannya selepas hari ke-23 apabila anda mendaftar masuk kepada percubaan anda.
 - Anda tidak boleh menggunakan akaun Azure Data Lake Storage anda sendiri untuk menyimpan data output semasa percubaan. Walau bagaimanapun, anda boleh menginges data daripada akaun storan Data Lake.
-- Anda boleh menyimpan sehingga 3 GB data dalam persekitaran Dataverse yang diperuntukkan secara automatik apabila anda memulakan percubaan Customer Insights.
+- Anda boleh menyimpan data hingga 3 GB dalam persekitaran Dataverse yang akan diperuntukkan secara automatik apabila anda memulakan percubaan Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Salin data daripada percubaan kepada langganan berbayar
 

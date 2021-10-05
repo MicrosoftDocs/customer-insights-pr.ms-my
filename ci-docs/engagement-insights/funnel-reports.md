@@ -4,17 +4,17 @@ description: Cara menggunakan laporan corong untuk memahami cara khalayak membua
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498653"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558931"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Cipta dan urus laporan corong
 
@@ -163,13 +163,23 @@ Anda boleh mengubah nama laporan corong, memadamkannya atau mengubah suai langka
 
 Cerapan penglibatan kini menawarkan cerapan corong untuk pelanggan. Gunakan cerapan corong untuk mendapatkan cerapan mendalam berkaitan tingkah laku pelanggan tentang langkah dalam laporan corong anda. Apabila anda mencipta dan menyimpan laporan corong baharu, cerapan corong akan dijana secara automatik untuk laporan anda. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Cerapan corong.":::
+
+> [!NOTE]
+> Cerapan corong hanya boleh dijana untuk langkah corong yang **tidak** termasuk dimensi tersuai. Untuk menjana cerapan corong untuk semua langkah dalam corong anda, gunakan cerapan penglibatan dimensi di luar kotak untuk mencipta langkah corong anda. 
+
 Anda boleh melihat cerapan corong daripada kategori yang berikut, pada peringkat utama dan peringkat langkah: 
 
- - Kadar penukaran 
+ - Kadar penukaran
+ -    Kadar penukaran antara Daftar Keluar and Beli ialah 22%.
  - Masa peralihan 
+ -    Masa peralihan purata antara Kart dan Daftar Keluar ialah 23 minit. 
  - Masa pelengkapan 
+ -    Purata jumlah masa yang diperlukan oleh pelanggan untuk menyelesaikan corong tersebut ialah 47 minit. 
 
 Gunakan cerapan ini untuk teroka lebih mendalam berkaitan tingkah laku pelanggan dan memahami titik tolak serta penukaran dengan lebih baik untuk laporan corong anda. 
+
+Untuk membandingkan cerapan merentasi langkah yang berbeza, pilih **Lihat pecahan langkah** atau **Bandingkan dengan langkah lain** daripada kad cerapan. Ini akan memaparkan graf bar membandingkan metrik untuk setiap langkah corong. 
 
 Cerapan corong mengira semula setiap 24 jam atau apabila anda **Menyimpan** laporan corong anda. 
 
