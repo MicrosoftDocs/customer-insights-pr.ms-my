@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483536"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645183"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Sambung ke akaun Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure
 
 Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Teruskan membaca untuk mengetahui cara untuk menyambungkan Dynamics 365 Customer Insights dengan akaun Azure Data Lake Storage dengan menggunakan prinsipal perkhidmatan Azure dan bukannya kekunci akaun storan. 
 
-Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Service sebagai sumber data](connect-common-data-model.md) secara selamat atau [mencipta atau mengemas kini persekitaran](get-started-paid.md).
+Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Service sebagai sumber data](connect-common-data-model.md) secara selamat atau [mencipta atau mengemas kini persekitaran](create-environment.md).
 
 > [!IMPORTANT]
 > - Akaun Data Lake Storage yang akan menggunakan prinsipal perkhidmatan mesti mempunyai [ruang nama berhierarki didayakan](/azure/storage/blobs/data-lake-storage-namespace).

@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus tindakan
 description: Takrifkan ukuran untuk menganalisis dan mencerminkan prestasi perniagaan anda.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037019"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622981"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
@@ -26,15 +26,15 @@ Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada 
 
 ## <a name="build-your-own-measure-from-scratch"></a>Bina ukuran anda sendiri dari mula
 
-Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membina ukuran dengan atribut data daripada entiti data yang mempunyai persediaan untuk berhubung dengan entiti Pelanggan. 
+Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membina ukuran dengan atribut data daripada entiti data yang mempunyai persediaan perhubungan untuk berhubung dengan entiti profil pelanggan disatukan.
+
+# <a name="individual-customers-b2c"></a>[Pelanggan individu (B2C)](#tab/b2c)
 
 1. Dalam wawasan khalayak, pergi ke **Ukuran**.
 
 1. Pilih **Baharu** dan pilih **Bina yang anda sendiri**.
 
 1. Pilih **Edit nama** dan berikan **Nama** untuk langkah itu. 
-   > [!NOTE]
-   > Jika konfigurasi ukuran baharu anda hanya mempunyai dua medan—contohnya, CustomerID dan satu pengiraan—output akan ditambahkan sebagai lajur baharu pada entiti dijana sistem yang dipanggil Customer_Measure. Dan anda akan dapat melihat nilai ukuran dalam profil pelanggan disatukan. Ukuran lain akan menjana entiti mereka sendiri.
 
 1. Dalam kawasan konfigurasi, pilih fungsi pengagregatan daripada menu juntai bawah **Pilih Fungsi**. Fungsi pengagregatan termasuk: 
    - **Sum**
@@ -53,7 +53,7 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
    1. Pilih tab **Atribut**. 
    1. Entiti data: Pilih entiti yang termasuk atribut yang anda mahu ukur. 
    1. Atribut data: Pilih atribut yang anda mahu gunakan dalam fungsi pengagregatan untuk mengira ukuran. Anda hanya boleh memilih satu atribut pada satu masa.
-   1. Anda juga boleh memilih atribut data daripada ukuran sedia ada dengan memilih tab **Ukuran**. Atau, anda boleh mencari nama entiti atau ukuran. 
+   1. Anda juga boleh memilih atribut data daripada ukuran sedia ada dengan memilih tab **Ukuran** atau anda boleh mencari nama entiti atau ukuran. 
    1. Pilih **Tambah** untuk menambah atribut terpilih pada ukuran.
 
    :::image type="content" source="media/measure-attribute-selection.png" alt-text="Pilih atribut untuk digunakan dalam pengiraan.":::
@@ -73,11 +73,11 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
    1. Pilih **Edit dimensi** untuk menambah atribut data yang anda mahu kumpulkan nilai ukuran. Sebagai contoh, bandar atau jantina. Secara lalai, dimensi *CustomerID* dipilih untuk mencipta *ukuran peringkat pelanggan*. Anda boleh mengalih keluar dimensi lalai jika anda mahu mencipta *ukuran peringkat perniagaan*.
    1. Pilih **Selesai** untuk menambah dimensi pada ukuran.
 
-1. Jika terdapat nilai dalam data anda yang perlu anda gantikan dengan integer—contohnya, gantikan *nol* dengan *0*—pilih **Peraturan**. Konfigurasikan peraturan dan pastikan anda memilih hanya nombor keseluruhan sebagai pengganti.
+1. Jika terdapat nilai dalam data anda yang anda perlu ganti dengan integer, pilih **Peraturan**. Konfigurasikan peraturan dan pastikan anda memilih hanya nombor keseluruhan sebagai pengganti. Sebagai contoh, gantikan *nol* dengan *0*.
 
 1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dengan entiti *Pelanggan*, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih. 
    
-   1. Pilih **Keutamaan data** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti langkah anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
+   1. Pilih **Laluan perhubungan** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti ukuran anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
    1. Pilih **Selesai** untuk menggunakan pilihan anda. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Pilih laluan entiti untuk ukuran.":::
@@ -92,7 +92,79 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 1. Pergi ke **Langkah** untuk melihat langkah yang baharu dicipta dalam senarai.
 
+# <a name="business-accounts-b2b"></a>[Akaun perniagaan (B2B)](#tab/b2b)
+
+1. Dalam wawasan khalayak, pergi ke **Ukuran**.
+
+1. Pilih **Baharu** dan pilih **Bina yang anda sendiri**.
+
+1. Pilih **Edit nama** dan berikan **Nama** untuk langkah itu. 
+
+1. Dalam kawasan konfigurasi, pilih fungsi pengagregatan daripada menu juntai bawah **Pilih Fungsi**. Fungsi pengagregatan termasuk: 
+   - **Sum**
+   - **Purata**
+   - **Bilangan**
+   - **Kira Unik**
+   - **Maksimum**
+   - **Min**
+   - **Pertama**: mengambil kira nilai pertama bagi rekod data
+   - **Terakhir**: ambil nilai terakhir yang ditambah ke rekod data
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Operator untuk mengukur pengiraan.":::
+
+1. Pilih **Tambah atribut** untuk memilih data yang anda perlukan untuk mencipta ukuran ini.
+   
+   1. Pilih tab **Atribut**. 
+   1. Entiti data: Pilih entiti yang termasuk atribut yang anda mahu ukur. 
+   1. Atribut data: Pilih atribut yang anda mahu gunakan dalam fungsi pengagregatan untuk mengira ukuran. Anda hanya boleh memilih satu atribut pada satu masa.
+   1. Anda juga boleh memilih atribut data daripada ukuran sedia ada dengan memilih tab **Ukuran** atau anda boleh mencari nama entiti atau ukuran. 
+   1. Pilih **Tambah** untuk menambah atribut terpilih pada ukuran.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Pilih atribut untuk digunakan dalam pengiraan.":::
+
+1. Untuk membina lebih banyak ukuran rumit, anda boleh menambah lebih banyak atribut atau menggunakan operator matematik dalam fungsi ukuran anda.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Cipta ukuran rumit dengan operator matematik.":::
+
+1. Untuk menambah penapis, pilih **Penapis** dalam kawasan konfigurasi. 
+  
+   1. Dalam bahagian **Tambah atribut** anak tetingkap **Penapis**, pilih atribut yang mahu anda gunakan untuk mencipta penapis.
+   1. Tetapkan operator penapis untuk mentakrifkan penapis bagi setiap atribut yang dipilih.
+   1. Pilih **Gunakan** untuk menambah penapis terpilih pada ukuran.
+
+1. Untuk menambah dimensi pilih **Dimensi** dalam kawasan konfigurasi. Dimensi akan ditunjukkan sebagai lajur dalam mengukur entiti output.
+ 
+   1. Pilih **Edit dimensi** untuk menambah atribut data yang anda mahu kumpulkan nilai ukuran. Sebagai contoh, bandar atau jantina. Secara lalai, dimensi *CustomerID* dipilih untuk mencipta *ukuran peringkat pelanggan*. Anda boleh mengalih keluar dimensi lalai jika anda mahu mencipta *ukuran peringkat perniagaan*.
+   1. Pilih **Selesai** untuk menambah dimensi pada ukuran.
+
+1. Jika terdapat nilai dalam data anda yang anda perlu ganti dengan integer, pilih **Peraturan**. Konfigurasikan peraturan dan pastikan anda memilih hanya nombor keseluruhan sebagai pengganti. Sebagai contoh, gantikan *nol* dengan *0*.
+
+1. Anda boleh menggunakan **Sub akaun gulung atas**, togol jika anda [menggunakan akaun dengan hierarki](relationships.md#set-up-account-hierarchies).
+   - Jika ia ditetapkan kepada **Matikan** ukuran dikira untuk setiap akaun. Setiap akaun mendapat hasil sendiri.
+   - Jika ia ditetapkan kepada **Hidupkan**, pilih **Edit** untuk memilih hierarki akaun mengikut kepada hierarki yang diinges. Ukuran ini hanya akan menghasilkan satu hasil kerana ia diagregat dengan sub akaun.
+
+1. Jika terdapat berbilang laluan antara entiti data yang anda petakan dengan entiti *Pelanggan*, anda perlu memilih salah satu daripada [laluan perhubungan entiti](relationships.md) yang dikenal pasti. Hasil ukuran mungkin berbeza-beza bergantung pada laluan yang dipilih. 
+   
+   1. Pilih **Laluan perhubungan** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti ukuran anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
+   1. Pilih **Selesai** untuk menggunakan pilihan anda. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Pilih laluan entiti untuk ukuran.":::
+
+1. Pilih **...** pada pengiraan untuk **Duplikasi**, **Nama semula** atau **Alih keluar** pengiraan daripada ukuran.
+
+1. Dalam kawasan **Pratonton**, anda akan melihat skema data bagi entiti output ukuran, termasuk penapis dan dimensi. Pratonton bertindak balas secara dinamik kepada perubahan dalam konfigurasi.
+
+1. Pilih **Jalankan** untuk mengira hasil bagi langkah yang dikonfigurasikan. Pilih **Simpan dan tutup** jika anda mahu menyimpan konfigurasi semasa dan jalankan ukuran kemudian.
+
+1. Pergi ke **Langkah** untuk melihat langkah yang baharu dicipta dalam senarai.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Gunakan templat untuk membina langkah
+
+Anda boleh menggunakan templat pratakrif untuk langkah yang biasa digunakan untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
+
+# <a name="individual-customers-b2c"></a>[Pelanggan individu (B2C)](#tab/b2c)
 
 Anda boleh menggunakan templat pratakrif untuk langkah yang biasa digunakan untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
 
@@ -140,6 +212,12 @@ Prosedur berikut menggariskan langkah untuk membina langkah baharu menggunakan t
 
 1. Anda kini boleh memilih **Jalankan** untuk mengira keputusan ukuran. Untuk memperhalusi kemudian, pilih **Simpan draf**.
 
+# <a name="business-accounts-b2b"></a>[Akaun perniagaan (B2B)](#tab/b2b)
+
+Ciri ini hanya tersedia untuk ukuran yang dicipta dalam persekitaran dengan pelanggan individu sebagai khalayak sasaran utama.
+
+---
+
 ## <a name="manage-your-measures"></a>Urus tindakan anda
 
 Anda boleh mendapatkan senarai langkah pada halaman **Langkah**.
@@ -166,6 +244,5 @@ Pilih ukuran daripada senarai untuk pilihan berikut:
 ## <a name="next-step"></a>Langkah seterusnya
 
 Anda boleh menggunakan langkah sedia ada untuk mencipta [segmen pelanggan](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465216"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606107"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Kemas kini September 2021
+
+Kemas kini pada bulan September 2021 termasuk ciri baharu, peningkatan prestasi dan pembaikan pepijat.
+
+### <a name="activities"></a>Aktiviti
+
+- **Peningkatan garis masa aktiviti** Kami telah memperluaskan penapis untuk garis masa aktiviti pada profil pelanggan. Selain itu, anda boleh menggunakan gerak penapis baharu untuk menapis mengikut jenis aktiviti dan mengikut tarikh. Tarikh boleh ditapis menggunakan keadaan yang berbeza. Untuk mendapatkan maklumat lanjut, lihat [Lihat garis masa aktiviti pada profil pelanggan](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Hubungan
+
+- **Sokongan perhubungan berbilang hop** Menggunakan perhubungan berbilang hop apabila mengkonfigurasi aktiviti dan mentakrifkan perhubungan antara entiti. Perhubungan berbilang hop menggunakan entiti pertengahan untuk menyambungkan dua entiti. Apabila mengkonfigurasi aktiviti, anda boleh menggunakan perhubungan berbilang hop untuk menyambungkan entiti aktiviti anda kepada entiti pertengahan dan kemudian kepada entiti pelanggan. Anda boleh menggabungkan perhubungan berbilang hop dengan perhubungan berbilang laluan. Untuk mendapatkan maklumat lanjut, lihat [Perhubungan berbilang hop](relationships.md#multi-hop-relationship).
+
+- **Sokongan perhubungan berbilang laluan** Menggunakan perhubungan berbilang hop apabila mengkonfigurasi aktiviti dan mentakrifkan perhubungan antara entiti. Perhubungan berbilang laluan mengaitkan entiti sumber kepada lebih daripada satu entiti. Apabila mengkonfigurasi aktiviti, anda boleh menggunakan perhubungan berbilang laluan untuk menyambungkan entiti aktiviti anda kepada lebih dari satu entiti pelanggan. Anda boleh menggabungkan perhubungan berbilang laluan dengan perhubungan berbilang hop. Untuk mendapatkan maklumat lanjut, lihat [Perhubungan berbilang laluan](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Kemas kini Ogos 2021
 

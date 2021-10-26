@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557363"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623180"
 ---
 # <a name="relationships-between-entities"></a>Perhubungan antara entiti
 
@@ -67,6 +67,20 @@ Perhubungan terdiri daripada *entiti sumber* yang mengandungi kunci asing dan *e
    - **Medan kunci sasaran**: Medan kunci entiti sasaran. Contoh Pelanggan boleh menggunakan medan kunci **CustomerID**.
 
 4. Pilih **Simpan** untuk mencipta perhubungan tersuai.
+
+## <a name="set-up-account-hierarchies"></a>Sediakan hierarki akaun
+
+Persekitaran yang dikonfigurasikan untuk menggunakan akaun perniagaan sebagai khalayak sasaran utama boleh mengkonfigurasi hierarki akaun untuk akaun perniagaan yang berkaitan. Contohnya, syarikat yang mempunyai unit perniagaan yang berasingan. 
+
+Organisasi mencipta hierarki akaun untuk menguruskan akaun yang lebih baik dan perhubungan mereka antara satu sama lain. Keupayaan cerapan khalayak menyokong hierarki akaun induk-anak yang sudah wujud dalam data pelanggan yang diinges. Sebagai contoh, akaun daripada Dynamics 365 Sales. Hierarki ini boleh dikonfigurasikan pada halaman **Perhubungan** cerapan khalayak, di bawah tab hierarki akaun.
+
+1. Pergi ke **Data** > **Perhubungan**.
+1. Pilih tab **Hierarki akaun** tab.
+1. Pilih **Hierarki akaun baharu**. 
+1. Dalam anak tetingkap **Hierarki akaun**, memberikan nama untuk hierarki. Sistem mencipta nama untuk entiti output. Anda boleh mengubah nama entiti nama output.
+1. Pilih entiti yang mengandungi hierarki akaun anda. Ia biasanya dalam entiti yang sama yang mengandungi akaun.
+1. Pilih **ID Akaun** dan **ID Induk Akaun** daripada entiti yang dipilih 
+1. Pilih **Simpan** untuk menggunakan tetapan dan memuktamadkan hierarki akaun.
 
 ## <a name="view-relationships"></a>Lihat perhubungan
 

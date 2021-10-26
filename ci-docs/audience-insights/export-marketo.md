@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Marketo
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033504"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619176"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Eksport segmen ke Marketo (pratonton)
 
@@ -29,10 +29,10 @@ Eksport segmen profil pelanggan disatukan untuk menjana kempen, menyediakan pema
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Hingga 1 juta profil bagi setiap eksport ke Marketo.
+- Hingga 1 juta profil pelanggan bagi setiap eksport kepada Marketo.
 - Mengeksport ke Marketo adalah terhad kepada segmen.
-- Mengeksport segmen dengan sejumlah 1 juta profil boleh mengambil masa sehingga 3 jam. 
-- Bilangan profil yang boleh anda eksport ke Marketo bergantung dan terhad pada kontrak anda dengan Marketo.
+- Mengeksport segmen dengan jumlah 1 juta profil pelanggan boleh mengambil masa hingga 3 jam. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada Marketo bergantung dan terhad pada kontrak anda dengan Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Sediakan sambungan ke Marketo
 
@@ -64,7 +64,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **[ID senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** anda. ID senarai adalah semata-mata nilai berangka. Contohnya, jika ID senarai Marketo anda ialah ST12345A7, alih keluar aksara sebelum dan selepas angka dan masukkan `12345`. 
 
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. 
 
 1. Selain itu, anda boleh mengeksport **Nama pertama**, **Nama terakhir**, **Bandar**, **Negeri**, dan **Negeri/Rantau**  untuk mencipta e-mel yang diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
 

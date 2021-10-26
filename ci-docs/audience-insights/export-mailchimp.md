@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Mailchimp
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033550"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618624"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Eksport segmen ke Mailchimp (pratonton)
 
@@ -29,10 +29,10 @@ Segmen eksport profil pelanggan disatukan ke Mailchimp untuk mencipta surat beri
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Hingga 1 juta profil bagi setiap eksport ke Mailchimp.
+- Hingga 1 juta profil pelanggan bagi setiap eksport kepada Mailchimp.
 - Mengeksport ke Mailchimp adalah terhad kepada segmen.
-- Mengeksport segmen dengan 1 juta profil boleh mengambil masa sehingga tiga jam. 
-- Bilangan profil yang boleh anda eksport ke Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.
+- Mengeksport segmen dengan 1 juta profil pelanggan boleh mengambil masa sehingga tiga jam. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Sediakan sambungan ke Mailchimp
 
@@ -66,7 +66,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **[ID khalayak Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. 
 
 1. Selain itu, anda boleh mengeksport **Nama pertama** dan **Nama keluarga** untuk mencipta e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
 

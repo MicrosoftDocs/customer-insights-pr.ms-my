@@ -4,23 +4,23 @@ description: Cara mengeksport peristiwa diperhalus dan peristiwa asas.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032396"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606245"
 ---
 # <a name="export-events"></a>Eksport peristiwa
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Peristiwa mewakili tingkah laku pengguna. Peristiwa merekodkan apabila pengguna melihat halaman (peristiwa pandangan) atau berinteraksi dengan kandungan (peristiwa tindakan). Apabila anda boleh membuat keputusan sifat data yang anda mahu paparkan dalam laporan, pandangan maya data ini dipanggil *peristiwa diperhalus*. 
+Peristiwa mewakili tingkah laku pengguna. Peristiwa merekodkan apabila pengguna melihat halaman (peristiwa pandangan) atau berinteraksi dengan kandungan (peristiwa tindakan). Apabila anda boleh membuat keputusan sifat data yang anda mahu paparkan dalam laporan, pandangan maya data ini dipanggil *peristiwa diperhalus*. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan mengubah suai segmen](refined-events.md).
 
 - Anda boleh mengeksport peristiwa dan peristiwa diperhalus ke storan luaran. 
 - Eksport merupakan strim data hadapan. Anda tidak boleh mengisi semula strim. 
@@ -45,26 +45,28 @@ Sebelum menyediakan eksport, anda perlu mempunyai akses dan langganan aktif pada
 
 ## <a name="export-events"></a>Eksport peristiwa
 
-Terdapat dua cara untuk mengeksport peristiwa: 
+Terdapat dua cara untuk membawa dialog **Peristiwa eksport**: 
 - Pergi ke **Data** > **Eksport** dan pilih **Eksport baharu**.
 - Pergi ke **Data** > **Peristiwa**, pilih **Lagi [...]** di sebelah peristiwa yang mahu anda eksport dan pilih **Eksport** daripada menu juntai bawah. 
 
+:::image type="content" source="media/new-export.png" alt-text="Cipta eksport baharu.":::
+
 Anda akan dibimbing melalui langkah untuk mencipta eksport:
 
-1. Berikan **Nama eksport**.
+1. Berikan **Nama eksport** dan kemudian pilih **Seterusnya**.
 
 1. Dalam senarai juntai bawah **Pilihan peristiwa**, pilih peristiwa asas dan peristiwa diperhalus untuk disertakan dalam eksport. 
 
-1. Di bawah **Struktur fail**, pilih kadens untuk mencipta fail baharu dalam storan destinasi. Peristiwa dieksport secara berterusan apabila ia tiba.
+1. Dalam bahagian **Struktur fail**, pilih kadens (setiap jam atau harian) untuk mencipta fail baharu dalam storan destinasi dan kemudian pilih **Seterusnya**. Peristiwa dieksport secara berterusan apabila ia tiba.
 
-1. Pilih format untuk eksport anda. Anda boleh memilih antara format **Common Data Model**, **CSV** dan **JSON**. Untuk menggunakan eksport dengan aplikasi Dynamics 365 yang lain, kami mengesyorkan menggunakan format Common Data Model.
+1. Dalam dialog **Pilih format** pilih format untuk eksport anda. Pilih antara format **Common Data Model**, **CSV** dan **JSON**. Untuk menggunakan eksport dengan aplikasi Dynamics 365 lain, kami mengesyorkan format **Common Data Model**.
 
-1. Dalam langkah **Pilih destinasi**, tentukan lokasi Azure Data Lake Storage Gen 2.
+1. Dalam dialog **Pilih destinasi** nyatakan lokasi Azure Data Lake Storage Gen 2.
     1. **Nama akaun ADLS gen 2** ialah nama akaun storan yang anda mahu simpan eksport. 
     1. **Laluan folder** mentakrifkan tempat eksport perlu disimpan dalam sistem fail dan struktur direktori akaun storan.
     1. **Kunci berkongsi** tersedia daripada portal Azure untuk akaun storan.
 
-1. Semak dan sahkan pilihan anda.
+1. Semak dan sahkan pilihan anda untuk menyelesaikan.
 
 ## <a name="view-and-manage-exports"></a>Lihat dan urus eksport
 

@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus persekitaran
 description: Ketahui cara untuk mendaftar untuk perkhidmatan dan cara untuk menguruskan persekitaran.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034188"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645137"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -26,7 +26,7 @@ Pilih kawalan **Persekitaran** pada sudut kanan atas halaman untuk mengubah pers
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Syot layar kawalan untuk menukar persekitaran.":::
 
-Pentadbir boleh [mencipta](get-started-paid.md) dan menguruskan persekitaran.
+Pentadbir boleh [mencipta](create-environment.md) dan menguruskan persekitaran.
 
 ## <a name="edit-an-existing-environment"></a>Edit persekitaran sedia ada
 
@@ -36,23 +36,9 @@ Anda boleh mengedit beberapa butiran persekitaran sedia ada.
 
 2.  Pilih ikon **Edit**.
 
-3. Dalam kotak **Edit persekitaran**, anda boleh mengemas kini **Nama paparan**, tetapi anda tidak boleh menukar **Rantau** atau **Jenis**.
+3. Dalam kotak **Edit persekitaran**, anda boleh mengemas kini tetapan persekitaran.
 
-4. Jika persekitaran dikonfigurasikan untuk menyimpan data dalam Azure Data Lake Storage, anda boleh mengemas kini **Kunci akaun**. Walau bagaimanapun, anda tidak boleh mengubah **Nama akaun** atau nama **Bekas**.
-
-5. Secara pilihan, anda boleh mengemas kini daripada sambungan berasaskan kunci akaun kepada sambungan berasaskan sumber atau berasaskan langganan. Sebaik sahaja dinaik taraf, anda tidak boleh kembali kepada kunci akaun selepas kemas kini. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Anda tidak boleh mengubah maklumat **Bekas** semasa mengemas kini sambungan.
-
-6. Selain itu, anda boleh menyediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasikan perkongsian data Microsoft Dataverse dan dayakan keupayaan tambahan**. Keupayaan ini termasuk perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, pengingesan data daripada sumber data di premis atau penggunaan [ramalan](predictions.md). Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Data Lake Terurus Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Perkongsian data dengan Microsoft Dataverse Data Lake Terurus pada masa ini tidak disokong apabila anda menyimpan semua data ke Azure Data Lake Storage anda sendiri.
-   > - [Ramalan nilai yang hilang dalam entiti](predictions.md) dan laporan Terbenam PowerBI dalam cerapan khalayak (jika didayakan pada persekitaran anda) pada masa ini tidak disokong apabila anda mendayakan perkongsian data dengan danau data yang diuruskan oleh Microsoft Dataverse.
-
-   Selepas mendayakan perkongsian data dengan Microsoft Dataverse, segar semula sepenuhnya sumber data anda dan proses lain akan bermula. Jika proses sedang berjalan, anda tidak melihat pilihan untuk mendayakan perkongsian data dengan Microsoft Dataverse. Tunggu sehingga proses tersebut selesai atau batalkan proses untuk mendayakan perkongsian data. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
-   
-   Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan fail model.json akan dicipta dan ditambah pada subfolder yang berkenaan, bergantung pada proses yang anda jalankan.
+Untuk mendapatkan maklumat lanjut tentang tetapan persekitaran, lihat [Cipta persekitaran baharu](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi persekitaran
 

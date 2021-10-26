@@ -1,7 +1,7 @@
 ---
 title: Eksport Data Customer Insights pada Sendinblue
 description: Ketahui cara mengkonfigurasikan sambungan dan mengeksport pada Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036066"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617796"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Eksport segmen pada Sendinblue (pratonton)
 
@@ -29,10 +29,10 @@ Eksport segmen profil pelanggan disatukan untuk menjana kempen, menyediakan pema
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Sehingga 1 juta profil bagi setiap eksport pada Sendinblue.
+- Hingga 1 juta profil pelanggan bagi setiap eksport Sendinblue.
 - Mengeksport pada Sendinblue terhad kepada segmen.
-- Mengeksport segmen dengan sejumlah 1 juta profil boleh mengambil masa sehingga 90 minit. 
-- Bilangan profil yang boleh anda eksport pada Sendinblue bergantung pada dan terhad kepada kontrak anda dengan Sendinblue.
+- Mengeksport segmen dengan jumlah 1 juta profil pelanggan boleh mengambil masa hingga 90 minit. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada Sendinblue bergantung dan terhad pada kontrak anda dengan Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Sediakan sambungan kepada Sendinblue
 
@@ -64,7 +64,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **ID senarai Sendinblue** anda 
 
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. 
 
 1. Sebagai pilihan, anda boleh mengeksport **Nama pertama**, **Nama akhir**, dan **Telefon** untuk mencipta e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
 

@@ -4,17 +4,17 @@ description: Ketahui cara memperibadikan dan menjalankan sampel SDK web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036614"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606246"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Jalankan sampel SDK web untuk keupayaan cerapan penglibatan Dynamics 365 Customer Insights
 
@@ -26,7 +26,7 @@ Keupayaan cerapan penglibatan pustaka SDK web ialah pustaka JavaScript dengan ko
 
 - Pasang [Kod Visual Studio](https://code.visualstudio.com/).
 - [Pasang sambungan Pelayan Langsung](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) dalam Kod Visual Studio dan membiasakan diri dengan cara untuk menjalankan Pelayan Langsung.
-- Anda mesti mempunyai [kunci pengingesan](instrument-website.md).
+- Anda mesti mempunyai [ruang kerja cerapan penglibatan](create-workspace.md).
 
 ## <a name="run-sample"></a>Jalankan sampel
 
@@ -36,7 +36,11 @@ Keupayaan cerapan penglibatan pustaka SDK web ialah pustaka JavaScript dengan ko
 
 1. Buka folder nyahzip dalam Kod Visual Studio.
 
-1. Dalam fail `ei_websdk_sample.html`, gantikan rentetan "INGESTION_KEY" dengan kunci pengingesan anda daripada portal keupayaan cerapan penglibatan dan rentetan "NAMA" dengan nama global yang anda mahu SDK untuk diunsurkan. Pastikan anda menggantikan semua kejadian.
+1. Pergi ke portal cerapan penglibatan untuk ruang kerja anda. Pilih **Pentadbir** > **Ruang kerja** dan kemudian **Panduan pemasangan**. Ikuti pilihan pertama dan pilih **Salin kod** untuk menyalin cebisan kod JavaScript.
+
+1. Dalam fail `ei_websdk_sample.html`, tampal cebisan kod yang anda baru disalin di bawah baris ini:
+
+   - <-- TAMPAL CEBISAN KOD JAVASCRIPT DARIPADA PORTAL CERAPAN PENGLIBATAN DI SINI DI BAWAH BARIS INI -->
 
 1. Buka fail `ei_websdk_sample.html` menggunakan Pelayan Langsung dalam Kod Visual Studio dengan memilih **Langsungkan** daripada bar status.
 

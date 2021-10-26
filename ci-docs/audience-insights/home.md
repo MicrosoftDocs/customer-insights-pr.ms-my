@@ -1,7 +1,7 @@
 ---
 title: Halaman utama dalam Insights khalayak
 description: Mula terokai aplikasi pada Halaman utama.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470008"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617705"
 ---
 # <a name="explore-audience-insights"></a>Teroka cerapan khalayak
 
@@ -23,7 +23,7 @@ Halaman **Utama** menunjukkan gambaran keseluruhan segmen, langkah dan data peng
 
 :::image type="content" source="media/home-page.png" alt-text="Syot layar skrin Utama yang menunjukkan cerapan sampel.":::
 
-1 - Bertukar antara keupayaan Customer Insights 2 - Gunakan anak tetingkap kiri untuk menavigasi antara kawasan berbeza 3 - Ketahui persekitaran anda bekerja dan urus persekitaran sebagai pentadbir 4 - Tentukan tetapan peribadi untuk Customer Insights
+1 - Tukar antara keupayaan Customer Insights 2 - Gunakan anak tetingkap kiri untuk menavigasi antara kawasan yang berbeza dan pilih khalayak sasaran utama 3 – Ketahui persekitaran yang anda bekerja dan urus persekitaran sebagai pentadbir 4 - Tentukan tetapan peribadi untuk Customer Insights
 
 Di bawah **Segmen terbaru**, anda melihat kumpulan pelanggan berasaskan demografik, tingkah laku atau atribut transaksi yang telah anda takrifkan. [Mencipta segmen](segments.md) membantu anda untuk mengumpulkan asas pelanggan anda dan lebih menyasarkan aktiviti perniagaan anda.
 

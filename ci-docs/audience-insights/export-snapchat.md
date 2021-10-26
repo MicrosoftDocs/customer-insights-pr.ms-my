@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insight ke Snapchat
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan eksport ke Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033412"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618694"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Eksport segmen ke Snapchat (pratonton)
 
@@ -29,7 +29,7 @@ Eksport segmen profil pelanggan yang disatukan ke Snapchat dan gunakannya untuk 
 ## <a name="known-limitations"></a>Had diketahui
 
 - Mengeksport ke Snapchat dihadkan kepada segmen.
-- Mengeksport hingga 1 juta profil ke Snapchat boleh mengambil masa hingga 15 minit untuk diselesaikan. 
+- Mengeksport hingga 1 juta profil pelanggan kepada Snapchat boleh mengambil masa hingga 15 minit untuk dilengkapkan. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Sediakan sambungan ke Snapchat
 
@@ -63,7 +63,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan [**ID Khalayak Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Snapchat.
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Snapchat.
 
 1. Pilih segmen yang ingin anda eksport. 
 

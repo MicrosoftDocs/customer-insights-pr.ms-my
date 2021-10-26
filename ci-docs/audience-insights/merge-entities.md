@@ -1,7 +1,7 @@
 ---
 title: Gabung entiti dalam penyatuan data
 description: Gabung entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494330"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648265"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -89,7 +91,7 @@ Pada halaman **Gabung**, pilih **Medan yang dikecualikan** untuk melihat senarai
     :::image type="content" source="media/recency-merge-option.png" alt-text="Pilihan keterkinian dalam dialog medan gabungan.":::
     - **Kurang terkini**: Mengenal pasti nilai pemenang berdasarkan kurang keterkinian. Memerlukan tarikh atau medan angka untuk setiap entiti yang mengambil bahagian dalam skop medan gabungan untuk menentukan keterkinian.
 
-1.  Anda boleh menambah medan tambahan untuk mengambil bahagian dalam proses gabungan.
+1.  Anda boleh menambah lebih banyak medan untuk mengambil bahagian dalam proses gabungan.
 
 1.  Anda boleh menamakan semula medan yang digabungkan.
 
@@ -131,15 +133,15 @@ Sesetengah entiti mengandungi lebih banyak butiran daripada yang lain. Jika enti
 
 Selepas mengkonfigurasikan medan penggabungan, anda boleh menentukan cara menjana nilai CustomerId, pengecam profil pelanggan yang unik. Langkah gabungan dalam proses penyatuan data akan menjana pengecam profil pelanggan yang unik. Pengecam ialah CustomerId dalam entiti *Pelanggan* yang terhasil daripada proses penyatuan data. 
 
-CustomerId dalam entiti Pelanggan ialah berdasarkan cincang nilai pertama daripada kunci utama pemenang bukan nol. Kekunci ini berasal daripada entiti yang digunakan dalam fasa padanan dan gabungan, dan dipengaruhi oleh urutan padanan.Jadi CustomerID yang dijana boleh berubah apabila nilai kekunci utama berubah dalam entiti utama urutan padanan. Oleh itu, nilai kekunci utama mungkin tidak sentiasa mewakili pelanggan yang sama.
+CustomerId dalam entiti Pelanggan ialah berdasarkan cincang nilai pertama daripada kunci utama pemenang bukan nol. Kekunci ini berasal daripada entiti yang digunakan dalam fasa padanan dan gabungan, dan dipengaruhi oleh urutan padanan.Jadi CustomerID yang dijana boleh berubah apabila nilai kekunci utama berubah dalam entiti utama urutan padanan. Jadi, nilai kunci utama mungkin tidak semestinya mewakili pelanggan yang sama.
 
-Mengkonfigurasi Id pelanggan yang stabil membolehkan anda mengelakkan tingkah laku itu.
+Mengkonfigurasi ID pelanggan yang stabil mendayakan anda mengelakkan tingkah laku itu.
 
 **Konfigurasikan ID pelanggan unik**
 
 1. Pergi ke **Satukan** > **Gabung**.
 
-1. Pada halaman **Gabung**, pilih tab **Kekunci**. 
+1. Pilih tab **Kekunci**. 
 
 1. Tuding pada baris **CustomerId** dan pilih pilihan **Konfigurasi**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kawalan untuk menyesuaikan penjanaan ID.":::
@@ -147,6 +149,30 @@ Mengkonfigurasi Id pelanggan yang stabil membolehkan anda mengelakkan tingkah la
 1. Pilih hingga lima medan yang akan terdiri daripada ID pelanggan unik dan lebih stabil. Rekod yang tidak sepadan dengan konfigurasi anda menggunakan ID yang dikonfigurasikan sistem.  
 
 1. Pilih **Selesai** dan jalankan proses gabungan untuk menggunakan perubahan anda.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Profil kumpulan ke dalam isi rumah atau kluster
+
+Sebagai sebahagian daripada proses konfigurasi penjanaan profil pelanggan, anda boleh mentakrifkan peraturan kepada profil berkaitan kumpulan ke dalam kluster. Pada masa ini terdapat dua jenis kluster yang tersedia – kluster isi rumah dan tersuai. Sistem secara automatik memilih isi rumah dengan peraturan yang dipratentukan jika entiti *Pelanggan* mengandungi medan semantik *Person.LastName* dan *Location.Address*. Anda juga boleh mencipta Kluster dengan peraturan dan syarat anda sendiri, sama dengan [peraturan padanan](match-entities.md#define-rules-for-match-pairs).
+
+**Takrifkan isi rumah atau kluster**
+
+1. Pergi ke **Satukan** > **Gabung**.
+
+1. Pada tab **Gabung**, pilih **Lanjutan** > **Cipta kluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Kawalan untuk mencipta kluster baharu.":::
+
+1. Pilih antara **Isi rumah** atau kluster **Tersuai**. Jika medan semantik *Person.LastName* dan *Location.Address* wujud dalam entiti *Pelanggan*, isi rumah dipilih secara automatik.
+
+1. Berikan nama untuk kluster dan pilih **Selesai**.
+
+1. Pilih tab **Kluster** untuk mencari kluster yang anda cipta.
+
+1. Tentukan peraturan dan syarat untuk mentakrifkan gugusan anda.
+
+1. Pilih **Jalankan** untuk menjalankan proses gabungan dan mencipta kluster.
+
+Selepas menjalankan proses penggabungan, pengecam kluster akan ditambah sebagai medan baharu kepada entiti *Pelanggan*.
 
 ## <a name="run-your-merge"></a>Jalankan gabungan anda
 

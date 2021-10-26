@@ -1,7 +1,7 @@
 ---
 title: Aktiviti pelanggan
 description: Mentakrifkan aktiviti pelanggan dan melihat aktiviti tersebut dalam garis masa pada profil pelanggan.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494422"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617980"
 ---
 # <a name="customer-activities"></a>Aktiviti pelanggan
 
@@ -24,8 +24,7 @@ Gabungkan aktiviti pelanggan daripada [pelbagai sumber data](data-sources.md) da
 
 Sumber data anda boleh termasuk entiti dengan data transaksi dan aktiviti daripada berbilang sumber data. Kenal pasti entiti ini dan pilih aktiviti yang anda mahu lihat pada garis masa pelanggan. Pilih entiti yang mengandungi sasaran aktiviti atau aktiviti anda.
 
-> [!NOTE]
-> Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang akan dimasukkan dalam garis masa pelanggan dan anda tidak boleh menambah entiti tanpa medan **Tarikh**. Kawalan **Tambah aktiviti** dinyahdayakan jika tiada entiti sedemikian ditemui.
+Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang akan dimasukkan dalam garis masa pelanggan dan anda tidak boleh menambah entiti tanpa medan **Tarikh**. Kawalan **Tambah aktiviti** dinyahdayakan jika tiada entiti sedemikian ditemui.
 
 1. Dalam wawasan khalayak, pergi ke **Data** > **Aktiviti**.
 
@@ -41,13 +40,16 @@ Sumber data anda boleh termasuk entiti dengan data transaksi dan aktiviti daripa
 
 1. Pilih **Seterusnya** untuk pergi ke langkah seterusnya.
 
-1. Dalam langkah **Perhubungan**, konfigurasikan butiran untuk menyambungkan data aktiviti anda kepada pelanggan yang berkaitan. Langkah ini menggambarkan sambungan antara entiti.  
+1. Dalam langkah **Perhubungan**, konfigurasikan butiran untuk menyambungkan data aktiviti anda kepada rekod pelanggan yang sepadan. Langkah ini menggambarkan sambungan antara entiti.  
 
    - **Pertama**: Medan asing dalam entiti aktiviti anda yang akan digunakan untuk mewujudkan perhubungan dengan entiti lain.
    - **Kedua**: Entiti pelanggan sumber yang sepadan dengan entiti aktiviti anda yang akan berada dalam perhubungan. Anda hanya boleh dikaitkan dengan entiti pelanggan sumber yang digunakan dalam proses penyatuan data.
    - **Ketiga**: Jika perhubungan antara entiti aktiviti ini dan entiti pelanggan sumber yang dipilih telah wujud, nama perhubungan akan berada dalam mod baca sahaja. Jika tiada hubungan sedemikian wujud, hubungan baharu akan dicipta dengan nama yang anda berikan dalam kotak ini.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Takrifkan perhubungan entiti.":::
+
+   > [!TIP]
+   > Dalam persekitaran B2B, anda boleh memilih antara entiti akaun dan entiti lain. Jika anda memilih entiti akaun, laluan perhubungan ditetapkan secara automatik. Untuk entiti lain, anda perlu mentakrifkan laluan perhubungan melalui satu atau lebih entiti pertengahan sehingga anda menjangkau entiti akaun.
 
 1. Pilih **Seterusnya** untuk pergi ke langkah seterusnya. 
 
@@ -95,5 +97,34 @@ Tindakan berikut tersedia apabila anda memilih aktiviti.
 - **Namakan semula**: Buka dialog untuk anda memasukkan nama lain bagi aktiviti yang dipilih. Pilih **Simpan** untuk menggunakan perubahan anda.
 
 - **Padam**: Buka dialog untuk mengesahkan pemadaman aktiviti yang dipilih. Anda juga boleh memadamkan lebih daripada satu aktiviti sekaligus dengan memilih aktiviti dan kemudian memilih ikon padam. Pilih **Padam** untuk mengesahkan pemadaman.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Lihat garis masa aktiviti pada profil pelanggan
+
+Selepas anda mengkonfigurasi aktiviti pelanggan, pilih **Tunjuk pada garis masa aktiviti** dalam konfigurasi aktiviti untuk mencari semua aktiviti pelanggan anda pada profil pelanggan mereka.
+
+Untuk membuka garis masa untuk pelanggan, pergi ke **Pelanggan** dan pilih profil pelanggan yang anda mahu lihat.
+
+Jika pelanggan telah mengambil bahagian dalam aktiviti yang telah anda konfigurasikan, anda akan menemuinya dalam bahagian **Garis masa aktiviti**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Lihat aktiviti yang dikonfigurasikan dalam Profil Pelanggan.":::
+
+Terdapat beberapa cara untuk menapis aktiviti dalam garis masa aktiviti:
+
+- Anda boleh memilih satu atau banyak ikon aktiviti untuk memperhalusi hasil anda untuk memasukkan jenis yang dipilih sahaja.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Tapis aktiviti mengikut jenis menggunakan ikon.":::
+
+- Anda boleh memilih **Penapis** untuk membuka panel penapis untuk mengkonfigurasikan penapis garis masa anda.
+
+   1. Anda boleh menapis mengikut *ActivityType* dan *Tarikh*
+   1. Pilih **Gunakan** untuk menggunakan penapis dalam garis masa aktiviti.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Gunakan panel penapis untuk mengkonfigurasikan syarat penapis.":::
+
+Untuk mengalih keluar penapis, pilih **x** bersebelahan dengan setiap penapis yang digunakan pada garis masa atau pilih **Kosongkan penapis**.
+
+
+> [!NOTE]
+> Penapis aktiviti akan dialih keluar apabila anda meninggalkan profil pelanggan. Anda perlu menggunakannya setiap kali anda membuka pada profil pelanggan.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

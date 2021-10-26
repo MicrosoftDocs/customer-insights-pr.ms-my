@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559029"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645593"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Cipta pautan antara cerapan khalayak dan cerapan penglibatan
 
@@ -26,7 +26,7 @@ Gunakan profil dan segmen disatukan daripada cerapan khalayak untuk lebih banyak
 ## <a name="prerequisites"></a>Prasyarat
 
 - Profil cerapan khalayak mesti disimpan dalam akaun Azure Data Lake Storage yang anda miliki atau dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;data lake yang diuruskan. 
-- Persekitaran cerapan khalayak anda harus mempunyai persekitaran Dataverse yang berkaitan. Dan jika persekitaran tersebut juga menggunakan Dataverse untuk storan data, pastikan anda menyemak pilihan **Dayakan perkongsian data** dalam cerapan khalayak. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan konfigurasikan persekitaran berbayar dalam cerapan khalayak](../audience-insights/get-started-paid.md).
+- Persekitaran cerapan khalayak anda harus mempunyai persekitaran Dataverse yang berkaitan. Dan jika persekitaran tersebut juga menggunakan Dataverse untuk storan data, pastikan anda menyemak pilihan **Dayakan perkongsian data** dalam cerapan khalayak. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan konfigurasikan persekitaran dalam cerapan khalayak](../audience-insights/create-environment.md).
 - Anda memerlukan keizinan pentadbir untuk kedua-dua cerapan penglibatan dan persekitaran cerapan khalayak.
 - Persekitaran yang dipautkan mestilah dalam rantau geografi yang sama.
 

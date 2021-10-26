@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke SendGrid
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan eksport ke SendGrid.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036112"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617842"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Eksport segmen ke SendGrid (pratonton)
 
@@ -29,10 +29,10 @@ Eksport segmen bagi profil pelanggan disatukan untuk senarai kenalan SendGrid da
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Sehingga 100'000 profil dalam jumlah keseluruhan ke SendGrid.
+- Hingga 100,000 profil pelanggan secara keseluruhan kepada SendGrid.
 - Mengeksport ke SendGrid adalah terhad kepada segmen.
-- Mengeksport sehingga 100'000 profil ke SendGrid boleh mengambil masa hingga beberapa jam untuk diselesaikan. 
-- Bilangan profil yang boleh anda eksport ke SendGrid bergantung dan terhad pada kontrak anda dengan SendGrid.
+- Mengeksport hingga 100,000 profil pelanggan kepada SendGrid boleh mengambil masa sehingga beberapa jam untuk dilengkapkan. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada SendGrid bergantung dan terhad pada kontrak anda dengan SendGrid.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Sediakan sambungan ke SendGrid
 
@@ -66,7 +66,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **[ID senarai SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)** anda.
 
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama akhir**, **Negara/Rantau**, **Negeri**. **Bandar** dan **Poskod**.
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama akhir**, **Negara/Rantau**, **Negeri**. **Bandar** dan **Poskod**.
 
 1. Pilih segmen yang ingin anda eksport. Kami amat **mengesyorkan untuk tidak mengeksport lebih daripada 100'000 profil pelanggan dalam jumlah** ke SendGrid. 
 

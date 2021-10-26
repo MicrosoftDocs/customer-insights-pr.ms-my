@@ -1,7 +1,7 @@
 ---
 title: Segmen dalam wawasan khalayak
 description: Gambaran keseluruhan pada segmen dan cara mencipta dan mengurus segmen.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036384"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617386"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
@@ -26,11 +26,19 @@ Profil pelanggan yang sepadan dengan penapis bagi definisi segmen dirujuk sebaga
 
 Terdapat berbilang cara untuk mencipta segmen baharu: 
 
-- Segmen kompleks dengan pembina segmen: [Segmen kosong](segment-builder.md#create-a-new-segment)
-- Segmen ringkas dengan satu operator: [Segmen pantas](segment-builder.md#quick-segments)
-- Cara dikuasai AI untuk mencari pelanggan yang serupa: [Pelanggan Serupa](find-similar-customer-segments.md)
-- Cadangan dikuasai AI berdasarkan pada ukuran atau atribut: [Segmen yang dicadangkan untuk meningkatkan ukuran](suggested-segments.md)
-- Cadangan berdasarkan pada aktiviti: [Segmen yang dicadangkan berdasarkan pada aktiviti pelanggan](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Pelanggan individu (B2C)](#tab/b2c)
+
+- Segmen kompleks dengan pembina segmen: [Bina yang sendiri](segment-builder.md#create-a-new-segment) 
+- Segmen ringkas dengan satu operator: [Segmen pantas](segment-builder.md#quick-segments) 
+- Cara dikuasai AI untuk mencari pelanggan yang serupa: [Pelanggan Serupa](find-similar-customer-segments.md) 
+- Cadangan dikuasai AI berdasarkan pada ukuran atau atribut: [Segmen yang dicadangkan untuk meningkatkan ukuran](suggested-segments.md) 
+- Cadangan berdasarkan pada aktiviti: [Segmen yang dicadangkan berdasarkan pada aktiviti pelanggan](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Akaun perniagaan (B2B)](#tab/b2b)
+
+- Segmen kompleks dengan pembina segmen: [Bina yang sendiri](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Mengurus bahagian sedia ada
 
@@ -70,9 +78,9 @@ Anda boleh mengeksport segmen daripada halaman segmen atau [halaman eksport](exp
 
 1. Pilih **Urus eksport** daripada senarai juntai bawah tindakan.
 
-1. Halaman **Eksport (pratonton) untuk segmen** dibuka. Anda boleh melihat semua eksport yang dikonfigurasikan dikumpulkan oleh eksport yang mengandungi segmen semasa atau tidak mengandungi segmen.
+1. Halaman **Eksport (pratonton) untuk segmen** dibuka. Anda boleh melihat semua eksport yang dikonfigurasikan dikumpulkan oleh sama ada ia mengandungi segmen semasa atau tidak.
 
-   1. Untuk menambah segmen yang dipilih ke eksport, pilih eksport dalam senarai dan pilih **Tambah segmen**.
+   1. Untuk menambah segmen yang dipilih kepada eksport, **Edit** eksport masing-masing untuk memilih segmen yang sepadan kemudian simpan. Dalam persekitaran untuk pelanggan individu anda boleh memilih eksport dalam senarai dan pilih **Tambah segmen** untuk mencapai hasil yang sama.
 
    1. Untuk mencipta eksport baharu dengan segmen yang dipilih, pilih **Tambah eksport**. Untuk mendapatkan maklumat lanjut tentang mencipta eksport, lihat [Sediakan eksport baharu](export-destinations.md#set-up-a-new-export).
 

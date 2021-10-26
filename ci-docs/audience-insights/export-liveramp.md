@@ -1,7 +1,7 @@
 ---
 title: LiveRamp penyambung
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035656"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618946"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Eksport segmen ke LiveRamp&reg; (pratonton)
 
@@ -58,7 +58,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
    > [!div class="mx-imgBorder"]
    > ![Penyambung LiveRamp dengan atribut pemetaan.](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
 
-1. Petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk pengecam kunci yang dipilih.
+1. Peta atribut yang sepadan daripada entiti *Pelanggan* anda untuk pengecam kunci yang dipilih.
 
 1. Pilih **Tambah atribut** untuk memetakan lebih banyak atribut untuk dihantar ke LiveRamp.
 

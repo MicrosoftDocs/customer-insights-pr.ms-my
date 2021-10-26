@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke DotDigital
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034647"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618394"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Eksport segmen ke DotDigital (pratonton)
 
@@ -22,17 +22,17 @@ Eksport segmen profil pelanggan disatukan ke buku alamat DotDigital dan gunakann
 
 ## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
 
--   Anda mempunyai [Akaun DotDigital](https://dotdigital.com/) dan kelayakan pentadbir yang berkaitan.
+-   Anda mempunyai [Akaun DotDigital](https://dotdigital.com/) dan mencipta [pengguna API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Anda akan memerlukan kelayakan pengguna API untuk mencipta sambungan
 -   Terdapat buku alamat sedia ada dalam DotDigital dan ID yang berkaitan. ID boleh ditemui dalam URL apabila anda memilih dan membuka buku alamat. Untuk maklumat lanjut, lihat [Buku alamat DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Anda mempunyai [segmen yang dikonfigurasi](segments.md) dalam wawasan khalayak.
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Hingga 1 juta profil bagi setiap eksport ke DotDigital.
+- Hingga 1 juta profil pelanggan bagi setiap eksport kepada DotDigital.
 - Mengeksport ke DotDigital adalah terhad kepada segmen.
-- Mengeksport segmen dengan jumlah 1 juta profil boleh mengambil masa hingga 3 jam kerana had pada bahagian pembekal. 
-- Bilangan profil yang boleh anda eksport ke DotDigital bergantung dan terhad pada kontrak anda dengan DotDigital.
+- Segmen eksport dengan jumlah 1 juta profil pelanggan boleh mengambil masa hingga 3 jam kerana had pada bahagian pembekal. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada DotDigital bergantung dan terhad pada kontrak anda dengan DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Sediakan sambungan ke DotDigital
 
@@ -44,7 +44,7 @@ Eksport segmen profil pelanggan disatukan ke buku alamat DotDigital dan gunakann
 
 1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Masukkan **Nama pengguna dan kata laluan DotDigital** anda.
+1. Masukkan **Nama pengguna dan kata laluan API DotDigital** anda. 
 
 1. Masukkan **[ID buku alamat DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)** anda.
 
@@ -67,7 +67,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian DotDigital. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
 
-1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama akhir**, **Nama penuh**, **Jantina** dan **Poskod**.
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama akhir**, **Nama penuh**, **Jantina** dan **Poskod**.
 
 1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta profil pelanggan dalam jumlah keseluruhan DotDigital.
 

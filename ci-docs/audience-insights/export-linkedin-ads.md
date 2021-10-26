@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke LinkedIn Ads
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034234"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618302"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Eksport segmen ke LinkedIn Ads (pratonton)
 
@@ -28,9 +28,9 @@ Eksport segmen profil pelanggan yang disatukan kepada LinkedIn Ads untuk mencipt
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 100K profil bagi setiap eksport ke LinkedIn Ads.
+- Anda boleh mengeksport hingga 100,000 profil pelanggan bagi setiap eksport ke Iklan LinkedIn.
 - Mengeksport ke LinkedIn Ads dihadkan kepada segmen.
-- Mengeksport hingga 100K profil ke LinkedIn Ads boleh mengambil masa hingga 10 minit untuk selesai. 
+- Mengeksport hingga 100,000 profil pelanggan kepada Iklan LinkedIn boleh mengambil masa hingga 10 minit untuk dilengkapkan. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Sediakan sambungan ke LinkedIn Ads
 
@@ -66,7 +66,7 @@ Anda boleh mengkonfigurasikan eksport jika anda mempunyai akses ke sambungan jen
 
 1. Pilih sama ada anda mahu mengeksport data untuk [penyasaran kenalan](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) atau [penyasaran syarikat](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) di LinkedIn. 
 
-1. Di bahagian **Pemadanan data**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke LinkedIn Ads.
+1. Dalam bahagian **Pemadanan Data**, untuk penyasaran kenalan, pilih sekurang-kurangnya satu medan yang mewakili alamat e-mel pelanggan, ID Iklan Apple, ID Iklan Google, ID Pengguna Google atau nama pertama dan akhir. Jika anda memilih penyasaran syarikat, pilih sekurang-kurangnya satu medan yang mewakili nama syarikat, domain e-mel, URL Halaman LinkedIn, simbol Stock atau Tapak Web. Medan tambahan boleh dipilih untuk mentakrifkan selanjutnya eksport anda. 
 
 1. Pilih segmen yang ingin anda eksport. Matched audiences dalam LinkedIn Campaign Manager akan dicipta secara automatik dengan nama segmen yang anda pilih untuk dieksport. Setiap segmen akan menghasilkan matched audiences yang berasingan. 
 

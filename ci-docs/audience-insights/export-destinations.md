@@ -1,7 +1,7 @@
 ---
 title: Eksport data daripada Customer Insights
 description: Urus eksport untuk berkongsi data.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034693"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623127"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
-Halaman **Eksport** menunjukkan semua eksport yang dikonfigurasikan. Eksport berkongsi data tertentu dengan pelbagai aplikasi. Ia termasuk profil pelanggan atau entiti, skema, dan butiran pemetaan. Setiap eksport memerlukan [sambungan, yang disediakan oleh pentadbir, untuk menguruskan pengesahan dan akses](connections.md).
+Halaman **Eksport** menunjukkan semua eksport yang dikonfigurasikan. Eksport berkongsi data tertentu dengan pelbagai aplikasi. Ia boleh termasuk profil pelanggan, entiti, skema dan butiran pemetaan. Setiap eksport memerlukan [sambungan, yang disediakan oleh pentadbir, untuk menguruskan pengesahan dan akses](connections.md).
 
 Pergi ke **Data** > **Eksport** untuk melihat halaman eksport. Semua peranan pengguna boleh melihat eksport yang dikonfigurasikan. Gunakan medan carian dalam bar perintah untuk mencari eksport mengikut nama, nama sambungan atau jenis sambungan.
 
-## <a name="set-up-a-new-export"></a>Sediakan eksport baharu
+## <a name="export-types"></a>Jenis eksport
 
+Terdapat dua jenis eksport utama:  
+
+- **Eksport data keluar** membolehkan anda mengeksport sebarang jenis entiti yang tersedia dalam cerapan khalayak. Entiti yang anda pilih untuk eksport akan dieksport dengan semua medan data, metadata, skema dan butiran pemetaan. 
+- **Eksport segmen** membolehkan anda mengeksport entiti segmen daripada cerapan khalayak. Segmen mewakili senarai profil pelanggan. Apabila mengkonfigurasi eksport, anda memilih medan data yang disertakan, bergantung pada sistem sasaran yang anda eksport data kepada. 
+
+### <a name="export-segments"></a>Bahagian eksport
+
+**Mengeksport segmen dalam persekitaran untuk akaun perniagaan (B2B) atau pelanggan individu (B2C)**  
+Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport segmen kepada pelbagai sistem sasaran mempunyai keperluan khusus. Secara umumnya, ahli segmen, profil pelanggan, mengandungi maklumat kenalan. Walaupun ini biasanya kes untuk segmen yang dibina pada pelanggan individu (B2C), ia tidak semestinya kes untuk segmen berdasarkan pada akaun perniagaan (B2B). 
+
+**Persekitaran segmen eksport untuk akaun perniagaan (B2B)**  
+- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan **syarikat** semasa mentakrifkan eksport.
+- Semua sistem sasaran lain memerlukan medan daripada entiti kenalan. Untuk memastikan segmen akaun boleh mendapatkan data daripada kenalan yang berkaitan, takrifan segmen anda perlu untuk atribut projek entiti kenalan. Ketahui lebih lanjut tentang cara [mengkonfigurasikan segmen dan atribut projek](segment-builder.md).
+
+**Eksport segmen dalam persekitaran untuk pelanggan individu (B2C)**  
+- Segmen dalam konteks persekitaran untuk pelanggan individu dibina pada entiti *profil pelanggan disatukan*. Setiap segmen yang memenuhi keperluan sistem sasaran (contohnya, alamat e-mel) boleh dieksport.
+
+**Had pada eksport segmen**  
+- Sistem sasaran pihak ketiga boleh mengehadkan bilangan profil pelanggan yang boleh anda eksport. 
+- Untuk pelanggan individu, anda akan melihat bilangan sebenar ahli segmen apabila anda memilih segmen untuk eksport. Anda akan mendapat amaran jika segmen terlalu besar. 
+- Untuk akaun perniagaan, anda akan melihat bilangan akaun dalam segmen; walau bagaimanapun, bilangan kenalan yang mungkin diunjurkan tidak ditunjukkan. Dalam sesetengah kes, ini mungkin membawa kepada segmen yang dieksport sebenarnya mengandungi lebih banyak profil pelanggan daripada menerima sistem sasaran. Melebihi had hasil sistem sasaran akan melangkau eksport. 
+
+## <a name="set-up-a-new-export"></a>Sediakan eksport baharu  
 Untuk menyediakan atau mengedit eksport, anda perlu mempunyai sambungan yang tersedia untuk anda. Sambungan bergantung kepada [peranan pengguna](permissions.md) anda:
-- Pentadbir mempunyai akses ke semua sambungan. Mereka juga boleh mencipta sambungan baharu apabila menyediakan eksport.
-- Penyumbang boleh mempunyai akses ke sambungan tertentu. Mereka bergantung kepada pentadbir untuk mengkonfigurasi dan berkongsi sambungan. Senarai eksport menunjukkan penyumbang sama ada mereka boleh mengedit atau hanya melihat eksport dalam lajur **Keizinan anda**. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Penonton hanya boleh melihat eksport sedia ada tetapi tidak menciptanya.
+- **Pentadbir** mempunyai capaian ke semua sambungan. Mereka juga boleh mencipta sambungan baharu apabila menyediakan eksport.
+- **Penyumbang** boleh mempunyai capaian ke sambungan khusus. Mereka bergantung kepada pentadbir untuk mengkonfigurasi dan berkongsi sambungan. Senarai eksport menunjukkan penyumbang sama ada mereka boleh mengedit atau hanya melihat eksport dalam lajur **Keizinan anda**. Untuk mendapatkan maklumat lanjut, pergi ke [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Penonton** hanya boleh melihat eksport sedia ada—tidak menciptanya.
 
 ### <a name="define-a-new-export"></a>Tentukan eksport baharu
 

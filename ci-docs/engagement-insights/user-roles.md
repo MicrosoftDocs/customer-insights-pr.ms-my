@@ -4,27 +4,33 @@ description: Gambaran keseluruhan peranan dan keizinan yang tersedia untuk ahli 
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036704"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645548"
 ---
 # <a name="roles-and-permissions"></a>Peranan dan keizinan
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ruang kerja ialah cara anda menyimpan dan mengurus peristiwa dan laporan. Ahli ialah pengguna yang boleh mengakses ruang kerja. Anda boleh menugaskan ahli ke ruang kerja anda dan mentakrifkan peranan dan keizinan mereka. Peranan pentadbir menguruskan ruang kerja dan persekitaran dan mengkonfigurasi cerapan penglibatan untuk pengguna lain. Peranan penyumbang menjurus ke arah penganalisis yang tidak perlu mengkonfigurasi cerapan penglibatan tetapi mahu mencipta laporan, corong atau segmen mereka sendiri.
+Ruang kerja ialah tempat anda menyimpan dan mengurus peristiwa dan laporan. Untuk mendapatkan maklumat lanjut, lihat [Cipta ruang kerja dan tambah ahli](create-workspace.md). 
+
+Ruang kerja boleh termasuk peranan dan keizinan berikut:
+
+- Peranan *Ahli* ialah pengguna yang boleh mengakses ruang kerja. Anda boleh menugaskan ahli ke ruang kerja anda dan mentakrifkan peranan dan keizinan mereka. 
+- Peranan *Pentadbir* menguruskan ruang kerja dan persekitaran dan mengkonfigurasi cerapan penglibatan untuk pengguna lain. 
+- Peranan *Penyumbang* menjurus ke arah penganalisis yang tidak perlu mengkonfigurasikan cerapan penglibatan tetapi mahu mencipta laporan, corong atau segmen mereka sendiri.
 
 ## <a name="permissions"></a>Keizinan
   
-Carta berikut mengenal pasti keizinan untuk setiap peranan. 
+Jadual berikut mengenal pasti keizinan untuk setiap peranan. 
 
 | Keizinan | Pentadbir persekitaran | Pentadbir ruang kerja | Penyumbang persekitaran | Penyumbang ruang kerja | 
 |--|--|--|--|--|
