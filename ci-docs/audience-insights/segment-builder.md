@@ -1,7 +1,7 @@
 ---
 title: Cipta segmen dengan halaman pembina segmen
 description: Cipta bahagian pelanggan untuk mengumpul mereka berasaskan pelbagai atribut.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623040"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673561"
 ---
 # <a name="create-segments"></a>Cipta segmen
 
@@ -23,6 +23,7 @@ Takrifkan penapis kompleks sekitar entiti pelanggan disatukan dan entiti yang be
 > [!TIP]
 > - Segmen pantas hanya disokong dalam persekitaran untuk **pelanggan individu**.    
 > - Segmen berdasarkan **pelanggan individu** secara automatik menyertakan maklumat kenalan untuk ahli segmen. Dalam persekitaran untuk segmen **akaun perniagaan**, segmen adalah berdasarkan akaun (syarikat atau subsidiari). Untuk memasukkan maklumat kenalan dalam segmen, gunakan kefungsian **Atribut projek** dalam pembina segmen.
+>    - Pastikan sumber data kenalan adalah [dipetakan secara semantiknya ke ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) entiti.
 
 ## <a name="segment-builder"></a>Pembina segmen
 
@@ -52,7 +53,7 @@ Contoh di atas menunjukkan keupayaan pembahagian. Kami telah menentukan segmen u
 
 Terdapat berbilang cara untuk mencipta segmen baharu. Bahagian ini menerangkan cara membina segmen anda sendiri dari awal. Anda juga boleh mencipta *segmen pantas* berdasarkan pada entiti sedia ada atau menggunakan model pembelajaran mesin untuk mendapatkan *segmen yang dicadangkan*. Untuk mendapatkan maklumat lanjut, pergi ke [Gambaran keseluruhan segmen](segments.md).
 
-Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen disimpan sebagai segmen tidak aktif. Apabila anda melengkapkan konfigurasi segmen, jalankan ia untuk mengaktifkan segmen. Secara alternatif, anda boleh ***Aktifkan** _ a segmen dari _ halaman *Semua segmen**.
+Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen disimpan sebagai segmen tidak aktif. Apabila anda melengkapkan konfigurasi segmen, jalankan ia untuk mengaktifkan segmen. Anda juga boleh **Aktifkan** segmen dari halaman **Semua segmen**.
 
 1. Pergi ke halaman **Bahagian**.
 
@@ -86,17 +87,25 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen 
 
    Apabila menggunakan ATAU operator, semua syarat mestilah berdasarkan entiti yang dimasukkan dalam laluan perhubungan.
 
-   - Anda boleh mencipta berbilang peraturan untuk mencipta set rekod pelanggan yang berbeza. Anda boleh menggabungkan kumpulan untuk memasukkan pelanggan yang diperlukan bagi kes perniagaan anda. Untuk mencipta peraturan baharu, pilih **Tambah peraturan**. Secara khusus, jika anda tidak boleh memasukkan dan entiti dalam peraturan disebabkan oleh laluan perhubungan yang ditentukan, anda perlu mencipta peraturan baharu untuk memilih borang atribut.
+   - Anda boleh mencipta berbilang peraturan untuk mencipta set rekod pelanggan yang berbeza. Anda boleh menggabungkan kumpulan untuk memasukkan pelanggan yang diperlukan bagi kes perniagaan anda. Untuk mencipta peraturan baharu, pilih **Tambah peraturan**. Khususnya, jika anda tidak boleh memasukkan dan entiti dalam peraturan kerana laluan perhubungan yang ditetapkan, anda perlu mencipta peraturan baharu untuk memilih borang atribut.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Tambahkan peraturan baharu pada segmen dan pilih operator set.":::
 
    - Pilih salah satu operator set: **Kesatuan**, **Bersilang** atau **Kecuali**.
 
       - **Kesatuan** menyatukan dua kumpulan.
-      - **Bersilang** dua kumpulan bertindih. Hanya data yang *umum* pada kedua-dua kumpulan dikekalkan dalam kumpulan disatukan.
-      - **Kecuali** menggabungkan dua kumpulan. Hanya data dalam kumpulan A yang *tidak umum* pada data dalam kumpulan B dikekalkan.
+      - **Bersilang** dua kumpulan bertindih. Hanya data yang *lazim* kepada kedua-dua kumpulan kekal dalam kumpulan yang disatukan.
+      - **Kecuali** menggabungkan dua kumpulan. Hanya data dalam Kumpulan A yang *tidak lazim* dengan data dalam kumpulan B disimpan.
 
-1. Secara lalai, segmen menjana entiti output yang mengandungi semua atribut profil pelanggan yang sepadan dengan penapis yang ditentukan. Jika segmen berdasarkan entiti lain daripada entiti *Pelanggan*, anda boleh menambahkan lebih banyak atribut daripada entiti tersebut kepada entiti output. Pilih **Atribut projek** untuk memilih atribut yang akan ditambah pada entiti output.  
+1. Secara lalai, segmen menjana entiti output yang mengandungi semua atribut profil pelanggan yang sepadan dengan penapis yang ditentukan. Jika segmen berdasarkan entiti lain daripada entiti *Pelanggan*, anda boleh menambahkan lebih banyak atribut daripada entiti tersebut kepada entiti output. Pilih **Atribut projek** untuk memilih atribut yang akan ditambah pada entiti output. 
+
+   > [!IMPORTANT]
+   > Untuk segmen berdasarkan akaun perniagaan, butiran satu atau lebih kenalan bagi setiap akaun daripada entiti *ContactProfile* perlu dimasukkan dalam segmen untuk membenarkan segmen diaktifkan atau dieksport ke destinasi yang memerlukan maklumat kenalan. Untuk mendapatkan maklumat lanjut tentang entiti *ContactProfile*, lihat [Pemetaan semantik](semantic-mappings.md).
+   > Output sampel untuk segmen berdasarkan akaun perniagaan dengan atribut diunjurkan kenalan boleh kelihatan seperti ini: 
+   >
+   > |ID  |Nama akaun  |Hasil  |Nama orang hubungan  | Peranan kenalan|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [Pengurus Pemerolehan,CEO]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Contoh atribut unjuran yang dipilih dalam anak tetingkap untuk ditambahkan pada entiti output.":::
   
@@ -107,13 +116,14 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen 
    > - Jika atribut yang anda mahu projek lebih daripada satu hop daripada entiti *Pelanggan*, seperti yang ditakrifkan oleh perhubungan, atribut tersebut sepatutnya digunakan dalam setiap peraturan bagi pertanyaan segmen yang anda sedang bangunkan. 
    > - Jika atribut yang anda mahu projek hanya lebih daripada satu hop daripada entiti *Pelanggan*, atribut tersebut tidak perlu wujud dalam setiap peraturan bagi pertanyaan segmen yang anda sedang bangunkan. 
    > - **Atribut yang diunjurkan** difaktorkan apabila menggunakan operator set.
-   > - Untuk segmen berdasarkan akaun perniagaan, butiran satu atau lebih kenalan bagi setiap akaun perlu dimasukkan dalam segmen untuk membenarkan segmen itu diaktifkan atau dieksport ke destinasi yang memerlukan maklumat kenalan.
 
 1. Sebelum anda menyimpan dan menjalankan segmen, Pilih **Edit butiran** di sebelah nama segmen. Berikan nama untuk segmen anda dan kemas kini **Nama entiti output** yang dicadangkan untuk segmen tersebut. Anda juga boleh menambahkan perihalan pada segmen.
 
 1. Pilih **Jalankan** untuk menyimpan segmen, aktifkan dan mulakan pemprosesan segmen anda berdasarkan semua peraturan dan syarat. Jika tidak, ia akan disimpan sebagai segmen tidak aktif.
-
+   
 1. Pilih **Kembali ke segmen** untuk kembali ke halaman **Segmen**.
+
+1. Secara lalai, segmen dicipta sebagai segmen dinamik. Ia bermaksud bahawa segmen itu disegar semula semasa sistem penyegaran semula. Untuk [menghentikan segar semula automatik](segments.md#manage-existing-segments), pilih segmen, pilih pilihan **Buat statik**. Segmen statik hanya boleh [disegar semula secara manual](segments.md#refresh-segments) pada bila-bila masa.
 
 > [!TIP]
 > - Pembina segmen tidak akan mencadangkan nilai sah daripada entiti apabila menetapkan operator untuk syarat. Anda boleh pergi ke **Data** > **Entiti** dan memuat turun data entiti untuk melihat nilai yang tersedia.

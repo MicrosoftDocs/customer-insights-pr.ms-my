@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623127"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673334"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
@@ -32,14 +32,14 @@ Terdapat dua jenis eksport utama:
 
 ### <a name="export-segments"></a>Bahagian eksport
 
-**Mengeksport segmen dalam persekitaran untuk akaun perniagaan (B2B) atau pelanggan individu (B2C)**  
-Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport segmen kepada pelbagai sistem sasaran mempunyai keperluan khusus. Secara umumnya, ahli segmen, profil pelanggan, mengandungi maklumat kenalan. Walaupun ini biasanya kes untuk segmen yang dibina pada pelanggan individu (B2C), ia tidak semestinya kes untuk segmen berdasarkan pada akaun perniagaan (B2B). 
+**Mengeksport segmen dalam persekitaran untuk akaun perniagaan (niaga-ke-niaga) atau pelanggan individu (niaga-ke-pengguna)**  
+Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport segmen kepada pelbagai sistem sasaran mempunyai keperluan khusus. Secara umumnya, ahli segmen, profil pelanggan, mengandungi maklumat kenalan. Walaupun ini biasanya kes untuk segmen yang dibina pada pelanggan individu (niaga-ke-pengguna), ia tidak semestinya kes untuk segmen berdasarkan pada akaun perniagaan (niaga-ke-niaga). 
 
-**Persekitaran segmen eksport untuk akaun perniagaan (B2B)**  
+**Persekitaran eksport segmen untuk akaun perniagaan (niaga-ke-niaga)**  
 - Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan **syarikat** semasa mentakrifkan eksport.
 - Semua sistem sasaran lain memerlukan medan daripada entiti kenalan. Untuk memastikan segmen akaun boleh mendapatkan data daripada kenalan yang berkaitan, takrifan segmen anda perlu untuk atribut projek entiti kenalan. Ketahui lebih lanjut tentang cara [mengkonfigurasikan segmen dan atribut projek](segment-builder.md).
 
-**Eksport segmen dalam persekitaran untuk pelanggan individu (B2C)**  
+**Eksport segmen dalam persekitaran untuk pelanggan individu (Niaga-ke-Pengguna)**  
 - Segmen dalam konteks persekitaran untuk pelanggan individu dibina pada entiti *profil pelanggan disatukan*. Setiap segmen yang memenuhi keperluan sistem sasaran (contohnya, alamat e-mel) boleh dieksport.
 
 **Had pada eksport segmen**  

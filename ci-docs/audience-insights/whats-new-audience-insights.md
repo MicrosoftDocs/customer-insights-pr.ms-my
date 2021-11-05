@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606107"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673868"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Kemas kini pada bulan Mac 2021 termasuk beberapa ciri, peningkatan prestasi, dan
 - **Eksport segmen ke Constant Contact** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Constant Contact. Anda kini boleh mengeksport segmen daripada senarai Customer Insights ke Constant Contact dan menggunakannya sebagai garis dasar untuk kempen pemasaran anda.   
    Untuk maklumat lanjut, sila lihat [Eksport ke Constant Contact](export-constant-contact.md).
 
-- **Eksport segmen ke RollWorks** Kami telah memperluaskan destinasi eksport kami untuk merangkumi RollWorks. Anda kini boleh mengeksport segmen daripada khalayak Customer Insights ke RollWorks dan menggunakannya sebagai garis dasar untuk pengiklanan B2B anda.    
+- **Eksport segmen ke RollWorks** Kami telah memperluaskan destinasi eksport kami untuk merangkumi RollWorks. Anda kini boleh mengeksport segmen daripada Customer Insights ke khalayak RollWorks dan menggunakannya sebagai garis dasar untuk pengiklanan niaga-ke-niaga anda.    
    Untuk maklumat lanjut, sila lihat [Eksport ke RollWorks](export-rollworks.md).
 
 - **Eksport segmen ke Snapchat** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Snapchat. Anda kini boleh mengeksport segmen daripada khalayak Customer Insights ke Snapchat dan menggunakannya sebagai garis dasar untuk pengiklanan anda.     

@@ -1,7 +1,7 @@
 ---
 title: Konfigurasi sistem dalam cerapan khalayak
 description: Ketahui tentang tetapan sistem dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035926"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651851"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
 
@@ -24,9 +24,9 @@ Halaman **Sistem** termasuk tab berikut:
 - [Penggunaan API](#api-usage-tab)
 - [Perihal](#about-tab)
 - [Umum](#general-tab)
+- [Keselamatan](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Halaman sistem.](media/system-tabs.png "Halaman Sistem")
+:::image type="content" source="media/system-tabs.png" alt-text="Tab tetapan pada halaman sistem.":::
 
 ## <a name="status-tab"></a>Tab status
 
@@ -84,9 +84,15 @@ Tab **Tentang** mengandungi **Nama paparan** organisasi anda, **ID Persekitaran*
 
 ## <a name="general-tab"></a>Tab umum
 
-Terdapat dua pilihan pada tab **Umum**, **Bahasa** dan **Format Negara/Rantau**.
+Anda boleh mengubah format bahasa dan negara/rantau pada tab **Umum**.
 
-Aplikasi ini [menyokong beberapa bahasa](supported-languages.md). Untuk mengubah bahasa pilihan anda, pilih **Bahasa** daripada juntai bawah.
+Customer Insights [menyokong beberapa bahasa](/dynamics365/get-started/availability). Aplikasi ini menggunakan keutamaan bahasa anda untuk memaparkan elemen seperti menu, teks label dan mesej sistem dalam bahasa diutamakan anda.
+
+Data yang diimport dan maklumat yang anda masukkan secara manual tidak diterjemahkan.
+
+### <a name="update-the-settings"></a>Kemas kini tetapan
+
+Untuk mengubah bahasa pilihan anda, pilih **Bahasa** daripada juntai bawah.
 
 Untuk mengubah format pilihan anda untuk tarikh, masa dan nombor, gunakan juntai bawah **Format Negara/Rantau**. Pratonton pemformatan dipaparkan di bawah medan ini. Sistem akan mencadangkan pemilihan secara automatik apabila anda memilih bahasa baharu.
 
@@ -105,6 +111,13 @@ Cari butiran tentang penggunaan API masa nyata dan lihat peristiwa yang berlaku 
 
    Operasi yang menggunakan [pengingesan data masa nyata](real-time-data-ingestion.md) akan mengandungi butang dengan simbol binokular untuk melihat penggunaan API masa nyata. Pilih butang untuk membuka anak tetingkap sisi yang mengandungi butiran penggunaan untuk penggunaan API masa nyata dalam persekitaran semasa.   
    Gunakan kotak **Kumpulan mengikut** dalam anak tetingkap **Penggunaan API masa nyata** untuk memilih cara terbaik untuk menunjukkan interaksi masa nyata anda. Anda boleh mengumpulkan data mengikut kaedah API, nama dilayakkan entiti (entiti yang diinges), dicipta oleh (sumber peristiwa), hasil (berjaya atau gagal) atau kod ralat. Data tersedia sebagai carta sejarah dan sebagai jadual.
+
+## <a name="security-tab"></a>Tab keselamatan
+
+Tab **Keselamatan** membolehkan anda memautkan dan menguruskan [Azure key vault](/azure/key-vault/general/basic-concepts) untuk persekitaran.
+Key vault yang ditetapkan boleh digunakan untuk peringkat dan menggunakan rahsia dalam sempadan pematuhan organisasi. Cerapan khalayak boleh menggunakan rahsia dalam Azure Key Vault untuk [menyediakan sambungan](connections.md) kepada sistem pihak ketiga.
+
+Untuk maklumat lanjut, lihat [Bawa Azure key vault anda sendiri](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622981"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673480"
 ---
 # <a name="define-and-manage-measures"></a>Takrifkan dan urus tindakan
 
@@ -28,7 +28,7 @@ Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada 
 
 Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membina ukuran dengan atribut data daripada entiti data yang mempunyai persediaan perhubungan untuk berhubung dengan entiti profil pelanggan disatukan.
 
-# <a name="individual-customers-b2c"></a>[Pelanggan individu (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
 1. Dalam wawasan khalayak, pergi ke **Ukuran**.
 
@@ -92,7 +92,7 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 1. Pergi ke **Langkah** untuk melihat langkah yang baharu dicipta dalam senarai.
 
-# <a name="business-accounts-b2b"></a>[Akaun perniagaan (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
 1. Dalam wawasan khalayak, pergi ke **Ukuran**.
 
@@ -164,7 +164,7 @@ Bahagian ini membimbing anda mencipta ukuran baharu dari awal. Anda boleh membin
 
 Anda boleh menggunakan templat pratakrif untuk langkah yang biasa digunakan untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
 
-# <a name="individual-customers-b2c"></a>[Pelanggan individu (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
 Anda boleh menggunakan templat pratakrif untuk langkah yang biasa digunakan untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
 
@@ -212,7 +212,7 @@ Prosedur berikut menggariskan langkah untuk membina langkah baharu menggunakan t
 
 1. Anda kini boleh memilih **Jalankan** untuk mengira keputusan ukuran. Untuk memperhalusi kemudian, pilih **Simpan draf**.
 
-# <a name="business-accounts-b2b"></a>[Akaun perniagaan (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
 Ciri ini hanya tersedia untuk ukuran yang dicipta dalam persekitaran dengan pelanggan individu sebagai khalayak sasaran utama.
 

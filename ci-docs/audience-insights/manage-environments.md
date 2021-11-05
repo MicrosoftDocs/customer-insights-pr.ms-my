@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645137"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673755"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -67,7 +67,8 @@ Data berikut *tidak* disalin:
 
 - Profil pelanggan.
 - Kelayakan sumber data. Anda perlu menyediakan kelayakan untuk setiap sumber data dan menyegarkan semula sumber data secara manual.
-- Sumber data daripada folder Common Data Model dan Dataverse diuruskan oleh Data Lake. Anda perlu mencipta sumber data secara manual tersebut dengan nama yang sama seperti dalam persekitaran sumber.
+
+- Sumber data daripada folder Common Data Model dan danau data terurus Dataverse. Anda perlu mencipta sumber data secara manual tersebut dengan nama yang sama seperti dalam persekitaran sumber.
 
 Apabila anda menyalin persekitaran, anda akan melihat mesej pengesahan bahawa persekitaran baharu telah dicipta. Pilih **Pergi ke sumber data** untuk melihat senarai sumber data.
 

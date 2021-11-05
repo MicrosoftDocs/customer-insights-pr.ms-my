@@ -8,12 +8,12 @@ ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645711"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673475"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Mulakan selepas pembelian Customer Insights
 
@@ -29,7 +29,7 @@ Jika anda ingin mencuba perkhidmatan dan ciri, lihat [Sediakan persekitaran perc
 
 ## <a name="start-with-customer-insights"></a>Bermula dengan Customer Insights
 
-Pengalaman jalanan pertama membantu anda memilih fokus awal dengan Customer Insights dan menerokai keupayaan dengan data sampel. Sebagai langkah seterusnya, anda boleh mencipta persekitaran anda sendiri dan bekerja dengan data anda sendiri.
+Pengalaman jalanan pertama membantu anda memilih fokus awal anda dengan Customer Insights dan menerokai keupayaan dengan data sampel. Sebagai langkah seterusnya, anda boleh mencipta persekitaran anda sendiri dan bekerja dengan data anda sendiri.
 
 **Untuk daftar masuk buat kali pertama**:
 
