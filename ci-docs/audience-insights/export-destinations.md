@@ -1,7 +1,7 @@
 ---
 title: Eksport data daripada Customer Insights
 description: Urus eksport untuk berkongsi data.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673334"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732161"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
@@ -36,7 +36,7 @@ Terdapat dua jenis eksport utama:
 Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport segmen kepada pelbagai sistem sasaran mempunyai keperluan khusus. Secara umumnya, ahli segmen, profil pelanggan, mengandungi maklumat kenalan. Walaupun ini biasanya kes untuk segmen yang dibina pada pelanggan individu (niaga-ke-pengguna), ia tidak semestinya kes untuk segmen berdasarkan pada akaun perniagaan (niaga-ke-niaga). 
 
 **Persekitaran eksport segmen untuk akaun perniagaan (niaga-ke-niaga)**  
-- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan **syarikat** semasa mentakrifkan eksport.
+- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan [syarikat](export-linkedin-ads.md) semasa mentakrifkan eksport.
 - Semua sistem sasaran lain memerlukan medan daripada entiti kenalan. Untuk memastikan segmen akaun boleh mendapatkan data daripada kenalan yang berkaitan, takrifan segmen anda perlu untuk atribut projek entiti kenalan. Ketahui lebih lanjut tentang cara [mengkonfigurasikan segmen dan atribut projek](segment-builder.md).
 
 **Eksport segmen dalam persekitaran untuk pelanggan individu (Niaga-ke-Pengguna)**  
@@ -97,7 +97,9 @@ Selepas mencipta destinasi eksport, ia disenaraikan dalam **Data** > **Eksport**
 
 Setiap eksport yang dikonfigurasikan mempunyai jadual segar semula. Semasa segar semula, sistem mencari data baharu atau yang dikemas kini untuk disertakan dalam eksport. Secara lalai, eksport dijalankan sebagai sebahagian daripada setiap [segar semula sistem yang dijadualkan](system.md#schedule-tab). Anda boleh menyesuaikan jadual segar semula atau mematikan proses itu untuk menjalankan eksport secara manual.
 
-Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-policies) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Anda boleh melihat masa eksport disegarkan semula buat kali terakhir dalam lajur **Disegar semula**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-processes) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Anda boleh melihat masa eksport disegarkan semula buat kali terakhir dalam lajur **Disegar semula**.
 
 ### <a name="schedule-exports"></a>Jadualkan eksport
 

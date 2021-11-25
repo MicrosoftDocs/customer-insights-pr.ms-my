@@ -1,7 +1,7 @@
 ---
 title: Pemetaan semantik (Pratonton)
 description: Gambaran keseluruhan pemetaan semantik dan cara untuk menggunakannya.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622946"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731954"
 ---
 # <a name="semantic-mappings"></a>Pemetaan semantik
 
@@ -75,8 +75,7 @@ Semantik pemetaan membolehkan anda memetakan data bukan aktiviti anda kepada ske
 
 1. Untuk menjalankan pemetaan semantik pada titik kemudian, pilih pemetaan semantik dan pilih **Segar semula**.
 
-> [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Urus pemetaan semantik sedia ada
 
@@ -91,5 +90,6 @@ Pada **Data** > **Pemetaan semantik (pratonton)**, anda boleh melihat semua peme
 - **Namakan semula** : Buka dialog yang mana anda boleh memasukkan nama yang berbeza untuk pemetaan semantik yang dipilih. Pilih **Simpan** untuk menggunakan perubahan anda.
 
 - **Padam** : Buka dialog untuk mengesahkan pemadaman pemetaan semantik yang dipilih. Anda juga boleh memadam lebih daripada satu pemetaan semantik sekaligus dengan memilih pemetaan semantik dan ikon padam. Pilih **Padam** untuk mengesahkan pemadaman.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

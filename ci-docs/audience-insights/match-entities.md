@@ -1,7 +1,7 @@
 ---
 title: Padan entiti untuk penyatuan data
 description: Padankan entiti untuk menggabungkan set data dan mencipta profil pelanggan disatukan.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648219"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732645"
 ---
 # <a name="match-entities"></a>Padankan entiti
 
@@ -180,10 +180,7 @@ Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Jalankan** untuk memul
 
 Anda akan menemui hasil jalanan yang berjaya, entiti profil pelanggan yang disatukan, di halaman **Entiti**. Entiti pelanggan anda yang disatukan anda dipanggil **Pelanggan** dalam bahagian **Profil**. Jalanan padanan pertama yang berjaya mencipta entiti *Pelanggan* yang disatukan. Semua jalanan padanan yang berikutnya melanjutkan entiti itu.
 
-> [!TIP]
-> Selepas menjalankan proses padanan, pilih status proses untuk membuka anak tetingkap **Butiran tugas**. Ia memberikan gambaran keseluruhan tentang masa pemprosesan, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas. Pilih **Lihat butiran** untuk melihat entiti yang mengambil bahagian dalam proses padanan, peraturan yang digunakan pada mereka dan jika kemas kini berjaya diterbitkan.  
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Semak semula dan sahkan padanan anda
 

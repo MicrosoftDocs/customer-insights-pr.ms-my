@@ -4,7 +4,7 @@
   href: overview.md
 - name: Percubaan percuma
   items:
-    - name: ' Mendaftar untuk percubaan percuma'
+    - name: Daftar untuk percubaan percuma
       href: trial-signup.md
     - name: Soalan Lazim Percubaan
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Tambah folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
-        - name: Tambah data lake yang diuruskan Dataverse
+        - name: Menambah tasik data terurus Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Segar semula tambahan untuk sumber data
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Alamat dipertingkatkan
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Meningkatkan data syarikat
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Memperkayakan dengan Azure Map
           href: audience-insights/enrichment-azure-maps.md
         - name: Perkayakan dengan HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Perkayakan dengan Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Perkayakan dengan Experian
+        - name: Memperkayakan dengan Experian
           href: audience-insights/enrichment-experian.md
         - name: Perkayakan dengan import tersuai SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -164,11 +166,11 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
+            - name: Analisis Azure Synapse
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
+            - name: Platform Pengalaman Adobe
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Pengurus iklan
+            - name: Pengurus Iklan Facebook
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Semak semula skema entiti dalam Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Data Customer Insights dalam Dataverse
+        - name: Data Wawasan Pelanggan dalam Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Kerja dengan API
           href: audience-insights/apis.md
         - name: Rujukan API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Pengurusan persetujuan (pratonton)
+  items:
+    - name: Hab bantuan
+      href: consent-management/index.yml
+    - name: Gambaran keseluruhan keupayaan
+      href: consent-management/overview.md
+    - name: Mari Bermula
+      items:
+        - name: Mari Bermula
+          href: consent-management/get-started.md
+        - name: Konsep dan terminologi
+          href: consent-management/glossary.md
+    - name: Import data persetujuan
+      items:
+        - name: Import data persetujuan
+          href: consent-management/import-consent-data.md
+        - name: Tetapkan data persetujuan dan gunakan keutamaan persetujuan
+          href: consent-management/set-consent-rules.md
+    - name: Menguruskan data persetujuan
+      items:
+        - name: Mendayakan peraturan persetujuan dalam wawasan khalayak
+          href: audience-insights/activate-consent.md
+        - name: Menguruskan peraturan persetujuan lalai dalam segmen wawasan khalayak
+          href: audience-insights/change-default-consent-rules.md
+    - name: Uruskan seting dan pengguna
+      items:
+        - name: Konfigur pengesetan sistem
+          href: consent-management/system-settings.md
+        - name: Menguruskan pengguna dan keizinan
+          href: consent-management/manage-users.md
+    - name: Menggunakan data persetujuan
+      items:
+        - name: Mencipta ramalan dengan data persetujuan
+          href: consent-management/predictions-consent-data.md
 - name: Cerapan penglibatan (pratonton)
   items:
     - name: Hab bantuan
@@ -304,7 +340,7 @@
           href: engagement-insights/websdk-sample.md
         - name: Tutorial SDK Android
           href: engagement-insights/get-started-android.md
-        - name: Sampel SDK Android
+        - name: Android sampel SDK
           href: engagement-insights/androidsdk-sample.md
         - name: Tutorial SDK iOS
           href: engagement-insights/get-started-ios.md

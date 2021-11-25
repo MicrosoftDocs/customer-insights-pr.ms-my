@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus persekitaran
 description: Ketahui cara untuk mendaftar untuk perkhidmatan dan cara untuk menguruskan persekitaran.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673755"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799647"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -39,6 +39,19 @@ Anda boleh mengedit beberapa butiran persekitaran sedia ada.
 3. Dalam kotak **Edit persekitaran**, anda boleh mengemas kini tetapan persekitaran.
 
 Untuk mendapatkan maklumat lanjut tentang tetapan persekitaran, lihat [Cipta persekitaran baharu](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Sambung ke Microsoft Dataverse
+   
+Langkah **Microsoft Dataverse membolehkan anda menyambungkan Wawasan Pelanggan dengan persekitaran Dataverse** anda.
+
+Untuk menggunakan [model ramalan luar kotak](predictions-overview.md#out-of-box-models), mengkonfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan pengambilan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang ditadbir oleh organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Wawasan Pelanggan dengan tasik data yang diuruskan Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opsyen konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights tidak menyokong senario perkongsian data berikut:
+> - Jika anda menyimpan semua data ke Azure Data Lake Storage anda sendiri, anda tidak akan dapat mendayakan perkongsian data dengan tasik data yang diuruskan Dataverse.
+> - Jika anda mendayakan perkongsian data dengan Dataverse, anda tidak akan dapat [mencipta nilai yang diramalkan atau hilang dalam entiti](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi persekitaran
 
@@ -68,7 +81,7 @@ Data berikut *tidak* disalin:
 - Profil pelanggan.
 - Kelayakan sumber data. Anda perlu menyediakan kelayakan untuk setiap sumber data dan menyegarkan semula sumber data secara manual.
 
-- Sumber data daripada folder Common Data Model dan danau data terurus Dataverse. Anda perlu mencipta sumber data secara manual tersebut dengan nama yang sama seperti dalam persekitaran sumber.
+- Sumber data dari folder Model Data Umum dan tasik data yang diuruskan Dataverse. Anda perlu mencipta sumber data secara manual tersebut dengan nama yang sama seperti dalam persekitaran sumber.
 
 Apabila anda menyalin persekitaran, anda akan melihat mesej pengesahan bahawa persekitaran baharu telah dicipta. Pilih **Pergi ke sumber data** untuk melihat senarai sumber data.
 

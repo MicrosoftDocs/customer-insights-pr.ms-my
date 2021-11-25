@@ -1,7 +1,7 @@
 ---
 title: Aktiviti pelanggan
 description: Mentakrifkan aktiviti pelanggan dan melihat aktiviti tersebut dalam garis masa pada profil pelanggan.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673149"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732471"
 ---
 # <a name="customer-activities"></a>Aktiviti pelanggan
 
-Gabungkan aktiviti pelanggan daripada [pelbagai sumber data](data-sources.md) dalam Dynamics 365 Customer Insights untuk mencipta garis masa yang menyenaraikan aktiviti secara kronologi. Sertakan garis masa dalam aplikasi Dynamics 365 dengan penyelesaian [Kad Pelanggan tambahan](customer-card-add-in.md) atau dalam papan pemuka Power BI.
+Menggabungkan aktiviti pelanggan daripada [pelbagai sumber data dalam Dynamics 365 Customer Insights untuk mencipta garis masa yang menyenaraikan aktiviti](data-sources.md) secara kronologi. Sertakan garis masa dalam aplikasi Dynamics 365 dengan [penyelesaian tambahan Kad Pelanggan atau dalam papan pemuka](customer-card-add-in.md) Power BI.
 
 ## <a name="define-an-activity"></a>Takrifkan aktiviti
 
@@ -82,9 +82,7 @@ Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang aka
 
 1. Pada halaman **Aktiviti**, pilih **Jalankan** untuk memproses aktiviti. 
 
-> [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Urus aktiviti sedia ada
 

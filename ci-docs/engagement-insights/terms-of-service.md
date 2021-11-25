@@ -9,22 +9,22 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d43d3c49c81ab343db5623ee4f5ebeb100d3b2b7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
-ms.translationtype: HT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218949"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7774126"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS – Cerapan penglibatan (pratonton) 
 
-Cerapan penglibatan (pratonton) ialah keupayaan pratonton prakeluaran yang bermaksud ia mempunyai langkah keselamatan, privasi dan lokasi data yang lebih kurang atau berbeza daripada ciri dan keupayaan yang dijadikan secara tersedia umumnya dalam Dynamics 365 Customer Insights. Semak terma di bawah dan dokumentasi produk untuk menentukan sama ada cerapan penglibatan (pratonton) sesuai untuk data anda.
+Wawasan penglibatan (pratonton) adalah keupayaan pratonton pra-keluaran, yang bermaksud bahawa ia mempunyai langkah-langkah keselamatan, privasi dan lokasi data yang kurang atau berbeza daripada ciri dan keupayaan yang disediakan secara umum dalam Dynamics 365 Customer Insights. Semak terma di bawah dan dokumentasi produk untuk menentukan sama ada cerapan penglibatan (pratonton) sesuai untuk data anda.
 
 ## <a name="preview-terms-of-service"></a>PRATONTON TERMA PERKHIDMATAN
 
 KEMAS KINI TERAKHIR OKTOBER 2020 
 
-Dengan mengakses atau menggunakan pratonton perkhidmatan Dynamics 365 Customer Insights – Cerapan penglibatan (bersama dengan sebarang sumber data Microsoft yang dibekalkan, "Perkhidmatan"), anda bersetuju dengan terma dan syarat Perjanjian ini. Jika anda tidak menerimanya, jangan akses atau gunakan Perkhidmatan.
+Dengan mengakses atau menggunakan pratonton perkhidmatan Dynamics 365 Customer Insights - Wawasan penglibatan (bersama-sama dengan mana-mana sumber data Microsoft yang disediakan, "Perkhidmatan"), anda menerima terma dan syarat Perjanjian ini. Jika anda tidak menerimanya, jangan akses atau gunakan Perkhidmatan.
 
 ## <a name="1-what-this-agreement-covers"></a>1. PERJANJIAN INI MELIPUTI
 
@@ -154,7 +154,7 @@ HINGGA KE TAHAP MAKSIMUM YANG DIBENARKAN OLEH UNDANG-UNDANG, MICROSOFT TIDAK AKA
 
 ### <a name="111-term"></a>11.1. Istilah
 
-Perjanjian ini berkuat kuasa pada tarikh pertama kali anda bersetuju dengannya. Perjanjian ini menggantikan sebarang perjanjian sebelum ini yang anda gunakan Dynamics 365 Product Insights atau sebarang perkhidmatan pelopor. Perjanjian ini akan tamat lebih awal pada (i) tarikh ketersediaan pertama keluaran komersial Perkhidmatan (jika ada) atau (ii) tarikh yang Microsoft berikan notis penamatan kepada anda. Microsoft boleh menggantung atau membatalkan penggunaan dan akses anda ke semua atau mana-mana bahagian Perkhidmatan atau menamatkan Perjanjian ini pada bila-bila masa atas sebarang sebab dan mengikut budi bicara mutlaknya.
+Perjanjian ini berkuat kuasa pada tarikh pertama kali anda bersetuju dengannya. Perjanjian ini menggantikan mana-mana perjanjian terdahulu yang anda telah gunakan Dynamics 365 Product Insights atau mana-mana perkhidmatan pendahuluan. Perjanjian ini akan tamat lebih awal pada (i) tarikh ketersediaan pertama keluaran komersial Perkhidmatan (jika ada) atau (ii) tarikh yang Microsoft berikan notis penamatan kepada anda. Microsoft boleh menggantung atau membatalkan penggunaan dan akses anda ke semua atau mana-mana bahagian Perkhidmatan atau menamatkan Perjanjian ini pada bila-bila masa atas sebarang sebab dan mengikut budi bicara mutlaknya.
 
 ### <a name="112-effect-of-termination"></a>11.2. Kesan Penamatan
 

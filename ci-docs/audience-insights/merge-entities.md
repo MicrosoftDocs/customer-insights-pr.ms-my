@@ -1,7 +1,7 @@
 ---
 title: Gabung entiti dalam penyatuan data
 description: Gabung entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648265"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732783"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -24,7 +24,7 @@ Fasa gabung ialah fasa terakhir dalam proses penyatuan data. Tujuannya ialah unt
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Halaman gabung dalam proses penyatuan data menunjukkan jadual dengan medan digabungkan yang mentakrifkan profil pelanggan disatukan.":::
 
-Selepas menyelesaikan [fasa padan](match-entities.md), anda boleh memulakan fasa gabung dengan memilih jubin **Gabung** pada halaman **Satukan**.
+Selepas menyelesaikan [fasa padan](match-entities.md), anda boleh memulakan fasa gabung dengan memilih jubin [Gabung](match-entities.md) pada halaman [Satukan](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Semak semula pengesyoran sistem
 
@@ -187,10 +187,9 @@ Pilih **Jalankan proses Gabungan dan hiliran** untuk menyegar semula sistem deng
 
 Untuk membuat lebih banyak perubahan dan menjalankan semula langkah, anda boleh membatalkan penggabungan yang sedang dilaksanakan. Pilih teks **Menyegarkan semula ...** dan pilih **Batal kerja** di bahagian tepi tetingkap yang muncul.
 
-> [!TIP]
-> Selepas menjalankan proses penggabungan, pilih status proses untuk membuka anak tetingkap **Butiran tugas**. Ia memberikan gambaran keseluruhan tentang masa pemprosesan, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas. Pilih **Lihat butiran** untuk melihat entiti yang mengambil bahagian dalam proses padanan, jika penyelesaian konflik berjaya dan jika kemas kini berjaya diterbitkan.  
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
 
 ## <a name="next-step"></a>Langkah Seterusnya
 

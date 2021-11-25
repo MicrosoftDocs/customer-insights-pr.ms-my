@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645457"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673808"
 ---
 # <a name="manage-environments-and-workspaces"></a>Urus persekitaran dan ruang kerja
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645457"
 
 Topik ini membincangkan cara untuk menguruskan ruang kerja dan persekitaran sebaik sahaja mereka sudah dicipta. 
 
-- *Ruang kerja* ialah ruang untuk menyimpan dan mengurus peristiwa dan laporan. Ia merupakan tempat anda boleh melihat aktiviti pengguna dalam masa nyata. Apabila anda mencipta ruang kerja, anda memilih jenis data untuk dihantar ke ruang kerja. Pada masa ini, data web dan aplikasi mudah alih disokong. Untuk mendapatkan maklumat lanjut, lihat [Cipta ruang kerja dan tambah ahli](create-workspace.md).
+- *Ruang kerja* ialah ruang untuk menyimpan dan mengurus peristiwa dan laporan. Ia merupakan tempat anda boleh melihat aktiviti pengguna dalam masa nyata. Apabila anda mencipta ruang kerja, anda memilih jenis data untuk dihantar ke ruang kerja. Pada masa ini, data web dan aplikasi mudah alih disokong. Untuk maklumat lanjut, lihat [Mencipta ruang kerja baru dan menambah ahli](create-workspace.md).
 
 - *Persekitaran* ialah ruang tempat anda menguruskan ruang kerja dan sambungan anda. Untuk mendapatkan maklumat lanjut, lihat [Cipta persekitaran baharu](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Anda boleh mengekalkan berbilang ruang kerja secara serentak dalam persekitaran.
 
 ### <a name="delete-a-workspace"></a>Padamkan ruang kerja
 
-Memadamkan ruang kerja akan mengalih keluar semua kandungan, data, tetapan dan keizinannya secara kekal. Tindakan ini tidak boleh dibuat asal.
+Memadam ruang kerja secara kekal mengalih keluar semua kandungan, data, seting dan keizinannya secara kekal. Tindakan ini tidak boleh dibuat asal.
 
 1. Pergi ke **Pentadbir** > **Ruang Kerja** dan pilih **Tetapan**.
 
@@ -71,19 +71,11 @@ Sebagai pentadbir persekitaran, anda boleh mencapai persekitaran daripada anak t
 
 :::image type="content" source="media/environment-edit.png" alt-text="Pusat pentadbiran persekitaran.":::
 
-### <a name="rename-an-environment"></a>Namakan semula persekitaran
+### <a name="edit-an-environment-name"></a>Mengedit nama persekitaran
 
 1. Pergi ke **Pentadbir** > **Persekitaran** dan pilih **Tetapan**.
 
 1. Kemas kini **Nama persekitaran** dan pilih **Simpan** untuk menggunakan perubahan anda.
-
-### <a name="manage-environment-members"></a>Urus ahli persekitaran
-
-1. Pergi ke **Pentadbir** > **Persekitaran** dan pilih **Ahli**.
-
-1. Pilih **Tambah ahli** untuk mengemas kini ahli dan [menugaskan peranan](user-roles.md). Pada masa ini, hanya **Pentadbir persekitaran** tersedia.
-
-1. Pilih **Tambah ahli** untuk menambahkan mereka pada persekitaran anda.
 
 ### <a name="delete-an-environment"></a>Padamkan persekitaran
 
@@ -97,6 +89,14 @@ Pentadbir persekitaran boleh memadamkan persekitaran. Sebelum anda boleh memadam
 
 1. Pilih **Padamkan** untuk memadamkan persekitaran secara kekal.
 
+### <a name="manage-environment-members"></a>Urus ahli persekitaran
+
+1. Pergi ke **Pentadbir** > **Persekitaran** dan pilih **Ahli**.
+
+1. Pilih **Tambah ahli** untuk mengemas kini ahli dan [menugaskan peranan](user-roles.md). Pada masa ini, hanya **Pentadbir persekitaran** tersedia.
+
+1. Pilih **Tambah ahli** untuk menambahkan mereka pada persekitaran anda.
+
 ## <a name="manage-connections"></a>Urus sambungan
 
 Mewujudkan sambungan kepada cerapan khalayak membolehkan anda melihat laporan dalam cerapan penglibatan berdasarkan profil pelanggan disatukan. 
@@ -107,7 +107,6 @@ Untuk maklumat lanjut, lihat [Cipta pautan antara cerapan khalayak dan cerapan p
 
 Untuk melindungi data peribadi pelanggan anda, anda boleh memadamkan atau mengeksport data boleh dikenal pasti pengguna akhir.
 
-Untuk mendapatkan maklumat lanjut, lihat [Padam dan eksport data peristiwa yang mengandungi maklumat peribadi](delete-export-personal-data.md).
-
+Untuk mendapatkan maklumat lanjut, lihat [Padam dan eksport data peristiwa yang mengandungi maklumat peribadi](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

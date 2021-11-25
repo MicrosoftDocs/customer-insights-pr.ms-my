@@ -1,7 +1,7 @@
 ---
 title: Entiti dan set data
 description: Lihat data pada halaman Entiti.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033826"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732092"
 ---
 # <a name="entities-in-audience-insights"></a>Entiti dalam wawasan khalayak
 
-Selepas [mengkonfigurasi sumber data anda](data-sources.md), pergi ke halaman **Entiti** untuk menilai kualiti data yang dimasukkan. Entiti dianggap sebagai set data. Berbilang keupayaan Dynamics 365 Customer Insights dibina sekitar entiti ini. Mengkajinya semula dengan teliti boleh membantu anda mengesahkan output keupayaan tersebut.
+Selepas [mengkonfigurasi sumber data anda](data-sources.md), pergi ke halaman [Entiti](data-sources.md) untuk menilai kualiti data yang dimasukkan. Entiti dianggap sebagai set data. Pelbagai keupayaan Dynamics 365 Customer Insights dibina di sekeliling entiti ini. Mengkajinya semula dengan teliti boleh membantu anda mengesahkan output keupayaan tersebut.
 
 Halaman **Entiti** menyenaraikan entiti dan termasuk beberapa lajur:
 
@@ -26,9 +26,10 @@ Halaman **Entiti** menyenaraikan entiti dan termasuk beberapa lajur:
 - **Sumber**: Jenis sumber data yang memasukkan entiti
 - **Dicipta oleh**: Nama orang yang mencipta entiti
 - **Dicipta**: Tarikh dan masa penciptaan entiti
-- **Dikemas kini oleh**: Nama orang yang mengemas kini entiti
-- **Kemas kini terakhir**: Tarikh dan masa kemas kini yang terakhir bagi entiti
-- **Segar semula terakhir**: Tarikh dan masa data terakhir segar semula
+- **Kemaskini** : Nama orang yang mengemas kini entiti
+- **Status** : Butiran mengenai kemas kini terakhir entiti
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Terokai data entiti khusus
 

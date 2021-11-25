@@ -1,6 +1,6 @@
 ---
 title: Permintaan Hak Subjek Data (DSR) di bawah GDPR | Microsoft Docs
-description: Respons kepada Permintaan Subjek Data untuk keupayaan Insights khalayak Dynamics 365 Customer Insights.
+description: Memberi respons kepada Permintaan Subjek Data untuk Dynamics 365 Customer Insights keupayaan wawasan khalayak.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483690"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732691"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan Hak Subjek Data (DSR) di bawah GDPR
 
@@ -24,7 +24,7 @@ Kami komited untuk membantu para pelanggan kami memenuhi keperluan GDPR mereka. 
 
 ## <a name="audience-insights"></a>Cerapan khalayak
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Respons kepada permintaan padam subjek data GDPR untuk keupayaan Insights khalayak Dynamics 365 Customer Insights
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Memberi respons kepada subjek data GDPR memadamkan permintaan untuk Dynamics 365 Customer Insights keupayaan pandangan khalayak
 
 "Hak untuk pemadaman" dengan memadam data peribadi daripada data pelanggan organisasi adalah perlindungan utama dalam Peraturan Perlindungan Data Umum (GDPR). Mengeluarkan data peribadi termasuk mengeluarkan semua data peribadi dan log janaan sistem kecuali maklumat log audit.
 
@@ -39,7 +39,7 @@ Insights khalayak menawarkan pengalaman dalam produk untuk memadamkan data perib
 
 Pentadbir Customer Insights boleh mengikut langkah ini untuk mengalih keluar data pelanggan yang telah dipadamkan dalam sumber data:
 
-1. Daftar masuk ke Dynamics 365 Customer Insights.
+1. Log masuk ke Dynamics 365 Customer Insights.
 2. Dalam Insights khalayak, pergi ke **Data** > **Sumber data**
 3. Untuk setiap sumber data dalam senarai yang mengandungi data pelanggan yang dipadamkan:
    1. Pilih (...) dan kemudian pilih **Muat Semula**.
@@ -52,7 +52,7 @@ Pentadbir Customer Insights boleh mengikut langkah ini untuk mengalih keluar dat
 
 Pentadbir Customer Insights boleh mengikut langkah ini untuk menghapuskan data pengguna Customer Insights:
 
-1. Daftar masuk ke Dynamics 365 Customer Insights.
+1. Log masuk ke Dynamics 365 Customer Insights.
 2. Dalam Insights khalayak, pergi ke **Pentadbir** > **Keizinan**.
 3. Tandakan kotak semak untuk pengguna yang anda mahu hapuskan.
 4. Pilih **Alih keluar**.
@@ -79,7 +79,14 @@ Pentadbir penyewa boleh mengikuti langkah-langkah ini untuk mengeksport data:
 2. Memberitahu pengesahan untuk mengeksport data untuk pengguna yang diminta.
 3. Menerima data yang dieksport melalui alamat e-mel pentadbir penyewa.
 
-## <a name="engagement-insights"></a>Cerapan penglibatan
+## <a name="consent-management-preview"></a>Pengurusan persetujuan (pratonton)
+
+Keupayaan pengurusan persetujuan tidak mengumpul data pengguna secara langsung. Ia hanya mengimport dan memproses data persetujuan yang disediakan oleh pengguna dalam aplikasi lain.
+
+Untuk mengalih keluar data persetujuan tentang pengguna tertentu, alihnya keluar dalam sumber data yang diingest kepada keupayaan pengurusan persetujuan. Selepas menyegar semula sumber data, data yang dialih keluar akan dipadamkan dalam Pusat Persetujuan juga. Aplikasi yang menggunakan entiti persetujuan juga akan memadamkan data yang telah dialih keluar pada sumber selepas [segar semula](audience-insights/system.md#refresh-processes). Kami mengesyorkan untuk menyegar semula sumber data dengan cepat selepas memberi respons kepada permintaan subjek data untuk mengalih keluar data pengguna daripada semua proses dan aplikasi lain.
+
+
+## <a name="engagement-insights-preview"></a>Cerapan penglibatan (pratonton)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Memadamkan dan mengeksport data peristiwa yang mengandungi maklumat boleh dikenal pasti pengguna akhir
 
