@@ -1,7 +1,7 @@
 ---
 title: Padan entiti untuk penyatuan data
-description: Padankan entiti untuk menggabungkan set data dan mencipta profil pelanggan disatukan.
-ms.date: 11/01/2021
+description: Padan entiti untuk mencipta profil pelanggan disatukan.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732645"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863822"
 ---
 # <a name="match-entities"></a>Padankan entiti
 
@@ -224,17 +224,24 @@ Anda boleh mengkonfigurasikan semula dan menambah baik kebanyakan parameter pada
 
 ## <a name="specify-custom-match-conditions"></a>Tentukan syarat padanan tersuai
 
-Anda boleh menentukan syarat bagi rekod tertentu haruslah sentiasa sepadan atau tidak boleh sepadan. Peraturan ini boleh dimuat naik untuk menulis ganti proses padanan standard. Contohnya, jika terdapat John Doe I dan John Doe II dalam rekod kami, sistem mungkin menyepadankan nama tersebut sebagai seorang. Peraturan padanan tersuai membolehkan anda menentukan bahawa profil mereka merujuk kepada orang yang berbeza. 
+Anda boleh menentukan syarat yang mengatasi logik padanan lalai. Terdapat empat pilihan yang ada: 
+
+|Pilihan  |Description |Contoh  |
+|---------|---------|---------|
+|Sentiasa padan     | Mentakrifkan nilai yang sentiasa dipadankan.         |  Sentiasa sepadan dengan *Mike* dan *MikeR*.       |
+|Tidak boleh padan     | Mentakrifkan nilai yang tidak sepadan.        | Jangan pernah menandingi *John* dan *Jonathan*.        |
+|Pintasan tersuai     | Mentakrifkan nilai yang sistem patut sentiasa abaikan dalam fasa padanan. |  Abaikan nilai *11111* dan Tidak Diketahui semasa *padanan*.        |
+|Pemetaan alias    | Mentakrifkan nilai yang sepatutnya dipertimbangkan oleh sistem sebagai nilai yang sama.         | Pertimbangkan *Joe untuk sama dengan* *Joseph*.        |
 
 1. Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Padanan tersuai** dalam bahagian **Butiran rekod yang dipadankan**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Petikan skrin bahagian peraturan padanan dengan kawalan Padanan tersuai yang diserlahkan.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Petikan skrin bahagian peraturan padanan dengan kawalan Padanan tersuai yang diserlahkan.":::
 
-1. Jika anda tidak mempunyai set peraturan padanan tersuai, anda akan melihat anak tetingkap **Padanan tersuai** yang baharu dengan butiran lanjut.
+1. Dalam **anak** tetingkap Tersuai, pergi ke tab **Rekod**.
 
-1. Pilih **Lengkapkan templat** untuk mendapatkan fail templat yang boleh menentukan rekod yang mana daripada entiti yang mana perlu sentiasa sepadan atau tidak boleh sepadan. Anda perlu mengisi rekod "sentiasa sepadan" dan rekod "tidak boleh sepadan" secara berasingan dalam dua fail yang berbeza.
+1. Pilih pilihan padanan tersuai daripada **juntai bawah jenis tersuai** dan pilih Muat turun **templat**. Anda memerlukan templat berasingan untuk setiap pilihan padanan.
 
-1. Templat mengandungi medan yang menentukan entiti dan entiti nilai kekunci utama yang akan digunakan dalam padanan tersuai. Contohnya, jika anda mahukan kunci utama *12345* daripada entiti *Jualan* untuk sentiasa sepadan dengan kunci utama *34567* daripada entiti *Kenalan*, isi templat:
+1. Muat turun fail templat. Buka dan isikan butirannya. Templat mengandungi medan yang menentukan entiti dan entiti nilai kekunci utama yang akan digunakan dalam padanan tersuai. Contohnya, jika anda mahukan kunci utama *12345* daripada entiti *Jualan* untuk sentiasa sepadan dengan kunci utama *34567* daripada entiti *Kenalan*, isi templat:
     - Entity1: Jualan
     - Entity1Key: 12345
     - Entity2: Kenalan
@@ -244,26 +251,32 @@ Anda boleh menentukan syarat bagi rekod tertentu haruslah sentiasa sepadan atau 
    
    Jika anda mahu menentukan pemadanan tersuai untuk penyahduplikasi pada entiti, menyediakan entiti yang sama dengan kedua-dua Entity1 dan Entity2 dan menetapkan nilai kunci utama yang berbeza.
 
-1. Selepas menambah kesemua penggantian yang anda mahu gunakan, simpan fail templat.
+1. Selepas menambah semua penggantian, simpan fail templat.
 
-1. Pergi ke **Data** > **Sumber data** dan inges fail templat sebagai entiti baharu. Sebaik sahaja diinges, anda boleh menggunakannya untuk menentukan konfigurasi Padanan.
+1. Pergi ke **Data** > **Sumber data** dan inges fail templat sebagai entiti baharu.
 
-1. Selepas memuat naik fail dan entiti tersedia, pilih pilihan **Padanan tersuai** semula. Anda akan dapat melihat pilihan untuk menentukan entiti yang anda hendak masukkan. Pilih entiti yang diperlukan daripada menu juntai bawah.
+1. Selepas memuat naik fail dan entiti tersedia, pilih pilihan **Padanan tersuai** semula. Anda akan dapat melihat pilihan untuk menentukan entiti yang anda hendak masukkan. Pilih entiti yang diperlukan daripada menu juntai bawah dan pilih **Selesai**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Petikan skrin dialog untuk memilih penggantian bagi senario padanan tersuai.":::
 
-1. Pilih entiti yang anda mahu gunakan untuk **Sentiasa sepadan** dan **Tidak boleh sepadan**, pilih **Selesai**.
+1. Menggunakan padanan tersuai bergantung pada pilihan padanan yang anda mahu gunakan. 
+
+   - Untuk **Sentiasa sepadan atau Jangan** **sekali-kali sepadan**, teruskan ke langkah seterusnya.
+   - Untuk **pintasan Tersuai** atau pemetaan Alias, pilih **Edit pada peraturan** **padanan** sedia ada atau cipta peraturan baharu. Dalam juntai bawah Normalisasi, pilih **opsyen pintasan Tersuai atau pemetaan Alias dan pilih Selesai** **·** **·**.
 
 1. Pilih **Simpan** pada halaman **Padanan** untuk menggunakan konfigurasi padanan tersuai.
 
 1. Pilih **Jalankan** pada halaman **Padanan** untuk memulakan proses pemadanan. Peraturan padanan lain yang ditentukan ditulis ganti oleh konfigurasi padanan tersuai.
 
-> [!TIP]
-> Pergi ke **Data** > **Entiti** dan semak entiti **ConflationMatchPair** untuk mengesahkan bahawa penggantian digunakan.
+### <a name="known-issues"></a>Isu yang diketahui
+
+- Pemergian diri tidak menunjukkan data yang dinormalisasi dalam entiti deduplikasi. Walau bagaimanapun, ia menggunakan normalisasi secara dalaman semasa deduplikasi. Ini dengan desain untuk semua normalisasi. 
+- Jika seting jenis semantik dialih keluar dalam **fasa Peta apabila peraturan** padanan menggunakan pemetaan Alias atau pintasan Tersuai, penormalan tidak akan digunakan. Ia hanya berlaku jika anda mengosongkan jenis semantik selepas mengkonfigurasi normalisasi dalam peraturan padanan kerana jenis semantik tidak diketahui.
+
 
 ## <a name="next-step"></a>Langkah seterusnya
 
-Selepas proses pemadanan selesai untuk sekurang-kurangnya satu pasangan padanan, anda boleh selesaikan kemungkinan percanggahan dalam data anda dengan menyemak lalu topik [**Gabung**](merge-entities.md).
+Selepas melengkapkan proses padanan untuk sekurang-kurangnya satu pasangan padanan, teruskan ke [**langkah Cantum.**](merge-entities.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

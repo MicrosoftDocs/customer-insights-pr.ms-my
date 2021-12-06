@@ -1,7 +1,7 @@
 ---
-title: Data Customer Insights dalam Microsoft Dataverse
-description: Gunakan entiti Customer Insights sebagai jadual dalam Microsoft Dataverse.
-ms.date: 10/14/2021
+title: Data Wawasan Pelanggan dalam Microsoft Dataverse
+description: Gunakan entiti Wawasan Pelanggan sebagai jadual dalam Microsoft Dataverse.
+ms.date: 11/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,35 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645229"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866945"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Bekerja dengan data Wawasan Pelanggan dalam Microsoft Dataverse
 
-Customer Insights menyediakan pilihan untuk menjadikan entiti output tersedia dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Integrasi ini membolehkan perkongsian data yang mudah dan pembangunan tersuai melalui kod rendah / tiada pendekatan kod. Entiti output akan tersedia sebagai jadual dalam Dataverse. Jadual ini membolehkan senario seperti [aliran kerja automatik melalui Power Automate](/power-automate/getting-started), [aplikasi berpandukan model](/powerapps/maker/model-driven-apps/) dan [aplikasi kanvas](/powerapps/maker/canvas-apps/) melalui Power Apps. Anda boleh menggunakan data untuk sebarang aplikasi lain yang berdasarkan jadual Dataverse. Pelaksanaan semasa kebanyakannya menyokong carian tempat data daripada entiti cerapan khalayak yang tersedia dapat diambil untuk ID pelanggan yang ditetapkan.
+Wawasan Pelanggan menyediakan pilihan untuk menjadikan entiti output tersedia dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Integrasi ini membolehkan perkongsian data yang mudah dan pembangunan tersuai melalui kod rendah / tiada pendekatan kod. Entiti output akan tersedia sebagai jadual dalam Dataverse. Jadual ini mendayakan senario seperti [aliran kerja automatik melalui](/power-automate/getting-started) Power Automate, aplikasi [dipacu model](/powerapps/maker/model-driven-apps/) dan aplikasi kanvas melalui [Power](/powerapps/maker/canvas-apps/) Apps. Anda boleh menggunakan data untuk sebarang aplikasi lain yang berdasarkan jadual Dataverse. Pelaksanaan semasa kebanyakannya menyokong carian tempat data daripada entiti cerapan khalayak yang tersedia dapat diambil untuk ID pelanggan yang ditetapkan.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Lampirkan persekitaran Dataverse kepada Customer Insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Lampirkan persekitaran Dataverse pada Wawasan Pelanggan
 
-**Organisasi yang mempunyai persekitaran Dataverse yang sedia ada**
+**Organisasi dengan persekitaran Dataverse sedia ada**
 
-Organisasi yang telah menggunakan Dataverse boleh [menggunakan salah satu persekitaran Dataverse mereka yang sedia ada](create-environment.md) apabila pentadbir menyediakan cerapan khalayak. Dengan menyediakan URL kepada persekitaran Dataverse, ia melampirkan persekitaran cerapan khalayak baharu mereka. Untuk memastikan prestasi terbaik, Customer Insights dan persekitaran Dataverse mesti dihoskan di kawasan yang sama.
+Organisasi yang telah menggunakan Dataverse boleh [menggunakan salah satu persekitaran Dataverse sedia ada mereka apabila pentadbir menyediakan wawasan](create-environment.md) khalayak. Dengan menyediakan URL ke persekitaran Dataverse, ia melekat pada persekitaran cerapan khalayak baharu mereka. Untuk memastikan prestasi yang terbaik, Wawasan Pelanggan dan persekitaran Dataverse mesti dihoskan di rantau yang sama.
 
 **Organisasi baharu**
 
-Jika anda mencipta organisasi baharu semasa menyediakan Customer Insights, anda akan mendapat persekitaran Dataverse yang baharu secara automatik.
+Jika anda mencipta organisasi baharu apabila menyediakan Wawasan Pelanggan, anda akan mendapat persekitaran Dataverse baharu secara automatik.
 
 > [!NOTE]
-> Jika organisasi anda sudah menggunakan Dataverse dalam penyewa mereka, penting untuk diingat bahawa [penciptaan persekitaran Dataverse dikawal oleh pentadbir](/power-platform/admin/control-environment-creation.md). Contohnya, jika anda menyediakan persekitaran cerapan khalayak baharu menggunakan akaun organisasi anda dan pentadbir telah menyahdayakan penciptaan persekitaran percubaan Dataverse untuk semua orang kecuali pentadbir, anda tidak boleh mencipta persekitaran percubaan yang baharu.
+> Jika organisasi anda sudah menggunakan Dataverse dalam penyewa mereka, penting untuk diingat bahawa [penciptaan persekitaran Dataverse dikawal oleh pentadbir](/power-platform/admin/control-environment-creation.md) . Sebagai contoh, jika anda menyediakan persekitaran wawasan khalayak baharu dengan akaun organisasi anda dan pentadbir telah melumpuhkan penciptaan persekitaran percubaan Dataverse untuk semua orang kecuali pentadbir, anda tidak boleh mencipta persekitaran percubaan baharu.
 > 
-> Persekitaran percubaan Dataverse yang dicipta dalam Customer Insights mempunyai 3 GB storan yang tidak akan mengira kapasiti keseluruhan yang diterima oleh penyewa. Langganan berbayar akan mendapat kelayakan Dataverse sebanyak 15 GB untuk pangkalan data dan 20 GB untuk storan fail.
+> Persekitaran percubaan Dataverse yang dicipta dalam Wawasan Pelanggan mempunyai storan 3 GB yang tidak akan dikira terhadap kapasiti keseluruhan yang berhak kepada penyewa. Langganan berbayar mendapat hak Dataverse 15 GB untuk pangkalan data dan 20 GB untuk storan fail.
 
 ## <a name="output-entities"></a>Entiti output
 
-Sesetengah entiti output daripada cerapan khalayak tersedia sebagai jadual dalam Dataverse. Bahagian di bawah menerangkan skema yang dijangka bagi jadual ini.
+Sesetengah entiti output daripada wawasan khalayak tersedia sebagai jadual dalam Dataverse. Bahagian di bawah menerangkan skema yang dijangka bagi jadual ini.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -45,6 +45,7 @@ Sesetengah entiti output daripada cerapan khalayak tersedia sebagai jadual dalam
 - [CustomerMeasure](#customermeasure)
 - [Pengayaan](#enrichment)
 - [Ramalan](#prediction)
+- [Keahlian segmen](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -60,8 +61,8 @@ Jadual AlternateKey mengandungi kunci entiti, yang mengambil bahagian dalam pros
 |DataSourceName    |Jalur         | Nama sumber data. Contohnya: `datasource5`        |
 |EntityName        | Jalur        | Nama entiti dalam cerapan khalayak. Contohnya: `contact1`        |
 |AlternateValue    |Jalur         |ID alternatif yang dipetakan kepada ID pelanggan. Contoh: `cntid_1078`         |
-|KeyRing           | Teks berbilang baris        | Nilai JSON  </br> Sampel: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | Jalur        | ID profil pelanggan yang disatukan.         |
+|KeyRing           | Teks berbilang baris        | Nilai JSON  </br> Sample: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"kekunci":[" cntid_1078"]}]       |
+|CustomerId         | String        | ID profil pelanggan yang disatukan.         |
 |AlternateKeyId     | GUID         |  GUID berketentuan AlternateKey berdasarkan msdynci_identifier       |
 |msdynci_identifier |   Jalur      |   `DataSourceName|EntityName|AlternateValue`  </br> Sampel: `testdatasource|contact1|cntid_1078`    |
 
@@ -120,4 +121,17 @@ Jadual ini mengandungi output ramalan model.
 | Model                | Jalur      | Nama model                                                |
 | Nilai               | Rentetan JSON | Senarai atribut yang dihasilkan oleh model |
 | msdynci_predictionid | GUID        | GUID berketentuan yang dijana daripada msdynci_identifier | 
-| msdynci_identifier   | Jalur      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Keahlian segmen
+
+Jadual ini mengandungi maklumat keahlian segmen profil pelanggan.
+
+| Column        | Taip | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID Profil Pelanggan        |
+| SegmentProvider      | String       | Aplikasi yang menerbitkan segmen. Lalai: Cerapan khalayak         |
+| SegmentMembershipType | String       | Jenis pelanggan rekod keahlian segmen ini. Menyokong pelbagai jenis seperti Pelanggan, Kenalan atau Akaun. Lalai: Pelanggan  |
+| Segmen       | Rentetan JSON  | Senarai segmen unik profil pelanggan adalah ahli      |
+| msdynci_identifier  | String   | Pengenalpasti unik rekod keahlian segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID deterministik yang dijana daripada`msdynci_identifier`          |
