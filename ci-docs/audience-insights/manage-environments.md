@@ -1,7 +1,7 @@
 ---
 title: Cipta dan urus persekitaran
 description: Ketahui cara untuk mendaftar untuk perkhidmatan dan cara untuk menguruskan persekitaran.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799647"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892395"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -42,15 +42,18 @@ Untuk mendapatkan maklumat lanjut tentang tetapan persekitaran, lihat [Cipta per
 
 ## <a name="connect-to-microsoft-dataverse"></a>Sambung ke Microsoft Dataverse
    
-Langkah **Microsoft Dataverse membolehkan anda menyambungkan Wawasan Pelanggan dengan persekitaran Dataverse** anda.
+Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insights dengan persekitaran Dataverse anda.
 
-Untuk menggunakan [model ramalan luar kotak](predictions-overview.md#out-of-box-models), mengkonfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan pengambilan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang ditadbir oleh organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Wawasan Pelanggan dengan tasik data yang diuruskan Dataverse.
+Untuk menggunakan [model ramalan di luar kotak](predictions-overview.md#out-of-box-models), konfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan penginjesan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang mentadbir organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan danau data terurus Dataverse.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opsyen konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk mendayakan perkongsian data.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights tidak menyokong senario perkongsian data berikut:
-> - Jika anda menyimpan semua data ke Azure Data Lake Storage anda sendiri, anda tidak akan dapat mendayakan perkongsian data dengan tasik data yang diuruskan Dataverse.
+> - Jika anda menyimpan semua data kepada Azure Data Lake Storage anda sendiri anda tidak akan dapat mendayakan perkongsian data dengan danau data terurus Dataverse.
 > - Jika anda mendayakan perkongsian data dengan Dataverse, anda tidak akan dapat [mencipta nilai yang diramalkan atau hilang dalam entiti](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi persekitaran
@@ -81,7 +84,7 @@ Data berikut *tidak* disalin:
 - Profil pelanggan.
 - Kelayakan sumber data. Anda perlu menyediakan kelayakan untuk setiap sumber data dan menyegarkan semula sumber data secara manual.
 
-- Sumber data dari folder Model Data Umum dan tasik data yang diuruskan Dataverse. Anda perlu mencipta sumber data secara manual tersebut dengan nama yang sama seperti dalam persekitaran sumber.
+- Sumber data daripada folder Common Data Model dan danau data terurus Dataverse. Anda perlu mencipta sumber data secara manual tersebut dengan nama yang sama seperti dalam persekitaran sumber.
 
 Apabila anda menyalin persekitaran, anda akan melihat mesej pengesahan bahawa persekitaran baharu telah dicipta. Pilih **Pergi ke sumber data** untuk melihat senarai sumber data.
 

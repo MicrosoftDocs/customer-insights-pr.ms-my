@@ -1,7 +1,7 @@
 ---
 title: Percubaan Pembelajaran Mesin Azure
 description: Gunakan model berasaskan Pembelajaran Mesin Azure dalam Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033183"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881749"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berasaskan Pembelajaran Mesin Azure
 
-Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk membina model pembelajaran mesin yang boleh menjana Insights perniagaan tambahan. Customer Insights bersepadu dengan Studio Pembelajaran Mesin (klasik) dan Pembelajaran Mesin Azure untuk menggunakan model tersuai anda sendiri. Rujuk [percubaan Studio Pembelajaran Mesin (klasik)](machine-learning-studio-experiments.md) bagi contoh percubaan yang dibina pada Studio Pembelajaran Mesin (klasik). 
+Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk membina model pembelajaran mesin yang boleh menjana Insights perniagaan tambahan. Customer Insights disepadukan dengan Pembelajaran Mesin Azure untuk menggunakan model tersuai sendiri.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -35,7 +35,7 @@ Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk memb
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Gunakan pereka bentuk Pembelajaran Mesin Azure
 
-Pereka bentuk Pembelajaran Mesin Azure menyediakan kanvas visual, tempat anda boleh menyeret dan melepaskan set data dan modul, serupa dengan Studio Pembelajaran Mesin (klasik). Talian paip kelompok yang dicipta daripada pereka bentuk boleh disepadukan ke dalam Customer Insights jika ia dikonfigurasikan dengan sewajarnya. 
+Pereka bentuk Azure Pembelajaran Mesin menyediakan kanvas visual di mana anda boleh menyeret dan melepaskan set data dan modul. Talian paip kelompok yang dicipta daripada pereka bentuk boleh disepadukan ke dalam Customer Insights jika ia dikonfigurasikan dengan sewajarnya. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Gunakan SDK Pembelajaran Mesin Azure
 

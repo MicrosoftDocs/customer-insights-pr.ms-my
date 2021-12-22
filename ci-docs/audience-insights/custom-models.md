@@ -1,7 +1,7 @@
 ---
 title: Model pembelajaran mesin tersuai | Dokumen Microsoft
 description: Kerja dengan model tersuai daripada Azure Machine Learning dalam Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032953"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881795"
 ---
 # <a name="custom-machine-learning-models"></a>Model pembelajaran mesin tersuai
+
+> [!NOTE]
+> Sokongan untuk Pembelajaran Mesin Studio (klasik) akan berakhir pada 31 Ogos 2024. Kami mengesyorkan agar anda beralih ke [Azure Pembelajaran Mesin pada tarikh](/azure/machine-learning/overview-what-is-azure-machine-learning) tersebut.
+>
+> Mulai 1 Disember 2021, anda tidak akan dapat mencipta sumber Studio Pembelajaran Mesin (klasik) yang baru. Sehingga 31 Ogos 2024, anda boleh terus menggunakan sumber Studio Pembelajaran Mesin (klasik) yang sedia ada. Untuk maklumat lanjut, lihat [Berhijrah ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
+
 
 **Kecerdasan** > **Model tersuai** membolehkan anda mengurus aliran kerja berasaskan model Pembelajaran Mesin Azure. Aliran kerja membantu anda memilih data yang anda mahukan untuk menjana wawasan dan memetakan keputusan kepada data pelanggan disatukan anda. Untuk maklumat lanjut tentang membina model ML tersuai, lihat [Gunakan model berasaskan Pembelajaran Mesin Azure](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Pada masa ini, ciri ini menyokong perkhidmatan web yang diterbitkan melalui [Studio Pembelajaran Mesin (klasik)](https://studio.azureml.net) dan [talian paip kelompok Pembelajaran Mesin Azure](/azure/machine-learning/concept-ml-pipelines).
+- Ciri ini menyokong perkhidmatan web yang diterbitkan melalui [saluran paip kumpulan Azure Pembelajaran Mesin](/azure/machine-learning/concept-ml-pipelines).
 
 - Anda memerlukan akaun storan Azure Data Lake Gen2 yang berkaitan dengan tika Azure Studio anda untuk menggunakan ciri ini. Untuk mendapatkan maklumat lanjut, lihat [Cipta akaun storan Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 
 1. Jika langganan Pembelajaran Mesin Azure berada dalam penyewa yang berbeza daripada Customer Insights, pilih **Daftar masuk** dengan kelayakan anda untuk organisasi yang dipilih.
 
-1. Pilih **Ruang kerja** yang berkaitan dengan perkhidmatan web anda. Terdapat dua bahagian yang disenaraikan, satu untuk Pembelajaran Mesin Azure v1 (Studio Pembelajaran Mesin (klasik)) dan Pembelajaran Mesin Azure v2 (Pembelajaran Mesin Azure). Jika anda tidak pasti ruang kerja yang sesuai untuk perkhidmatan web Studio Pembelajaran Mesin (klasik) anda, pilih **Mana-mana**.
+1. Pilih **Ruang kerja** yang berkaitan dengan perkhidmatan web anda. 
 
-1. Pilih perkhidmatan web Studio Pembelajaran Mesin (klasik) atau talian paip Pembelajaran Mesin Azure dalam juntai bawah **Perkhidmatan web yang mengandungi model anda**. Kemudian pilih **Seterusnya**.
-   - Ketahui lebih lanjut tentang [menerbitkan perkhidmatan web Studio Pembelajaran Mesin (klasik)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Ketahui lebih lanjut tentang [menerbitkan talian paip dalam Pembelajaran Mesin Azure menggunakan pereka bentuk](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Talian paip anda mesti diterbitkan di bawah [titik tamat talian paip](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Pilih talian paip Azure Pembelajaran Mesin dalam **perkhidmatan Web yang mengandungi** juntai bawah model anda. Kemudian pilih **Seterusnya**.    
+   Ketahui lebih lanjut tentang [menerbitkan talian paip dalam Pembelajaran Mesin Azure menggunakan pereka bentuk](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Talian paip anda mesti diterbitkan di bawah [titik tamat talian paip](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Untuk setiap **Input perkhidmatan web**, pilih **Entiti** yang berpadanan daripada wawasan khalayak dan pilih **Seterusnya**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
    > ![Konfigurasikan aliran kerja.](media/intelligence-screen2-updated.png "Konfigurasikan aliran kerja")
 
 1. Dalam langkah **Parameter Output Model**, tetapkan ciri berikut:
-   - Studio Pembelajaran Mesin (klasik)
-      1. Masukkan output **Nama entiti** yang anda mahu hasil output perkhidmatan web mengalir masuk.
-   - Pembelajaran Mesin Azure
       1. Masukkan output **Nama entiti** yang anda mahu hasil output talian paip mengalir masuk.
       1. Pilih **Nama parameter storan data output** bagi talian paip kelompok daripada juntai bawah.
       1. Pilih **Nama parameter Laluan Output** bagi talian paip kelompok daripada juntai bawah.
@@ -93,9 +95,6 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 1. Untuk setiap **Input perkhidmatan web**, anda boleh mengemas kini **Entiti** yang berpadanan daripada wawasan khalayak. Kemudian pilih **Seterusnya**.
 
 1. Dalam langkah **Parameter Output Model**, tetapkan ciri berikut:
-   - Studio Pembelajaran Mesin (klasik)
-      1. Masukkan output **Nama entiti** yang anda mahu hasil output perkhidmatan web mengalir masuk.
-   - Pembelajaran Mesin Azure
       1. Masukkan output **Nama entiti** yang anda mahu hasil output talian paip mengalir masuk.
       1. Pilih **Nama parameter storan data output** untuk talian paip ujian anda.
       1. Pilih **Nama parameter Laluan Output** untuk talian paip ujian anda.

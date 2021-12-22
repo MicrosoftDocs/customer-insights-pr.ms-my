@@ -1,5 +1,5 @@
 ---
-title: Eksport data Customer Insights ke hos SFTP
+title: Eksport data Wawasan Pelanggan ke hos SFTP (Video)
 description: Ketahui cara mengkonfigurasi sambungan dan mengeksport ke lokasi SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673927"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927614"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Eksport segmen dan data lain ke SFTP (pratonton)
 
@@ -28,6 +28,7 @@ Gunakan data pelanggan anda dalam aplikasi pihak ketiga dengan mengeksportnya ke
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Destinasi SFTP di belakang tembok api buat masa ini tidak disokong. 
 - Masa jalanan eksport bergantung pada prestasi sistem anda. Kami mengesyorkan dua CPU teras dan 1 Gb memori sebagai konfigurasi minimum pelayan anda. 
 - Mengeksport entiti sehingga 100 juta profil pelanggan boleh mengambil masa 90 minit apabila menggunakan konfigurasi minimum yang disyorkan iaitu dua CPU teras dan 1 Gb memori. 
 

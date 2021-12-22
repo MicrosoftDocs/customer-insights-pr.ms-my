@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,57 +9,69 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753128"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884273"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Apa yang baru dalam keupayaan wawasan khalayak Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, lihat [pelan keluaran Dynamics 365 dan Power Platform](/dynamics365/release-plans/).
+Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](/dynamics365/release-plans/).
 
 Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tertentu mungkin melihat ciri sebelum orang lain. Melainkan dinyatakan berbeza, anda tidak perlu mengambil sebarang tindakan dan kami akan mengemas kini aplikasi secara automatik tanpa masa henti.
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="november-2021-updates"></a>Kemas kini November 2021
+
+Kemas kini pada bulan November 2021 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Keahlian segmen kini boleh didapati di Dataverse
+
+Maklumat keahlian segmen untuk profil pelanggan kini tersedia Dataverse bersama-sama dengan profil dan pandangan pelanggan. Aplikasi tindakan Dynamics 365 dan aplikasi dipacu model boleh menggunakan butiran keahlian segmen carian data ini untuk pelanggan tertentu.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktiviti menyokong butiran peringkat hubungan untuk akaun perniagaan
+
+Anda kini boleh mengkonfigurasi, memaparkan dan menapis aktiviti untuk kenalan pada garis masa aktiviti akaun perniagaan anda untuk lebih memahami kenalan akaun yang mengambil bahagian dalam aktiviti tertentu.
+
 ## <a name="october-2021-updates"></a>Kemas kini Oktober 2021
 
-Kemas kini pada Oktober 2021 termasuk ciri baru, naik taraf prestasi dan pembetulan pepijat.
+Kemas kini pada bulan Oktober 2021 termasuk ciri baru, peningkatan prestasi, dan pembaikan pepijat.
 
 ### <a name="b-to-b"></a>B-to-B
 
-Bermula pada Oktober 2021, anda boleh bekerja dengan akaun perniagaan dan kenalan mereka yang berkaitan dalam Wawasan Pelanggan. Sebelum ini, aplikasi ini kebanyakannya disesuaikan dengan pengguna individu. Beberapa kawasan ciri telah dikemas kini untuk menyokong senario B-ke-B di atas jenis persekitaran baru. Untuk gambaran keseluruhan tentang ciri B-kepada-B yang disokong, lihat [Bekerja dengan akaun perniagaan dalam wawasan khalayak](work-with-business-accounts.md).
+Mulai Oktober 2021, anda boleh bekerja dengan akaun perniagaan dan kenalan berkaitan mereka dalam Wawasan Pelanggan. Sebelum ini, aplikasi ini kebanyakannya disesuaikan dengan pengguna individu. Beberapa kawasan ciri telah dikemas kini untuk menyokong senario B-ke-B di atas jenis persekitaran baru. Untuk gambaran keseluruhan tentang ciri B-ke-B yang disokong, lihat [Bekerja dengan akaun perniagaan dalam wawasan khalayak](work-with-business-accounts.md).
 
 Bahagian berikut menyerlahkan beberapa bidang utama yang disesuaikan untuk menyokong akaun perniagaan dan pengguna individu.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Segmen eksport berdasarkan akaun perniagaan
 
-Semua eksport segmen dalam wawasan khalayak tersedia dalam konteks akaun perniagaan. Kebanyakan eksport segmen memerlukan konfigurasi tambahan dan [maklumat hubungan yang](segment-builder.md#create-a-new-segment) disalangkan dalam segmen pendikik untuk menjadi sah bagi akaun perniagaan. Untuk maklumat lanjut, lihat [Mengeksport segmen](export-destinations.md#export-segments).
+Semua eksport segmen dalam wawasan khalayak tersedia dalam konteks akaun perniagaan. Kebanyakan eksport segmen memerlukan konfigurasi tambahan dan [maklumat hubungan yang](segment-builder.md#create-a-new-segment) diunjurkan dalam segmen asas untuk sah untuk akaun perniagaan. Untuk maklumat lanjut, lihat [Segmen eksport](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Gunakan eksport Iklan LinkedIn dengan akaun perniagaan
 
-Eksport LinkedIn Ads kini tersedia untuk kenalan dan syarikat yang menyasarkan dalam konteks akaun perniagaan. Apabila memilih syarikat yang menyasarkan sebagai fokus utama eksport LinkedIn, anda boleh mengeksport segmen yang dibina pada akaun perniagaan tanpa perlu mengunjnakan maklumat hubungan. Untuk maklumat lanjut, pergi ke dokumen tentang [eksport LinkedIn Ads](export-linkedin-ads.md) dan perbezaan antara [penyasaran kenalan](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) dan [penyasaran syarikat](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+Eksport Iklan LinkedIn kini tersedia untuk penyasaran kenalan dan syarikat dalam konteks akaun perniagaan. Apabila memilih penyasaran syarikat sebagai tumpuan utama eksport LinkedIn, anda boleh mengeksport segmen yang dibina pada akaun perniagaan tanpa perlu memproyeksikan maklumat hubungan. Untuk maklumat lanjut, pergi ke dokumen tentang [eksport Iklan LinkedIn](export-linkedin-ads.md) dan perbezaan antara [penyasaran kenalan dan](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) syarikat. 
 
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Mencipta langkah berdasarkan akaun perniagaan dan hierarki mereka
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Buat langkah berdasarkan akaun perniagaan dan hierarki mereka
 
-Pembina langkah membolehkan anda mencipta langkah-langkah di sekitar akaun perniagaan dan secara pilihan menggunakan maklumat hierarki. Maklumat hierarki digunakan untuk melancarkan pengiraan ukur merentasi akaun dan semuanya adalah sub akaun yang berkaitan. Contohnya, anda boleh mencipta langkah seperti jumlah pendapatan untuk setiap kumpulan akaun perniagaan yang dikenal pasti oleh hierarki mereka. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
+Pembina ukuran membolehkan anda membuat langkah-langkah di sekitar akaun perniagaan dan secara pilihan menggunakan maklumat hierarki. Maklumat hierarki digunakan untuk melancarkan pengiraan ukuran merentas akaun dan semua sub akaun yang berkaitan. Sebagai contoh, anda boleh mencipta langkah seperti jumlah pendapatan bagi setiap kumpulan akaun perniagaan yang dikenal pasti oleh hierarki mereka. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
 
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Mencipta segmen berdasarkan akaun perniagaan dan hierarki mereka
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Cipta segmen berdasarkan akaun perniagaan dan hierarki mereka
 
-Pembina segmen membolehkan anda membuat segmen akaun perniagaan yang secara pilihan termasuk maklumat hubungan untuk setiap akaun dalam segmen. Jika anda menyediakan hierarki akaun, anda boleh menggunakan maklumat hierarki akaun dalam penciptaan segmen. Untuk maklumat lanjut, lihat [Mencipta segmen baru](segment-builder.md#create-a-new-segment).
+Pembina segmen membolehkan anda membuat segmen akaun perniagaan yang secara pilihan memasukkan maklumat hubungan untuk setiap akaun dalam segmen. Jika anda menyediakan hierarki akaun, anda boleh menggunakan maklumat hierarki akaun dalam penciptaan segmen. Untuk maklumat lanjut, lihat [Mencipta segmen baru](segment-builder.md#create-a-new-segment).
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Kekalkan akaun perniagaan anda dengan wawasan yang mendalam terhadap kecenderungan churn mereka
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Kekalkan akaun perniagaan anda dengan pandangan mendalam tentang kecenderungan churn mereka
 
-Model ramalan pelanggan kini menyokong akaun perniagaan juga. Anda boleh menilai risiko churn bukan sahaja untuk akaun tetapi untuk gabungan akaun dan kategori produk atau perkhidmatan yang mereka beli daripada anda. Tambahan ini membantu anda memahami jika akaun lebih cenderung untuk berhenti membeli daripada anda secara umum atau hanya untuk kategori barangan atau perkhidmatan tertentu. Untuk membantu anda menggunakan model AI ini, ia juga menyenaraikan sebab mengapa akaun mungkin akan bergolak. Untuk maklumat lanjut, lihat [Transaksi ramalan (pratonton)](predict-transactional-churn.md).
+Model ramalan pelanggan kini menyokong akaun perniagaan juga. Anda boleh menilai risiko churn bukan sahaja untuk akaun tetapi untuk gabungan akaun dan kategori produk atau perkhidmatan yang mereka beli daripada anda. Penambahan ini membantu anda memahami sama ada akaun lebih cenderung untuk berhenti membeli daripada anda secara umum atau hanya untuk kategori barangan atau perkhidmatan tertentu. Untuk membantu anda seterusnya menggunakan model AI ini, ia juga menyenaraikan sebab mengapa akaun mungkin bergemuruh. Untuk maklumat lanjut, lihat [Transaksi ramalan (pratonton)](predict-transactional-churn.md).
 
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Melihat kenalan akaun perniagaan dalam pandangan Pelanggan
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Lihat kenalan akaun perniagaan dalam pandangan Pelanggan
 
-Jika akaun perniagaan dipetakan kepada akaun berkaitan, aplikasi Wawasan Pelanggan menunjukkan kenalan berkaitan ini sebagai sebahagian daripada pandangan butiran pelanggan. Untuk maklumat lanjut, lihat [Profil pelanggan](customer-profiles.md).
+Jika akaun perniagaan dipetakan ke akaun berkaitan, aplikasi Wawasan Pelanggan menunjukkan kenalan berkaitan ini sebagai sebahagian daripada pandangan butiran pelanggan. Untuk maklumat lanjut, lihat [Profil pelanggan](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Kemas kini September 2021
@@ -113,7 +125,7 @@ Kemas kini pada bulan Mei 2021 termasuk beberapa ciri, peningkatan prestasi dan 
 
 ### <a name="data-ingestion"></a>Pengingesan data
 
-- **Lihat atau ubah suai metadata atau definisi entiti apabila melampirkan data daripada Azure Data Lake Storage** anda Anda kini boleh melihat dan mengedit metadata atau definisi entiti dalam wawasan khalayak apabila melampirkan data daripada folder Model Data Umum dalam Azure Data Lake Storage anda. Keupayaan ini menyediakan maklum balas masa nyata, pengesahan model dan semakan ralat. Ia membolehkan anda mengedit model.json dan manifest.json dengan lancar.
+- **Lihat atau ubah suai definisi metadata atau entiti apabila melampirkan data daripada Azure Data Lake Storage** Anda kini boleh melihat dan mengedit definisi metadata atau entiti dalam cerapan khalayak apabila melampirkan data daripada folder Common Data Model dalam Azure Data Lake Storage anda. Keupayaan ini menyediakan maklum balas masa nyata, pengesahan model dan semakan ralat. Ia membolehkan anda mengedit model.json dan manifest.json dengan lancar.
 
 ### <a name="extensibility"></a>Kebolehpanjangan
 
@@ -188,7 +200,7 @@ Kemas kini pada bulan Mac 2021 termasuk beberapa ciri, peningkatan prestasi, dan
 
 ### <a name="data-ingestion"></a>Pengingesan data
 
-- **Berhubung dengan sumber data di premis menggunakan aliran data dan get laluan Power Platform** Kami dengan sukacitanya mengumumkan pratonton aliran data Power Platform dan kesambungan di premis menggunakan get laluan dalam Wawasan Pelanggan dengan Power Platform yang berkaitan atau Dataverse persekitaran. Sebarang sumber data baru yang dicipta dalam persekitaran Wawasan Pelanggan dengan persekitaran Dataverse yang dipautkan akan lalai kepada aliran data Power Platform yang membawa di premis penyambung data dan sekumpulan penyambung dan keupayaan transformasi yang kaya.
+- **Sambung ke sumber data di premis menggunakan aliran data dan get laluan Power Platform** Kami berbesar hati untuk mengumumkan pratonton untuk aliran data Power Platform dan kesambungan di premis menggunakan get laluan dalam Customer Insights dengan persekitaran Power Platform atau Dataverse yang berkaitan. Sebarang sumber data baharu yang dicipta dalam persekitaran Customer Insights dengan persekitaran Dataverse akan dilalaikan kepada aliran data Power Platform yang dibawa dalam kesambungan data di premis dan set sambungan yang kaya serta keupayaan transformasi.
 
 ### <a name="extensibility"></a>Kebolehpanjangan
 
@@ -250,7 +262,7 @@ Kemas kini pada Februari 2021 termasuk beberapa ciri, peningkatan prestasi dan p
 
 - **Salin persekitaran yang menyokong lebih banyak jenis sumber data**
 
-  Pentadbir boleh menyalin konfigurasi persekitaran ke persekitaran baharu dalam organisasi yang sama. Ciri ini memperluaskan kefungsian persekitaran salinan untuk kes-kes yang sumber data berdasarkan tasik data terurus Microsoft Dataverse atau folder Model Data Biasa digunakan.
+  Pentadbir boleh menyalin konfigurasi persekitaran ke persekitaran baharu dalam organisasi yang sama. Ciri ini memperluaskan kefungsian persekitaran salinan untuk kes yang sumber data berdasarkan danau data yang diuruskan oleh Microsoft Dataverse atau folder Common Data Model digunakan.
 
 ## <a name="january-2021-updates"></a>Kemas kini Januari 2021
 
@@ -276,7 +288,7 @@ Kemas kini pada Januari 2021 termasuk beberapa ciri, peningkatan prestasi dan pe
 
 #### <a name="system-administration"></a>Pentadbiran sistem
 
-- **Berkongsi data dengan lancar ke Microsoft Dataverse** Anda kini boleh berkongsi output Wawasan Pelanggan dengan aplikasi Microsoft Dataverse menggunakan Tasik Data Terurus Microsoft Dataverse. Sebaik sahaja anda mengaitkan persekitaran Dataverse dengan Wawasan Pelanggan, anda mendapat pilihan untuk mendayakan perkongsian data.
+- **Kongsi data dengan lancar kepada Microsoft Dataverse** Anda kini boleh berkongsi output Customer Insights dengan aplikasi Microsoft Dataverse menggunakan Data Lake Microsoft Dataverse Terurus. Sebaik sahaja anda mengaitkan persekitaran Dataverse dengan Customer Insights, anda mendapat pilihan untuk mendayakan perkongsian data.
   Untuk maklumat lanjut, lihat [Uruskan persekitaran](manage-environments.md).
 
 

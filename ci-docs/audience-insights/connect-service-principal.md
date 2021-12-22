@@ -1,7 +1,7 @@
 ---
 title: Sambung ke akaun  Azure Data Lake Storage menggunakan prinsipal perkhidmatan
 description: Gunakan prinsipal perkhidmatan Azure untuk menyambung ke data lake anda sendiri.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645183"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900286"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Sambung ke akaun Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure
 
-Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Teruskan membaca untuk mengetahui cara untuk menyambungkan Dynamics 365 Customer Insights dengan akaun Azure Data Lake Storage dengan menggunakan prinsipal perkhidmatan Azure dan bukannya kekunci akaun storan. 
+Artikel ini membincangkan cara berhubung Dynamics 365 Customer Insights dengan akaun menggunakan Azure Data Lake Storage prinsipal perkhidmatan Azure dan bukannya kunci akaun storan. 
 
-Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit folder Common Data Service sebagai sumber data](connect-common-data-model.md) secara selamat atau [mencipta atau mengemas kini persekitaran](create-environment.md).
+Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Anda boleh menggunakan prinsipal perkhidmatan untuk menambah atau mengedit folder Common Data Model dengan selamat [sebagai sumber data atau mencipta atau mengemas kini](connect-common-data-model.md)[persekitaran](create-environment.md).
 
 > [!IMPORTANT]
 > - Akaun Data Lake Storage yang akan menggunakan prinsipal perkhidmatan mesti mempunyai [ruang nama berhierarki didayakan](/azure/storage/blobs/data-lake-storage-namespace).
@@ -28,7 +28,7 @@ Anda boleh menggunakan prinsipal perkhidmatan untuk [menambah atau mengedit fold
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Cipta prinsipal perkhidmatan Azure untuk Customer Insights
 
-Sebelum mencipta prinsipal perkhidmatan baharu untuk cerapan khalayak atau cerapan penglibatan, semak sama ada ia sudah wujud dalam organisasi anda.
+Sebelum mencipta prinsipal perkhidmatan baharu untuk Wawasan Pelanggan, semak sama ada ia sudah wujud dalam organisasi anda.
 
 ### <a name="look-for-an-existing-service-principal"></a>Cari prinsipal perkhidmatan sedia ada
 

@@ -1,7 +1,7 @@
 ---
 title: Sambung data Common Data Model ke akaun Azure Data Lake
 description: Bekerja dengan data Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033137"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900208"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Sambungkan ke folder Common Data Model menggunakan akaun Azure Data Lake
 
@@ -30,7 +30,7 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
 
 - Azure Data Lake yang ingin anda sambungkan dan inges data dari perlu berada di rantau Azure yang sama seperti persekitaran Dynamics 365 Customer Insights. Sambungan ke folder Common Data Model dari data lake dalam rantau Azure berbeza tidak disokong. Untuk mengetahui rantau Azure persekitaran, pergi ke **Pentadbir** > **Sistem** > **Perihal** dalam cerapan khalayak.
 
-- Data disimpan dalam perkhidmatan dalam talian, mungkin disimpan di lokasi lain daripada tempat data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung kepada data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan ke dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft.](https://www.microsoft.com/trust-center)
+- Data yang disimpan dalam perkhidmatan dalam talian mungkin disimpan di lokasi yang berbeza daripada tempat data diproses atau disimpan Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights .  [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Sambungkan ke folder Common Data Model
 
@@ -38,12 +38,11 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
 
 1. Pilih **Tambah sumber data**.
 
-1. Pilih **Sambung ke folder Common Data Model**, masukkan **Nama** untuk sumber data dan pilih **Seterusnya**. Namakan garis panduan: 
-   - Bermula dengan huruf.
-   - Gunakan huruf dan nombor sahaja. Aksara khas dan ruang idak dibenarkan.
-   - Gunakan antara 3 dan 64 aksara.
+1. Pilih **Storan tasik data Azure, masukkan Nama untuk** **sumber** data, kemudian pilih **Berikut**.
 
-1. Anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Masukkan maklumat **Bekas** dan pilih **Seterusnya**.
+   - Jika digesa, pilih salah satu set data sampel yang berkaitan dengan industri anda, kemudian pilih **Berikut**. 
+
+1. Anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Masukkan **alamat Pelayan**, pilih log masuk, kemudian pilih **Berikut** **·**.
    > [!div class="mx-imgBorder"]
    > ![Kotak dialog untuk memasukkan butiran sambungan baharu untuk Data Lake Azure.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Artikel ini memberikan maklumat tentang cara untuk data daripada folder Common D
    > [!NOTE]
    > Sebarang fail model.json atau manifest.json yang berkaitan dengan sumber data lain dalam persekitaran tidak akan ditunjukkan dalam senarai.
 
-1. Anda akan mendapat senarai entiti yang tersedia dalam fail model.json atau manifest.json yang dipilih. Anda boleh menyemak semula dan memilih daripada senarai entiti yang tersedia dan pilih **Simpan**. Semua entiti yang dipilih akan dinges daripada sumber data baharu.
+1. Anda akan melihat senarai entiti yang tersedia dalam fail model.json atau manifest.json terpilih. Semak semula dan pilih daripada senarai entiti yang tersedia, kemudian pilih **Simpan**. Semua entiti yang dipilih akan dinges daripada sumber data baharu.
    > [!div class="mx-imgBorder"]
    > ![Kotak dialog yang menunjukkan senarai entiti daripada fail model.json.](media/review-entities.png)
 
-8. Menunjukkan entiti data yang mahu anda dayakan pemprofilan data dan pilih **Simpan**. Pemprofilan data membolehkan analitis dan keupayaan lain. Anda boleh memilih keseluruhan entiti yang memilih semua atribut daripada entiti atau memilih sifat tertentu pilihan anda. Secara lalai, tiada entiti didayakan untuk pemprofilan data.
+8. Nyatakan entiti data yang anda ingin dayakan pemprofilan data, kemudian pilih **Simpan**. Pemprofilan data membolehkan analitis dan keupayaan lain. Anda boleh memilih keseluruhan entiti yang memilih semua atribut daripada entiti atau memilih sifat tertentu pilihan anda. Secara lalai, tiada entiti didayakan untuk pemprofilan data.
    > [!div class="mx-imgBorder"]
    > ![Kotak dialog menunjukkan pemprofilan data.](media/dataprofiling-entities.png)
 

@@ -1,7 +1,7 @@
 ---
-title: Inges data melalui penyambung Power Query
+title: Menelan data melalui penyambung Power Query (Video)
 description: Penyambung untuk sumber data berdasarkan Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732229"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903851"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambung kepada sumber data Power Query
 
-Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyakan penyambung ini disokong oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan penyambung Power Query secara amnya mengikut langkah yang digariskan dalam bahagian seterusnya. Walau bagaimanapun, bergantung pada penyambung yang anda gunakan, maklumat berbeza diperlukan. Untuk mendapatkan maklumat lanjut, lihat dokumentasi mengenai penyambung individu dalam [rujukan penyambung Power Query](/power-query/connectors/).
+Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyakan penyambung ini disokong oleh Dynamics 365 Customer Insights. 
+
+Menambah sumber data berdasarkan penyambung Power Query secara amnya mengikuti langkah yang digariskan dalam bahagian ini. Walau bagaimanapun, bergantung pada penyambung yang anda gunakan, maklumat berbeza diperlukan. Untuk mengetahui lebih lanjut, lihat dokumentasi tentang penyambung individu dalam [rujukan penyambung Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 
 1. Pilih **Tambah sumber data**.
 
-1. Pilih kaedah **Import data** dan pilih **Seterusnya**.
+1. Pilih **Microsoft Power Query, kemudian pilih** **Berikut**.
 
-1. Berikan **Nama** untuk sumber data dan pilih **Seterusnya** untuk mencipta sumber data. Namakan garis panduan: 
-   - Bermula dengan huruf.
-   - Gunakan huruf dan nombor sahaja. Aksara khas dan ruang idak dibenarkan.
-   - Gunakan antara 3 dan 64 aksara.
+1. Berikan **Nama** untuk sumber data dan pilih **Seterusnya** untuk mencipta sumber data.
 
-1. Pilih salah satu [penyambung yang tersedia](#available-power-query-data-sources). Untuk contoh ini, kami pilih penyambung **Text/CSV**.
+1. Pilih salah satu [penyambung yang tersedia](#available-power-query-data-sources). Dalam contoh ini, kami memilih **penyambung Teks / CSV.**
 
 1. Masukkan butiran yang diperlukan dalam **Tetapan sambungan** untuk penyambung yang dipilih dan pilih **Seterusnya** untuk melihat pratonton data.
 
@@ -50,7 +49,7 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 
 1. Anda boleh tambah entiti tambahan ke sumber data anda dengan memilih **Dapatkan data** di dalam dialog **Edit pertanyaan**.
 
-   Transformasi ini amat disyorkan:
+   Kami mengesyorkan agar anda menggunakan transformasi berikut:
 
    - Jika anda sedang mengambil data dari fail CSV, baris pertama selalunya mengandungi tajuk. Pergi ke **Ubah jadual** dan pilih **Gunakan pengepala sebagai baris pertama**.
    - Pastikan jenis data ditetapkan dengan sewajarnya.
@@ -61,7 +60,7 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 
 ## <a name="available-power-query-data-sources"></a>Sedia sumber data Power Query
 
-Lihat [Rujukan penyambung Power Query](/power-query/connectors/) untuk senarai penyambung terkini yang boleh anda pilih untuk mengimport data pada Customer Insights. 
+Lihat [rujukan penyambung Power Query](/power-query/connectors/) untuk senarai penyambung yang anda boleh gunakan untuk mengimport data ke Wawasan Pelanggan. 
 
 Penyambung dengan tanda semak dalam lajur **Customer Insights (Alir data)** tersedia untuk mencipta sumber data baharu berdasarkan Power query. Semak semula dokumentasi bagi penyambung khusus untuk mengetahui lebih lanjut tentang prasyarat, had dan butiran lain.
 
@@ -70,7 +69,7 @@ Penyambung dengan tanda semak dalam lajur **Customer Insights (Alir data)** ters
 > [!NOTE]
 > Ia mungkin tidak mustahil untuk membuat perubahan kepada sumber data yang sedang digunakan dalam salah satu proses aplikasi (contohnya *pembahagian*, *padanan* atau *penggabungan*). 
 >
-> Menggunakan halaman **Tetapan**, anda boleh menjejaki perkembangan setiap proses aktif. Apabila proses selesai, anda boleh kembali ke halaman **Sumber Data** dan membuat perubahan anda.
+> Dalam **halaman** Seting, anda boleh menjejaki kemajuan setiap proses aktif. Apabila proses selesai, anda boleh kembali ke halaman **Sumber Data** dan membuat perubahan anda.
 
 1. Dalam cerapan khalayak, pergi ke **Data** > **Sumber data**.
 

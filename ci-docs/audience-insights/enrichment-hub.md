@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770135"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884227"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -34,7 +34,7 @@ Pada tab **Terokai**, anda akan mencari semua pilihan pengayaan yang disokong.
 - [Jenama](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Demografik](enrichment-experian.md) disediakan oleh Experian
+- [Demografi](enrichment-experian.md) disediakan oleh Experian
 - [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
 
@@ -42,10 +42,11 @@ Pada tab **Terokai**, anda akan mencari semua pilihan pengayaan yang disokong.
 
 - [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Data syarikat dipertingkat](enrichment-enhanced-company-data.md) yang disediakan oleh Microsoft
+- [Data syarikat](enrichment-enhanced-company-data.md) yang dipertingkatkan yang disediakan oleh Microsoft
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
 - [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
+- [Data penglibatan akaun](enrichment-office.md) yang disediakan oleh Microsoft
 
 ---
 
@@ -77,7 +78,7 @@ Entiti yang akan diperkaya ditentukan semasa konfigurasi pengayaan, yang membole
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
 
-Anda boleh menemukan butiran tentang pemprosesan pengayaan, termasuk status dan isu yang berpotensi semasa penyegaran semula atau selepas segar semula selesai. Fahami proses yang terlibat untuk menyegarkan semula pengayaan dan tempoh masa yang diambil untuk menjalankan proses tersebut. Status pengayaan disokong untuk Experian, Leadspace, HERE Technologies, SFTP Import, dan Azure Maps.
+Anda boleh menemukan butiran tentang pemprosesan pengayaan, termasuk status dan isu yang berpotensi semasa penyegaran semula atau selepas segar semula selesai. Fahami proses yang terlibat untuk menyegarkan semula pengayaan dan tempoh masa yang diambil untuk menjalankan proses tersebut. Status pengayaan disokong untuk Experian, Leadspace, di sini teknologi, Import SFTP, dan Azure Maps.
 
 Untuk melihat status pengayaan
 

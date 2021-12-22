@@ -1,7 +1,7 @@
 ---
-title: Pengayaan peningkatan alamat
+title: Pengayaan pembesaran alamat (Video)
 description: Perkayakan dan normalkan maklumat alamat profil pelanggan dengan model Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643407"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927522"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang dipertingkatkan
 
@@ -102,7 +102,17 @@ Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang
 
 Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan memilih **Lihat data yang diperkayakan**.
 
-## <a name="next-steps"></a>Langkah seterusnya
+### <a name="overview-card"></a>Kad Gambaran Keseluruhan
+
+Kad gambaran keseluruhan menunjukkan butiran mengenai liputan pengayaan. 
+
+* **Pelanggan diproses dan berubah** : Bilangan profil pelanggan yang berjaya diperkaya.
+
+* **Pelanggan diproses dan tidak berubah** : Bilangan profil pelanggan yang diiktiraf tetapi tidak berubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
+
+* **Pelanggan tidak diproses dan tidak berubah** : Bilangan profil yang tidak diiktiraf. Biasanya untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
+
+## <a name="next-steps"></a>Langkah-langkah berikutnya
 
 [!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 

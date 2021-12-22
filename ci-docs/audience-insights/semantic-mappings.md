@@ -1,7 +1,7 @@
 ---
 title: Pemetaan semantik (Pratonton)
 description: Gambaran keseluruhan pemetaan semantik dan cara untuk menggunakannya.
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731954"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881841"
 ---
-# <a name="semantic-mappings"></a>Pemetaan semantik
+# <a name="semantic-mappings-preview"></a>Pemetaan semantik (Pratonton)
 
 Semantik pemetaan membolehkan anda memetakan data bukan aktiviti anda kepada skema yang dipratentukan. Skema ini membantu cerapan khalayak untuk lebih memahami atribut data anda. Pemetaan semantik dan data yang disediakan mendayakan cerapan dan ciri baharu dalam cerapan khalayak. Untuk memetakan data aktiviti anda kepada pengguna skema, semak dokumentasi [aktiviti](activities.md).
 
@@ -91,5 +91,40 @@ Pada **Data** > **Pemetaan semantik (pratonton)**, anda boleh melihat semua peme
 
 - **Padam** : Buka dialog untuk mengesahkan pemadaman pemetaan semantik yang dipilih. Anda juga boleh memadam lebih daripada satu pemetaan semantik sekaligus dengan memilih pemetaan semantik dan ikon padam. Pilih **Padam** untuk mengesahkan pemadaman.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Gunakan pemetaan entiti semantik ContactProfile untuk mencipta aktiviti aras kenalan
+
+Selepas mencipta *pemetaan* entiti semantik ContactProfile, anda boleh menangkap aktiviti kenalan. Ia membolehkan anda melihat dalam garis masa aktiviti untuk akaun yang menghubungi bertanggungjawab untuk setiap aktiviti. Kebanyakan langkah mengikuti konfigurasi pemetaan aktiviti biasa.
+
+   > [!NOTE]
+   > Untuk membolehkan aktiviti peringkat hubungan berfungsi, anda mesti mempunyai **atribut AccountID** dan **ContactID untuk setiap rekod dalam data** aktiviti anda.
+
+1. [Tentukan *pemetaan* entiti semantik ContactProfile.](#define-a-contactprofile-semantic-entity-mapping) Dan jalankan pemetaan semantik.
+
+1. Dalam wawasan khalayak, pergi ke **Data** > **Aktiviti**.
+
+1. Pilih **Tambah Aktiviti untuk mencipta aktiviti** baharu.
+
+1. Namakan aktiviti, pilih entiti aktiviti sumber dan pilih kunci utama entiti aktiviti.
+
+1. Dalam **langkah** Perhubungan, cipta perhubungan tidak langsung antara data sumber aktiviti anda kepada akaun, menggunakan data kenalan anda sebagai entiti perantara. Untuk maklumat lanjut, lihat [laluan perhubungan langsung dan tidak langsung](relationships.md#relationship-paths).
+   - Contoh perhubungan untuk aktiviti yang dipanggil *Pembelian*:
+      - **Pembelian Data Hubungan Data Aktiviti Sumber** > **pada** atribut **ContactID**
+      - **Hubungi Data Akaun Data** > **pada** atribut **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh persediaan perhubungan.":::
+
+1. Selepas menyediakan perhubungan, pilih **Berikut** dan lengkapkan konfigurasi pemetaan aktiviti anda. Untuk langkah terperinci tentang penciptaan aktiviti, lihat [mentakrifkan aktiviti](activities.md).
+
+1. Jalankan pemetaan aktiviti anda.
+
+1. Aktiviti peringkat hubungan anda kini akan dapat dilihat pada garis masa pelanggan anda.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Keputusan akhir selepas mengkonfigurasi aktiviti hubungan":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Penapisan garis masa aktiviti peringkat hubungan
+
+Selepas mengkonfigurasi pemetaan aktiviti peringkat hubungan dan menjalankannya, garis masa aktiviti untuk pelanggan anda akan dikemas kini. Ia termasuk KAD atau nama mereka, bergantung pada *konfigurasi ContactProfile* anda, untuk aktiviti yang mereka bertindak. Anda boleh menapis aktiviti mengikut kenalan dalam garis masa untuk melihat kenalan tertentu yang anda minati. Selain itu, anda boleh melihat semua aktiviti yang tidak diperuntukkan kepada kenalan tertentu dengan memilih **Aktiviti yang tidak dipetakan kepada Kenalan**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opsyen penapisan tersedia untuk aktiviti peringkat Kenalan.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
