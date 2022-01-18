@@ -5,17 +5,16 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732161"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977978"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
@@ -36,7 +35,7 @@ Terdapat dua jenis eksport utama:
 Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport segmen kepada pelbagai sistem sasaran mempunyai keperluan khusus. Secara umumnya, ahli segmen, profil pelanggan, mengandungi maklumat kenalan. Walaupun ini biasanya kes untuk segmen yang dibina pada pelanggan individu (niaga-ke-pengguna), ia tidak semestinya kes untuk segmen berdasarkan pada akaun perniagaan (niaga-ke-niaga). 
 
 **Persekitaran eksport segmen untuk akaun perniagaan (niaga-ke-niaga)**  
-- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan [syarikat](export-linkedin-ads.md) semasa mentakrifkan eksport.
+- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan **syarikat** semasa mentakrifkan eksport.
 - Semua sistem sasaran lain memerlukan medan daripada entiti kenalan. Untuk memastikan segmen akaun boleh mendapatkan data daripada kenalan yang berkaitan, takrifan segmen anda perlu untuk atribut projek entiti kenalan. Ketahui lebih lanjut tentang cara [mengkonfigurasikan segmen dan atribut projek](segment-builder.md).
 
 **Eksport segmen dalam persekitaran untuk pelanggan individu (Niaga-ke-Pengguna)**  

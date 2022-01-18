@@ -1,7 +1,7 @@
 ---
-title: Tambahan Kad Pelanggan untuk aplikasi Dynamics 365 (Video)
+title: Tambahan Kad Pelanggan untuk aplikasi Dynamics 365 (mengandungi video)
 description: Tunjukkan data daripada wawasan khalayak dalam aplikasi Dynamics 365 dengan tambahan ini.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921876"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945438"
 ---
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
 
@@ -27,12 +27,12 @@ Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dyna
 ## <a name="prerequisites"></a>Prasyarat
 
 - Tambahan hanya berfungsi dengan aplikasi berpandukan model Dynamics 365 seperti Jualan atau Khidmat Pelanggan versi 9.0 dan kemudian.
-- Untuk memetakan data Dynamics 365 anda ke profil pelanggan cerapan khalayak, data perlu berada [diinges daripada aplikasi Dynamics 365 menggunakan penyambung Microsoft Dataverse](connect-power-query.md).
+- Untuk data Dynamics 365 anda memetakan profil pelanggan wawasan khalayak, kami mengesyorkan agar data [tersebut ditaas daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), anda perlu memastikan `contactid` medan `accountid` (atau) ditetapkan sebagai kunci utama untuk sumber data tersebut dalam langkah peta proses penyatuan [data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Semua pengguna Dynamics 365 bagi Kad Pelanggan Tambahan mesti [ditambah sebagai pengguna](permissions.md) dalam wawasan khalayak untuk melihat data.
 - [Keupayaan carian dan penapis yang dikonfigurasi](search-filter-index.md) dalam wawasan khalayak diperlukan bagi mencari data untuk berfungsi.
 - Setiap kawalan tambahan bergantung pada data tertentu dalam cerapan khalayak. Sesetengah data dan kawalan hanya tersedia dalam persekitaran jenis tertentu. Konfigurasi tambahan akan memberitahu anda jika kawalan tidak tersedia disebabkan oleh jenis persekitaran yang dipilih. Ketahui lebih lanjut tentang [kes penggunaan persekitaran](work-with-business-accounts.md).
   - **Kawalan ukuran** : memerlukan [ukuran dikonfigurasikan](measures.md) bagi jenis atribut pelanggan.
-  - **Kawalan perisikan** : Memerlukan data yang dijana menggunakan ramalan atau model [tersuai](predictions-overview.md).
+  - **Kawalan perisikan** : Memerlukan data yang dihasilkan menggunakan ramalan atau model [tersuai](predictions-overview.md).
   - **Kawalan butiran pelanggan** : Semua medan daripada profil tersedia dalam profil pelanggan disatukan.
   - **Kawalan pengayaan**: Memerlukan aktif [penggayaan](enrichment-hub.md) digunakan ke profil pelanggan. Tambahan kad menyokong pengayaan ini: Jenama yang [disediakan](enrichment-microsoft.md) oleh Microsoft, Minat yang disediakan oleh [Microsoft dan data penglibatan Office yang disediakan oleh](enrichment-microsoft.md)[Microsoft](enrichment-office.md).
   - **Kawalan kenalan** : Memerlukan definisi entiti semantik bagi jenis kenalan.
