@@ -1,7 +1,7 @@
 ---
 title: Gabung entiti dalam penyatuan data
 description: Gabung entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732783"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Gabungkan entiti
 
 Fasa gabung ialah fasa terakhir dalam proses penyatuan data. Tujuannya ialah untuk menyesuaikan data berkonflik. Contoh data berkonflik termasuk nama pelanggan yang ditemui dalam dua set data anda tetapi menunjukkan sedikit berbeza dalam setiap ("Grant Marshall" berbanding "Grant Marshal") atau nombor telefon yang berbeza dalam format (617-803-091X berbanding 617803091X). Menggabungkan titik data berkonflik itu dilakukan secara atribut dengan atribut.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Halaman gabung dalam proses penyatuan data menunjukkan jadual dengan medan digabungkan yang mentakrifkan profil pelanggan disatukan.":::
 
-Selepas menyelesaikan [fasa padan](match-entities.md), anda boleh memulakan fasa gabung dengan memilih jubin [Gabung](match-entities.md) pada halaman [Satukan](match-entities.md).
+Selepas menyelesaikan [fasa padan](match-entities.md), anda boleh memulakan fasa gabung dengan memilih jubin **Gabung** pada halaman **Satukan**.
 
 ## <a name="review-system-recommendations"></a>Semak semula pengesyoran sistem
 
@@ -99,11 +94,13 @@ Pada halaman **Gabung**, pilih **Medan yang dikecualikan** untuk melihat senarai
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
 
-## <a name="manually-combine-fields"></a>Gabungkan medan secara manual
+## <a name="combine-fields-manually"></a>Gabungkan medan secara manual
 
-Tentukan atribut yang digabungkan secara manual. 
+Tentukan atribut yang digabungkan secara manual.
 
-1. Pada halaman **Gabung**, pilih **Gabungkan medan**.
+1. **Pada halaman Cantum**, pilih **Gabungkan**.
+
+1. Pilih opsyen **Medan**.
 
 1. Tentukan dasar pemenang gabungan dalam **Satukan medan mengikut** menu juntai bawah.
 
@@ -114,6 +111,26 @@ Tentukan atribut yang digabungkan secara manual.
 1. Pilih **Selesai** untuk menggunakan perubahan tersebut.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
+## <a name="combine-a-group-of-fields"></a>Gabungkan kumpulan medan
+
+Anggap sekumpulan medan sebagai satu unit. Contohnya, apabila rekod kami mengandungi medan Alamat1, Address2, Bandar, Negeri dan Zip. Kami mungkin tidak mahu bergabung dalam Alamat2 rekod yang berbeza, memikirkan ia akan menjadikan data kami lebih lengkap
+
+1. **Pada halaman Cantum**, pilih **Gabungkan**.
+
+1. **Pilih opsyen Kumpulan medan**.
+
+1. Tentukan dasar pemenang gabungan dalam **kumpulan Kedudukan dengan** juntai bawah.
+
+1. Pilih **Tambah** dan pilih jika anda mahu menambah lebih banyak medan atau kumpulan tambahan pada medan.
+
+1. **Sediakan Nama** dan **nama** Output untuk setiap medan gabungan.
+
+1. **Menyediakan Nama** untuk kumpulan medan. 
+
+1. Pilih **Selesai** untuk menggunakan perubahan tersebut.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
 ## <a name="change-the-order-of-fields"></a>Ubah pesanan pilihan
 

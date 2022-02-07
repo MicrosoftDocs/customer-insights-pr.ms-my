@@ -9,16 +9,11 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
-ms.contentlocale: ms-MY
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892395"
 ---
+
 # <a name="manage-environments"></a>Urus persekitaran
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Tukar persekitaran
 
@@ -47,7 +42,7 @@ Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insi
 Untuk menggunakan [model ramalan di luar kotak](predictions-overview.md#out-of-box-models), konfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan penginjesan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang mentadbir organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan danau data terurus Dataverse.
 
 > [!IMPORTANT]
-> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk mendayakan perkongsian data.
+> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk membolehkan perkongsian data.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
 

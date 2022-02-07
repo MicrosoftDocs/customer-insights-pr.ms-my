@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: MT
-ms.contentlocale: ms-MY
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977840"
 ---
+
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Keupayaan wawasan khalayak dalam Dynamics 365 Customer Insights bersambung ke data daripada set sumber yang luas. Menyambung kepada sumber data sering dirujukkan sebagai proses *menelan data*. Selepas menelan data, anda boleh [menyatukan](data-unification.md) dan mengambil tindakan ke atasnya.
 
@@ -33,13 +28,13 @@ Anda boleh menambah sumber data berikut:
 - [Microsoft Dataverse Lake](connect-dataverse-managed-lake.md)
 
 > [!NOTE]
-> Jika anda menggunakan versi percubaan, bahagian kaedah import termasuk **pilihan pustaka data Wawasan** Pelanggan. Pilih opsyen ini untuk memilih set data sampel yang tersedia untuk pelbagai industri. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights percubaan](../trial-signup.md).
+> Jika anda menggunakan versi percubaan, bahagian kaedah import termasuk **pilihan pustaka** data Wawasan Pelanggan. Pilih opsyen ini untuk memilih set data sampel yang tersedia untuk pelbagai industri. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights percubaan](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Tambah data daripada sumber data di premis
 
-Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Anda boleh mendayakan Aliran Data dalam Wawasan Pelanggan [dengan menyediakan URL persekitaran semasa menyediakan Microsoft Dataverse](create-environment.md) persekitaran.
+Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Anda boleh mendayakan Aliran Data dalam Wawasan [Pelanggan dengan Microsoft Dataverse menyediakan URL](create-environment.md) persekitaran semasa menyediakan persekitaran.
 
-Sumber data yang dicipta selepas mengaitkan Dataverse persekitaran dengan Wawasan Pelanggan menggunakan aliran data secara [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Anda boleh mengalih keluar dan mencipta semula sumber data yang wujud sebelum Dataverse persekitaran dikaitkan [menggunakan di premis get laluan data](/data-integration/gateway/service-gateway-app).
+Sumber data yang dicipta selepas mengaitkan Dataverse persekitaran dengan Wawasan Pelanggan menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Anda boleh mengalih keluar dan mencipta semula sumber data yang Dataverse wujud sebelum persekitaran dikaitkan [menggunakan di premis get laluan](/data-integration/gateway/service-gateway-app) data.
 
 Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan kelihatan dan anda boleh menggunakan semula dalam Customer Insights. Halaman sumber data menunjukkan pautan untuk pergi ke persekitaran Microsoft Power Platform yang anda boleh melihat dan mengkonfigurasikan get laluan data di premis.
 

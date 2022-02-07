@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: ms-MY
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945438"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dynamics 365. Dengan Tambahan Kad Pelanggan yang dipasang dalam aplikasi Dynamics 365 yang disokong, anda boleh memilih untuk memaparkan medan profil, cerapan dan garis masa aktiviti pelanggan. Tambahan akan mendapatkan data daripada Customer Insights tanpa mempengaruhi data dalam aplikasi Dynamics 365 yang disambung.
 
@@ -27,14 +22,14 @@ Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dyna
 ## <a name="prerequisites"></a>Prasyarat
 
 - Tambahan hanya berfungsi dengan aplikasi berpandukan model Dynamics 365 seperti Jualan atau Khidmat Pelanggan versi 9.0 dan kemudian.
-- Untuk data Dynamics 365 anda memetakan profil pelanggan wawasan khalayak, kami mengesyorkan agar data [tersebut ditaas daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), anda perlu memastikan `contactid` medan `accountid` (atau) ditetapkan sebagai kunci utama untuk sumber data tersebut dalam langkah peta proses penyatuan [data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Untuk data Dynamics 365 anda di peta ke profil pelanggan wawasan khalayak, kami mengesyorkan ia [ditelan daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), anda perlu memastikan `contactid` medan (atau `accountid`) ditetapkan sebagai [kunci utama untuk sumber data dalam langkah peta proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Semua pengguna Dynamics 365 bagi Kad Pelanggan Tambahan mesti [ditambah sebagai pengguna](permissions.md) dalam wawasan khalayak untuk melihat data.
 - [Keupayaan carian dan penapis yang dikonfigurasi](search-filter-index.md) dalam wawasan khalayak diperlukan bagi mencari data untuk berfungsi.
 - Setiap kawalan tambahan bergantung pada data tertentu dalam cerapan khalayak. Sesetengah data dan kawalan hanya tersedia dalam persekitaran jenis tertentu. Konfigurasi tambahan akan memberitahu anda jika kawalan tidak tersedia disebabkan oleh jenis persekitaran yang dipilih. Ketahui lebih lanjut tentang [kes penggunaan persekitaran](work-with-business-accounts.md).
   - **Kawalan ukuran** : memerlukan [ukuran dikonfigurasikan](measures.md) bagi jenis atribut pelanggan.
-  - **Kawalan perisikan** : Memerlukan data yang dihasilkan menggunakan ramalan atau model [tersuai](predictions-overview.md).
+  - **Kawalan kecerdasan**: Memerlukan data yang dijana menggunakan [ramalan atau model](predictions-overview.md) tersuai.
   - **Kawalan butiran pelanggan** : Semua medan daripada profil tersedia dalam profil pelanggan disatukan.
-  - **Kawalan pengayaan**: Memerlukan aktif [penggayaan](enrichment-hub.md) digunakan ke profil pelanggan. Tambahan kad menyokong pengayaan ini: Jenama yang [disediakan](enrichment-microsoft.md) oleh Microsoft, Minat yang disediakan oleh [Microsoft dan data penglibatan Office yang disediakan oleh](enrichment-microsoft.md)[Microsoft](enrichment-office.md).
+  - **Kawalan pengayaan**: Memerlukan aktif [penggayaan](enrichment-hub.md) digunakan ke profil pelanggan. Tambahan kad menyokong pengayaan ini: [Jenama](enrichment-microsoft.md) yang disediakan oleh Microsoft, [Minat yang](enrichment-microsoft.md) disediakan oleh Microsoft dan [data](enrichment-office.md) penglibatan Office yang disediakan oleh Microsoft.
   - **Kawalan kenalan** : Memerlukan definisi entiti semantik bagi jenis kenalan.
   - **Kawalan garis masa**: Memerlukan [aktiviti yang dikonfigurasikan](activities.md).
 

@@ -9,16 +9,11 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
-ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
-ms.translationtype: MT
-ms.contentlocale: ms-MY
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "7975135"
 ---
+
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Gunakan segmen dalam Dynamics 365 Marketing (pratonton)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Gunakan [segmen](segments.md) untuk menjana kumpulan tertentu kempen dan kenalan pelanggan dengan Dynamics 365 Marketing. Untuk maklumat lanjut, lihat [Gunakan segmen daripada Dynamics 365 Customer Insights dengan Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 
@@ -45,7 +40,7 @@ Jika anda menggunakan keupayaan baharu Dynamics 365 Marketing untuk orkestrasi p
 
 1. Dalam bahagian **Akaun pentadbir pelayan**, pilih **Daftar masuk** dan pilih akaun Dynamics 365 Marketing.
 
-1. Petakan medan ID Kenalan dalam entiti Pelanggan kepada ID Kenalan Dynamics 365.
+1. Petakan medan ID Kenalan dalam entiti Pelanggan ke ID Kenalan Dynamics 365.
 
 1. Pilih **Simpan** untuk melengkapkan sambungan. 
 
