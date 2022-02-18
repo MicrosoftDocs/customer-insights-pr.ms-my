@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892349"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088124"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Cipta persekitaran dalam cerapan khalayak
 
@@ -28,7 +28,7 @@ Organisasi boleh mencipta *dua* persekitaran untuk setiap lesen Customer Insight
 
 ## <a name="create-a-new-environment"></a>Cipta persekitaran baharu
 
-Selepas membeli lesen langganan untuk Customer Insights, pentadbir global penyewa Microsoft 365 menerima e-mel yang menjemput mereka untuk mencipta persekitaran. Pergi ke [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk bermula. 
+Selepas membeli lesen langganan untuk Wawasan Pelanggan, pentadbir Microsoft 365 global penyewa menerima e-mel yang menjemput mereka untuk mencipta persekitaran. Pergi ke [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk bermula. 
 
 Pengalaman dipandu membantu anda melalui langkah untuk mengumpulkan semua maklumat yang diperlukan untuk persekitaran baharu. Anda memerlukan [keizinan pentadbir](permissions.md) dalam cerapan khalayak untuk mencipta atau mengurus persekitaran.
 
@@ -64,7 +64,7 @@ Dengan menyimpan data kepada Azure Data Lake Storage, anda bersetuju bahawa data
 > Customer Insights sedang menyokong yang berikut:
 > - Entiti yang diinjes daripada aliran data Power BI yang disimpan dalam Data Lake terurus Microsoft Dataverse.  
 > - Azure Data Lake Storage akaun daripada rantau Azure yang sama yang anda pilih semasa mencipta persekitaran.
-> - Azure Data Lake Storage akaun yang mempunyai *ruang nama berhierarki* didayakan.
+> - Azure Data Lake Storage akaun yang Gen2 dan mempunyai *ruang* nama hierarki didayakan. Akaun storan Azure Data Lake Gen1 tidak disokong.
 
 Untuk pilihan Azure Data Lake Storage, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk mendapatkan maklumat lanjut, lihat [Sambung ke akaun Azure Data Lake Storage dengan menggunakan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Bekas** akan menjadi `customerinsights` dan tidak boleh ditukar.
 
@@ -79,7 +79,7 @@ Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insi
 Untuk menggunakan [model ramalan di luar kotak](predictions-overview.md#out-of-box-models), konfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan penginjesan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang mentadbir organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan danau data terurus Dataverse.
 
 > [!IMPORTANT]
-> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk mendayakan perkongsian data.
+> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk membolehkan perkongsian data.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
 

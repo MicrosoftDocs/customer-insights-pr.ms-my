@@ -3,18 +3,18 @@ title: Soalan Lazim Percubaan - Dynamics 365 Customer Insights
 description: Penyelesaian untuk soalan lazim yang berkaitan dengan persediaan dan pengurusan percubaan Customer Insights. Ketahui cara menyelesaikan isu platform dan isu khusus aplikasi.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642894"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115979"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Soalan Lazim percubaan Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "7642894"
 
 Aplikasi ini adalah perkhidmatan berasaskan awan yang tidak memerlukan perisian khas selain daripada pelayar web yang terkini, walaupun beberapa sekatan dikenakan. Bagi pengalaman percubaan terbaik, elakkan mengakses tapak percubaan dalam mod inkognito dan pilih lokasi percubaan yang paling hampir dengan anda. [Ketahui lebih lanjut tentang keperluan aplikasi web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Bagaimanakah saya mendaftar percubaan tanpa penyewa Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Bagaimanakah saya boleh mendaftar untuk percubaan tanpa Microsoft 365 penyewa?
 
 Anda boleh memasukkan alamat e-mel bukan kerja dan kami akan mencipta akaun dan penyewa untuk anda.
 
@@ -43,7 +43,7 @@ Apabila anda mendaftar untuk percubaan, anda akan menerima e-mel dengan butiran 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Bagaimanakah saya menambahkan lebih ramai pengguna ke percubaan?
 
-Untuk menambahkan pengguna, pergi ke [Pusat tadbir Microsoft 365](https://admin.microsoft.com) menggunakan akaun pentadbir percubaan. Ikuti [panduan pusat tadbir](/microsoft-365/admin/add-users/add-users) untuk menambahkan pengguna sehingga had lesen percubaan. Jika pengguna yang anda tambahkan sudah mempunyai akaun Microsoft 365, tugaskan mereka peranan keselamatan yang sesuai dalam organisasi percubaan. Untuk maklumat lebih lanjut, lihat [Tugaskan peranan keselamatan kepada pengguna](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Untuk menambah pengguna, pergi ke [Microsoft 365 pusat](https://admin.microsoft.com) pentadbiran menggunakan akaun pentadbir percubaan. Ikuti [panduan pusat tadbir](/microsoft-365/admin/add-users/add-users) untuk menambahkan pengguna sehingga had lesen percubaan. Jika pengguna yang anda tambah sudah mempunyai Microsoft 365 akaun, berikan mereka peranan keselamatan yang sesuai dalam organisasi percubaan. Untuk maklumat lanjut, lihat [Memperuntukkan peranan keselamatan kepada pengguna](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Berapa ramai pengguna yang boleh saya tambahkan pada persekitaran percubaan saya?
 
@@ -63,7 +63,7 @@ Anda boleh melanjutkan percubaan dalam aplikasi secara langsung. Anda boleh mela
 
 Secara amnya, kami mengesyorkan anda memulakan dengan segar dengan data anda sendiri apabila menaik taraf kepada versi berbayar Customer Insights. 
 
-Secara pilihan, jika anda hanya menggunakan cerapan khalayak, anda boleh menyalin data anda daripada persekitaran percubaan jika anda membeli Customer Insight. Anda mestilah seorang pentadbir percubaan Customer Insights dan pentadbir global penyewa Microsoft 365 anda atau pentadbir Dynamics 365 dalam organisasi anda untuk memindahkan tetapan daripada persekitaran percubaan kepada persekitaran berbayar. 
+Secara pilihan, jika anda hanya menggunakan cerapan khalayak, anda boleh menyalin data anda daripada persekitaran percubaan jika anda membeli Customer Insight. Anda mesti menjadi pentadbir percubaan Wawasan Pelanggan dan pentadbir global penyewa anda Microsoft 365 atau pentadbir Dynamics 365 dalam organisasi anda untuk memindahkan tetapan daripada persekitaran percubaan ke persekitaran berbayar. 
 
 Selepas mendaftar masuk kepada tika berbayar Customer Insights anda buat kali pertama, anda diminta untuk mencipta persekitaran baru. Dalam proses ini, anda boleh memilih untuk menyalin konfigurasi daripada persekitaran sedia ada dan memindahkan kebanyakan tetapan. Jika anda mempunyai keizinan yang disebut di atas, persekitaran percubaan akan ditunjukkan dalam senarai ini. Untuk maklumat lanjut, lihat [Salin konfigurasi persekitaran](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ Selepas anda daftar masuk untuk percubaan, anda akan tiba pada skrin utama aplik
 
 Kebanyakan ciri keupayaan Customer Insights tersedia dalam percubaan.
 
-Ciri berikut tidak tersedia: 
+Ciri berikut tidak **tersedia**: 
 - Anda tidak boleh mencipta persekitaran baharu yang menggunakan akaun Azure Data Lake Storage anda sendiri.
+- Anda tidak boleh memadamkan persekitaran percubaan. 
 
 ### <a name="how-long-does-the-trial-last"></a>Berapa lamakah tempoh percubaan?
 

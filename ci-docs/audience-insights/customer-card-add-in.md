@@ -1,7 +1,7 @@
 ---
 title: Tambahan Kad Pelanggan untuk aplikasi Dynamics 365 (mengandungi video)
 description: Tunjukkan data daripada wawasan khalayak dalam aplikasi Dynamics 365 dengan tambahan ini.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: ms-MY
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085259"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
 
 
@@ -113,5 +118,26 @@ Tambahan Kad Pelanggan tidak naik taraf secara automatik. Untuk menaik taraf kep
 
 1. Selepas memulakan proses naik taraf, anda akan melihat penunjuk memuat sehingga naik taraf selesai. Jika tiada versi lebih baharu, naik taraf itu akan menunjukkan mesej ralat.
 
+## <a name="troubleshooting"></a>Pencarisilapan
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kawalan daripada Tambahan Kad Pelanggan tidak menemui data
+
+**Masalah:**
+
+Walaupun dengan medan ID yang dikonfigurasi dengan betul, kawalan tidak dapat mencari data untuk mana-mana pelanggan.  
+
+**Penyelesaian:**
+
+1. Pastikan anda mengkonfigurasikan Tambahan Kad mengikut arahan: [Konfigurasikan Tambahan Kad Pelanggan](#configure-the-customer-card-add-in) 
+
+1. Semak semula konfigurasi pengingesan data. Edit sumber data untuk sistem Dynamics 365 yang mengandungi GUID ID kenalan. Jika GUID ID kenalan ditunjukkan dengan aksara huruf besar dalam Power Query editor, cuba yang berikut: 
+    1. Edit sumber data untuk membuka sumber data dalam Power Query Editor.
+    1. Pilih lajur ID kenalan.
+    1. Pilih **Ubah** dalam bar pengepala untuk melihat tindakan yang tersedia.
+    1. Pilih **huruf kecil**. Sahkan jika GUID dalam jadual kini huruf kecil.
+    1. Simpan sumber data.
+    1. Jalankan pengambilan data, penyatuan dan proses hiliran untuk menyebarkan perubahan pada GUID. 
+
+Selepas melengkapkan segar semula penuh, kawalan Tambahan Kad Pelanggan harus menunjukkan data yang dijangkakan. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

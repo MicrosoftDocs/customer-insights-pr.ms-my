@@ -1,7 +1,7 @@
 ---
 title: Padan entiti untuk penyatuan data
 description: Padan entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: ms-MY
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098846"
 ---
-
 # <a name="match-entities"></a>Padankan entiti
 
 Peringkat pemadanan menentukan bagaimana untuk menggabungkan set data anda kepada set data profil pelanggan disatukan. siSelepas melengkapkan [langkah peta](map-entities.md) dalam proses penyatuan data, anda bersedia untuk memadankan entiti anda. Peringkat pemadanan memerlukan sekurang-kurangnya dua entiti dipetakan.
@@ -24,13 +29,7 @@ Halaman padanan terdiri daripada tiga bahagian:
 
 ## <a name="specify-the-match-order"></a>Tentukan pesanan padanan
 
-Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Tetapkan pesanan** untuk memulakan fasa perlawanan.
-
-Setiap padanan menyatukan dua atau lebih entiti ke dalam satu entiti yang disatukan. Pada masa yang sama, ia menyimpan rekod pelanggan yang unik. Contohnya, kami memilih dua entiti: **eCommerce:eCommerceContacts** sebagai entiti utama dan **LoyaltyScheme:loyCustomers** sebagai entiti kedua. Urutan entiti menentukan urutan sistem yang akan cuba disepadankan dengan rekod.
-
-:::image type="content" source="media/match-page.png" alt-text="Petikan skrin halaman Padanan dalam kawasan Satukan proses penyatuan data.":::
-  
-Entiti utama *eCommerce:eCommerceContacts* dipadankan dengan entiti seterusnya *LoyaltyScheme:loyCustomers*. Set data yang terhasil daripada langkah padanan pertama dipadankan dengan entiti berikut jika anda mempunyai lebih daripada dua entiti.
+Setiap padanan menyatukan dua atau lebih entiti ke dalam satu entiti yang disatukan. Pada masa yang sama, ia menyimpan rekod pelanggan yang unik. Perintah padanan menunjukkan tertib di mana sistem cuba memadankan rekod.
 
 > [!IMPORTANT]
 > Entiti yang anda pilih sebagai entiti utama anda akan bertindak sebagai asas bagi set data profil anda yang disatukan. Entiti tambahan yang dipilih semasa peringkat pemadanan akan ditambah ke entiti ini. Ini tidak bermakna entiti bersatu akan menyertakan *semua* data yang disertakan dalam entiti ini.
@@ -40,7 +39,16 @@ Entiti utama *eCommerce:eCommerceContacts* dipadankan dengan entiti seterusnya *
 > - Pilih entiti dengan data profil yang paling lengkap dan boleh dipercayai tentang pelanggan anda sebagai entiti utama.
 > - Pilih entiti yang mempunyai beberapa atribut yang sama dengan entiti lain (contohnya, nama, nombor telefon atau alamat e-mel) sebagai entiti utama.
 
-Selepas menentukan urutan padanan, anda akan melihat pasangan padanan yang ditakrifkan dalam bahagian **Butiran rekod yang dipadankan** pada **Data** > **Satukan** > **Padanan**. Metrik utama akan kosong sehingga proses padanan selesai.
+1. Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Tetapkan pesanan** untuk memulakan fasa perlawanan.
+1. Pilih **Tertib entiti**. Sebagai contoh, pilih **eCommerce:eCommerceContacts** sebagai entiti utama dan **LoyaltyScheme:loyCustomers** sebagai entiti kedua. 
+1. Untuk mempunyai setiap rekod dalam entiti sebagai pelanggan unik dan dipadankan dengan setiap entiti berikut, pilih **Sertakan semua**.
+1. Pilih **Selesai**. 
+
+Selepas menentukan tertib padanan, pasangan padanan yang ditakrifkan dipaparkan dalam bahagian Butiran rekod padanan pada **DataUnifyMatch** **·** > **.** > **·** Metrik utama kosong sehingga proses padanan selesai.
+
+:::image type="content" source="media/match-page.png" alt-text="Petikan skrin halaman Padanan dalam kawasan Satukan proses penyatuan data.":::
+  
+Entiti utama *eCommerce:eCommerceContacts* dipadankan dengan entiti seterusnya *LoyaltyScheme:loyCustomers*. Set data yang terhasil daripada langkah padanan pertama dipadankan dengan entiti berikut jika anda mempunyai lebih daripada dua entiti.
 
 ## <a name="define-rules-for-match-pairs"></a>Tentukan peraturan untuk pasangan padanan
 
@@ -50,7 +58,7 @@ Amaran **Peraturan keperluan** bersebelahan dengan nama entiti mencadangkan baha
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Petikan skrin bahagian Butiran rekod yang dipadankan dengan kawalan untuk menambah peraturan yang diserlahkan.":::
 
-1. Pilih **Tambah peraturan** di bawah entiti dalam bahagian **Butiran rekod yang dipadankan** untuk mentakrifkan peraturan padanan.
+1. Pilih **Tambah peraturan** di bawah entiti dalam **bahagian Butiran rekod yang dipadankan** untuk mentakrifkan peraturan padanan.
 
 1. Dalam anak tetingkap **Cipta peraturan**, konfigurasikan syarat untuk peraturan.
 
@@ -61,15 +69,15 @@ Amaran **Peraturan keperluan** bersebelahan dengan nama entiti mencadangkan baha
    - **Entiti/Medan (baris kedua)** : Pilih atribut yang berkaitan dengan atribut entiti yang dinyatakan dalam baris pertama.
 
    - **Normalkan**: Pilih daripada pilihan normalisasi berikut untuk atribut yang dipilih. 
-     - Ruang kosong: Alih keluar semua ruang. *Hello World* menjadi *HelloWorld*.
+     - Angka: Tukar sistem angka lain, seperti angka Rom, kepada angka Arab. *VIII* menjadi *8*.
      - Simbol: Alih keluar semua simbol dan aksara khas. *Head&Shoulder* menjadi *HeadShoulder*.
      - Teks kepada huruf kecil: Tukar semua aksara kepada huruf kecil. *SEMUA HURUF BESAR dan Huruf Besar Kecil* menjadi *semua huruf besar dan huruf besar kecil*.
+     - Taip (Telefon, Nama, Alamat, Organisasi): Standardkan nama, tajuk, nombor telefon, alamat, dll. 
      - Unikod kepada ASCII: Tukar notasi unikod kepada aksara ASCII. */u00B2* menjadi *2*.
-     - Angka: Tukar sistem angka lain, seperti angka Rom, kepada angka Arab. *VIII* menjadi *8*.
-     - Jenis semantik: Seragamkan nama, tajuk, nombor telefon, alamat, dll. 
+     - Ruang kosong: Alih keluar semua ruang. *Hello World* menjadi *HelloWorld*.
 
    - **Ketepatan**: Tetapkan tahap ketepatan untuk digunakan bagi syarat ini. 
-     - **Asas**: Pilih daripada *Rendah*, *Sederhana*, *Tinggi* dan *Tepat*. Pilih **Tepat** untuk hanya memadankan rekod yang 100 peratus sepadan. Pilih satu daripada tahap lain untuk memadankan rekod yang tidak 100 peratus sama.
+     - **Asas**: Pilih daripada *Rendah*, *Sederhana*, *Tinggi* dan *Tepat*. Pilih **Tepat** untuk hanya sepadan dengan rekod yang sepadan dengan 100 peratus. Pilih satu daripada tahap lain untuk memadankan rekod yang tidak 100 peratus sama.
      - **Tersuai**: Tetapkan peratusan yang perlu dipadankan oleh rekod. Sistem hanya akan sepadan dengan rekod yang melepasi ambang ini.
 
 1. Berikan **Nama** untuk peraturan.
@@ -92,7 +100,7 @@ Untuk memadankan entiti hanya jika atribut memenuhi berbilang syarat, tambah leb
 
 ### <a name="add-rules-to-a-match-pair"></a>Tambah peraturan pada pasangan padanan
 
-Peraturan padanan mewakili set syarat. Untuk memadankan entiti berdasarkan syarat pada berbilang atribut, tambah lebih banyak peraturan
+Peraturan padanan mewakili set syarat. Untuk memadankan entiti mengikut syarat berdasarkan berbilang atribut, tambah lebih banyak peraturan.
 
 1.  Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Tambah peraturan** pada entiti yang anda mahu tambah peraturan.
 
@@ -117,7 +125,7 @@ Anda boleh menyusun semula entiti untuk peraturan padanan untuk mengubah tertib 
 
 Selain daripada [peraturan padanan silang entiti](#define-rules-for-match-pairs), anda juga boleh menentukan peraturan penyahduplikasi. *Penyahduplikasi* ialah satu proses lain semasa memadankan rekod. Ia mengenal pasti rekod duplikasi dan menggabungkan rekod tersebut ke dalam satu rekod. Rekod sumber dikaitkan dengan rekod yang digabungkan dengan ID alternatif.
 
-Rekod yang dinyahduplikasikan akan digunakan dalam proses pemadanan silang entiti. Penyahduplikasi berlaku pada entiti individu dan boleh dikonfigurasikan setiap entiti yang digunakan dalam pasangan padanan.
+Rekod Deduplicated digunakan dalam proses pemadanan merentas entiti. Deduplication berlaku pada entiti individu dan boleh dikonfigurasi untuk setiap entiti yang digunakan dalam pasangan padanan.
 
 Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan yang dikonfigurasikan, peraturan yang ditakrifkan sistem digunakan. Mereka menggabungkan semua rekod ke dalam satu rekod sebelum menghantar data entiti kepada padanan silang entiti untuk prestasi yang dipertingkatkan.
 
@@ -134,7 +142,7 @@ Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan y
       - **Paling terkini**: Mengenal pasti rekod pemenang berdasarkan paling terkini. Memerlukan medan tarikh atau angka untuk mentakrifkan yang terkini.
       - **Kurang terkini**: Mengenal pasti rekod pemenang berdasarkan kurang terkini. Memerlukan medan tarikh atau angka untuk mentakrifkan yang terkini.
 
-   1. Secara pilihan, pilih **Lanjutan** untuk mentakrifkan peraturan deduplication pada atribut individu entiti. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat yang paling lengkap daripada rekod yang berbeza. Kembangkan entiti untuk melihat semua atributnya dan tentukan pilihan untuk digunakan bagi atribut individu. Jika anda memilih pilihan berasaskan recency, anda juga perlu menentukan medan tarikh/masa yang mentakrifkan recency. 
+   1. Secara pilihan, untuk mentakrifkan peraturan deduplication pada atribut individu entiti, pilih **Lanjutan**. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat yang paling lengkap daripada rekod yang berbeza. Kembangkan entiti untuk melihat semua atributnya dan tentukan pilihan untuk digunakan bagi atribut individu. Jika anda memilih pilihan berasaskan recency, anda juga perlu menentukan medan tarikh/masa yang mentakrifkan recency. 
  
       > [!div class="mx-imgBorder"]
       > ![Langkah 1 peraturan nyahduplikasi.](media/match-selfconflation.png "Langkah 1 peraturan nyahpenduaan")

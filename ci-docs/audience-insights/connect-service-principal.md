@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900286"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088158"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Sambung ke akaun Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure
 
-Artikel ini membincangkan cara berhubung Dynamics 365 Customer Insights dengan akaun menggunakan Azure Data Lake Storage prinsipal perkhidmatan Azure dan bukannya kunci akaun storan. 
+Artikel ini membincangkan cara menyambung Dynamics 365 Customer Insights dengan akaun dengan Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure dan bukannya kunci akaun storan. 
 
-Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Anda boleh menggunakan prinsipal perkhidmatan untuk menambah atau mengedit folder Common Data Model dengan selamat [sebagai sumber data atau mencipta atau mengemas kini](connect-common-data-model.md)[persekitaran](create-environment.md).
+Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Anda boleh menggunakan prinsipal perkhidmatan untuk menambah atau mengedit folder Model Data Biasa dengan [selamat sebagai sumber data](connect-common-data-model.md) atau [mencipta atau mengemas kini persekitaran](create-environment.md).
 
 > [!IMPORTANT]
-> - Akaun Data Lake Storage yang akan menggunakan prinsipal perkhidmatan mesti mempunyai [ruang nama berhierarki didayakan](/azure/storage/blobs/data-lake-storage-namespace).
+> - Akaun Storan Tasik Data yang akan menggunakan prinsipal perkhidmatan mestilah Gen2 dan membolehkan [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace). Akaun storan Azure Data Lake Gen1 tidak disokong.
 > - Anda memerlukan keizinan pentadbir untuk langganan Azure anda untuk mencipta prinsipal perkhidmatan.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Cipta prinsipal perkhidmatan Azure untuk Customer Insights
 
-Sebelum mencipta prinsipal perkhidmatan baharu untuk Wawasan Pelanggan, semak sama ada ia sudah wujud dalam organisasi anda.
+Sebelum mencipta prinsipal perkhidmatan baru untuk Wawasan Pelanggan, semak sama ada ia sudah wujud dalam organisasi anda.
 
 ### <a name="look-for-an-existing-service-principal"></a>Cari prinsipal perkhidmatan sedia ada
 

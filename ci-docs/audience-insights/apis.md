@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732275"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100151"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
-Dynamics 365 Customer Insights menyediakan API untuk membina aplikasi anda sendiri berdasarkan data anda dalam Wawasan Pelanggan.
+Dynamics 365 Customer Insights menyediakan API untuk membina aplikasi anda sendiri berdasarkan data anda dalam Customer Insights.
 
 > [!IMPORTANT]
 > Butiran API ini, disenaraikan pada [rujukan API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Ia termasuk maklumat tambahan mengenai operasi, parameter dan respons.
@@ -35,7 +35,7 @@ Artikel ini menerangkan cara mengakses API Customer Insights, mencipta Pendaftar
  
    Mendayakan API mencipta kunci langganan utama dan sekunder untuk tika anda yang akan digunakan dalam permintaan API. Anda boleh menjana semula kunci dengan memilih **Jana semula utama** atau **Jana semula sekunder** pada **Pentadbir** > **Keizinan** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Dayakan API Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Pilih **Terokai API kami** untuk [mencuba API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Artikel ini menerangkan cara mengakses API Customer Insights, mencipta Pendaftar
 
 Respons HTTP tidak lama lagi akan muncul di bawah.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Cara menguji API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Cipta pendaftaran aplikasi baharu dalam portal Azure
 
@@ -65,7 +65,7 @@ Langkah-langkah ini membantu anda bermula dengan menggunakan API Customer Insigh
 
 1. Pada pendaftaran Aplikasi baharu anda, pergi ke **Keizinan API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Cara menetapkan keizinan API dalam pendaftaran Aplikasi.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Pilih **Tambah keizinan** dan pilih **Customer Insights** dalam tetingkap sisi.
 
@@ -77,7 +77,7 @@ Langkah-langkah ini membantu anda bermula dengan menggunakan API Customer Insigh
 
 Anda boleh menggunakan Aplikasi/ID Klien untuk pendaftaran aplikasi ini dengan Pustaka Pengesahan Microsoft (MSAL) untuk mendapatkan token pembawa untuk menghantar dengan permintaan anda kepada API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan pentadbir.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Untuk mendapatkan maklumat lanjut tentang MSAL, lihat [Gambaran Keseluruhan Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Untuk mendapatkan maklumat tentang penggunaan API dalam pustaka klien kami, liha
 
 1. Pilih **Berikan keizinan pentadbir untuk...** untuk melengkapkan pendaftaran aplikasi.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan pentadbir.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Untuk menyimpulkan, kami perlu menambah nama pendaftaran aplikasi sebagai pengguna dalam Customer Insights.  
    
@@ -117,7 +117,7 @@ Bahagian ini membantu anda mula menggunakan pustaka klien yang tersedia untuk Cu
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Ketahui cara bermula menggunakan pustaka klien C# dari NuGet.org. Untuk maklumat lanjut mengenai pakej NuGet, lihat [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Buat masa ini, pakej ini mensasarkan rangka kerja netstandard2.0 dan netcoreapp2.0.
+Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk mendapatkan maklumat lanjut tentang pakej NuGet, lihat [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Buat masa ini, pakej ini mensasarkan rangka kerja netstandard2.0 dan netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Tambah pustaka klien C# untuk projek C#
 
@@ -127,21 +127,21 @@ Ketahui cara bermula menggunakan pustaka klien C# dari NuGet.org. Untuk maklumat
 
 1. Pilih **Pasang** untuk menambah pakej ke projek.
  
-   Sebagai alternatif, jalankan perintah ini dalam **Konsol Pengurus Pakej NuGet** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Secara alternatif, jalankan perintah ini dalam **Konsol Pengurus Pakej NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambah pakej NuGet ke projek Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Gunakan pustaka klien C#
 
 1. Gunakan [Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) untuk memperoleh `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) anda yang sedia ada.
 
-1. Selepas berjaya mengesahkan dan memperoleh token, membina yang baru atau menggunakan yang sedia ada `HttpClient` dengan **set "Kebenaran" DefaultRequestHeaders tambahan** kepada **Bearer "token akses"** dan **Ocp-Apim-Subscription-Key** ditetapkan kepada kunci langganan daripada persekitaran Wawasan Pelanggan anda [**·**](#get-started-trying-the-customer-insights-apis).   
+1. Selepas berjaya mengesahkan dan memperoleh token, bina token baru atau gunakan yang sedia ada `HttpClient` dengan set "Kebenaran"**DefaultRequestHeaders tambahan** kepada **Pembawa "token akses"** dan **set Ocp-Apim-Subscription-Key** kepada [**kunci** langganan daripada persekitaran](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan anda.   
  
    Tetapkan semula pengepala **Pengesahan** apabila sesuai. Contohnya, apabila token tamat tempoh.
 
 1. Hantar `HttpClient` ini ke dalam pembinaan klien `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Sampel httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Buat panggilan dengan klien pada "kaedah lanjutan"—contohnya, `GetAllInstancesAsync`. Jika akses kepada dasar `Microsoft.Rest.HttpOperationResponse` diutamakan, gunakan "kaedah mesej http"—contohnya, `GetAllInstancesWithHttpMessagesAsync`.
 

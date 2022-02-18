@@ -1,7 +1,7 @@
 ---
 title: Ciri baharu dan akan datang
-description: 'Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.'
-ms.date: 01/27/2022
+description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: ms-MY
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088296"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Kemas kini Januari 2022
+
+Kemas kini pada Januari 2022 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisis sentimen maklum balas pelanggan anda
+
+Wawasan Pelanggan menyediakan ciri berkuasa AI baru untuk mensintesis sentimen pelanggan dan mengenal pasti aspek perniagaan tertentu sebagai peluang untuk penambahbaikan yang disasarkan. Dengan menganalisis maklum balas bertulis pelanggan anda, anda boleh mendapatkan pandangan yang tepat pada kos yang rendah. Analisis sentimen yang dikuasakan oleh model Pemprosesan Bahasa Semula Jadi (NLP) yang menjana dua wawasan yang diperolehi untuk setiap ID pelanggan. Skor sentimen (daripada –5 hingga 5) dan senarai aspek perniagaan yang berkenaan. 
+
+Untuk maklumat lanjut, lihat [Menganalisis sentimen dalam maklum balas pelanggan (Pratonton)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Kemas kini Disember 2021
@@ -37,7 +53,7 @@ Untuk maklumat lanjut, lihat [Pemajuan log masuk Dynamics 365 Customer Insights 
 
 Gunakan data daripada Microsoft Office 365 untuk memperkayakan profil akaun pelanggan anda dengan wawasan tentang penglibatan melalui Office 365 apl. Data penglibatan terdiri daripada e-mel dan aktiviti mesyuarat, yang diagregatkan pada peringkat akaun. Sebagai contoh, bilangan e-mel daripada akaun perniagaan atau bilangan mesyuarat dengan akaun. Tiada data tentang pengguna individu dikongsi. Pengayaan ini boleh didapati di kawasan berikut: UK, Eropah, Amerika Utara.
 
-Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data penglibatan (pratonton)](enrichment-office.md)
+Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data penglibatan (Pratonton)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Ciri penyatuan data lanjutan
 

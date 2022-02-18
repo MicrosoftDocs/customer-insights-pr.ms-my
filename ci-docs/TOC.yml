@@ -2,6 +2,22 @@
   href: index.yml
 - name: Ikhtisar produk
   href: overview.md
+- name: Katalog pembelajaran
+  items:
+    - name: Mari Bermula
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Inges data
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Cipta profil pelanggan disatukan
+      href: /learn/modules/unified-customer-profile/
+    - name: Bekerja dengan wawasan khalayak
+      href: /learn/modules/working-with-customer-insights/
+    - name: Memperkayakan data dan buat ramalan
+      href: /learn/modules/enrich-data/
+    - name: Menguruskan sambungan luaran
+      href: /learn/modules/configure-third-party-connections/
+    - name: Mentadbir Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Percubaan percuma
   items:
     - name: ' Mendaftar untuk percubaan percuma'
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: Bekerja dengan akaun perniagaan
       href: audience-insights/work-with-business-accounts.md
-    - name: Belajar modul
-      items:
-        - name: Inges data
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Cipta profil pelanggan disatukan
-          href: /learn/modules/unified-customer-profile/
-        - name: Gunakan sebarang aplikasi
-          href: /learn/modules/working-with-customer-insights/
-        - name: Perkayakan data dan ramalan
-          href: /learn/modules/enrich-data/
     - name: Sumber data
       items:
         - name: Gambaran keseluruhan sumber data
           href: audience-insights/data-sources.md
-        - name: Tambah sumber data melalui Power Query penyambung
+        - name: Menambah sumber data melalui Power Query penyambung
           href: audience-insights/connect-power-query.md
         - name: Tambah folder Common Data Model sebagai sumber data
           href: audience-insights/connect-common-data-model.md
@@ -94,7 +100,7 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Perkayakan dengan Experian
           href: audience-insights/enrichment-experian.md
-        - name: Memperkaya dengan Office 365 data
+        - name: Memperkayakan dengan Office 365 data
           href: audience-insights/enrichment-office.md
         - name: Perkayakan dengan import tersuai SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -164,7 +170,7 @@
               href: audience-insights/export-adroll.md
             - name: Autopilot
               href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
+            - name: Ikon Azure Blob Storage
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
@@ -274,15 +280,15 @@
           href: consent-management/import-consent-data.md
         - name: Tetapkan data persetujuan dan gunakan keutamaan persetujuan
           href: consent-management/set-consent-rules.md
-    - name: Urus data persetujuan
+    - name: Menguruskan data persetujuan
       items:
-        - name: Mendayakan peraturan keizinan dalam cerapan khalayak
+        - name: Mendayakan peraturan persetujuan dalam wawasan khalayak
           href: audience-insights/activate-consent.md
-        - name: Urus peraturan persetujuan lalai dalam segmen wawasan khalayak
+        - name: Urus peraturan persetujuan lalai dalam segmen cerapan khalayak
           href: audience-insights/change-default-consent-rules.md
-    - name: Uruskan seting dan pengguna
+    - name: Urus seting dan pengguna
       items:
-        - name: Konfigur pengesetan sistem
+        - name: Konfigur seting sistem
           href: consent-management/system-settings.md
         - name: Menguruskan pengguna dan keizinan
           href: consent-management/manage-users.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Hak dan permintaan DSR
   href: dsr-rights-requests.md
+- name: Dapatkan sokongan
+  href: /power-platform/admin/get-help-support
