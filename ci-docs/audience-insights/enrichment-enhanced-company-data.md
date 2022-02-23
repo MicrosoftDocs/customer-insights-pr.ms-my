@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: ms-MY
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010940"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil syarikat dengan data syarikat yang dipertingkatkan
 
 Gunakan model Microsoft dan menyusun data syarikat untuk membetulkan, menambah dan menyeragamkan profil syarikat anda. Kami akan menggunakan [format](/common-data-model/schema/core/applicationcommon/account) Model Data Umum untuk ketepatan dan cerapan yang lebih baik.
