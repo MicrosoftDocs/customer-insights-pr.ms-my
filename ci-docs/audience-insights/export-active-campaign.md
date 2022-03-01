@@ -1,7 +1,7 @@
 ---
 title: Eksport Data Customer Insights pada ActiveCampaign
 description: Ketahui cara mengkonfigurasikan sambungan dan mengeksport pada ActiveCampaign.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618164"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314650"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Eksport segmen pada ActiveCampaign (pratonton)
 
@@ -28,9 +28,9 @@ Eksport segmen profil pelanggan disatukan pada ActiveCampaign dan gunakan segmen
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 1 juta profil pelanggan setiap eksport untuk ActiveCampaign dan ia boleh mengambil masa hingga 90 minit untuk melengkapkan.
+- Anda boleh mengeksport hingga 1 juta profil setiap eksport pada ActiveCampaign dan ini boleh mengambil masa hingga 90 minit untuk selesai.
 - Mengeksport pada ActiveCampaign terhad kepada segmen.
-- Bilangan profil pelanggan yang boleh anda eksport kepada ActiveCampaign bergantung pada kontrak anda dengan ActiveCampaign anda.
+- Bilangan profil yang boleh anda eksport pada ActiveCampaign bergantung pada kontrak anda dengan ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Sediakan sambungan kepada ActiveCampaign
 
@@ -64,7 +64,7 @@ Anda boleh mengkonfigurasikan eksport jika anda mempunyai akses ke sambungan jen
 
 1. Masukkan [**ID Senarai ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ini diperlukan untuk mengeksport segmen pada ActiveCampaign. Sebagai pilihan, anda boleh mengeksport Nama pertama, Nama akhir dan Telefon untuk mencipta e-mel yang lebih diperibadikan. Pilih Tambah atribut untuk memetakan medan ini.
+3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ini diperlukan untuk mengeksport segmen pada ActiveCampaign. Sebagai pilihan, anda boleh mengeksport Nama pertama, Nama akhir dan Telefon untuk mencipta e-mel yang lebih diperibadikan. Pilih Tambah atribut untuk memetakan medan ini.
 
 1. Pilih **Simpan**.
 

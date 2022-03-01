@@ -1,24 +1,24 @@
 ---
 title: Pilih sumber data untuk menginges data
 description: Ketahui cara mengimport data daripada pelbagai sumber.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046601"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887905"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Keupayaan wawasan khalayak dalam Dynamics 365 Customer Insights bersambung ke data daripada set sumber yang luas. Menyambung kepada sumber data sering dirujukkan sebagai proses *menelan data*. Selepas menelan data, anda boleh [menyatukan](data-unification.md) dan mengambil tindakan ke atasnya.
 
@@ -26,33 +26,39 @@ Keupayaan wawasan khalayak dalam Dynamics 365 Customer Insights bersambung ke da
 
 Rujuk artikel terperinci tentang cara menambah sumber data, bergantung pada pilihan yang anda pilih.
 
-Anda boleh menambah sumber data berikut:
+Anda boleh menambah sumber data dalam tiga cara utama:
 
-- [Power Query Penyambung](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Microsoft Dataverse Lake](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Jika anda menggunakan versi percubaan, bahagian kaedah import termasuk **pilihan pustaka** data Wawasan Pelanggan. Pilih opsyen ini untuk memilih set data sampel yang tersedia untuk pelbagai industri. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights percubaan](../trial-signup.md).
+- [Melalui berpuluh-puluh penyambung Power Query](connect-power-query.md)
+- [Daripada folder Common Data Model](connect-common-data-model.md)
+- [Daripada lake Common Data Service anda sendiri](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Tambah data daripada sumber data di premis
 
-Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Anda boleh mendayakan Aliran Data dalam Wawasan [Pelanggan dengan Microsoft Dataverse menyediakan URL](create-environment.md) persekitaran semasa menyediakan persekitaran.
+Pengingesan data daripada sumber data di premis dalam Wawasan Khalayak disokong berdasarkan aliran data Power Platform. Aliran data boleh didayakan dalam Customer Insights dengan [menyediakan URL persekitaran Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) semasa menyediakan persekitaran.
 
-Sumber data yang dicipta selepas mengaitkan Dataverse persekitaran dengan Wawasan Pelanggan menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Anda boleh mengalih keluar dan mencipta semula sumber data yang Dataverse wujud sebelum persekitaran dikaitkan [menggunakan di premis get laluan](/data-integration/gateway/service-gateway-app) data.
+Sumber data yang dicipta selepas mengaitkan persekitaran Dataverse dengan Customer Insights akan menggunakan aliran data [Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) secara lalai. Aliran data menyokong kesambungan on-prem menggunakan get laluan data. Alih keluar dan cipta semula sumber data yang wujud sebelum persekitaran Dataverse dikaitkan dengan penggunaan get laluan data di premis.
 
-Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan kelihatan dan anda boleh menggunakan semula dalam Customer Insights. Halaman sumber data menunjukkan pautan untuk pergi ke persekitaran Microsoft Power Platform yang anda boleh melihat dan mengkonfigurasikan get laluan data di premis.
+Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan kelihatan dan anda boleh menggunakan semula dalam Customer Insights. Halaman sumber data menunjukkan pautan untuk pergi ke persekitaran Power Platform di mana anda boleh melihat dan mengkonfigurasikan get laluan data di premis.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Tangkapan skrin halaman sumber data menunjukkan pautan yang menunjuk kepada persekitaran Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Semak data yang ditelan
 
 Anda akan melihat nama setiap sumber data yang ditelan, status dan masa terakhir data disegar semula untuk sumber tersebut. Anda boleh mengisih senarai sumber data mengikut setiap lajur.
 
 > [!div class="mx-imgBorder"]
-> ![Sumber data ditambah.](media/configure-data-datasource-added.png "Sumber Data ditambah")
+> ![Sumber Data ditambah](media/configure-data-datasource-added.png "Sumber Data ditambah")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Status  |Penerangan   |
+|---------|---------|
+|Berjaya   |Sumber data berjaya diinges jika masa disebutkan dalam lajur **Disegar semula**.
+|Belum dimulakan   |Sumber data belum mempunyai data diinges atau masih dalam mod draf.         |
+|Menyegar semula    |Kemasukan data sedang berjalan. Anda boleh membatalkan operasi ini dengan memilih **Hentikan menyegar semula** di dalam lajur **Tindakan**. Hentikan segar semula sumber data akan kembali ke keadaan segar semula terakhir.       |
+|Gagal     |Kemasukan data mempunyai ralat.         |
 
-Memuatkan data boleh mengambil masa. Selepas segar semula berjaya, data yang dimasukkan boleh disemak daripada halaman **Entiti**. Untuk maklumat lanjut, lihat [Entiti](entities.md).
+Pilih nilai dalam lajur **Status** bagi sebarang sumber data untuk menyemak butiran lanjut. Dalam anak tetingkap **Butiran kemajuan**, kembangkan **Sumber data**. Pilih **Lihat butiran** untuk maklumat lanjut tentang status segar semula termasuk butiran ralat dan kemas kini proses hiliran.
+
+Muatan data boleh mengambil masa sedikit. Selepas segar semula berjaya, data yang dimasukkan boleh disemak daripada halaman **Entiti**. Untuk maklumat lanjut, lihat [Entiti](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Menyegar semula sumber data
 
@@ -62,9 +68,9 @@ Pergi ke **Pentadbir** > **Sistem** > [**Jadual**](system.md#schedule-tab) untuk
 
 Untuk menyegar semula sumber data mengikut permintaan, ikuti langkah ini:
 
-1. Dalam cerapan khalayak, pergi ke **Data** > **Sumber data**.
+1. Dalam Insights khalayak, pergi ke **Data** > **Sumber data**
 
-2. Pilih elipsis menegak di sebelah sumber data yang ingin anda segar semula dan pilih **Segar semula** daripada senarai juntai bawah.
+2. Pilih elipsis menegak bersebelahan dengan sumber data yang anda mahu segar semula dan pilih **Segar semula** daripada senarai juntai bawah.
 
 3. Sumber data kini dicetuskan untuk segar semula secara manual. Menyegarkan semula sumber data akan mengemas kini kedua-dua skema entiti dan data untuk semua entiti yang dinyatakan dalam sumber data.
 
@@ -74,7 +80,7 @@ Untuk menyegar semula sumber data mengikut permintaan, ikuti langkah ini:
 
 1. Dalam cerapan khalayak, pergi ke **Data** > **Sumber data**.
 
-2. Pilih elipsis menegak di sebelah sumber data yang ingin anda alih keluar dan pilih **Padam** daripada menu juntai bawah.
+2. Pilih elipsis menegak bersebelahan dengan sumber data yang anda mahu alih keluar dan pilih **Padam** daripada menu juntai bawah.
 
 3. Sahkan pemadaman anda.
 

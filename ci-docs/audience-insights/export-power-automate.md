@@ -1,20 +1,20 @@
 ---
 title: Penyambung Power Automate | Microsoft Docs
-description: Cipta aliran dalam Microsoft Power Automate daripada Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
-ms.reviewer: mhart
+description: Mencipta aliran dalam Microsoft Power Automate daripada Dynamics 365 Customer Insights.
+ms.date: 08/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: 95e0fcbfb43f2b3e7e2d0e8a1690dc7ff5a44433402b7ef3d437710eb0efff15
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035610"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406434"
 ---
 # <a name="power-automate-connector-preview"></a>Penyambung Power Automate (pratonton)
 
@@ -22,35 +22,28 @@ Pencetus peristiwa khusus untuk berlaku secara automatik apabila data anda berub
 
 ## <a name="power-automate-triggers"></a>Power Automate pencetus
 
-Gunakan pencetus untuk mencipta aliran awan dan mengautomasikan tugas berulang, seperti pemberitahuan atau tindakan yang lebih lanjut. 
+Anda boleh menggunakan pelbagai pencetus yang membolehkan anda mencipta aliran untuk mengautomatikkan tugas berulang, seperti pemberitahuan atau tindakan yang lebih lanjut. 
 
 - Pencetus apabila muat semula sumber data gagal. 
 - Pencetus apabila muat semula sumber data berjaya.
 - Pencetus apabila ambang bersilang pada segmen. Pencetus dihadkan untuk melintas di atas ambang.
-- Pencetus apabila ambang bersilang pada ukuran perniagaan. Hanya ukuran perniagaan tanpa dimensi disokong. Pencetus dihadkan untuk melintas di atas ambang.
-- Tercetus apabila segar semula penuh (sumber data, segmen, langkah,...) telah selesai.
+- Pencetus apabila ambang bersilang pada ukuran perniagaan. Pencetus dihadkan melintas di atas ambang.
+- Tercetus apabila segar semula penuh (sumber data, segmen, langkah,...) telah dilengkapkan.
 - Tercetus apabila segar semula proses penyatuan (peta, padan, cantum) selesai.
 
-[Konfigurasikan pencetus anda dalam Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
+[Konfigurasikan pencetus anda dalam Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Power Automate tindakan
+Penyambung Power Automate menyediakan tindakan lain selain pencetus yang tersedia. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-Penyambung Power Automate menyediakan tindakan lain selain pencetus yang tersedia. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
+## <a name="create-a-power-automate-flow-in-audience-insights"></a>Cipta aliran Power Automate dalam Insights khalayak
 
-## <a name="create-a-power-automate-flow"></a>Cipta aliran Power Automate
+1. Dalam Insights khalayak, pergi ke **Pentadbir** > **Sistem**.
 
-1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
+1. Pada halaman **Sistem**, pilih tab **Status**.
 
-1. Pada jubin **Power Automate**, pilih **Sediakan**.
+1. Dalam bahagian **Sumber Data**, pilih **Aliran** dan pilih **Cipta aliran** daripada senarai juntai bawah.
+   > [!div class="mx-imgBorder"]
+   > Penyambung ![Power Automate menunjukan tindakan Mencipta Aliran](media/power-automate-connector-create-flow.png "Penyambung Power Automate menunjukkan tindakan Cipta Aliran")
 
-1. Penyambung Customer Insights (pratonton) dalam Power Automate terbuka. **Log masuk** ke Power Automate.
-
-1. Pilih salah satu pencetus yang ada dan tambahkan lebih banyak langkah ke aliran baharu anda. Untuk maklumat lanjut, lihat [Cipta aliran awan dalam Power Automate](/power-automate/get-started-logic-flow).
-
-Contoh cara menggunakan aliran: 
-- Siarkan mesej ke saluran Microsoft Teams jika segar semula sumber data gagal. 
-- Hantar e-mel kepada pemilik data apabila ambang pada segmen dilanggar.
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+1. Dalam Power Automate, pilih salah satu daripada pencetus yang tersedia untuk mencipta aliran keutamaan anda. Jika anda sedang mencipta aliran pertama anda, anda akan perlu membuat pengesahan dengan penyambung Power Automate terlebih dahulu.

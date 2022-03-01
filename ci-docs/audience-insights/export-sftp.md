@@ -1,5 +1,5 @@
 ---
-title: Eksport data Wawasan Pelanggan ke hos SFTP (mengandungi video)
+title: Eksport data Customer Insights ke hos SFTP
 description: Ketahui cara mengkonfigurasi sambungan dan mengeksport ke lokasi SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,18 +9,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934898"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035472"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Eksport segmen dan data lain ke SFTP (pratonton)
 
 Gunakan data pelanggan anda dalam aplikasi pihak ketiga dengan mengeksportnya ke lokasi Protokol Pemindahan Fail Selamat (SFTP).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
@@ -28,7 +26,6 @@ Gunakan data pelanggan anda dalam aplikasi pihak ketiga dengan mengeksportnya ke
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Destinasi SFTP di belakang tembok api buat masa ini tidak disokong. 
 - Masa jalanan eksport bergantung pada prestasi sistem anda. Kami mengesyorkan dua CPU teras dan 1 Gb memori sebagai konfigurasi minimum pelayan anda. 
 - Mengeksport entiti sehingga 100 juta profil pelanggan boleh mengambil masa 90 minit apabila menggunakan konfigurasi minimum yang disyorkan iaitu dua CPU teras dan 1 Gb memori. 
 

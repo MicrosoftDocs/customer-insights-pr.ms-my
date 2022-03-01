@@ -1,20 +1,20 @@
 ---
 title: Penyambung Power BI
 description: Ketahui cara menggunakan penyambung Dynamics 365 Customer Insights dalam Power BI.
-ms.date: 07/23/2021
-ms.reviewer: mhart
+ms.date: 09/21/2020
+ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: stefanie-msft
-ms.author: sthe
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a0ca431dbea839fe271cf3a512cd3a5dde6d920d396056e91b33bcf7ed84272a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035518"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406439"
 ---
 # <a name="connector-for-power-bi-preview"></a>Penyambung untuk Power BI (pratonton)
 
@@ -23,7 +23,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 ## <a name="prerequisites"></a>Prasyarat
 
 - Anda mempunyai profil pelanggan disatukan.
-- Versi terbaru [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) dipasang pada komputer anda. [Ketahui lebih lanjut tentang Power BI Desktop](/power-bi/desktop-what-is-desktop).
+- Versi terkini [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) dipasang pada komputer anda. [Ketahui lebih lanjut tentang Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfigurasi penyambung untuk Power BI
 
@@ -31,7 +31,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 
 1. Pilih **Lihat lebih** dan cari **Dynamics 365 Customer Insights**
 
-1. Pilih **Connect**.
+1. Pilih hasilnya dan pilih **Sambung**.
 
 1. **Log masuk** dengan akaun organisasi yang sama anda gunakan untuk Customer Insights dan pilih **Sambung**.
    > [!NOTE]
@@ -39,7 +39,7 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 
 1. Dalam kotak dialog **Pengemudi**. anda lihat senarai semua persekitaran yang anda mempunyai akses. Kembangkan persekitaran dan buka sebarang folder (entiti, langkah, segmen, pengayaan). Contoh, buka folder **Entiti** untuk melihat semua entiti yang boleh anda import.
 
-   ![Pengemudi Penyambung Power BI.](media/power-bi-navigator.png "Navigasi Penyambung Power BI")
+   ![Navigasi Penyambung Power BI](media/power-bi-navigator.png "Navigasi Penyambung Power BI")
 
 1. Pilih kotak semak bersebelahan dengan entiti untuk disertakan dan **Dimuatkan**. Anda boleh memilih entiti berbilang daripada persekitaran berbilang.
 
@@ -47,32 +47,8 @@ Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tamba
 
 ## <a name="large-data-sets"></a>Set data yang besar
 
-Penyambung Customer Insights Power BI direka untuk berfungsi bagi data set yang mengandungi hingga 1 juta profil pelanggan. Mengimport set data yang lebih besar mungkin boleh tetapi ianya mengambil masa yang lama. Selain itu, proses mungkin berjalan ke masa keluar kerana had Power BI. Untuk maklumat lanjut, lihat [Power BI: Pengesyoran untuk set data yang lebih besar](/power-bi/admin/service-premium-what-is#large-datasets). 
+Penyambung Customer Insights Power BI direka untuk berfungsi bagi data set yang mengandungi hingga 1 juta profil pelanggan. Mengimport set data yang lebih besar mungkin boleh tetapi ianya mengambil masa yang lama. Selain itu, proses mungkin berjalan ke masa keluar kerana had Power BI. Untuk maklumat lanjut, lihat [Power BI: Pengesyoran untuk set data yang lebih besar](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Bekerja dengan subset data
 
 Pertimbangkan untuk bekerja dengan subset data anda. Sebagai contoh, anda boleh mencipta [segmen](segments.md) daripada mengeksport semua rekod pelanggan ke Power BI.
-
-## <a name="troubleshooting"></a>Pencarisilapan
-
-### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Persekitaran Customer Insights tidak dipaparkan dalam Power BI
-
-Persekitaran yang mempunyai lebih daripada satu [perhubungan](relationships.md) yang ditakrifkan antara dua entiti yang sama dalam wawasan khalayak tidak akan tersedia dalam penyambung Power BI.
-
-Anda boleh mengenal pasti dan mengalih keluar perhubungan pendua.
-
-1. Dalam wawasan khalayak, pergi ke **Data** > **Perhubungan** pada persekitaran yang anda tiada dalam Power BI.
-2. Kenal pasti hubungan pendua:
-   - Semak sama ada terdapat lebih daripada satu perhubungan yang ditakrifkan antara dua entiti yang sama.
-   - Semak sama ada terdapat hubungan yang dicipta antara dua entiti yang kedua-duanya dimasukkan dalam proses penyatuan. Terdapat perhubungan tersirat yang ditakrifkan antara semua entiti yang disertakan dalam proses penyatuan.
-3. Alih keluar sebarang perhubungan pendua yang dikenal pasti.
-
-Selepas penyingkiran perhubungan pendua, cuba konfigurasi penyambung Power BI sekali lagi. Persekitarannya sepatutnya boleh tersedia sekarang.
-
-### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Ralat pada medan tarikh semasa memuatkan entiti dalam Power BI Desktop
-
-Apabila memuatkan entiti yang mengandungi medan dengan format tarikh seperti MM/DD/YYYY, anda boleh menghadapi ralat kerana disebabkan format bahasa yang tidak sepadan. Ketidaksepadanan ini berlaku apabila fail Power BI Desktop anda ditetapkan kepada bahasa lain selain daripada Bahasa Inggeris (Amerika Syarikat), kerana medan tarikh dalam cerapan khalayak disimpan dalam format AS.
-
-Fail Power BI Desktop ini mempunyai tetapan bahasa tunggal, yang digunakan apabila mendapatkan data. Dapatkan medan tarikh ini ditafsirkan dengan betul, tetapkan bahasa fail .BPI kepada Bahasa Inggeris (Amerika Syarikat). [Ketahui cara menukar bahasa fail Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

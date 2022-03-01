@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618716"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304661"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
 
@@ -45,8 +45,6 @@ Untuk mengkonfigurasi import tersuai SFTP, prasyarat berikut mesti dipenuhi:
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Tangkapan skrin semasa memasuki lokasi data.":::
 
-1. Pilih **Seterusnya** dan pilih set data pelanggan. Ini mungkin sama ada semua profil pelanggan atau segmen.
-
 1. Pilih **Seterusnya** dan berikan nama untuk pengayaan dan nama untuk entiti output. 
 
 1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda.
@@ -66,7 +64,7 @@ Anda perlu menjadi pentadbir untuk mengkonfigurasikan sambungan. Pilih **Tambah 
 1. Setelah pengesahan selesai, sambungan boleh disimpan dengan memilih **Simpan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Halaman konfigurasi sambungan Experian.](media/enrichment-SFTP-connection.png "Halaman konfigurasi sambungan Experian")
+   > ![Halaman konfigurasi sambungan Experian](media/enrichment-SFTP-connection.png "Halaman konfigurasi sambungan Experian")
 
 
 ## <a name="defining-field-mappings"></a>Mentakrifkan pemetaan medan 
@@ -125,6 +123,6 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) serta [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

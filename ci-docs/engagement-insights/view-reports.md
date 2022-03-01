@@ -4,17 +4,17 @@ description: Gunakan laporan tersedia untuk melihat aktiviti masa nyata pada tap
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 10/01/2021
+ms.date: 06/18/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582933"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036659"
 ---
 # <a name="view-reports"></a>Lihat laporan
 
@@ -92,18 +92,12 @@ Laporan mudah alih dikumpulkan dalam kategori penggunaan, aplikasi dan pengguna 
 
 - **Lokasi** menunjukkan maklumat tentang pengguna aplikasi mengikut negara, rantau, dan bandar.
 
-## <a name="filter-by-time-or-date-range"></a>Tapis mengikut julat masa atau tarikh
+## <a name="filter-by-time-or-value"></a>Tapis mengikut masa atau nilai
 
-Anda boleh memilih tempoh masa atau julat tarikh dalam laporan web atau mudah alih untuk memfokus pada tempoh nilai atau masa. 
+Anda boleh memilih tempoh masa atau nilai dalam web atau laporan mudah alih untuk memberikan tumpuan kepada nilai atau tempoh masa. 
 
-- Untuk memilih tempoh masa, di sudut atas kanan pandangan laporan, pilih nilai daripada senarai juntai bawah laporan. Anda juga boleh memilih **Julat tarikh tetap**. 
+- Untuk memilih tempoh masa, pilih **Lagi [...]** daripada senarai juntai bawah laporan. Pemilihan julat masa telah dinyahdayakan untuk laporan penggunaan masa nyata; julat masa bagi laporan penggunaan masa nyata ialah "sekarang."
 
-  :::image type="content" source="media/filter-by-time.png" alt-text="Tapis mengikut julat masa atau tarikh.":::   
-
-- Untuk kebanyakan laporan, pilih nilai dalam carta atau senarai untuk menapis laporan.
-
-> [!NOTE]
-> Pemilihan julat masa telah dinyahdayakan untuk laporan penggunaan masa nyata; julat masa bagi laporan penggunaan masa nyata ialah "sekarang."
-
+- Dalam kebanyakan laporan, pilih nilai dalam carta atau senarai untuk menapis laporan untuk nilai yang dipilih.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

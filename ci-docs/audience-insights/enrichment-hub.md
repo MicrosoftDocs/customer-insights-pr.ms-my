@@ -1,7 +1,7 @@
 ---
 title: Perkayakan profil pelanggan disatukan
 description: Gunakan keupayaan untuk memperkayakan data pelanggan anda.
-ms.date: 02/07/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098800"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673010"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -37,17 +37,14 @@ Pada tab **Terokai**, anda akan mencari semua pilihan pengayaan yang disokong.
 - [Demografi](enrichment-experian.md) disediakan oleh Experian
 - [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
-- [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
 - [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Data](enrichment-enhanced-company-data.md) syarikat yang dipertingkatkan yang disediakan oleh Microsoft
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
 - [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
-- [Data penglibatan akaun](enrichment-office.md) yang disediakan oleh Microsoft
 
 ---
 

@@ -1,75 +1,50 @@
 ---
-title: Eksport data Customer Insights ke Storan Blob Azure
-description: Ketahui cara untuk mengkonfigurasikan sambungan dan eksport ke storan Blob.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+title: Eksport data Customer Insights kepada storan Azure Blob
+description: Ketahui bagaimana mengkonfigurasikan sambungan ke storan Blob Azure.
+ms.date: 09/18/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605861"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667150"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Eksport senarai segmen dan data lain ke Storan Blob Azure (pratonton)
+# <a name="connector-for-azure-blob-storage-preview"></a>Penyambung untuk storan Blob Azure (pratonton)
 
-Simpan data Customer Insights anda dalam storan Blob atau gunakannya untuk memindahkan data anda ke aplikasi lain.
+Simpan data Customer Insights anda dalam storan Azure Blob atau gunakannya untuk memindahkan data anda ke aplikasi lain.
 
-## <a name="known-limitations"></a>Had diketahui
+## <a name="configure-the-connector-for-azure-blob-storage"></a>Konfigur penyambung untuk storan Blob Azure
 
-1. Untuk storan Blob Azure anda boleh memilih antara [Prestasi standard dan tingkat prestasi Premium](/azure/storage/blobs/storage-blob-performance-tiers). Jika anda memilih tingkat prestasi Premium, pilih [blob blok premium sebagai jenis akaun](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Sediakan sambungan kepada Storan Blob
+1. Di bawah **Storan Blob Azure**, pilih **Sediakan**.
 
-1. Pergi ke **Pentadbir** > **Sambungan**.
+1. Masukkan **Nama akaun**, **Kekunci akaun**, dan **Bekas** untuk akaun storan Blob Azure anda.
+    - Untuk mengetahui lanjut tentang cara mencari nama akaun dan kunci akaun storan Blob Azure, lihat [Urus tetapan akaun storan dalam portal Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Pilih **Tambah sambungan** dan pilih **Storan Blob Azure** untuk mengkonfigurasikan sambungan.
+1. Berikan destinasi anda nama yang dikenali dalam medan **Nama paparan**.
 
-1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
-
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Masukkan **Nama akaun**, **Kunci akaun** dan **Bekas** untuk akaun Storan Blob anda.
-    - Untuk mengetahui lebih lanjut tentang cara mencari nama akaun dan kekunci akaun Storan Blob, lihat [Urus tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
-    - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-
-1. Pilih **Simpan** untuk melengkapkan sambungan. 
-
-## <a name="configure-an-export"></a>Konfigurasikan eksport
-
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
-
-> [!IMPORTANT]
-> Jika anda menghidupkan tetapan padam lembut untuk akaun Storan Blob Azure, eksport akan gagal. Padamkan padam lembut untuk mengeksport data kepada blob. Untuk maklumat lanjut, lihat [Dayakan padam lembut blob](/azure/storage/blobs/soft-delete-blob-enable.md)
-
-1. Pergi ke **Data** > **Eksport**.
-
-1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
-
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Storan Blob Azure. Jika anda tidak melihat nama bahagian ini, maka tiada sambungan jenis ini tersedia untuk anda.
+1. Pilih **Seterusnya**.
 
 1. Pilih kotak di sebelah setiap entiti yang anda mahu eksport ke destinasi ini.
 
 1. Pilih **Simpan**.
 
-Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
+Data yang dieksport disimpan dalam bekas storan Blob Azure yang anda telah konfigur. Laluan folder berikut dicipta secara automatik dalam bekas anda:
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab).     
-
-Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
-
-Data yang dieksport disimpan dalam bekas Storan Blob yang anda konfigurasikan. Laluan folder berikut dicipta secara automatik dalam bekas anda:
-
-- Untuk entiti sumber dan entiti yang dijana oleh sistem:   
-  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
+- Untuk entiti sumber dan entiti yang dijana oleh sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
-- Model.json untuk entiti yang dieksport akan berada pada peringkat %ExportDestinationName%.  
+- Model.json untuk entiti yang dieksport akan berada pada peringkat %ExportDestinationName%
   - Contoh: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+## <a name="export-the-data"></a>Mengeksport data
+
+Anda boleh [eksport data atas permintaan](/export-destinations.md#export-data-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).

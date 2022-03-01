@@ -9,13 +9,13 @@ metadata:
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 03/02/2022
-  ms.openlocfilehash: d24ed34b794e77a52ceec1a4411440a88430a369
-  ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+  ms.date: 10/16/2020
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: ms-MY
-  ms.lasthandoff: 02/03/2022
-  ms.locfileid: "8088250"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745732"
 landingContent:
 - title: Tentang Insights khalayak
   linkLists:
@@ -25,12 +25,8 @@ landingContent:
       url: overview.md
     - text: Ciri baharu dan dikemas kini
       url: whats-new-audience-insights.md
-    - text: Terokai cerapan khalayak
-      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
-  - linkListType: learn
-    links:
-    - text: Laluan pembelajaran Wawasan Pelanggan
-      url: /learn/paths/build-customer-insights/
+    - text: Tapak komuniti
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
 - title: Satukan data
   linkLists:
   - linkListType: how-to-guide
@@ -41,11 +37,7 @@ landingContent:
       url: data-unification.md
     - text: Memahami entiti
       url: entities.md
-  - linkListType: learn
-    links:
-    - text: Cipta profil bersatu
-      url: /learn/modules/unified-customer-profile/
-- title: Dapatkan wawasan
+- title: Perkayakan dan tapis data
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -53,13 +45,9 @@ landingContent:
       url: enrichment-hub.md
     - text: Konfigurasi perhubungan
       url: relationships.md
-    - text: Data lengkap dengan ramalan
-      url: predictions.md
-  - linkListType: learn
-    links:
-    - text: Memperkaya dan meramalkan data
-      url: /learn/modules/enrich-data/
-- title: Bina pada data anda
+    - text: Senaraikan aktiviti pelanggan
+      url: activities.md
+- title: Dapatkan wawasan
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -67,12 +55,8 @@ landingContent:
       url: segments.md
     - text: Cipta ukuran
       url: measures.md
-    - text: Senaraikan aktiviti pelanggan
-      url: activities.md
-  - linkListType: learn
-    links:
-    - text: Gunakan sebarang aplikasi
-      url: /learn/modules/working-with-customer-insights/
+    - text: Data lengkap dengan ramalan
+      url: predictions.md
 - title: Eksport data pelanggan
   linkLists:
   - linkListType: how-to-guide
@@ -83,10 +67,6 @@ landingContent:
       url: customer-card-add-in.md
     - text: Penyambung Power BI
       url: export-power-bi.md
-  - linkListType: learn
-    links:
-    - text: Menguruskan sambungan luaran
-      url: /learn/modules/configure-third-party-connections/
 - title: Tadbir aplikasi
   linkLists:
   - linkListType: how-to-guide
@@ -97,7 +77,3 @@ landingContent:
       url: permissions.md
     - text: Uruskan berbilang persekitaran
       url: manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Mentadbir Customer Insights
-      url: /learn/modules/administer-customer-data-platform/

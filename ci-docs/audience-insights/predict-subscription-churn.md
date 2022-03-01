@@ -1,5 +1,5 @@
 ---
-title: Langganan churn ramalan (mengandungi video)
+title: Ramalan pulangan langganan
 description: Meramal sama ada pelanggan berada dalam risiko kerana tidak lagi menggunakan produk atau perkhidmatan langganan syarikat anda.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967712"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799739"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Ramalan pulangan langganan (pratonton)
 
@@ -77,7 +77,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 1. Masukkan bilangan **Hari sejak langganan berakhir** yang perniagaan anda pertimbangkan pelanggan akan berada dalam keadaan mempunyai pulangan. Tempoh ini pada lazimnya disukai untuk aktiviti perniagaan seperti tawaran atau usaha pemasaran lain yang cuba mengelakkan kerugian pelanggan.
 1. Masukkan bilangan **Hari yang dijangkakan untuk meramalkan pengeluaran** bagi menetapkan tetingkap untuk ramalan pengeluarannya. Contohnya, untuk meramal risiko pengeluaran untuk pelanggan anda dalam tempoh 90 hari yang akan datang bagi menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih lama atau lebih singkat boleh menjadikannya lebih sukar untuk menangani faktor-faktor dalam profil risiko pulangan, bergantung kepada keperluan perniagaan khusus anda. Pilih **Seterusnya** untuk teruskan
    >[!TIP]
-   > Anda boleh memilih **Simpan draf** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
+   > Anda boleh memilih **Simpan dan tutup** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
 
 ### <a name="add-required-data"></a>Tambah data yang diperlukan
 

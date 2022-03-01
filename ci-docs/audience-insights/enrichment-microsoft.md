@@ -1,7 +1,7 @@
 ---
 title: Perkayakan profil pelanggan dengan data daripada Microsoft
-description: Gunakan data proprietari daripada Microsoft untuk memperkayakan data pelanggan anda dengan pertalian dan perkongsian suara.
-ms.date: 11/11/2021
+description: Gunakan data proprietari daripada Microsoft untuk memperkayakan data pelanggan anda dengan afiniti jenama dan tarikan.
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,29 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7793715"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305167"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Memperkayakan profil pelanggan dengan pertalian dan perkongsian suara (pratonton)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Mengayakan profil pelanggan dengan persamaan jenama dan kepentingan (pratonton)
 
-Gunakan data proprietari Microsoft untuk memperkayakan data pelanggan anda dengan perkaitan jenama, pertalian minat dan perkongsian suara (SoV). Perkaitan dan SoV ini adalah berdasarkan data daripada orang yang mempunyai demografi yang serupa dengan pelanggan anda. Maklumat ini membantu anda untuk lebih memahami dan membahagikan pelanggan anda berdasarkan pertalian atau SoV mereka kepada jenama dan minat tertentu.
+Gunakan data proprietari daripada Microsoft untuk memperkayakan data pelanggan anda dengan afiniti jenama dan tarikan. Afiniti ini adalah berdasarkan data daripada orang yang mempunyai demografi yang serupa dengan pelanggan anda. Maklumat ini membantu anda untuk memahami dengan lebih baik dan membahagikan pelanggan anda berdasarkan afiniti mereka kepada jenama dan kepentingan khusus.
 
 Dalam wawasan khalayak, pergi ke **Data** > **Pengayaan** untuk [mengkonfigurasi dan melihat pengayaan](enrichment-hub.md).
 
-Untuk mengkonfigurasi perkaitan jenama dan pengayaan SoV, pergi ke **tab Discover dan pilih** **Memperkayakan data saya** pada jubin **Jenama**.
+Untuk mengkonfigurasikan pengayaan afiniti jenama pergi ke tab **Temui** dan pilih **Perkayakan data saya** pada jubin **Jenama**.
 
-Untuk mengkonfigurasi pertalian minat dan pengayaan SoV, pergi ke **tab Discover dan pilih** **Memperkayakan data saya** pada jubin **Minat**.
+Untuk mengkonfigurasikan pengayaan afiniti kepentingan, pergi ke tab **Temui** dan pilih **Perkayakan data saya** pada jubin **Kepentingan**.
 
    > [!div class="mx-imgBorder"]
-   > ![Jubin Jenama dan Minat.](media/BrandsInterest-tile-Hub.png "Jubin Jenama dan Minat")
+   > ![Jubin Jenama dan Minat](media/BrandsInterest-tile-Hub.png "Jubin Jenama dan Minat")
 
-## <a name="how-we-determine-affinities-and-sov"></a>Bagaimana kita menentukan pertalian dan SoV
+## <a name="how-we-determine-affinities"></a>Cara kami menentukan afiniti
 
-Kami menggunakan data carian dalam talian Microsoft untuk mencari pertalian dan SoV untuk jenama dan minat merentasi pelbagai segmen demografi (ditakrifkan mengikut umur, jantina atau lokasi). Jumlah carian dalam talian untuk jenama atau minat membentuk asas untuk menentukan pertalian atau SoV. Walau bagaimanapun, masing-masing memberikan perspektif yang berbeza untuk memahami pelanggan anda.
-
-- Pertalian adalah perbandingan merentasi segmen demografi. Anda boleh menggunakan maklumat ini untuk mengenal pasti segmen demografi yang mempunyai pertalian tertinggi untuk jenama atau minat tertentu, berbanding segmen lain.
-
-- Bahagian suara adalah perbandingan merentasi jenama atau minat pilihan anda. Anda boleh menggunakan maklumat ini untuk mengenal pasti jenama atau minat yang mempunyai bahagian suara tertinggi untuk segmen demografi tertentu, berbanding jenama atau minat lain yang anda pilih.
+Kami menggunakan data carian dalam talian Microsoft untuk mencari afiniti untuk jenama dan minat merentasi pelbagai segmen demografik (ditakrifkan mengikut umur, jantina atau lokasi). Jumlah carian dalam talian untuk sesebuah jenama atau faedah menentukan jumlah persamaan bahagian demografi berbanding segmen lain yang mempunyai persamaan jenama atau kepentingan.
 
 ## <a name="affinity-level-and-score"></a>Tahap dan skor perkaitan
 
@@ -52,10 +48,6 @@ Pada setiap profil pelanggan yang diperkaya, kami menyediakan dua nilai yang ber
 |Rendah     | 1-34        |
 
 Bergantung pada butiran yang anda mahu untuk mengukur perkaitan, anda boleh menggunakan sama ada tahap atau skor perkaitan. Skor perkaitan memberikan anda kawalan yang lebih tepat.
-
-## <a name="share-of-voice-sov"></a>Perkongsian suara (SoV)
-
-Kami mengira SoV pada skala 100 mata. Jumlah SoV di semua jenama atau minat untuk setiap profil pelanggan yang diperkaya menambah sehingga 100. Tidak seperti pertalian, SoV relatif terhadap jenama dan minat yang anda pilih. Sebagai contoh, nilai SoV untuk 'Microsoft' boleh berbeza jika jenama yang dipilih adalah ('Microsoft', 'GitHub') berbanding ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Negara/rantau yang disokong
 
@@ -90,7 +82,7 @@ Semak keutamaan pengayaan lalai anda dan kemas kini apabila diperlukan.
 
 ### <a name="select-entity-to-enrich"></a>Pilih entiti untuk memperkaya
 
-Pilih **Entiti Diperkaya** dan pilih set data yang anda ingin memperkaya dengan data daripada Microsoft. Anda boleh memilih entiti Pelanggan untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
+Pilih **Entiti yang diperkaya** dan pilih set data yang anda mahu perkayakan dengan data syarikat daripada Microsoft. Anda boleh memilih entiti Pelanggan untuk memperkayakan semua profil pelanggan anda atau pilih entiti segmen untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut.
 
 ### <a name="map-your-fields"></a>Petakan medan anda
 
@@ -124,25 +116,26 @@ Jalankan pengayaan selepas mengkonfigurasi jenama, kepentingan dan pemetaan meda
 
 Bergantung pada saiz data pelanggan anda, ia mungkin mengambil masa beberapa minit untuk jangka masa pengayaan dilengkapkan.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda akan menemukan maklumat tambahan: masa pemprosesan, tarikh pemprosesan terakhir serta semua ralat dan amaran yang berkaitan dengan tugas.
 
 ## <a name="enrichment-results"></a>Keputusan pengayaan
 
 Selepas menjalankan proses pengayaan, pergi ke **Pengayaan saya** untuk menyemak semula jumlah bilangan pelanggan yang diperkayakan dan pecahan jenama dan kepentingan dalam proses pelanggan yang diperkayakan.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Pratonton hasil selepas menjalankan proses pengayaan.":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Pratonton keputusan selepas menjalankan proses pengayaan":::
 
-Anda akan menemui carta dengan bilangan profil pelanggan diperkaya dari masa ke masa dan pratonton entiti yang diperkaya. Semak semula data yang diperkaya dengan memilih **Lihat lebih banyak lagi dalam carta Aras** **Perkaitan** atau Kongsi **Suara**. Data yang diperkaya untuk jenama pergi ke **jenama BrandAffinityFromMicrosoft** dan **BrandShareOfVoiceFromMicrosoft** entiti. Data untuk kepentingan adalah dalam **entiti InterestAffinityFromMicrosoft** dan **InterestShareOfVoiceFromMicrosoft.** Anda juga akan menemui entiti ini yang disenaraikan dalam kumpulan **Pengayaan** dalam **Entiti** > **Data**.
+Kaji semula data yang diperkaya dengan memilih **Lihat data diperkaya** dalam carta. Data diperkaya untuk jenama pergi kepada entiti **PersamaanJenamaDaripadaMicrosoft**. Data untuk kepentingan adalah dalam entiti **PersamaanKepentinganDaripadaMicrosoft**. Anda juga akan menemui entiti ini yang disenaraikan dalam kumpulan **Pengayaan** dalam **Entiti** > **Data**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Lihat data pengayaan pada kad pelanggan
 
-Jenama dan minat SoV juga boleh dilihat pada kad pelanggan individu. Pergi ke **Pelanggan** dan pilih profil pelanggan. Dalam kad pelanggan, anda akan menemui carta untuk jenama atau minat SoV berdasarkan orang dalam profil demografi pelanggan tersebut.
+Jenama dan afiniti berkepentingan juga boleh dilihat pada kad pelanggan individu. Pergi ke **Pelanggan** dan pilih profil pelanggan. Dalam kad pelanggan, anda akan menemui carta untuk jenama atau kepentingan yang orang dalam profil demografik pelanggan mempunyai afiniti untuknya.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kad pelanggan dengan data diperkaya.":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kad pelanggan dengan data diperkaya":::
 
-## <a name="next-steps"></a>Langkah-langkah berikutnya
+## <a name="next-steps"></a>Langkah seterusnya
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bina di atas data pelanggan anda yang diperkaya. Cipta [Segmen](segments.md) dan [Langkah](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

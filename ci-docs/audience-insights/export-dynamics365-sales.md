@@ -1,48 +1,38 @@
 ---
 title: Eksport data Customer Insights ke Dynamics 365 Sales
-description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Dynamics 365 Sales.
-ms.date: 03/03/2021
-ms.reviewer: mhart
+description: Ketahui bagaimana mengkonfigur sambungan ke Dynamics 365 Sales.
+ms.date: 08/21/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
-ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8090934"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4643829"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Gunakan segmen dalam Dynamics 365 Sales (pratonton)
+# <a name="connector-for-dynamics-365-sales-preview"></a>Penyambung untuk Dynamics 365 Sales (pratonton)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Gunakan data pelanggan anda untuk mencipta senarai pemasaran, menyusuli aliran kerja dan menghantar promosi dengan Dynamics 365 Sales.
 
-## <a name="known-limitations"></a>Had diketahui
+## <a name="prerequisite"></a>Prasyarat
 
-- Eksport ke Dynamics 365 Sales terhad kepada 100'000 ahli bagi setiap segmen.
-- Segmen eksport ke Dynamics 365 Sales boleh mengambil masa sehingga 3 jam untuk diselesaikan. 
+Rekod kenalan [daripada Dynamics 365 Sales yang diinges menggunakan Common Data Service](connect-power-query.md).
 
-## <a name="prerequisite-for-connection"></a>Prasyarat untuk sambungan
+## <a name="configure-the-connector-for-sales"></a>Konfigur penyambung untuk Jualan
 
-1. Rekod kenalan mesti wujud dalam Dynamics 365 Sales sebelum anda boleh mengeksport segmen daripada Customer Insights ke Jualan. Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Sales menggunakan Microsoft Dataverse](connect-power-query.md).
+1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
 
-   > [!NOTE]
-   > Mengeksport segmen daripada wawasan khalayak kepada Jualan tidak akan mencipta rekod kenalan baharu dalam tika Jualan. Rekod kenalan daripada Jualan mesti diinges dalam wawasan khalayak dan digunakan sebagai sumber data. Mereka juga perlu dimasukkan dalam entiti Pelanggan disatukan untuk memetakan ID pelanggan kepada ID kenalan sebelum segmen boleh dieksport.
+1. Di bawah **Dynamics 365 Sales**, pilih **Sediakan**.
 
-## <a name="set-up-the-connection-to-sales"></a>Sediakan sambungan ke Sales
-
-1. Pergi ke **Pentadbir** > **Sambungan**.
-
-1. Pilih **Tambah sambungan** dan pilih **Dynamics 365 Sales** untuk mengkonfigurasikan sambungan.
-
-1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
-
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.
 
 1. Masukkan URL Jualan organisasi anda dalam medan **Alamat pelayan**.
 
@@ -50,24 +40,12 @@ Gunakan data pelanggan anda untuk mencipta senarai pemasaran, menyusuli aliran k
 
 1. Petakan medan ID pelanggan ke ID Kenalan Dynamics 365.
 
-1. Pilih **Simpan** untuk melengkapkan sambungan. 
-
-## <a name="configure-an-export"></a>Konfigurasikan eksport
-
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
-
-1. Pergi ke **Data** > **Eksport**.
-
-1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
-
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Dynamics 365 Sales. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+1. Pilih **Seterusnya**.
 
 1. Pilih satu atau lebih segmen.
 
-1. Pilih **Simpan**
+1. Pilih **Simpan**.
 
-Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
+## <a name="export-the-data"></a>Mengeksport data
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).

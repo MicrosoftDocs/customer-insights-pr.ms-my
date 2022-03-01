@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Google Ads
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,19 +9,16 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617934"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604288"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Eksport segmen ke Google ads (pratonton)
 
 Eksport segmen profil pelanggan disatukan pada senarai khalayak Google Ads dan gunakan segmen itu untuk mengiklankan di Carian Google, Gmail YouTube dan Rangkaian Paparan Google. 
-
-> [!IMPORTANT]
-> Pada masa ini, anda hanya boleh mencipta sambungan baharu dan mengeksport data ke Google Ads jika anda sudah mempunyai token Pembangun Google Ads yang diluluskan. Disebabkan perubahan dasar, kami akan mengemas kini eksport Google Ads sebentar lagi dan memberikan pilihan eksport yang tidak memerlukan token pembangun untuk memastikan kesinambungan pengalaman anda dan memudahkan eksport ke Google Ads. Kami mengesyorkan untuk tidak menyediakan lebih banyak sambungan ke Google Ads untuk memudahkan penukaran kepada pilihan eksport baharu.
 
 ## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
 
@@ -35,9 +32,9 @@ Eksport segmen profil pelanggan disatukan pada senarai khalayak Google Ads dan g
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Hingga 1 juta profil pelanggan bagi setiap eksport kepada Google Ads.
+- Hingga 1 juta profil bagi setiap eksport ke Google ads.
 - Mengeksport ke Google Ads adalah terhad kepada segmen.
-- Segmen eksport dengan jumlah 1 juta profil pelanggan boleh mengambil masa hingga 5 minit kerana had pada bahagian pembekal. 
+- Mengeksport segmen dengan jumlah 1 juta profil boleh mengambil masa hingga 5 minit kerana had pada bahagian pembekal. 
 - Pemadanan dalam Google Ads boleh mengambil masa hingga 48 jam.
 
 ## <a name="set-up-connection-to-google-ads"></a>Sediakan sambungan ke Google Ads
@@ -74,7 +71,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **[ID khalayak Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** anda dan pilih **Sambung** untuk memulakan sambungan ke Google Ads.
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan.
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan.
 
 1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta profil pelanggan dalam jumlah keseluruhan Google ads.
 

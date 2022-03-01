@@ -1,7 +1,7 @@
 ---
 title: Pemetaan semantik (Pratonton)
 description: Gambaran keseluruhan pemetaan semantik dan cara untuk menggunakannya.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881841"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622946"
 ---
-# <a name="semantic-mappings-preview"></a>Pemetaan semantik (Pratonton)
+# <a name="semantic-mappings"></a>Pemetaan semantik
 
 Semantik pemetaan membolehkan anda memetakan data bukan aktiviti anda kepada skema yang dipratentukan. Skema ini membantu cerapan khalayak untuk lebih memahami atribut data anda. Pemetaan semantik dan data yang disediakan mendayakan cerapan dan ciri baharu dalam cerapan khalayak. Untuk memetakan data aktiviti anda kepada pengguna skema, semak dokumentasi [aktiviti](activities.md).
 
@@ -75,7 +75,8 @@ Semantik pemetaan membolehkan anda memetakan data bukan aktiviti anda kepada ske
 
 1. Untuk menjalankan pemetaan semantik pada titik kemudian, pilih pemetaan semantik dan pilih **Segar semula**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
 
 ## <a name="manage-existing-semantic-mappings"></a>Urus pemetaan semantik sedia ada
 
@@ -90,41 +91,5 @@ Pada **Data** > **Pemetaan semantik (pratonton)**, anda boleh melihat semua peme
 - **Namakan semula** : Buka dialog yang mana anda boleh memasukkan nama yang berbeza untuk pemetaan semantik yang dipilih. Pilih **Simpan** untuk menggunakan perubahan anda.
 
 - **Padam** : Buka dialog untuk mengesahkan pemadaman pemetaan semantik yang dipilih. Anda juga boleh memadam lebih daripada satu pemetaan semantik sekaligus dengan memilih pemetaan semantik dan ikon padam. Pilih **Padam** untuk mengesahkan pemadaman.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Gunakan pemetaan entiti semantik ContactProfile untuk mencipta aktiviti aras kenalan
-
-Selepas mencipta *pemetaan* entiti semantik ContactProfile, anda boleh menangkap aktiviti kenalan. Ia membolehkan anda melihat dalam garis masa aktiviti untuk akaun yang menghubungi bertanggungjawab untuk setiap aktiviti. Kebanyakan langkah mengikuti konfigurasi pemetaan aktiviti biasa.
-
-   > [!NOTE]
-   > Untuk membolehkan aktiviti peringkat hubungan berfungsi, anda mesti mempunyai **atribut AccountID** dan **ContactID untuk setiap rekod dalam data** aktiviti anda.
-
-1. [Tentukan *pemetaan* entiti semantik ContactProfile.](#define-a-contactprofile-semantic-entity-mapping) Dan jalankan pemetaan semantik.
-
-1. Dalam wawasan khalayak, pergi ke **Data** > **Aktiviti**.
-
-1. Pilih **Tambah Aktiviti untuk mencipta aktiviti** baharu.
-
-1. Namakan aktiviti, pilih entiti aktiviti sumber dan pilih kunci utama entiti aktiviti.
-
-1. Dalam **langkah** Perhubungan, cipta perhubungan tidak langsung antara data sumber aktiviti anda kepada akaun, menggunakan data kenalan anda sebagai entiti perantara. Untuk maklumat lanjut, lihat [laluan perhubungan langsung dan tidak langsung](relationships.md#relationship-paths).
-   - Contoh perhubungan untuk aktiviti yang dipanggil *Pembelian*:
-      - **Pembelian Data Hubungan Data Aktiviti Sumber** > **pada** atribut **ContactID**
-      - **Hubungi Data Akaun Data** > **pada** atribut **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh persediaan perhubungan.":::
-
-1. Selepas menyediakan perhubungan, pilih **Berikut** dan lengkapkan konfigurasi pemetaan aktiviti anda. Untuk langkah terperinci tentang penciptaan aktiviti, lihat [mentakrifkan aktiviti](activities.md).
-
-1. Jalankan pemetaan aktiviti anda.
-
-1. Aktiviti peringkat hubungan anda kini akan dapat dilihat pada garis masa pelanggan anda.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Keputusan akhir selepas mengkonfigurasi aktiviti hubungan":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Penapisan garis masa aktiviti peringkat hubungan
-
-Selepas mengkonfigurasi pemetaan aktiviti peringkat hubungan dan menjalankannya, garis masa aktiviti untuk pelanggan anda akan dikemas kini. Ia termasuk KAD atau nama mereka, bergantung pada *konfigurasi ContactProfile* anda, untuk aktiviti yang mereka bertindak. Anda boleh menapis aktiviti mengikut kenalan dalam garis masa untuk melihat kenalan tertentu yang anda minati. Selain itu, anda boleh melihat semua aktiviti yang tidak diperuntukkan kepada kenalan tertentu dengan memilih **Aktiviti yang tidak dipetakan kepada Kenalan**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opsyen penapisan tersedia untuk aktiviti peringkat Kenalan.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

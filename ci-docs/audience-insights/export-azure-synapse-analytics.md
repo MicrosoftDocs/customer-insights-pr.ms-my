@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Azure Synapse Analytics
 description: Ketahui cara mengkonfigurasikan sambungan ke Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951053"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327375"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (Pratonton)
 
@@ -49,8 +49,6 @@ Dalam Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurasikan sambungan
 
-Untuk mencipta sambungan, prinsipal perkhidmatan dan akaun pengguna dalam Wawasan Pelanggan memerlukan **keizinan Pembaca pada kumpulan sumber tempat ruang kerja** *Synapse* Analytics terletak. Selain itu, prinsipal perkhidmatan dan pengguna di ruang kerja Synapse Analytics memerlukan **keizinan Pentadbir Synapse.** 
-
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
 1. Pilih **Tambah sambungan** dan pilih **Azure Synapse Analytics** atau pilih **Sediakan** pada jubin **Azure Synapse Analytics** untuk mengkonfigurasi sambungan.
@@ -65,7 +63,7 @@ Untuk mencipta sambungan, prinsipal perkhidmatan dan akaun pengguna dalam Wawasa
 
 ### <a name="configure-an-export"></a>Konfigurasikan eksport
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk mengkonfigurasikan eksport dengan sambungan dikongsi, anda memerlukan sekurang-kurangnya **keizinan Penyumbang dalam Wawasan** Pelanggan. Untuk maklumat lanjut, lihat [keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
 
 1. Pergi ke **Data** > **Eksport**.
 
@@ -84,8 +82,6 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
 Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).
-
-Untuk bertanya data yang dieksport ke Synapse Analytics, anda memerlukan **akses Pembaca Data Blob Storan ke storan** destinasi pada ruang kerja eksport. 
 
 ### <a name="update-an-export"></a>Kemas kini eksport
 

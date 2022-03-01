@@ -1,7 +1,7 @@
 ---
-title: Pengayaan peningkatan alamat (mengandungi video)
+title: Pengayaan pembesaran alamat (mengandungi video)
 description: Perkayakan dan normalkan maklumat alamat profil pelanggan dengan model Microsoft.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010920"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934934"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang dipertingkatkan
 
@@ -100,17 +100,17 @@ Untuk memulakan proses pengayaan, pilih **Jalankan** daripada bar perintah. Anda
 
 Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang baru diperkaya di bawah **Pengayaan saya**. Di samping itu, anda akan menemui masa kemas kini yang terakhir dan bilangan profil yang diperkaya.
 
-Anda boleh melihat sampel data yang diperkaya dalam **jubin pratonton** pelanggan diperkaya. Pilih **Lihat lebih lanjut** dan pilih **tab Data** untuk mengakses pandangan terperinci setiap profil yang diperkaya.
+Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan memilih **Lihat data yang diperkayakan**.
 
-### <a name="overview-card"></a>Kad gambaran keseluruhan
+### <a name="overview-card"></a>Kad Gambaran Keseluruhan
 
 Kad gambaran keseluruhan menunjukkan butiran mengenai liputan pengayaan. 
 
-* **Alamat diproses dan diubah**: Bilangan profil pelanggan dengan alamat yang berjaya diperkaya.
+* **Pelanggan diproses dan berubah** : Bilangan profil pelanggan yang berjaya diperkaya.
 
-* **Alamat diproses dan tidak berubah**: Bilangan profil pelanggan dengan alamat yang diiktiraf tetapi tidak diubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
+* **Pelanggan diproses dan tidak berubah** : Bilangan profil pelanggan yang diiktiraf tetapi tidak berubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
 
-* **Alamat tidak diproses dan tidak diubah**: Bilangan profil dengan alamat yang tidak dikenali. Biasanya untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
+* **Pelanggan tidak diproses dan tidak berubah** : Bilangan profil yang tidak diiktiraf. Biasanya untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
 
 ## <a name="next-steps"></a>Langkah-langkah berikutnya
 

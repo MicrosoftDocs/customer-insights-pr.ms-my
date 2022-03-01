@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insight ke Constant Contact
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan eksport ke Constant Contact.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 3a9372cc4ffa4fb112a96b1286aee9dc35059a50
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619130"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760591"
 ---
-# <a name="export-segments-to-constant-contact-preview"></a>Eksport segmen ke Kenalan Pemalar (pratonton)
+# <a name="export-segment-lists-to-constant-contact-preview"></a>Eksport senarai segmen ke Constant Contact (pratonton)
 
 Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakannya untuk aktiviti pemasaran. 
 
@@ -28,10 +28,10 @@ Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakanny
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 1 juta profil pelanggan setiap eksport untuk Kenalan Pemalar.
+- Anda boleh mengeksport hingga 1 juta profil setiap eksport ke Constant Contact.
 - Mengeksport ke Constant Contact dihadkan kepada segmen.
-- Mengeksport hingga 1 juta profil pelanggan kepada Kenalan Pemalar boleh mengambil masa hingga 1 jam untuk dilengkapkan. 
-- Bilangan profil pelanggan yang boleh anda eksport kepada Kenalan Pemalar bergantung dan terhad pada kontrak anda dengan Kenalan Pemalar.
+- Mengeksport hingga 1 juta profil ke Constant Contact boleh mengambil masa hingga 1 jam untuk diselesaikan. 
+- Bilangan profil yang boleh anda eksport ke Constant Contact adalah bergantung dan terhad pada kontrak anda dengan Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Sediakan sambungan ke Constant Contact
 
@@ -47,7 +47,7 @@ Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakanny
 
 1. Pilih **Sambung** untuk memulakan sambungan ke Constant Contact.
 
-1. Pilih **Sahkan dengan Kenalan Pemalar** dan berikan kelayakan pentadbir anda untuk Kenalan Pemalar. 
+1. Pilih **Sahkan dengan AdRoll** dan berikan kelayakan pentadbir anda untuk Constant Contact. 
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
@@ -65,7 +65,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan [**ID Senarai Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists) anda. Buka senarai dalam Constant Contact untuk mencari ID senarai dalam URL.
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Constant Contact.
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Constant Contact.
 
 1. Secara alternatif, anda boleh mengeksport Nama pertama dan Nama akhir sebagai medan tambahan untuk mencipta lebih banyak e-mel peribadi. Pilih **Tambah atribut** untuk memetakan medan ini.
 

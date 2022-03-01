@@ -2,19 +2,19 @@
 title: Pengingesan data masa nyata dan pengehadan
 description: Maklumat umum mengenai keupayaan masa nyata dalam wawasan khalayak.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035288"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689186"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Pengingesan data masa nyata (pratonton)
 
@@ -54,7 +54,7 @@ API masa nyata membolehkan anda menerbitkan aktiviti baharu daripada sistem sumb
 
 Terdapat dua cara untuk sambung ke API masa nyata:
 
-- [secara tidak langsung](#connect-via-the-dynamics-365-customer-insights-connector), menggunakan [penyambung Dynamics 365 Customer Insights](/connectors/customerinsights/)
+- [secara tidak langsung](#connect-via-the-dynamics-365-customer-insights-connector), menggunakan [penyambung Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
 - [secara langsung](#connect-directly-to-the-real-time-api), dengan kod
 
 Kedua-dua cara berkongsi prasyarat yang berikut:
@@ -66,13 +66,13 @@ Kedua-dua cara berkongsi prasyarat yang berikut:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Sambungkan melalui penyambung Dynamics 365 Customer Insights
 
-API masa nyata boleh menginges data daripada sambungan Power Platform yang khusus, [penyambung Dynamics 365 Customer Insights](/connectors/customerinsights/), tanpa perlu menulis dan mengatur letak sebarang kod.    
-Penyambung boleh melakukan tindakan masa nyata yang sama seperti API. Anda memerlukan lesen yang sah untuk penyambung premium. Untuk maklumat lanjut, lihat [Soalan Lazim pelesenan Power Apps dan Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
+API masa nyata boleh menginges data daripada sambungan Power Platform yang khusus, [penyambung Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), tanpa perlu menulis dan mengatur letak sebarang kod.    
+Penyambung boleh melakukan tindakan masa nyata yang sama seperti API. Anda memerlukan lesen yang sah untuk penyambung premium. Untuk maklumat lanjut, lihat [Soalan Lazim pelesenan Power Apps dan Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps dan/atau Power Automate](/connectors/)
-- Azure [Aplikasi Logik](/azure/connectors/apis-list)
+- Power Platform [Power Apps dan/atau Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Aplikasi Logik](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Untuk butiran tentang mencipta aliran, lihat [dokumentasi Power Automate](/power-automate/).
+Untuk butiran tentang mencipta aliran, lihat [dokumentasi Power Automate](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Sambungkan secara langsung kepada API masa nyata
 
@@ -83,7 +83,6 @@ Butiran API ini, termasuk parameter dan respons, boleh didapati dalam seksyen **
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami pengguna masa nyata anda dengan telemetri
 
-Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#api-usage-tab). 
+Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#api-usage-tab) dengan pergi ke **Pentadbir** > **Sistem** > **Penggunaan API**. Dalam jadual **Operasi**, baris untuk operasi API yang menggunakan kaedah masa nyata mengandungi butang untuk melihat penggunaan API masa nyata. Butang ini divisualisasikan dengan simbol binokular. Pilih butang untuk membuka anak tetingkap sisi yang mengandungi butiran penggunaan untuk penggunaan API masa nyata dalam persekitaran semasa.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Gunakan pemilih **Kumpulkan mengikut** untuk memilih cara yang terbaik untuk mewujudkan interaksi masa nyata anda pada garis masa dari 24 jam terakhir hingga 30 hari terakhir. Anda boleh mengumpulkan data mengikut kaedah API, nama dilayakkan entiti (entiti yang diinges), dicipta oleh (sumber peristiwa), hasil (berjaya atau gagal) atau kod ralat. Data tersedia sebagai carta sejarah dan sebagai jadual.

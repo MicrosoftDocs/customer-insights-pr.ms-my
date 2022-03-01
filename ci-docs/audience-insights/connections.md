@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977748"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304983"
 ---
 # <a name="connections-preview-overview"></a>Gambaran keseluruhan sambungan (pratonton)
 
@@ -47,7 +47,6 @@ Untuk menambah sambungan, anda perlu mempunyai [keizinan pentadbir](permissions.
 1. Dalam anak tetingkap **Sediakan sambungan**, berikan butiran yang diperlukan. 
    1. **Nama paparan** dan jenis sambungan yang menerangkan sambungan. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan ini.
    1. Medan sebenar bergantung pada jenis perkhidmatan yang anda bersambung. Anda boleh mengetahui tentang butiran jenis sambungan khusus dalam artikel mengenai perkhidmatan sasaran.
-   1. Jika anda [gunakan Key Vault anda sendiri](use-azure-key-vault.md) untuk menyimpan rahsia, aktifkan **Gunakan Key Vault** dan pilih rahsia daripada senarai.
 
 1. Untuk mencipta sambungan, pilih **Simpan**.
 
@@ -94,6 +93,3 @@ Pengayaan dan eksport yang dialih menjadi tidak aktif. Anda mengaktifkan semula 
 
 1. Untuk mengesahkan pemadaman, pilih **Alih keluar**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Sediakan sambungan dengan rahsia yang diuruskan oleh Key Vault anda sendiri
-
-Sesetengah sambungan memerlukan rahsia seperti kekunci API atau kata laluan. Sesetengah sambungan menyokong rahsia yang disimpan dalam Key Vault anda sendiri. Ketahui lebih lanjut tentang sambungan yang disokong dan cara untuk menyediakan [Key Vault anda sendiri untuk cerapan khalayak](use-azure-key-vault.md).

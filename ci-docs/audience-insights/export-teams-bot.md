@@ -1,27 +1,27 @@
 ---
 title: Bot untuk Microsoft Teams
 description: Carian profil pelanggan disatukan dalam Microsoft Teams dengan bantuan bot.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967830"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406467"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Pasukan bot untuk Dynamics 365 Customer Insights (pratonton)
 
 Sambung dengan Microsoft Teams untuk membolehkan bot mencari profil pelanggan disatukan dalam saluran Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot Teams menunjukkan rekod pelanggan.](media/teams-bot.png "Bot Teams menunjukkan rekod pelanggan")
+> ![Bot Teams menunjukkan rekod pelanggan](media/teams-bot.png "Bot Teams menunjukkan rekod pelanggan")
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -31,10 +31,7 @@ Untuk menyedia dan mengkonfigurasi bot, prasyarat berikut mesti dipenuhi:
 - [Proses penyatuan](data-unification.md) adalah lengkap.
 - Medan ditambah ke [indeks carian dan tapisan](search-filter-index.md).
 - Customer Insights dan Teams adalah dalam organisasi yang sama.
-- Persekitaran anda mempunyai khalayak sasaran utama yang ditetapkan kepada pelanggan individu. Akaun perniagaan tidak disokong.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfigurasi bot
 
 1. Dalam Insights khalayak, pergi ke **Pentadbir** > **Export Destinasi**.
@@ -55,6 +52,3 @@ Bot menyediakan keupayaan carian untuk profil pelanggan disatukan.
 - Jika organisasi anda mengekalkan berbilang persekitaran Customer Insights dalam organisasi yang sama, anda boleh memasukkan **switchinstance** untuk memilih persekitaran yang anda mahu sambungkan bot tersebut.
 
 - Masukkan **bantuan** untuk melihat senarai perintah yang tersedia untuk bot.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

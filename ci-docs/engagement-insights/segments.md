@@ -4,17 +4,17 @@ description: Cara mencipta, mengedit dan memadam segmen dan tempat segmen diguna
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623598"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036159"
 ---
 # <a name="view-and-create-segments"></a>Lihat dan cipta segmen
 
@@ -44,27 +44,22 @@ Bahagian ini menerangkan cara mencipta *segmen kosong* daripada mula.
 
 1. Pilih **Bahagian baharu**.
 
-1. Dalam **Pustaka sumber**, pilih (+) bersebelahan dengan atribut yang anda mahu tapis mengikut. Pada masa ini, anda hanya boleh mencipta segmen berdasarkan dimensi.
+1. Dalam **Pustaka sumber**, pilih atribut yang ingin anda tapis. Pada masa ini, anda hanya boleh mencipta segmen berdasarkan dimensi.
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="Cipta segmen baharu.":::
-
-1. Dalam bahagian **Peraturan**, pilih operator dan nilai untuk atribut yang dipilih. Operasi berikut disokong.
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="Pilih operator untuk segmen baharu anda.":::
-
+1. Pilih operator dan nilai untuk atribut yang dipilih. Operasi berikut disokong.
    - **adalah**: memerlukan padanan tepat untuk menyertakan nilai. Menggunakan **sama dengan** untuk nilai tunggal atau **mana-mana** untuk menyertakan berbilang nilai.
    - **tidak**: memerlukan padanan tepat untuk mengecualikan nilai. Menggunakan **sama dengan** untuk nilai tunggal atau **mana-mana** untuk menyertakan berbilang nilai.
    - **bermula dengan**: rentetan yang nilai sepadan bermula.
    - **berakhir dengan**: rentetan yang nilai sepadan berakhir.
    - **mengandungi**: rentetan yang terkandung dalam nilai sepadan.
 
-1. Untuk menambah lebih banyak syarat pada kumpulan, anda boleh menggunakan operator logik. Atribut yang diunjurkan diambil kira apabila menggunakan operator set.
+1. Untuk menambahkan lebih banyak syarat ke kumpulan, anda boleh menggunakan dua operator logik. Atribut yang diunjurkan diambil kira apabila menggunakan operator set.
    - Operator **DAN**: Kedua-dua syarat mesti dipenuhi sebagai sebahagian proses pembahagian. Pilihan ini adalah paling berguna apabila anda menakrif syarat dalam entiti yang berbeza.
    - Operator **ATAU**: Salah satu syarat perlu dipenuhi sebagai sebahagian daripada proses pembahagian. Pilihan ini paling berguna apabila anda menakrif berbilang syarat untuk entiti yang sama.
 
 1. Pilih **Simpan** dan namakan segmen. 
 
-Segmen akan disenaraikan di halaman **Segmen** dan anda boleh menggunakan segmen pada semua laporan dan corong dalam ruang kerja.
+Segmen akan disenaraikan di halaman Segmen dan anda boleh menggunakan segmen pada semua laporan dan corong dalam ruang kerja.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Gunakan segmen dalam laporan atau corong
 
@@ -72,7 +67,7 @@ Anda boleh menggunakan segmen pada laporan atau corong untuk menapis berdasarkan
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Laporan paparan halaman dengan senarai juntai bawah yang diperluas untuk memilih segmen untuk digunakan.":::
 
-Untuk menggunakan segmen, buka laporan atau corong. Pilih **+ Tambah syarat** dan pilih **Tapis mengikut segmen**. Pilih segmen daripada senarai yang ingin anda gunakan. Segmen akan digunakan untuk laporan. Jika carta tidak menyokong segmen, ia menunjukkan ralat. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan urus laporan corong](funnel-reports.md).
+Untuk menggunakan segmen, buka laporan atau corong. Pilih **Tambah syarat** dan pilih **Tapis mengikut segmen**. Pilih segmen daripada senarai yang ingin anda gunakan. Segmen akan digunakan untuk laporan. Jika carta tidak menyokong segmen, ia menunjukkan ralat.
  
 Anda boleh menggunakan *sehingga tiga segmen* untuk laporan atau corong.
 
@@ -96,7 +91,5 @@ Anda boleh menggunakan *sehingga tiga segmen* untuk laporan atau corong.
 1. Dalam senarai segmen, pilih **Lagi [...]**. 
 1. Daripada senarai juntai bawah, pilih **Padam**.
 1. Pilih **Padam** untuk mengesahkan.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

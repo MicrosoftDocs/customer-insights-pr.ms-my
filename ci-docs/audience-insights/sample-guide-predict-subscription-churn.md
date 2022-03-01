@@ -2,19 +2,19 @@
 title: Langganan panduan sampel ramalan pulangan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pulangan langganan luar kotak.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e2360c707bcbdfa64482f06f0a0cd0783a377b4fd79620ffd3cc1c9c6cad9ed3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
+ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029594"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "4653991"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan langganan (pratonton)
 
@@ -22,14 +22,14 @@ Kami akan menerangkan kepada anda contoh ramalan pulangan langganan hujung ke hu
 
 ## <a name="scenario"></a>Senario
 
-Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang menjual melalui laman web Contoso Coffee mereka. Mereka baru memulakan perniagaan langganan untuk pelanggan mereka untuk mendapatkan kopi secara tetap. Matlamat mereka ialah untuk memahami, pelanggan yang melanggan yang mana mungkin membatalkan langganan mereka dalam beberapa bulan akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
+Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang mereka jual melalui laman web Contoso Coffee mereka. Mereka baru memulakan perniagaan langganan untuk pelanggan mereka untuk mendapatkan kopi secara tetap. Matlamat mereka ialah untuk memahami, pelanggan yang melanggan yang mana mungkin membatalkan langganan mereka dalam beberapa bulan akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 - Sekurang-kurangnya [Keizinan penyumbang](permissions.md) dalam Customer Insights.
 - Kami mengesyorkan agar anda melaksanakan langkah berikut [dalam persekitaran baharu](manage-environments.md).
 
-## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
+## <a name="task-1---ingest-data"></a>Tugas 1 - Inges Data
 
 Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport sumber data menggunakan penyambung Power Query](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
 
@@ -46,9 +46,10 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **DateOfBirth**: Tarikh
    - **CreatedOn**: Zon waktu tarikh
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Ubah tarikh lahir kepada tarikh ini.":::
+   [!div class="mx-imgBorder"]
+   ![Ubah Tarikh Lahir kepada Tarikh](media/ecommerce-dob-date.PNG "ubah tarikh lahir kepada tarikh ini")
 
-1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
+1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
 
 1. Simpan sumber data.
 
@@ -66,7 +67,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **RewardsPoints**: Nombor Bulat
    - **CreatedOn**: Tarikh/Masa
 
-1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
+1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
 
 1. Simpan sumber data.
 
@@ -89,7 +90,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **Is_auto_renew** : Benar/Palsu
    - **RecurringFrequencyInMonths**: Nombor Bulat
 
-1. Dalam medan **Nama** pada anak tetingkap sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **SubscriptionHistory**.
+1. Dalam medan 'Nama' pada anak tetingkap sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **SubscriptionHistory**.
 
 1. Simpan sumber data.
 
@@ -128,9 +129,9 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
 
-1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
+1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : e-Dagang** sebagai sumber utama dan menyertakan semua rekod.
 
-1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
+1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan menyertakan semua rekod.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Menyatukan padanan e-Dagang dan Kesetiaan.":::
 
@@ -138,16 +139,16 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Tambah syarat pertama anda menggunakan FullName.
 
-   * Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
-   * Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
+   * Untuk eCommerceContacts pilih **FullName** dalam senarai juntai bawah.
+   * Untuk loyCustomers, pilih **FullName** dalam senarai juntai bawah.
    * Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
    * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
 1. Masukkan nama **FullName, Email** untuk peraturan baharu.
 
    * Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   * Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
-   * Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah. 
+   * Untuk entiti eCommerceContacts, pilih **EMail** dalam senarai juntai bawah.
+   * Untuk entiti loyCustomers, pilih **EMail** dalam senarai juntai bawah. 
    * Biarkan Menormalkan kosong. 
    * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
@@ -229,6 +230,3 @@ Anda boleh mencipta segmen baharu berdasarkan entiti yang dicipta oleh model.
 Kini anda mempunyai segmen yang dikemas kini secara dinamik yang mengenal pasti pelanggan risiko pulangan tinggi untuk perniagaan langganan ini.
 
 Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

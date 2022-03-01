@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Omnisend
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Omnisend.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619039"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124526"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Eksport segmen ke Omnisend (pratonton)
 
@@ -28,9 +28,9 @@ Eksport segmen profil pelanggan yang disatukan ke Omnisend dan gunakan segmen te
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 1 juta profil pelanggan setiap eksport ke Omnisend dan ia boleh mengambil masa hingga 4 jam untuk melengkapkan.
+- Anda boleh mengeksport sehingga 1 juta profil bagi setiap eksport ke Omnisend dan ia boleh mengambil masa sehingga 4 jam untuk diselesaikan.
 - Mengeksport ke Omnisend dihadkan kepada segmen.
-- Bilangan profil pelanggan yang boleh anda eksport kepada Omnisend bergantung pada kontrak anda dengan Omnisend.
+- Bilangan profil yang boleh anda eksport ke Omnisend bergantung pada kontrak anda dengan Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Sediakan sambungan ke Omnisend
 
@@ -62,7 +62,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada bahagian Omnisend. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Omnisend. Selain itu, anda boleh mengeksport Nama pertama, Nama akhir, Alamat, Negara/Wilayah, Negeri, Bandar dan Poskod untuk mencipta e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Omnisend. Selain itu, anda boleh mengeksport Nama pertama, Nama akhir, Alamat, Negara/Wilayah, Negeri, Bandar dan Poskod untuk mencipta e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
 
 1. Pilih **Simpan**.
 

@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Microsoft Advertising
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618072"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124525"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Eksport segmen ke Microsoft Advertising (pratonton)
 
@@ -29,9 +29,9 @@ Eksport segmen Customer Insights ke Microsoft Advertising untuk mencipta khalaya
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 500,000 profil pelanggan bagi setiap eksport ke Microsoft Advertising.
+- Anda boleh mengeksport hingga 500K profil bagi setiap eksport ke Microsoft Advertising.
 - Mengeksport ke Microsoft Advertising dihadkan kepada segmen.
-- Mengeksport hingga 500,000 profil pelanggan kepada Microsoft Advertising boleh mengambil masa hingga 10 minit untuk dilengkapkan. 
+- Mengeksport hingga 500K profil ke Microsoft Advertising boleh mengambil masa hingga 10 minit untuk diselesaikan. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Sediakan sambungan ke Microsoft Advertising
@@ -68,7 +68,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **ID Pelanggan dan ID Akaun Microsoft Advertising** anda. Anda boleh menemui ID Pelanggan (`cid`) dan ID Akaun (`aid`) dalam parameter URL apabila anda mendaftar masuk Microsoft Advertising.
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan dengan alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Microsoft Advertising.
+1. Di bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan anda yang disatukan dengan alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Microsoft Advertising.
 
 1. Pilih **Simpan**.
 

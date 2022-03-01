@@ -1,7 +1,7 @@
 ---
 title: Eksport data Customer Insights ke Autopilot
-description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Autopilot.
-ms.date: 10/08/2021
+description: Ketahui cara mengkonfigurasi sambungan ke Autopilot.
+ms.date: 12/08/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,41 +9,34 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d039c4afd84eaad942d214d4e6fb8ef7b1ec72a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618440"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596142"
 ---
-# <a name="export-segments-to-autopilot-preview"></a>Eksport segmen ke Autopilot (pratonton)
+# <a name="connector-for-autopilot-preview"></a>Penyambung untuk Autopilot (pratonton)
 
 Eksport segmen bagi profil pelanggan disatukan untuk Autopilot dan gunakannya untuk pemasaran e-mel dalam Autopilot. 
 
-## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
+## <a name="prerequisites"></a>Prasyarat
 
 -   Anda mempunyai sebuah [Akaun Autopilot](https://www.autopilothq.com/) dan kelayakan pentadbir yang berkaitan.
 -   Anda mempunyai [segmen yang dikonfigurasi](segments.md) dalam wawasan khalayak.
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
-## <a name="known-limitations"></a>Had diketahui
+## <a name="connect-to-autopilot"></a>Sambung kepada AutoPilot
 
-- Anda boleh mengeksport hingga 100,000 profil pelanggan secara keseluruhan untuk Autopilot.
-- Mengeksport ke Autopilot adalah terhad kepada segmen.
-- Mengeksport hingga 100,000 profil pelanggan kepada Autopilot boleh mengambil masa hingga beberapa jam untuk dilengkapkan. 
-- Bilangan profil pelanggan yang boleh anda eksport kepada Autopilot bergantung dan terhad pada kontrak anda dengan Autopilot.
+1. Pergi ke **Pentadbir** > **Destinasi Eksport**.
 
-## <a name="set-up-connection-to-autopilot"></a>Sediakan sambungan ke Autopilot
+1. Di bawah **Autopilot**, pilih **Sediakan**.
 
-1. Pergi ke **Pentadbir** > **Sambungan**.
+1. Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.
 
-1. Pilih **Tambah sambungan** dan pilih **Autopilot** untuk mengkonfigurasikan sambungan.
+   :::image type="content" source="media/export-autopilot.PNG" alt-text="Anak tetingkap konfigurasi untuk sambungan Autopilot.":::
 
-1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
-
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Masukkan [Kekunci API autopilot anda](https://autopilot.docs.apiary.io/#).
+1. Masukkan **Kekunci API Autopilot** [Kekunci API Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
 
@@ -51,27 +44,26 @@ Eksport segmen bagi profil pelanggan disatukan untuk Autopilot dan gunakannya un
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
-1. Pilih **Simpan** untuk melengkapkan sambungan.
+1. Pilih **Seterusnya** untuk konfigurasi eksport.
 
-## <a name="configure-an-export"></a>Konfigurasikan eksport
+## <a name="configure-the-connector"></a>Konfigurasi penyambung
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
-
-1. Pergi ke **Data** > **Eksport**.
-
-1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
-
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Autopilot. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
-
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama keluarga**.
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama keluarga**.
 
 1. Pilih segmen yang ingin anda eksport. Kami amat **mengesyorkan untuk tidak mengeksport lebih daripada 100'000 profil pelanggan dalam jumlah** untuk Autopilot. 
 
 1. Pilih **Simpan**.
 
-Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
+## <a name="export-the-data"></a>Mengeksport data
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
+Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).
+
+## <a name="known-limitations"></a>Had diketahui
+
+- Anda boleh mengeksport hingga 100'000 juta jumlah profil pelanggan ke Autopilot.
+- Mengeksport ke Autopilot adalah terhad kepada segmen.
+- Mengeksport sehingga 100'000 profil ke Autopilot boleh mengambil masa hingga beberapa jam untuk diselesaikan. 
+- Bilangan profil yang boleh anda eksport ke Autopilot bergantung dan terhad pada kontrak anda dengan Autopilot.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

@@ -1,50 +1,43 @@
 ---
 title: Eksport data Customer Insights ke DotDigital
-description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke DotDigital.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Ketahui cara mengkonfigurasi sambungan ke DotDigital.
+ms.date: 11/14/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ed6bd40e8575fc90258f79f60abffe54f136d274
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618394"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644459"
 ---
-# <a name="export-segments-to-dotdigital-preview"></a>Eksport segmen ke DotDigital (pratonton)
+# <a name="connector-for-dotdigital-preview"></a>Penyambung untuk DotDigital (pratonton)
 
 Eksport segmen profil pelanggan disatukan ke buku alamat DotDigital dan gunakannya untuk kempen, pemasaran e-mel dan untuk membina segmen pelanggan dengan DotDigital. 
 
-## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
+## <a name="prerequisites"></a>Prasyarat
 
--   Anda mempunyai [Akaun DotDigital](https://dotdigital.com/) dan mencipta [pengguna API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Anda akan memerlukan kelayakan pengguna API untuk mencipta sambungan
+-   Anda mempunyai [Akaun DotDigital](https://dotdigital.com/) dan kelayakan pentadbir yang berkaitan.
 -   Terdapat buku alamat sedia ada dalam DotDigital dan ID yang berkaitan. ID boleh ditemui dalam URL apabila anda memilih dan membuka buku alamat. Untuk maklumat lanjut, lihat [Buku alamat DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Anda mempunyai [segmen yang dikonfigurasi](segments.md) dalam wawasan khalayak.
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
-## <a name="known-limitations"></a>Had diketahui
+## <a name="connect-to-dotdigital"></a>Sambung ke DotDigital
 
-- Hingga 1 juta profil pelanggan bagi setiap eksport kepada DotDigital.
-- Mengeksport ke DotDigital adalah terhad kepada segmen.
-- Segmen eksport dengan jumlah 1 juta profil pelanggan boleh mengambil masa hingga 3 jam kerana had pada bahagian pembekal. 
-- Bilangan profil pelanggan yang boleh anda eksport kepada DotDigital bergantung dan terhad pada kontrak anda dengan DotDigital.
+1. Pergi ke **Pentadbir** > **Destinasi Eksport**.
 
-## <a name="set-up-connection-to-dotdigital"></a>Sediakan sambungan ke DotDigital
+1. Di bawah **DotDigital**, pilih **Sediakan**.
 
-1. Pergi ke **Pentadbir** > **Sambungan**.
+1. Berikan destinasi eksport anda nama yang mudah dikenali dalam medan **Nama paparan**.
 
-1. Pilih **Tambah sambungan** dan pilih **DotDigital** untuk mengkonfigurasikan sambungan.
+   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Anak tetingkap konfigurasi untuk eksport DotDigital.":::
 
-1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
-
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Masukkan **Nama pengguna dan kata laluan API DotDigital** anda. 
+1. Masukkan **Nama pengguna dan kata laluan DotDigital** anda.
 
 1. Masukkan **[ID buku alamat DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)** anda.
 
@@ -54,36 +47,28 @@ Eksport segmen profil pelanggan disatukan ke buku alamat DotDigital dan gunakann
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
-1. Pilih **Simpan** untuk melengkapkan sambungan. 
+1. Pilih **Seterusnya** untuk konfigurasi eksport.
 
-## <a name="configure-an-export"></a>Konfigurasikan eksport
+## <a name="configure-the-connector"></a>Konfigurasi penyambung
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
-
-1. Pergi ke **Data** > **Eksport**.
-
-1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
-
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian DotDigital. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
-
-
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama akhir**, **Nama penuh**, **Jantina** dan **Poskod**.
+1. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ulangi langkah yang sama untuk medan pilihan lain seperti **Nama pertama**, **Nama akhir**, **Nama penuh**, **Jantina** dan **Poskod**.
 
 1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta profil pelanggan dalam jumlah keseluruhan DotDigital.
 
 1. Pilih **Simpan**.
 
-Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
+## <a name="export-the-data"></a>Mengeksport data
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
- 
-Dalam DotDigital, anda kini boleh mencari segmen anda dalam [Buku alamat DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab). Dalam DotDigital, anda kini boleh mencari segmen anda dalam [Buku alamat DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
+## <a name="known-limitations"></a>Had diketahui
+
+- Hingga 1 juta profil bagi setiap eksport ke DotDigital.
+- Mengeksport ke DotDigital adalah terhad kepada segmen.
+- Mengeksport segmen dengan jumlah 1 juta profil boleh mengambil masa hingga 3 jam kerana had pada bahagian pembekal. 
+- Bilangan profil yang boleh anda eksport ke DotDigital bergantung dan terhad pada kontrak anda dengan DotDigital.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 
 Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke DotDigital, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights termasuk data berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data sedemikian mengikut arahan anda tetapi anda bertanggungjawab untuk memastikan bahawa DotDigital memenuhi sebarang kewajipan privasi atau keselamatan yang anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

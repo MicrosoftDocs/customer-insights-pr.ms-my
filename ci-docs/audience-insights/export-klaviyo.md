@@ -1,7 +1,7 @@
 ---
 title: Eksport Data Customer Insights kepada Klaviyo
 description: Ketahui cara mengkonfigurasikan sambungan dan mengeksport kepada Klaviyo.
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619084"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385799"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Senarai segmen eksport kepada Klaviyo (pratonton)
 
@@ -28,10 +28,10 @@ Segmen eksport profil pelanggan disatukan kepada Klaviyo dan gunakan mereka untu
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 100,000 profil pelanggan bagi setiap eksport ke Klaviyo.
+- Anda boleh mengeksport sehingga 100'000 profil setiap eksport kepada Klaviyo.
 - Mengeksport kepada Klaviyo terhad kepada segmen.
-- Mengeksport hingga 1 juta profil pelanggan kepada Klaviyo boleh mengambil masa hingga 20 minit untuk dilengkapkan. 
-- Bilangan profil pelanggan yang boleh anda eksport kepada Klaviyo bergantung dan terhad pada kontrak anda dengan Klaviyo.
+- Mengeksport hingga 1 juta profil ke Klaviyo mungkin mengambil masa hingga 20 minit untuk selesai. 
+- Bilangan profil yang boleh anda eksport ke Klaviyo bergantung dan terhad pada kontrak anda dengan Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Sediakan sambungan kepada Klaviyo
 
@@ -67,7 +67,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan [**ID Senarai Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ini diperlukan untuk mengeksport segmen ke Klaviyo.
+3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ini diperlukan untuk mengeksport segmen ke Klaviyo.
 
 1. Pilih **Simpan**.
 
