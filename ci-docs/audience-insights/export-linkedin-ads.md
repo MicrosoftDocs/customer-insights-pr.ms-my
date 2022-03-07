@@ -3,18 +3,17 @@ title: Eksport data Customer Insights ke LinkedIn Ads
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke LinkedIn Ads.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
-ms.translationtype: HT
+ms.openlocfilehash: 7a6bb466652b8703a4784329a5e675965f557e82
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866899"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231114"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Eksport segmen ke LinkedIn Ads (pratonton)
 
@@ -43,13 +42,13 @@ Eksport segmen profil pelanggan yang disatukan kepada LinkedIn Ads untuk mencipt
 
 1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, nilai lalai ialah Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan [ID Akaun LinkedIn Campaign Manager anda](https://www.linkedin.com/help/lms/answer/a424270).
+1. Berikan [ID Akaun LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270) anda.
 
 1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
 
 1. Pilih **Sambung** untuk memulakan sambungan ke Campaign Monitor.
 
-1. Pilih **Sahkan dengan LinkedIn dan berikan kelayakan pentadbir** anda untuk LinkedIn Campaign Manager.
+1. Pilih **Sahkan dengan LinkedIn** dan berikan kelayakan pentadbir anda untuk LinkedIn Campaign Manager.
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
@@ -69,7 +68,7 @@ Anda boleh mengkonfigurasikan eksport jika anda mempunyai akses ke sambungan jen
 
 1. Dalam bahagian **Pemadanan Data**, untuk penyasaran kenalan, pilih sekurang-kurangnya satu medan yang mewakili alamat e-mel pelanggan, ID Iklan Apple, ID Iklan Google, ID Pengguna Google atau nama pertama dan akhir. Jika anda memilih penyasaran syarikat, pilih sekurang-kurangnya satu medan yang mewakili nama syarikat, domain e-mel, URL Halaman LinkedIn, simbol Stock atau Tapak Web. Medan tambahan boleh dipilih untuk mentakrifkan selanjutnya eksport anda. 
 
-1. Pilih segmen yang ingin anda eksport. Khalayak yang dipadankan dalam LinkedIn Campaign Manager akan dicipta secara automatik dengan nama segmen yang anda pilih untuk dieksport. Setiap segmen akan menghasilkan matched audiences yang berasingan. 
+1. Pilih segmen yang ingin anda eksport. Matched audiences dalam LinkedIn Campaign Manager akan dicipta secara automatik dengan nama segmen yang anda pilih untuk dieksport. Setiap segmen akan menghasilkan matched audiences yang berasingan. 
 
 1. Pilih **Simpan**.
 
@@ -80,6 +79,6 @@ Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedul
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke Iklan LinkedIn, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan LinkedIn Ads memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Apabila anda mendayakan Dynamics 365 Customer Insights untuk memindahkan data ke LinkedIn Ads, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif berpotensi seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan LinkedIn Ads memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menghentikan penggunaan kefungsian ini.

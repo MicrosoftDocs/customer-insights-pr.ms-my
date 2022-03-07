@@ -1,22 +1,21 @@
 ---
-title: Ramalan pulangan transaksi
+title: Transaksi churn ramalan (mengandungi video)
 description: Ramalkan sama ada pelanggan mempunyai risiko kerana tidak lagi membeli produk atau perkhidmatan anda.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 9aa208ad94dcb6b1e0f110a3f974c56de00bbd07
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673056"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355670"
 ---
-# <a name="transaction-churn-prediction-preview"></a>Ramalan pulangan transaksi (pratonton)
+# <a name="transaction-churn-prediction"></a>Ramalan pulangan transaksi
 
 Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membeli produk atau perkhidmatan anda dalam tetingkap masa tertentu. Anda boleh mencipta ramalan pulangan baharu pada **Kecerdasan** > **Ramalan**. Pilih **Ramalan saya** untuk melihat ramalan lain yang telah anda cipta. 
 
@@ -25,7 +24,7 @@ Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membe
 Untuk persekitaran berdasarkan akaun perniagaan, kita boleh meramalkan pulangan transaksi untuk akaun dan juga kombinasi akaun dan satu lagi tahap maklumat seperti kategori produk. Menambahkan dimensi boleh membantu mengetahui cara berkemungkinan akaun tersebut "Contoso" akan berhenti membeli kategori produk "alat tulis pejabat." Selain itu, untuk akaun perniagaan, kami juga boleh menggunakan AI untuk menjana senarai sebab yang berpotensi mengapa akaun berkemungkinan untuk pulangan untuk kategori maklumat peringkat kedua.
 
 > [!TIP]
-> Cuba tutorial untuk ramalan transaksi pulangan menggunakan data sampel: [Panduan sampel ramalan transaksi pulangan (pratonton)](sample-guide-predict-transactional-churn.md).
+> Cuba tutorial untuk transaksi churn ramalan menggunakan data sampel: [Transaksi churn ramalan panduan sampel](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -101,12 +100,12 @@ Untuk persekitaran berdasarkan akaun perniagaan, kita boleh meramalkan pulangan 
 
 1. Dalam Customer Insights, pergi ke **Kepintaran** > **Ramalan**.
 
-1. Pilih jubin **Model pulangan pelanggan (pratonton)** dan pilih **Gunakan model ini**.
+1. **Pilih jubin model** churn Pelanggan dan pilih **Gunakan model ini**.
 
 1. Dalam anak tetingkap **Model pulangan pelanggan**, pilih **Transaksi** dan pilih **Mari Bermula**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Syot layar dengan transaksi dipilih pilihan dalam tetingkap model pulangan Pelanggan.":::
-
+ 
 ### <a name="name-model"></a>Model nama
 
 1. Berikan nama untuk model bagi membezakannya daripada model lain.
@@ -117,11 +116,11 @@ Untuk persekitaran berdasarkan akaun perniagaan, kita boleh meramalkan pulangan 
 
 ### <a name="define-customer-churn"></a>Takrifkan pulangan pelanggan
 
-1. Tetapkan tetingkap hari untuk meramalkan pulangan bagi **Mengenal pasti pelanggan yang boleh memberikan pulangan dalam medan** seterusnya. Sebagai contoh, ramalkan risiko pulangan untuk pelanggan anda sepanjang 90 hari yang akan datang untuk menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih panjang atau lebih pendek boleh menjadikan lebih sukar untuk menangani faktor dalam profil risiko pulangan anda, tetapi ia bergantung kepada keperluan perniagaan khusus anda.
+1. **Tetapkan tetingkap ramalan**. Sebagai contoh, ramalkan risiko pulangan untuk pelanggan anda sepanjang 90 hari yang akan datang untuk menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih panjang atau lebih pendek boleh menjadikan lebih sukar untuk menangani faktor dalam profil risiko pulangan anda, tetapi ia bergantung kepada keperluan perniagaan khusus anda.
    >[!TIP]
-   > Anda boleh memilih **Simpan dan tutup** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
+   > Anda boleh memilih **Simpan draf** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
 
-1. Masukkan bilangan hari untuk mentakrifkan pulangan dalam **Pelanggan telah mendapat pulangan jika mereka tidak membuat pembelian dalam:** medan. Sebagai contoh, jika pelanggan tidak membuat pembelian dalam tempoh 30 hari yang lalu, mereka mungkin dianggap sebagai telah memberikan pulangan untuk perniagaan anda. 
+1. Masukkan bilangan hari untuk mentakrifkan churn dalam **medan definisi** Churn. Sebagai contoh, jika pelanggan tidak membuat pembelian dalam tempoh 30 hari yang lalu, mereka mungkin dianggap sebagai telah memberikan pulangan untuk perniagaan anda. 
 
 1. Pilih **Seterusnya** untuk teruskan.
 
@@ -129,19 +128,16 @@ Untuk persekitaran berdasarkan akaun perniagaan, kita boleh meramalkan pulangan 
 
 1. Pilih **Tambah data** dan pilih jenis aktiviti pada anak tetingkap sisi yang mengandungi transaksi yang diperlukan atau maklumat sejarah pembelian.
 
-1. Di bawah **Pilih aktiviti**, pilih aktiviti khusus daripada aktiviti terpilih yang anda mahu pengiraan itu difokuskan.
+1. Di bawah **Pilih aktiviti**, pilih aktiviti tertentu daripada jenis aktiviti yang dipilih yang anda mahu pengiraan difokuskan.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Anak tetingkap sisi menunjukkan pemilihan aktiviti tertentu di bawah jenis semantik.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Anak tetingkap sisi menunjukkan pemilihan aktiviti tertentu di bawah jenis semantik.":::
 
-1. Jika anda belum memetakan aktiviti pada jenis semantik lagi, pilih **Edit** untuk berbuat demikian. Pengalaman berpandu untuk memetakan aktiviti semantik terbuka. Petakan data anda kepada medan yang sepadan dalam jenis aktiviti yang dipilih.
+   Jika anda belum memetakan aktiviti pada jenis semantik lagi, pilih **Edit** untuk berbuat demikian. Pengalaman berpandu untuk memetakan aktiviti semantik terbuka. Petakan data anda kepada medan yang sepadan dalam jenis aktiviti yang dipilih.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Halaman tetapan jenis aktiviti.":::
+1. Petakan atribut semantik pada medan yang diperlukan untuk menjalankan model. Jika medan di bawah tidak diisikan, konfigurasikan hubungan daripada entiti sejarah pembelian anda kepada entiti *Pelanggan*. Pilih **Simpan**.
 
-1. Selepas pemetaan aktiviti pada jenis semantik yang sepadan, pilih **Seterusnya** untuk teruskan
+1. **Dalam langkah Tambah data** yang diperlukan, pilih **Berikut** untuk meneruskan jika anda tidak mahu menambah lebih banyak aktiviti.
 
-1. Petakan atribut semantik pada medan yang diperlukan untuk menjalankan model. Jika medan di bawah tidak diisikan, konfigurasikan hubungan daripada entiti sejarah pembelian anda kepada entiti *Pelanggan*.
-
-1. Pilih **Seterusnya**.
 
 # <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 

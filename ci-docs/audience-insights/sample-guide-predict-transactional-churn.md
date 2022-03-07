@@ -3,26 +3,25 @@ title: Panduan sampel ramalan pulangan transaksi
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pulangan transaksi luar kotak.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 72f3bd1f32b813fef04dc14618331e3d707b5052
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556272"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354612"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan transaksi (pratonton)
+# <a name="transactional-churn-prediction-sample-guide"></a>Panduan sampel ramalan pulangan transaksi
 
-Panduan ini akan menerangkan kepada anda contoh menyeluruh ramalan Pulangan Transaksi dalam Customer Insights menggunakan data yang disediakan di bawah. Semua data yang digunakan dalam panduan ini bukan data pelanggan sebenar dan merupakan sebahagian daripada set data Contoso yang terdapat dalam persekitaran *Demo* dalam Langganan Customer Insights anda.
+Panduan ini akan menerangkan kepada anda contoh menyeluruh ramalan Pulangan Transaksi dalam Customer Insights menggunakan data yang disediakan di bawah. Semua data yang digunakan dalam panduan ini bukan data pelanggan sebenar dan merupakan sebahagian daripada set data Contoso yang ditemui dalam persekitaran *Demo* dalam Langganan Customer Insights anda.
 
 ## <a name="scenario"></a>Senario
 
-Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang menjual melalui laman web Contoso Coffee mereka. Matlamat mereka adalah untuk mengetahui pelanggan yang biasanya membeli produk mereka secara tetap, akan berhenti menjadi pelanggan aktif dalam masa 60 hari akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
+Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang mereka jual melalui laman web Contoso Coffee mereka. Matlamat mereka adalah untuk mengetahui pelanggan yang biasanya membeli produk mereka secara tetap, akan berhenti menjadi pelanggan aktif dalam masa 60 hari akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -31,7 +30,7 @@ Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti t
 
 ## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
-Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport sumber data menggunakan penyambung Power Query](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
+Semak semula artikel [tentang pengambilan](data-sources.md) data dan [mengimport sumber data menggunakan Power Query penyambung](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inges data pelanggan daripada platform e-Dagang
 
@@ -46,8 +45,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **DateOfBirth**: Tarikh
    - **CreatedOn**: Zon waktu tarikh
 
-   [!div class="mx-imgBorder"]
-   ![Tukar Tarikh Lahir kepada Tarikh.](media/ecommerce-dob-date.PNG "ubah tarikh lahir kepada tarikh ini")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Tukar Tarikh Lahir kepada Tarikh.":::
 
 1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
 
@@ -150,7 +148,7 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tugas 3 - Konfigurasikan ramalan pulangan transaksi
 
-Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat artikel [Ramalan pulangan langganan (pratonton)](predict-subscription-churn.md). 
+Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat [artikel Langganan ramalan](predict-subscription-churn.md). 
 
 1. Pergi ke **Kecerdasan** > **Teroka** dan pilih untuk menggunakan **Model pulangan pelanggan**.
 

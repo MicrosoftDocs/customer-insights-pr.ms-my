@@ -3,20 +3,22 @@ title: Langganan panduan sampel ramalan pulangan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pulangan langganan luar kotak.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595529"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355624"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan langganan (pratonton)
+# <a name="subscription-churn-prediction-sample-guide"></a>Langganan panduan sampel ramalan pulangan
 
 Kami akan menerangkan kepada anda contoh ramalan pulangan langganan hujung ke hujung menggunakan data sampel yang diberikan di bawah. 
 
@@ -31,7 +33,7 @@ Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti t
 
 ## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
-Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport sumber data menggunakan penyambung Power Query](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
+Semak semula artikel [tentang pengambilan](data-sources.md) data dan [mengimport sumber data menggunakan Power Query penyambung](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inges data pelanggan daripada platform e-Dagang
 
@@ -128,9 +130,9 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
 
-1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : e-Dagang** sebagai sumber utama dan menyertakan semua rekod.
+1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
 
-1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan menyertakan semua rekod.
+1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Menyatukan padanan e-Dagang dan Kesetiaan.":::
 
@@ -138,16 +140,16 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Tambah syarat pertama anda menggunakan FullName.
 
-   * Untuk eCommerceContacts pilih **FullName** dalam senarai juntai bawah.
-   * Untuk loyCustomers, pilih **FullName** dalam senarai juntai bawah.
+   * Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
+   * Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
    * Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
    * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
 1. Masukkan nama **FullName, Email** untuk peraturan baharu.
 
    * Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   * Untuk entiti eCommerceContacts, pilih **EMail** dalam senarai juntai bawah.
-   * Untuk entiti loyCustomers, pilih **EMail** dalam senarai juntai bawah. 
+   * Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
+   * Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah. 
    * Biarkan Menormalkan kosong. 
    * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
@@ -168,7 +170,7 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tugas 3 - Konfigurasikan ramalan pulangan langganan
 
-Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat artikel [Ramalan pulangan langganan (pratonton)](predict-subscription-churn.md). 
+Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat [artikel Langganan ramalan](predict-subscription-churn.md). 
 
 1. Pergi ke **Kecerdasan** > **Teroka** dan pilih untuk menggunakan **Model pulangan pelanggan**.
 

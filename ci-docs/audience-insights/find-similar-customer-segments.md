@@ -1,24 +1,29 @@
 ---
-title: Cari pelanggan sama dengan AI
+title: Cari pelanggan serupa dengan AI (mengandungi video)
 description: Cari segmen pelanggan yang serupa dengan kepintaran buatan.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596786"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355256"
 ---
 # <a name="similar-customers-preview"></a>Pelanggan yang serupa (pratonton)
 
 Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan menggunakan kepintaran buatan. Anda perlu mempunyai sekurang-kurangnya satu segmen dicipta untuk menggunakan ciri ini. Mengembangkan kriteria segmen sedia ada membantu mencari pelanggan yang serupa kepada segmen itu.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Cari pelanggan yang serupa* menggunakan tujuan automatik untuk menilai data dan membuat ramalan berasaskan pada data itu dan dengan itu mempunyai keupayaan untuk digunakan sebagai kaedah profiling seperti istilah yang ditakrifkan oleh Peraturan Perlindungan Data Umum (“GDPR”). Pelanggan menggunakan ciri ini untuk memproses data berkemungkinan tertakluk pada GDPR atau undang-undang atau peraturan yang lain. Anda bertanggungjawab untuk memastikan bahawa penggunaan Dynamics 365 Customer Insights anda, termasuk ramalan, mematuhi semua undang-undang dan peraturan yang berkaitan, termasuk undang-undang yang berkaitan dengan privasi, data peribadi, data biometrik, perlindungan data dan kerahsiaan komunikasi.
@@ -50,7 +55,7 @@ Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan men
 Selepas memproses segmen yang serupa, anda akan menemui segmen baharu disenaraikan pada halaman **Segmen**.
 
 > [!div class="mx-imgBorder"]
-> ![Segmen pelanggan yang serupa](media/expanded-segment.png "Segmen pelanggan yang serupa")
+> ![Segmen pelanggan yang serupa.](media/expanded-segment.png "Segmen pelanggan yang serupa")
 
 Pilih **Pandangan** dalam bar tindakan untuk membuka butiran segmen. Pandangan ini mengandungi maklumat tentang pengedaran merentas [skor persamaan](#about-similarity-scores). Anda juga menemui nilai skor persamaan dalam **Pratonton ahli segment**.
 

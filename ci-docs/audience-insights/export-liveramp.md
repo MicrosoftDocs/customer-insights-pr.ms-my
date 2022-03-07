@@ -1,20 +1,19 @@
 ---
 title: LiveRamp penyambung
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760338"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226363"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Eksport segmen ke LiveRamp&reg; (pratonton)
 
@@ -56,9 +55,9 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Dalam medan **Pilih pengecam kunci anda**, pilih **E-mel**,  **Nama dan alamat**, atau **Telefon** untuk menghantar ke LiveRamp untuk penyelesaian identiti.
    > [!div class="mx-imgBorder"]
-   > ![Penyambung LiveRamp dengan atribut pemetaan](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
+   > ![Penyambung LiveRamp dengan atribut pemetaan.](media/export-liveramp-segments.png "Penyambung LiveRamp dengan atribut pemetaan")
 
-1. Petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk pengecam kunci yang dipilih.
+1. Peta atribut yang sepadan daripada entiti *Pelanggan* anda untuk pengecam kunci yang dipilih.
 
 1. Pilih **Tambah atribut** untuk memetakan lebih banyak atribut untuk dihantar ke LiveRamp.
 

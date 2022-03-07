@@ -2,25 +2,30 @@
 title: Segmen dalam wawasan khalayak
 description: Gambaran keseluruhan pada segmen dan cara mencipta dan mengurus segmen.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978070"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355994"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
 Segmen membolehkan anda mengumpulkan pelanggan berdasarkan atribut demografi, transaksi atau tingkah laku. Anda boleh menggunakan segmen untuk kempen promosi sasaran, aktiviti jualan dan tindakan sokongan pelanggan untuk mencapai matlamat perniagaan anda.
 
-Profil pelanggan yang sepadan dengan penapis bagi definisi segmen dirujuk sebagai *ahli* segmen. Sesetengah [had perkhidmatan](service-limits.md) diguna pakai.
+Profil pelanggan yang sepadan dengan penapis bagi definisi segmen dirujuk sebagai *ahli* segmen. Sesetengah [had perkhidmatan](/dynamics365/customer-insights/service-limits) diguna pakai.
 
 ## <a name="create-a-new-segment"></a>Cipta bahagian baharu
 
@@ -106,4 +111,4 @@ Bahagian bawah mengandungi senarai ahli bahagian.
 >Senarai ialah pratonton bagi pemadanan ahli bahagian dan menunjukkan 100 rekod pertama bahagian anda supaya anda boleh segera menilainya dan menyemak semula definisinya jika perlu. Untuk melihat semua rekod yang sepadan, anda perlu [mengeksport bahagian](export-destinations.md).
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,22 +1,21 @@
 ---
 title: Eksport data Customer Insight kepada Campaign Monitor
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan eksport ke Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7fd6af37b40e21d030a1ace0cd5f8fcc7861c3fa
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: be9c92a087ab4664077d18fe8585bf96715c1535
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760592"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228164"
 ---
-# <a name="export-segment-lists-to-campaign-monitor-preview"></a>Eksport senarai segmen ke Campaign Monitor (pratonton)
+# <a name="export-segments-to-campaign-monitor-preview"></a>Eksport segmen ke Campaign Monitor (pratonton)
 
 Eksport segmen profil pelanggan yang disatukan ke Campaign Monitor dan gunakannya untuk aktiviti pemasaran.
 
@@ -28,10 +27,10 @@ Eksport segmen profil pelanggan yang disatukan ke Campaign Monitor dan gunakanny
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh mengeksport hingga 1 juta profil setiap eksport ke Campaign Monitor.
+- Anda boleh mengeksport hingga 1 juta profil pelanggan setiap eksport untuk Campaign Monitor.
 - Mengeksport ke Campaign Monitor adalah terhad kepada segmen.
-- Mengeksport hingga 1 juta profil ke Campaign Monitor boleh mengambil masa hingga 20 minit untuk diselesaikan. 
-- Bilangan profil yang boleh anda eksport ke Campaign Monitor adalah bergantung dan terhad pada kontrak anda dengan Campaign Monitor.
+- Mengeksport hingga 1 profil pelanggan kepada Campaign Monitor boleh mengambil masa hingga 20 minit untuk dilengkapkan. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada Campaign Monitor bergantung dan terhad pada kontrak anda dengan Campaign Monitor.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Sediakan sambungan ke Campaign Monitor
 
@@ -66,7 +65,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 1. Masukkan [**ID Senarai Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id) anda.    
    [Jana kekunci API](https://www.campaignmonitor.com/api/getting-started/) daripada **Tetapan Akaun** dalam Campaign Monitor dahulu untuk melihat ID senarai API.  
 
-3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Campaign Monitor.
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Campaign Monitor.
 
 1. Pilih **Simpan**.
 

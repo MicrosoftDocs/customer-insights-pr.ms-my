@@ -1,20 +1,19 @@
 ---
-title: Eksport data Customer Insights ke Azure Synapse Analytics
-description: Ketahui cara mengkonfigurasikan sambungan ke Azure Synapse Analytics.
-ms.date: 04/12/2021
+title: Eksport Data Customer Insights ke Azure Synapse Analytics
+description: Ketahui cara mengkonfigurasi sambungan ke Azure Synapse Analytics.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
-ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
-ms.translationtype: HT
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "6327375"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231323"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (Pratonton)
 
@@ -49,9 +48,11 @@ Dalam Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurasikan sambungan
 
+Untuk mencipta sambungan, prinsipal perkhidmatan dan akaun pengguna dalam Wawasan Pelanggan memerlukan **keizinan Pembaca** pada *kumpulan* sumber tempat ruang kerja Synapse Analytics berada. Selain itu, prinsipal perkhidmatan dan pengguna di ruang kerja Synapse Analytics memerlukan **keizinan Pentadbir** Sinapse. 
+
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pilih **Tambah sambungan** dan pilih **Azure Synapse Analytics** atau pilih **Sediakan** pada jubin **Azure Synapse Analytics** untuk mengkonfigurasi sambungan.
+1. Pilih **Tambah sambungan** dan pilih **Azure Synapse Analytics** atau pilih **Sediakan** pada **Azure Synapse Analytics** jubin untuk mengkonfigurasi sambungan.
 
 1. Berikan sambungan anda nama yang dikenali dalam medan Nama paparan. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
@@ -63,13 +64,13 @@ Dalam Azure:
 
 ### <a name="configure-an-export"></a>Konfigurasikan eksport
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk mengkonfigurasikan eksport dengan sambungan dikongsi, anda memerlukan sekurang-kurangnya **keizinan Penyumbang** dalam Wawasan Pelanggan. Untuk maklumat lanjut, lihat [keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
 
 1. Pergi ke **Data** > **Eksport**.
 
 1. Untuk mencipta eksport baharu, pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada bahagian **Azure Synapse Analytics**. Jika anda tidak melihat nama bahagian ini, tiada [sambungan](connections.md) jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada **Azure Synapse Analytics** seksyen. Jika anda tidak melihat nama bahagian ini, tiada [sambungan](connections.md) jenis ini tersedia untuk anda.
 
 1. Sediakan **Nama paparan** yang dikenali untuk eksport dan **Nama pangkalan data** anda.
 
@@ -82,6 +83,8 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
 Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).
+
+Untuk bertanya data yang dieksport ke Analitis Synapse, anda memerlukan **capaian Pembaca** Data Blob Storan ke storan destinasi pada ruang kerja eksport. 
 
 ### <a name="update-an-export"></a>Kemas kini eksport
 

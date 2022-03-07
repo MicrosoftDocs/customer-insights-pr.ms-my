@@ -4,22 +4,21 @@ author: m-hartmann
 description: Membiasakan diri dengan pengalaman jalanan pertama Dynamics 365 Customer Insights dan menerokai keupayaannya.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673475"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350142"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Mulakan selepas pembelian Customer Insights
 
 Artikel ini menerangkan cara untuk anda mengambil langkah pertama dalam Dynamics 365 Customer Insights selepas organisasi anda membeli langganan. Jika anda ingin membeli Customer Insights, pilihan kenalan kami disenaraikan di [laman web Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Selepas membeli lesen langganan untuk Customer Insights, pentadbir global penyewa Microsoft 365 menerima e-mel yang menjemput mereka untuk mencipta persekitaran. 
+Selepas membeli lesen langganan untuk Wawasan Pelanggan, pentadbir Microsoft 365 global penyewa menerima e-mel yang menjemput mereka untuk mencipta persekitaran. 
 
 Customer Insights telah dilesenkan setiap penyewa dan termasuk berbilang keupayaan. Anda boleh membeli lebih banyak kapasiti dan lesen untuk meningkatkan kuota lalai. 
 - [Gambaran keseluruhan penentuan harga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ Pengalaman jalanan pertama membantu anda memilih fokus awal anda dengan Customer
 
 ## <a name="create-your-own-environment"></a>Cipta persekitaran anda sendiri
 
-Selepas daftar masuk pertama anda, anda akan nampak persekitaran dengan data sampel. Anda boleh menggunakan data tersebut untuk menerokai ciri dan membiasakan dengan aplikasi. Untuk menggunakan data anda sendiri, anda perlu mencipta persekitaran dalam keupayaan yang anda mahu bekerja.
-
-- [Cipta persekitaran dalam cerapan khalayak.](audience-insights/get-started-paid.md)
-- [Cipta persekitaran dalam penglibatan cerapan.](engagement-insights/create-new-environment.md) 
+Selepas daftar masuk pertama anda, anda akan nampak persekitaran dengan data sampel. Anda boleh menggunakan data tersebut untuk menerokai ciri dan membiasakan dengan aplikasi. Untuk menggunakan data anda sendiri, anda perlu [mencipta persekitaran](audience-insights/get-started-paid.md).
 
 
 

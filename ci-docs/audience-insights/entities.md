@@ -1,62 +1,89 @@
 ---
 title: Entiti dan set data
 description: Lihat data pada halaman Entiti.
-ms.date: 04/16/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049405"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355327"
 ---
 # <a name="entities-in-audience-insights"></a>Entiti dalam wawasan khalayak
 
 Selepas [mengkonfigurasi sumber data anda](data-sources.md), pergi ke halaman **Entiti** untuk menilai kualiti data yang dimasukkan. Entiti dianggap sebagai set data. Berbilang keupayaan Dynamics 365 Customer Insights dibina sekitar entiti ini. Mengkajinya semula dengan teliti boleh membantu anda mengesahkan output keupayaan tersebut.
 
-Halaman **Entiti** menyenaraikan entiti dan termasuk beberapa lajur:
+Halaman **Entiti** menyenaraikan entiti dan termasuk lajur ini:
 
-- **Nama**: Nama entiti data anda. Jika anda nampak simbol amaran di sebelah nama entiti, ia bermaksud data untuk entiti tersebut tidak berjaya dimuatkan.
-- **Sumber**: Jenis sumber data yang memasukkan entiti
-- **Dicipta oleh**: Nama orang yang mencipta entiti
-- **Dicipta**: Tarikh dan masa penciptaan entiti
-- **Dikemas kini oleh**: Nama orang yang mengemas kini entiti
-- **Kemas kini terakhir**: Tarikh dan masa kemas kini yang terakhir bagi entiti
-- **Segar semula terakhir**: Tarikh dan masa data terakhir segar semula
+- **Nama**: Nama entiti data. Jika anda nampak simbol amaran di sebelah nama entiti, ia bermaksud data untuk entiti tersebut tidak berjaya dimuatkan.
+- **Sumber**: Jenis sumber data yang menelan entiti.
+- **Dikemas kini**: Masa entiti terakhir dikemas kini.
+- **Status**: Butiran tentang kemas kini terakhir entiti.
 
-## <a name="exploring-a-specific-entitys-data"></a>Menerokai data entiti khusus
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-Pilih entiti untuk menerokai medan dan rekod yang berbeza termasuk dalam entiti tersebut.
+## <a name="explore-a-specific-entitys-data"></a>Terokai data entiti khusus
 
-> [!div class="mx-imgBorder"]
-> ![Pilih entiti](media/data-manager-entities-data.png "Pilih entiti")
+1. Dalam wawasan khalayak, pergi ke **Data** > **Entiti**.
+1. **Daripada halaman Entiti**, pilih entiti untuk membuka halaman butiran.  
+1. Terokai medan dan rekod yang berbeza yang disertakan untuk entiti tersebut.
 
-- Tab **Data** menunjukkan butiran penyenaraian jadual tentang rekod individu entiti.
+- Tab **Atribut** dipilih secara lalai dan menunjukkan jadual untuk menyemak butiran bagi entiti yang dipilih seperti nama medan, jenis data dan jenis. Lajur **Jenis** menunjukkan jenis berkaitan Model Data Lazim, yang mana sama ada dikenal pasti secara automatik oleh sistem atau [dipetakan secara manual](map-entities.md) oleh pengguna. Jenis ini ialah jenis semantik yang boleh berbeza daripada jenis data atribut. Sebagai contoh, medan *E-mel* di bawah mempunyai jenis data *Teks* tetapi jenis Common Data Model (semantik) mungkin *E-mel* atau *EmailAddress*.
 
 > [!div class="mx-imgBorder"]
-> ![Jadual medan](media/data-manager-entities-fields.PNG "Jadual medan")
-
-- Tab **Atribut** dipilih secara lalai dan menunjukkan jadual untuk menyemak butiran bagi entiti yang dipilih seperti nama medan, jenis data dan jenis. Lajur **Jenis** menunjukkan jenis berkaitan Model Data Lazim, yang mana sama ada dikenal pasti secara automatik oleh sistem atau [dipetakan secara manual](map-entities.md) oleh pengguna. Ini ialah jenis semantik yang mungkin berbeza daripada jenis data atribut—contohnya, medan *e-mel* di bawah mempunyai jenis data *Teks* tetapi jenis Model Data Lazim (semantik) berkemungkinan *E-mel* atau *AlamatE-mel*.
+> ![Jadual medan.](media/data-manager-entities-fields.PNG "Jadual medan")
 
 > [!NOTE]
-> Kedua-dua jadual menunjukkan hanya sampel data entiti anda. Untuk melihat set data lengkap, pergi ke halaman **Sumber data**, pilih entiti, pilih **Edit** dan lihat data entiti ini dengan editor Power Query seperti yang diterangkan dalam [Sumber data](data-sources.md).
+> Halaman ini hanya menunjukkan sampel data entiti anda. Untuk melihat set data penuh, pergi ke **halaman Sumber** Data, pilih entiti, pilih **Edit**, kemudian lihat data entiti ini dengan Power Query editor seperti yang dijelaskan dalam [sumber Data](data-sources.md).
 
-Untuk mengetahui lebih lanjut tentang data yang dimasukkan di dalam entiti, lajur **Ringkasan** menyediakan anda dengan beberapa ciri penting data seperti batal, nilai yang hilang, nilai unik, kiraan dan pengagihan, sebagaimana berkaitan dengan data anda.
-
-Pilih ikon carta untuk melihat ringkasan data.
+Untuk mengetahui lebih lanjut tentang data yang dimasukkan di dalam entiti, lajur **Ringkasan** menyediakan anda dengan beberapa ciri penting data seperti batal, nilai yang hilang, nilai unik, kiraan dan pengagihan, sebagaimana berkaitan dengan data anda. Pilih ikon carta untuk melihat ringkasan data.
 
 > [!div class="mx-imgBorder"]
-> ![Simbol ringkasan](media/data-manager-entities-summary.png "Jadual ringkasan data")
+> ![Simbol ringkasan.](media/data-manager-entities-summary.png "Jadual ringkasan data")
 
-### <a name="next-step"></a>Langkah seterusnya
+- Tab **Data** menunjukkan butiran penyenaraian jadual tentang rekod individu entiti. Butiran yang disenaraikan bergantung pada jenis data entiti.
 
-Lihat topik [Menyatukan](data-unification.md) untuk mengetahui cara untuk *memetakan*, *padan* dan *menggabungkan* data yang dimasukkan.
+> [!div class="mx-imgBorder"]
+> ![Pilih entiti.](media/data-manager-entities-data.png "Pilih entiti")
+
+- Tab **Laporan** (tersedia untuk sesetengah entiti) membolehkan anda menggambarkan data anda dengan mencipta laporan dan menyertakan lajur ini:
+
+  - **Nama laporan**: Nama laporan.
+  - **Dicipta oleh**: Nama orang yang mencipta entiti.
+  - **Dicipta**: Tarikh dan masa penciptaan entiti.
+  - **Diedit oleh**: Nama orang yang mengubah suai entiti.
+  - **Diedit**: Tarikh dan masa pengubahsuaian entiti. 
+
+## <a name="entity-specific-information"></a>Maklumat entiti tertentu
+
+Bahagian berikut menyediakan maklumat tentang beberapa entiti yang dicipta sistem.
+
+### <a name="corrupted-data-sources"></a>Sumber data rosak
+
+Medan daripada sumber data yang diinges boleh mengandungi data yang rosak. Rekod dengan medan yang rosak terdedah dalam entiti yang dicipta sistem. Mengetahui tentang rekod rosak membantu anda mengenal pasti data yang perlu disemak dan dikemas kini pada sistem sumber. Selepas penyegaran semula sumber data seterusnya, rekod yang dibetulkan diinjes kepada Customer Insights dan diserahkan kepada proses hiliran. 
+
+Sebagai contoh, lajur 'hari jadi' mempunyai jenis data yang ditetapkan sebagai 'tarikh'. Rekod pelanggan mempunyai hari lahir mereka dimasukkan sebagai '01/01/19777'. Sistem akan membenderakan rekod ini sebagai rosak. Seseorang kini boleh menukar hari lahir dalam sistem sumber kepada '1977'. Selepas penyegaran semula sumber data automatik, medan kini mempunyai format yang sah dan rekod akan dialih keluar daripada entiti yang rosak. 
+
+Pergi ke **Data** > **Entiti** dan cari entiti yang rosak dalam bahagian **Sistem**. Penamaan skema entiti yang rosak: 'DataSourceName_EntityName_corrupt'. Pilih entiti yang rosak untuk mengenal pasti semua medan yang rosak dan sebab pada tahap rekod individu.
+> [!div class="mx-imgBorder"]
+> ![Sebab rasuah.](media/corruption-reason.png "Sebab Rasuah")
+
+Customer Insights masih memproses rekod yang rosak. Walau bagaimanapun, ia mungkin menyebabkan isu semasa bekerja dengan data disatukan.
+
+Pemeriksaan berikut berjalan pada data yang diinjes untuk mendedahkan rekod rosak: 
+
+- Nilai medan tidak sepadan dengan jenis data lajurnya.
+- Medan mengandungi aksara yang menyebabkan lajur tidak sepadan dengan skema yang dijangkakan. Sebagai contoh: sebut harga yang diformatkan dengan salah, sebut harga yang tidak dilepaskan atau aksara baris baharu.
+- Jika terdapat lajur datetime/date/datetimeoffset, formatnya perlu dinyatakan dalam model jika ia tidak mengikuti format ISO standard.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,24 +1,23 @@
 ---
 title: Percubaan Pembelajaran Mesin Azure
 description: Gunakan model berasaskan Pembelajaran Mesin Azure dalam Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
-ms.service: customer-insights
+ms.date: 12/02/2021
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267917"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228899"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berasaskan Pembelajaran Mesin Azure
 
-Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk membina model pembelajaran mesin yang boleh menjana Insights perniagaan tambahan. Customer Insights bersepadu dengan Studio Pembelajaran Mesin (klasik) dan Pembelajaran Mesin Azure untuk menggunakan model tersuai anda sendiri. Rujuk [percubaan Studio Pembelajaran Mesin (klasik)](machine-learning-studio-experiments.md) bagi contoh percubaan yang dibina pada Studio Pembelajaran Mesin (klasik). 
+Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk membina model pembelajaran mesin yang boleh menjana Insights perniagaan tambahan. Customer Insights disepadukan dengan Pembelajaran Mesin Azure untuk menggunakan model tersuai sendiri.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -29,30 +28,30 @@ Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk memb
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Sediakan ruang kerja Pembelajaran Mesin Azure
 
-1. Lihat [cipta ruang kerja Pembelajaran Mesin Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) bagi pilihan berbeza untuk mencipta ruang kerja. Untuk prestasi terbaik, cipta ruang kerja dalam rantau Azure yang geografi paling hampir dengan persekitaran Customer Insights anda.
+1. Lihat [cipta ruang kerja Pembelajaran Mesin Azure](/azure/machine-learning/concept-workspace#-create-a-workspace) bagi pilihan berbeza untuk mencipta ruang kerja. Untuk prestasi terbaik, cipta ruang kerja dalam rantau Azure yang geografi paling hampir dengan persekitaran Customer Insights anda.
 
-1. Akses ruang kerja anda melalui [Studio Pembelajaran Mesin Azure](https://ml.azure.com/). Terdapat beberapa [cara untuk berinteraksi](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) dengan ruang kerja anda.
+1. Akses ruang kerja anda melalui [Studio Pembelajaran Mesin Azure](https://ml.azure.com/). Terdapat beberapa [cara untuk berinteraksi](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) dengan ruang kerja anda.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Gunakan pereka bentuk Pembelajaran Mesin Azure
 
-Pereka bentuk Pembelajaran Mesin Azure menyediakan kanvas visual, tempat anda boleh menyeret dan melepaskan set data dan modul, serupa dengan Studio Pembelajaran Mesin (klasik). Talian paip kelompok yang dicipta daripada pereka bentuk boleh disepadukan ke dalam Customer Insights jika ia dikonfigurasikan dengan sewajarnya. 
+Pereka bentuk Azure Pembelajaran Mesin menyediakan kanvas visual di mana anda boleh menyeret dan melepaskan set data dan modul. Talian paip kelompok yang dicipta daripada pereka bentuk boleh disepadukan ke dalam Customer Insights jika ia dikonfigurasikan dengan sewajarnya. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Gunakan SDK Pembelajaran Mesin Azure
 
-Ahli sains data dan pembangun AI menggunakan [SDK Pembelajaran Mesin Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) untuk membina aliran kerja pembelajaran mesin. Buat masa ini, model yang dilatih menggunakan SDK tidak boleh disepadukan secara langsung dengan Customer Insights. Talian paip inferens kelompok yang menggunakan model tersebut diperlukan untuk penyepaduan dengan Customer Insights.
+Ahli sains data dan pembangun AI menggunakan [SDK Pembelajaran Mesin Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) untuk membina aliran kerja pembelajaran mesin. Buat masa ini, model yang dilatih menggunakan SDK tidak boleh disepadukan secara langsung dengan Customer Insights. Talian paip inferens kelompok yang menggunakan model tersebut diperlukan untuk penyepaduan dengan Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Keperluan talian paip kelompok untuk bersepadu dengan Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfigurasi set data
 
-Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Insights ke talian paip inferens kelompok anda. Set data ini perlu didaftarkan dalam ruang kerja. Buat masa ini, kami hanya menyokong [set data berjadual](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .csv. Set data yang sesuai dengan data entiti perlu diparameterkan sebagai parameter talian paip.
+Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Insights ke talian paip inferens kelompok anda. Set data ini perlu didaftarkan dalam ruang kerja. Buat masa ini, kami hanya menyokong [set data berjadual](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .csv. Set data yang sesuai dengan data entiti perlu diparameterkan sebagai parameter talian paip.
    
 * Parameter set data dalam Pereka Bentuk
    
      Dalam pereka bentuk, buka **Pilih Lajur dalam Set Data** dan pilih **Tetapkan sebagai parameter talian paip**, tempat anda menyediakan nama untuk parameter.
 
      > [!div class="mx-imgBorder"]
-     > ![Pemparameteran set data dalam pereka bentuk](media/intelligence-designer-dataset-parameters.png "Pemparameteran set data dalam pereka bentuk")
+     > ![Pemparameteran set data dalam pereka bentuk.](media/intelligence-designer-dataset-parameters.png "Pemparameteran set data dalam pereka bentuk")
    
 * Parameter set data dalam SDK (Python)
    
@@ -76,9 +75,9 @@ Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Ins
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Import data talian paip ke dalam Customer Insights
 
-* Pereka bentuk menyediakan [modul Data Eksport](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
+* Pereka bentuk menyediakan [modul Data Eksport](/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
    > [!div class="mx-imgBorder"]
-   > ![Eksport Konfigurasi Modul Data](media/intelligence-designer-importdata.png "Eksport Konfigurasi Modul Data")
+   > ![Eksport Konfigurasi Modul Data.](media/intelligence-designer-importdata.png "Eksport Konfigurasi Modul Data")
    
 * Apabila menulis output inferens menggunakan kod, anda boleh memuat naik output kepada laluan dalam *storan data berdaftar* dalam ruang kerja. Jika laluan dan storan data adalah diparameterkan dalam talian paip, Customer insights akan dapat membaca dan mengimport output inferens. Buat masa ini, output berjadual tunggal dalam format csv disokong. Laluan mesti disertakan dengan direktori dan nama fail.
 

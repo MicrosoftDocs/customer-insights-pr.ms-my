@@ -3,18 +3,20 @@ title: Sambungan ke perkhidmatan lain daripada Customer Insights.
 description: Kongsi data ke perkhidmatan lain.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033229"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354395"
 ---
 # <a name="connections-preview-overview"></a>Gambaran keseluruhan sambungan (pratonton)
 
@@ -47,6 +49,7 @@ Untuk menambah sambungan, anda perlu mempunyai [keizinan pentadbir](permissions.
 1. Dalam anak tetingkap **Sediakan sambungan**, berikan butiran yang diperlukan. 
    1. **Nama paparan** dan jenis sambungan yang menerangkan sambungan. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan ini.
    1. Medan sebenar bergantung pada jenis perkhidmatan yang anda bersambung. Anda boleh mengetahui tentang butiran jenis sambungan khusus dalam artikel mengenai perkhidmatan sasaran.
+   1. Jika anda [gunakan Key Vault anda sendiri](use-azure-key-vault.md) untuk menyimpan rahsia, aktifkan **Gunakan Key Vault** dan pilih rahsia daripada senarai.
 
 1. Untuk mencipta sambungan, pilih **Simpan**.
 
@@ -93,3 +96,6 @@ Pengayaan dan eksport yang dialih menjadi tidak aktif. Anda mengaktifkan semula 
 
 1. Untuk mengesahkan pemadaman, pilih **Alih keluar**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Sediakan sambungan dengan rahsia yang diuruskan oleh Key Vault anda sendiri
+
+Sesetengah sambungan memerlukan rahsia seperti kekunci API atau kata laluan. Sesetengah sambungan menyokong rahsia yang disimpan dalam Key Vault anda sendiri. Ketahui lebih lanjut tentang sambungan yang disokong dan cara untuk menyediakan [Key Vault anda sendiri untuk cerapan khalayak](use-azure-key-vault.md).

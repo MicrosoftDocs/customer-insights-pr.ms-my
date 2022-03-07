@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645275"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353738"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Mari Bermula dengan keupayaan cerapan khalayak dalam Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ Kali pertama anda log masuk ke cerapan khalayak, anda boleh mengkonfigurasikan t
 
 Profil disatukan ialah asas untuk mendapatkan cerapan dan mengambil tindakan terhadap data. Bawa masuk data daripada pelbagai sumber dan jalankan proses penyatuan data untuk menggabungkan profil disatukan. Tentukan perhubungan antara entiti yang diinges dengan menggunakan ciri pengayaan untuk menambahkan maklumat pada profil. 
 
-1. Inges data dengan mencipta sumber data daripada pelbagai pilihan. Pilih antara [penyambung Power Query](connect-power-query.md), [folder Common Data Model](connect-common-data-model.md) atau [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Inges data dengan mencipta sumber data daripada pelbagai pilihan. Pilih antara [Power Query penyambung](connect-power-query.md), [folder](connect-common-data-model.md) Model Data Umum atau [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Jalankan [proses penyatuan data](data-unification.md) dengan melalui fasa [peta](map-entities.md), [padanan](match-entities.md), dan [gabungan](merge-entities.md).
 

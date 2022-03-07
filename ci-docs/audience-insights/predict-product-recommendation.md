@@ -1,22 +1,21 @@
 ---
 title: Ramalan pengesyoran produk
 description: Meramalkan produk yang pelanggan mungkin akan beli atau berinteraksi dengannya.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494550"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355762"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Ramalan pengesyoran produk (pratonton)
+# <a name="product-recommendation-prediction"></a>Ramalan pengesyoran produk
 
 Model pengesyoran produk mencipta set pengesyoran produk ramalan. Pengesyoran adalah berdasarkan tingkah laku pembelian sebelumnya dan pelanggan dengan corak pembelian yang sama. Anda boleh mencipta ramalan pengesyoran produk baru pada halaman **Kecerdasan** > **Ramalan**. Pilih **Ramalan saya** untuk melihat ramalan lain yang telah anda cipta.
 
@@ -54,7 +53,7 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
 
 > [!NOTE]
 > - Model ini memerlukan sejarah transaksi pelanggan anda. Takrifan transaksi agak fleksibel. Sebarang data yang menerangkan interaksi produk pengguna boleh berfungsi sebagai input. Sebagai contoh, membeli produk, mengambil kelas, atau menghadiri acara.
-> - Hanya satu entiti sejarah transaksi boleh dikonfigurasikan buat masa ini. Jika terdapat berbilang entiti pembelian, satukannya dalam Power Query sebelum pengingesan data.
+> - Hanya satu entiti sejarah transaksi boleh dikonfigurasikan buat masa ini. Jika terdapat berbilang entiti pembelian, kesatuan mereka sebelum Power Query pengambilan data.
 > - Jika butiran pesanan dan pesanan adalah entiti yang berbeza, gabungkannya sebelum menggunakan model. Model ini tidak berfungsi dengan hanya ID pesanan atau ID resit dalam entiti.
 
 
@@ -62,7 +61,7 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
 
 1. Dalam Customer Insights, pergi ke **Kepintaran** > **Ramalan**.
 
-1. Pilih jubin **Model pengesyoran produk (pratonton)** dan pilih **Gunakan model ini**.
+1. **Pilih jubin model** Pengesyoran produk dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
    > ![Jubin model Pengesyoran Produk dengan butang Gunakan model ini.](media/product-recommendation-usethismodel.PNG "Jubin model Pengesyoran Produk dengan butang Gunakan model ini")
 
@@ -79,11 +78,11 @@ Jika anda berminat untuk mencuba ciri ini tetapi tidak mempunyai data untuk mele
 1. Tetapkan **Bilangan produk** yang anda ingin cadangkan kepada pelanggan. Nilai ini bergantung kepada cara kaedah penghantaran anda mengisi data. Jika anda boleh mengesyorkan tiga produk, tetapkan nilai ini dengan sewajarnya.
    
    >[!TIP]
-   > Anda boleh memilih **Simpan dan tutup** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui draf ramalan dalam tab **Ramalan saya**.
+   > Anda boleh memilih **Simpan draf** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui draf ramalan dalam tab **Ramalan saya**.
 
-1. Pilih jika anda ingin **Cadangkan produk yang telah dibeli oleh pelanggan baru-baru ini**.
+1. Pilih jika anda mahu menyertakan produk yang baru dibeli oleh **pelanggan dalam medan Jangkaan pembelian** Ulangan.
 
-1. Jika anda telah memilih untuk *tidak* mengesyorkan produk yang dibeli baru-baru ini, tetapkan **Tetingkap lihat kembali**. Tetapan ini menentukan tempoh masa model mempertimbangkan sebelum mengesyorkan produk kepada pengguna semula. Sebagai contoh, nyatakan pelanggan membeli komputer riba setiap dua tahun. Tetingkap ini akan melihat pada sejarah pembelian sejak dua tahun yang lalu, dan jika mereka menemui item, item akan ditapis daripada pengesyoran.
+1. **Tetapkan tetingkap** Lihat ke belakang. Tetapan ini menentukan tempoh masa model mempertimbangkan sebelum mengesyorkan produk kepada pengguna semula. Sebagai contoh, nyatakan pelanggan membeli komputer riba setiap dua tahun. Tetingkap ini akan melihat pada sejarah pembelian sejak dua tahun yang lalu, dan jika mereka menemui item, item akan ditapis daripada pengesyoran.
 
 1. Pilih **Seterusnya**
 

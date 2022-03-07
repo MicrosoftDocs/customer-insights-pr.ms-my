@@ -1,22 +1,26 @@
 ---
-title: Segar semula tokokan untuk sumber data berasaskan Power Query
-description: Segar semula data baharu dan yang dikemas kini untuk sumber data besar berdasarkan Power Query.
-ms.date: 09/28/2020
+title: Segar semula tambahan untuk Power Query sumber data berasaskan -
+description: Segar semula data baru dan terkini untuk sumber data besar berdasarkan Power Query.
+ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377845"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353693"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Segar semula peningkatan untuk sumber data berasaskan Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Segar semula tambahan untuk sumber data berdasarkan Power Query
+
+Artikel ini membincangkan cara mengkonfigurasi segar semula tambahan untuk sumber data berdasarkan Power Query.
 
 Segar semula peningkatan untuk sumber data memberikan kelebihan berikut:
 
@@ -26,13 +30,13 @@ Segar semula peningkatan untuk sumber data memberikan kelebihan berikut:
 
 ## <a name="configure-incremental-refresh"></a>Konfigurasikan segar semula tokokan
 
-Insights khalayak membenarkan segar semula tokokan untuk sumber data yang diimport melalui Power Query yang menyokong pengingesan tokokan. Sebagai contoh, pangkalan data SQL Azure dengan medan tarikh dan masa, yang menunjukkan apabila rekod data terakhir dikemas kini.
+Wawasan khalayak membenarkan segar semula tambahan untuk sumber data yang diimport melalui Power Query pengingesan sokongan tambahan. Sebagai contoh, pangkalan data SQL Azure dengan medan tarikh dan masa, yang menunjukkan apabila rekod data terakhir dikemas kini.
 
-1. [Cipta sumber data baharu berdasarkan Power Query](connect-power-query.md).
+1. [Buat sumber data baru berdasarkan Power Query](connect-power-query.md).
 
-1. Berikan nama untuk sumber data.
+1. **Sediakan Nama** untuk sumber data.
 
-1. Pilih sumber data yang menyokong segar semula tokokan, seperti pangkalan data SQL Azure.
+1. Pilih sumber data yang menyokong segar semula tambahan, seperti [pangkalan data](/power-query/connectors/azuresqldatabase) Azure SQL.
 
 1. Pilih entiti atau jadual untuk dimasukkan.
 

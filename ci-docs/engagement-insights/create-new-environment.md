@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648128"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225439"
 ---
 # <a name="create-a-new-environment"></a>Cipta persekitaran baharu 
 
@@ -40,13 +39,13 @@ Persekitaran ialah ruang tempat anda menguruskan ruang kerja dan sambungan anda.
 
 1. Pilih **Rantau** dan pilih **Seterusnya**. 
 
-1. Taip **Nama ruang kerja**, yang mendayakan anda mengumpul data untuk tapak web atau aplikasi tertentu. Untuk mendapatkan maklumat lanjut, lihat [Cipta ruang kerja](create-workspace.md).
+1. **Taipkan nama** Ruang Kerja, yang membolehkan anda mengumpul data untuk laman web atau aplikasi tertentu. Untuk mendapatkan maklumat lanjut, lihat [Cipta ruang kerja](create-workspace.md).
 
-1. Pilih **Jenis ruang kerja** (Web atau Mudah Alih) yang anda mahu cipta. 
+1. **Pilih jenis** Ruang Kerja (web atau mudah alih) yang anda ingin cipta. 
 
 1. Pilih **Tunjuk tetapan lanjutan** untuk mendayakan atau menyahdayakan tetapan pilihan ini:
 
-   - Togol **Tidak diketahui ke diketahui** untuk "didayakan" untuk mengaitkan peristiwa web dengan pengguna disahkan sebelumnya. Untuk mendapatkan maklumat lanjut, lihat [Mengenali peristiwa web daripada pelawat yang disahkan sebelum ini](unknown-to-known.md)
+   - Togol **Tidak diketahui ke diketahui** untuk "didayakan" untuk mengaitkan peristiwa web dengan pengguna disahkan sebelumnya. Untuk maklumat lanjut, lihat [Mengenali acara web daripada pelawat yang disahkan sebelum ini](unknown-to-known.md).
    - Togol **Trafik bot penapis** untuk "didayakan" untuk mengalih keluar trafik web oleh bots untuk ruang kerja ini. 
 
 1. Pilih **Lengkap** apabila anda selesai. 

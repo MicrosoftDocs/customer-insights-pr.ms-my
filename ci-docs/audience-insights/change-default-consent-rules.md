@@ -2,24 +2,23 @@
 title: Urus peraturan persetujuan lalai pada segmen
 description: Dengan keupayaan pengurusan persetujuan, anda boleh menyahdayakan atau mengubah peraturan persetujuan lalai jika penggantian didayakan.
 ms.date: 12/01/2021
-ms.service: customer-insights
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28c9ea49b1f3aebd3abd7d4de58fe61e6474158b
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
+ms.openlocfilehash: 4eae4da67fd4c6e70800f495ba30366d4fc9a0dd
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884181"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228950"
 ---
-# <a name="disable-or-change-default-consent-rules"></a>Nyahdayakan atau ubah peraturan keizinan lalai
+# <a name="disable-or-change-default-consent-rules"></a>Menyahdayakan atau mengubah peraturan persetujuan lalai
 
-Jika organisasi anda menggunakan [keupayaan pengurusan persetujuan yang digabungkan dengan wawasan](../consent-management/overview.md) khalayak, pentadbir boleh [menguatkuasakan peraturan persetujuan untuk](activate-consent.md) segmen. 
+Jika organisasi anda menggunakan keupayaan [pengurusan persetujuan yang](../consent-management/overview.md) digabungkan dengan wawasan khalayak, [pentadbir boleh menguatkuasakan peraturan](activate-consent.md) persetujuan untuk segmen. 
 
-Dengan peraturan persetujuan yang dikuatkuasakan di kawasan segmen, setiap segmen memaklumkan tentang keadaan semak dan peraturan persetujuan. Jika penggantian dibenarkan, peraturan persetujuan lalai dimatikan untuk segmen tertentu. Setiap pencipta segmen boleh menambah lebih banyak peraturan persetujuan di atas peraturan lalai pada segmen. 
+Dengan peraturan persetujuan yang dikuatkuasakan di kawasan segmen, setiap segmen memaklumkan tentang keadaan pemeriksaan dan peraturan persetujuan. Jika penggantian dibenarkan, peraturan persetujuan lalai dimatikan untuk segmen tertentu. Setiap pencipta segmen boleh menambah lebih banyak peraturan persetujuan di atas peraturan lalai pada segmen. 
 
 ## <a name="for-administrators"></a>Untuk pentadbir
 
@@ -27,28 +26,28 @@ Dengan peraturan persetujuan yang dikuatkuasakan di kawasan segmen, setiap segme
 
 **Untuk menyahaktifkan peraturan persetujuan lalai:**
 
-1. Dalam **pemberitahuan Peraturan** persetujuan, pilih **Lihat butiran**. 
+1. **Dalam pemberitahuan peraturan** Persetujuan, pilih **Lihat butiran**. 
 
-1. Tetapkan **togol peraturan keizinan lalai** kepada **Matikan**.
+1. Tetapkan togol **peraturan** persetujuan Lalai kepada **Mati**.
 
 **Untuk menambah lebih banyak peraturan persetujuan:**
 
-1. Dalam **pemberitahuan Peraturan** persetujuan, pilih **Lihat butiran**. 
+1. **Dalam pemberitahuan peraturan** Persetujuan, pilih **Lihat butiran**. 
 
-1. Pilih **Tambah peraturan persetujuan dan pilih peraturan persetujuan daripada** **juntai bawah Pilih jenis data** persetujuan.
+1. Pilih **Tambah peraturan** persetujuan dan pilih peraturan persetujuan daripada **juntai bawah Pilih jenis** data persetujuan.
 
-1. Pilih **Simpan untuk menggunakan peraturan baru pada** segmen.
+1. Pilih **Simpan** untuk menggunakan peraturan baharu pada segmen.
 
 ## <a name="for-contributors"></a>Bagi penyumbang
 
-Untuk mencipta segmen tanpa peraturan keizinan yang dikuatkuasakan, anda perlu bekerjasama dengan pentadbir anda untuk menyahdayakannya pada segmen anda. Walau bagaimanapun, anda boleh menambah peraturan persetujuan anda sendiri pada segmen yang anda miliki dan uruskan.
+Untuk mencipta segmen tanpa peraturan persetujuan dikuatkuasakan, anda perlu bekerjasama dengan pentadbir anda untuk menyahdayakannya pada segmen anda. Walau bagaimanapun, anda boleh menambah peraturan persetujuan anda sendiri kepada segmen yang anda miliki dan urus.
 
 Ini adalah proses tiga langkah: 
 1. [Cipta segmen](segments.md) dalam wawasan khalayak dan simpannya. 
 
 1. Kongsi nama segmen dengan pentadbir anda dan minta mereka [mendayakan penggantian untuk segmen](activate-consent.md) anda. 
 
-1. Buka segmen anda sekali lagi. Dalam **pemberitahuan Peraturan** persetujuan, pilih **Lihat butiran dan tambah peraturan persetujuan yang anda ingin** gunakan. Kemudian, **Simpan dan Jalankan segmen** **anda**.
+1. Buka segmen anda sekali lagi. **Dalam pemberitahuan peraturan** Persetujuan, pilih **Lihat butiran** dan tambah peraturan persetujuan yang anda mahu gunakan. Kemudian, **Simpan** dan **Jalankan** segmen anda.
 
 
 

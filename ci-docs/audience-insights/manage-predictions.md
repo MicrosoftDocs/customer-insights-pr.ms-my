@@ -3,18 +3,17 @@ title: Tugas dikongsi untuk senario ramalan
 description: Ketahui cara mengurus, menyelesaikan masalah dan memperhalus ramalan.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731999"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230803"
 ---
 # <a name="manage-predictions"></a>Urus ramalan
 
@@ -50,7 +49,7 @@ Lajur berikut dalam laporan mengandungi maklumat yang berguna untuk meningkatkan
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Contoh laporan kebolehgunaan data input yang menunjukkan jadual dengan ralat, amaran dan pengesyoran.":::
 
-- **Nama:** Nama perihalan ralat, amaran atau pengesyoran.
+- **Nama:** Nama perihalan ralat, amaran atau cadangan.
 - **Langkah:** Fasa model, kereta api atau skor, maklumat merujuk kepada.
 - **Keadaan:** Keterukan maklumat (ralat, amaran, cadangan).
 - **Nama lajur:** Lajur dalam entiti yang perlu diubah suai untuk meningkatkan prestasi model.

@@ -1,24 +1,31 @@
 ---
-title: Inges data melalui penyambung Power Query
+title: Meningest data melalui Power Query penyambung (mengandungi video)
 description: Penyambung untuk sumber data berdasarkan Power Query.
-ms.date: 09/29/2020
-ms.reviewer: adkuppa
-ms.service: customer-insights
+ms.date: 12/06/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: 4c12933a0684094702843be309525dd6d5d9b6f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267782"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355532"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Sambung kepada sumber data Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Sambung ke Power Query sumber data
 
-Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyakan penyambung ini disokong oleh Dynamics 365 Customer Insights. Menambahkan sumber data berdasarkan penyambung Power Query secara amnya mengikut langkah yang digariskan dalam bahagian seterusnya. Walau bagaimanapun, bergantung pada penyambung yang anda gunakan, maklumat berbeza diperlukan. Untuk mendapatkan maklumat lanjut, lihat dokumentasi mengenai penyambung individu dalam [rujukan penyambung Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query menawarkan set penyambung yang luas untuk menelan data. Kebanyakan penyambung ini disokong oleh Dynamics 365 Customer Insights. 
+
+Menambah sumber data berdasarkan Power Query penyambung secara amnya mengikuti langkah yang digariskan dalam bahagian ini. Walau bagaimanapun, bergantung pada penyambung yang anda gunakan, maklumat berbeza diperlukan. Untuk mengetahui lebih lanjut, lihat dokumentasi tentang penyambung individu dalam [Power Query rujukan penyambung](/power-query/connectors/).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
 ## <a name="create-a-new-data-source"></a>Cipta sumber data baharu
 
@@ -26,60 +33,59 @@ Power Query menawarkan set sambungan yang luas kepada data yang paling. Kebanyak
 
 1. Pilih **Tambah sumber data**.
 
-1. Pilih kaedah **Import data** dan pilih **Seterusnya**.
+1. Pilih **Microsoft Power Query**.
 
-1. Berikan **Nama** untuk sumber data dan pilih **Seterusnya** untuk mencipta sumber data. Namakan garis panduan: 
-   - Bermula dengan huruf.
-   - Gunakan huruf dan nombor sahaja. Aksara khas dan ruang idak dibenarkan.
-   - Gunakan antara 3 dan 64 aksara.
+1. Berikan **Nama** untuk sumber data dan pilih **Seterusnya** untuk mencipta sumber data.
 
-1. Pilih salah satu [penyambung yang tersedia](#available-power-query-data-sources). Untuk contoh ini, kami pilih penyambung **Text/CSV**.
+1. Pilih salah satu [penyambung yang tersedia](#available-power-query-data-sources). Dalam contoh ini, kami memilih **penyambung Teks / CSV**.
 
 1. Masukkan butiran yang diperlukan dalam **Tetapan sambungan** untuk penyambung yang dipilih dan pilih **Seterusnya** untuk melihat pratonton data.
 
 1. Pilih **Ubah data**. Dalam langkah ini, anda akan tambahkan entiti pada sumber data anda. Entiti adalah set data. Jika anda mempunyai pangkalan data yang merangkumi set data berbilang, setiap set data adalah entiti sendiri.
 
-1. Dialog **Power Query - Edit pertanyaan** membolehkan anda menyemak semula dan memperhalusi data. Entiti yang dikenal pasti sistem dalam sumber data terpilih anda muncul dalam anak tetingkap kiri.
+1. Dialog **Power Query - Edit pertanyaan** membolehkan anda menyemak dan memperincikan data. Entiti yang dikenal pasti sistem dalam sumber data terpilih anda muncul dalam anak tetingkap kiri.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit dialog pertanyaan](media/data-manager-configure-edit-queries.png "Edit dialog pertanyaan")
+   > ![Edit dialog pertanyaan.](media/data-manager-configure-edit-queries.png "Edit dialog pertanyaan")
 
-1. Anda juga boleh mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan pilihan dalam tetingkap Power Query untuk menggunakan transformasi. Setiap transformasi akan disenaraikan di bawah **Langkah yang digunakan**. Power Query menyediakan pelbagai pilihan transformasi yang dibina terlebih dahulu. Untuk maklumat lebih lanjut, lihat [Transformasi Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Anda juga boleh mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan opsyen dalam Power Query tetingkap untuk menggunakan transformasi. Setiap transformasi akan disenaraikan di bawah **Langkah yang digunakan**. Power Query menyediakan banyak pilihan transformasi pra-binaan. Untuk maklumat lanjut, lihat [Power Query Transformasi](/power-query/power-query-what-is-power-query#transformations).
 
-1. Anda boleh tambah entiti tambahan ke sumber data anda dengan memilih **Dapatkan data** di dalam dialog **Edit pertanyaan**.
+   Kami mengesyorkan agar anda menggunakan transformasi berikut:
 
-   Transformasi ini amat disyorkan:
+   - Jika anda sedang mengambil data dari fail CSV, baris pertama selalunya mengandungi tajuk. Pergi ke **Transform** dan pilih **Gunakan baris pertama sebagai pengepala**.
+   - Pastikan jenis data ditetapkan dengan sewajarnya. Sebagai contoh, untuk medan tarikh, pilih jenis tarikh.
 
-   - Jika anda sedang mengambil data dari fail CSV, baris pertama selalunya mengandungi tajuk. Pergi ke **Ubah jadual** dan pilih **Gunakan pengepala sebagai baris pertama**.
-   - Pastikan jenis data ditetapkan dengan sewajarnya.
+1. Untuk menambah entiti tambahan pada sumber data anda dalam **dialog Edit pertanyaan**, pergi ke **Rumah** dan pilih **Dapatkan data**.
 
-1. Pilih **Simpan** di bahagian bawah tetingkap Power Query untuk menyimpan transformasi. Selepas menyimpan, anda akan dapati sumber data anda pada **Data** > **Sumber data**.
+1. Pilih **Simpan** di bahagian Power Query bawah tetingkap untuk menyimpan transformasi. Selepas menyimpan, anda akan dapati sumber data anda pada **Data** > **Sumber data**.
 
 1. Pada halaman **Sumber data**, anda akan dapati sumber data baharu berada dalam status **Segar semula**.
 
-## <a name="available-power-query-data-sources"></a>Sedia sumber data Power Query
+## <a name="available-power-query-data-sources"></a>Sumber data yang ada Power Query
 
-Lihat [Rujukan penyambung Power Query](https://docs.microsoft.com/power-query/connectors/) untuk senarai penyambung terkini yang boleh anda pilih untuk mengimport data pada Customer Insights. 
+[Power Query Lihat rujukan](/power-query/connectors/) penyambung untuk senarai penyambung yang anda boleh gunakan untuk mengimport data ke Wawasan Pelanggan. 
 
-Penyambung dengan tanda semak dalam lajur **Customer Insights (Alir data)** tersedia untuk mencipta sumber data baharu berdasarkan Power query. Semak semula dokumentasi bagi penyambung khusus untuk mengetahui lebih lanjut tentang prasyarat, had dan butiran lain.
+Penyambung dengan tanda semak dalam **lajur Wawasan Pelanggan (Aliran Data)** tersedia untuk mencipta sumber data baru berdasarkan Power Query. Semak semula dokumentasi bagi penyambung khusus untuk mengetahui lebih lanjut tentang prasyarat, had dan butiran lain.
 
-## <a name="edit-power-query-data-sources"></a>Edit sumber data Power Query
+## <a name="edit-power-query-data-sources"></a>Mengedit Power Query sumber data
 
 > [!NOTE]
 > Ia mungkin tidak mustahil untuk membuat perubahan kepada sumber data yang sedang digunakan dalam salah satu proses aplikasi (contohnya *pembahagian*, *padanan* atau *penggabungan*). 
 >
-> Menggunakan halaman **Tetapan**, anda boleh menjejaki perkembangan setiap proses aktif. Apabila proses selesai, anda boleh kembali ke halaman **Sumber Data** dan membuat perubahan anda.
+> **Dalam halaman Seting**, anda boleh menjejak kemajuan setiap proses aktif. Apabila proses selesai, anda boleh kembali ke halaman **Sumber Data** dan membuat perubahan anda.
 
 1. Dalam cerapan khalayak, pergi ke **Data** > **Sumber data**.
 
-2. Pilih elipsis menegak bersebelahan dengan sumber data yang anda mahu tukar dan pilih **Edit** daripada menu juntai bawah.
+2. Pilih elipsis menegak di sebelah sumber data yang ingin anda ubah dan pilih **Edit** daripada menu juntai bawah.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit pilihan](media/edit-option-data-sources.png "Edit pilihan")
+   > ![Edit pilihan.](media/edit-option-data-sources.png "Edit pilihan")
 
-3. Gunakan perubahan dan transformasi anda dalam dialog **Power Query - Edit pertanyaan** seperti yang diterangkan dalam bahagian [Cipta bahagian sumber data baharu](#create-a-new-data-source).
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
+3. Menggunakan perubahan dan transformasi anda dalam **Power Query dialog - Edit pertanyaan** seperti yang diterangkan dalam [seksyen Cipta sumber data](#create-a-new-data-source) baru.
 
-4. Pilih **Simpan** dalam Power Query selepas melengkapkan pengeditan anda untuk menyimpan perubahan anda.
+4. Pilih **Simpan** Power Query selepas melengkapkan pengeditan anda untuk menyimpan perubahan anda.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

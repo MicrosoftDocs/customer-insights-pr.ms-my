@@ -1,87 +1,136 @@
 ---
 title: Aktiviti pelanggan
-description: Tentukan aktiviti pelanggan dan lihat aktiviti tersebut dalam garis masa pelanggan.
-ms.date: 10/13/2020
-ms.service: customer-insights
+description: Mentakrifkan aktiviti pelanggan dan melihat aktiviti tersebut dalam garis masa pada profil pelanggan.
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- ci-customer-card
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segment-suggestions
+- customerInsight
+ms.openlocfilehash: a2f1e8ecf49664a4bb2dc271131d437e50cfdd24
+ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596740"
+ms.lasthandoff: 02/28/2022
+ms.locfileid: "8359840"
 ---
 # <a name="customer-activities"></a>Aktiviti pelanggan
 
-Gabungkan aktiviti pelanggan daripada [pelbagai sumber data](data-sources.md) dalam Dynamics 365 Customer Insights untuk mencipta garis masa pelanggan yang menyenaraikan aktiviti dalam susunan kronologi. Anda boleh memasukkan garis masa dalam aplikasi penglibatan pelanggan dalam Dynamics 365 menerusi [tambahan Kad Pelanggan](customer-card-add-in.md), atau dalam papan pemuka Power BI.
+Gabungkan aktiviti pelanggan daripada [pelbagai sumber data](data-sources.md) dalam Dynamics 365 Customer Insights untuk mencipta garis masa yang menyenaraikan aktiviti secara kronologi. Sertakan garis masa dalam aplikasi Dynamics 365 dengan penyelesaian [Kad Pelanggan tambahan](customer-card-add-in.md) atau dalam papan pemuka Power BI.
 
 ## <a name="define-an-activity"></a>Takrifkan aktiviti
 
-Sumber data anda termasuk entiti dengan data transaksi dan aktiviti daripada sumber data berbilang. Kenal pasti entiti ini dan pilih aktiviti yang anda mahu lihat pada garis masa pelanggan. Pilih entiti yang mengandungi sasaran aktiviti atau aktiviti anda.
+Sumber data anda boleh termasuk entiti dengan data transaksi dan aktiviti daripada berbilang sumber data. Kenal pasti entiti ini dan pilih aktiviti yang anda mahu lihat pada garis masa pelanggan. Pilih entiti yang mengandungi sasaran aktiviti atau aktiviti anda.
+
+Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang akan dimasukkan dalam garis masa pelanggan dan anda tidak boleh menambah entiti tanpa medan **Tarikh**. Kawalan **Tambah aktiviti** dinyahdayakan jika tiada entiti sedemikian ditemui.
 
 1. Dalam wawasan khalayak, pergi ke **Data** > **Aktiviti**.
 
-1. Pilih **Tambah aktiviti**.
+1. Pilih **Tambah aktiviti** untuk memulakan pengalaman berpandu untuk proses persediaan aktiviti.
 
-   > [!NOTE]
-   > Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang akan dimasukkan dalam garis masa pelanggan dan anda tidak boleh menambah entiti tanpa medan **Tarikh**. Kawalan **Tambah aktiviti** dinyahdayakan jika tiada entiti sedemikian ditemui.
+1. Dalam langkah **Data aktiviti**, tetapkan nilai untuk medan berikut:
 
-1. Dalam anak tetingkap **Tambah aktiviti**, tetapkan nilai untuk medan berikut:
-
+   - **Nama aktiviti**: Pilih nama untuk aktiviti anda.
    - **Entiti**: Pilih entiti yang mengandungi data transaksi atau aktiviti.
    - **Perkara utama**: Pilih medan yang mengenal pasti rekod secara unik. Ia tidak seharusnya mengandungi sebarang nilai duplikasi, nilai kosong atau kehilangan nilai.
-   - **Cap masa**: Pilih medan yang mewakili masa mula aktiviti anda.
-   - **Peristiwa**: Pilih medan yang merupakan peristiwa untuk aktiviti tersebut.
-   - **Alamat web**: Pilih medan yang mewakili URL yang menyediakan maklumat tambahan tentang aktiviti ini. Contohnya, sistem transaksi yang memberi sumber untuk aktiviti ini. URL ini boleh menjadi mana-mana medan daripada sumber data atau ia boleh dibina sebagai medan baharu menggunakan perubahan Pertanyaan Kuasa. Data URL akan disimpan dalam entiti Aktiviti Disatukan, yang menjadi hiliran yang digunakan menggunakan API.
-   - **Butiran**: Secara pilihan, pilih medan yang ditambah untuk butiran tambahan.
-   - **Ikon**: Secara pilihan, pilih ikon yang mewakili aktiviti ini.
-   - **Jenis Aktiviti**: Takrifkan rujukan jenis aktiviti untuk Model Data Biasa yang menghuraikan sebaiknya takrifan semantik aktiviti.
 
-1. Dalam bahagian **Persediaan perhubungan**, butiran dikonfigurasi untuk menyambungkan data aktiviti anda kepada pelanggan yang berkaitan.
+   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Sediakan data aktiviti dengan nama, entiti dan kekunci utama.":::
 
-    - **Medan entiti aktiviti**: Pilih medan dalam entiti aktiviti anda yang akan digunakan untuk mewujudkan perhubungan dengan entiti lain.
-    - **Entiti pelanggan** : Pilih entiti pelanggan sumber berkaitan dengan entiti aktiviti anda akan berada dalam perhubungan. Anda hanya boleh mengaitkan dengan entiti pelanggan sumber yang digunakan dalam proses data penyatuan.
-    - **Medan entiti pelanggan**: Medan ini menunjukkan kunci utama bagi entiti pelanggan sumber seperti yang dipilih dalam proses peta. Medan kunci utama dalam entiti pelanggan sumber ini digunakan untuk mewujudkan perhubungan dengan entiti aktiviti.
-    - **Nama**: Jika perhubungan antara entiti aktiviti ini dan entiti pelanggan sumber yang terpilih telah wujud, nama perhubungan akan berada dalam mod baca sahaja. Jika tiada hubungan sedemikian wujud, perhubungan baharu akan dicipta dengan nama yang disediakan di sini.
+1. Pilih **Seterusnya** untuk pergi ke langkah seterusnya.
+
+1. Dalam langkah **Perhubungan**, konfigurasikan butiran untuk menyambungkan data aktiviti anda kepada rekod pelanggan yang sepadan. Langkah ini menggambarkan sambungan antara entiti.  
+
+   - **Pertama**: Medan asing dalam entiti aktiviti anda yang akan digunakan untuk mewujudkan perhubungan dengan entiti lain.
+   - **Kedua**: Entiti pelanggan sumber yang sepadan dengan entiti aktiviti anda yang akan berada dalam perhubungan. Anda hanya boleh dikaitkan dengan entiti pelanggan sumber yang digunakan dalam proses penyatuan data.
+   - **Ketiga**: Jika perhubungan antara entiti aktiviti ini dan entiti pelanggan sumber yang dipilih telah wujud, nama perhubungan akan berada dalam mod baca sahaja. Jika tiada hubungan sedemikian wujud, hubungan baharu akan dicipta dengan nama yang anda berikan dalam kotak ini.
+
+   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Takrifkan perhubungan entiti.":::
+
+   > [!TIP]
+   > Dalam persekitaran niaga-ke-niaga, anda boleh memilih antara entiti akaun dan entiti lain. Jika anda memilih entiti akaun, laluan perhubungan ditetapkan secara automatik. Untuk entiti lain, anda perlu mentakrifkan laluan perhubungan melalui satu atau lebih entiti pertengahan sehingga anda menjangkau entiti akaun.
+
+1. Pilih **Seterusnya** untuk pergi ke langkah seterusnya. 
+
+1. Dalam langkah **Penyatuan aktiviti**, pilih peristiwa aktiviti dan masa mula aktiviti anda. 
+   - **Medan diperlukan**
+      - **Aktiviti peristiwa**: Medan untuk peristiwa bagi aktiviti ini.
+      - **Cap waktu**: Medan yang mewakili masa mula aktiviti anda.
+
+   - **Medan pilihan**
+      - **Butiran tambahan**: Medan dengan maklumat berkaitan untuk aktiviti ini.
+      - **Ikon**: Ikon yang terbaik mewakili jenis aktiviti ini.
+      - **Alamat web**: Medan yang mengandungi URL dengan maklumat tentang aktiviti ini. Contohnya, sistem transaksi yang memberi sumber untuk aktiviti ini. URL ini boleh menjadi medan dari sumber data, atau ia boleh dibina sebagai medan baru menggunakan Power Query transformasi. Data URL akan disimpan dalam entiti *Aktiviti yang Disatukan* yang boleh digunakan secara hiliran menggunakan [API](apis.md).
+
+   - **Tunjukkan dalam garis masa**
+      - Pilih jika anda mahu menunjukkan aktiviti ini dalam pandangan garis masa pada profil pelanggan anda. Pilih **Ya** untuk menunjukkan aktiviti dalam garis masa atau **Tidak** untuk menyembunyikannya.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Tentukan data aktiviti pelanggan dalam entiti Aktiviti yang Disatukan.":::
+
+1. Pilih **Seterusnya** untuk beralih ke langkah yang seterusnya. Anda boleh memilih **Selesai dan semak** untuk menyimpan aktiviti sekarang dengan jenis aktiviti yang ditetapkan kepada **Lain-lain**. 
+
+1. Dalam langkah **Jenis Aktiviti**, pilih jenis aktiviti dan secara pilihan, pilih jika anda mahu memetakan secara semantik sebahagian daripada jenis aktiviti untuk digunakan dalam bahagian lain dalam Customer Insights. Pada masa ini, jenis aktiviti *Maklum Balas*, *Kesetiaan*, *SalesOrder*, *SalesOrderLine*, dan *Langganan* boleh dipetakan secara semantik selepas bersetuju untuk memetakan medan. Jika jenis aktiviti tidak berkaitan dengan aktiviti baharu, anda boleh memilih *Lain-lain* atau *Cipta baharu* untuk jenis aktiviti yang tersuai.
+
+1. Pilih **Seterusnya** untuk beralih ke langkah yang seterusnya. 
+
+1. Dalam langkah **Semak**, sahkan pilihan anda. Kembali ke mana-mana langkah sebelumnya dan kemas kini maklumat jika perlu.
+
+   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Semak medan khusus untuk aktiviti.":::
    
-   > [!div class="mx-imgBorder"]
-   > ![Takrifkan perhubungan entiti](media/activities-entities-define.png "Takrifkan perhubungan entiti")
+1. Pilih **Simpan aktiviti** untuk menggunakan perubahan anda dan pilih **Selesai** untuk kembali ke **Data** > **Aktiviti**. Di sini, anda melihat aktiviti yang ditetapkan untuk ditunjukkan dalam garis masa. 
 
-1. Pilih **Simpan** untuk menggunakan perubahan anda.
+1. Pada halaman **Aktiviti**, pilih **Jalankan** untuk memproses aktiviti. 
 
-1. Pada halaman **Aktiviti**, pilih **Jalankan**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-> [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+## <a name="manage-existing-activities"></a>Urus aktiviti sedia ada
 
-## <a name="edit-an-activity"></a>Edit aktiviti
+Pada **Data** > **Aktiviti**, anda boleh melihat semua aktiviti yang disimpan dan menguruskannya. Setiap aktiviti diwakili oleh baris yang juga termasuk butiran mengenai sumber, entiti dan jenis aktiviti.
 
-1. Dalam wawasan khalayak, pergi ke **Data** > **Aktiviti**.
+Tindakan berikut tersedia apabila anda memilih aktiviti. 
 
-2. Pilih entiti aktiviti yang anda mahu edit dan pilih **Edit**. Atau, anda boleh hover pada baris entiti dan pilih ikon **Edit**.
+- **Edit**: Buka persediaan aktiviti pada langkah tinjauan. Anda boleh mengubah sebarang atau semua konfigurasi semasa daripada langkah ini. Selepas mengubah konfigurasi, pilih **Simpan aktiviti** dan kemudian pilih **Jalankan** untuk memproses perubahan.
 
-3. Klik pada ikon **Edit**.
+- **Namakan semula**: Buka dialog untuk anda memasukkan nama lain bagi aktiviti yang dipilih. Pilih **Simpan** untuk menggunakan perubahan anda.
 
-4. Dalam anak tetingkap **Edit aktiviti**, kemas kini nilai dan pilih **Simpan**.
+- **Padam**: Buka dialog untuk mengesahkan pemadaman aktiviti yang dipilih. Anda juga boleh memadamkan lebih daripada satu aktiviti sekaligus dengan memilih aktiviti dan kemudian memilih ikon padam. Pilih **Padam** untuk mengesahkan pemadaman.
 
-5. Pada halaman **Aktiviti**, pilih **Jalankan**.
+## <a name="view-activity-timelines-on-customer-profiles"></a>Lihat garis masa aktiviti pada profil pelanggan
 
-## <a name="delete-an-activity"></a>Padam aktiviti
+Selepas anda mengkonfigurasi aktiviti pelanggan, pilih **Tunjuk pada garis masa aktiviti** dalam konfigurasi aktiviti untuk mencari semua aktiviti pelanggan anda pada profil pelanggan mereka.
 
-1. Dalam wawasan khalayak, pergi ke **Data** > **Aktiviti**.
+Untuk membuka garis masa untuk pelanggan, pergi ke **Pelanggan** dan pilih profil pelanggan yang anda mahu lihat.
 
-2. Pilih entiti aktiviti yang anda mahu alih keluar dan pilih **Padam**. Atau, anda boleh hover pada baris entiti dan pilih ikon **Padam**. Selain itu, anda boleh memilih entiti aktiviti berbilang untuk dipadam serentak.
-   > [!div class="mx-imgBorder"]
-   > ![Edit atau padam perhubungan entiti](media/activities-entities-edit-delete.png "Edit atau padam perhubungan entiti.").
+Jika pelanggan telah mengambil bahagian dalam aktiviti yang telah anda konfigurasikan, anda akan menemuinya dalam bahagian **Garis masa aktiviti**.
 
-3. Pilih pada ikon **Padam**.
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Lihat aktiviti yang dikonfigurasikan dalam Profil Pelanggan.":::
 
-4. Sahkan pemadaman anda.
+Terdapat beberapa cara untuk menapis aktiviti dalam garis masa aktiviti:
 
+- Anda boleh memilih satu atau banyak ikon aktiviti untuk memperhalusi hasil anda untuk memasukkan jenis yang dipilih sahaja.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Tapis aktiviti mengikut jenis menggunakan ikon.":::
+
+- Anda boleh memilih **Penapis** untuk membuka panel penapis untuk mengkonfigurasikan penapis garis masa anda.
+
+   1. Anda boleh menapis mengikut *ActivityType* dan *Tarikh*
+   1. Pilih **Gunakan** untuk menggunakan penapis dalam garis masa aktiviti.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Gunakan panel penapis untuk mengkonfigurasikan syarat penapis.":::
+
+Untuk mengalih keluar penapis, pilih **x** bersebelahan dengan setiap penapis yang digunakan pada garis masa atau pilih **Kosongkan penapis**.
+
+
+> [!NOTE]
+> Penapis aktiviti akan dialih keluar apabila anda meninggalkan profil pelanggan. Anda perlu menggunakannya setiap kali anda membuka pada profil pelanggan.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

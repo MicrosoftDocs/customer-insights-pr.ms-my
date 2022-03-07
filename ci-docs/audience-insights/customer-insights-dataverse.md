@@ -1,20 +1,22 @@
 ---
 title: Data Customer Insights dalam Microsoft Dataverse
 description: Gunakan entiti Customer Insights sebagai jadual dalam Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650053"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355440"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
 
@@ -24,11 +26,7 @@ Customer Insights menyediakan pilihan untuk menjadikan entiti output tersedia da
 
 **Organisasi yang mempunyai persekitaran Dataverse yang sedia ada**
 
-Organisasi yang telah menggunakan Dataverse boleh [menggunakan salah satu persekitaran Dataverse mereka yang sedia ada](get-started-paid.md) apabila pentadbir menyediakan cerapan khalayak. Dengan menyediakan URL kepada persekitaran Dataverse, ia melampirkan persekitaran cerapan khalayak baharu mereka. Untuk memastikan prestasi terbaik, Customer Insights dan persekitaran Dataverse mesti dihoskan di kawasan yang sama.
-
-Untuk melampirkan persekitaran Dataverse, kembangkan **Tetapan lanjutan** apabila mencipta persekitaran cerapan khalayak. Sediakan **URL persekitaran Microsoft Dataverse** dan pilih kotak semak untuk **Dayakan perkongsian data**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+Organisasi yang telah menggunakan Dataverse boleh [menggunakan salah satu persekitaran Dataverse mereka yang sedia ada](create-environment.md) apabila pentadbir menyediakan cerapan khalayak. Dengan menyediakan URL kepada persekitaran Dataverse, ia melampirkan persekitaran cerapan khalayak baharu mereka. Untuk memastikan prestasi terbaik, Customer Insights dan persekitaran Dataverse mesti dihoskan di kawasan yang sama.
 
 **Organisasi baharu**
 
@@ -49,6 +47,7 @@ Sesetengah entiti output daripada cerapan khalayak tersedia sebagai jadual dalam
 - [CustomerMeasure](#customermeasure)
 - [Pengayaan](#enrichment)
 - [Ramalan](#prediction)
+- [Keahlian segmen](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -124,4 +123,17 @@ Jadual ini mengandungi output ramalan model.
 | Model                | Jalur      | Nama model                                                |
 | Nilai               | Rentetan JSON | Senarai atribut yang dihasilkan oleh model |
 | msdynci_predictionid | GUID        | GUID berketentuan yang dijana daripada msdynci_identifier | 
-| msdynci_identifier   | Jalur      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Keahlian segmen
+
+Jadual ini mengandungi maklumat keahlian segmen profil pelanggan.
+
+| Column        | Taip | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID Profil Pelanggan        |
+| SegmentProvider      | String       | Apl yang menerbitkan segmen. Lalai: Wawasan khalayak         |
+| SegmentMembershipType | String       | Jenis pelanggan rekod keahlian segmen ini. Menyokong pelbagai jenis seperti Pelanggan, Kenalan atau Akaun. Lalai: Pelanggan  |
+| Segmen       | Rentetan JSON  | Senarai segmen unik profil pelanggan adalah ahli      |
+| msdynci_identifier  | String   | Pengenalpasti unik rekod keahlian segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID penentu yang dijana daripada`msdynci_identifier`          |

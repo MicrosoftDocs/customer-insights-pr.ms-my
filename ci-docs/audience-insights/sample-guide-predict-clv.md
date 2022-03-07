@@ -3,18 +3,17 @@ title: Panduan sampel ramalan nilai sepanjang hayat pelanggan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan nilai sepanjang hayat pelanggan.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 705e159f348e876f8a2a0ad3481608c6dd380df3dd74d7e5dba9dd3bebe25e52
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029502"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354842"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Panduan sampel ramalan nilai sepanjang hayat pelanggan (CLV)
 
@@ -22,7 +21,7 @@ Panduan ini akan menerangkan kepada anda contoh akhir ramalan nilai sepanjang ha
 
 ## <a name="scenario"></a>Senario
 
-Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi. Mereka menjual produk melalui laman web Contoso Coffee mereka. Syarikat ingin memahami nilai (hasil) yang boleh dijana oleh pelanggan mereka dalam tempoh 12 bulan akan datang. Mengetahui nilai yang diharapkan pelanggan mereka dalam tempoh 12 bulan akan datang akan membantu mereka mengemudi usaha pemasaran mereka ke atas pelanggan bernilai tinggi.
+Contoso adalah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi. Mereka menjual produk melalui laman web Contoso Coffee mereka. Syarikat ingin memahami nilai (hasil) yang boleh dijana oleh pelanggan mereka dalam tempoh 12 bulan akan datang. Mengetahui nilai yang diharapkan pelanggan mereka dalam tempoh 12 bulan akan datang akan membantu mereka mengemudi usaha pemasaran mereka ke atas pelanggan bernilai tinggi.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -31,7 +30,7 @@ Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti t
 
 ## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
-Semak artikel [tentang pengingesan data](data-sources.md) dan [mengimport sumber data menggunakan penyambung Power Query](connect-power-query.md). Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum.
+Semak semula artikel [tentang pengambilan](data-sources.md) data dan [mengimport sumber data menggunakan Power Query penyambung](connect-power-query.md). Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inges data pelanggan daripada platform e-Dagang
 
@@ -164,7 +163,7 @@ Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencip
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tugas 3 - Konfigurasi ramalan nilai sepanjang hayat pelanggan
 
-Dengan profil pelanggan yang disatukan ditetapkan, kami kini boleh menjalankan ramalan nilai sepanjang hayat pelanggan. Untuk langkah-langkah terperinci, lihat [Ramalan Nilai Sepanjang Hayat (pratonton)](predict-customer-lifetime-value.md).
+Dengan profil pelanggan yang disatukan ditetapkan, kami kini boleh menjalankan ramalan nilai sepanjang hayat pelanggan. Untuk langkah terperinci, lihat [Nilai Sepanjang Hayat Pelanggan ramalan](predict-customer-lifetime-value.md).
 
 1. Pergi ke **Kecerdasan**  > **Ramalan** dan pilih **Model nilai sepanjang hayat pelanggan**.
 

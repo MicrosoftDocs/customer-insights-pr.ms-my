@@ -1,24 +1,26 @@
 ---
 title: Mengintegrasikan data web daripada wawasan penglibatan dengan wawasan khalayak
 description: Membawa maklumat web tentang pelanggan daripada wawasan penglibatan kepada wawasan khalayak.
-ms.date: 12/17/2020
-ms.service: customer-insights
+ms.date: 06/24/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597476"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350556"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Mengintegrasikan data web daripada wawasan penglibatan dengan wawasan khalayak
 
-Pelanggan sering melakukan transaksi hari je hari mereka dalam talian menggunakan laman web. Keupayaan wawasan penglibatan Dynamics 365 Customer Insights ialah penyelesaian berguna untuk mengintegrasikan data web sebagai sumber. Sebagai tambahan kepada transaksi, demografik atau data tingkah laku kita boleh melihat aktiviti pada web dalam profil pelanggan disatukan. Kita boleh menggunakan profil ini untuk mendapatkan wawasan tambahan seperti segmen, langkah atau ramalan untuk pengaktifan khalayak.
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
+
+Pelanggan sering melakukan transaksi hari ke hari mereka dalam talian menggunakan tapak web. Keupayaan cerapan penglibatan (pratonton) dalam Dynamics 365 Customer Insights ialah penyelesaian berguna untuk mengintegrasikan data web sebagai sumber. Sebagai tambahan kepada transaksi, demografik atau data tingkah laku kita boleh melihat aktiviti pada web dalam profil pelanggan disatukan. Kami boleh menggunakan profil ini untuk mendapatkan cerapan tambahan seperti segmen, langkah, atau ramalan untuk pengaktifan khalayak.
 
 Artikel ini menerangkan langkah untuk membawa data aktiviti web pelanggan anda daripada wawasan penglibatan ke dalam persekitaran wawasan khalayak sedia ada anda.
 
@@ -30,30 +32,30 @@ Kini, kami ingin tahu jika pelanggan melawat sifat web kami dan memahami aktivit
 
 Untuk mengintegrasikan data daripada wawasan penglibatan, beberapa prasyarat perlu dipenuhi: 
 
-- Mengintegrasikan SDK wawasan penglibatan dengan laman web anda. Untuk maklumat lanjut, lihat [Mari bermula dengan SDK web](../engagement-insights/instrument-website.md).
-- Mengeksport peristiwa web daripada wawasan penglibatan memerlukan akses kepada akaun storan ADLS Gen 2 yang akan digunakan untuk membuktikan data peristiwa web kepada wawasan khalayak. Untuk maklumat lanjut, lihat [Eksport peristiwa](../engagement-insights/export-events.md).
+- Mengintegrasikan SDK wawasan penglibatan dengan laman web anda. Untuk mendapatkan maklumat lanjut, lihat [Gambaran keseluruhan pembangun](../engagement-insights/developer-resources.md).
+- Pengeksport peristiwa web daripada cerapan penglibatan memerlukan akses kepada akaun Azure Data Lake Storage yang akan digunakan untuk menginges data peristiwa web pada cerapan khalayak. Untuk maklumat lanjut, lihat [Eksport peristiwa](../engagement-insights/export-events.md).
 
 ## <a name="configure-refined-events-in-engagement-insights"></a>Mengkonfigurasikan peristiwa yang ditapis dalam wawasan penglibatan
 
-Selepas pentadbir berinstrumen sebuah laman web dengan SDK wawasan penglibaran, *peristiwa asas* dikumpulkan apabila pengguna melihat halaman web atau klik di mana-mana. Peristiwa asas cenderung untuk mengandungi banyak butiran. Bergantung pada kes penggunaan anda, anda hanya memerlukan subset data dalam peristiwa asas. Wawasan interaksi membolehkan anda mencipta *peristiwa ditapis* yang hanya mengandungi sifat peristiwa asas yang anda pilih.     
+Selepas pentadbir menjalankan laman web dengan parameter cerapan SDK, *peristiwa asas* dikumpulkan apabila pengguna melihat halaman web atau klik pada mana-mana bahagian. Peristiwa asas cenderung untuk mengandungi banyak butiran. Bergantung pada kes penggunaan anda, anda hanya memerlukan subset data dalam peristiwa asas. Wawasan interaksi membolehkan anda mencipta *peristiwa ditapis* yang hanya mengandungi sifat peristiwa asas yang anda pilih.     
 
 Untuk maklumat lanjut, lihat [Cipta dan ubah suai peristiwa yang ditapis](../engagement-insights/refined-events.md).
 
 Pertimbangan apabila mencipta peristiwa yang ditapis: 
 
-- Berikan nama yang bermakna untuk peristiwa yang ditapis. Ia akan digunakan sebagai nama aktiviti dalam wawasan khalayak.
+- Berikan nama yang bermakna untuk peristiwa yang ditapis. Ia akan digunakan sebagai nama aktiviti dalam cerapan khalayak.
 - Pilih sekurang-kurangnya sifat berikut untuk mencipta aktiviti dalam wawasan khalayak: 
-    - Signal.Action.Name - menunjukkan butiran aktiviti
-    - Signal.User.Id - digunakan untuk memetakan dengan ID pelanggan
-    - Isyarat. lihat. URI - digunakan sebagai alamat web sebagai asas untuk segmen atau langkah
-    - Signal.Export.Id - untuk menggunakan sebagai kunci utama bagi peristiwa <!-- system generated, do we need to list?-->
-    - Isyarat. Cap waktu - untuk menentukan tarikh dan masa aktiviti
+    - Signal.Action.Name – menunjukkan butiran aktiviti.
+    - Signal.User.Id – digunakan untuk memetakan dengan ID pelanggan.
+    - Isyarat. lihat. URI – digunakan sebagai alamat web sebagai asas untuk segmen atau langkah.
+    - Signal.Export.Id – digunakan sebagai kunci utama untuk peristiwa.
+    - Signal.Timestamp – menentukan tarikh dan masa untuk aktiviti.
 
 Pilih penapis untuk fokus pada acara dan halaman yang penting untuk kes kegunaan anda. Dalam contoh ini, kami akan menggunakan nama tindakan "Promosi e-mel".
 
-## <a name="export-the-refined-web-events"></a>Eksport Peristiwa Web yang Ditapis 
+## <a name="export-the-refined-web-events"></a>Eksport peristiwa web yang ditapis 
 
-Selepas menentukan peristiwa yang ditapis ditakrifkan, anda perlu mengkonfigurasikan eksport data peristiwa kepada Azure Data Lake Storage, yang boleh ditetapkan sebagai sumber data untuk pengingesan dalam wawasan khalayak. Eksport berlaku secara kerap semasa peristiwa mengalifr daripada sifat web.
+Selepas menentukan peristiwa yang ditapis, anda perlu mengkonfigurasikan eksport data peristiwa pada Azure Data Lake Storage, yang boleh ditetapkan sebagai sumber data untuk diinges dalam cerapan khalayak. Eksport berlaku secara kerap semasa peristiwa mengalifr daripada sifat web.
 
 Untuk maklumat lanjut, lihat [Eksport peristiwa](../engagement-insights/export-events.md).
 
@@ -61,7 +63,7 @@ Untuk maklumat lanjut, lihat [Eksport peristiwa](../engagement-insights/export-e
 
 Sekarang anda telah menentukan peristiwa yang ditapis dan mengkonfigurasi eksport, kita bergerak untuk mengambil data kepada wawasan khalayak. Anda perlu mencipta sumber data baharu berdasarkan folder Common Data Model. Masukkan butiran untuk akaun storan yang anda eksport peristiwa tersebut. Dalam fail *default.cdm.json*, pilih peristiwa yang ditapis untuk mengambil dan mencipta entiti dalam wawasan khalayak.
 
-Untuk maklumat lanjut, lihat [Sambung ke folder Common Data Model menggunakan akaun Azure Data Lake](connect-common-data-model.md)
+Untuk mendapatkan maklumat lanjut, lihat [Sambung kepada folder Common Data Model menggunakan akaun Azure Data Lake](connect-common-data-model.md).
 
 
 ## <a name="relate-refined-event-data-as-an-activity-of-a-customer-profile"></a>Kaitkan data peristiwa yang ditapis sebagai aktiviti profil pelanggan
@@ -74,27 +76,26 @@ Untuk maklumat lanjut, lihat [Aktiviti pelanggan](activities.md).
 
 Konfigurasikan aktiviti baharu dengan pemetaan berikut: 
 
-- **Kunci Utama:** Signal.Export.Id, ID unik yang tersedia untuk setiap rekod peristiwa dalam wawasan penglibatan. Sifat ini dijana secara automatik.
+- **Kunci Utama**: Signal.Export.Id, ID unik yang tersedia untuk setiap rekod peristiwa dalam cerapan penglibatan. Sifat ini dijana secara automatik.
 
-- **Cap waktu:** Signal.Timestamp dalam sifat peristiwa.
+- **Cap waktu**: Signal.Timestamp dalam sifat peristiwa.
 
-- **Peristiwa:** Signal.Name, nama peristiwa yang anda mahu jejak.
+- **Peristiwa**: Signal.Name, nama peristiwa yang mahu anda jejaki.
 
-- **Alamat web:** Signal.View.Uri merujuk pada uri laman yang mencipta peristiwa tersebut.
+- **Alamat web**: Signal.View.Uri merujuk kepada URI halaman yang mencipta peristiwa tersebut.
 
-- **Butiran:** Signal.Action.Name untuk mewakili maklumat untuk mengaitkan dengan peristiwa tersebut. Sifat yang dipilih dalam kes ini menunjukkan bahawa peristiwa adalah untuk promosi e-mel.
+- **Butiran**: Signal.Action.Name untuk mewakili maklumat bagi mengaitkan dengan peristiwa tersebut. Sifat yang dipilih dalam kes ini menunjukkan bahawa peristiwa adalah untuk promosi e-mel.
 
-- **Jenis aktiviti:** Dalam contoh ini, kita pilih WebLog jenis aktiviti sedia ada. Pemilihan ini adalah pilihan penapis berguna untuk menjalankan model ramalan atau membuat segmen berdasarkan jenis aktiviti ini.
+- **Jenis aktiviti**: Dalam contoh ini, kami memilih WebLog jenis aktiviti sedia ada. Pemilihan ini adalah pilihan penapis berguna untuk menjalankan model ramalan atau membuat segmen berdasarkan jenis aktiviti ini.
 
-- **Sediakan perhubungan:** Tetapan penting ini menjalin hubungan aktiviti kepada profil pelanggan sedia ada. **Signal.User.Id** ialah pengecam yang dikonfigurasikan dalam SDK untuk dikumpulkan dan yang berkaitan dengan ID pengguna dalam sumber data lain yang dikonfigurasikan dalam wawasan khalayak. Dalam contoh ini, kami mengkonfigurasi hubungan antara Signal.User.Id dan RetailCustomers:CustomerRetailId, yang merupakan kunci utama yang telah diungkam dalam cara proses penyatuan data.
-
+- **Sediakan perhubungan**: Tetapan penting ini mengaitkan aktiviti pada profil pelanggan sedia ada. **Signal.User.Id** ialah pengecam yang dikonfigurasikan dalam SDK untuk dikumpulkan dan yang berkaitan dengan ID pengguna dalam sumber data lain yang dikonfigurasikan dalam wawasan khalayak. Dalam contoh ini, kami mengkonfigurasikan hubungan antara Signal.User.Id dan RetailCustomers:CustomerRetailId, yang merupakan kunci utama yang dikenal pasti dalam langkah peta proses penyatuan data.
 
 Selepas memproses aktiviti, anda boleh menyemak rekod pelanggan dan membuka kad pelanggan untuk melihat aktiviti daripada wawasan penglibatan dalam garis masa. 
 
 > [!TIP]
-> Untuk mencari id pelanggan yang mempunyai aktiviti wawasan penglibatan, pergi ke **Entiti** dan pratonton data untuk entiti UnifiedActivity. ActivityTypeDisplay = WebLog mengandungi aktiviti wawasan penglibatan yang dikonfigurasikan dalam contoh di atas. Salin ID pelanggan untuk antara rekod tersebut dan untuk ID pada halaman **Pelanggan**.
+> Untuk mencari ID pelanggan yang mempunyai aktiviti cerapan penglibatan, pergi ke **Entiti** dan pratonton data untuk entiti UnifiedActivity. ActivityTypeDisplay = WebLog mengandungi aktiviti cerapan penglibatan yang dikonfigurasikan dalam contoh di atas. Salin ID pelanggan untuk antara rekod tersebut dan untuk ID pada halaman **Pelanggan**.
 
-## <a name="next-steps"></a>Langkah-langkah Berikutnya
+## <a name="next-steps"></a>Langkah seterusnya
 
 Anda kini boleh mencipta [segmen](segments.md), [langkah](measures.md) dan [ramalan](predictions.md) untuk membuat sambungan yang bermakna dengan pelanggan anda.
 

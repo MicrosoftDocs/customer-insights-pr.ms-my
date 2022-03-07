@@ -1,20 +1,24 @@
 ---
 title: Gabung entiti dalam penyatuan data
 description: Gabung entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 05/10/2021
-ms.service: customer-insights
+ms.date: 01/28/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-match
+- ci-merge
+- ci-relationships
+- customerInsights
+ms.openlocfilehash: c7743104bf89d9a2a741f1b358a89ed0240be024
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035013"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355856"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
@@ -76,19 +80,64 @@ Kecualikan atribut daripada profil pelanggan disatukan. Jika medan digunakan dal
 
 Pada halaman **Gabung**, pilih **Medan yang dikecualikan** untuk melihat senarai semua medan yang dikecualikan. Anak tetingkap ini membenarkan anda menambah semula medan yang dikecualikan.
 
-## <a name="manually-combine-fields"></a>Gabungkan medan secara manual
+## <a name="edit-a-merged-field"></a>Edit medan yang digabungkan
 
-Tentukan atribut yang digabungkan secara manual. 
+1.  Pilih medan yang digabungkan.
 
-1. Pada halaman **Gabung**, pilih **Gabungkan medan**.
+1.  Pilih **Tunjukkan lagi** dan pilih **Edit**.
 
-1. Berikan **Nama** dan **Nama medan output**.
+1.  Tentukan cara untuk menyatukan atau menggabungkan medan daripada satu daripada tiga pilihan:
+    - **Kepentingan**: Mengenal pasti nilai pemenang berdasarkan kedudukan kepentingan yang ditentukan untuk medan yang terlibat. Ia merupakan pilihan gabungan lalai. Pilih **Alih ke atas/bawah** untuk menetapkan kedudukan kepentingan.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Pilihan kepentingan dalam dialog medan gabungan."::: 
+    - **Terkini**: Mengenal pasti nilai pemenang berdasarkan paling keterkinian. Memerlukan tarikh atau medan angka untuk setiap entiti yang mengambil bahagian dalam skop medan gabungan untuk menentukan keterkinian.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Pilihan keterkinian dalam dialog medan gabungan.":::
+    - **Kurang terkini**: Mengenal pasti nilai pemenang berdasarkan kurang keterkinian. Memerlukan tarikh atau medan angka untuk setiap entiti yang mengambil bahagian dalam skop medan gabungan untuk menentukan keterkinian.
+
+1.  Anda boleh menambah lebih banyak medan untuk mengambil bahagian dalam proses gabungan.
+
+1.  Anda boleh menamakan semula medan yang digabungkan.
+
+1. Pilih **Selesai** untuk menggunakan perubahan anda.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
+## <a name="combine-fields-manually"></a>Gabungkan medan secara manual
+
+Tentukan atribut yang digabungkan secara manual.
+
+1. **Pada halaman Cantum**, pilih **Gabungkan**.
+
+1. Pilih opsyen **Medan**.
+
+1. Tentukan dasar pemenang gabungan dalam **Satukan medan mengikut** menu juntai bawah.
 
 1. Pilih medan untuk ditambah. Pilih **Tambah medan** untuk menggabungkan lebih medan.
 
-1. Sahkan pengecualian.
+1. Berikan **Nama** dan **Nama medan output**.
+
+1. Pilih **Selesai** untuk menggunakan perubahan tersebut.
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
+## <a name="combine-a-group-of-fields"></a>Gabungkan kumpulan medan
+
+Anggap sekumpulan medan sebagai satu unit. Contohnya, apabila rekod kami mengandungi medan Alamat1, Address2, Bandar, Negeri dan Zip. Kami mungkin tidak mahu bergabung dalam Alamat2 rekod yang berbeza, memikirkan ia akan menjadikan data kami lebih lengkap
+
+1. **Pada halaman Cantum**, pilih **Gabungkan**.
+
+1. **Pilih opsyen Kumpulan medan**.
+
+1. Tentukan dasar pemenang gabungan dalam **kumpulan Kedudukan dengan** juntai bawah.
+
+1. Pilih **Tambah** dan pilih jika anda mahu menambah lebih banyak medan atau kumpulan tambahan pada medan.
+
+1. **Sediakan Nama** dan **nama** Output untuk setiap medan gabungan.
+
+1. **Menyediakan Nama** untuk kumpulan medan. 
+
+1. Pilih **Selesai** untuk menggunakan perubahan tersebut.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
 ## <a name="change-the-order-of-fields"></a>Ubah pesanan pilihan
 
@@ -104,6 +153,51 @@ Sesetengah entiti mengandungi lebih banyak butiran daripada yang lain. Jika enti
 
 1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
+## <a name="configure-customer-id-generation"></a>Konfigurasikan penjanaan ID Pelanggan 
+
+Selepas mengkonfigurasikan medan penggabungan, anda boleh menentukan cara menjana nilai CustomerId, pengecam profil pelanggan yang unik. Langkah gabungan dalam proses penyatuan data akan menjana pengecam profil pelanggan yang unik. Pengecam ialah CustomerId dalam entiti *Pelanggan* yang terhasil daripada proses penyatuan data. 
+
+CustomerId dalam entiti Pelanggan ialah berdasarkan cincang nilai pertama daripada kunci utama pemenang bukan nol. Kekunci ini berasal daripada entiti yang digunakan dalam fasa padanan dan gabungan, dan dipengaruhi oleh urutan padanan.Jadi CustomerID yang dijana boleh berubah apabila nilai kekunci utama berubah dalam entiti utama urutan padanan. Jadi, nilai kunci utama mungkin tidak semestinya mewakili pelanggan yang sama.
+
+Mengkonfigurasi ID pelanggan yang stabil mendayakan anda mengelakkan tingkah laku itu.
+
+**Konfigurasikan ID pelanggan unik**
+
+1. Pergi ke **Satukan** > **Gabung**.
+
+1. Pilih tab **Kekunci**. 
+
+1. Tuding pada baris **CustomerId** dan pilih pilihan **Konfigurasi**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kawalan untuk menyesuaikan penjanaan ID.":::
+
+1. Pilih hingga lima medan yang akan terdiri daripada ID pelanggan unik dan lebih stabil. Rekod yang tidak sepadan dengan konfigurasi anda menggunakan ID yang dikonfigurasikan sistem.  
+
+1. Pilih **Selesai** dan jalankan proses gabungan untuk menggunakan perubahan anda.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Profil kumpulan ke dalam isi rumah atau kluster
+
+Sebagai sebahagian daripada proses konfigurasi penjanaan profil pelanggan, anda boleh mentakrifkan peraturan kepada profil berkaitan kumpulan ke dalam kluster. Pada masa ini terdapat dua jenis kluster yang tersedia – kluster isi rumah dan tersuai. Sistem secara automatik memilih isi rumah dengan peraturan yang dipratentukan jika entiti *Pelanggan* mengandungi medan semantik *Person.LastName* dan *Location.Address*. Anda juga boleh mencipta Kluster dengan peraturan dan syarat anda sendiri, sama dengan [peraturan padanan](match-entities.md#define-rules-for-match-pairs).
+
+**Takrifkan isi rumah atau kluster**
+
+1. Pergi ke **Satukan** > **Gabung**.
+
+1. Pada tab **Gabung**, pilih **Lanjutan** > **Cipta kluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Kawalan untuk mencipta kluster baharu.":::
+
+1. Pilih antara **Isi rumah** atau kluster **Tersuai**. Jika medan semantik *Person.LastName* dan *Location.Address* wujud dalam entiti *Pelanggan*, isi rumah dipilih secara automatik.
+
+1. Berikan nama untuk kluster dan pilih **Selesai**.
+
+1. Pilih tab **Kluster** untuk mencari kluster yang anda cipta.
+
+1. Tentukan peraturan dan syarat untuk mentakrifkan gugusan anda.
+
+1. Pilih **Jalankan** untuk menjalankan proses gabungan dan mencipta kluster.
+
+Selepas menjalankan proses penggabungan, pengecam kluster akan ditambah sebagai medan baharu kepada entiti *Pelanggan*.
+
 ## <a name="run-your-merge"></a>Jalankan gabungan anda
 
 Sama ada anda menggabungkan atribut secara manual atau membiarkan sistem menggabungkannya, anda sentiasa boleh menjalankan gabungan anda. Pilih **Jalankan** pada halaman **Gabung** untuk memulakan proses.
@@ -117,10 +211,9 @@ Pilih **Jalankan proses Gabungan dan hiliran** untuk menyegar semula sistem deng
 
 Untuk membuat lebih banyak perubahan dan menjalankan semula langkah, anda boleh membatalkan penggabungan yang sedang dilaksanakan. Pilih teks **Menyegarkan semula ...** dan pilih **Batal kerja** di bahagian tepi tetingkap yang muncul.
 
-> [!TIP]
-> Selepas menjalankan proses penggabungan, pilih status proses untuk membuka anak tetingkap **Butiran tugas**. Ia memberikan gambaran keseluruhan tentang masa pemprosesan, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas. Pilih **Lihat butiran** untuk melihat entiti yang mengambil bahagian dalam proses padanan, jika penyelesaian konflik berjaya dan jika kemas kini berjaya diterbitkan.  
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
 
 ## <a name="next-step"></a>Langkah Seterusnya
 

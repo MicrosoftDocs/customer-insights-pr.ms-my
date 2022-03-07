@@ -3,20 +3,24 @@ title: Ramalan nilai sepanjang hayat pelanggan (CLV)
 description: Meramalkan potensi pendapatan untuk pelanggan aktif pada masa akan datang.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095521"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355800"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Ramalan nilai sepanjang hayat pelanggan (CLV) (Pratonton)
+# <a name="customer-lifetime-value-clv-prediction"></a>Ramalan nilai sepanjang hayat pelanggan (CLV)
 
 Meramalkan nilai potensi (pendapatan) yang akan dibawa oleh pelanggan aktif individu kepada perniagaan anda melalui tempoh masa depan yang ditakrifkan. Ciri ini boleh membantu anda mencapai pelbagai matlamat: 
 - Mengenal pasti pelanggan bernilai tinggi dan memproses wawasan ini
@@ -65,7 +69,7 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
     - Kesempurnaan data: Kurang daripada 20% nilai hilang dalam medan yang diperlukan dalam data input   
 
 > [!NOTE]
-> - Model ini memerlukan sejarah transaksi pelanggan anda. Hanya satu entiti sejarah transaksi boleh dikonfigurasikan buat masa ini. Jika terdapat berbilang entiti pembelian/transaksi, anda boleh satukannya dalam Power Query sebelum pengingesan data.
+> - Model ini memerlukan sejarah transaksi pelanggan anda. Hanya satu entiti sejarah transaksi boleh dikonfigurasikan buat masa ini. Sekiranya terdapat banyak entiti pembelian / transaksi, anda boleh menyatukan mereka Power Query sebelum pengambilan data.
 > - Untuk data aktiviti pelanggan tambahan (pilihan), bagaimanapun anda boleh menambah sebanyak mungkin entiti aktiviti pelanggan yang anda mahu untuk pertimbangan oleh model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Cipta ramalan Nilai Sepanjang Hayat Pelanggan (CLV)
@@ -74,7 +78,7 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
 
 1. Pilih jubin **Nilai sepanjang hayat pelanggan** dan pilih **Gunakan model**. 
 
-1. Dalam anak tetingkap **Nilai sepanjang hayat pelanggan (pratonton)**, pilih **Mulakan**.
+1. **Dalam anak tetingkap Nilai** sepanjang hayat Pelanggan, pilih **Mulakan**.
 
 1. **Namakan model ini** dan **Nama entiti output** untuk membezakannya daripada model atau entiti lain.
 

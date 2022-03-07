@@ -1,24 +1,25 @@
 ---
-title: Ramalan pulangan langganan
+title: Langganan churn ramalan (mengandungi video)
 description: Meramal sama ada pelanggan berada dalam risiko kerana tidak lagi menggunakan produk atau perkhidmatan langganan syarikat anda.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035334"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354705"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Ramalan pulangan langganan (pratonton)
+# <a name="subscription-churn-prediction"></a>Ramalan pulangan langganan
 
 Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risiko kerana tidak lagi menggunakan produk atau perkhidmatan langganan syarikat anda. Anda boleh mencipta ramalan pulangan langganan baharu di halaman **Kecerdasan** > **Ramalan**. Pilih **Ramalan saya** untuk melihat ramalan lain yang telah anda cipta.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Cuba tutorial untuk ramalan pulangan langganan menggunakan data sampel: [Panduan sampel ramalan pulangan langganan](sample-guide-predict-subscription-churn.md).
@@ -61,7 +62,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 ## <a name="create-a-subscription-churn-prediction"></a>Cipta ramalan pulangan langganan
 
 1. Dalam wawasan khalayak, pergi ke **Kecerdasan** > **Ramalan**.
-1. Pilih jubin **Model pulangan langganan (pratonton)** dan pilih **Gunakan model ini**.
+1. **Pilih jubin model** churn Langganan dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
    > ![Jubin model Pulangan Langganan dengan butang Gunakan model ini.](media/subscription-churn-usethismodel.PNG "Jubin model Pulangan Langganan dengan butang Gunakan model ini")
 
@@ -75,7 +76,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 1. Masukkan bilangan **Hari sejak langganan berakhir** yang perniagaan anda pertimbangkan pelanggan akan berada dalam keadaan mempunyai pulangan. Tempoh ini pada lazimnya disukai untuk aktiviti perniagaan seperti tawaran atau usaha pemasaran lain yang cuba mengelakkan kerugian pelanggan.
 1. Masukkan bilangan **Hari yang dijangkakan untuk meramalkan pengeluaran** bagi menetapkan tetingkap untuk ramalan pengeluarannya. Contohnya, untuk meramal risiko pengeluaran untuk pelanggan anda dalam tempoh 90 hari yang akan datang bagi menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih lama atau lebih singkat boleh menjadikannya lebih sukar untuk menangani faktor-faktor dalam profil risiko pulangan, bergantung kepada keperluan perniagaan khusus anda. Pilih **Seterusnya** untuk teruskan
    >[!TIP]
-   > Anda boleh memilih **Simpan dan tutup** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
+   > Anda boleh memilih **Simpan draf** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
 
 ### <a name="add-required-data"></a>Tambah data yang diperlukan
 

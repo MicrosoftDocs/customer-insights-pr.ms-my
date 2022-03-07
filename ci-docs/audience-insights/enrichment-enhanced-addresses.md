@@ -1,20 +1,25 @@
 ---
-title: Pengayaan peningkatan alamat
+title: Pengayaan peningkatan alamat (mengandungi video)
 description: Perkayakan dan normalkan maklumat alamat profil pelanggan dengan model Microsoft.
-ms.date: 07/25/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032677"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353647"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang dipertingkatkan
 
@@ -23,6 +28,8 @@ Alamat dalam data anda boleh tidak berstruktur, tidak lengkap atau tidak betul. 
 ## <a name="how-we-enhance-addresses"></a>Cara kami mempertingkatkan alamat
 
 Model kami akan melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia menghuraikan alamat untuk mengenal pasti komponennya dan menempatkannya ke dalam format berstruktur. Kemudian, kami menggunakan AI untuk membetulkan, melengkapkan dan menyeragamkan nilai dalam alamat.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Contoh
 
@@ -98,10 +105,20 @@ Untuk memulakan proses pengayaan, pilih **Jalankan** daripada bar perintah. Anda
 
 Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang baru diperkaya di bawah **Pengayaan saya**. Di samping itu, anda akan menemui masa kemas kini yang terakhir dan bilangan profil yang diperkaya.
 
-Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan memilih **Lihat data yang diperkayakan**.
+Anda boleh melihat sampel data yang diperkaya dalam **jubin pratonton** pelanggan diperkaya. Pilih **Lihat lebih lanjut** dan pilih **tab Data** untuk mengakses pandangan terperinci setiap profil yang diperkaya.
 
-## <a name="next-steps"></a>Langkah seterusnya
+### <a name="overview-card"></a>Kad gambaran keseluruhan
 
-Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
+Kad gambaran keseluruhan menunjukkan butiran mengenai liputan pengayaan. 
+
+* **Alamat diproses dan diubah**: Bilangan profil pelanggan dengan alamat yang berjaya diperkaya.
+
+* **Alamat diproses dan tidak berubah**: Bilangan profil pelanggan dengan alamat yang diiktiraf tetapi tidak diubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
+
+* **Alamat tidak diproses dan tidak diubah**: Bilangan profil dengan alamat yang tidak dikenali. Biasanya untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
+
+## <a name="next-steps"></a>Langkah-langkah berikutnya
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

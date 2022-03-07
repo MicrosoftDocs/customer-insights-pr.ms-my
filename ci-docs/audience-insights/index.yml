@@ -4,18 +4,17 @@ summary: Inges, satukan dan susun data pelanggan daripada berbilang sumber. Cipt
 metadata:
   title: Dokumentasi Insights khalayak
   description: Hab bantuan dengan pautan utama untuk Insights khalayak.
-  ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-  ms.translationtype: HT
+  ms.date: 03/02/2022
+  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
+  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+  ms.translationtype: MT
   ms.contentlocale: ms-MY
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406470"
+  ms.lasthandoff: 02/16/2022
+  ms.locfileid: "8231848"
 landingContent:
 - title: Tentang Insights khalayak
   linkLists:
@@ -25,38 +24,54 @@ landingContent:
       url: overview.md
     - text: Ciri baharu dan dikemas kini
       url: whats-new-audience-insights.md
-    - text: Tapak komuniti
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Menyerap sumber data
-  linkLists:
-  - linkListType: how-to-guide
+    - text: Terokai cerapan khalayak
+      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
+  - linkListType: learn
     links:
-    - text: Tambah sumber data
-      url: data-sources.md
-    - text: Segar semula tokokan
-      url: incremental-refresh-data-sources.md
-    - text: Memahami entiti
-      url: entities.md
+    - text: Laluan pembelajaran Wawasan Pelanggan
+      url: /learn/paths/build-customer-insights/
 - title: Satukan data
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Petakan
-      url: map-entities.md
-    - text: Padankan
-      url: match-entities.md
-    - text: Gabungkan
-      url: merge-entities.md
-- title: Menapis profil pelanggan
+    - text: Gambaran keseluruhan sumber data
+      url: data-sources.md
+    - text: Gambaran keseluruhan penyatuan
+      url: data-unification.md
+    - text: Memahami entiti
+      url: entities.md
+  - linkListType: learn
+    links:
+    - text: Cipta profil bersatu
+      url: /learn/modules/unified-customer-profile/
+- title: Dapatkan wawasan
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Memperkayakan profil pelanggan
+      url: enrichment-hub.md
     - text: Konfigurasi perhubungan
       url: relationships.md
+    - text: Data lengkap dengan ramalan
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Memperkaya dan meramalkan data
+      url: /learn/modules/enrich-data/
+- title: Bina pada data anda
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Cipta segmen
+      url: segments.md
+    - text: Cipta ukuran
+      url: measures.md
     - text: Senaraikan aktiviti pelanggan
       url: activities.md
-    - text: Bawa model pembelajaran mesin anda sendiri
-      url: custom-models.md
+  - linkListType: learn
+    links:
+    - text: Gunakan sebarang aplikasi
+      url: /learn/modules/working-with-customer-insights/
 - title: Eksport data pelanggan
   linkLists:
   - linkListType: how-to-guide
@@ -67,6 +82,10 @@ landingContent:
       url: customer-card-add-in.md
     - text: Penyambung Power BI
       url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Menguruskan sambungan luaran
+      url: /learn/modules/configure-third-party-connections/
 - title: Tadbir aplikasi
   linkLists:
   - linkListType: how-to-guide
@@ -77,3 +96,7 @@ landingContent:
       url: permissions.md
     - text: Uruskan berbilang persekitaran
       url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Mentadbir Customer Insights
+      url: /learn/modules/administer-customer-data-platform/

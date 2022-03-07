@@ -3,18 +3,17 @@ title: Pengayaan dengan import tersuai SFTP
 description: Maklumat umum tentang pengayaan import tersuai SFTP.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555410"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229649"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
 
@@ -44,6 +43,8 @@ Untuk mengkonfigurasi import tersuai SFTP, prasyarat berikut mesti dipenuhi:
 1.  Pilih **Seterusnya** dan masukkan **Laluan** dan **Nama fail** bagi fail data yang mahu diimport.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Tangkapan skrin semasa memasuki lokasi data.":::
+
+1. Pilih **Seterusnya** dan pilih set data pelanggan. Ini mungkin sama ada semua profil pelanggan atau segmen.
 
 1. Pilih **Seterusnya** dan berikan nama untuk pengayaan dan nama untuk entiti output. 
 
@@ -123,6 +124,6 @@ Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) serta [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

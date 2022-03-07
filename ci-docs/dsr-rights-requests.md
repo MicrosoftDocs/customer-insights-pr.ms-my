@@ -3,18 +3,17 @@ title: Permintaan Hak Subjek Data (DSR) di bawah GDPR | Microsoft Docs
 description: Respons kepada Permintaan Subjek Data untuk keupayaan Insights khalayak Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483690"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350280"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan Hak Subjek Data (DSR) di bawah GDPR
 
@@ -79,71 +78,78 @@ Pentadbir penyewa boleh mengikuti langkah-langkah ini untuk mengeksport data:
 2. Memberitahu pengesahan untuk mengeksport data untuk pengguna yang diminta.
 3. Menerima data yang dieksport melalui alamat e-mel pentadbir penyewa.
 
-## <a name="engagement-insights"></a>Cerapan penglibatan
+## <a name="consent-management-preview"></a>Pengurusan persetujuan (pratonton)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Memadamkan dan mengeksport data peristiwa yang mengandungi maklumat boleh dikenal pasti pengguna akhir
+Keupayaan pengurusan persetujuan tidak mengumpul data pengguna secara langsung. Ia hanya mengimport dan memproses data persetujuan yang disediakan oleh pengguna dalam aplikasi lain.
 
-Bahagian berikut menghuraikan cara memadamkan dan mengeksport data peristiwa yang mungkin mengandungi data peribadi.
+Untuk mengalih keluar data persetujuan tentang pengguna tertentu, alih keluarnya dalam sumber data yang ditelan kepada keupayaan pengurusan persetujuan. Selepas menyegarkan semula sumber data, data yang dikeluarkan akan dipadamkan dalam Pusat Persetujuan juga. Aplikasi yang menggunakan entiti persetujuan juga akan memadamkan data yang telah dialih keluar pada sumber selepas [segar semula](audience-insights/system.md#refresh-processes). Kami mengesyorkan anda menyegar semula sumber data dengan cepat selepas bertindak balas kepada permintaan subjek data untuk mengalih keluar data pengguna daripada semua proses dan aplikasi lain.
 
-Untuk memadamkan atau mengeksport data:
 
-1. Tag sifat peristiwa yang mengandungi data dengan maklumat peribadi.
-2. Padamkan atau eksport data yang berkaitan dengan nilai tertentu (contohnya: ID pengguna yang ditentukan).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Tag dan kemas kini sifat peristiwa
+### Deleting and exporting event data containing end user identifiable information
 
-Data peribadi ditag pada tahap sifat peristiwa. Pertama, tag sifat yang dipertimbangkan untuk pemadaman atau eksport.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Untuk mengetag sifat peristiwa sebagai mengandungi maklumat peribadi, ikuti langkah berikut:
+To delete or export data:
 
-1. Buka ruang kerja yang mengandungi peristiwa.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Pergi ke **Data** > **Peristiwa** untuk melihat senarai peristiwa dalam ruang kerja yang dipilih.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Pilih peristiwa yang anda mahu tag.
+1. Select the event you want to tag.
 
-1. Pilih **Edit sifat** untuk membuka anak tetingkap yang menyenaraikan semua sifat peristiwa yang dipilih.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Pilih **...** dan kemudian pilih **Edit** untuk mencapai dialog **Kemas kini sifat**.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Edit peristiwa.](engagement-insights/media/edit-event.png "Edit peristiwa")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. Dalam tetingkap **Kemas Kini Sifat**, pilih **...** di sudut kanan atas dan kemudian pilih kotak **Mengandungi EUII**. Pilih **Kemas Kini** untuk menyimpan perubahan anda.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Simpan perubahan anda.](engagement-insights/media/update-property.png "Simpan perubahan anda")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Setiap kali skema peristiwa berubah atau anda mencipta peristiwa baharu, anda disyorkan untuk menilai sifat peristiwa berkaitan dan tag atau menyahtag peristiwa tersebut sebagai mengandungi data peribadi, jika perlu.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Padam atau eksport data peristiwa yang ditag
+#### Delete or export tagged event data
 
-Jika semua sifat peristiwa telah ditag sewajarnya seperti yang dihuraikan dalam langkah sebelumnya, pentadbir persekitaran boleh mengeluarkan permintaan pemadaman terhadap data peristiwa yang ditag.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-Untuk menguruskan permintaan pemadaman atau eksport EUII
+To manage EUII deletion or export requests
 
-1. Pergi ke **Pentadbir** > **Persekitaran** > **Tetapan**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. Dalam bahagian **Urus maklumat boleh dikenal pasti pengguna akhir (EUII)**, pilih **Urus EUII**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Pemadaman
+##### Deletion
 
-Untuk pemadaman, anda boleh memasukkan senarai ID pengguna yang dipisahkan koma dalam bahagian **Padamkan maklumat boleh dikenal pasti pengguna akhir (EUII)**. ID ini kemudian akan dibandingkan dengan semua sifat peristiwa yang ditag bagi semua projek dalam persekitaran semasa melalui pemadanan rentetan yang tepat. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Jika nilai sifat sepadan dengan salah satu ID yang diberikan, peristiwa berkaitan akan dipadamkan secara kekal. Disebabkan oleh ketakterbalikan tindakan ini, anda mesti mengesahkan pemadaman selepas memilih **Padam**.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-Proses eksport serupa dengan proses pemadaman apabila berkaitan dengan penentuan nilai sifat peristiwa dalam bahagian **Eksport maklumat boleh dikenal pasti pengguna akhir (EUII)**. Selain itu, anda perlu menyediakan **URL Storan Blob Azure** untuk menentukan destinasi eksport. URL Blob Azure mesti termasuk [Tandatangan Akses Dikongsi (SAS)](/azure/storage/common/storage-sas-overview).
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Selepas memilih **Eksport**, semua peristiwa pasukan semasa yang mengandungi sifat ditag sepadan akan dieksport dalam format CSV ke destinasi eksport.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Amalan yang baik
+### Good practices
 
-* Cuba elakkan daripada menghantar sebarang peristiwa yang mengandungi data peribadi.
-* Jika anda perlu menghantar peristiwa yang mengandungi data EUII, hadkan bilangan peristiwa dan sifat peristiwa yang mengandungi data EUII. Sebaik-baiknya, hadkan diri anda kepada satu peristiwa tersebut.
-* Pastikan bahawa sedikit orang yang mungkin mempunyai akses kepada data peribadi yang dihantar.
-* Untuk peristiwa yang mengandungi data peribadi, pastikan bahawa anda menetapkan satu sifat untuk mengeluarkan pengecam unik yang boleh dipautkan dengan mudah kepada pengguna tertentu (contohnya, ID pengguna). Ini menjadikannya lebih mudah untuk mengasingkan data dan untuk mengeksport atau memadamkan data yang betul.
-* Hanya tag satu sifat setiap peristiwa sebagai mengandungi data peribadi. Sebaik-baiknya, satu yang hanya mengandungi pengecam unik.
-* Jangan tag sifat yang mengandungi nilai berjela-jela (contohnya, keseluruhan isi permintaan). Keupayaan cerapan penglibatan menggunakan pemadanan rentetan yang tepat apabila memutuskan peristiwa yang hendak dipadamkan atau dieksport.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

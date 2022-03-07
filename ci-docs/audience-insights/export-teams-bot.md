@@ -1,20 +1,19 @@
 ---
 title: Bot untuk Microsoft Teams
 description: Carian profil pelanggan disatukan dalam Microsoft Teams dengan bantuan bot.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e563619f40be859f3f02638adbd60b80423182b3
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554398"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232113"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Pasukan bot untuk Dynamics 365 Customer Insights (pratonton)
 
@@ -31,7 +30,10 @@ Untuk menyedia dan mengkonfigurasi bot, prasyarat berikut mesti dipenuhi:
 - [Proses penyatuan](data-unification.md) adalah lengkap.
 - Medan ditambah ke [indeks carian dan tapisan](search-filter-index.md).
 - Customer Insights dan Teams adalah dalam organisasi yang sama.
+- Persekitaran anda mempunyai khalayak sasaran utama yang ditetapkan kepada pelanggan individu. Akaun perniagaan tidak disokong.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfigurasi bot
 
 1. Dalam Insights khalayak, pergi ke **Pentadbir** > **Export Destinasi**.

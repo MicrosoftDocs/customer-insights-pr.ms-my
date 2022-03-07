@@ -2,18 +2,17 @@
 title: Gunakan dimensi demografi untuk data tingkah laku pemisahan (dimensi dikumpul)
 description: Gunakan dimensi dikumpul profil disatukan untuk mendayakan sifat profil pelanggan cerapan khalayak.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461114"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233058"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Gunakan dimensi demografi untuk data tingkah laku pemisahan
 
@@ -29,7 +28,7 @@ Dengan menggunakan dimensi demografi profil disatukan, pengguna cerapan pengliba
 - Persekitaran cerapan penglibatan yang mana anda mempunyai data profil pelanggan yang dipautkan kepada persekitaran cerapan khalayak yang mana profil pelanggan yang dicipta. Maklumat lanjut: [Cipta pautan antara cerapan khalayak dan cerapan penglibatan](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Selepas anda mencipta pautan antara cerapan khalayak dan persekitaran cerapan penglibatan, anda mungkin hanya mahu data khusus kepada sifat profil pelanggan, yang mungkin berguna sebagai dimensi dalam cerapan penglibatan. Untuk mendapatkan maklumat lanjut, pergi ke [Dayakan cerapan khalayak segmen dan atribut profil disatukan](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Selepas anda mencipta pautan antara cerapan khalayak dan persekitaran cerapan penglibatan, anda mungkin hanya mahu data khusus kepada sifat profil pelanggan, yang mungkin berguna sebagai dimensi dalam cerapan penglibatan. Untuk mendapatkan maklumat lanjut, pergi ke [Dayakan cerapan khalayak segmen dan atribut profil disatukan](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Cipta laporan tersuai baharu
 

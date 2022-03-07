@@ -3,18 +3,17 @@ title: Eksport Data Customer Insights kepada Klaviyo
 description: Ketahui cara mengkonfigurasikan sambungan dan mengeksport kepada Klaviyo.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619084"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225479"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Senarai segmen eksport kepada Klaviyo (pratonton)
 

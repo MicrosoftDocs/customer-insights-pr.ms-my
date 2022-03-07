@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673504"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229088"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Cipta ruang kerja baharu dan tambah ahli
 
@@ -30,13 +29,13 @@ Proses mencipta ruang kerja termasuk menyediakan *persekitaran* untuk mengaturka
 
 1. Pilih **+Baru** daripada penukar ruang kerja.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Halaman Wawasan Pelanggan tanpa panggilan pada anak tetingkap navigasi dan perihalan.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Halaman Wawasan Pelanggan dengan petak bual pada anak tetingkap navigasi dan perihalan.":::
 
 1. Dalam anak tetingkap **Ruang kerja** masukkan **Nama ruang kerja**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Taipkan nama ruang kerja.":::
 
-1. Pilih jenis platform (web atau mudah alih) yang anda ingin ukur.
+1. Pilih jenis platform (web atau mudah alih) yang anda mahu ukur.
 
 1. Pilih **Tunjuk tetapan lanjutan** untuk mendayakan atau menyahdayakan tetapan pilihan ini:
 

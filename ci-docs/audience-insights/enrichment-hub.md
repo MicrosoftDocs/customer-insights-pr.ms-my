@@ -1,21 +1,25 @@
 ---
 title: Perkayakan profil pelanggan disatukan
 description: Gunakan keupayaan untuk memperkayakan data pelanggan anda.
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098800"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372730"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -38,6 +42,7 @@ Pada tab **Terokai**, anda akan mencari semua pilihan pengayaan yang disokong.
 - [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
+- [Identiti](enrichment-liveramp.md) yang disediakan oleh LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
@@ -76,6 +81,10 @@ Pengayaan pihak ketiga dikonfigurasikan menggunakan [sambungan](connections.md),
 ## <a name="multiple-enrichments-of-the-same-type"></a>Pelbagai pengayaan untuk jenis yang sama
 
 Entiti yang akan diperkaya ditentukan semasa konfigurasi pengayaan, yang membolehkan anda memperkayakan hanya subset profil anda. Contohnya, memperkaya data hanya untuk segmen tertentu. Anda boleh mengkonfigurasikan beberapa pengayaan jenis yang sama dan menggunakan semula sambungan yang sama. Sesetengah pengayaan mempunyai had bilangan pengayaan jenis yang sama yang boleh dicipta. Had dan penggunaan semasa boleh dilihat pada halaman **Pengayaan**.
+
+## <a name="enrich-data-sources-before-unification"></a>Memperkayakan sumber data sebelum penyatuan
+
+Anda boleh memperkayakan data pelanggan anda sebelum penyatuan data untuk membantu meningkatkan kualiti padanan data. Untuk maklumat lanjut, lihat [pengayaan sumber data](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
 

@@ -2,19 +2,21 @@
 title: Cerapan segmen untuk segmen sedia ada
 description: Dapatkan cerapan pada segmen sedia ada untuk melihat perbezaan dan persamaan.
 ms.date: 06/10/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306085"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355578"
 ---
 # <a name="segment-insights-preview"></a>Wawasan segmen (pratonton)
 
@@ -44,7 +46,7 @@ Anda juga boleh menganalisis cara perubahan bertindih untuk atribut tertentu.
 Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Bahagikan butiran wawasan bertindih":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Butiran cerapan segmen bertindih.":::
 
 Pilih wawasan untuk melihat hasil analisis:
 
@@ -77,7 +79,7 @@ Pembezaan segmen membantu anda ketahui apa yang membezakan segmen daripada selur
 Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Butiran wawasan pembezaan segmen":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Butiran cerapan pembeza segmen.":::
 
 Pilih wawasan untuk melihat hasil analisis. Analisis pembezaan termasuk dua tab. Tab **Atribut** menyenaraikan atribut profil dianggap sebagai pembezaan. Tab **Langkah** menyenaraikan pembezaan. Setiap tab merangkumi butiran berikut:
 

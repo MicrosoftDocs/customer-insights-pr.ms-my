@@ -3,18 +3,20 @@ title: Kerja dengan API
 description: Gunakan API dan fahami pengehadan.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: b1e022f8afb8b7dbb707636009b6a25ee242a4e0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554492"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354796"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
@@ -35,7 +37,7 @@ Artikel ini menerangkan cara mengakses API Customer Insights, mencipta Pendaftar
  
    Mendayakan API mencipta kunci langganan utama dan sekunder untuk tika anda yang akan digunakan dalam permintaan API. Anda boleh menjana semula kunci dengan memilih **Jana semula utama** atau **Jana semula sekunder** pada **Pentadbir** > **Keizinan** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Dayakan API Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Pilih **Terokai API kami** untuk [mencuba API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +51,7 @@ Artikel ini menerangkan cara mengakses API Customer Insights, mencipta Pendaftar
 
 Respons HTTP tidak lama lagi akan muncul di bawah.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Cara menguji API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Cipta pendaftaran aplikasi baharu dalam portal Azure
 
@@ -65,7 +67,7 @@ Langkah-langkah ini membantu anda bermula dengan menggunakan API Customer Insigh
 
 1. Pada pendaftaran Aplikasi baharu anda, pergi ke **Keizinan API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Cara menetapkan keizinan API dalam pendaftaran Aplikasi.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Pilih **Tambah keizinan** dan pilih **Customer Insights** dalam tetingkap sisi.
 
@@ -77,7 +79,7 @@ Langkah-langkah ini membantu anda bermula dengan menggunakan API Customer Insigh
 
 Anda boleh menggunakan Aplikasi/ID Klien untuk pendaftaran aplikasi ini dengan Pustaka Pengesahan Microsoft (MSAL) untuk mendapatkan token pembawa untuk menghantar dengan permintaan anda kepada API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan pentadbir.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Untuk mendapatkan maklumat lanjut tentang MSAL, lihat [Gambaran Keseluruhan Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +105,7 @@ Untuk mendapatkan maklumat tentang penggunaan API dalam pustaka klien kami, liha
 
 1. Pilih **Berikan keizinan pentadbir untuk...** untuk melengkapkan pendaftaran aplikasi.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cara memberikan persetujuan pentadbir.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Untuk menyimpulkan, kami perlu menambah nama pendaftaran aplikasi sebagai pengguna dalam Customer Insights.  
    
@@ -129,19 +131,19 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
  
    Secara alternatif, jalankan perintah ini dalam **Konsol Pengurus Pakej NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Tambah pakej NuGet kepada projek Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Gunakan pustaka klien C#
 
 1. Gunakan [Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) untuk memperoleh `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) anda yang sedia ada.
 
-1. Selepas berjaya mengesahkan dan memperolehi token, bina `HttpClient` yang baharu atau gunakan yang sedia ada dengan **"Pengesahan" DefaultRequestHeaders** tambahan ditetapkan kepada **<access token> Pembawa** dan **Ocp-Apim-Subscription-Key** ditetapkan kepada [**kunci langganan** daripada persekitaran Customer Insights anda](#get-started-trying-the-customer-insights-apis).   
+1. Selepas berjaya mengesahkan dan memperoleh token, bina token baru atau gunakan yang sedia ada `HttpClient` dengan set "Kebenaran"**DefaultRequestHeaders tambahan** kepada **Pembawa "token akses"** dan **set Ocp-Apim-Subscription-Key** kepada [**kunci** langganan daripada persekitaran](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan anda.   
  
    Tetapkan semula pengepala **Pengesahan** apabila sesuai. Contohnya, apabila token tamat tempoh.
 
 1. Hantar `HttpClient` ini ke dalam pembinaan klien `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Sampel httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Buat panggilan dengan klien pada "kaedah lanjutan"—contohnya, `GetAllInstancesAsync`. Jika akses kepada dasar `Microsoft.Rest.HttpOperationResponse` diutamakan, gunakan "kaedah mesej http"—contohnya, `GetAllInstancesWithHttpMessagesAsync`.
 

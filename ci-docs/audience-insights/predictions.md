@@ -1,24 +1,28 @@
 ---
 title: Lengkapkan data separa menggunakan ramalan
 description: Gunakan ramalan untuk mengisi data pelanggan yang tidak lengkap.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268283"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354014"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Lengkapkan data separa anda dengan ramalan
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapkan data separa anda dengan ramalan (ditamatkan)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ciri ini akan **ditamatkan** **pada 5 November 2021**. Pelaksanaan semasa akan terus berfungsi sehingga ciri dialih keluar, tetapi anda tidak akan dapat mencipta integrasi baru menggunakan arahan di bawah.
 
 Ramalan membolehkan anda mencipta nilai ramalan dengan mudah yang boleh meningkatkan pemahaman anda tentang pelanggan. Pada halaman **Kecerdasan** > **Ramalan**, anda boleh memilih **Ramalan saya** untuk melihat ramalan yang anda konfigurasikan dalam bahagian wawasan khalayak lain dan membolehkan anda menyesuaikannya lagi.
 
@@ -31,11 +35,11 @@ Ramalan membolehkan anda mencipta nilai ramalan dengan mudah yang boleh meningka
 
 Sebelum organisasi anda boleh menggunakan ciri ramalan, prasyarat berikut mesti dipenuhi:
 
-1. Organisasi anda mempunyai tika yang [disediakan dalam Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama dengan Customer Insights.
+1. Organisasi anda mempunyai tika [yang disediakan dalam Microsoft Dataverse](/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama seperti Customer Insights.
 
-2. Persekitaran anda dilampirkan pada tika Common Data Service anda.
+2. Persekitaran cerapan khalayak anda dilampirkan pada tika Dataverse anda.
 
-Jika anda sedang [mencipta persekitaran baharu](manage-environments.md), konfigurasikannya dalam dialog **Cipta persekitaran** dan pilih **Lanjutan**. Jika anda telah mencipta persekitaran, pergi ke tetapannya dan pilih **Lanjutan**. Walau apa pun, dalam bahagian **Gunakan ramalan**, masukkan URL tika Common Data Service yang anda mahu lampirkan pada persekitaran anda.
+Untuk mendapatkan maklumat lanjut, lihat [Cipta persekitaran baharu](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Cipta ramalan dalam entiti Pelanggan
 
@@ -47,19 +51,21 @@ Jika anda sedang [mencipta persekitaran baharu](manage-environments.md), konfigu
 
 4. Cari nama atribut yang anda ingin ramalkan nilai, kemudian pilih ikon **Gambaran Keseluruhan** dalam lajur **Ringkasan**.
    > [!div class="mx-imgBorder"]
-   > ![Ikon gambaran keseluruhan](media/intelligence-overviewicon.png "Ikon gambaran keseluruhan")
+   > ![Ikon gambaran keseluruhan.](media/intelligence-overviewicon.png "Ikon gambaran keseluruhan")
 
 5. Jika terdapat kadar nilai tidak diisi yang tinggi bagi atribut anda, pilih **Ramal nilai yang tidak diisi** untuk meneruskan dengan ramalan anda.
    > [!div class="mx-imgBorder"]
-   > ![Status gambaran keseluruhan dengan butang nilai yang tidak diisi ditunjukkan](media/intelligence-overviewpredictmissingvalues.png "Status gambaran keseluruhan dengan butang ramalan nilai hilang ditunjukkan")
+   > ![Status gambaran keseluruhan dengan butang ramalkan nilai yang tidak diisi ditunjukkan.](media/intelligence-overviewpredictmissingvalues.png "Status gambaran keseluruhan dengan butang ramalan nilai hilang ditunjukkan")
 
 6. Sediakan **Nama paparan** dan **Nama entiti output** untuk hasil ramalan.
 
 7. Senarai pra-penuhi bagi pilihan akan menunjukkan di mana anda boleh memetakan nilai untuk kategori diramalkan. Dalam kes ini, pilihan kategori anda hanyalah 0 atau 1 kerana ia memetakan ramalan benar/palsu atau bersifat binari. Dalam lajur Kategori, petakan nilai medan yang anda ingin klasifikasikan sebagai “0” dalam ramalan akhir kepada “0” dan item yang anda ingin klasifikasikan sebagai “1” dalam ramalan akhir kepada “1”.
    > [!div class="mx-imgBorder"]
-   > ![Contoh menunjukkan nilai medan yang dipetakan ke kategori](media/intelligence-categorymapping.png "Contoh menunjukkan nilai medan yang dipetakan ke kategori")
+   > ![Contoh menunjukkan nilai medan yang dipetakan kepada kategori.](media/intelligence-categorymapping.png "Contoh menunjukkan nilai medan yang dipetakan ke kategori")
 
 8. Pilih **Selesai** dan ramalan akan diproses. Pemprosesan akan mengambil sedikit masa, bergantung kepada saiz dan kekompleksan data. Hasil akan tersedia dalam entiti baharu berasaskan pada **Nama entiti output** bagi ramalan yang anda telah ciptakan.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Cipta ramalan semasa mencipta bahagian
 
@@ -77,7 +83,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 5. Jika bahagian yang baharu anda cipta mempunyai data yang tidak lengkap dalam medan sumber, anda boleh memilih untuk meramalkan nilai yang hilang.
    > [!div class="mx-imgBorder"]
-   > ![Butang ramalan](media/segments-predictoption.png "Butang ramalan")
+   > ![Butang ramalan.](media/segments-predictoption.png "Butang ramalan")
 
 6. Sediakan **Nama paparan** dan **Nama entiti output** untuk hasil ramalan.
 
@@ -93,7 +99,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 4. Anda akan melihat bilangan titik data dalam pandangan ramalan anda.
    > [!div class="mx-imgBorder"]
-   > ![Halaman ramalan](media/intelligence-predictionsviewpage.png "Halaman ramalan")
+   > ![Halaman ramalan.](media/intelligence-predictionsviewpage.png "Halaman ramalan")
 
    - **Nilai ramalan** menunjukkan pemetaan yang anda cipta semasa peringkat pemetaan nilai Medan ke kategori. Ini ialah nilai dalam set data yang telah dipetakan kepada kategori tertentu.
    -**Pempengaruh teratas** merupakan faktor dalam set data anda yang paling cenderung untuk mempengaruhi keyakinan ramalan bagi nilai Medan anda untuk dipetakan ke kategori tertentu.
@@ -110,7 +116,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 ## <a name="edit-a-prediction"></a>Edit ramalan
 
-Selepas anda mencipta ramalan, anda boleh sesuaikan model dalam the AI Builder untuk meningkatkan keberkesanan model anda.  
+Selepas anda mencipta ramalan, anda boleh menyesuaikan model AI Builder untuk meningkatkan keberkesanan model anda.  
 
 1. Dalam wawasan khalayak, pergi ke **Kecerdasan** > **Ramalan** > **Ramalan saya**.
 
@@ -120,12 +126,12 @@ Selepas anda mencipta ramalan, anda boleh sesuaikan model dalam the AI Builder u
 
 4. Pilih **Sesuaikan dalam AI Builder**.
 
-5. Kemas kini model anda dalam AI Builder. [Ketahui lebih lanjut tentang mengurus model dalam AI builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Kemas kini model anda dalam AI Builder. [Ketahui lebih lanjut tentang mengurus model dalam AI builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Jalanan ramalan anda yang seterusnya akan menggunakan model dikemas kini yang anda cipta.
 
 > [!NOTE]
-> Model baharu yang dicipta dalam AI Builder tidak akan dipaparkan dalam wawasan khalayak melainkan model itu dicipta daripada pengalaman yang disenaraikan di atas.
+> Model baharu yang dicipta AI Builder tidak akan dipaparkan dalam wawasan khalayak melainkan model dicipta daripada pengalaman yang disenaraikan di atas.
 
 ## <a name="remove-a-prediction"></a>Alih keluar ramalan
 
@@ -139,7 +145,7 @@ Jalanan ramalan anda yang seterusnya akan menggunakan model dikemas kini yang an
 
 ## <a name="troubleshooting"></a>Penyelesaian masalah
 
-Jika anda tidak dapat melengkapkan proses lampir Common Data Service kerana ralat, anda boleh cuba melengkapkan proses itu secara manual. Terdapat dua isu diketahui yang boleh berlaku dalam proses lampir:
+Jika anda tidak dapat melengkapkan proses lampir Dataverse kerana ralat, anda boleh cuba melengkapkan proses itu secara manual. Terdapat dua isu diketahui yang boleh berlaku dalam proses lampir:
 
 - Penyelesaian Tambahan Kad Pelanggan tidak dipasang.
     1. Lengkapkan arahan untuk [memasang dan mengkonfigurasi penyelesaian](customer-card-add-in.md).

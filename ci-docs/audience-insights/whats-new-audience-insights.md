@@ -1,24 +1,23 @@
 ---
 title: Ciri baharu dan akan datang
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 05/06/2021
-ms.service: customer-insights
+ms.date: 03/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988931"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232669"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](/dynamics365/release-plans/).
 
@@ -26,6 +25,184 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Kemas kini Januari 2022
+
+Kemas kini pada Januari 2022 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisis sentimen maklum balas pelanggan anda
+
+Wawasan Pelanggan menyediakan ciri berkuasa AI baru untuk mensintesis sentimen pelanggan dan mengenal pasti aspek perniagaan tertentu sebagai peluang untuk penambahbaikan yang disasarkan. Dengan menganalisis maklum balas bertulis pelanggan anda, anda boleh mendapatkan pandangan yang tepat pada kos yang rendah. Analisis sentimen yang dikuasakan oleh model Pemprosesan Bahasa Semula Jadi (NLP) yang menjana dua wawasan yang diperolehi untuk setiap ID pelanggan. Skor sentimen (daripada –5 hingga 5) dan senarai aspek perniagaan yang berkenaan. 
+
+Untuk maklumat lanjut, lihat [Menganalisis sentimen dalam maklum balas pelanggan (Pratonton)](sentiment-analysis.md).
+
+
+## <a name="december-2021-updates"></a>Kemas kini Disember 2021
+
+Kemas kini pada bulan Disember 2021 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Majukan log Wawasan Pelanggan ke Azure Monitor
+
+Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Ciri ini termasuk acara audit dan acara operasi. Azure Monitor resource logs membolehkan anda memantau dan menghantar log ke Azure Storage, Azure Log Analytics, atau menstrimkannya ke Azure Event Hubs.
+
+Untuk maklumat lanjut, lihat [Pemajuan log masuk Dynamics 365 Customer Insights dengan Azure Monitor (Pratonton)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Memperkayakan profil pelanggan dengan data penglibatan
+
+Gunakan data daripada Microsoft Office 365 untuk memperkayakan profil akaun pelanggan anda dengan wawasan tentang penglibatan melalui Office 365 apl. Data penglibatan terdiri daripada e-mel dan aktiviti mesyuarat, yang diagregatkan pada peringkat akaun. Sebagai contoh, bilangan e-mel daripada akaun perniagaan atau bilangan mesyuarat dengan akaun. Tiada data tentang pengguna individu dikongsi. Pengayaan ini boleh didapati di kawasan berikut: UK, Eropah, Amerika Utara.
+
+Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data penglibatan (Pratonton)](enrichment-office.md).
+
+### <a name="advanced-data-unification-features"></a>Ciri penyatuan data lanjutan
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Benarkan dasar penyelesaian konflik pada peringkat atribut individu
+
+Apabila deduplicating rekod pelanggan dalam entiti, anda mungkin tidak mahu memilih rekod penuh sebagai pemenang. Kami kini membolehkan anda menggabungkan medan terbaik dari pelbagai rekod berdasarkan peraturan untuk setiap atribut. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat yang paling lengkap daripada rekod yang berbeza. 
+
+Anda kini boleh mentakrifkan peraturan cantuman berasingan untuk atribut individu semasa deduplicating dan menggabungkan rekod dalam satu entiti. Sebelum ini, kami hanya membenarkan anda memilih peraturan cantum tunggal (mengekalkan rekod berdasarkan kesempurnaan data recency) dan peraturan tersebut digunakan pada tahap rekod kepada semua atribut. Itu tidak sesuai apabila beberapa data yang anda mahu simpan terdapat dalam rekod A, dan data lain yang baik yang terdapat dalam rekod B.
+
+Untuk mendapatkan maklumat lanjut, lihat [Takrifkan penyahduplikasi pada entiti padanan](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Peraturan tersuai untuk padanan
+
+Ada kalanya anda perlu menentukan pengecualian kepada peraturan umum untuk TIDAK sepadan dengan rekod. Ini boleh berlaku apabila beberapa individu berkongsi maklumat yang mencukupi supaya sistem akan sepadan dengan mereka sebagai individu tunggal. Sebagai contoh, kembar dengan nama akhir yang sama, tinggal di bandar yang sama, dan berkongsi tarikh lahir.
+
+Pengecualian memastikan bahawa penyatuan data yang salah dapat ditangani dalam peraturan penyatuan. Anda boleh menambah berbilang pengecualian pada peraturan.
+
+Untuk maklumat lanjut, lihat [Menambah pengecualian pada peraturan](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Menyediakan dasar penyelesaian konflik tambahan dan mendayakan perlompok atribut
+
+Ciri ini membolehkan anda melayan sekumpulan medan sebagai satu unit. Contohnya, apabila rekod kami mengandungi medan Alamat1, Address2, Bandar, Negeri dan Zip. Kami mungkin tidak mahu bergabung dalam Alamat2 rekod yang berbeza, memikirkan ia akan menjadikan data kami lebih lengkap.
+
+Anda kini boleh menggabungkan sekumpulan medan yang berkaitan dan menggunakan dasar cantum tunggal pada kumpulan. 
+
+Untuk maklumat lanjut, lihat [Menggabungkan sekumpulan medan](merge-entities.md#combine-a-group-of-fields).
+
+
+## <a name="november-2021-updates"></a>Kemas kini November 2021
+
+Kemas kini pada bulan November 2021 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Segmen keahlian yang kini boleh didapati di Dataverse
+
+Maklumat keahlian segmen untuk profil pelanggan kini boleh didapati Dataverse bersama-sama dengan profil pelanggan dan pandangan. Aplikasi tindakan Dynamics 365 dan aplikasi dipacu model boleh menggunakan data ini mencari butiran keahlian segmen untuk pelanggan tertentu.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktiviti menyokong butiran peringkat hubungan untuk akaun perniagaan
+
+Anda kini boleh mengkonfigurasi, memaparkan dan menapis aktiviti untuk kenalan pada garis masa aktiviti akaun perniagaan anda untuk lebih memahami kenalan akaun yang mengambil bahagian dalam aktiviti tertentu.
+
+## <a name="october-2021-updates"></a>Kemas kini Oktober 2021
+
+Kemas kini pada bulan Oktober 2021 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="b-to-b"></a>B-ke-B
+
+Mulai Oktober 2021, anda boleh bekerja dengan akaun perniagaan dan kenalan berkaitan mereka dalam Wawasan Pelanggan. Sebelum ini, aplikasi ini kebanyakannya disesuaikan dengan pengguna individu. Beberapa kawasan ciri telah dikemas kini untuk menyokong senario B-ke-B di atas jenis persekitaran baru. Untuk gambaran keseluruhan tentang ciri B-ke-B yang disokong, lihat [Bekerja dengan akaun perniagaan dalam wawasan](work-with-business-accounts.md) khalayak.
+
+Bahagian berikut menyerlahkan beberapa bidang utama yang disesuaikan untuk menyokong akaun perniagaan dan pengguna individu.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Eksport segmen berdasarkan akaun perniagaan
+
+Semua eksport segmen dalam cerapan khalayak tersedia dalam konteks akaun perniagaan. Kebanyakan eksport segmen memerlukan konfigurasi tambahan dan [maklumat hubungan yang diunjurkan](segment-builder.md#create-a-new-segment) dalam segmen pendasar yang sah untuk akaun perniagaan. Untuk maklumat lanjut, lihat [Eksport segmen](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Gunakan eksport Iklan LinkedIn dengan akaun perniagaan
+
+Eksport Iklan LinkedIn kini tersedia untuk penyasaran kenalan dan syarikat dalam konteks akaun perniagaan. Apabila memilih penyasaran syarikat sebagai fokus utama eksport LinkedIn anda, anda boleh mengeksport segmen yang dibina pada akaun perniagaan tanpa perlu memproyeksikan maklumat hubungan. Untuk mendapatkan maklumat lanjut, pergi ke dokumen tentang [eksport](export-linkedin-ads.md) Iklan LinkedIn dan perbezaan antara [penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kenalan dan [penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) syarikat. 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Buat langkah berdasarkan akaun perniagaan dan hierarkinya
+
+Pembina ukuran membolehkan anda membuat langkah-langkah di sekitar akaun perniagaan dan menggunakan maklumat hierarki secara pilihan. Maklumat hierarki digunakan untuk melancarkan pengiraan ukuran merentas akaun dan semua sub akaun yang berkaitan. Sebagai contoh, anda boleh membuat ukuran seperti jumlah pendapatan bagi setiap kumpulan akaun perniagaan yang dikenal pasti oleh hierarki mereka. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Cipta segmen berdasarkan akaun perniagaan dan hierarkinya
+
+Pembina segmen membolehkan anda membuat segmen akaun perniagaan yang secara pilihan memasukkan maklumat hubungan untuk setiap akaun dalam segmen. Jika anda menyediakan hierarki akaun, anda boleh menggunakan maklumat hierarki akaun dalam penciptaan segmen. Untuk maklumat lanjut, lihat [Mencipta segmen](segment-builder.md#create-a-new-segment) baharu.
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Kekalkan akaun perniagaan anda dengan wawasan yang mendalam kepada kecenderungan churn mereka
+
+Model ramalan pelanggan kini menyokong akaun perniagaan juga. Anda boleh menilai risiko churn bukan hanya untuk akaun tetapi untuk gabungan akaun dan kategori produk atau perkhidmatan yang mereka beli daripada anda. Penambahan ini membantu anda memahami jika akaun lebih cenderung untuk berhenti membeli daripada anda secara umum atau hanya untuk kategori barangan atau perkhidmatan tertentu. Untuk membantu anda menggunakan model AI ini, ia juga menyenaraikan sebab mengapa akaun mungkin akan berkembang. Untuk maklumat lanjut, lihat [Ramalan churn transaksi (pratonton)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Lihat kenalan akaun perniagaan dalam pandangan Pelanggan
+
+Jika akaun perniagaan dipetakan ke akaun yang berkaitan, aplikasi Wawasan Pelanggan menunjukkan kenalan berkaitan ini sebagai sebahagian daripada paparan butiran pelanggan. Untuk maklumat lanjut, lihat [Profil pelanggan](customer-profiles.md).
+
+
+## <a name="september-2021-updates"></a>Kemas kini September 2021
+
+Kemas kini pada bulan September 2021 termasuk ciri baharu, peningkatan prestasi dan pembaikan pepijat.
+
+### <a name="activities"></a>Aktiviti
+
+- **Peningkatan garis masa aktiviti** Kami telah memperluaskan penapis untuk garis masa aktiviti pada profil pelanggan. Selain itu, anda boleh menggunakan gerak penapis baharu untuk menapis mengikut jenis aktiviti dan mengikut tarikh. Tarikh boleh ditapis menggunakan keadaan yang berbeza. Untuk mendapatkan maklumat lanjut, lihat [Lihat garis masa aktiviti pada profil pelanggan](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Hubungan
+
+- **Sokongan perhubungan berbilang hop** Menggunakan perhubungan berbilang hop apabila mengkonfigurasi aktiviti dan mentakrifkan perhubungan antara entiti. Perhubungan berbilang hop menggunakan entiti pertengahan untuk menyambungkan dua entiti. Apabila mengkonfigurasi aktiviti, anda boleh menggunakan perhubungan berbilang hop untuk menyambungkan entiti aktiviti anda kepada entiti pertengahan dan kemudian kepada entiti pelanggan. Anda boleh menggabungkan perhubungan berbilang hop dengan perhubungan berbilang laluan. Untuk mendapatkan maklumat lanjut, lihat [Perhubungan berbilang hop](relationships.md#multi-hop-relationship).
+
+- **Sokongan perhubungan berbilang laluan** Menggunakan perhubungan berbilang hop apabila mengkonfigurasi aktiviti dan mentakrifkan perhubungan antara entiti. Perhubungan berbilang laluan mengaitkan entiti sumber kepada lebih daripada satu entiti. Apabila mengkonfigurasi aktiviti, anda boleh menggunakan perhubungan berbilang laluan untuk menyambungkan entiti aktiviti anda kepada lebih dari satu entiti pelanggan. Anda boleh menggabungkan perhubungan berbilang laluan dengan perhubungan berbilang hop. Untuk mendapatkan maklumat lanjut, lihat [Perhubungan berbilang laluan](relationships.md#multi-path-relationship).
+
+## <a name="august-2021-updates"></a>Kemas kini Ogos 2021
+
+Kemas kini pada Julai dan Ogos 2021 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport segmen kepada Klaviyo** Kami telah melanjutkan [destinasi eksport kami untuk menyertakan Klaviyo](export-klaviyo.md). Anda kini boleh mengeksport segmen untuk mencipta kempen, menjalankan pemasaran e-mel dan menggunakan kumpulan pelanggan khusus dengan Klaviyo. 
+
+
+## <a name="june-2021-updates"></a>Kemas kini Jun 2021
+
+Kemas kini pada Jun 2021 termasuk beberapa ciri, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="data-ingestion"></a>Pengingesan data
+
+- **Kemas kini kemajuan penyatuan data yang dipertingkat** Anda kini boleh melihat kemas kini status dinamik yang lebih terperinci dan dipertingkatkan pada langkah [proses penyatuan data](data-unification.md). Ciri ini membolehkan anda menjejak kemajuan terperinci untuk memahami aliran proses dan mengambil tindakan jika mana-mana langkah memerlukan perhatian.
+
+### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport segmen dan data lain kepada Salesforce Marketing Cloud** Kami telah melanjutkan destinasi eksport kami untuk menyertakan [Salesforce Marketing Cloud](export-salesforce.md). Anda kini boleh mengeksport segmen dan jenis data lain kepada Salesforce Marketing Cloud melalui eksport SFTP berjenama. Import data boleh automatik sepenuhnya dalam Salesforce dan digunakan untuk mewujudkan kempen pemasaran yang lebih berkesan.  
+ 
+- **Eksport segmen kepada ActiveCampaign** Kami telah melanjutkan destinasi eksport kami untuk menyertakan [Kempen Aktif](export-active-campaign.md). Anda kini boleh mengeksport segmen untuk menjana kempen, menjalankan pemasaran e-mel dan bekerja dengan kumpulan pelanggan khusus dalam ActiveCampaign.
+ 
+- **Eksport segmen kepada Sendinblue** Kami telah melanjutkan destinasi eksport kami untuk menyertakan [Sendinblue](export-sendinblue.md). Anda kini boleh mengeksport segmen untuk menjana kempen, menjalankan pemasaran e-mel dan bekerja dengan kumpulan pelanggan khusus dengan Sendinblue.
+ 
+### <a name="ux-updates"></a>Kemas kini UX 
+
+- **Halaman Pelanggan baharu dan dipertingkatkan dan halaman butiran profil** Kami telah mereka bentuk semula halaman Pelanggan dan halaman butiran profil untuk pengalaman pengguna yang dipertingkat dan prestasi yang lebih baik. Perubahan ini membolehkan anda melihat, mengisih, mencari dan menapis pelanggan. Penapis kini diwakili dalam URL untuk berkongsi hasil carian dengan pengguna lain dengan lancar. Hasil carian juga boleh disimpan sebagai segmen.    
+  Halaman butiran untuk profil pelanggan kini mengumpul data dalam pelbagai subbahagian seperti data demografi, ID dan atribut profil lain untuk kebolehbacaan yang dipertingkat. Bahagian lain pada halaman butiran profil kini lebih interaktif. Sebagai contoh, bahagian aktiviti kini membolehkan penapisan dan pengisihan.
+
+
+## <a name="may-2021-updates"></a>Kemas kini Mei 2021
+
+Kemas kini pada bulan Mei 2021 termasuk beberapa ciri, peningkatan prestasi dan pembaikan pepijat.
+
+### <a name="data-ingestion"></a>Pengingesan data
+
+- **Lihat atau ubah suai definisi metadata atau entiti apabila melampirkan data daripada Azure Data Lake Storage** Anda kini boleh melihat dan mengedit definisi metadata atau entiti dalam cerapan khalayak apabila melampirkan data daripada folder Common Data Model dalam Azure Data Lake Storage anda. Keupayaan ini menyediakan maklum balas masa nyata, pengesahan model dan semakan ralat. Ia membolehkan anda mengedit model.json dan manifest.json dengan lancar.
+
+### <a name="extensibility"></a>Kebolehpanjangan
+
+- **Eksport segmen yang dipertingkat, jadual tersuai dan duplikasi** Anda kini boleh [melihat semua eksport untuk segmen tertentu](export-destinations.md#view-exports-and-export-details) dalam senarai. Pandangan baharu ini membantu untuk menguruskan cara segmen tertentu digunakan dan menyesuaikan eksport yang sedia ada atau mencipta eksport baharu.    
+  Anda boleh [menentukan jadual segar semula tersuai](export-destinations.md#schedule-and-run-exports) untuk eksport individu atau beberapa eksport secara serentak. Sehingga kini, semua eksport dijalankan dengan setiap segar semula sistem.    
+  Daripada mencipta eksport baharu dari awal, anda boleh bermula berdasarkan eksport yang sedia ada untuk menjimatkan sedikit masa.
+
+- **Eksport segmen ke Microsoft Advertising** Kami telah memperluaskan destinasi eksport kami untuk menyertakan Microsoft Advertising. Cipta khalayak Padanan Pelanggan pada Microsoft Advertising dengan data profil pelanggan disatukan anda dan gunakan khalayak ini untuk kempen pengiklanan anda. Untuk mendapatkan maklumat lanjut, lihat [Eksport segmen ke Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Eksport segmen ke LinkedIn Ads** Kami telah memperluaskan destinasi eksport kami untuk menyertakan LinkedIn Ads dan membolehkan anda membuka kunci Sasaran Kenalan serta Sasaran Syarikat melalui LinkedIn dengan mengeksport data profil pelanggan anda yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Eksport segmen ke LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Eksport segmen ke Omnisend** Kami telah memperluaskan destinasi eksport kami untuk menyertakan Omnisend. Gunakan segmen yang dicipta dalam cerapan khalayak untuk menjana kempen, menyediakan pemasaran e-mel dan menggunakan kumpulan pelanggan khusus dengan Omnisend. Untuk mendapatkan maklumat lanjut, lihat [Eksport segmen ke Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Ramalan
+
+- **Laporan Kebolehgunaan Data Input** Laporan kebolehgunaan data input memberikan pandangan ralat yang disatukan dan amaran bahawa ramalan luar kotak anda mungkin menjana. Ia juga memberi pengesyoran cara meningkatkan prestasi model.    
+  Laporan tersedia selepas model selesai proses latihan. Ia dicipta untuk setiap model secara berasingan, tidak kira sama ada ia berjaya dilengkapkan atau tidak.
+  Pada masa ini, ciri ini hanya tersedia untuk model Pulangan Transaksi. Untuk mendapatkan maklumat lanjut, lihat [Laporan kebolehgunaan data input](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Hubungan
+
+- **Penampak perhubungan** Pandangan penampak perhubungan membolehkan anda melihat semua perhubungan yang sedia ada antara entiti dengan kekardinalan mereka. Perhubungan kini diatur dalam kumpulan: pengguna dicipta, sistem dan perhubungan yang diwarisi. Anda juga boleh mengeksport pandangan sebagai imej. Untuk mendapatkan maklumat lanjut, lihat [Lihat perhubungan](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Kemas kini April 2021
 
@@ -90,7 +267,7 @@ Kemas kini pada bulan Mac 2021 termasuk beberapa ciri, peningkatan prestasi, dan
 - **Eksport segmen ke Constant Contact** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Constant Contact. Anda kini boleh mengeksport segmen daripada senarai Customer Insights ke Constant Contact dan menggunakannya sebagai garis dasar untuk kempen pemasaran anda.   
    Untuk maklumat lanjut, sila lihat [Eksport ke Constant Contact](export-constant-contact.md).
 
-- **Eksport segmen ke RollWorks** Kami telah memperluaskan destinasi eksport kami untuk merangkumi RollWorks. Anda kini boleh mengeksport segmen daripada khalayak Customer Insights ke RollWorks dan menggunakannya sebagai garis dasar untuk pengiklanan B2B anda.    
+- **Eksport segmen ke RollWorks** Kami telah memperluaskan destinasi eksport kami untuk merangkumi RollWorks. Anda kini boleh mengeksport segmen daripada Customer Insights ke khalayak RollWorks dan menggunakannya sebagai garis dasar untuk pengiklanan niaga-ke-niaga anda.    
    Untuk maklumat lanjut, sila lihat [Eksport ke RollWorks](export-rollworks.md).
 
 - **Eksport segmen ke Snapchat** Kami telah memperluaskan destinasi eksport kami untuk merangkumi Snapchat. Anda kini boleh mengeksport segmen daripada khalayak Customer Insights ke Snapchat dan menggunakannya sebagai garis dasar untuk pengiklanan anda.     
@@ -139,7 +316,7 @@ Kemas kini pada Februari 2021 termasuk beberapa ciri, peningkatan prestasi dan p
 
 - **Salin persekitaran yang menyokong lebih banyak jenis sumber data**
 
-  Pentadbir boleh menyalin konfigurasi persekitaran ke persekitaran baharu dalam organisasi yang sama. Ciri ini melanjutkan fungsi persekitaran salinan untuk kes yang sumber data berdasarkan himpunan data Common Data Service atau folder Common Data Model digunakan.
+  Pentadbir boleh menyalin konfigurasi persekitaran ke persekitaran baharu dalam organisasi yang sama. Ciri ini memperluaskan kefungsian persekitaran salinan untuk kes yang sumber data berdasarkan danau data yang diuruskan oleh Microsoft Dataverse atau folder Common Data Model digunakan.
 
 ## <a name="january-2021-updates"></a>Kemas kini Januari 2021
 

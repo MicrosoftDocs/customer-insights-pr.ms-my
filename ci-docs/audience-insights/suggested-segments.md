@@ -1,20 +1,22 @@
 ---
 title: Pembelajaran mesin dikuasakan segmen yang dicadangkan
 description: Benarkan pembelajaran mesin membantu anda mencari segmen baharu dan yang menarik berdasarkan atribut pelanggan.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-segment-suggestions
+- customerInsights
+ms.openlocfilehash: 82345a7d7cf7fd38d74080552799de0b92461d78
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028371"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353600"
 ---
 # <a name="suggested-segments-preview"></a>Segmen dicadangkan (pratonton)
 
@@ -23,7 +25,7 @@ Terokai segmen yang menarik bagi pelanggan anda dengan bantuan model AI. Ciri di
 > [!NOTE]
 > Ciri segmen yang dicadangkan menggunakan cara automatik untuk menilai data dan membuat ramalan berdasarkan data tersebut dan oleh itu mempunyai keupayaan untuk digunakan sebagai kaedah pemprofilan, kerana istilah tersebut ditakrifkan oleh Peraturan Perlindungan Data Am ("GDPR"). Penggunaan anda bagi ciri ini untuk memproses data mungkin tertakluk pada GDPR atau perundangan atau peraturan lain. Anda bertanggungjawab untuk memastikan bahawa penggunaan Dynamics 365 Customer Insights anda, termasuk ciri ini, mematuhi semua undang-undang dan peraturan yang berkaitan, termasuk undang-undang yang berkaitan dengan privasi, data peribadi, data biometrik, perlindungan data dan kerahsiaan komunikasi.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Halaman segmen yang dicadangkan dalam Customer Insights menunjukkan butiran cadangan dalam anak tetingkap sisi.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Halaman segmen yang dicadangkan menunjukkan butiran cadangan dalam anak tetingkap sisi.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmen yang dicadangkan untuk meningkatkan KPI anda
 
@@ -49,7 +51,7 @@ Cadangan segmen adalah berbeza jika anda memilih atribut berangka atau atribut b
 
 Dengan atribut angka seperti *pendapatan tahunan* atau *tempoh keahlian* sebagai atribut utama, sistem mencadangkan segmen yang mempunyai nilai purata yang lebih tinggi atau lebih rendah pada atribut angka apabila dibandingkan dengan semua pelanggan.
 
-Atribut berkategori seperti *kepuasan pelanggan* sebagai hasil utama dalam segmen yang dicadangkan mempunyai peratusan pelanggan yang lebih tinggi dan lebih rendah mengikut kategori tertentu apabila dibandingkan dengan peratusan semua pelanggan yang dimiliki oleh kategori yang sama. Sebagai contoh, *kepuasan pelanggan* dipilih sebagai atribut utama dan ia terdiri daripada tiga kategori (*Rendah*, *Sederhana* dan *Tinggi*). Bagi setiap kategori, segmen akan dicadangkan yang mempunyai peratusan pelanggan yang ketara dan lebih rendah yang dimiliki oleh kategori tersebut berbanding dengan perkadaran semua pelanggan dalam kategori yang sama. Jika 22% daripada semua pelanggan mempunyai kepuasan *Tinggi*, kemudian, hanya segmen yang mempunyai perkadaran yang lebih tinggi atau lebih rendah pelanggan dengan kepuasan *Tinggi* berbanding 22% akan dicadangkan untuk kategori tersebut. Begitu juga, segmen akan dicadangkan untuk setiap kategori lain (*Rendah* dan *Sederhana*) jika ia mempunyai statistik penting.
+Atribut berkategori seperti *kepuasan pelanggan* sebagai hasil utama dalam segmen yang dicadangkan mempunyai peratusan pelanggan yang lebih tinggi dan lebih rendah mengikut kategori tertentu apabila dibandingkan dengan peratusan semua pelanggan yang dimiliki oleh kategori yang sama. Sebagai contoh, *kepuasan pelanggan* dipilih sebagai atribut utama dan ia terdiri daripada tiga kategori (*Rendah*, *Sederhana* dan *Tinggi*). Bagi setiap kategori, segmen akan dicadangkan yang mempunyai peratusan pelanggan yang lebih tinggi atau lebih rendah yang dimiliki oleh kategori tersebut berbanding dengan perkadaran semua pelanggan dalam kategori yang sama. Jika 22% daripada semua pelanggan mempunyai kepuasan *Tinggi*, kemudian, hanya segmen yang mempunyai perkadaran pelanggan yang lebih tinggi atau lebih rendah dengan kepuasan *Tinggi* berbanding dengan 22% akan dicadangkan untuk kategori tersebut. Begitu juga, segmen akan dicadangkan untuk setiap kategori lain (*Rendah* dan *Sederhana*) jika ia mempunyai statistik penting.
 
 > [!NOTE]
 > Pada masa ini, kami hanya menyokong atribut pengkategoran utama yang mempunyai sehingga 10 kategori. Jika anda mahu melihat cadangan segmen berdasarkan atribut utama dengan lebih daripada 10 kategori, kami mengesyorkan untuk mengumpulkan sebahagian daripada kategori untuk mengurangkan bilangan kategori kepada 10 atau lebih kurang. Pengehadan ini hanya diguna pakai untuk atribut utama. Untuk mempengaruhi atribut berkategori, kami kini menyokong maksimum 100 kategori.
@@ -77,7 +79,7 @@ Atribut berkategori seperti *kepuasan pelanggan* sebagai hasil utama dalam segme
 
 Sebaik sahaja model AI telah menjana cadangan, anda akan mendapati mereka disenaraikan pada **Segmen** > **Cadangan (pratonton)**.
  
-Pilih segmen yang dicadangkan untuk mengkaji semula butiran cadangan tersebut termasuk perbandingan nilai purata dan bilangan ahli segmen. Anda juga boleh menyemak nilai atribut atau peraturan yang dipelajari oleh model AI untuk mencadangkan segmen yang dipilih.
+Pilih segmen yang dicadangkan untuk semak semula butiran cadangan tersebut. Anda juga boleh menyemak nilai atribut atau peraturan yang dipelajari oleh model AI untuk mencadangkan segmen yang dipilih.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Simpan cadangan sebagai segmen
 

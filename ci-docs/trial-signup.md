@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645502"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350234"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Daftar untuk percubaan Dynamics 365 Customer Insights percuma
 
@@ -32,23 +31,12 @@ Percubaan mengambil masa seketika untuk muatan dan kemudian anda boleh mula meng
 
 Persekitaran percubaan anda termasuk ciri yang sama dengan versi berbayar. Pautan dibawah memberikan panduan kepada anda dengan menggunakan beberapa ciri utama.
 
-### <a name="audience-insights"></a>Cerapan khalayak
-
 - [Mula cepat untuk cerapan khalayak.](audience-insights/get-started.md)
 - [Tambah lebih ramai pengguna dan peruntukkan keizinan.](audience-insights/permissions.md)
 - [Injes sumber data anda](audience-insights/data-sources.md) dan jalankannya melalui [proses penyatuan data](audience-insights/data-unification.md) untuk mendapatkan [profil pelanggan disatukan](audience-insights/customer-profiles.md).
 - [Perkayakan profil pelanggan disatukan](audience-insights/enrichment-hub.md) atau [jalankan model ramalan](audience-insights/predictions-overview.md).
 - Cipta [segmen](audience-insights/segments.md) untuk mengelompokkan pelanggan dan [ukuran](audience-insights/measures.md) untuk menyemak KPI.
 - Sediakan [sambungan](audience-insights/connections.md) dan [eksport](audience-insights/export-destinations.md) untuk memproses subset data anda dalam aplikasi lain.
-
-### <a name="engagement-insights"></a>Cerapan penglibatan
-
-- [Mula cepat untuk penglibatan cerapan.](engagement-insights/get-started.md)
-- [Cipta ruang kerja](engagement-insights/create-workspace.md) dan tambah ahli.
-- [Tambah kod pada tapak web anda](engagement-insights/instrument-website.md) atau [aplikasi mudah alih](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Lihat [laporan masa nyata](engagement-insights/view-reports.md) atau cipta [laporan tersuai](engagement-insights/custom-reports.md).
-- [Cipta peristiwa diperhalus](engagement-insights/refined-events.md) untuk eksport.
-- [Eksport data](engagement-insights/export-events.md) ke Azure Data Lake Storage.
 
 ## <a name="additional-resources"></a>Sumber tambahan
 

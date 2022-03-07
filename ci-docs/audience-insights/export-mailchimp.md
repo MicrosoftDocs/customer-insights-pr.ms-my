@@ -1,20 +1,19 @@
 ---
 title: Eksport data Customer Insights ke Mailchimp
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: f7a33f2eddb6b625ddb8663b97103de75beab44c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124238"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226857"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Eksport segmen ke Mailchimp (pratonton)
 
@@ -29,16 +28,16 @@ Segmen eksport profil pelanggan disatukan ke Mailchimp untuk mencipta surat beri
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Hingga 1 juta profil bagi setiap eksport ke Mailchimp.
+- Hingga 1 juta profil pelanggan bagi setiap eksport kepada Mailchimp.
 - Mengeksport ke Mailchimp adalah terhad kepada segmen.
-- Mengeksport segmen dengan 1 juta profil boleh mengambil masa sehingga tiga jam. 
-- Bilangan profil yang boleh anda eksport ke Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.
+- Mengeksport segmen dengan 1 juta profil pelanggan boleh mengambil masa sehingga tiga jam. 
+- Bilangan profil pelanggan yang boleh anda eksport kepada Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Sediakan sambungan ke Mailchimp
 
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pilih **Tambah sambungan** dan pilih **Autopilot** untuk mengkonfigurasikan sambungan.
+1. Pilih **Tambah sambungan** dan pilih **Mailchimp** untuk mengkonfigurasikan sambungan.
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
@@ -66,7 +65,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **[ID khalayak Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. Dalam bahagian **Pemadanan data**, dalam medan **E-mel**, pilih medan dalam profil pelanggan disatukan anda yang mewakili alamat e-mel pelanggan. 
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. 
 
 1. Selain itu, anda boleh mengeksport **Nama pertama** dan **Nama keluarga** untuk mencipta e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
 

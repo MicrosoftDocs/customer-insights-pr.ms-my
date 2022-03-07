@@ -3,20 +3,23 @@ title: Panduan sampel ramalan pengesyoran produk
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pengesyoran produk di luar kotak.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595284"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354658"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel untuk ramalan pengesyoran produk (pratonton)
+# <a name="product-recommendation-prediction-sample-guide"></a>Panduan sampel ramalan pengesyoran produk
 
 Kami akan menerangkan kepada anda contoh ramalan pengesyoran produk hujung ke hujung menggunakan data sampel yang diberikan di bawah.
 
@@ -31,7 +34,7 @@ Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti t
 
 ## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
-Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport sumber data menggunakan penyambung Power Query](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum.
+Semak semula artikel [tentang pengambilan](data-sources.md) data dan [mengimport sumber data menggunakan Power Query penyambung](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inges data pelanggan daripada platform e-Dagang
 
@@ -65,7 +68,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
 
 1. Dalam medan **Nama** pada anak tetingkap sisi, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**.
 
-1. Simpan sumber data.
+1. **Simpan** sumber data.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingest data pelanggan daripada skema kesetiaan
@@ -83,11 +86,11 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
 
 1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
 
-1. Simpan sumber data.
+1. **Simpan** sumber data.
 
 ## <a name="task-2---data-unification"></a>Tugas 2 - Penyatuan data
 
-Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan** untuk mencipta profil pelanggan disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
+Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencipta profil pelanggan yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
 
 ### <a name="map"></a>Petakan
 
@@ -105,9 +108,9 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
 
-2. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : e-Dagang** sebagai sumber utama dan menyertakan semua rekod.
+2. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
 
-3. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan menyertakan semua rekod.
+3. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
 
    ![Menyatukan padanan e-Dagang dan Kesetiaan.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 5. Tambah syarat pertama anda menggunakan FullName.
 
-   - Untuk eCommerceContacts pilih **FullName** dalam senarai juntai bawah.
-   - Untuk loyCustomers, pilih **FullName** dalam senarai juntai bawah.
+   - Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
+   - Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
    - Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
    - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
 6. Masukkan nama **FullName, Email** untuk peraturan baharu.
 
    - Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   - Untuk entiti eCommerceContacts, pilih **EMail** dalam senarai juntai bawah.
-   - Untuk entiti loyCustomers, pilih **EMail** dalam senarai juntai bawah.
+   - Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
+   - Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah.
    - Biarkan Menormalkan kosong.
    - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
 
@@ -156,7 +159,7 @@ Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pu
 
    - **Bilangan produk**: Tetapkan nilai ini kepada **5**. Tetapan ini mentakrifkan bilangan produk yang anda mahu cadangkan kepada pelanggan anda.
 
-   - **Cadangkan pelanggan produk yang dibeli baru-baru ini?**: Pilih **Ya** untuk menunjukkan bahawa anda mahu sertakan produk dalam pengesyoran yang pelanggan anda telah beli sebelum ini.
+   - **Pembelian berulang dijangka**: Pilih **Ya** untuk menunjukkan bahawa anda ingin menyertakan produk dalam pengesyoran yang dibeli oleh pelanggan anda sebelum ini.
 
    - **Tetingkap lihat kembali:** Pilih sekurang-kurangnya **365 hari**. Tetapan ini menakrifkan sejauh mana model akan melihat kembali pada aktiviti pelanggan untuk menggunakannya sebagai input kepada pengesyoran mereka.
    

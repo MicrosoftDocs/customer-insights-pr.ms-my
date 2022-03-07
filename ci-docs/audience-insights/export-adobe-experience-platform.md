@@ -1,39 +1,38 @@
 ---
-title: Eksport data Customer Insights ke Platform Pengalaman Adobe
-description: Ketahui cara menggunakan segmen wawasan khalayak dalam Platform Pengalaman Adobe.
-ms.date: 02/26/2021
+title: Eksport Data Customer Insights ke Adobe Experience Platform
+description: Ketahui cara menggunakan segmen cerapan khalayak dalam Adobe Experience Platform.
+ms.date: 03/29/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+ms.openlocfilehash: 9010af3c42823ce0dd8685bf71c109aef8d3f635
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596280"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227724"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Gunakan segmen Customer Insights dalam Platform Pengalaman Adobe (pratonton)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Gunakan segmen Customer Insights dalam Adobe Experience Platform (pratonton)
 
-Sebagai pengguna wawasan khalayak untuk Dynamics 365 Customer Insights, anda mungkin telah mencipta segmen untuk menjadikan kempen pemasaran anda lebih cekap dengan menyasarkan khalayak yang berkaitan. Untuk menggunakan segmen daripada wawasan khalayak dalam Platform Pengalaman Adobe dan aplikasi seperti Adobe Campaign Standard, anda perlu mengikuti beberapa langkah yang digariskan dalam artikel ini.
+Sebagai pengguna cerapan khalayak dalam Dynamics 365 Customer Insights, anda mungkin telah mencipta segmen untuk menjadikan kempen pemasaran anda lebih cekap dengan menyasarkan khalayak yang berkaitan. Untuk menggunakan segmen daripada cerapan khalayak dalam Adobe Experience Platform dan aplikasi seperti Adobe Campaign Standard, anda perlu mengikuti beberapa langkah yang digariskan dalam artikel ini.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Gambar rajah proses langkah digariskan dalam artikel ini.":::
 
 ## <a name="prerequisites"></a>Prasyarat
 
 -   Lesen Dynamics 365 Customer Insights
--   Lesen Platform Pengalaman Adobe
+-   Lesen Adobe Experience Platform
 -   Lesen Adobe Campaign Standard
 -   Akaun Storan Blob Azure
 
 ## <a name="campaign-overview"></a>Gambaran Keseluruhan Kempen
 
-Untuk lebih memahami cara anda boleh menggunakan segmen daripada wawasan khalayak dalam Platform Pengalaman Adobe, mari kita lihat kempen sampel rekaan.
+Untuk lebih memahami cara anda boleh menggunakan segmen daripada cerapan khalayak Adobe Experience Platform, mari lihat kempen sampel rekaan.
 
-Mari kita anggap bahawa syarikat anda menawarkan perkhidmatan berasaskan langganan bulanan kepada pelanggan anda di Amerika Syarikat. Anda ingin mengenal pasti pelanggan yang langganan perlu diperbaharui dalam tempoh lapan hari akan datang tetapi belum memperbaharui langganan mereka. Untuk mengekalkan pelanggan ini, anda ingin menghantar tawaran promosi kepada mereka melalui e-mel, menggunakan Platform Pengalaman Adobe.
+Mari kita anggap bahawa syarikat anda menawarkan perkhidmatan berasaskan langganan bulanan kepada pelanggan anda di Amerika Syarikat. Anda ingin mengenal pasti pelanggan yang langganan perlu diperbaharui dalam tempoh lapan hari akan datang tetapi belum memperbaharui langganan mereka. Untuk menyimpan pelanggan ini, anda mahu menghantar mereka tawaran promosi melalui e-mel, menggunakan Adobe Experience Platform.
 
 Dalam contoh ini, kami ingin menjalankan kempen e-mel promosi sekali. Artikel ini tidak meliputi penggunaan kes menjalankan kempen lebih daripada sekali.
 
@@ -51,21 +50,36 @@ E-mel tawaran yang ingin anda hantar akan mengandungi nama pertama, nama akhir d
 
 Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan eksport daripada wawasan khalayak ke akaun Storan Blob Azure.
 
-1. Dalam wawasan khalayak, pergi ke **Pentadbir** > **Export destinasi**.
+### <a name="configure-a-connection"></a>Konfigurasikan sambungan
 
-1. Dalam jubin **Storan Blob Azure**, pilih **Sediakan**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Jubin konfigurasi untuk Storan Blob Azure.":::
+1. Pilih **Tambah sambungan** dan pilih **Storan Blob Azure** atau pilih **Sediakan** dalam jubin **Storan Blob Azure** untuk mengkonfigurasikan sambungan.
 
-1. Berikan **Nama paparan** untuk destinasi eksport baharu ini dan kemudian masukkan **Nama akaun**, **Kunci akaun** dan **Bekas** akaun Storan Blob Azure tempat yang ingin anda eksport segmen itu.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Jubin konfigurasi untuk Storan Blob Azure."::: 
+
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
+
+1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Masukkan **Nama akaun**, **Kekunci akaun** dan **Bekas** untuk akaun Storan Blob anda di tempat anda mahu mengeksport segmen.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Petikan skrin konfigurasi akaun storan. "::: 
+   
+    - Untuk mengetahui lebih lanjut tentang cara mencari nama akaun dan kekunci akaun Storan Blob, lihat [Urus tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
+    - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Untuk mengetahui lanjut tentang cara mencari nama akaun dan kunci akaun storan Blob Azure, lihat [Urus tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
+1. Pilih **Simpan** untuk melengkapkan sambungan. 
 
-   - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Konfigurasikan eksport
 
-1. Pilih **Seterusnya**.
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+
+1. Pergi ke **Data** > **Eksport**.
+
+1. Untuk mencipta eksport baharu, pilih **Tambah eksport**.
+
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Storan Blob Azure. Jika anda tidak melihat nama bahagian ini, maka tiada sambungan jenis ini tersedia untuk anda.
 
 1. Pilih segmen yang ingin anda eksport. Dalam contoh ini, ia **ChurnProneCustomers**.
 
@@ -73,16 +87,14 @@ Dengan khalayak sasaran kami yang dikenal pasti, kami boleh mengkonfigurasikan e
 
 1. Pilih **Simpan**.
 
-Selepas menyimpan destinasi eksport, anda dapati ia di **Pentadbir** > **Eksport** > **Destinasi eksport saya**.
+Selepas menyimpan destinasi eksport, anda akan menemuinya dalam **Data** > **Eksport**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Petikan skrin dengan senarai eksport dan segmen sampel yang diserlahkan.":::
-
-Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#export-data-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
+Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#run-exports-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
 
 > [!NOTE]
-> Pastikan bilangan rekod dalam segmen yang dieksport berada dalam had lesen Adobe Campaign Standard anda yang dibenarkan.
+> Pastikan bilangan rekod dalam segmen yang dieksport adalah dalam had yang dibenarkan bagi lesen Adobe Campaign Standard.
 
-Data yang dieksport disimpan dalam bekas storan Blob Azure yang anda konfigurasikan di atas. Laluan folder berikut dicipta secara automatik dalam bekas anda:
+Data yang dieksport disimpan dalam bekas Storan Blob Azure yang anda konfigurasikan di atas. Laluan folder berikut dicipta secara automatik dalam bekas anda:
 
 *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
@@ -92,25 +104,26 @@ Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f
 
 Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Takrifkan Model Data Pengalaman (XDM) dalam Platform Pengalaman Adobe
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Takrifkan Model Data Pengalaman (XDM) dalam Adobe Experience Platform
 
-Sebelum data yang dieksport daripada wawasan khalayak boleh digunakan dalam Platform Pengalaman Adobe, kami perlu mentakrifkan skema Model Data Pengalaman dan [mengkonfigurasikan data untuk Profil Pelanggan Masa Nyata](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Sebelum data yang dieksport daripada cerapan khalayak boleh digunakan dalam Adobe Experience Platform, kami perlu mentakrifkan skema Model Data Pengalaman dan [mengkonfigurasi data untuk Profil Pelanggan Masa nyata](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Ketahui [maksud XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) dan fahami [asas komposisi skema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Import data ke dalam Platform Pengalaman Adobe
+## <a name="import-data-into-adobe-experience-platform"></a>Import data ke dalam Adobe Experience Platform
 
-Kini semua yang diperlukan telah tersedia, kami perlu mengimport data khalayak yang disediakan daripada wawasan khalayak ke dalam Platform Pengalaman Adobe.
+Kini semua telah tersedia, kami perlu mengimport data khalayak yang disediakan daripada cerapan khalayak ke dalam Adobe Experience Platform.
 
 Pertama, [cipta sambungan sumber Storan Blob Azure](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Selepas mentakrifkan sambungan sumber, [konfigurasikan aliran data](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) untuk sambungan kelompok storan awan untuk mengimport output segmen daripada wawasan khalayak ke dalam Platform Pengalaman Adobe.
+Selepas mentakrifkan sambungan sumber, [konfigurasikan aliran data](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) untuk sambungan kelompok storan awan untuk mengimport output segmen daripada cerapan khalayak ke dalam Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Cipta khalayak dalam Adobe Campaign Standard
 
-Untuk menghantar e-mel bagi kempen ini, kami akan menggunakan Adobe Campaign Standard. Selepas mengimport data ke dalam Platform Pengalaman Adobe, kami perlu [mencipta khalayak](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) dalam Adobe Campaign Standard menggunakan data dalam Platform Pengalaman Adobe.
+Untuk menghantar e-mel bagi kempen ini, kami akan menggunakan Adobe Campaign Standard. Selepas mengimport data ke dalam Adobe Experience Platform, kami perlu [mencipta khalayak](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) dalam Adobe Campaign Standard menggunakan data dalam Adobe Experience Platform.
 
-Ketahui cara [menggunakan pembina segmen](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) dalam Adobe Campaign Standard untuk mentakrifkan khalayak berdasarkan data dalam Platform Pengalaman Adobe.
+
+Ketahui cara [menggunakan pembina segmen](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) dalam Adobe Campaign Standard untuk mentakrifkan khalayak berdasarkan data dalam Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Cipta dan hantar e-mel menggunakan Adobe Campaign Standard
 
