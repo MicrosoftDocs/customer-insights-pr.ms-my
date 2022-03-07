@@ -1,7 +1,7 @@
 ---
-title: Cipta pandangan disatukan bagi pelanggan anda
-description: Pergi ke proses penyatuan data dengan data anda untuk mencipta set data induk tunggal profil pelanggan.
-ms.date: 10/18/2021
+title: Penyatuan data
+description: Ketahui cara menyatukan data yang diinges.
+ms.date: 04/16/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,14 +10,12 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-unify
-ms.openlocfilehash: 694bfd0e407975af64ca0971a73fe4c3f5ba5a23
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: bf1bbcd31333c8a557b59b001112042a1783546ab0cd2af394d8af2953a493f4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648082"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032769"
 ---
 # <a name="data-unification-overview"></a>Gambaran keseluruhan penyatuan data
 

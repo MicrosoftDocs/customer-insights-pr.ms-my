@@ -1,7 +1,7 @@
 ---
 title: Cari dan tapis profil pelanggan
 description: Cari maklumat dengan cepat tentang profil pelanggan disatukan dan tapis untuk atribut tertentu.
-ms.date: 11/01/2021
+ms.date: 01/19/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732045"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597154"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks carian & tapis
 
-Hasil daripada menyatukan data pelanggan anda ialah entiti Profil Pelanggan yang menyediakan pandangan disatukan ke dalam jumlah dasar pelanggan anda. Untuk [mendapatkan maklumat dengan pantas mengenai pelanggan atau kumpulan pelanggan tertentu](customer-profiles.md), anda boleh mengkonfigurasi keupayaan [Carian](customer-profiles.md) dan [Penapis](customer-profiles.md) pada halaman [Pelanggan](customer-profiles.md). Baca untuk mengetahui cara pentadbir boleh mengedit atribut pada halaman **Indeks carian & penapis**, yang tersedia kepada pengguna untuk carian dan penapisan.
+Hasil daripada menyatukan data pelanggan anda ialah entiti Profil Pelanggan yang menyediakan pandangan disatukan ke dalam jumlah dasar pelanggan anda. Untuk [mendapatkan maklumat dengan pantas mengenai pelanggan atau kumpulan pelanggan tertentu](customer-profiles.md), anda boleh mengkonfigurasi keupayaan **Carian** dan **Penapis** pada halaman **Pelanggan**. Baca untuk mengetahui cara pentadbir boleh mengedit atribut pada halaman **Indeks carian & penapis**, yang tersedia kepada pengguna untuk carian dan penapisan.
 
-   :::image type="content" source="media/search-filter.png" alt-text="Penapis carian":::
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!div class="mx-imgBorder"]
+> ![Penapis carian](media/search-filter.png "Penapis carian")
 
 ## <a name="add-fields-and-specify-attributes"></a>Tambah medan dan tentukan atribut
 
@@ -57,11 +56,11 @@ Menu **Penapis** pada halaman **Pelanggan** boleh termasuk bilangan peringkat at
 
 2. Pilih **Simpan** untuk menggunakan perubahan anda.
 
-3. Pilih **Jalankan** sebaik sahaja anda bersedia untuk menggunakan tetapan anda. Selepas perubahan diproses, anda boleh mencarinya dalam [kad pelanggan pada halaman Pelanggan](customer-profiles.md). 
+3. Pilih **Jalankan** sebaik sahaja anda bersedia untuk menggunakan tetapan anda.
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
-Semak [halaman profil disatukan](customer-profiles.md) untuk mencari profil atau gunakan medan diindekskan untuk melihat subset semua profil disatukan.
+Pergi ke halaman **Pelanggan** untuk mencari profil pelanggan atau menggunakan medan diindeks untuk melihat subset semua profil pelanggan.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

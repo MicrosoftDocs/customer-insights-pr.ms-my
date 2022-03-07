@@ -1,27 +1,26 @@
 ---
-title: Mari bermula dengan SDK Android
-description: Ketahui cara memeribadikan dan menjalankan SDK Android
+title: Bermula dengan SDK Android
+description: Ketahui cara memperibadikan dan menjalankan SDK Android
 author: britl
 ms.reviewer: mhart
-ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977586"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655353"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Mari bermula dengan SDK Android
+# <a name="get-started-with-the-android-sdk"></a>Bermula dengan Android SDK
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tutorial ini membimbing anda melalui proses memodelkan aplikasi Android anda dengan SDK cerapan penglibatan Dynamics 365 Customer Insights. Anda akan mula melihat peristiwa dalam portal anda dalam masa lima minit atau lebih awal.
+Tutorial ini membimbing anda melalui proses instrumenting aplikasi Android anda dengan Dynamics 365 Customer Insights wawasan penglibatan SDK. Anda akan mula melihat peristiwa dalam portal anda dalam masa lima minit atau lebih awal.
 
 ## <a name="configuration-options"></a>Pilihan konfigurasi
 Pilihan konfigurasi berikut boleh dihantar ke SDK:
@@ -32,12 +31,12 @@ Pilihan konfigurasi berikut boleh dihantar ke SDK:
 
 - Android Studio
 
-- Tahap API Android Minimum: 16 (Jelly Bean)
+- Aras API Android Minimum: 16 (Jeli Kacang)
 
 - Kunci pengingesan (lihat di bawah untuk arahan cara memperoleh)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Mengintegrasikan SDK ke dalam aplikasi anda
-Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android, dan memuat turun SDK Android.
+Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android dan memuat turun SDK Android.
 
 - Gunakan penukar ruang kerja dalam anak tetingkap navigasi kiri untuk memilih ruang kerja anda.
 
@@ -47,7 +46,7 @@ Mulakan proses dengan memilih ruang kerja, memilih platform mudah alih Android, 
 
 ## <a name="configure-the-sdk"></a>Konfigurasikan SDK
 
-Setelah anda memuat turun SDK, anda boleh bekerja dengannya dalam Android Studio untuk mendayakan dan menentukan peristiwa. Terdapat dua cara untuk berbuat demikian:
+Sebaik sahaja anda memuat turun SDK, anda boleh bekerja dengannya dalam Android Studio untuk membolehkan dan menentukan peristiwa. Terdapat dua cara untuk berbuat demikian:
 ### <a name="option-1-use-jitpack-recommended"></a>Pilihan 1: Gunakan JitPack (disyorkan)
 1. Tambahkan repositori JitPack pada akar `build.gradle` anda:
     ```gradle
@@ -68,7 +67,7 @@ Setelah anda memuat turun SDK, anda boleh bekerja dengannya dalam Android Studio
     ```
 
 ### <a name="option-2-use-download-link"></a>Pilihan 2: Gunakan pautan muat turun
-1. Muat turun [cerapan penglibatan SDK Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan letakkan fail `eiandroidsdk-debug.aar` dalam folder `libs`.
+1. Muat turun [wawasan penglibatan Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), dan letakkan fail dalam `eiandroidsdk-debug.aar``libs` folder.
 
 1. Buka fail `build.gradle` tahap projek anda dan tambah cebisan berikut:
     ```gradle
@@ -123,7 +122,7 @@ Setelah anda memuat turun SDK, anda boleh bekerja dengannya dalam Android Studio
    >[!NOTE]
    >`Action` peristiwa perlu ditambah secara manual.
 
-1. (Pilihan) Konfigurasi lain termasuk menetapkan URL pengumpul titik tamat. Mereka boleh ditambah di bawah metadata kekunci pengingesan dalam `AndroidManifest.xml`.
+1. (Pilihan) Konfigurasi lain termasuk menetapkan URL pengumpul titik tamat. Ia boleh ditambah di bawah metadata kekunci pengingesan dalam `AndroidManifest.xml`.
 
    ```xml
         <meta-data

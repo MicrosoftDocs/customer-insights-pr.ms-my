@@ -1,7 +1,7 @@
 ---
 title: Cipta persekitaran dalam Customer Insights
 description: Langkah untuk mencipta persekitaran dengan langganan berlesen untuk Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088124"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645712"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Cipta persekitaran dalam cerapan khalayak
 
@@ -28,7 +28,7 @@ Organisasi boleh mencipta *dua* persekitaran untuk setiap lesen Customer Insight
 
 ## <a name="create-a-new-environment"></a>Cipta persekitaran baharu
 
-Selepas membeli lesen langganan untuk Wawasan Pelanggan, pentadbir Microsoft 365 global penyewa menerima e-mel yang menjemput mereka untuk mencipta persekitaran. Pergi ke [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk bermula. 
+Selepas membeli lesen langganan untuk Customer Insights, pentadbir global penyewa Microsoft 365 menerima e-mel yang menjemput mereka untuk mencipta persekitaran. Pergi ke [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk bermula. 
 
 Pengalaman dipandu membantu anda melalui langkah untuk mengumpulkan semua maklumat yang diperlukan untuk persekitaran baharu. Anda memerlukan [keizinan pentadbir](permissions.md) dalam cerapan khalayak untuk mencipta atau mengurus persekitaran.
 
@@ -46,7 +46,7 @@ Dalam langkah **Maklumat asas**, pilih sama ada anda mahu mencipta persekitaran 
 
 Sediakan butiran berikut:
    - **Nama**: Nama untuk persekitaran ini. Medan ini sudah diisikan jika anda telah menyalin persekitaran sedia ada tetapi anda boleh mengubahnya.
-   - **Pilih perniagaan anda**: Pilih khalayak utama untuk persekitaran baharu. Anda boleh bekerja dengan pengguna individu (niaga-ke-pengguna) atau niaga-ke-niaga [akaun perniagaan](work-with-business-accounts.md).
+   - **Pilih perniagaan anda** : Pilih khalayak utama untuk persekitaran baharu. Anda boleh bekerja dengan pelanggan individu (B2C) atau [akaun perniagaan](work-with-business-accounts.md) (B2B).
    - **Jenis**: Pilih sama ada anda mahu mencipta persekitaran pengeluaran atau kotak pasir. Persekitaran kotak pasir tidak membenarkan segar semula data berjadual dan bertujuan untuk pra-pelaksanaan dan ujian. Persekitaran Kotak Pasir menggunakan cerapan utama yang sama dengan persekitaran pengeluaran dipilih pada masa ini.
    - **Rantau**: Rantau yang perkhidmatan diatur letak dan dihoskan di dalamnya.
 
@@ -54,7 +54,7 @@ Sediakan butiran berikut:
 
 Dalam langkah **Storan data**, pilih tempat untuk menyimpan data daripada cerapan khalayak.
 
-Anda akan mempunyai dua pilihan: **Storan Customer Insights** (Azure danau data yang diuruskan oleh pasukan Customer Insights) dan **Azure Data Lake Storage** (Azure Data Lake Storage anda sendiri). Secara lalai, pilihan storan Customer Insights dipilih.
+Anda akan mempunyai dua pilihan: **Storan persekitaran** (Azure Data Lake  yang diuruskan oleh pasukan Customer Insights) dan **Azure Data Lake Storage** (Azure Data Lake Storage anda sendiri). Secara lalai, pilihan storan Customer Insights dipilih.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Pilih Azure Data Lake Storage untuk menyimpan data cerapan khalayak anda.":::
 
@@ -64,9 +64,9 @@ Dengan menyimpan data kepada Azure Data Lake Storage, anda bersetuju bahawa data
 > Customer Insights sedang menyokong yang berikut:
 > - Entiti yang diinjes daripada aliran data Power BI yang disimpan dalam Data Lake terurus Microsoft Dataverse.  
 > - Azure Data Lake Storage akaun daripada rantau Azure yang sama yang anda pilih semasa mencipta persekitaran.
-> - Azure Data Lake Storage akaun yang Gen2 dan mempunyai *ruang* nama hierarki didayakan. Akaun storan Azure Data Lake Gen1 tidak disokong.
+> - Azure Data Lake Storage akaun yang mempunyai *ruang nama berhierarki* didayakan.
 
-Untuk pilihan Azure Data Lake Storage, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk mendapatkan maklumat lanjut, lihat [Sambung ke akaun Azure Data Lake Storage dengan menggunakan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Bekas** akan menjadi `customerinsights` dan tidak boleh ditukar.
+Untuk pilihan Azure Data Lake Storage, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Bekas** akan menjadi `customerinsights` dan tidak boleh ditukar.
 
 Apabila proses sistem seperti penginjesan data selesai, sistem mencipta folder yang sepadan dalam akaun storan yang anda tentukan. Fail data dan fail *model.json* dicipta dan ditambah ke folder berdasarkan nama proses.
 
@@ -76,17 +76,14 @@ Jika anda mencipta berbilang persekitaran Customer Insights dan memilih untuk me
    
 Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insights dengan persekitaran Dataverse anda.
 
-Untuk menggunakan [model ramalan di luar kotak](predictions-overview.md#out-of-box-models), konfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan penginjesan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang mentadbir organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan danau data terurus Dataverse.
-
-> [!IMPORTANT]
-> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk membolehkan perkongsian data.
+Untuk menggunakan [model ramalan di luar kotak](predictions-overview.md#out-of-box-models), konfigurasikan perkongsian data dengan Dataverse. Atau anda boleh mendayakan penginjesan data daripada sumber data di premis, menyediakan URL persekitaran Microsoft Dataverse yang mentadbir organisasi anda. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Dataverse Data Lake Terurus.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights tidak menyokong senario perkongsian data berikut:
-> - Jika anda menyimpan semua data kepada Azure Data Lake Storage anda sendiri anda tidak akan dapat mendayakan perkongsian data dengan danau data terurus Dataverse.
-> - Jika anda mendayakan perkongsian data dengan Dataverse, anda tidak akan dapat [mencipta nilai yang diramalkan atau hilang dalam entiti](predictions.md).
+> - Jika anda menyimpan semua data kepada anda sendiri Azure Data Lake Storage, anda tidak akan dapat mendayakan perkongsian data dengan Data Lake Terurus Microsoft Dataverse.
+> - Jika anda mendayakan perkongsian data dengan Data Lake Terurus Microsoft Dataverse, anda tidak akan dapat [mencipta nilai yang diramalkan atau hilang dalam entiti](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Langkah 4: Muktamadkan tetapan
 
@@ -96,10 +93,10 @@ Anda juga boleh mengubah kebanyakan tetapan kemudian. Untuk maklumat lanjut, lih
 
 ## <a name="work-with-your-new-environment"></a>Bekerja dengan persekitaran baharu anda
 
-Semak semula artikel berikut untuk membantu anda bermula dengan mengkonfigurasi Customer Insights: 
+Semak artikel berikut untuk membantu anda bermula dengan mengkonfigurasikan Customer Insights. 
 
 - [Tambah lebih ramai pengguna dan peruntukkan keizinan](permissions.md).
 - [Injes sumber data anda](data-sources.md) dan jalankannya melalui [proses penyatuan data](data-unification.md) untuk mendapatkan [profil pelanggan disatukan](customer-profiles.md).
 - [Perkayakan profil pelanggan disatukan](enrichment-hub.md) atau [jalankan model ramalan](predictions-overview.md).
-- [Cipta segmen](segments.md) untuk mengelompokkan pelanggan dan [ukuran](measures.md) untuk menyemak semula KPI.
+- [Cipta segmen](segments.md) untuk mengelompokkan pelanggan dan menyemak KPI [ukuran](measures.md).
 - [Sediakan sambungan](connections.md) dan [eksport](export-destinations.md) untuk memproses subset data anda dalam aplikasi lain.

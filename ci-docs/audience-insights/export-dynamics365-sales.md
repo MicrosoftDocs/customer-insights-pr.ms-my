@@ -1,20 +1,20 @@
 ---
 title: Eksport data Customer Insights ke Dynamics 365 Sales
 description: Ketahui bagaimana mengkonfigur sambungan ke Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643829"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269019"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Penyambung untuk Dynamics 365 Sales (pratonton)
 
@@ -24,7 +24,10 @@ Gunakan data pelanggan anda untuk mencipta senarai pemasaran, menyusuli aliran k
 
 ## <a name="prerequisite"></a>Prasyarat
 
-Rekod kenalan [daripada Dynamics 365 Sales yang diinges menggunakan Common Data Service](connect-power-query.md).
+1. Rekod kenalan mesti wujud dalam Dynamics 365 Sales sebelum anda boleh mengeksport segmen daripada Customer Insights ke Jualan. Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Sales menggunakan Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Mengeksport segmen daripada wawasan khalayak kepada Jualan tidak akan mencipta rekod kenalan baharu dalam tika Jualan. Rekod kenalan daripada Jualan mesti diinges dalam wawasan khalayak dan digunakan sebagai sumber data. Mereka juga perlu dimasukkan dalam entiti Pelanggan disatukan untuk memetakan ID pelanggan kepada ID kenalan sebelum segmen boleh dieksport.
 
 ## <a name="configure-the-connector-for-sales"></a>Konfigur penyambung untuk Jualan
 
@@ -49,3 +52,6 @@ Rekod kenalan [daripada Dynamics 365 Sales yang diinges menggunakan Common Data 
 ## <a name="export-the-data"></a>Mengeksport data
 
 Anda boleh [eksport data atas permintaan](export-destinations.md). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

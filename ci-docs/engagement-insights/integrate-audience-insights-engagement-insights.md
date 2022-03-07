@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8116025"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487118"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Cipta pautan antara cerapan khalayak dan cerapan penglibatan
 
@@ -25,8 +25,8 @@ Gunakan profil dan segmen disatukan daripada cerapan khalayak untuk lebih banyak
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Profil cerapan khalayak mesti disimpan dalam akaun Azure Data Lake Storage yang anda miliki atau dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;data lake yang diuruskan. 
-- Persekitaran cerapan khalayak anda harus mempunyai persekitaran Dataverse yang berkaitan. Dan jika persekitaran tersebut juga menggunakan Dataverse untuk storan data, pastikan anda menyemak pilihan **Dayakan perkongsian data** dalam cerapan khalayak. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan konfigurasikan persekitaran dalam cerapan khalayak](../audience-insights/create-environment.md).
+- Profil cerapan khalayak mesti disimpan dalam akaun Azure Data Lake Storage yang anda miliki atau dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;data lake yang diuruskan. 
+- Persekitaran cerapan khalayak anda harus mempunyai persekitaran Dataverse yang berkaitan. Dan jika persekitaran tersebut juga menggunakan Dataverse untuk storan data, pastikan anda menyemak pilihan **Dayakan perkongsian data** dalam cerapan khalayak. Untuk mendapatkan maklumat lanjut, lihat [Cipta dan konfigurasikan persekitaran berbayar dalam cerapan khalayak](../audience-insights/get-started-paid.md).
 - Anda memerlukan keizinan pentadbir untuk kedua-dua cerapan penglibatan dan persekitaran cerapan khalayak.
 - Persekitaran yang dipautkan mestilah dalam rantau geografi yang sama.
 
@@ -54,9 +54,6 @@ Anda boleh mencipta pautan persekitaran dengan mengemas kini tetapan **Pentadbir
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Dayakan cerapan khalayak segmen dan profil atribut disatukan
 
 Selepas memautkan persekitaran, anda boleh memilih ciri pilihan untuk persekitaran yang dipautkan. Ciri ini mendayakan segmen dan atribut profil disatukan daripada cerapan khalayak untuk analisis interaktif pada data pelanggan.
-
-> [!IMPORTANT]
-> Untuk segmen cerapan khalayak untuk muncul dalam cerapan penglibatan, anda mesti [jalankan proses gabungan dan hiliran](../audience-insights/merge-entities.md) terlebih dahulu. Proses hiliran adalah penting kerana ia menjana jadual unik yang menyediakan segmen cerapan khalayak untuk dikongsi dengan cerapan penglibatan. (Jika sistem segar semula dijadualkan, ia akan secara automatik memasukkan proses hiliran.)
 
 **Untuk menganalisis data web dalam cerapan penglibatan**
 

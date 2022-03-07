@@ -1,7 +1,7 @@
 ---
 title: Segar semula tokokan untuk sumber data berasaskan Power Query
 description: Segar semula data baharu dan yang dikemas kini untuk sumber data besar berdasarkan Power Query.
-ms.date: 12/06/2021
+ms.date: 09/28/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,14 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900279"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377845"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Segar semula peningkatan untuk sumber data berasaskan Power Query
-
-Artikel ini membincangkan cara mengkonfigurasikan segar semula tambahan untuk sumber data berdasarkan Power Query.
 
 Segar semula peningkatan untuk sumber data memberikan kelebihan berikut:
 
@@ -32,9 +30,9 @@ Insights khalayak membenarkan segar semula tokokan untuk sumber data yang diimpo
 
 1. [Cipta sumber data baharu berdasarkan Power Query](connect-power-query.md).
 
-1. Berikan **Nama** untuk sumber data.
+1. Berikan nama untuk sumber data.
 
-1. Pilih sumber data yang menyokong segar semula tambahan, seperti [pangkalan data Azure SQL](/power-query/connectors/azuresqldatabase).
+1. Pilih sumber data yang menyokong segar semula tokokan, seperti pangkalan data SQL Azure.
 
 1. Pilih entiti atau jadual untuk dimasukkan.
 

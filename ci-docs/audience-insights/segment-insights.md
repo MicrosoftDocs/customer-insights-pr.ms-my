@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554996"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306085"
 ---
 # <a name="segment-insights-preview"></a>Wawasan segmen (pratonton)
 
@@ -44,7 +44,7 @@ Anda juga boleh menganalisis cara perubahan bertindih untuk atribut tertentu.
 Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Butiran cerapan segmen bertindih.":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Bahagikan butiran wawasan bertindih":::
 
 Pilih wawasan untuk melihat hasil analisis:
 
@@ -77,7 +77,7 @@ Pembezaan segmen membantu anda ketahui apa yang membezakan segmen daripada selur
 Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Butiran cerapan pembeza segmen.":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Butiran wawasan pembezaan segmen":::
 
 Pilih wawasan untuk melihat hasil analisis. Analisis pembezaan termasuk dua tab. Tab **Atribut** menyenaraikan atribut profil dianggap sebagai pembezaan. Tab **Langkah** menyenaraikan pembezaan. Setiap tab merangkumi butiran berikut:
 

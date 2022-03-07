@@ -1,6 +1,6 @@
 ---
 title: Padan entiti untuk penyatuan data
-description: Padankan entiti untuk menggabungkan set data dan mencipta profil pelanggan disatukan.
+description: Padan entiti untuk mencipta profil pelanggan disatukan.
 ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648219"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650329"
 ---
 # <a name="match-entities"></a>Padankan entiti
 

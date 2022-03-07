@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034554"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596786"
 ---
 # <a name="similar-customers-preview"></a>Pelanggan yang serupa (pratonton)
 
@@ -50,7 +50,7 @@ Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan men
 Selepas memproses segmen yang serupa, anda akan menemui segmen baharu disenaraikan pada halaman **Segmen**.
 
 > [!div class="mx-imgBorder"]
-> ![Segmen pelanggan yang serupa.](media/expanded-segment.png "Segmen pelanggan yang serupa")
+> ![Segmen pelanggan yang serupa](media/expanded-segment.png "Segmen pelanggan yang serupa")
 
 Pilih **Pandangan** dalam bar tindakan untuk membuka butiran segmen. Pandangan ini mengandungi maklumat tentang pengedaran merentas [skor persamaan](#about-similarity-scores). Anda juga menemui nilai skor persamaan dalam **Pratonton ahli segment**.
 

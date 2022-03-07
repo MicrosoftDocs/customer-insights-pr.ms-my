@@ -4,17 +4,17 @@ description: Cara mencipta, menamakan semula dan memadam ruang kerja dan perseki
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486046"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645457"
 ---
 # <a name="manage-environments-and-workspaces"></a>Urus persekitaran dan ruang kerja
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486046"
 
 ## <a name="overview"></a>Gambaran keseluruhan
 
-Ruang kerja ialah ruang untuk menyimpan dan mengurus peristiwa dan laporan. Ia merupakan tempat anda boleh melihat aktiviti pengguna dalam masa nyata. Apabila anda mencipta ruang kerja, anda memilih jenis data untuk dihantar ke ruang kerja. Pada masa ini, data web dan aplikasi mudah alih disokong.
+Topik ini membincangkan cara untuk menguruskan ruang kerja dan persekitaran sebaik sahaja mereka sudah dicipta. 
 
-Persekitaran ialah ruang tempat anda menguruskan ruang kerja dan sambungan anda. Cara anda menggunakan persekitaran bergantung pada organisasi anda dan kes penggunaan anda. Contohnya, anda boleh mencipta:
+- *Ruang kerja* ialah ruang untuk menyimpan dan mengurus peristiwa dan laporan. Ia merupakan tempat anda boleh melihat aktiviti pengguna dalam masa nyata. Apabila anda mencipta ruang kerja, anda memilih jenis data untuk dihantar ke ruang kerja. Pada masa ini, data web dan aplikasi mudah alih disokong. Untuk mendapatkan maklumat lanjut, lihat [Cipta ruang kerja dan tambah ahli](create-workspace.md).
 
--   Persekitaran tunggal.
--   Persekitaran berasingan untuk ujian dan pengeluaran.
--   Persekitaran berasingan untuk pasukan atau jabatan khusus dalam organisasi anda yang mengandungi peristiwa berkaitan untuk setiap khalayak.
--   Persekitaran berasingan untuk cawangan global syarikat anda yang berbeza.
--   Sambungan kepada keupayaan cerapan khalayak Customer Insights.
+- *Persekitaran* ialah ruang tempat anda menguruskan ruang kerja dan sambungan anda. Untuk mendapatkan maklumat lanjut, lihat [Cipta persekitaran baharu](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Pilih persekitaran dan cipta ruang kerja 
-
-Setiap ruang kerja perlu berada dalam persekitaran. Anda boleh memilih persekitaran sedia ada lebih awal atau membuat persekitaran baharu apabila anda mencipta ruang kerja. Kemudian anda boleh memilih untuk menambah ahli ruang kerja dan mula mengumpul data.
-
-**Untuk mencipta ruang kerja pertama anda**
-
-1. Dalam cerapan penglibatan, pilih **Baharu** daripada penukar ruang kerja. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Pemilih ruang kerja halaman Customer Insights.":::
-
-1. Pilih persekitaran daripada senarai atau pilih **Cipta persekitaran baharu**.
-
-1. Masukkan nama dalam **Nama ruang kerja**. 
-
-1. Pilih jenis persekitaran yang anda mahu cipta, bergantung pada sama ada anda mahu mengukur perkara yang berlaku di tapak web atau dalam aplikasi mudah alih. 
-
-1. Anda boleh menambahkan ahli dan menugaskan tahap keizinan mereka daripada senarai **Peranan**. Kemudian pilih **Selesai** untuk mencipta ruang kerja atau **Seterusnya** untuk memasang kod. 
-
-1. Pasang cebisan kod untuk mula menerima data dan kemudian pilih **Selesai**. 
-
-## <a name="manage-a-workspace"></a>Urus ruang kerja
+## <a name="manage-an-existing-workspace"></a>Urus ruang kerja sedia ada
 
 Anda boleh mengekalkan berbilang ruang kerja secara serentak dalam persekitaran. [Peranan](user-roles.md) anda menentukan cara anda bekerja dalam ruang kerja itu. 
 
  - Anda mestilah pentadbir persekitaran atau pentadbir ruang kerja untuk menguruskan ruang kerja.
  - Sebagai pentadbir ruang kerja, anda boleh menamakan semula ruang kerja sedia ada atau memadamkan ruang kerja tersebut. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Pusat pentadbir ruang kerja.":::
 
 ### <a name="edit-a-workspace-name"></a>Edit nama ruang kerja
 
@@ -75,7 +53,7 @@ Memadamkan ruang kerja akan mengalih keluar semua kandungan, data, tetapan dan k
 
 1. Pilih **Padam ruang kerja**. 
 
-1. Dalam dialog **Padam ruang kerja**, masukkan **SAHKAN PADAM**. 
+1. Dalam dialog **Padam ruang kerja**, masukkan **SAHKAN PEMADAMAN** dalam semua caps. 
 
 1. Pilih **Padam** untuk memadamkan ruang kerja secara kekal.
 
@@ -87,27 +65,11 @@ Memadamkan ruang kerja akan mengalih keluar semua kandungan, data, tetapan dan k
 
 1. Pilih **Tambah ahli** untuk menambahkan mereka pada ruang kerja anda.
 
-## <a name="manage-an-environment"></a>Urus persekitaran
+## <a name="manage-an-existing-environment"></a>Urus persekitaran sedia ada
 
-Sebagai pentadbir Persekitaran, anda boleh mengakses persekitaran daripada anak tetingkap navigasi kiri. Anda boleh mengkonfigurasikan tetapan persekitaran, pentadbir persekitaran lain dan ruang kerja. Pilih tab untuk beralih antara kawasan berbeza dalam pusat pentadbir.
+Sebagai pentadbir persekitaran, anda boleh mencapai persekitaran daripada anak tetingkap navigasi kiri. Anda boleh mengkonfigurasikan tetapan persekitaran, pentadbir persekitaran lain dan ruang kerja. Pilih tab untuk beralih antara kawasan berbeza dalam pusat pentadbir.
 
-:::image type="content" source="media/New-environment.png" alt-text="Pusat pentadbiran persekitaran.":::
-
-### <a name="create-an-environment"></a>Cipta persekitaran
-
-1. Dalam pemilih ruang kerja, pilih **+Baharu**.
-
-1. Dalam pengalaman berpandu, buka menu juntai bawah **Persekitaran** dan pilih **Cipta persekitaran baharu**. 
-
-1. Berikan **Nama persekitaran**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Langkah dalam pengalaman berpandu untuk menentukan butiran persekitaran.":::
-
-1. Pilih **Rantau** dan pilih **Seterusnya**. 
-
-1. Berikan nama Ruang Kerja dan pilih jenis ruang kerja yang anda mahu cipta. 
-
-1.  Secara pilihan, tambah ahli dan salin cebisan kod melengkapkan proses penciptaan.
+:::image type="content" source="media/environment-edit.png" alt-text="Pusat pentadbiran persekitaran.":::
 
 ### <a name="rename-an-environment"></a>Namakan semula persekitaran
 
@@ -131,7 +93,7 @@ Pentadbir persekitaran boleh memadamkan persekitaran. Sebelum anda boleh memadam
 
 1. Pilih **Padamkan persekitaran**. 
 
-1. Dalam dialog **Padam ruang kerja**, masukkan **SAHKAN PADAM**. 
+1. Dalam dialog **Padam ruang kerja**, masukkan **SAHKAN PEMADAMAN** dalam semua caps. 
 
 1. Pilih **Padamkan** untuk memadamkan persekitaran secara kekal.
 

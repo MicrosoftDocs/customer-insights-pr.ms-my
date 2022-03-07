@@ -1,20 +1,20 @@
 ---
 title: Segmen dalam wawasan khalayak
 description: Gambaran keseluruhan pada segmen dan cara mencipta dan mengurus segmen.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617386"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978070"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
@@ -26,7 +26,7 @@ Profil pelanggan yang sepadan dengan penapis bagi definisi segmen dirujuk sebaga
 
 Terdapat berbilang cara untuk mencipta segmen baharu: 
 
-# <a name="individual-customers-b2c"></a>[Pelanggan individu (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
 - Segmen kompleks dengan pembina segmen: [Bina yang sendiri](segment-builder.md#create-a-new-segment) 
 - Segmen ringkas dengan satu operator: [Segmen pantas](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Terdapat berbilang cara untuk mencipta segmen baharu:
 - Cadangan dikuasai AI berdasarkan pada ukuran atau atribut: [Segmen yang dicadangkan untuk meningkatkan ukuran](suggested-segments.md) 
 - Cadangan berdasarkan pada aktiviti: [Segmen yang dicadangkan berdasarkan pada aktiviti pelanggan](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Akaun perniagaan (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
 - Segmen kompleks dengan pembina segmen: [Bina yang sendiri](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +65,7 @@ Tindakan yang berikut tersedia apabila anda memilih segmen:
 
 Anda boleh memuatkan semula semua segmen serentak dengan memilih **Muat semula semua** pada halaman **Segmen** atau anda boleh memuatkan semula satu atau berbilang segmen apabila anda memilihnya dan memilih **Muat semula** daripada pilihan. Sebagai alternatif, anda boleh mengkonfigurasi segar semula pada **Pentadbir** > **Sistem** > **Jadual**.
 
-> [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Bahagian eksport
 
@@ -105,5 +104,6 @@ Bahagian bawah mengandungi senarai ahli bahagian.
 > Medan yang muncul dalam senarai adalah berasaskan pada atribut bagi entiti segmen anda.
 >
 >Senarai ialah pratonton bagi pemadanan ahli bahagian dan menunjukkan 100 rekod pertama bahagian anda supaya anda boleh segera menilainya dan menyemak semula definisinya jika perlu. Untuk melihat semua rekod yang sepadan, anda perlu [mengeksport bahagian](export-destinations.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

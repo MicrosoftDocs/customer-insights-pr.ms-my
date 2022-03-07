@@ -1,7 +1,7 @@
 ---
-title: Pengayaan pembesaran alamat (mengandungi video)
+title: Pengayaan peningkatan alamat
 description: Perkayakan dan normalkan maklumat alamat profil pelanggan dengan model Microsoft.
-ms.date: 12/16/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934934"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032677"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang dipertingkatkan
 
@@ -23,8 +23,6 @@ Alamat dalam data anda boleh tidak berstruktur, tidak lengkap atau tidak betul. 
 ## <a name="how-we-enhance-addresses"></a>Cara kami mempertingkatkan alamat
 
 Model kami akan melalui proses dua langkah untuk meningkatkan alamat. Pertama, ia menghuraikan alamat untuk mengenal pasti komponennya dan menempatkannya ke dalam format berstruktur. Kemudian, kami menggunakan AI untuk membetulkan, melengkapkan dan menyeragamkan nilai dalam alamat.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Contoh
 
@@ -102,18 +100,8 @@ Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang
 
 Anda boleh mengakses pandangan terperinci setiap profil yang diperkayakan dengan memilih **Lihat data yang diperkayakan**.
 
-### <a name="overview-card"></a>Kad Gambaran Keseluruhan
+## <a name="next-steps"></a>Langkah seterusnya
 
-Kad gambaran keseluruhan menunjukkan butiran mengenai liputan pengayaan. 
-
-* **Pelanggan diproses dan berubah** : Bilangan profil pelanggan yang berjaya diperkaya.
-
-* **Pelanggan diproses dan tidak berubah** : Bilangan profil pelanggan yang diiktiraf tetapi tidak berubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
-
-* **Pelanggan tidak diproses dan tidak berubah** : Bilangan profil yang tidak diiktiraf. Biasanya untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
-
-## <a name="next-steps"></a>Langkah-langkah berikutnya
-
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Bina di atas data pelanggan anda yang diperkaya. Cipta [segmen](segments.md) dan [langkah](measures.md) dan juga [eksport data](export-destinations.md) untuk menyampaikan pengalaman yang diperibadikan kepada pelanggan anda.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

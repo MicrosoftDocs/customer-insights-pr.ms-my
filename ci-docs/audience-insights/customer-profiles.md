@@ -2,19 +2,19 @@
 title: Lihat profil pelanggan
 description: Dapatkan pandangan gabungan data pelanggan disatukan anda.
 ms.date: 12/01/2020
-ms.reviewer: mhart
+ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: a5d928ae518f3cb1afbf8e2b197e51b27665f6e0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896338"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269755"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -59,7 +59,7 @@ Butiran pelanggan termasuk:
 
 -   **Jubin profil pelanggan:** Jubin ini menunjukkan nilai berbeza daripada entiti profil pelanggan disatukan. Butiran ini boleh termasuk alamat e-mel, nama, bandar dan sebagainya. 
 
--   **Kemungkinan minat, bakal jenama:** Menunjukkan jika anda mengkonfigurasi pengayaan pihak pertama. Ia mewakili kepentingan yang berkemungkinan dan afiniti untuk jenama pelanggan dengan profil yang serupa dengan pelanggan ini mungkin miliki. Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft.md).
+-   **Kemungkinan minat, bakal jenama:** Menunjukkan jika anda mengkonfigurasi pengayaan pihak pertama. Ia mewakili kepentingan yang berkemungkinan dan afiniti untuk jenama pelanggan dengan profil yang serupa dengan pelanggan ini mungkin miliki. Untuk maklumat lanjut, lihat [Perkayakan profil pelanggan. dengan afiniti jenama dan kepentingan](enrichment-microsoft-graph.md).
 
 -   **Langkah:** Menunjukkan jika anda mengkonfigurasi satu atau lebih langkah daripada jenis khusus: langkah atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
 

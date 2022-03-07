@@ -1,7 +1,7 @@
 ---
 title: Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 description: Gambaran keseluruhan wawasan khalayak untuk Dynamics 365 Customer Insights.
-ms.date: 08/04/2021
+ms.date: 01/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
-ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
+ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
+ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/06/2021
-ms.locfileid: "7474068"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "6539126"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Wawasan khalayak untuk gambaran keseluruhan Dynamics 365 Customer Insights
 
-[Cerapan khalayak, keupayaan Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) membantu anda membina pemahaman yang lebih mendalam mengenai pelanggan anda. Sambungkan data dari pelbagai sumber transaksi, tingkah laku dan pemerhatian untuk mencipta pandangan pelanggan 360 darjah. Gunakan wawasan ini untuk memacu pengalaman dan proses yang berpusatkan pelanggan. Menyatukan dan memahami data pelanggan dan memanfaatkannya untuk tindakan dan wawasan pintar.
+Wawasan khalayak membantu anda membina pemahaman yang lebih mendalam mengenai pelanggan anda. Sambungkan data dari pelbagai sumber transaksi, tingkah laku dan pemerhatian untuk mencipta pandangan pelanggan 360 darjah. Gunakan wawasan ini untuk memacu pengalaman dan proses yang berpusatkan pelanggan. Menyatukan dan memahami data pelanggan dan memanfaatkannya untuk tindakan dan wawasan pintar.
 
 ## <a name="main-benefits"></a>Faedah utama 
 
@@ -34,9 +34,9 @@ ms.locfileid: "7474068"
 
 - **Kuasakan proses perniagaan dan pengalaman pelanggan peribadi anda**
 
-  - Memandu penglibatan diperibadikan merentasi saluran — memperkasakan pemasaran, jualan dan profesional perkhidmatan. Gunakan kad profil pelanggan yang disesuaikan, cerapan dan di luar kotak yang disepadukan dengan aplikasi perniagaan yang mereka sudah gunakan.
-  - Mengautomatikkan pengalaman dan proses berdasarkan pada profil boleh disesuaikan, ukuran perniagaan dan segmen.
-  - Mendayakan dan memperluaskan pengalaman perniagaan yang dibina pada [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bina aplikasi dengan cepat dengan wawasan terbenam menggunakan pendekatan kod rendah yang kuat dari Power Apps.  
+  - Memacu perikatan peribadi merentasi saluran—memberi kuasa pemasaran, jualan dan perkhidmatan profesional di luar kotak, wawasan pelanggan kontekstual dan kad profil pelanggan yang disesuaikan dimasukkan ke dalam aplikasi perniagaan mereka yang digunakan setiap hari
+  - Mengautomatikkan pengalaman dan proses yang mengutamakan pelanggan berdasarkan profil boleh disesuaikan, tindakan perniagaan dan bahagian.
+  - Mendayakan dan memperluaskan pengalaman perniagaan yang dibina pada [Microsoft Power Platform](https://powerplatform.microsoft.com/). Bina aplikasi dengan cepat dengan wawasan terbenam menggunakan pendekatan kod rendah yang kuat dari PowerApps.  
 
 ## <a name="key-audiences"></a>Khalayak utama
 
@@ -50,12 +50,13 @@ ms.locfileid: "7474068"
 
 - **Pengguna perniagaan:**
 
-  - Cerapan ke dalam profil pelanggan 360 darjah dan perjalanan pelanggan.
-  - Lihat data pelanggan 360 darjah dalam proses perniagaan Dynamics 365 dengan pakej prabina.
+  - Wawasan ke dalam profil pelanggan 360 darjah dan pandangan hujung ke hujung perjalanan pelanggan.
+  - Lihat data pelanggan 360 darjah dalam proses perniagaan Dynamics 365 dengan pakej yang dibina dahulu.
 
 - **Penganalisis perniagaan:**
 
   - Bina profil boleh disesuaikan, takrifkan tindakan dan cipta segmen, dan manfaat daripada analtisi ramalan untuk mendapatkan pandangan 360 darjah pelanggan anda, khusus untuk organisasi anda.  
-  - Gunakan penyambung di luar kotak untuk beberapa aplikasi pihak ketiga dan Microsoft atau API untuk memproses cerapan.
+  - Gunakan penyambung di luar kotak untuk beberapa aplikasi Microsoft dan pihak ketiga atau API untuk memproses wawasan lebih lanjut.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

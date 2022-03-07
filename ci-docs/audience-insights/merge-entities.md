@@ -1,7 +1,7 @@
 ---
 title: Gabung entiti dalam penyatuan data
 description: Gabung entiti untuk mencipta profil pelanggan disatukan.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,85 +9,123 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896522"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035013"
 ---
 # <a name="merge-entities"></a>Gabungkan entiti
 
 Fasa gabung ialah fasa terakhir dalam proses penyatuan data. Tujuannya ialah untuk menyesuaikan data berkonflik. Contoh data berkonflik termasuk nama pelanggan yang ditemui dalam dua set data anda tetapi menunjukkan sedikit berbeza dalam setiap ("Grant Marshall" berbanding "Grant Marshal") atau nombor telefon yang berbeza dalam format (617-803-091X berbanding 617803091X). Menggabungkan titik data berkonflik itu dilakukan secara atribut dengan atribut.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Halaman gabung dalam proses penyatuan data menunjukkan jadual dengan medan digabungkan yang mentakrifkan profil pelanggan disatukan.":::
+
 Selepas menyelesaikan [fasa padan](match-entities.md), anda boleh memulakan fasa gabung dengan memilih jubin **Gabung** pada halaman **Satukan**.
 
 ## <a name="review-system-recommendations"></a>Semak semula pengesyoran sistem
 
-Pada halaman **Gabung**, anda memilih dan mengecualikan atribut untuk menggabungkan dalam entiti profil pelanggan disatukan anda (hasil daripada proses konfigurasi). Sesetengah atribut digabungkan oleh sistem secara automatik.
+Pada **Data** > **Satukan** > **Gabung**, anda memilih dan mengecualikan atribut untuk bergabung dalam entiti profil pelanggan disatukan anda. Profil pelanggan disatukan adalah hasil daripada proses data penyatuan. Sesetengah atribut digabungkan oleh sistem secara automatik.
 
-### <a name="view-merged-attributes"></a>Lihat atribut yang digabungkan
+Untuk melihat atribut yang disertakan dalam salah satu atribut yang digabungkan secara automatik, pilih atribut yang digabungkan dalam tab **Medan pelanggan** jadual. Atribut yang digubah bagi atribut yang digabungkan dipaparkan dalam dua baris baharu di bawah atribut yang digabungkan.
 
-Untuk melihat atribut yang dimasukkan dalam salah satu atribut yang digabungkan secara automatik, pilih atribut yang digabungkan itu. Dua atribut yang menggubah atribut yang digabungkan dipaparkan dalam dua baris baharu di bawah atribut yang digabungkan.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Asingkan, namakan semula, kecualikan, dan edit medan yang digabungkan
 
-> [!div class="mx-imgBorder"]
-> ![Memilih atribut yang digabungkan](media/configure-data-merge-profile-attributes.png "Pilih atribut yang digabungkan")
+Anda boleh mengubah cara sistem memproses atribut yang digabungkan untuk menjana profil pelanggan disatukan. Pilih **Tunjukkan lagi** dan pilih perkara yang anda mahu ubah.
 
-### <a name="separate-merged-attributes"></a>Memisahkan atribut yang digabungkan
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Pilihan dalam menu Tunjukkan lagi juntai bawah untuk menguruskan atribut yang digabungkan.":::
 
-Untuk memisahkan atau membatalkan gabungan mana-mana atribut yang digabungkan secara automatik, cari atribut dalam jadual **Atribut profil**.
+Untuk maklumat lanjut, lihat bahagian berikut.
 
-1. Pilih butang elipsis (...).
+## <a name="separate-merged-fields"></a>Pisahkan medan yang digabungkan
+
+Untuk memisahkan medan yang digabungkan, cari atribut dalam jadual. Medan yang dipisahkan ditunjukkan sebagai titik data individu pada profil pelanggan disatukan. 
+
+1. Pilih medan yang digabungkan.
   
-2. Dalam senarai juntai bawah, pilih **Pisahkan medan**.
+1. Pilih **Tunjukkan lagi** dan pilih **Medan berasingan**.
+ 
+1. Sahkan pengasingan.
 
-### <a name="remove-merged-attributes"></a>Alih keluar atribut yang digabungkan
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
-Untuk mengecualikan atribut daripada entiti profil pelanggan terakhir, carinya dalam jadual **Atribut**.
+## <a name="rename-merged-fields"></a>Namakan semula medan yang digabungkan
 
-1. Pilih butang elipsis (...).
+Tukar nama paparan bagi atribut yang digabungkan. Anda tidak boleh mengubah nama entiti output.
+
+1. Pilih medan yang digabungkan.
   
-2. Dalam senarai juntai bawah, pilih **Jangan gabungkan**.
+1. Pilih **Tunjukkan lagi** dan pilih **Namakan Semula**.
 
-   Atribut dipindahkan ke bahagian **Alih keluar daripada rekod pelanggan**.
+1. Sahkan nama paparan yang ditukar. 
 
-## <a name="manually-add-a-merged-attribute"></a>Menambah atribut yang digabungkan secara manual
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
-Untuk menambah atribut yang digabung, pergi ke halaman **Gabung**.
+## <a name="exclude-merged-fields"></a>Kecualikan medan yang digabungkan
 
-1. Pilih **Tambah atribut yang digabungkan**.
+Kecualikan atribut daripada profil pelanggan disatukan. Jika medan digunakan dalam proses lain, contohnya dalam segmen, alih keluarkannya daripada proses ini sebelum mengecualikannya daripada profil pelanggan. 
 
-2. Berikan **Nama** untuk mengenal pastinya pada halaman **Gabung** kemudian.
+1. Pilih medan yang digabungkan.
+  
+1. Pilih **Tunjukkan lagi** dan pilih **Kecualikan**.
 
-3. Secara pilihan, sediakan **Nama paparan** yang akan muncul dalam entiti Profil Pelanggan disatukan.
+1. Sahkan pengecualian.
 
-4. Konfigurasi **Pilih atribut pendua** untuk memilih atribut yang anda mahu gabung daripada entiti yang dipadankan. Anda juga boleh membuat carian untuk atribut.
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
 
-5. Tetapkan **Kedudukan mengikut kepentingan** untuk mengutamakan satu atribut daripada atribut yang lain. Contohnya, jika entiti *WebAccountCSV* mengandungi data paling tepat tentang atribut *Nama penuh*, anda boleh mengutamakan entiti ini daripada *ContactCSV* dengan memilih *WebAccountCSV*. Hasilnya, *WebAccountCSV* akan dipindahkan ke keutamaan pertama, manakala *ContactCSV* akan dipindahkan ke keutamaan kedua semasa menarik nilai untuk atribut *Nama Penuh*.
+Pada halaman **Gabung**, pilih **Medan yang dikecualikan** untuk melihat senarai semua medan yang dikecualikan. Anak tetingkap ini membenarkan anda menambah semula medan yang dikecualikan.
+
+## <a name="manually-combine-fields"></a>Gabungkan medan secara manual
+
+Tentukan atribut yang digabungkan secara manual. 
+
+1. Pada halaman **Gabung**, pilih **Gabungkan medan**.
+
+1. Berikan **Nama** dan **Nama medan output**.
+
+1. Pilih medan untuk ditambah. Pilih **Tambah medan** untuk menggabungkan lebih medan.
+
+1. Sahkan pengecualian.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan. 
+
+## <a name="change-the-order-of-fields"></a>Ubah pesanan pilihan
+
+Sesetengah entiti mengandungi lebih banyak butiran daripada yang lain. Jika entiti termasuk data terkini tentang medan, anda boleh mengutamakannya daripada entiti lain apabila menggabungkan nilai.
+
+1. Pilih medan yang digabungkan.
+  
+1. Pilih **Tunjukkan lagi** dan pilih **Edit**.
+
+1. Dalam anak tetingkap **Gabungkan medan**, pilih **Alih ke atas/ke bawah** untuk menetapkan pesanan atau seret dan lepaskannya dalam kedudukan yang dikehendaki.
+
+1. Sahkan perubahan.
+
+1. Pilih **Simpan** dan **Jalankan** untuk memproses perubahan.
 
 ## <a name="run-your-merge"></a>Jalankan gabungan anda
 
 Sama ada anda menggabungkan atribut secara manual atau membiarkan sistem menggabungkannya, anda sentiasa boleh menjalankan gabungan anda. Pilih **Jalankan** pada halaman **Gabung** untuk memulakan proses.
 
 > [!div class="mx-imgBorder"]
-> ![Simpan dan Jalankan gabungan data](media/configure-data-merge-save-run.png "Simpan dan Jalankan Gabungan Data")
+> ![Simpan dan Jalankan gabungan data.](media/configure-data-merge-save-run.png "Simpan dan Jalankan Gabungan Data")
 
-Untuk membuat perubahan tambahan dan jalankan semula langkah, anda boleh membatalkan gabungan dalam kemajuan. Pilih teks **Menyegarkan semula ...** dan pilih **Batal kerja** di bahagian tepi tetingkap yang muncul.
+Pilih **Jalankan Gabungan sahaja** jika anda hanya mahu melihat output yang ditunjukkan dalam entiti pelanggan disatukan. Proses hiliran akan disegar semula seperti yang [ditakrifkan dalam jadual segar semula](system.md#schedule-tab).
 
-Selepas **Menyegarkan semula ...** teks berubah kepada **Berjaya**, gabungan telah sempurna dan selesaikan konflik dalam data anda mengikut dasar yang anda takrifkan. Atribut gabung dan tidak digabungkan dimasukkan dalam entiti profil disatukan. Atribut yang dikecualikan tidak dimasukkan dalam entiti profil disatukan.
+Pilih **Jalankan proses Gabungan dan hiliran** untuk menyegar semula sistem dengan perubahan anda. Semua proses termasuk pengayaan, segmen dan ukuran akan berjalan semula secara automatik. Selepas semua proses hiliran dilengkapkan, profil pelanggan menunjukkan sebarang perubahan yang anda lakukan.
 
-Jika ia bukan kali pertama anda menjalankan dengan berjaya, semua proses hilir, termasuk pengayaan, pensegmenan dan langkah akan dijalankan semula secara automatik. Selepas semua proses hilir telah dijalankan semula, profil pelanggan menunjukkan perubahan yang anda lakukan.
+Untuk membuat lebih banyak perubahan dan menjalankan semula langkah, anda boleh membatalkan penggabungan yang sedang dilaksanakan. Pilih teks **Menyegarkan semula ...** dan pilih **Batal kerja** di bahagian tepi tetingkap yang muncul.
 
 > [!TIP]
-> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies). Anda boleh memilih status proses untuk melihat butiran mengenai kemajuan keseluruhan kerja. Selepas memilih **Lihat butiran** untuk salah satu tugas kerja, anda mencari maklumat tambahan: memproses masa, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas.
+> Selepas menjalankan proses penggabungan, pilih status proses untuk membuka anak tetingkap **Butiran tugas**. Ia memberikan gambaran keseluruhan tentang masa pemprosesan, tarikh pemprosesan terakhir dan semua ralat dan amaran yang berkaitan dengan tugas. Pilih **Lihat butiran** untuk melihat entiti yang mengambil bahagian dalam proses padanan, jika penyelesaian konflik berjaya dan jika kemas kini berjaya diterbitkan.  
+> Terdapat [enam jenis status](system.md#status-types) untuk tugas/proses. Selain itu, kebanyakan proses [bergantung pada proses hilir lain](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Laluan gerudi bawah untuk mendapatkan butiran proses daripada pautan status tugas.":::
 
 ## <a name="next-step"></a>Langkah Seterusnya
 
 Konfigurasikan [aktiviti](activities.md), [pengayaan](enrichment-hub.md) atau [perhubungan](relationships.md) untuk mendapatkan wawasan lanjut tentang pelanggan anda.
 
-Jika anda sudah mengkonfigurasi aktiviti, pengayaan atau perhubungan, atau jika anda mentakrifkan segmen, ia akan diproses secara automatik untuk menggunakan data pelanggan terkini.
-
-
-
+Jika anda telah mengkonfigurasikan aktiviti, pengayaan atau segmen, ia akan diproses secara automatik untuk menggunakan data pelanggan terkini.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

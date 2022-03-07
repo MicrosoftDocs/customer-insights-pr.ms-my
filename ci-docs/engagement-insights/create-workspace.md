@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645321"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673504"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Cipta ruang kerja baharu dan tambah ahli
 
@@ -26,17 +26,17 @@ Apabila anda mencipta ruang kerja, anda memilih jenis data yang anda mahu fokus.
 
 ## <a name="create-a-new-workspace"></a>Cipta ruang kerja baharu
 
-Proses mencipta ruang kerja termasuk menyediakan *persekitaran* untuk mengaturkan ruang kerja anda. Persekitaran ialah ruang yang boleh mengandungi satu atau lebih ruang kerja. Anda boleh menggunakan persekitaran untuk menguruskan ruang kerja anda dan sambungan untuk keupayaan cerapan khalayak Customer Insights.
+Proses mencipta ruang kerja termasuk menyediakan *persekitaran* untuk mengaturkan ruang kerja anda. Persekitaran ialah ruang yang boleh mengandungi satu atau lebih ruang kerja. Anda boleh menggunakan persekitaran untuk menguruskan ruang kerja dan sambungan anda kepada keupayaan wawasan khalayak.
 
-1. Pilih **Baharu** daripada penukar ruang kerja.
+1. Pilih **+Baru** daripada penukar ruang kerja.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Halaman cerapan pelanggan dengan petak bual pada anak tetingkap navigasi dan perihalan.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Halaman Wawasan Pelanggan tanpa panggilan pada anak tetingkap navigasi dan perihalan.":::
 
 1. Dalam anak tetingkap **Ruang kerja** masukkan **Nama ruang kerja**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Taipkan nama ruang kerja.":::
 
-1. Pilih jenis ruang kerja (Web atau Mudah Alih) yang anda mahu ukur.
+1. Pilih jenis platform (web atau mudah alih) yang anda ingin ukur.
 
 1. Pilih **Tunjuk tetapan lanjutan** untuk mendayakan atau menyahdayakan tetapan pilihan ini:
 

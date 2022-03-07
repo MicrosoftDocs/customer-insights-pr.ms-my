@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3a9372cc4ffa4fb112a96b1286aee9dc35059a50
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760591"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7031852"
 ---
-# <a name="export-segment-lists-to-constant-contact-preview"></a>Eksport senarai segmen ke Constant Contact (pratonton)
+# <a name="export-segments-to-constant-contact-preview"></a>Eksport segmen ke Kenalan Pemalar (pratonton)
 
 Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakannya untuk aktiviti pemasaran. 
 
@@ -47,7 +47,7 @@ Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakanny
 
 1. Pilih **Sambung** untuk memulakan sambungan ke Constant Contact.
 
-1. Pilih **Sahkan dengan AdRoll** dan berikan kelayakan pentadbir anda untuk Constant Contact. 
+1. Pilih **Sahkan dengan Kenalan Pemalar** dan berikan kelayakan pentadbir anda untuk Kenalan Pemalar. 
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 

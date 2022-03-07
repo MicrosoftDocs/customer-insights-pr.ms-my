@@ -4,17 +4,17 @@ description: Tentukan aktiviti pelanggan dan lihat aktiviti tersebut dalam garis
 ms.date: 10/13/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667240"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596740"
 ---
 # <a name="customer-activities"></a>Aktiviti pelanggan
 
@@ -44,13 +44,13 @@ Sumber data anda termasuk entiti dengan data transaksi dan aktiviti daripada sum
 
 1. Dalam bahagian **Persediaan perhubungan**, butiran dikonfigurasi untuk menyambungkan data aktiviti anda kepada pelanggan yang berkaitan.
 
-   > [!div class="mx-imgBorder"]
-   > ![Takrifkan perhubungan entiti](media/activities-entities-define.png "Takrifkan perhubungan entiti")
-
     - **Medan entiti aktiviti**: Pilih medan dalam entiti aktiviti anda yang akan digunakan untuk mewujudkan perhubungan dengan entiti lain.
     - **Entiti pelanggan** : Pilih entiti pelanggan sumber berkaitan dengan entiti aktiviti anda akan berada dalam perhubungan. Anda hanya boleh mengaitkan dengan entiti pelanggan sumber yang digunakan dalam proses data penyatuan.
     - **Medan entiti pelanggan**: Medan ini menunjukkan kunci utama bagi entiti pelanggan sumber seperti yang dipilih dalam proses peta. Medan kunci utama dalam entiti pelanggan sumber ini digunakan untuk mewujudkan perhubungan dengan entiti aktiviti.
     - **Nama**: Jika perhubungan antara entiti aktiviti ini dan entiti pelanggan sumber yang terpilih telah wujud, nama perhubungan akan berada dalam mod baca sahaja. Jika tiada hubungan sedemikian wujud, perhubungan baharu akan dicipta dengan nama yang disediakan di sini.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Takrifkan perhubungan entiti](media/activities-entities-define.png "Takrifkan perhubungan entiti")
 
 1. Pilih **Simpan** untuk menggunakan perubahan anda.
 
@@ -82,3 +82,6 @@ Sumber data anda termasuk entiti dengan data transaksi dan aktiviti daripada sum
 3. Pilih pada ikon **Padam**.
 
 4. Sahkan pemadaman anda.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

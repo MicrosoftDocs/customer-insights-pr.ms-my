@@ -4,27 +4,27 @@ description: Cara maklumat mengenai SDK dan cara menggunakannya.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/27/2021
+ms.date: 06/23/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
-ms.topic: overview
+ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 090860071d34c6dc64a745993628c46014455b80
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977702"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036294"
 ---
 # <a name="developer-resources-overview"></a>Gambaran keseluruhan sumber pembangun
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Artikel ini menyenaraikan semua cebisan kod kit alat pembangunan perisian (SDK) tersedia dan sampel untuk pembangun berkongsi data dengan Dynamics 365 Customer Insights. Dapatkan kod untuk acara yang khusus untuk platform anda dengan mengikuti tutorial.
+Artikel ini menyenaraikan semua cebisan kod dan sampel yang tersedia untuk rujukan pantas. Dapatkan kod untuk penghantar peristiwa bagi platform anda dan ikut tutorial. 
 
 ## <a name="capture-events-from-websites"></a>Tangkap peristiwa daripada tapak web
 
-- [Menginstrumenkan tapak web](instrument-website.md)
+- [Cara menambahkan cebisan kod pada laman web](instrument-website.md)
 - [Sampel Web SDK](websdk-sample.md)
 - [Pengalatan SDK web lanjutan](advanced-SDK-implementation.md)
 

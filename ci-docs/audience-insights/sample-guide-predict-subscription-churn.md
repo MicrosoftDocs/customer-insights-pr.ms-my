@@ -2,19 +2,19 @@
 title: Langganan panduan sampel ramalan pulangan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pulangan langganan luar kotak.
 ms.date: 11/19/2020
-ms.reviewer: digranad
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: tutorial
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653991"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595529"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Panduan sampel ramalan pulangan langganan (pratonton)
 
@@ -29,7 +29,7 @@ Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti t
 - Sekurang-kurangnya [Keizinan penyumbang](permissions.md) dalam Customer Insights.
 - Kami mengesyorkan agar anda melaksanakan langkah berikut [dalam persekitaran baharu](manage-environments.md).
 
-## <a name="task-1---ingest-data"></a>Tugas 1 - Inges Data
+## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
 Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport sumber data menggunakan penyambung Power Query](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
 
@@ -46,10 +46,9 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **DateOfBirth**: Tarikh
    - **CreatedOn**: Zon waktu tarikh
 
-   [!div class="mx-imgBorder"]
-   ![Ubah Tarikh Lahir kepada Tarikh](media/ecommerce-dob-date.PNG "ubah tarikh lahir kepada tarikh ini")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Ubah tarikh lahir kepada tarikh ini.":::
 
-1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
+1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
 
 1. Simpan sumber data.
 
@@ -67,7 +66,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **RewardsPoints**: Nombor Bulat
    - **CreatedOn**: Tarikh/Masa
 
-1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
+1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
 
 1. Simpan sumber data.
 
@@ -90,7 +89,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
    - **Is_auto_renew** : Benar/Palsu
    - **RecurringFrequencyInMonths**: Nombor Bulat
 
-1. Dalam medan 'Nama' pada anak tetingkap sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **SubscriptionHistory**.
+1. Dalam medan **Nama** pada anak tetingkap sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **SubscriptionHistory**.
 
 1. Simpan sumber data.
 
@@ -230,3 +229,6 @@ Anda boleh mencipta segmen baharu berdasarkan entiti yang dicipta oleh model.
 Kini anda mempunyai segmen yang dikemas kini secara dinamik yang mengenal pasti pelanggan risiko pulangan tinggi untuk perniagaan langganan ini.
 
 Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

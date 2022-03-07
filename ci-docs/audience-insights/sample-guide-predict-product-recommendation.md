@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129910"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595284"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Panduan sampel untuk ramalan pengesyoran produk (pratonton)
 
@@ -22,7 +22,7 @@ Kami akan menerangkan kepada anda contoh ramalan pengesyoran produk hujung ke hu
 
 ## <a name="scenario"></a>Senario
 
-Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang menjual melalui laman web Contoso Coffee mereka. Matlamat mereka ialah untuk memahami produk yang sepatutnya mereka syorkan kepada pelanggan berulang mereka. Mengetahui perkara yang pelanggan lebih **mungkin akan membeli**, boleh membantu mereka menyimpan usaha pemasaran dengan menumpukan perhatian kepada perkara tertentu.
+Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang mereka jual melalui laman web Contoso Coffee mereka. Matlamat mereka ialah untuk memahami produk yang sepatutnya mereka syorkan kepada pelanggan berulang mereka. Mengetahui perkara yang pelanggan lebih **mungkin akan membeli**, boleh membantu mereka menyimpan usaha pemasaran dengan menumpukan perhatian kepada perkara tertentu.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -65,7 +65,7 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
 
 1. Dalam medan **Nama** pada anak tetingkap sisi, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**.
 
-1. **Simpan** sumber data.
+1. Simpan sumber data.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingest data pelanggan daripada skema kesetiaan
@@ -83,11 +83,11 @@ Semak semula artikel [tentang pengingesan data](data-sources.md) dan [mengimport
 
 1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
 
-1. **Simpan** sumber data.
+1. Simpan sumber data.
 
 ## <a name="task-2---data-unification"></a>Tugas 2 - Penyatuan data
 
-Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencipta profil pelanggan yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
+Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan** untuk mencipta profil pelanggan disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
 
 ### <a name="map"></a>Petakan
 
@@ -156,7 +156,7 @@ Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pu
 
    - **Bilangan produk**: Tetapkan nilai ini kepada **5**. Tetapan ini mentakrifkan bilangan produk yang anda mahu cadangkan kepada pelanggan anda.
 
-   - **Pembelian berulang dijangka**: Pilih **Ya** untuk menunjukkan bahawa anda ingin menyertakan produk dalam pengesyoran yang dibeli oleh pelanggan anda sebelum ini.
+   - **Cadangkan pelanggan produk yang dibeli baru-baru ini?**: Pilih **Ya** untuk menunjukkan bahawa anda mahu sertakan produk dalam pengesyoran yang pelanggan anda telah beli sebelum ini.
 
    - **Tetingkap lihat kembali:** Pilih sekurang-kurangnya **365 hari**. Tetapan ini menakrifkan sejauh mana model akan melihat kembali pada aktiviti pelanggan untuk menggunakannya sebagai input kepada pengesyoran mereka.
    

@@ -1,20 +1,20 @@
 ---
 title: Cipta dan urus persekitaran
 description: Ketahui cara untuk mendaftar untuk perkhidmatan dan cara untuk menguruskan persekitaran.
-ms.date: 06/15/2021
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-ms.reviewer: mhart
-author: NimrodMagen
-ms.author: nimagen
+ms.reviewer: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259110"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270123"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -44,9 +44,6 @@ Artikel ini menerangkan cara untuk mencipta organisasi baharu dan cara untuk mem
 
 Terdapat dua cara untuk mencipta persekitaran baharu. Anda boleh sama ada menentukan konfigurasi baharu secara keseluruhan atau anda boleh menyalin beberapa tetapan konfigurasi daripada persekitaran sedia ada.
 
-> [!NOTE]
-> Organisasi boleh mencipta *dua* persekitaran untuk setiap lesen Customer Insights. Jika organisasi anda membeli lebih daripada satu lesen, sila [hubungi pasukan sokongan kami](https://go.microsoft.com/fwlink/?linkid=2079641) untuk meningkatkan bilangan persekitaran yang tersedia. Untuk maklumat lanjut mengenai kapasiti dan kapasiti tambahan, muat turun [panduan pelesenan Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
-
 Untuk mencipta persekitaran:
 
 1. Pilih pemilih **Persekitaran** dalam pengepala aplikasi.
@@ -58,14 +55,14 @@ Untuk mencipta persekitaran:
 
 1. Dalam dialog **Cipta persekitaran baharu**, pilih **Persekitaran baharu**.
 
-   Jika anda mahu [menyalin data daripada persekitaran semasa](#considerations-for-copy-configuration-preview), pilih **Salin daripada persekitaran sedia ada**. Anda akan melihat semua persekitaran yang tersedia dalam organisasi anda yang boleh anda salin data daripadanya.
+   Jika anda mahu [menyalin data daripada persekitaran semasa](#additional-considerations-for-copy-configuration-preview), pilih **Salin daripada persekitaran sedia ada**. Anda akan melihat semua persekitaran yang tersedia dalam organisasi anda yang boleh anda salin data daripadanya.
 
 1. Sediakan butiran berikut:
    - **Nama**: Nama untuk persekitaran ini. Medan ini sudah diisikan jika anda telah menyalin persekitaran sedia ada tetapi anda boleh mengubahnya.
    - **Rantau**: Rantau yang perkhidmatan diatur letak dan dihoskan di dalamnya.
    - **Jenis**: Pilih sama ada anda mahu mencipta persekitaran Pengeluaran atau Kotak Pasir.
 
-1. Secara pilihan, anda boleh memilih **Tetapan lanjutan**:
+2. Secara pilihan, anda boleh memilih **Tetapan lanjutan**:
 
    - **Simpan semua data pada**: Menentukan tempat anda mahu menyimpan data keluaran yang dijanakan daripada Customer Insights. Anda akan mempunyai dua pilihan: **Storan Customer Insights** (Azure Data Lake yang diuruskan oleh pasukan Customer Insights) dan **Azure Data Lake Storage Gen2** (Azure Data Lake Storage anda sendiri). Secara lalai, pilihan storan Customer Insights dipilih.
 
@@ -76,22 +73,22 @@ Untuk mencipta persekitaran:
    > Kami hanya menyokong akaun Azure Data Lake Storage Gen2 dari rantau Azure yang sama yang anda pilih apabila mencipta persekitaran.
    > Kami hanya menyokong hanya Ruang Nama Berhierarki (HNS) Azure Data Lake Gen2 yang didayakan untuk akaun storan.
 
-   - Untuk pilihan Azure Data Lake Storage Gen2, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Bekas** tidak boleh ditukar dan akan menjadi `customerinsights`.
+   - Untuk pilihan Azure Data Lake Storage Gen2, anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Nama **Container** tidak boleh ditukar dan akan menjadi "customerinsights".
    
-   - Jika anda ingin menggunakan [ramalan](predictions.md), konfigurasikan perkongsian data dengan Microsoft Dataverse atau dayakan pengingesan data daripada sumber data di premis, sediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasi perkongsian data dengan Microsoft Dataverse dan dayakan keupayaan tambahan**. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Microsoft Dataverse Data Lake Terurus.
+   - Jika anda mahu menggunakan [ramalan](predictions.md) atau mengkonfigurasi perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, berikan Microsoft Dataverse URL persekitaran di bawah **Konfigurasikan perkongsian data dengan Microsoft Dataverse dan mendayakan keupayaan tambahan**. Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Microsoft Dataverse Data Lake Terurus.
 
      > [!NOTE]
      > - Perkongsian data dengan Microsoft Dataverse Data Lake Terurus pada masa ini tidak disokong apabila anda menyimpan semua data ke Azure Data Lake Storage anda sendiri.
      > - [Ramalan nilai hilang dalam entiti](predictions.md) tidak disokong buat masa ini apabila anda mendayakan perkongsian data dengan Microsoft Dataverse Data Lake Terurus.
 
      > [!div class="mx-imgBorder"]
-     > ![Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
-   Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan fail model.json akan dicipta dan ditambah pada folder berdasarkan nama proses.
+   Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan model. fail JSON akan dicipta dan ditambah ke subfolder yang berkaitan berdasarkan proses yang anda jalankan.
 
    Jika anda mencipta berbilang persekitaran Customer Insights dan memilih untuk menyimpan entiti output daripada persekitaran tersebut dalam akaun storan anda, folder berasingan akan dicipta untuk setiap persekitaran dengan ci_<environmentid> dalam container.
 
-### <a name="considerations-for-copy-configuration-preview"></a>Pertimbangan untuk konfigurasi salinan (pratonton)
+### <a name="additional-considerations-for-copy-configuration-preview"></a>Pertimbangan tambahan untuk konfigurasi salinan (pratonton)
 
 Tetapan konfigurasi berikut disalin:
 
@@ -139,18 +136,6 @@ Anda boleh mengedit beberapa butiran persekitaran sedia ada.
 4. Jika persekitaran dikonfigurasikan untuk menyimpan data dalam Azure Data Lake Storage Gen2, anda boleh mengemas kini **Kunci akaun**. Walau bagaimanapun, anda tidak boleh mengubah **Nama akaun** atau nama **Bekas**.
 
 5. Secara alternatif, anda boleh mengemas kini dari sambungan berasaskan kunci akaun kepada sambungan berasaskan sumber atau langganan. Sebaik sahaja dinaik taraf, anda tidak boleh kembali kepada kunci akaun selepas kemas kini. Untuk maklumat lanjut, lihat [Sambungkan cerapan khalayak ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure](connect-service-principal.md). Anda tidak boleh mengubah maklumat **Bekas** semasa mengemas kini sambungan.
-
-6. Selain itu, anda boleh menyediakan URL persekitaran Microsoft Dataverse di bawah **Konfigurasikan perkongsian data Microsoft Dataverse dan dayakan keupayaan tambahan**. Keupayaan ini termasuk perkongsian data dengan aplikasi dan penyelesaian berdasarkan Microsoft Dataverse, pengingesan data daripada sumber data di premis atau penggunaan [ramalan](predictions.md). Pilih **Dayakan perkongsian data** untuk berkongsi data output Customer Insights dengan Data Lake Terurus Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Perkongsian data dengan Microsoft Dataverse Data Lake Terurus pada masa ini tidak disokong apabila anda menyimpan semua data ke Azure Data Lake Storage anda sendiri.
-   > - [Ramalan nilai yang hilang dalam entiti](predictions.md) pada masa ini tidak disokong apabila anda mendayakan perkongsian data dengan Data Lake Terurus Microsoft Dataverse.
-
-   Selepas mendayakan perkongsian data dengan Microsoft Dataverse, segar semula sepenuhnya sumber data anda dan proses lain akan bermula. Jika proses sedang berjalan, anda tidak melihat pilihan untuk mendayakan perkongsian data dengan Microsoft Dataverse. Tunggu sehingga proses tersebut selesai atau batalkan proses untuk mendayakan perkongsian data. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Pilihan konfigurasi untuk mendayakan perkongsian data dengan Microsoft Dataverse.":::
-   
-   Apabila anda menjalankan proses, seperti pengingesan data atau penciptaan segmen, folder yang berkaitan akan dicipta dalam akaun storan yang anda tentukan di atas. Fail data dan fail model.json akan dicipta dan ditambah pada subfolder yang berkenaan, bergantung pada proses yang anda jalankan.
 
 ## <a name="reset-an-existing-environment"></a>Tetap semula persekitaran sedia ada
 
