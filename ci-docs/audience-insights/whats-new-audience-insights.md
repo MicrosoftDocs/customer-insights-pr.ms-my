@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232669"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376473"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Perkara baharu dalam keupayaan cerapan khalayak Dynamics 365 Customer Insights
-
-
 
 Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](/dynamics365/release-plans/).
 
@@ -27,67 +25,123 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>Kemas kini Februari 2022
+
+Kemas kini pada Februari 2022 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="general-availability-for-prediction-models"></a>Ketersediaan am untuk model ramalan
+
+Model ramalan di luar kotak, termasuk **churn** langganan, **churn** transaksi, dan **nilai seumur hidup pelanggan (CLV)** secara amnya tersedia sebagai sebahagian daripada Wawasan Pelanggan. 
+
+Untuk maklumat lanjut, lihat [Gambaran keseluruhan ramalan](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>New sumber data: Integrasi dengan Azure Synapse Analytics (Pratonton)
+
+Azure Synapse Analytics adalah perkhidmatan analisis perusahaan yang mempercepatkan masa untuk cerapan merentasi gudang data dan sistem data besar.
+
+Jika organisasi anda sudah menggunakan keupayaan Azure Synapse Analytics analisis lanjutan dan menyimpan output dalam pangkalan data dalam Data Lake, anda boleh dengan mudah mengasingkan data tersebut kepada Wawasan Pelanggan. Untuk maklumat lanjut, lihat [Menyambungkan Azure Synapse sumber data (Pratonton)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Pengayaan LiveRamp (Preview)
+
+LiveRamp menyediakan resolusi identiti luar talian yang menentukan dan penyatuan data pelanggan. Anda boleh memetakan pengecam peribadi dalam data pelanggan anda ke graf identiti AbiliTec dan menerima ID AbiliTec. Anda kemudian boleh menggunakan ID ini untuk penyatuan data pelanggan anda dengan lebih baik.
+
+Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data identiti daripada LiveRamp (Pratonton)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (Pratonton)
+
+Gunakan data daripada sumber seperti Microsoft dan rakan kongsi lain untuk memperkayakan data pelanggan anda sebelum penyatuan data. Pengayaan sumber data membantu menghasilkan kesempurnaan dan kualiti data yang lebih tinggi yang boleh membantu mencapai hasil yang lebih baik sebaik sahaja anda menyatukan data anda.
+
+Untuk maklumat lanjut, lihat [Pengayaan untuk sumber data (Pratonton)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Ubah pemilik persekitaran
+
+Walaupun beberapa pengguna boleh mempunyai keizinan pentadbir dalam Wawasan Pelanggan, hanya satu pengguna adalah pemilik persekitaran. Pengalaman yang lebih baik membolehkan anda menukar pemilik persekitaran dan menuntut pemilikan jika bekas pemilik meninggalkan organisasi. 
+
+Untuk maklumat lanjut, lihat [Mengubah pemilik persekitaran](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Proses penyediaan data menyenaraikan sebab rasuah untuk rekod yang rosak
+
+Proses penyediaan data kini menunjukkan sebab rasuah untuk semua bidang dengan data yang rosak di peringkat rekod individu untuk pengenalan mudah. 
+
+Untuk maklumat lanjut, lihat [Sumber data yang rosak](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Akhir pratonton untuk ciri pelaporan dalam keupayaan cerapan penglibatan
+
+Pratonton Dynamics 365 Customer Insights keupayaan cerapan penglibatan berakhir pada 15 Februari 2022.  
+Perubahan ini bermakna pengalaman percubaan Wawasan Pelanggan tidak lagi termasuk keupayaan untuk mencipta corong atau fungsi pelaporan lain.
+
+Kami menjemput anda untuk meneroka dan menilai banyak ciri [lain Wawasan](https://dynamics.microsoft.com/ai/customer-insights/) Pelanggan, platform data pelanggan Microsoft (CDP).    
+ 
+Untuk tempoh peralihan, peserta pratonton sedia ada masih mempunyai akses kepada beberapa keupayaan dan fungsi pratonton:
+
+- Dapatkan kod kepada instrumen tapak web atau aplikasi mudah alih 
+- Lihat peristiwa dan sifat peristiwa 
+- Tingkatkan profil bersatu dengan acara yang ditelan dan diperhalusi untuk mendapat manfaat daripada nilai penuh data pelanggan mereka
+  
+Semasa tempoh peralihan, peristiwa yang ditangkap masih distrim ke Tasik Data yang bersambung. Setelah kefungsian ini dimatikan, perkongsian data antara cerapan penglibatan dan cerapan khalayak akan berhenti dan tiada peristiwa baharu dihantar ke storan yang disambungkan.
+Sila hubungi pasukan Akaun Microsoft anda secara langsung jika anda mempunyai soalan tentang penghujung pratonton keupayaan. Pasukan Akaun anda akan memastikan anda sentiasa terkini pada pelancaran yang akan datang. 
+
 ## <a name="january-2022-updates"></a>Kemas kini Januari 2022
 
-Kemas kini pada Januari 2022 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+Kemas kini pada Januari 2022 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
 
 ### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analisis sentimen maklum balas pelanggan anda
 
-Wawasan Pelanggan menyediakan ciri berkuasa AI baru untuk mensintesis sentimen pelanggan dan mengenal pasti aspek perniagaan tertentu sebagai peluang untuk penambahbaikan yang disasarkan. Dengan menganalisis maklum balas bertulis pelanggan anda, anda boleh mendapatkan pandangan yang tepat pada kos yang rendah. Analisis sentimen yang dikuasakan oleh model Pemprosesan Bahasa Semula Jadi (NLP) yang menjana dua wawasan yang diperolehi untuk setiap ID pelanggan. Skor sentimen (daripada –5 hingga 5) dan senarai aspek perniagaan yang berkenaan. 
+Wawasan Pelanggan menyediakan ciri berkuasa AI baharu untuk mensintesis sentimen pelanggan dan mengenal pasti aspek perniagaan tertentu sebagai peluang untuk penambahbaikan yang disasarkan. Dengan menganalisis maklum balas bertulis pelanggan anda, anda boleh mendapatkan pandangan yang tepat pada kos rendah. Analisis sentimen dikuasakan oleh model Pemprosesan Bahasa Asli (NLP) yang menjana dua cerapan yang diperolehi untuk setiap ID pelanggan. Skor sentimen (dari -5 hingga 5) dan senarai aspek perniagaan yang berkenaan. 
 
 Untuk maklumat lanjut, lihat [Menganalisis sentimen dalam maklum balas pelanggan (Pratonton)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Kemas kini Disember 2021
 
-Kemas kini pada bulan Disember 2021 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+Kemas kini pada Disember 2021 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
 
 ### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Majukan log Wawasan Pelanggan ke Azure Monitor
 
-Customer Insights menyediakan integrasi langsung dengan Azure Monitor. Ciri ini termasuk acara audit dan acara operasi. Azure Monitor resource logs membolehkan anda memantau dan menghantar log ke Azure Storage, Azure Log Analytics, atau menstrimkannya ke Azure Event Hubs.
+Wawasan Pelanggan menyediakan penyepaduan langsung dengan Azure Monitor. Ciri ini termasuk peristiwa audit dan acara operasi. Azure Monitor resource log membolehkan anda memantau dan menghantar log ke Azure Storage, Azure Log Analytics, atau menstrimnya ke Azure Event Hubs.
 
-Untuk maklumat lanjut, lihat [Pemajuan log masuk Dynamics 365 Customer Insights dengan Azure Monitor (Pratonton)](diagnostics.md).
+Untuk maklumat lanjut, lihat [Log pemajuan masuk Dynamics 365 Customer Insights dengan Azure Monitor (Pratonton)](diagnostics.md).
 
 ### <a name="enrich-customer-profiles-with-engagement-data"></a>Memperkayakan profil pelanggan dengan data penglibatan
 
-Gunakan data daripada Microsoft Office 365 untuk memperkayakan profil akaun pelanggan anda dengan wawasan tentang penglibatan melalui Office 365 apl. Data penglibatan terdiri daripada e-mel dan aktiviti mesyuarat, yang diagregatkan pada peringkat akaun. Sebagai contoh, bilangan e-mel daripada akaun perniagaan atau bilangan mesyuarat dengan akaun. Tiada data tentang pengguna individu dikongsi. Pengayaan ini boleh didapati di kawasan berikut: UK, Eropah, Amerika Utara.
+Gunakan data untuk Microsoft Office 365 memperkayakan profil akaun pelanggan anda dengan cerapan tentang penglibatan melalui Office 365 apl. Data penglibatan terdiri daripada e-mel dan aktiviti mesyuarat, yang diagregatkan pada tahap akaun. Sebagai contoh, bilangan e-mel dari akaun perniagaan atau bilangan mesyuarat dengan akaun. Tiada data tentang pengguna individu dikongsi. Pengayaan ini boleh didapati di kawasan berikut: UK, Eropah, Amerika Utara.
 
 Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data penglibatan (Pratonton)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Ciri penyatuan data lanjutan
 
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Benarkan dasar penyelesaian konflik pada peringkat atribut individu
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Mendayakan dasar penyelesaian konflik pada aras atribut individu
 
-Apabila deduplicating rekod pelanggan dalam entiti, anda mungkin tidak mahu memilih rekod penuh sebagai pemenang. Kami kini membolehkan anda menggabungkan medan terbaik dari pelbagai rekod berdasarkan peraturan untuk setiap atribut. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat yang paling lengkap daripada rekod yang berbeza. 
+Apabila mendeeduplicating rekod pelanggan dalam entiti, anda mungkin tidak mahu memilih rekod penuh sebagai pemenang. Kami kini membenarkan anda menggabungkan medan terbaik dari pelbagai rekod berdasarkan peraturan untuk setiap atribut. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat paling lengkap daripada rekod yang berbeza. 
 
-Anda kini boleh mentakrifkan peraturan cantuman berasingan untuk atribut individu semasa deduplicating dan menggabungkan rekod dalam satu entiti. Sebelum ini, kami hanya membenarkan anda memilih peraturan cantum tunggal (mengekalkan rekod berdasarkan kesempurnaan data recency) dan peraturan tersebut digunakan pada tahap rekod kepada semua atribut. Itu tidak sesuai apabila beberapa data yang anda mahu simpan terdapat dalam rekod A, dan data lain yang baik yang terdapat dalam rekod B.
+Anda kini boleh mentakrifkan peraturan cantum berasingan untuk atribut individu semasa mendeedupensikan dan menggabungkan rekod dalam satu entiti. Sebelum ini, kami hanya membenarkan anda memilih peraturan cantum tunggal (menyimpan rekod berdasarkan kesempurnaan data recency) dan peraturan itu digunakan pada tahap rekod pada semua atribut. Itu tidak sesuai apabila beberapa data yang anda ingin simpan ditemui dalam rekod A, dan data baik lain yang terdapat dalam rekod B.
 
 Untuk mendapatkan maklumat lanjut, lihat [Takrifkan penyahduplikasi pada entiti padanan](match-entities.md#define-deduplication-on-a-match-entity).
 
-#### <a name="custom-rules-for-matching"></a>Peraturan tersuai untuk padanan
+#### <a name="custom-rules-for-matching"></a>Peraturan tersuai untuk pemadanan
 
-Ada kalanya anda perlu menentukan pengecualian kepada peraturan umum untuk TIDAK sepadan dengan rekod. Ini boleh berlaku apabila beberapa individu berkongsi maklumat yang mencukupi supaya sistem akan sepadan dengan mereka sebagai individu tunggal. Sebagai contoh, kembar dengan nama akhir yang sama, tinggal di bandar yang sama, dan berkongsi tarikh lahir.
+Ada kalanya anda perlu menentukan pengecualian kepada peraturan umum untuk TIDAK sepadan dengan rekod. Ini boleh berlaku apabila berbilang individu berkongsi maklumat yang mencukupi supaya sistem akan sepadan dengan mereka sebagai individu tunggal. Sebagai contoh, kembar dengan nama akhir yang sama, tinggal di bandar yang sama, dan berkongsi tarikh lahir.
 
 Pengecualian memastikan bahawa penyatuan data yang salah dapat ditangani dalam peraturan penyatuan. Anda boleh menambah berbilang pengecualian pada peraturan.
 
 Untuk maklumat lanjut, lihat [Menambah pengecualian pada peraturan](match-entities.md#add-exceptions-to-a-rule).
 
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Menyediakan dasar penyelesaian konflik tambahan dan mendayakan perlompok atribut
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Sediakan dasar penyelesaian konflik tambahan dan dayakan pengelompokan atribut
 
-Ciri ini membolehkan anda melayan sekumpulan medan sebagai satu unit. Contohnya, apabila rekod kami mengandungi medan Alamat1, Address2, Bandar, Negeri dan Zip. Kami mungkin tidak mahu bergabung dalam Alamat2 rekod yang berbeza, memikirkan ia akan menjadikan data kami lebih lengkap.
+Ciri ini membolehkan anda menganggap sekumpulan medan sebagai satu unit. Contohnya, apabila jika rekod kami mengandungi medan Alamat1, Alamat2, Bandar, Negeri dan Zip. Kami mungkin tidak mahu bergabung dalam Rekod yang berbeza Alamat2, memikirkan ia akan menjadikan data kami lebih lengkap.
 
-Anda kini boleh menggabungkan sekumpulan medan yang berkaitan dan menggunakan dasar cantum tunggal pada kumpulan. 
+Anda kini boleh menggabungkan sekumpulan medan yang berkaitan dan menggunakan dasar gabungan tunggal pada kumpulan. 
 
 Untuk maklumat lanjut, lihat [Menggabungkan sekumpulan medan](merge-entities.md#combine-a-group-of-fields).
 
 
 ## <a name="november-2021-updates"></a>Kemas kini November 2021
 
-Kemas kini pada bulan November 2021 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+Kemas kini pada November 2021 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
 
-### <a name="segment-membership-now-available-in-dataverse"></a>Segmen keahlian yang kini boleh didapati di Dataverse
+### <a name="segment-membership-now-available-in-dataverse"></a>Keahlian segmen kini tersedia dalam Dataverse
 
-Maklumat keahlian segmen untuk profil pelanggan kini boleh didapati Dataverse bersama-sama dengan profil pelanggan dan pandangan. Aplikasi tindakan Dynamics 365 dan aplikasi dipacu model boleh menggunakan data ini mencari butiran keahlian segmen untuk pelanggan tertentu.
+Maklumat keahlian segmen untuk profil pelanggan kini tersedia Dataverse bersama dengan profil dan pandangan pelanggan. Aplikasi tindakan Dynamics 365 dan aplikasi berpandukan model boleh menggunakan data ini mencari butiran keahlian segmen untuk pelanggan tertentu.
 
 ### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktiviti menyokong butiran peringkat hubungan untuk akaun perniagaan
 
@@ -95,37 +149,37 @@ Anda kini boleh mengkonfigurasi, memaparkan dan menapis aktiviti untuk kenalan p
 
 ## <a name="october-2021-updates"></a>Kemas kini Oktober 2021
 
-Kemas kini pada bulan Oktober 2021 termasuk ciri baru, peningkatan prestasi dan pembetulan pepijat.
+Kemas kini pada Oktober 2021 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
 
-### <a name="b-to-b"></a>B-ke-B
+### <a name="b-to-b"></a>B-to-B
 
-Mulai Oktober 2021, anda boleh bekerja dengan akaun perniagaan dan kenalan berkaitan mereka dalam Wawasan Pelanggan. Sebelum ini, aplikasi ini kebanyakannya disesuaikan dengan pengguna individu. Beberapa kawasan ciri telah dikemas kini untuk menyokong senario B-ke-B di atas jenis persekitaran baru. Untuk gambaran keseluruhan tentang ciri B-ke-B yang disokong, lihat [Bekerja dengan akaun perniagaan dalam wawasan](work-with-business-accounts.md) khalayak.
+Bermula pada Oktober 2021, anda boleh bekerja dengan akaun perniagaan dan kenalan berkaitan mereka dalam Wawasan Pelanggan. Sebelum ini, aplikasi ini kebanyakannya disesuaikan dengan pengguna individu. Beberapa kawasan ciri telah dikemas kini untuk menyokong senario B-ke-B di atas jenis persekitaran baharu. Untuk gambaran keseluruhan tentang ciri B-ke-B yang disokong, lihat [Bekerja dengan akaun perniagaan dalam cerapan khalayak](work-with-business-accounts.md).
 
 Bahagian berikut menyerlahkan beberapa bidang utama yang disesuaikan untuk menyokong akaun perniagaan dan pengguna individu.
 
 #### <a name="export-segments-based-on-business-accounts"></a>Eksport segmen berdasarkan akaun perniagaan
 
-Semua eksport segmen dalam cerapan khalayak tersedia dalam konteks akaun perniagaan. Kebanyakan eksport segmen memerlukan konfigurasi tambahan dan [maklumat hubungan yang diunjurkan](segment-builder.md#create-a-new-segment) dalam segmen pendasar yang sah untuk akaun perniagaan. Untuk maklumat lanjut, lihat [Eksport segmen](export-destinations.md#export-segments).
+Semua eksport segmen dalam cerapan khalayak tersedia dalam konteks akaun perniagaan. Kebanyakan eksport segmen memerlukan konfigurasi tambahan dan [maklumat hubungan yang diunjurkan](segment-builder.md#create-a-new-segment) dalam segmen asas yang sah untuk akaun perniagaan. Untuk maklumat lanjut, lihat [Mengeksport segmen](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Gunakan eksport Iklan LinkedIn dengan akaun perniagaan
 
-Eksport Iklan LinkedIn kini tersedia untuk penyasaran kenalan dan syarikat dalam konteks akaun perniagaan. Apabila memilih penyasaran syarikat sebagai fokus utama eksport LinkedIn anda, anda boleh mengeksport segmen yang dibina pada akaun perniagaan tanpa perlu memproyeksikan maklumat hubungan. Untuk mendapatkan maklumat lanjut, pergi ke dokumen tentang [eksport](export-linkedin-ads.md) Iklan LinkedIn dan perbezaan antara [penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kenalan dan [penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) syarikat. 
+Eksport Iklan LinkedIn kini tersedia untuk kenalan dan penyasaran syarikat dalam konteks akaun perniagaan. Apabila memilih penyasaran syarikat sebagai fokus utama eksport LinkedIn anda, anda boleh mengeksport segmen yang dibina pada akaun perniagaan tanpa perlu memproyeksikan maklumat hubungan. Untuk maklumat lanjut, pergi ke dokumen tentang [eksport Iklan LinkedIn dan perbezaan antara penyasaran](export-linkedin-ads.md)[kenalan dan penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting)[syarikat](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Buat langkah berdasarkan akaun perniagaan dan hierarkinya
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Buat langkah berdasarkan akaun perniagaan dan hierarki mereka
 
-Pembina ukuran membolehkan anda membuat langkah-langkah di sekitar akaun perniagaan dan menggunakan maklumat hierarki secara pilihan. Maklumat hierarki digunakan untuk melancarkan pengiraan ukuran merentas akaun dan semua sub akaun yang berkaitan. Sebagai contoh, anda boleh membuat ukuran seperti jumlah pendapatan bagi setiap kumpulan akaun perniagaan yang dikenal pasti oleh hierarki mereka. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
+Pembina ukuran membolehkan anda membuat langkah-langkah di sekitar akaun perniagaan dan menggunakan maklumat hierarki secara pilihan. Maklumat hierarki digunakan untuk menggulung pengiraan ukuran merentas akaun dan semua sub akaun yang berkaitan. Sebagai contoh, anda boleh membuat langkah-langkah seperti jumlah pendapatan untuk setiap kumpulan akaun perniagaan yang dikenal pasti oleh hierarki mereka. Untuk maklumat lanjut, lihat [Langkah mentakrif dan mengurus](measures.md).
 
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Cipta segmen berdasarkan akaun perniagaan dan hierarkinya
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Buat segmen berdasarkan akaun perniagaan dan hierarkinya
 
-Pembina segmen membolehkan anda membuat segmen akaun perniagaan yang secara pilihan memasukkan maklumat hubungan untuk setiap akaun dalam segmen. Jika anda menyediakan hierarki akaun, anda boleh menggunakan maklumat hierarki akaun dalam penciptaan segmen. Untuk maklumat lanjut, lihat [Mencipta segmen](segment-builder.md#create-a-new-segment) baharu.
+Pembina segmen membolehkan anda membuat segmen akaun perniagaan yang secara pilihan memasukkan maklumat hubungan untuk setiap akaun dalam segmen. Jika anda telah menyediakan hierarki akaun, anda boleh menggunakan maklumat hierarki akaun dalam penciptaan segmen. Untuk maklumat lanjut, lihat [Mencipta segmen](segment-builder.md#create-a-new-segment) baru.
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Kekalkan akaun perniagaan anda dengan wawasan yang mendalam kepada kecenderungan churn mereka
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Kekalkan akaun perniagaan anda dengan cerapan yang mendalam tentang kecenderungan churn mereka
 
-Model ramalan pelanggan kini menyokong akaun perniagaan juga. Anda boleh menilai risiko churn bukan hanya untuk akaun tetapi untuk gabungan akaun dan kategori produk atau perkhidmatan yang mereka beli daripada anda. Penambahan ini membantu anda memahami jika akaun lebih cenderung untuk berhenti membeli daripada anda secara umum atau hanya untuk kategori barangan atau perkhidmatan tertentu. Untuk membantu anda menggunakan model AI ini, ia juga menyenaraikan sebab mengapa akaun mungkin akan berkembang. Untuk maklumat lanjut, lihat [Ramalan churn transaksi (pratonton)](predict-transactional-churn.md).
+Model ramalan churn pelanggan kini menyokong akaun perniagaan juga. Anda boleh menilai risiko churn bukan hanya untuk akaun tetapi untuk gabungan akaun dan kategori produk atau perkhidmatan yang mereka beli daripada anda. Penambahan ini membantu anda memahami sama ada akaun lebih cenderung untuk berhenti membeli daripada anda secara umum atau hanya untuk kategori barangan atau perkhidmatan tertentu. Untuk membantu anda menggunakan model AI ini, ia juga menyenaraikan sebab mengapa akaun mungkin berkembang. Untuk maklumat lanjut, lihat [Transaksi churn ramalan (pratonton)](predict-transactional-churn.md).
 
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Lihat kenalan akaun perniagaan dalam pandangan Pelanggan
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Melihat kenalan akaun perniagaan dalam pandangan Pelanggan
 
-Jika akaun perniagaan dipetakan ke akaun yang berkaitan, aplikasi Wawasan Pelanggan menunjukkan kenalan berkaitan ini sebagai sebahagian daripada paparan butiran pelanggan. Untuk maklumat lanjut, lihat [Profil pelanggan](customer-profiles.md).
+Jika akaun perniagaan dipetakan kepada akaun yang berkaitan, aplikasi Wawasan Pelanggan menunjukkan kenalan berkaitan ini sebagai sebahagian daripada paparan butiran pelanggan. Untuk maklumat lanjut, lihat [Profil pelanggan](customer-profiles.md).
 
 
 ## <a name="september-2021-updates"></a>Kemas kini September 2021

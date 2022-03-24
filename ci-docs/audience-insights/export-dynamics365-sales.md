@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355028"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455873"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Gunakan segmen dalam Dynamics 365 Sales (pratonton)
 
@@ -26,12 +26,12 @@ Gunakan data pelanggan anda untuk mencipta senarai pemasaran, menyusuli aliran k
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Eksport ke Dynamics 365 Sales terhad kepada 100'000 ahli bagi setiap segmen.
-- Segmen eksport ke Dynamics 365 Sales boleh mengambil masa sehingga 3 jam untuk diselesaikan. 
+- Eksport ke Dynamics 365 Sales terhad kepada 100'000 ahli setiap segmen.
+- Eksport segmen ke Dynamics 365 Sales boleh mengambil masa sehingga 3 jam untuk diselesaikan. 
 
 ## <a name="prerequisite-for-connection"></a>Prasyarat untuk sambungan
 
-1. Rekod kenalan mesti wujud dalam Dynamics 365 Sales sebelum anda boleh mengeksport segmen daripada Customer Insights ke Jualan. Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Sales menggunakan Microsoft Dataverse](connect-power-query.md).
+1. Rekod kenalan mesti wujud dalam Dynamics 365 Sales sebelum anda boleh mengeksport segmen daripada Customer Insights ke Jualan. Baca lebih lanjut tentang cara menelan kenalan dari [Dynamics 365 Sales menggunakan Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Mengeksport segmen daripada wawasan khalayak kepada Jualan tidak akan mencipta rekod kenalan baharu dalam tika Jualan. Rekod kenalan daripada Jualan mesti diinges dalam wawasan khalayak dan digunakan sebagai sumber data. Mereka juga perlu dimasukkan dalam entiti Pelanggan disatukan untuk memetakan ID pelanggan kepada ID kenalan sebelum segmen boleh dieksport.

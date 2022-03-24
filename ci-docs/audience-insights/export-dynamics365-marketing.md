@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353922"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455843"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Gunakan segmen dalam Dynamics 365 Marketing (pratonton)
 
@@ -28,7 +28,7 @@ Jika anda menggunakan keupayaan baharu Dynamics 365 Marketing untuk orkestrasi p
 
 ## <a name="prerequisite-for-a-connection"></a>Prasyarat untuk sambungan
 
-- Rekod kenalan mesti wujud dalam Dynamics 365 Marketing sebelum anda boleh mengeksport segmen daripada Customer Insights ke Pemasaran. Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Marketing menggunakan Microsoft Dataverse](connect-power-query.md).
+- Rekod kenalan mesti wujud dalam Dynamics 365 Marketing sebelum anda boleh mengeksport segmen daripada Customer Insights ke Pemasaran. Baca lebih lanjut tentang cara untuk menginges kenalan dalam [Dynamics 365 Marketing menggunakan Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Mengeksport segmen daripada wawasan khalayak kepada Pemasaran tidak akan mencipta rekod kenalan baharu dalam tika Pemasaran. Rekod kenalan daripada Pemasaran mesti diinges dalam wawasan khalayak dan digunakan sebagai sumber data. Mereka juga perlu dimasukkan dalam entiti Pelanggan disatukan untuk memetakan ID pelanggan kepada ID kenalan sebelum segmen boleh dieksport.
@@ -47,7 +47,7 @@ Jika anda menggunakan keupayaan baharu Dynamics 365 Marketing untuk orkestrasi p
 
 1. Dalam bahagian **Akaun pentadbir pelayan**, pilih **Daftar masuk** dan pilih akaun Dynamics 365 Marketing.
 
-1. Petakan medan ID Kenalan dalam entiti Pelanggan ke ID Kenalan Dynamics 365.
+1. Petakan medan ID Kenalan dalam entiti Pelanggan kepada ID Kenalan Dynamics 365.
 
 1. Pilih **Simpan** untuk melengkapkan sambungan. 
 

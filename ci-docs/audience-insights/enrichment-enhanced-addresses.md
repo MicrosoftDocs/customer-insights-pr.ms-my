@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353647"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376333"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Pengayaan profil pelanggan dengan alamat yang dipertingkatkan
 
 Alamat dalam data anda boleh tidak berstruktur, tidak lengkap atau tidak betul. Gunakan model Microsoft untuk menormalkan dan memperkayakan alamat anda ke dalam [Format Model Data Tersuai](/common-data-model/schema/core/applicationcommon/address) untuk ketepatan dan wawasan yang lebih baik.
+
+Anda juga [boleh memperkayakan alamat pada sumber](data-sources-enrichment.md) data untuk meningkatkan ketepatan padanan dalam proses penyatuan data. 
 
 ## <a name="how-we-enhance-addresses"></a>Cara kami mempertingkatkan alamat
 
@@ -105,15 +107,15 @@ Untuk memulakan proses pengayaan, pilih **Jalankan** daripada bar perintah. Anda
 
 Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang baru diperkaya di bawah **Pengayaan saya**. Di samping itu, anda akan menemui masa kemas kini yang terakhir dan bilangan profil yang diperkaya.
 
-Anda boleh melihat sampel data yang diperkaya dalam **jubin pratonton** pelanggan diperkaya. Pilih **Lihat lebih lanjut** dan pilih **tab Data** untuk mengakses pandangan terperinci setiap profil yang diperkaya.
+Anda boleh melihat sampel data yang diperkaya dalam **jubin pratonton** pelanggan Enriched. Pilih **Lihat lebih** lanjut **dan pilih tab Data** untuk mencapai pandangan terperinci bagi setiap profil yang diperkaya.
 
-### <a name="overview-card"></a>Kad gambaran keseluruhan
+### <a name="overview-card"></a>Kad Gambaran Keseluruhan
 
 Kad gambaran keseluruhan menunjukkan butiran mengenai liputan pengayaan. 
 
 * **Alamat diproses dan diubah**: Bilangan profil pelanggan dengan alamat yang berjaya diperkaya.
 
-* **Alamat diproses dan tidak berubah**: Bilangan profil pelanggan dengan alamat yang diiktiraf tetapi tidak diubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
+* **Alamat diproses dan tidak diubah**: Bilangan profil pelanggan dengan alamat yang dikenali tetapi tidak diubah. Ia biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
 
 * **Alamat tidak diproses dan tidak diubah**: Bilangan profil dengan alamat yang tidak dikenali. Biasanya untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
 

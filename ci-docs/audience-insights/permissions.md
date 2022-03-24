@@ -1,7 +1,7 @@
 ---
 title: Uruskan keizinan pengguna
 description: Ketahui mengenai keizinan dan peranan pengguna.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355948"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376749"
 ---
 # <a name="user-permissions"></a>Keizinan pengguna
 
@@ -48,7 +48,7 @@ Terdapat tiga jenis peranan:
 - Urus konfigurasi dan perkayakan profil pelanggan daripada halaman **Pengayaan** (untuk pengayaan pihak pertama sahaja).
 - Urus dan cipta eksport berdasarkan sambungan yang dikongsi dengan penyumbang. [Ketahui lebih lanjut tentang cara pentadbir membenarkan penyumbang menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Pentadbir
+## <a name="admin"></a>Pentadbiran
 
 - Semua keizinan tersedia untuk Penyumbang.
 - Tetapan ubah pada halaman **Sistem**, termasuk bahasa bekerja dan jadual segar semula untuk proses sistem anda.
@@ -60,6 +60,12 @@ Terdapat tiga jenis peranan:
 - Pasang dan guna **Tambahan Kad Pelanggan**.
 - Tambah dan gunakan **Power Apps penyambung**.
 - Mendayakan penggunaan [Customer Insights API](apis.md).
+- [Memperuntukkan pemilikan](manage-environments.md#change-the-owner-of-an-environment) persekitaran kepada pentadbir lain.
+
+## <a name="admin-owner"></a>Pentadbir (pemilik)
+
+- Semua keizinan tersedia untuk Pentadbir.
+- [Tetapkan semula dan padamkan](manage-environments.md#reset-an-existing-environment) persekitaran.
 
 ## <a name="assign-roles-and-permissions"></a>Tugaskan peranan dan keizinan
 

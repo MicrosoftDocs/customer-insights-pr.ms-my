@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372638"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376933"
 ---
 # <a name="match-entities"></a>Padankan entiti
 
@@ -31,7 +31,7 @@ Halaman padanan terdiri daripada tiga bahagian:
 
 ## <a name="specify-the-match-order"></a>Tentukan pesanan padanan
 
-Setiap padanan menyatukan dua atau lebih entiti ke dalam satu entiti yang disatukan. Pada masa yang sama, ia menyimpan rekod pelanggan yang unik. Perintah padanan menunjukkan tertib di mana sistem cuba memadankan rekod.
+Setiap padanan menyatukan dua atau lebih entiti ke dalam satu entiti yang disatukan. Pada masa yang sama, ia menyimpan rekod pelanggan yang unik. Perintah padanan menunjukkan urutan di mana sistem cuba memadankan rekod.
 
 > [!IMPORTANT]
 > Entiti yang anda pilih sebagai entiti utama anda akan bertindak sebagai asas bagi set data profil anda yang disatukan. Entiti tambahan yang dipilih semasa peringkat pemadanan akan ditambah ke entiti ini. Ini tidak bermakna entiti bersatu akan menyertakan *semua* data yang disertakan dalam entiti ini.
@@ -42,11 +42,11 @@ Setiap padanan menyatukan dua atau lebih entiti ke dalam satu entiti yang disatu
 > - Pilih entiti yang mempunyai beberapa atribut yang sama dengan entiti lain (contohnya, nama, nombor telefon atau alamat e-mel) sebagai entiti utama.
 
 1. Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Tetapkan pesanan** untuk memulakan fasa perlawanan.
-1. Pilih **Tertib entiti**. Sebagai contoh, pilih **eCommerce:eCommerceContacts** sebagai entiti utama dan **LoyaltyScheme:loyCustomers** sebagai entiti kedua. 
+1. Pilih **Pesanan entiti**. Sebagai contoh, pilih **eCommerce:eCommerceContacts** sebagai entiti utama dan **LoyaltyScheme:loyCustomers** sebagai entiti kedua. 
 1. Untuk mempunyai setiap rekod dalam entiti sebagai pelanggan unik dan dipadankan dengan setiap entiti berikut, pilih **Sertakan semua**.
 1. Pilih **Selesai**. 
 
-Selepas menentukan tertib padanan, pasangan padanan yang ditakrifkan dipaparkan dalam bahagian Butiran rekod padanan pada **DataUnifyMatch** **·** > **.** > **·** Metrik utama kosong sehingga proses padanan selesai.
+Selepas menentukan tertib padanan, pasangan padanan yang ditakrifkan dipaparkan dalam bahagian Butiran rekod yang sepadan pada **DataUnifyMatch** **·** > **.** > **·** Metrik utama kosong sehingga proses padanan selesai.
 
 :::image type="content" source="media/match-page.png" alt-text="Petikan skrin halaman Padanan dalam kawasan Satukan proses penyatuan data.":::
   
@@ -60,7 +60,7 @@ Amaran **Peraturan keperluan** bersebelahan dengan nama entiti mencadangkan baha
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Petikan skrin bahagian Butiran rekod yang dipadankan dengan kawalan untuk menambah peraturan yang diserlahkan.":::
 
-1. Pilih **Tambah peraturan** di bawah entiti dalam **bahagian Butiran rekod yang dipadankan** untuk mentakrifkan peraturan padanan.
+1. Pilih **Tambah peraturan** di bawah entiti dalam **seksyen Butiran** rekod yang dipadankan untuk mentakrifkan peraturan padanan.
 
 1. Dalam anak tetingkap **Cipta peraturan**, konfigurasikan syarat untuk peraturan.
 
@@ -74,12 +74,12 @@ Amaran **Peraturan keperluan** bersebelahan dengan nama entiti mencadangkan baha
      - Angka: Tukar sistem angka lain, seperti angka Rom, kepada angka Arab. *VIII* menjadi *8*.
      - Simbol: Alih keluar semua simbol dan aksara khas. *Head&Shoulder* menjadi *HeadShoulder*.
      - Teks kepada huruf kecil: Tukar semua aksara kepada huruf kecil. *SEMUA HURUF BESAR dan Huruf Besar Kecil* menjadi *semua huruf besar dan huruf besar kecil*.
-     - Taip (Telefon, Nama, Alamat, Organisasi): Standardkan nama, tajuk, nombor telefon, alamat, dll. 
+     - Taip (Telefon, Nama, Alamat, Organisasi): Menyeragamkan nama, tajuk, nombor telefon, alamat, dll. 
      - Unikod kepada ASCII: Tukar notasi unikod kepada aksara ASCII. */u00B2* menjadi *2*.
      - Ruang kosong: Alih keluar semua ruang. *Hello World* menjadi *HelloWorld*.
 
    - **Ketepatan**: Tetapkan tahap ketepatan untuk digunakan bagi syarat ini. 
-     - **Asas**: Pilih daripada *Rendah*, *Sederhana*, *Tinggi* dan *Tepat*. Pilih **Tepat** untuk hanya sepadan dengan rekod yang sepadan dengan 100 peratus. Pilih satu daripada tahap lain untuk memadankan rekod yang tidak 100 peratus sama.
+     - **Asas**: Pilih daripada *Rendah*, *Sederhana*, *Tinggi* dan *Tepat*. Pilih **Tepat** untuk hanya padankan rekod yang sepadan dengan 100 peratus. Pilih satu daripada tahap lain untuk memadankan rekod yang tidak 100 peratus sama.
      - **Tersuai**: Tetapkan peratusan yang perlu dipadankan oleh rekod. Sistem hanya akan sepadan dengan rekod yang melepasi ambang ini.
 
 1. Berikan **Nama** untuk peraturan.
@@ -127,7 +127,7 @@ Anda boleh menyusun semula entiti untuk peraturan padanan untuk mengubah tertib 
 
 Selain daripada [peraturan padanan silang entiti](#define-rules-for-match-pairs), anda juga boleh menentukan peraturan penyahduplikasi. *Penyahduplikasi* ialah satu proses lain semasa memadankan rekod. Ia mengenal pasti rekod duplikasi dan menggabungkan rekod tersebut ke dalam satu rekod. Rekod sumber dikaitkan dengan rekod yang digabungkan dengan ID alternatif.
 
-Rekod Deduplicated digunakan dalam proses pemadanan merentas entiti. Deduplication berlaku pada entiti individu dan boleh dikonfigurasi untuk setiap entiti yang digunakan dalam pasangan padanan.
+Rekod deduplicated digunakan dalam proses pemadanan merentas entiti. Deduplication berlaku pada entiti individu dan boleh dikonfigurasikan untuk setiap entiti yang digunakan dalam pasangan padanan.
 
 Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan yang dikonfigurasikan, peraturan yang ditakrifkan sistem digunakan. Mereka menggabungkan semua rekod ke dalam satu rekod sebelum menghantar data entiti kepada padanan silang entiti untuk prestasi yang dipertingkatkan.
 
@@ -135,7 +135,7 @@ Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan y
 
 1. Pergi ke **Data** > **Satukan** > **Padanan**.
 
-1. Dalam seksyen **Butiran** rekod Deduplicated, pilih **Setkan entiti**. Sekiranya peraturan penyahduplikasi telah dicipta, pilih **Edit**.
+1. **Dalam seksyen Butiran** rekod Deduplicated, pilih **Setkan entiti**. Sekiranya peraturan penyahduplikasi telah dicipta, pilih **Edit**.
 
 1. Dalam anak tetingkap **Keutamaan gabungan**, pilih entiti yang anda mahu jalankan penyahduplikasi.
 
@@ -144,12 +144,12 @@ Menentukan peraturan nyahpenduaan adalah tidak wajib. Jika tidak ada peraturan y
       - **Paling terkini**: Mengenal pasti rekod pemenang berdasarkan paling terkini. Memerlukan medan tarikh atau angka untuk mentakrifkan yang terkini.
       - **Kurang terkini**: Mengenal pasti rekod pemenang berdasarkan kurang terkini. Memerlukan medan tarikh atau angka untuk mentakrifkan yang terkini.
 
-   1. Secara pilihan, untuk mentakrifkan peraturan deduplication pada atribut individu entiti, pilih **Lanjutan**. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat yang paling lengkap daripada rekod yang berbeza. Kembangkan entiti untuk melihat semua atributnya dan tentukan pilihan untuk digunakan bagi atribut individu. Jika anda memilih pilihan berasaskan recency, anda juga perlu menentukan medan tarikh/masa yang mentakrifkan recency. 
+   1. Secara pilihan, untuk mentakrifkan peraturan deduplikasi pada atribut individu entiti, pilih **Lanjutan**. Sebagai contoh, anda boleh memilih untuk menyimpan e-mel terkini DAN alamat paling lengkap daripada rekod yang berbeza. Kembangkan entiti untuk melihat semua atributnya dan tentukan pilihan yang hendak digunakan untuk atribut individu. Jika anda memilih pilihan berasaskan recency, anda juga perlu menentukan medan tarikh/masa yang mentakrifkan recency. 
  
       > [!div class="mx-imgBorder"]
       > ![Langkah 1 peraturan nyahduplikasi.](media/match-selfconflation.png "Langkah 1 peraturan nyahpenduaan")
 
-   1. Pilih **Selesai** untuk menggunakan keutamaan cantuman anda untuk nyahduplication.
+   1. Pilih **Selesai** untuk menggunakan keutamaan cantum anda untuk penyahdendaban.
  
 1. Sebaik sahaja entiti dipilih dan keutamaan gabungan ditetapkan, pilih **Tambah peraturan** untuk mentakrifkan peraturan penyahduplikasi pada peringkat entiti.
    - **Pilih medan** menyenaraikan semua medan yang tersedia daripada entiti tersebut. Pilih medan yang anda mahu semak untuk duplikasi. Pilih medan yang mungkin unik untuk setiap pelanggan tunggal. Contohnya, alamat e-mel atau gabungan nama, bandar dan nombor telefon.
@@ -181,15 +181,17 @@ Entiti output penyahduplikasi mengandungi maklumat berikut:
 - Medan yang digunakan untuk mentakrifkan peraturan penyahduplikasi.
 - Medan Peraturan dan Skor untuk menunjukkan yang peraturan penyahduplikasi telah diguna pakai dan skor yang dikembalikan oleh algoritma sepadan.
  
-## <a name="include-enriched-entities-preview"></a>Sertakan entiti diperkaya (pratonton)
+## <a name="include-enriched-entities-preview"></a>Sertakan entiti yang diperkaya (Pratonton)
 
-Jika anda memperkayakan entiti pada tahap sumber data, pilihnya sebelum menjalankan proses padanan. Entiti yang diperkaya boleh meningkatkan hasil penyatuan anda. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data. 
+Jika anda memperkayakan entiti pada peringkat sumber data, pilihnya sebelum menjalankan proses padanan. Entiti yang diperkaya dapat meningkatkan hasil penyatuan anda. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data. 
 
-1. Pergi ke **DataUnifyMatch** > **·** > **dan** pilih **Gunakan entiti** diperkaya di bahagian atas halaman.
+Entiti yang diperkaya mengandungi medan sumber data asal dan medan yang diperkaya. Oleh itu, jika anda memilih untuk bekerja dengan entiti yang diperkaya, konfigurasi yang sedia ada tidak terjejas. Walau bagaimanapun, anda mungkin perlu mengemas kini peraturan padanan untuk menggunakan medan yang diperkaya.
 
-1. **Daripada anak tetingkap Gunakan entiti** diperkaya, pilih satu atau lebih entiti diperkaya.
+1. Pergi ke **DataUnifyMatch** > **·** > **dan** pilih **Gunakan entiti** yang diperkaya di bahagian atas halaman.
 
-1. Pilih **Selesai**. Di mana sahaja entiti sumber digunakan (seperti perintah padanan atau peraturan), ia ditukar secara automatik kepada entiti yang diperkaya.
+1. **Daripada anak tetingkap Gunakan entiti** yang diperkaya, pilih satu atau lebih entiti yang diperkaya.
+
+1. Pilih **Selesai**. Di mana sahaja entiti sumber digunakan (seperti perintah atau peraturan padanan), ia secara automatik ditukar kepada entiti yang diperkaya.
   
 ## <a name="run-the-match-process"></a>Jalankan proses padanan
 
@@ -245,7 +247,7 @@ Anda boleh mengkonfigurasikan semula dan menambah baik kebanyakan parameter pada
 
 ### <a name="add-exceptions-to-a-rule"></a>Menambah pengecualian pada peraturan
 
-Dalam kebanyakan kes, pemadanan entiti membawa kepada profil pengguna unik dengan data yang disatukan. Untuk menangani kes positif palsu dan negatif palsu secara dinamik, anda boleh menentukan pengecualian untuk peraturan padanan. Pengecualian digunakan selepas memproses peraturan padanan dan mengelakkan pemadanan semua rekod, yang memenuhi kriteria pengecualian.
+Dalam kebanyakan kes, pemadanan entiti membawa kepada profil pengguna unik dengan data yang disatukan. Untuk menangani kes-kes positif palsu dan negatif palsu secara dinamik, anda boleh menentukan pengecualian untuk peraturan padanan. Pengecualian digunakan selepas memproses peraturan perlawanan dan mengelakkan pemadanan semua rekod, yang memenuhi kriteria pengecualian.
 
 Sebagai contoh, jika peraturan padanan anda menggabungkan nama akhir, bandar dan tarikh lahir, sistem akan mengenal pasti kembar dengan nama akhir yang sama yang tinggal di bandar yang sama dengan profil yang sama. Anda boleh menentukan pengecualian yang tidak sepadan dengan profil jika nama pertama dalam entiti yang anda gabungkan tidak sama.
 
@@ -259,14 +261,14 @@ Sebagai contoh, jika peraturan padanan anda menggabungkan nama akhir, bandar dan
 
 ### <a name="specify-custom-match-conditions"></a>Tentukan syarat padanan tersuai
 
-Anda boleh menentukan syarat yang mengatasi logik padanan lalai. Terdapat empat pilihan yang tersedia: 
+Anda boleh menentukan syarat yang mengatasi logik padanan lalai. Terdapat empat pilihan yang ada: 
 
 |Pilihan  |Description |Contoh  |
 |---------|---------|---------|
-|Sentiasa padan     | Mentakrifkan nilai yang sentiasa dipadankan.         |  Selalu cocok dengan *Mike* dan *MikeR*.       |
+|Sentiasa padan     | Mentakrifkan nilai yang sentiasa dipadankan.         |  Sentiasa sepadan dengan *Mike* dan *MikeR*.       |
 |Tidak boleh padan     | Mentakrifkan nilai yang tidak pernah sepadan.        | Jangan pernah menandingi *John* dan *Jonathan*.        |
-|Pintasan tersuai     | Mentakrifkan nilai yang harus sentiasa diabaikan oleh sistem dalam fasa padanan. |  Abaikan nilai *11111* dan *Tidak Diketahui* semasa padanan.        |
-|Pemetaan alias    | Mentakrifkan nilai yang harus dipertimbangkan oleh sistem sebagai nilai yang sama.         | Anggaplah *Joe* sama dengan *Yusuf*.        |
+|Pintasan tersuai     | Mentakrifkan nilai yang harus selalu diabaikan oleh sistem dalam fasa padanan. |  Abaikan nilai *11111* dan *Tidak Diketahui* semasa perlawanan.        |
+|Pemetaan alias    | Menentukan nilai yang harus dipertimbangkan oleh sistem sebagai nilai yang sama.         | Anggap *Joe* sama dengan *Yusuf*.        |
 
 1. Pergi ke **Data** > **Satukan** > **Padanan** dan pilih **Padanan tersuai** dalam bahagian **Butiran rekod yang dipadankan**.
 
@@ -274,9 +276,9 @@ Anda boleh menentukan syarat yang mengatasi logik padanan lalai. Terdapat empat 
 
 1. **Dalam anak tetingkap Tersuai**, pergi ke **tab Rekod**.
 
-1. Pilih opsyen padanan tersuai daripada juntai **bawah jenis** Tersuai dan pilih **Muat turun templat**. Anda memerlukan templat berasingan untuk setiap pilihan padanan.
+1. Pilih pilihan padanan tersuai daripada juntai **bawah jenis** tersuai dan pilih **Muat turun templat**. Anda memerlukan templat berasingan untuk setiap pilihan perlawanan.
 
-1. Buka fail templat yang dimuat turun dan isikan butiran. Templat mengandungi medan yang menentukan entiti dan entiti nilai kekunci utama yang akan digunakan dalam padanan tersuai. Contohnya, jika anda mahukan kunci utama *12345* daripada entiti *Jualan* untuk sentiasa sepadan dengan kunci utama *34567* daripada entiti *Kenalan*, isi templat:
+1. Buka fail templat yang dimuat turun dan isikan butirannya. Templat mengandungi medan yang menentukan entiti dan entiti nilai kekunci utama yang akan digunakan dalam padanan tersuai. Contohnya, jika anda mahukan kunci utama *12345* daripada entiti *Jualan* untuk sentiasa sepadan dengan kunci utama *34567* daripada entiti *Kenalan*, isi templat:
     - Entity1: Jualan
     - Entity1Key: 12345
     - Entity2: Kenalan
@@ -290,14 +292,14 @@ Anda boleh menentukan syarat yang mengatasi logik padanan lalai. Terdapat empat 
 
 1. Pergi ke **Data** > **Sumber data** dan inges fail templat sebagai entiti baharu.
 
-1. Selepas memuat naik fail dan entiti tersedia, pilih pilihan **Padanan tersuai** semula. Anda akan dapat melihat pilihan untuk menentukan entiti yang anda hendak masukkan. Pilih entiti yang diperlukan daripada menu juntai bawah dan pilih **Selesai**.
+1. Selepas memuat naik fail dan entiti tersedia, pilih pilihan **Padanan tersuai** semula. Anda akan dapat melihat pilihan untuk menentukan entiti yang anda hendak masukkan. Pilih entiti yang diperlukan dari menu lungsur dan pilih **Selesai**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Petikan skrin dialog untuk memilih penggantian bagi senario padanan tersuai.":::
 
-1. Menggunakan padanan tersuai bergantung pada pilihan padanan yang anda mahu gunakan. 
+1. Menggunakan padanan tersuai bergantung pada opsyen padanan yang anda mahu gunakan. 
 
-   - Untuk **Sentiasa padan** atau **Jangan sekali-kali padan**, teruskan ke langkah seterusnya.
-   - Untuk **pintasan** Tersuai atau **pemetaan** Alias, pilih **Edit** pada peraturan padanan sedia ada atau cipta peraturan baharu. Dalam juntai bawah Normalisasi, pilih **opsyen pemetaan** pintasan **tersuai atau** Alias dan pilih **Selesai**.
+   - Untuk **Sentiasa padankan** atau **Jangan sekali-kali sepadan**, teruskan ke langkah seterusnya.
+   - Untuk **pintasan** tersuai atau **pemetaan** Alias, pilih **Edit** pada peraturan padanan sedia ada atau cipta peraturan baru. Dalam juntai bawah Normalisasi, pilih **opsyen Pintasan** tersuai atau **Pemetaan** Alias dan pilih **Selesai**.
 
 1. Pilih **Simpan** pada halaman **Padanan** untuk menggunakan konfigurasi padanan tersuai.
 
@@ -305,13 +307,13 @@ Anda boleh menentukan syarat yang mengatasi logik padanan lalai. Terdapat empat 
 
 #### <a name="known-issues"></a>Isu yang diketahui
 
-- Pengur conflation diri tidak menunjukkan data yang dinormalisasi dalam entiti deduplication. Walau bagaimanapun, ia menggunakan normalisasi secara dalaman semasa deduplication. Ia adalah dengan reka bentuk untuk semua normalisasi. 
-- Jika seting jenis semantik dialih keluar dalam **fasa Peta** apabila peraturan padanan menggunakan pemetaan Alias atau pintasan Tersuai, penormalan tidak akan digunakan. Ia hanya berlaku jika anda mengosongkan jenis semantik selepas mengkonfigurasi normalisasi dalam peraturan padanan kerana jenis semantik tidak diketahui.
+- Konflik diri tidak menunjukkan data yang dinormalisasi dalam entiti deduplikasi. Walau bagaimanapun, ia menggunakan normalisasi secara dalaman semasa deduplication. Ia adalah dengan reka bentuk untuk semua normalisasi. 
+- Jika seting jenis semantik dialih keluar dalam **fasa Peta** apabila peraturan padanan menggunakan pemetaan Alias atau pintasan Tersuai, penormalan tidak akan digunakan. Ia hanya berlaku jika anda mengosongkan jenis semantik selepas mengkonfigurasi normalisasi dalam peraturan perlawanan kerana jenis semantik tidak akan diketahui.
 
 
 ## <a name="next-step"></a>Langkah seterusnya
 
-Selepas melengkapkan proses padanan untuk sekurang-kurangnya satu pasangan padanan, teruskan ke [**langkah Gabungkan**](merge-entities.md).
+Selepas melengkapkan proses perlawanan untuk sekurang-kurangnya satu pasangan perlawanan, teruskan ke [**langkah Cantum**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

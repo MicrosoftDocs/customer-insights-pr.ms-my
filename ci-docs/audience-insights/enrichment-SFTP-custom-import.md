@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229649"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376611"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
 
@@ -25,7 +25,7 @@ Untuk mengkonfigurasi import tersuai SFTP, prasyarat berikut mesti dipenuhi:
 
 - Anda mempunyai nama fail dan lokasi (laluan) fail yang akan diimport pada hos SFTP.
 - Terdapat fail *model.json* yang menentukan [skema Common Data Model](/common-data-model/) untuk data yang akan diimport. Fail ini mestilah dalam direktori yang sama dengan fail untuk diimport.
-- Sambungan SFTP telah dikonfigurasikan oleh pentadbir *atau* anda mempunyai keizinan [pentadbir](permissions.md#administrator). Anda memerlukan kelayakan pengguna, URL dan nombor port untuk lokasi SFTP yang mahu diimport data.
+- Sambungan SFTP telah dikonfigurasikan oleh pentadbir *atau* anda mempunyai keizinan [pentadbir](permissions.md#admin). Anda memerlukan kelayakan pengguna, URL dan nombor port untuk lokasi SFTP yang mahu diimport data.
 
 
 ## <a name="configure-the-import"></a>Konfigurasikan import
