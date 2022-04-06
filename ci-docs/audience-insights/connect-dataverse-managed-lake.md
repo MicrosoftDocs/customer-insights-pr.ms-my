@@ -1,7 +1,7 @@
 ---
 title: Sambungkan kepada jadual dalam Microsoft Dataverse
 description: Import data daripada danau data terurus Microsoft Dataverse.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,25 +11,24 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354153"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464106"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Sambung ke data dalam data lake terurus Microsoft Dataverse
 
-
-
-Artikel ini menyediakan maklumat tentang bagaimana Dataverse pengguna boleh menyambung dengan cepat ke entiti analisis di tasik terurus Microsoft Dataverse. 
+Artikel ini memberikan maklumat tentang bagaimana Dataverse pengguna dapat dengan cepat menyambung ke entiti analisis di tasik yang Microsoft Dataverse diuruskan. 
 
 > [!NOTE]
-> Anda mesti menjadi pentadbir organisasi Dataverse untuk meneruskan dan melihat senarai entiti yang tersedia dalam tasik terurus.
+> Anda mesti menjadi pentadbir organisasi Dataverse untuk meneruskan dan melihat senarai entiti yang terdapat di tasik yang diuruskan.
 
 ## <a name="important-considerations"></a>Pertimbangan penting
 
-Data disimpan dalam perkhidmatan dalam talian seperti Azure Data Lake Storage, mungkin disimpan di lokasi lain daripada tempat data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
+1. Data disimpan dalam perkhidmatan dalam talian seperti Azure Data Lake Storage, mungkin disimpan di lokasi lain daripada tempat data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
+2. Hanya Dataverse entiti dengan [penjejakan](/power-platform/admin/enable-change-tracking-control-data-synchronization) perubahan yang didayakan boleh dilihat. Entiti ini boleh dieksport ke Dataverse tasik data terurus dan digunakan dalam Wawasan Pelanggan. Jadual luar kotak Dataverse telah mengubah penjejakan yang didayakan secara lalai. Anda perlu menghidupkan penjejakan perubahan untuk jadual tersuai. Untuk menyemak sama ada Dataverse jadual didayakan untuk penjejakan perubahan, pergi ke [Power Apps](https://make.powerapps.com) > **DataTables** > **·**. Cari jadual minat anda dan pilihnya. Pergi ke **SetingPilihanadvanced** > **dan** semak semula **seting Jejak perubahan**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Sambung ke lake diurus Dataverse
 

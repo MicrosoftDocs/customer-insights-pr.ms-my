@@ -1,7 +1,7 @@
 ---
 title: Segmen dalam wawasan khalayak
 description: Gambaran keseluruhan pada segmen dan cara mencipta dan mengurus segmen.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355994"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508577"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
@@ -68,7 +68,9 @@ Tindakan yang berikut tersedia apabila anda memilih segmen:
 
 ## <a name="refresh-segments"></a>Segar semula segmen
 
-Anda boleh memuatkan semula semua segmen serentak dengan memilih **Muat semula semua** pada halaman **Segmen** atau anda boleh memuatkan semula satu atau berbilang segmen apabila anda memilihnya dan memilih **Muat semula** daripada pilihan. Sebagai alternatif, anda boleh mengkonfigurasi segar semula pada **Pentadbir** > **Sistem** > **Jadual**.
+Anda boleh memuatkan semula semua segmen serentak dengan memilih **Muat semula semua** pada halaman **Segmen** atau anda boleh memuatkan semula satu atau berbilang segmen apabila anda memilihnya dan memilih **Muat semula** daripada pilihan. Sebagai alternatif, anda boleh mengkonfigurasi segar semula pada **Pentadbir** > **Sistem** > **Jadual**. Apabila segar semula berulang dikonfigurasikan, peraturan berikut digunakan:
+- Semua segmen dengan jenis **Dinamik** atau **Pengembangan** akan disegarkan semula secara automatik pada irama yang ditetapkan. Apabila segar semula selesai, **Status** menunjukkan jika terdapat sebarang isu dalam menyegar semula segmen. Yang **terakhir disegarkan** menunjukkan cap masa bagi segar semula terakhir yang berjaya. Jika ralat berlaku, pilih ralat untuk melihat butiran tentang apa yang berlaku.
+- Segmen dengan jenis **Statik** *tidak* akan disegar semula secara automatik. Terakhir **disegarkan** semula menunjukkan cap masa kali terakhir segmen statik dijalankan atau disegar semula secara manual.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

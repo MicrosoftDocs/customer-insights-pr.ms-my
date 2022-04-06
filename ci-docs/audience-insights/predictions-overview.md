@@ -1,19 +1,19 @@
 ---
 title: Gambaran keseluruhan tentang senario ramalan yang disokong
 description: Senario dan pilihan ramalan dilindungi oleh aplikasi Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228255"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487546"
 ---
 # <a name="predictions-overview"></a>Gambaran keseluruhan ramalan
 
@@ -36,6 +36,11 @@ Cara paling mudah untuk bermula dengan meramalkan data adalah model yang ditakri
 - [Pulangan transaksi](predict-transactional-churn.md): Meramalkan jika pelanggan tidak lagi membeli produk atau perkhidmatan anda dalam tempoh masa tertentu.
 
 ---
+
+> [!TIP]
+> Kami mengesyorkan agar anda sentiasa menyegarkan semula model di luar kotak dengan data yang dikemas kini untuk memastikan ia memaklumkan kes penggunaan perniagaan anda dengan tepat. Data disegar semula secara ad-hoc apabila sistem menelan sumber data baru atau dikemas kini. Walau bagaimanapun, model hanya akan rescore dalam kes ini dan terus menggunakan data latihan sedia ada.
+> 
+> Anda boleh mengkonfigurasi **jadual** Kemas Kini dengan menetapkan jadual latihan semula model dalam pengalaman konfigurasi. Model ini akan melatih semula dan menyusun semula jadual ini, yang boleh anda ubah pada bila-bila masa.
 
 
 ## <a name="azure-machine-learning-integration"></a>Penyepaduan Pembelajaran Mesin Azure

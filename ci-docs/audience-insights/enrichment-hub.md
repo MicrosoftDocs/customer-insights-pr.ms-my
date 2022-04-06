@@ -1,7 +1,7 @@
 ---
 title: Perkayakan profil pelanggan disatukan
 description: Gunakan keupayaan untuk memperkayakan data pelanggan anda.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372730"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491970"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -48,11 +48,11 @@ Pada tab **Terokai**, anda akan mencari semua pilihan pengayaan yang disokong.
 
 - [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Data](enrichment-enhanced-company-data.md) syarikat yang dipertingkatkan yang disediakan oleh Microsoft
+- [Data syarikat dipertingkatkan yang](enrichment-enhanced-company-data.md) disediakan oleh Microsoft
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
 - [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
-- [Data penglibatan akaun](enrichment-office.md) yang disediakan oleh Microsoft
+- [Data penglibatan akaun yang](enrichment-office.md) disediakan oleh Microsoft
 
 ---
 
@@ -97,5 +97,19 @@ Untuk melihat status pengayaan
 1. Dalam anak tetingkap **Butiran kemajuan**, kembangkan bahagian **Pengayaan**. 
 1. Di bawah pengayaan yang mahu anda lihat kemajuan, pilih **Lihat butiran**. 
 1. Dalam anak tetingkap **Butiran tugas**, pilih **Tunjukkan butiran** untuk melihat proses yang terlibat dalam pengemaskinian pengayaan dan status proses tersebut. 
+
+## <a name="enrichment-results"></a>Keputusan pengayaan
+
+Selepas pengayaan selesai, anda boleh menyemak hasil pengayaan.
+
+1. Pergi ke **Data** > **Pengayaan**. 
+1. Pilih pengayaan yang anda inginkan maklumat.
+
+Semua pengayaan menunjukkan maklumat asas seperti bilangan profil yang diperkaya, pratonton entiti pengayaan yang dijana, dan bilangan profil yang diperkaya dari masa ke masa. Sekiranya ada, **Bilangan pelanggan yang diperkaya oleh lapangan** menyediakan gerudi ke dalam liputan setiap medan yang diperkaya.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Halaman hasil pengayaan.":::
+
+Sesetengah pengayaan juga menunjukkan maklumat khusus untuk jenis pengayaan. Rujuk dokumentasi untuk pengayaan yang berkaitan untuk maklumat lanjut.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

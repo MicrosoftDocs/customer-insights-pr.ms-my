@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354892"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523740"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
 Halaman **Pelanggan** menunjukkan pandangan gabungan profil pelanggan anda yang disatukan. Profil pelanggan tersedia sebaik sahaja anda [mencipta entiti Pelanggan disatukan](data-unification.md). Halaman membenarkan anda mencari pelanggan dan mentakrifkan indeks untuk carian tersebut.
 
-Pelanggan boleh menjadi individu atau organisasi. Setiap profil pelanggan diwakili oleh jubin. Gunakan kawalan penghalamanan untuk mendapatkan lebih banyak rekod. Kad memaparkan medan daripada entiti *Pelanggan* seperti yang ditakrifkan dalam **Indeks carian & penapis**. Pilih jubin untuk melihat data untuk pelanggan yang dipilih dalam halaman khusus yang dipanggil [Halaman butiran pelanggan](customer-profiles.md#customer-details-page).
+Pelanggan boleh menjadi individu atau organisasi. Setiap profil pelanggan diwakili oleh jubin. Gunakan kawalan penghalamanan untuk mendapatkan lebih banyak rekod. Kad memaparkan medan daripada entiti *Pelanggan* seperti yang ditakrifkan dalam **Indeks carian & penapis**. Urutan medan dalam setiap kad dipilih oleh sistem.
+
+Pilih jubin untuk melihat data untuk pelanggan yang dipilih dalam halaman khusus yang dipanggil [Halaman butiran pelanggan](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Halaman pelanggan menunjukkan jubin hasil](media/customers-page-result-tiles-B2C.png "Halaman pelanggan menunjukkan jubin hasil")

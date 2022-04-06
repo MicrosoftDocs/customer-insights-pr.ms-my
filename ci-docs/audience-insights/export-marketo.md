@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232002"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487526"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Eksport segmen ke Marketo (pratonton)
 
@@ -63,7 +63,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Masukkan **[ID senarai Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** anda. ID senarai adalah semata-mata nilai berangka. Contohnya, jika ID senarai Marketo anda ialah ST12345A7, alih keluar aksara sebelum dan selepas angka dan masukkan `12345`. 
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. 
+1. **Dalam bahagian Pemadanan** data, pilih sekurang-kurangnya satu medan yang mewakili alamat e-mel pelanggan atau ID Marketo pelanggan. 
 
 1. Selain itu, anda boleh mengeksport **Nama pertama**, **Nama terakhir**, **Bandar**, **Negeri**, dan **Negeri/Rantau**  untuk mencipta e-mel yang diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
 

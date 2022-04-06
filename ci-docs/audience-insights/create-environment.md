@@ -1,23 +1,23 @@
 ---
 title: Cipta persekitaran dalam Customer Insights
 description: Langkah untuk mencipta persekitaran dengan langganan berlesen untuk Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354106"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491924"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Cipta persekitaran dalam cerapan khalayak
 
@@ -78,19 +78,21 @@ Jika anda mencipta berbilang persekitaran Customer Insights dan memilih untuk me
    
 Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insights dengan persekitaran Dataverse anda.
 
-Sediakan persekitaran anda sendiri Microsoft Dataverse untuk berkongsi data (profil dan wawasan) dengan aplikasi perniagaan berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi dipacu model dalam Power Apps. Biarkan medan ini kosong jika anda tidak mempunyai persekitaran anda sendiri Dataverse dan kami akan memperuntukkan satu untuk anda.
+Sediakan persekitaran anda sendiri Microsoft Dataverse untuk berkongsi data (profil dan cerapan) dengan aplikasi perniagaan berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berpandukan model dalam Power Apps. Biarkan medan ini kosong jika anda tidak mempunyai persekitaran anda sendiri Dataverse dan kami akan menyediakan satu untuk anda.
 
-Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data dari sumber data di premis menggunakan Power Platform aliran data dan get laluan](data-sources.md#add-data-from-on-premises-data-sources). Anda juga boleh menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) ramalan luar kotak dengan Dataverse menyambung ke persekitaran.
+Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data daripada sumber data di premis menggunakan Power Platform aliran data dan get laluan](data-sources.md#add-data-from-on-premises-data-sources). Anda juga boleh menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) ramalan di luar kotak dengan Dataverse menyambung ke persekitaran.
 
 > [!IMPORTANT]
-> Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk membolehkan perkongsian data.
+> 1. Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk mendayakan perkongsian data.
+> 1. Anda mesti mempunyai peranan pentadbir global dalam Dataverse persekitaran. Sahkan sama ada persekitaran ini [Dataverse dikaitkan dengan](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) kumpulan keselamatan tertentu dan pastikan anda ditambahkan pada kumpulan keselamatan tersebut.
+> 1. Tiada persekitaran Wawasan Pelanggan sedia ada yang telah dikaitkan dengan Dataverse persekitaran tersebut. Ketahui cara mengalih [keluar sambungan sedia ada ke Dataverse persekitaran](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="perkongsian data dengan Microsoft Dataverse didayakan automatik untuk tika baru bersih.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="perkongsian data dengan Microsoft Dataverse auto didayakan untuk kejadian baru bersih.":::
 
-> [!NOTE]
-> Customer Insights tidak menyokong senario perkongsian data berikut:
-> - Jika anda menyimpan semua data kepada Azure Data Lake Storage anda sendiri anda tidak akan dapat mendayakan perkongsian data dengan danau data terurus Dataverse.
-> - Jika anda mendayakan perkongsian data dengan Dataverse, anda tidak akan dapat [mencipta nilai yang diramalkan atau hilang dalam entiti](predictions.md).
+Untuk maklumat lanjut tentang mendayakan perkongsian data daripada Microsoft Dataverse anda sendiri Azure Data Lake Storage, lihat [Sambung ke Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights tidak menyokong senario perkongsian data berikut:
+- Jika anda mendayakan perkongsian data dengan Dataverse, anda tidak akan dapat [mencipta nilai yang diramalkan atau hilang dalam entiti](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Langkah 4: Muktamadkan tetapan
 

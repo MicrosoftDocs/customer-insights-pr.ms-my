@@ -1,7 +1,7 @@
 ---
 title: Pilih sumber data untuk menginges data
 description: Ketahui cara mengimport data daripada pelbagai sumber.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354060"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464085"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
@@ -37,17 +37,28 @@ Anda boleh menambah sumber data berikut:
 - [Azure Synapse Analytics Daripada pangkalan data](connect-synapse.md)
 
 > [!NOTE]
-> Jika anda menggunakan versi percubaan, bahagian kaedah import termasuk **pilihan pustaka** data Wawasan Pelanggan. Pilih opsyen ini untuk memilih set data sampel yang tersedia untuk pelbagai industri. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights percubaan](../trial-signup.md).
+> Jika anda menggunakan versi percubaan, seksyen kaedah import termasuk **opsyen pustaka** data Wawasan Pelanggan. Pilih opsyen ini untuk memilih set data sampel yang tersedia untuk pelbagai industri. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights percubaan](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Tambah data daripada sumber data di premis
 
-Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Anda boleh mendayakan Aliran Data dalam Wawasan [Pelanggan dengan Microsoft Dataverse menyediakan URL](create-environment.md) persekitaran semasa menyediakan persekitaran.
+Pengingesan data daripada sumber data di premis dalam cerapan Khalayak disokong berdasarkan pada aliran data Microsoft Power Platform. Anda boleh mendayakan Aliran Data dalam Wawasan Pelanggan dengan [menyediakan Microsoft Dataverse URL](create-environment.md) persekitaran semasa menyediakan persekitaran.
 
-Sumber data yang dicipta selepas mengaitkan Dataverse persekitaran dengan Wawasan Pelanggan menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Anda boleh mengalih keluar dan mencipta semula sumber data yang Dataverse wujud sebelum persekitaran dikaitkan [menggunakan di premis get laluan](/data-integration/gateway/service-gateway-app) data.
+Sumber data yang dicipta selepas mengaitkan Dataverse persekitaran dengan Wawasan Pelanggan menggunakan [Power Platform aliran](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) data secara lalai. Aliran data menyokong kesambungan di premis menggunakan get laluan data. Anda boleh mengalih keluar dan mencipta semula sumber data yang Dataverse wujud sebelum persekitaran dikaitkan [menggunakan get laluan](/data-integration/gateway/service-gateway-app) data di premis.
 
 Get laluan data daripada persekitaran Power BI atau Power Apps sedia ada akan kelihatan dan anda boleh menggunakan semula dalam Customer Insights. Halaman sumber data menunjukkan pautan untuk pergi ke persekitaran Microsoft Power Platform yang anda boleh melihat dan mengkonfigurasikan get laluan data di premis.
 
+> [!IMPORTANT]
+> Pastikan get laluan anda dikemas kini kepada versi terkini. Anda boleh memasang kemas kini dan mengkonfigurasi semula get laluan daripada gesaan yang ditunjukkan pada skrin get laluan secara langsung atau [memuat turun versi](https://powerapps.microsoft.com/downloads/) terkini. Jika anda tidak menggunakan versi get laluan terkini, segar semula aliran data gagal dengan mesej ralat seperti **Kata kunci tidak disokong: sifat konfigurasi. Nama parameter: kata kunci**.
+
 ## <a name="review-ingested-data"></a>Semak data yang ditelan
+Jika persekitaran anda mengandungi Power Platform aliran data, **halaman Sumber** Data menyenaraikan tiga bahagian: 
+- **Dikongsi**: Sumber data yang boleh diuruskan oleh semua pentadbir Wawasan Pelanggan. Power BI aliran data, akaun storan anda sendiri, dan melampirkan ke tasik data terurus Dataverse adalah contoh sumber data yang dikongsi.
+- **Diuruskan oleh saya**: Power Platform aliran data dicipta dan boleh diuruskan hanya oleh anda. Pentadbir Wawasan Pelanggan yang lain hanya boleh melihat aliran data ini tetapi tidak mengedit, menyegar semula atau memadamkannya.
+- **Diuruskan oleh orang lain**: Power Platform aliran data yang dicipta oleh pentadbir lain. Anda hanya boleh melihatnya. Ia menyenaraikan pemilik aliran data untuk menghubungi sebarang bantuan.
+> [!NOTE]
+> Semua entiti boleh dilihat dan digunakan oleh pengguna lain. Kontekstualiti pengguna hanya terpakai kepada sumber data dan bukan kepada entiti yang terhasil daripada aliran data ini.
+
+Jika tiada Power Platform aliran data digunakan, anda tidak akan melihat sebarang kumpulan atau bahagian. Halaman **Sumber** Data hanya mengandungi senarai semua sumber data.
 
 Anda akan melihat nama setiap sumber data yang ditelan, status dan masa terakhir data disegar semula untuk sumber tersebut. Anda boleh mengisih senarai sumber data mengikut setiap lajur.
 

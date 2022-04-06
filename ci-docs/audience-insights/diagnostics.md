@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376427"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523680"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Log pemajuan masuk Dynamics 365 Customer Insights dengan Azure Monitor (Preview)
 
@@ -230,7 +230,7 @@ Peristiwa aliran kerja mempunyai sifat berikut.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Ya      | Ya  | Sentiasa `WorkflowEvent`, menandakan peristiwa sebagai peristiwa aliran kerja.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Ya      | Ya  | Pengenalpasti aliran kerja berjalan. Semua aliran kerja dan peristiwa tugas dalam pelaksanaan aliran kerja mempunyai yang sama `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ya      | Ya  | Pengenalpasti operasi, lihat [Jenis operasi].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Ya      | Ya  | Pengenalpasti operasi, lihat [Jenis](#operation-types) operasi.                                                                                                                                                                               |
 | `properties.tasksCount`                      | Ya      | No   | Aliran kerja sahaja. Bilangan tugas yang dicetuskan oleh aliran kerja.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Ya      | No   | Tidak wajib Peristiwa aliran kerja sahaja. ObjekId Azure Active Directory [pengguna](/azure/marketplace/find-tenant-object-id#find-user-object-id) yang mencetuskan aliran kerja, lihat juga `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ya      | No   | `full` atau `incremental` segar semula.                                                                                                                                                                                                                            |
