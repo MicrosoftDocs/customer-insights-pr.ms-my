@@ -1,12 +1,12 @@
 ---
 title: Memahami dan menguruskan langkah-langkah
-description: Ketahui cara langkah-langkah membantu menganalisis dan mencerminkan prestasi perniagaan anda.
-ms.date: 02/28/2022
+description: Ketahui cara langkah membantu menganalisis dan mencerminkan prestasi perniagaan anda.
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,20 +14,20 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359798"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529688"
 ---
 # <a name="measures-overview"></a>Ukuran gambaran keseluruhan
 
 Langkah ini membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan. Mereka melihat nilai yang relevan daripada [profil disatukan](data-unification.md). Contohnya, perniagaan ingin melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu atau mengukur *jumlah jualan syarikat* untuk memahami hasil peringkat agregat dalam keseluruhan perniagaan.  
 
-Langkah-langkah dicipta [menggunakan pembina](measure-builder.md) ukuran, platform pertanyaan data dengan pelbagai pengendali dan pilihan pemetaan mudah. Ia membolehkan anda menapis data, mengumpulkan hasil, mengesan [laluan perhubungan entiti](relationships.md) dan pratonton output. Anda boleh [menggunakan templat](measure-templates.md) yang dipratentkan untuk mengkonfigurasi langkah yang biasa digunakan dengan cekap.
+Langkah-langkah dibuat [menggunakan pembina](measure-builder.md) ukuran, platform pertanyaan data dengan pelbagai pengendali dan pilihan pemetaan mudah. Ia membolehkan anda menapis data, mengumpulkan hasil, mengesan [laluan perhubungan entiti](relationships.md) dan pratonton output. Anda boleh [menggunakan templat yang dipratentukan](measure-templates.md) untuk mengkonfigurasi langkah yang biasa digunakan dengan cekap.
 
-Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada data pelanggan dan mendapatkan wawasan. Sebagai contoh, mencipta ukuran *jumlah perbelanjaan setiap pelanggan* dan *jumlah pulangan setiap pelanggan* membantu mengenal pasti kumpulan pelanggan yang mempunyai perbelanjaan tinggi tetapi pulangan tinggi. Anda boleh [mencipta segmen](segments.md) berdasarkan langkah-langkah ini untuk mendorong tindakan terbaik seterusnya. 
+Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada data pelanggan dan mendapatkan wawasan. Sebagai contoh, mencipta ukuran *jumlah perbelanjaan setiap pelanggan* dan *jumlah pulangan setiap pelanggan* membantu mengenal pasti kumpulan pelanggan yang mempunyai perbelanjaan tinggi tetapi pulangan tinggi. Anda boleh [membuat segmen](segments.md) berdasarkan langkah-langkah ini untuk mendorong tindakan terbaik seterusnya.
 
 ## <a name="manage-your-measures"></a>Urus tindakan anda
 
@@ -35,18 +35,17 @@ Anda boleh mendapatkan senarai langkah pada halaman **Langkah**.
 
 Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh penciptaan, status dan keadaan. Apabila anda memilih ukuran daripada senarai, anda boleh pratonton output dan memuat turun fail CSV.
 
-Untuk menyegarkan semula semua tindakan pada masa yang sama, pilih **Segar semula semua** tanpa memilih tindakan khusus.
+:::image type="content" source="media/measures-actions.png" alt-text="Tindakan untuk menguruskan langkah tunggal."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Tindakan untuk menguruskan langkah tunggal.":::
+Tindakan berikut tersedia apabila anda memilih ukuran:
 
-Pilih ukuran daripada senarai untuk pilihan berikut:
-
-- Pilih nama langkah untuk melihat butiran.
 - **Edit** konfigurasi langkah.
-- **Segar semula** ukuran berdasarkan data terkini.
+- **Menduplikasikan** ukuran. Anda boleh memilih untuk mengedit sifat dengan serta-merta atau hanya menyimpan duplikasi.
+- **Segar semula** ukuran berdasarkan data terkini. Untuk menyegar semula semua langkah anda pada masa yang sama, pilih semua langkah dan kemudian **Segar Semula**.
 - **Nama semula** langkah.
-- **Padam** langkah.
 - **Aktifkan** atau **Nyahaktifkan**. Langkah tidak aktif tidak akan dapat disegar semula semasa [segar semula yang dijadualkan](system.md#schedule-tab).
+- **Tag** untuk [menguruskan tag](work-with-tags-columns.md#manage-tags) untuk segmen.
+- **Padam** langkah.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

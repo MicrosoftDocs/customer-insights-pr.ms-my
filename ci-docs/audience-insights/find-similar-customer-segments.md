@@ -1,23 +1,23 @@
 ---
-title: Cari pelanggan serupa dengan AI (mengandungi video)
+title: Cari pelanggan yang serupa dengan AI (mengandungi video)
 description: Cari segmen pelanggan yang serupa dengan kepintaran buatan.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355256"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561581"
 ---
 # <a name="similar-customers-preview"></a>Pelanggan yang serupa (pratonton)
 
@@ -36,6 +36,8 @@ Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan men
 
 1. Semak nama yang dicadangkan untuk segmen baharu anda dan ubahkannya jika perlu.
 
+1. Secara pilihan, tambah [tag](work-with-tags-columns.md#manage-tags) ke segmen baru.
+
 1. Semak medan yang menakrifkan segmen baharu anda. Medan ini menakrifkan asas pada sistem yang akan cuba mencari pelanggan yang serupa ke segmen sumber anda. Sistem akan memilih medan yang disyorkan secara lalai.
   Medan yang boleh mengurangkan prestasi model dengan ketara dikecualikan secara automatik:
   
@@ -44,9 +46,9 @@ Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan men
 
 1. Pilih jika anda mahu memasukkan **Semua pelanggan** atau hanya pelanggan dalam **Segmen sedia ada tertentu** dalam segmen baharu anda.
 
-1. Kecualikan pelanggan dalam segmen sumber anda dengan memilih kotak semak **Kecualikan semua dalam segmen sumber**.
-
 1. Sistem mencadangkan masukkan hanya 20% saiz khalayak sasaran dalam output anda. Edit ambang bila diperlukan. Meningkatkan ambang akan mengurangkan ketepatan.
+
+1. Sertakan pelanggan dalam segmen sumber anda dengan **memilih kotak semak Sertakan ahli daripada segmen sumber selain pelanggan dengan atribut yang** serupa.
 
 1. Pilih **Jalankan** pada bahagian bawah halaman untuk memulakan tugas pengelasan perduaan (kaedah pembelajaran mesin) yang menganalisis set data.
 
@@ -67,7 +69,7 @@ Anda boleh [bekerja dengan output segmen yang serupa](segments.md) seperti yang 
 
 Untuk menyegar semula segmen yang serupa, pilihnya pada halaman **Segmen** dan pilih **Segar semula** dalam bar tindakan.
 
-Mengedit segmen yang serupa akan memproses semula data anda. Segmen yang dicipta terdahulu dikemas kini dengan data yang disegar semula.    
+Mengedit segmen yang serupa akan memproses semula data anda. Segmen yang dicipta terdahulu dikemas kini dengan data yang disegar semula.
 Untuk mengedit segmen yang serupa, pilihnya pada halaman **Segmen** dan pilih **Edit** dalam bar tindakan. Gunakan perubahan anda dan pilih **Jalankan** untuk memulakan pemprosesan.
 
 ## <a name="delete-a-similar-segment"></a>Padam segmen yang serupa
@@ -84,6 +86,5 @@ Model pembelajaran mesin pengelasan perduaan memperuntukkan skor kepada pelangga
 - Skor persamaan antara 0.85 – 1 adalah pelanggan yang diklasifikasikan oleh sistem sebagai *sangat serupa*
 
 Pelanggan dengan skor persamaan di bawah 0.4 tidak termasuk dalam output model. Sistem tidak mempertimbangkannya sebagai tidak cukup serupa kepada segmen sumber.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

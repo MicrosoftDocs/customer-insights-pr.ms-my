@@ -1,28 +1,28 @@
 ---
-title: Buat langkah-langkah dari templat
+title: Cipta langkah daripada templat
 description: Tentukan langkah menggunakan templat untuk kes penggunaan biasa.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359961"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529412"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Gunakan templat untuk membina langkah
 
-Anda boleh menggunakan templat yang telah dipratentkan langkah [yang biasa digunakan](measures.md) untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
+Anda boleh menggunakan templat yang dipratentukan langkah-langkah [yang biasa digunakan](measures.md) untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
 
-Untuk mencipta langkah tersuai, lihat [Gunakan pembina ukuran untuk mencipta ukuran dari awal](measure-builder.md).
+Untuk mencipta langkah tersuai, lihat [Gunakan pembina ukuran untuk mencipta langkah dari awal](measure-builder.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
@@ -51,7 +51,9 @@ Templat langkah yang tersedia:
 
 1. Semak data yang diperlukan dan pilih **Mari bermula** jika anda mempunyai semua data di tempatnya.
 
-1. Dalam anak tetingkap **Edit nama**, tetapkan nama untuk langkah anda dan entiti output. 
+1. Pilih **Edit butiran** di sebelah Ukur nama. Berikan nama untuk ukuran itu. Secara pilihan, tambah [tag](work-with-tags-columns.md#manage-tags) pada ukuran.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Kotak dialog Edit butiran butiran.":::
 
 1. Pilih **Selesai**.
 

@@ -5,15 +5,15 @@ ms.date: 11/19/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d3465b7eaa17a24e2926b8ea432b33e705931b88
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354612"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555370"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Panduan sampel ramalan pulangan transaksi
 
@@ -30,7 +30,7 @@ Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti t
 
 ## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
-Semak semula artikel [tentang pengambilan](data-sources.md) data dan [mengimport sumber data menggunakan Power Query penyambung](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
+Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sumber data menggunakan Power Query penyambung](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inges data pelanggan daripada platform e-Dagang
 
@@ -148,7 +148,7 @@ Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan**
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tugas 3 - Konfigurasikan ramalan pulangan transaksi
 
-Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat [artikel Langganan ramalan](predict-subscription-churn.md). 
+Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat [artikel ramalan](predict-subscription-churn.md) churn langganan. 
 
 1. Pergi ke **Kecerdasan** > **Teroka** dan pilih untuk menggunakan **Model pulangan pelanggan**.
 

@@ -6,12 +6,12 @@ ms.author: mhart
 ms.date: 07/30/2021
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 82b335388002158885fa55b61562db6c8370dc9d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350188"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560444"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Gambaran keseluruhan produk untuk Dynamics 365 Customer Insights
 
@@ -19,7 +19,7 @@ ms.locfileid: "8350188"
 
 [Wawasan khalayak](audience-insights/overview.md) membantu anda mengubah perniagaan anda menjadi organisasi yang berpusat kepada pelanggan. Pemasaran, jualan dan profesional perkhidmatan mempunyai wawasan yang mereka perlukan untuk memperibadikan pengalaman. Sambungkan data daripada sumber transaksi, tingkah laku dan pemerhatian untuk mencipta paparan pelanggan 360 darjah. Lihat hasil dengan lebih pantas dengan CDP yang direka untuk menyampaikan wawasan yang boleh bertindak ke atas. 
 
-[Wawasan penglibatan](engagement-insights/overview.md) ialah keupayaan pratonton dalam Wawasan Pelanggan yang memfomus pada mengumpulkan acara web dan mudah alih untuk cerapan tambahan Pratonton telah berakhir pada 15 Februari 2022.
+[Cerapan penglibatan](engagement-insights/overview.md) ialah keupayaan pratonton dalam Wawasan Pelanggan yang memberi tumpuan kepada pengumpulan acara web dan mudah alih untuk cerapan tambahan. Pratonton telah berakhir pada 15 Februari 2022.
  
 ## <a name="choose-a-capability"></a>Pilih keupayaan
 

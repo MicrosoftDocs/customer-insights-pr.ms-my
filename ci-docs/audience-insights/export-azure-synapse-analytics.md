@@ -1,19 +1,19 @@
 ---
 title: Eksport Data Customer Insights ke Azure Synapse Analytics
 description: Ketahui cara mengkonfigurasi sambungan ke Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231323"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560398"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (Pratonton)
 
@@ -28,27 +28,27 @@ Prasyarat berikut mesti dipenuhi untuk mengkonfigurasi sambungan daripada Custom
 
 ## <a name="prerequisites-in-customer-insights"></a>Prasyarat dalam Customer Insights
 
-* Anda mempunyai peranan **Pentadbir** dalam wawasan khalayak. Ketahui lanjut tentang [Menetapkan keizinan pengguna dalam wawasan khalayak](permissions.md#assign-roles-and-permissions)
+* Akaun pengguna (AD) anda Azure Active Directory mempunyai **peranan Pentadbir** dalam Wawasan Pelanggan. Ketahui lanjut tentang [Menetapkan keizinan pengguna dalam wawasan khalayak](permissions.md#assign-roles-and-permissions)
 
 Dalam Azure: 
 
 - Langganan Azure yang aktif.
 
-- Jika menggunakan akaun Azure Data Lake Storage Gen2, *prinsipal perkhidmatan untuk wawasan khalayak* memerlukan keizinan **Penyumbang Data Blob Storan**. Ketahui lanjut tentang [menyambung ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure untuk wawasan khalayak](connect-service-principal.md). Data Lake Storage Gen2 **mesti mempunyai** [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace) didayakan.
+- Jika menggunakan akaun Gen2 baharu Azure Data Lake Storage, *prinsipal perkhidmatan untuk Wawasan* Pelanggan memerlukan **keizinan Penyumbang** Data Blob Storan. Ketahui lanjut tentang [menyambung ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure untuk wawasan khalayak](connect-service-principal.md). Data Lake Storage Gen2 **mesti mempunyai** [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace) didayakan.
 
-- Pada lokasi kumpulan sumber ruang kerja Azure Synapse, *prinsipal perkhidmatan* dan *pengguna untuk wawasan khalayak* perlu ditugaskan sekurang-kurangnya keizinan **Pembaca**. Untuk maklumat lanjut, lihat [Tugaskan peranan Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
+- Pada kumpulan sumber di mana Azure Synapse ruang kerja berada, *prinsipal* perkhidmatan dan *Azure AD pengguna dengan keizinan pentadbir dalam Wawasan* Pelanggan perlu diperuntukkan sekurang-kurangnya **keizinan Pembaca**. Untuk maklumat lanjut, lihat [Tugaskan peranan Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- *Pengguna* memerlukan keizinan **Penyumbang Data Blob Storan** pada akaun Azure Data Lake Storage Gen2 tempat data berada dan dipautkan ke ruang kerja Azure Synapse. Ketahui lanjut tentang [menggunakan portal Azure untuk menugaskan peranan Azure mengakses ke blob dan data baris](/azure/storage/common/storage-auth-aad-rbac-portal) dan [Keizinan Penyumbang Data Blob Storan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Pengguna *Azure AD dengan keizinan pentadbir dalam Wawasan* Pelanggan memerlukan **keizinan Penyumbang** Data Blob Storan pada Azure Data Lake Storage akaun Gen2 di mana data berada dan dipautkan ke Azure Synapse ruang kerja. Ketahui lanjut tentang [menggunakan portal Azure untuk menugaskan peranan Azure mengakses ke blob dan data baris](/azure/storage/common/storage-auth-aad-rbac-portal) dan [Keizinan Penyumbang Data Blob Storan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Identiti terurus ruang kerja Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* memerlukan keizinan **Penyumbang Data Blob Storan** pada akaun Azure Data Lake Storage Gen2 tempat data diletak dan dipaut ke ruang kerja Azure Synapse. Ketahui lanjut tentang [menggunakan portal Azure untuk menugaskan peranan Azure mengakses ke blob dan data baris](/azure/storage/common/storage-auth-aad-rbac-portal) dan [Keizinan Penyumbang Data Blob Storan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Pada ruang kerja Azure Synapse, *prinsipal perkhidmatan untuk wawasan khalayak* memerlukan peranan **Pentadbir Synapse** ditugaskan. Untuk maklumat lanjut, lihat [Cara menyediakan kawalan akses untuk ruang kerja Synapse anda](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Azure Synapse Pada ruang kerja, *prinsipal perkhidmatan untuk Wawasan* Pelanggan memerlukan **peranan Pentadbir** Sinapse yang diberikan. Untuk maklumat lanjut, lihat [Cara menyediakan kawalan akses untuk ruang kerja Synapse anda](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Sediakan sambungan dan eksport ke Azure Synapse
 
 ### <a name="configure-a-connection"></a>Konfigurasikan sambungan
 
-Untuk mencipta sambungan, prinsipal perkhidmatan dan akaun pengguna dalam Wawasan Pelanggan memerlukan **keizinan Pembaca** pada *kumpulan* sumber tempat ruang kerja Synapse Analytics berada. Selain itu, prinsipal perkhidmatan dan pengguna di ruang kerja Synapse Analytics memerlukan **keizinan Pentadbir** Sinapse. 
+Untuk mencipta sambungan, prinsipal perkhidmatan dan akaun pengguna dalam Wawasan Pelanggan memerlukan **keizinan Pembaca** pada *kumpulan* sumber di mana ruang kerja Synapse Analytics terletak. Selain itu, prinsipal perkhidmatan dan pengguna di ruang kerja Synapse Analytics memerlukan **kebenaran Pentadbir** Synapse. 
 
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
@@ -64,17 +64,17 @@ Untuk mencipta sambungan, prinsipal perkhidmatan dan akaun pengguna dalam Wawasa
 
 ### <a name="configure-an-export"></a>Konfigurasikan eksport
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk mengkonfigurasikan eksport dengan sambungan dikongsi, anda memerlukan sekurang-kurangnya **keizinan Penyumbang** dalam Wawasan Pelanggan. Untuk maklumat lanjut, lihat [keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk mengkonfigurasi eksport dengan sambungan kongsi, anda memerlukan sekurang-kurangnya **keizinan Penyumbang** dalam Wawasan Pelanggan. Untuk maklumat lanjut, lihat [keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
 
 1. Pergi ke **Data** > **Eksport**.
 
 1. Untuk mencipta eksport baharu, pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada **Azure Synapse Analytics** seksyen. Jika anda tidak melihat nama bahagian ini, tiada [sambungan](connections.md) jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada seksyen **Azure Synapse Analytics**. Jika anda tidak melihat nama bahagian ini, tiada [sambungan](connections.md) jenis ini tersedia untuk anda.
 
 1. Sediakan **Nama paparan** yang dikenali untuk eksport dan **Nama pangkalan data** anda.
 
-1. Pilih entiti yang anda mahu eksport ke Azure Synapse Analytics.
+1. Pilih entiti mana yang anda mahu eksport ke Azure Synapse Analytics.
    > [!NOTE]
    > Sumber data berdasarkan [folder Common Data Model](connect-common-data-model.md) tidak disokong.
 
@@ -84,7 +84,7 @@ Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
 Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).
 
-Untuk bertanya data yang dieksport ke Analitis Synapse, anda memerlukan **capaian Pembaca** Data Blob Storan ke storan destinasi pada ruang kerja eksport. 
+Untuk bertanya data yang dieksport ke Synapse Analytics, anda memerlukan **akses Pembaca** Data Blob Storan ke storan destinasi pada ruang kerja eksport. 
 
 ### <a name="update-an-export"></a>Kemas kini eksport
 

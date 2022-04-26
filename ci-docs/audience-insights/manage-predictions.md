@@ -5,15 +5,15 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 8ff8d70ffb8489def072e5d8a6e43d062594141a
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230803"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555324"
 ---
 # <a name="manage-predictions"></a>Urus ramalan
 
@@ -49,7 +49,7 @@ Lajur berikut dalam laporan mengandungi maklumat yang berguna untuk meningkatkan
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Contoh laporan kebolehgunaan data input yang menunjukkan jadual dengan ralat, amaran dan pengesyoran.":::
 
-- **Nama:** Nama perihalan ralat, amaran atau cadangan.
+- **Nama:** Nama perihalan ralat, amaran atau pengesyoran.
 - **Langkah:** Fasa model, kereta api atau skor, maklumat merujuk kepada.
 - **Keadaan:** Keterukan maklumat (ralat, amaran, cadangan).
 - **Nama lajur:** Lajur dalam entiti yang perlu diubah suai untuk meningkatkan prestasi model.

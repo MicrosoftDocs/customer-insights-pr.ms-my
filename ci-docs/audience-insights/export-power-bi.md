@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225527"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552067"
 ---
 # <a name="connector-for-power-bi-preview"></a>Penyambung untuk Power BI (pratonton)
 
@@ -72,6 +72,6 @@ Selepas penyingkiran perhubungan pendua, cuba konfigurasi penyambung Power BI se
 
 Apabila memuatkan entiti yang mengandungi medan dengan format tarikh seperti MM/DD/YYYY, anda boleh menghadapi ralat kerana disebabkan format bahasa yang tidak sepadan. Ketidaksepadanan ini berlaku apabila fail Power BI Desktop anda ditetapkan kepada bahasa lain selain daripada Bahasa Inggeris (Amerika Syarikat), kerana medan tarikh dalam cerapan khalayak disimpan dalam format AS.
 
-Fail Power BI Desktop ini mempunyai tetapan bahasa tunggal, yang digunakan apabila mendapatkan data. Dapatkan medan tarikh ini ditafsirkan dengan betul, tetapkan bahasa fail .BPI kepada Bahasa Inggeris (Amerika Syarikat). [Ketahui cara menukar bahasa fail Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Fail Power BI Desktop ini mempunyai tetapan bahasa tunggal, yang digunakan apabila mendapatkan data. Dapatkan medan tarikh ini ditafsirkan dengan betul, tetapkan bahasa fail .BPI kepada Bahasa Inggeris (Amerika Syarikat). [Ketahui cara menukar bahasa fail Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

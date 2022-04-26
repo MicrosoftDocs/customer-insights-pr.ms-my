@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508577"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529550"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
@@ -47,24 +47,30 @@ Terdapat berbilang cara untuk mencipta segmen baharu:
 
 ## <a name="manage-existing-segments"></a>Mengurus bahagian sedia ada
 
-Pergi ke halaman **Segmen** untuk anda melihat semua segmen yang disimpan dan mengurus segmen.
+Pergi ke **halaman Segmen** untuk melihat semua segmen anda yang disimpan dan menguruskannya.
 
 Setiap segmen diwakili oleh baris yang menyertakan maklumat tambahan tentang segmen.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan senarai juntai bawah pilihan dan pilihan yang tersedia.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmen yang dipilih dengan senarai juntai bawah pilihan dan pilihan yang tersedia." lightbox="media/segments-selected-segment.png":::
 
-Tindakan yang berikut tersedia apabila anda memilih segmen:
+Tindakan berikut tersedia apabila anda memilih segmen:
 
 - **Lihat** butiran segmen, termasuk trend kiraan ahli pratonton ahli segmen.
+- **Muat turun** senarai ahli sebagai fail .CSV.
 - **Edit** segmen untuk mengubah sifatnya.
 - **Cipta duplikasi** segmen. Anda boleh memilih untuk mengedit sifat dengan serta-merta atau hanya menyimpan duplikasi.
 - **Segar semula** segmen untuk memasukkan data terkini.
-- **Aktifkan** atau **Nyahaktifkan** segmen. Segmen mempunyai dua keadaan yang mungkin - aktif atau tidak aktif. Keadaan ini berguna apabila mengedit segmen. Untuk segmen tidak aktif, takrifan segmen wujud tetapi ia tidak mengandungi sebarang pelanggan lagi. Apabila anda mengaktifkan segmen, keadaannya berubah daripada 'tidak aktif' kepada 'aktif" dan ia mula mencari pelanggan yang sepadan dengan takrifan segmen. Jika [segar semula berjadual](system.md#schedule-tab) dikonfigurasikan, segmen yang tidak aktif mempunyai **Status** yang disenaraikan sebagai **Dilangkau**, menunjukkan bahawa segar semula tidak pernah dicuba. Apabila segmen yang tidak aktif diaktifkan, ia akan menyegar semula dan akan disertakan dalam segar semula berjadual.
+- **Aktifkan** atau **Nyahaktifkan** segmen. Untuk segmen tidak aktif, takrifan segmen wujud tetapi ia tidak mengandungi sebarang pelanggan lagi. Segmen aktif mencari pelanggan yang sepadan dengan definisi segmen. Jika [segar semula berjadual](system.md#schedule-tab) dikonfigurasikan, segmen yang tidak aktif mempunyai **Status** yang disenaraikan sebagai **Dilangkau**, menunjukkan bahawa segar semula tidak pernah dicuba. Apabila segmen yang tidak aktif diaktifkan, ia akan menyegar semula dan akan disertakan dalam segar semula berjadual.
   Secara alternatif, anda boleh menggunakan kefungsian **Jadual kemudian** dalam juntai bawah **Aktifkan/Nyahaktifkan** untuk menetapkan tarikh dan masa pada masa depan untuk pengaktifan dan penyahaktifan segmen tertentu.
+- **[Cari pelanggan](find-similar-customer-segments.md)** yang serupa dari segmen ini.
 - **Nama semula** segmen.
+- **Tag** untuk [menguruskan tag](work-with-tags-columns.md#manage-tags) untuk segmen.
 - **Muat turun** senarai ahli sebagai fail .CSV.
 - **Urus eksport** untuk melihat segmen berkaitan eksport dan uruskan eksport tersebut. [Ketahui lebih lanjut tentang eksport.](export-destinations.md)
 - **Padamkan** segmen.
+- **Lajur** untuk [menyesuaikan lajur](work-with-tags-columns.md#customize-columns) yang dipaparkan.
+- **Tapis** untuk [menapis pada tag](work-with-tags-columns.md#filter-on-tags).
+- **Cari nama** untuk dicari mengikut nama segmen.
 
 ## <a name="refresh-segments"></a>Segar semula segmen
 
