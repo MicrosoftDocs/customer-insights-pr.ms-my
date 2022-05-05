@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8456009"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641865"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Mulakan selepas pembelian Customer Insights
 
@@ -34,9 +34,8 @@ Pengalaman jalanan pertama membantu anda memilih fokus awal anda dengan Customer
 
 1. Pergi ke [URL aplikasi Customer Insights](https://home.ci.ai.dynamics.com).
 1. Daftar masuk dengan akaun sekolah atau kerja. 
-1. Bersetuju dengan terma perkhidmatan dan menetapkan keutamaan kandungan untuk tika Customer Insights anda.
-1. Pilih keupayaan untuk fokus apabila anda sampai ke halaman mula untuk keupayaan yang anda pilih.
+1. Setuju dengan terma perkhidmatan dan tetapkan keutamaan kandungan untuk persekitaran Wawasan Pelanggan anda.
 
 ## <a name="create-your-own-environment"></a>Cipta persekitaran anda sendiri
 
-Selepas daftar masuk pertama anda, anda akan nampak persekitaran dengan data sampel. Anda boleh menggunakan data tersebut untuk menerokai ciri dan membiasakan dengan aplikasi. Untuk menggunakan data anda sendiri, anda perlu [mencipta persekitaran](/dynamics365/customer-insights/audience-insights/create-environment).
+Selepas daftar masuk pertama anda, anda akan nampak persekitaran dengan data sampel. Anda boleh menggunakan data tersebut untuk menerokai ciri dan membiasakan dengan aplikasi. Untuk menggunakan data anda sendiri, anda perlu [mencipta persekitaran](create-environment.md).

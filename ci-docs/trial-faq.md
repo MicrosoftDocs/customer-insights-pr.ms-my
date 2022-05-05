@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229506"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641819"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Soalan Lazim percubaan Dynamics 365 Customer Insights
 
@@ -62,13 +62,13 @@ Anda boleh melanjutkan percubaan dalam aplikasi secara langsung. Anda boleh mela
 
 Secara amnya, kami mengesyorkan anda memulakan dengan segar dengan data anda sendiri apabila menaik taraf kepada versi berbayar Customer Insights. 
 
-Secara pilihan, jika anda hanya menggunakan cerapan khalayak, anda boleh menyalin data anda daripada persekitaran percubaan jika anda membeli Customer Insight. Anda mesti menjadi pentadbir percubaan Wawasan Pelanggan dan pentadbir global penyewa anda Microsoft 365 atau pentadbir Dynamics 365 dalam organisasi anda untuk memindahkan tetapan daripada persekitaran percubaan ke persekitaran berbayar. 
+Secara pilihan, jika anda hanya menggunakan Wawasan Pelanggan, anda boleh menyalin data anda daripada persekitaran percubaan jika anda membeli Wawasan Pelanggan. Anda mesti menjadi pentadbir percubaan Wawasan Pelanggan dan pentadbir global penyewa anda Microsoft 365, atau pentadbir Dynamics 365 dalam organisasi anda untuk memindahkan seting daripada persekitaran percubaan ke persekitaran berbayar. 
 
-Selepas mendaftar masuk kepada tika berbayar Customer Insights anda buat kali pertama, anda diminta untuk mencipta persekitaran baru. Dalam proses ini, anda boleh memilih untuk menyalin konfigurasi daripada persekitaran sedia ada dan memindahkan kebanyakan tetapan. Jika anda mempunyai keizinan yang disebut di atas, persekitaran percubaan akan ditunjukkan dalam senarai ini. Untuk maklumat lanjut, lihat [Salin konfigurasi persekitaran](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Selepas mendaftar masuk kepada tika berbayar Customer Insights anda buat kali pertama, anda diminta untuk mencipta persekitaran baru. Dalam proses ini, anda boleh memilih untuk menyalin konfigurasi daripada persekitaran sedia ada dan memindahkan kebanyakan tetapan. Jika anda mempunyai keizinan yang disebut di atas, persekitaran percubaan akan ditunjukkan dalam senarai ini. Untuk maklumat lanjut, lihat [Salin konfigurasi persekitaran](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Apakah had percubaan dan kuota?
 
-- Anda tidak boleh menggunakan akaun Azure Data Lake Storage anda sendiri untuk menyimpan data output semasa percubaan cerapan khalayak. Walau bagaimanapun, anda boleh menginges data daripada akaun storan Data Lake.
+- Anda tidak boleh menggunakan akaun storan Azure Data Lake anda sendiri untuk menyimpan data output semasa versi percubaan Wawasan Pelanggan. Walau bagaimanapun, anda boleh menginges data daripada akaun storan Data Lake.
 - Anda boleh menyimpan data hingga 3 GB dalam persekitaran Dataverse yang akan diperuntukkan secara automatik apabila anda memulakan percubaan Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights-soalan khusus
@@ -81,7 +81,7 @@ Selepas anda daftar masuk untuk percubaan, anda akan tiba pada skrin utama aplik
 
 Kebanyakan ciri keupayaan Customer Insights tersedia dalam percubaan.
 
-Ciri berikut tidak **tersedia**: 
+Ciri-ciri **berikut tidak tersedia**: 
 - Anda tidak boleh mencipta persekitaran baharu yang menggunakan akaun Azure Data Lake Storage anda sendiri.
 - Anda tidak boleh memadamkan persekitaran percubaan. 
 
