@@ -1,8 +1,8 @@
 ---
 title: Langganan panduan sampel ramalan pulangan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pulangan langganan luar kotak.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643574"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741422"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Langganan panduan sampel ramalan pulangan
 
@@ -112,61 +112,7 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sum
 
 ## <a name="task-2---data-unification"></a>Tugas 2 - Penyatuan data
 
-Selepas menginges data, kini kita memulakan proses **Petaan, Padanan, Gabungan** untuk mencipta profil pelanggan disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
-
-### <a name="map"></a>Petakan
-
-1. Selepas menginges data, petakan kenalan daripada data e-Dagang dan Kesetiaan kepada jenis data umum. Pergi ke **Data** > **Satukan** > **Peta**.
-
-1. Pilih entiti yang mewakili profil pelanggan – **eCommerceContacts** dan **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="menyatukan sumber data e-Dagang dan kesetiaan.":::
-
-1. Pilih **ContactId** sebagai kunci utama untuk **eCommerceContacts** dan **LoyaltyID** sebagai kunci utama untuk **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Menyatukan LoyaltyId sebagai kunci utama.":::
-
-### <a name="match"></a>Padankan
-
-1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
-
-1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
-
-1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Menyatukan padanan e-Dagang dan Kesetiaan.":::
-
-1. Pilih **Cipta peraturan baharu**
-
-1. Tambah syarat pertama anda menggunakan FullName.
-
-   * Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
-   * Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
-   * Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
-   * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
-
-1. Masukkan nama **FullName, Email** untuk peraturan baharu.
-
-   * Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   * Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
-   * Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah. 
-   * Biarkan Menormalkan kosong. 
-   * Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Menyatukan peraturan padanan untuk nama dan e-mel.":::
-
-7. Pilih **Simpan** dan **Jalankan**.
-
-### <a name="merge"></a>Gabungkan
-
-1. Pergi ke tab **Gabungan**.
-
-1. Pada **ContactId** untuk entiti **loyCustomers**, tukar nama paparan kepada **ContactIdLOYALTY** untuk membezakannya daripada ID lain yang diinges.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="namakan semula contactid daripada ID kesetiaan.":::
-
-1. Pilih **Simpan** dan **Jalankan** untuk memulakan Proses Gabungan.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tugas 3 - Konfigurasikan ramalan pulangan langganan
 

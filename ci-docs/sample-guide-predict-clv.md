@@ -1,19 +1,19 @@
 ---
 title: Panduan sampel ramalan nilai sepanjang hayat pelanggan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan nilai sepanjang hayat pelanggan.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643594"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740822"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Panduan sampel ramalan nilai sepanjang hayat pelanggan (CLV)
 
@@ -102,64 +102,7 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [mengimport sumbe
 
 ## <a name="task-2---data-unification"></a>Tugas 2 - Penyatuan data
 
-Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencipta profil pelanggan yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
-
-### <a name="map"></a>Petakan
-
-1. Selepas menginges data, petakan kenalan daripada data e-Dagang dan Kesetiaan kepada jenis data umum. Pergi ke **Data** > **Satukan** > **Peta**.
-
-1. Pilih entiti yang mewakili profil pelanggan – **eCommerceContacts** dan **loyCustomers**. Kemudian, pilih **Guna**.
-
-   ![menyatukan sumber data e-Dagang dan kesetiaan.](media/unify-ecommerce-loyalty.png)
-
-1. Pilih **ContactId** sebagai kunci utama untuk **eCommerceContacts** dan **LoyaltyID** sebagai kunci utama untuk **loyCustomers**.
-
-   ![Menyatukan LoyaltyId sebagai kunci utama.](media/unify-loyaltyid.png)
-
-1. Pilih **Simpan**.
-
-### <a name="match"></a>Padankan
-
-1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
-
-1. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
-
-1. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
-
-   ![Menyatukan padanan e-Dagang dan Kesetiaan.](media/unify-match-order.png)
-
-1. Pilih **Tambah peraturan**
-
-1. Tambah syarat pertama anda menggunakan FullName.
-
-   - Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
-   - Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
-   - Pilih juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat,...)**.
-   - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
-
-1. Masukkan nama **FullName, Email** untuk peraturan baharu.
-
-   - Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   - Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
-   - Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah.
-   - Biarkan Menormalkan kosong.
-   - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
-
-   ![Menyatukan peraturan padanan untuk nama dan e-mel.](media/unify-match-rule.png)
-
-1. Pilih **Selesai**.
-
-1. Pilih **Simpan** dan **Jalankan**.
-
-### <a name="merge"></a>Gabungkan
-
-1. Pergi ke tab **Gabungan**.
-
-1. Pada **ContactId** untuk entiti **loyCustomers**, tukar nama paparan kepada **ContactIdLOYALTY** untuk membezakannya daripada ID lain yang diinges.
-
-   ![namakan semula contactid daripada ID kesetiaan.](media/unify-merge-contactid.png)
-
-1. Pilih **Simpan** dan **Jalankan proses gabungan dan hiliran**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tugas 3 - Konfigurasi ramalan nilai sepanjang hayat pelanggan
 

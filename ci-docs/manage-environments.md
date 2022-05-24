@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643614"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741052"
 ---
 # <a name="manage-environments"></a>Urus persekitaran
 
@@ -113,7 +113,7 @@ Apabila menyambung ke Dataverse persekitaran, mesej **ralat Organisasi CDS ini t
 ATAU 
 
 1. Buka persekitaran anda Dataverse.
-1. Pergi ke **Tetapan** > **LanjutanSolutions**.
+1. Pergi ke **Penyelesaian** > **Seting** Lanjutan.
 1. **Nyahpasang penyelesaian CustomerInsightsCustomerCard**.
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi persekitaran
@@ -127,8 +127,8 @@ Anda akan melihat semua persekitaran yang tersedia dalam organisasi anda yang bo
 Tetapan konfigurasi berikut disalin:
 
 - Sumber data yang diingeskan/diimport
-- Konfigurasi penyatuan data (Peta, Padan, Cantum)
-- Bahagian
+- Konfigurasi penyatuan data
+- Segmen
 - Langkah
 - Perhubungan
 - Aktiviti
@@ -158,7 +158,7 @@ Selepas menyegar semula sumber data, pergi ke **Data** > **Satukan**. Di sini an
 
 Apabila data penyatuan selesai, pergi ke **Langkah-langkah** dan **Segmen** untuk menyegarkan semula juga.
 
-Sebelum anda mengaktifkan semula eksport dan pengayaan, pergi ke **AdminConnections** > **untuk** membenarkan semula sambungan dalam persekitaran baharu anda.
+Sebelum anda mengaktifkan semula eksport dan pengayaan, pergi ke **Sambungan** > **Pentadbir** untuk membenarkan semula sambungan dalam persekitaran baharu anda.
 
 ## <a name="change-the-owner-of-an-environment"></a>Tukar pemilik persekitaran
 

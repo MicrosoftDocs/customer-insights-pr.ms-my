@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643092"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755647"
 ---
 # <a name="customer-card-add-in-preview"></a>Tambahan Kad Pelanggan (pratonton)
-
-
 
 Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dynamics 365. Dengan Tambahan Kad Pelanggan yang dipasang dalam aplikasi Dynamics 365 yang disokong, anda boleh memilih untuk memaparkan medan profil, cerapan dan garis masa aktiviti pelanggan. Tambahan akan mendapatkan data daripada Customer Insights tanpa mempengaruhi data dalam aplikasi Dynamics 365 yang disambung.
 
@@ -31,10 +29,10 @@ Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dyna
 ## <a name="prerequisites"></a>Prasyarat
 
 - Tambahan hanya berfungsi dengan aplikasi berpandukan model Dynamics 365 seperti Jualan atau Khidmat Pelanggan versi 9.0 dan kemudian.
-- Untuk data Dynamics 365 anda memetakan ke profil pelanggan Wawasan Pelanggan, kami mengesyorkan ia [ditelan daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), anda perlu memastikan `contactid` medan (atau `accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut dalam langkah peta proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Untuk data Dynamics 365 anda memetakan ke profil pelanggan Wawasan Pelanggan, kami mengesyorkan ia [ditelan daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), anda perlu memastikan `contactid` medan (atau `accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut dalam langkah peta proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Semua pengguna Dynamics 365 Tambahan Kad Pelanggan mesti ditambah [sebagai pengguna](permissions.md) dalam Wawasan Pelanggan untuk melihat data.
 - [Keupayaan](search-filter-index.md) carian dan penapis yang dikonfigurasikan dalam Wawasan Pelanggan diperlukan untuk mencari data berfungsi.
-- Setiap kawalan tambahan bergantung pada data tertentu dalam Wawasan Pelanggan. Sesetengah data dan kawalan hanya tersedia dalam persekitaran jenis tertentu. Konfigurasi tambahan akan memberitahu anda jika kawalan tidak tersedia disebabkan oleh jenis persekitaran yang dipilih. Ketahui lebih lanjut tentang [kes penggunaan persekitaran](work-with-business-accounts.md).
+- Setiap kawalan tambahan bergantung pada data tertentu dalam Wawasan Pelanggan. Sesetengah data dan kawalan hanya tersedia dalam persekitaran jenis tertentu. Konfigurasi tambahan akan memberitahu anda jika kawalan tidak tersedia kerana jenis persekitaran yang dipilih. Ketahui lebih lanjut tentang [kes penggunaan persekitaran](work-with-business-accounts.md).
   - **Kawalan ukuran** : memerlukan [ukuran dikonfigurasikan](measures.md) bagi jenis atribut pelanggan.
   - **Kawalan perisikan**: Memerlukan data yang dijana menggunakan [ramalan atau model](predictions-overview.md) tersuai.
   - **Kawalan butiran pelanggan** : Semua medan daripada profil tersedia dalam profil pelanggan disatukan.
@@ -132,16 +130,16 @@ Walaupun dengan medan ID yang dikonfigurasikan dengan betul, kawalan tidak dapat
 
 **Penyelesaian:**
 
-1. Pastikan anda mengkonfigurasi Tambahan Kad mengikut arahan: [Konfigurasikan Tambahan Kad Pelanggan](#configure-the-customer-card-add-in) 
+1. Pastikan anda mengkonfigurasi Tambahan Kad mengikut arahan: [Konfigurasikan Tambahan Kad Pelanggan](#configure-the-customer-card-add-in)
 
-1. Semak konfigurasi pengingesan data. Edit sumber data untuk sistem Dynamics 365 yang mengandungi ID kenalan GUID. Jika ID kenalan GUID ditunjukkan dengan aksara huruf besar dalam Power Query editor, cuba yang berikut: 
+1. Semak konfigurasi pengingesan data. Edit sumber data untuk sistem Dynamics 365 yang mengandungi ID kenalan GUID. Jika ID kenalan GUID ditunjukkan dengan aksara huruf besar dalam Power Query editor, cuba langkah berikut:
     1. Edit sumber data untuk membuka sumber data dalam Power Query Editor.
     1. Pilih lajur ID kenalan.
     1. Pilih **Transform** dalam bar pengepala untuk melihat tindakan yang tersedia.
     1. Pilih **huruf kecil**. Sahkan jika GUID dalam jadual kini huruf kecil.
     1. Simpan sumber data.
-    1. Jalankan proses pengambilan data, penyatuan, dan hiliran untuk menyebarkan perubahan kepada GUID. 
+    1. Jalankan proses pengambilan data, penyatuan, dan hiliran untuk menyebarkan perubahan kepada GUID.
 
-Selepas melengkapkan segar semula penuh, kawalan Tambahan Kad Pelanggan harus menunjukkan data yang dijangkakan. 
+Selepas sistem selesai segar semula penuh, kawalan Tambahan Kad Pelanggan harus menunjukkan data yang dijangkakan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

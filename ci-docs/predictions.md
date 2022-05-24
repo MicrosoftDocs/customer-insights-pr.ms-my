@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643607"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740730"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapkan data separa anda dengan ramalan (ditamatkan)
 
@@ -37,13 +37,13 @@ Sebelum organisasi anda boleh menggunakan ciri ramalan, prasyarat berikut mesti 
 
 1. Organisasi anda mempunyai tika [yang disediakan dalam Microsoft Dataverse](/ai-builder/build-model#prerequisites) dan ia berada dalam organisasi yang sama seperti Customer Insights.
 
-2. Persekitaran cerapan khalayak anda dilampirkan pada tika Dataverse anda.
+2. Persekitaran Customer Insights anda dilampirkan pada tika Dataverse anda.
 
 Untuk mendapatkan maklumat lanjut, lihat [Cipta persekitaran baharu](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Cipta ramalan dalam entiti Pelanggan
 
-1. Pergi ke **DataEntities** > **·**.
+1. Pergi ke **Entiti Data** > **·**.
 
 2. Pilih entiti **Pelanggan**.
 
@@ -91,7 +91,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 ## <a name="view-a-prediction"></a>Lihat ramalan
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Ramalan saya**.
+1. Pergi ke **Ramalan** > **Perisikan** > **Ramalan** saya.
 
 2. Pilih ramalan yang anda mahu semak semula.
 
@@ -108,7 +108,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 ## <a name="update-a-prediction"></a>Kemas kini ramalan
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Ramalan saya**.
+1. Pergi ke **Ramalan** > **Perisikan** > **Ramalan** saya.
 
 2. Pilih ramalan yang anda mahu kemas kini dan pilih ikon **Kemas Kini**.
 
@@ -118,7 +118,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 Selepas anda mencipta ramalan, anda boleh menyesuaikan model dalam AI Builder untuk meningkatkan keberkesanan model anda.  
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Ramalan saya**.
+1. Pergi ke **Ramalan** > **Perisikan** > **Ramalan** saya.
 
 2. Pilih ramalan yang anda mahu edit.
 
@@ -135,7 +135,7 @@ Jalanan ramalan anda yang seterusnya akan menggunakan model dikemas kini yang an
 
 ## <a name="remove-a-prediction"></a>Alih keluar ramalan
 
-1. Pergi ke **IntelligencePredictions** > **·** > **Ramalan saya**.
+1. Pergi ke **Ramalan** > **Perisikan** > **Ramalan** saya.
 
 2. Pilih ramalan yang anda mahu padam.
 

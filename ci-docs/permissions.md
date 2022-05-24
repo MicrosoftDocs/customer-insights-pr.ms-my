@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653579"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740914"
 ---
 # <a name="user-permissions"></a>Keizinan pengguna
 
 Halaman **Keizinan** ialah tempat anda akan menyediakan peranan dan keizinan untuk menggunakan Wawasan Pelanggan.
 
-Anda perlu mempunyai keizinan pentadbir untuk melihat halaman. Untuk mencapai halaman keizinan, pergi ke **AdminSecurityUsers** > **·** > **·**.
+Anda perlu mempunyai keizinan pentadbir untuk melihat halaman. Untuk mencapai halaman keizinan, pergi ke **Pengguna Keselamatan** > **Pentadbir** > **·**.
 
 Terdapat tiga jenis peranan:
 
@@ -41,7 +41,7 @@ Terdapat tiga jenis peranan:
 
 - Semua keizinan tersedia untuk Penonton.
 - Muatkan dan ubah data menggunakan halaman **Sumber data**.
-- Lengkapkan bahagian *Penyatuan Data* (**Peta**, **Padan**, dan **Gabung**) yang menyebabkan entiti profil pelanggan digabungkan.
+- Lengkapkan ***Penyatuan** Data yang menghasilkan entiti profil pelanggan yang bersatu.
 - Takrif **Perhubungan** dan **Aktiviti**.
 - Cipta segmen menggunakan halaman **Segmen**.
 - Cipta ukuran menggunakan halaman **Ukuran**.
@@ -69,7 +69,7 @@ Terdapat tiga jenis peranan:
 
 ## <a name="assign-roles-and-permissions"></a>Tugaskan peranan dan keizinan
 
-1. Pergi ke **AdminSecurity** > **·** > **Users***.
+1. Pergi ke **> Keselamatan** > **Pentadbir****Pengguna***.
 
 1. Pilih **Tambah pengguna** untuk membuka anak tetingkap **Tambah/Edit keizinan**.
 
@@ -79,7 +79,7 @@ Terdapat tiga jenis peranan:
 
 ## <a name="view-current-permissions"></a>Lihat keizinan semasa
 
-Pergi ke **AdminSecurityUsers** > **·** > **untuk** melihat tugasan peranan yang sedang aktif.
+Pergi ke **Pengguna** > **Keselamatan** > **Pentadbir** untuk melihat tugasan peranan yang sedang aktif.
 
 - Lajur **Jenis** menentukan pengguna tunggal, kumpulan, atau aplikasi. Sistem menyokong pengguna atau kumpulan individu.
 - Peranan ditentukan di bawah lajur **Peranan**.

@@ -1,110 +1,83 @@
 ---
-title: Peta entiti dan atribut untuk data penyatuan
-description: Pilih entiti, atribut, kunci utama dan jenis semantik untuk memetakan data kepada profil pelanggan disatukan.
-ms.date: 10/18/2020
+title: Pilih medan sumber untuk penyatuan data
+description: Langkah pertama dalam proses penyatuan ialah memilih entiti, atribut, kekunci utama dan jenis semantik untuk memetakan data ke profil pelanggan bersatu.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643171"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741006"
 ---
-# <a name="map-entities-and-attributes"></a>Petakan entiti dan atribut
+# <a name="select-source-fields-for-data-unification"></a>Pilih medan sumber untuk penyatuan data
 
-**Peta** adalah peringkat pertama dalam proses penyatuan data. Pemetaan terdiri daripada tiga fasa:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Pemilihan entiti*: Kenal pasti entiti boleh gabung yang membawa kepada set data dengan maklumat yang lebih lengkap tentang pelanggan.
-- *Pemilihan atribut*: Bagi setiap entiti, kenal pasti lajur yang anda mahu gabung dan selaraskan dalam peringkat *padan* dan *gabung*. Lajur ini dipanggil *Atribut*.
-- *Kekunci utama dan pilihan jenis semantik*: Untuk setiap entiti, kenal pasti atribut yang anda mahu takrifkan sebagai kekunci utama untuk entiti tersebut dan untuk setiap atribut, kenal pasti jenis semantik yang terbaik menggambarkan atribut tersebut.
+Langkah pertama dalam penyatuan ialah memilih entiti dan medan dalam set data anda yang anda ingin gabungkan. Pilih entiti yang mengandungi butiran berkaitan pelanggan seperti nama, alamat, nombor telefon dan e-mel. Anda boleh memilih satu atau lebih entiti.
 
-Untuk maklumat lanjut tentang aliran penyatuan data umum , lihat [Satukan](data-unification.md).
+## <a name="select-entities-and-fields"></a>Pilih entiti dan medan
 
-## <a name="select-the-first-entities"></a>Pilih entiti pertama
+1. Pergi ke **Data** > **Unify**.
 
-1. Pergi ke **Data** > **Satukan** > **Peta**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Petikan skrin halaman pendaratan menyatukan untuk pengalaman larian pertama dengan Mari bermula diserlahkan.":::
 
-2. Mulakan fasa pemetaan dengan memilih **Pilih entiti**.
+1. Pilih **Mulakan**.
 
-3. Pilih entiti dan atribut yang anda mahu gunakan dalam fasa *padanan* dan *gabungan*. Anda boleh memilih atribut yang diperlukan secara individu daripada entiti atau memasukkan semua atribut daripada entiti dengan memilih kotak semak **Memasukkan semua medan** pada peringkat entiti. Kami mengesyorkan pemilihan sekurang-kurangnya dua entiti untuk mendapat manfaat daripada proses penyatuan data.
+1. **Pada halaman Medan** sumber, pilih **Pilih entiti dan medan**. Anak **tetingkap Pilih entiti dan medan** dipaparkan.
 
-   > [!div class="mx-imgBorder"]
-   > ![Tambah contoh entiti.](media/data-manager-configure-map-add-entities-example.png "Tambah contoh entiti")
+1. Pilih sekurang-kurangnya satu entiti.
 
-   Dalam contoh ini, kami menambahkan entiti **eCommerceContacts** dan **loyCustomers**. Dengan memilih entiti ini, anda boleh memperoleh wawasan yang pelanggan perniagaan online ialah ahli program kesetiaan.
-   
-   Anda boleh mencari pada kata kunci merentasi semua atribut dan entiti untuk memilih atribut yang diperlukan yang anda mahu petakan.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Contoh medan carian.](media/data-manager-configure-map-search-fields-example.png "Contoh medan carian")
+1. Untuk setiap entiti yang dipilih, kenal pasti medan yang anda ingin gunakan untuk memadankan rekod pelanggan dan medan untuk disertakan dalam profil bersatu. Medan ini dipanggil *Atribut*. Anda boleh memilih atribut yang diperlukan secara individu daripada entiti atau menyertakan semua atribut daripada entiti dengan memilih kotak semak pada tahap entiti. Anda boleh mencari pada kata kunci merentasi semua atribut dan entiti untuk memilih atribut yang diperlukan yang anda mahu petakan.
 
-4. Pilih **Gunakan** untuk mengesahkan pilihan anda.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Petikan skrin entiti dan atribut terpilih.":::
+
+   Dalam contoh ini, kami menambah **entiti Kenalan** dan **Kesetiaan Pelanggan**. Dengan memilih entiti ini, anda boleh memperoleh wawasan yang pelanggan perniagaan online ialah ahli program kesetiaan.
+
+1. Pilih **Gunakan** untuk mengesahkan pilihan anda. Paparan entiti dan atribut yang dipilih.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Pilih kekunci utama dan jenis semantik untuk atribut
 
-Selepas memilih entiti anda, halaman **Peta** menyenaraikan entiti yang dipilih untuk ulasan anda. Takrifkan kekunci utama untuk entiti dan kenal pasti jenis semantik untuk atribut dalam entiti.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Petikan skrin entiti terpilih dengan kekunci utama tidak dipilih." lightbox="media/m3_select_primary.png":::
 
-- **Kekunci utama**: Pilih satu atribut sebagai kekunci utama untuk setiap entiti anda. Untuk atribut menjadi kekunci utama yang sah, ia tidak boleh mengandungi nilai pendua, nilai yang hilang atau nilai tak sah. Atribut jenis data rentetan, integer dan GUID disokong sebagai kekunci utama dan akan dipaparkan dalam medan untuk anda pilih.
+Untuk setiap entiti, lakukan langkah-langkah berikut.
 
-- **Jenis atribut semantik**: Kategori atribut anda, seperti alamat e-mel atau nama. Untuk menggunakan model AI untuk ramalan pintar semantik, jimatkan masa dan tingkatkan ketepatan, tetapkan **Pemetaan pintar** kepada **HIDUPKAN**. Pemetaan pintar menyerlahkan pengesyoran semantik berasaskan AI dalam medan **Jenis**. Jika anda menetapkan ia kepada **MATIKAN**, anda akan melihat pengesyoran pemetaan biasa kami. Anda boleh memilih sebarang jenis semantik daripada senarai pilihan tersedia dan mengatasi pilihan yang disyorkan.
+1. Pilih kekunci **Utama**. Kunci utama ialah atribut yang unik kepada entiti. Untuk atribut menjadi kekunci utama yang sah, ia tidak boleh mengandungi nilai pendua, nilai yang hilang atau nilai tak sah. Atribut jenis data rentetan, integer dan GUID disokong sebagai kekunci utama.
 
-> [!div class="mx-imgBorder"]
-> ![Jenis atribut dan ramalan semantik.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Jenis atribut dan ramalan semantik")
+1. Untuk menggunakan model AI untuk ramalan semantik pintar, menjimatkan masa dan meningkatkan ketepatan, memastikan **Pemetaan** pintar dihidupkan. Pemetaan pintar menyerlahkan pengesyoran semantik berasaskan AI dalam medan **Jenis**. Anda boleh mengatasi pemilihan yang dicadangkan dengan memilih mana-mana jenis semantik dari senarai pilihan yang ada.
 
-Menambah jenis semantik entiti tersuai juga boleh dilakukan. Pilih jenis medan untuk atribut itu dan taip nama jenis semantik tersuai anda. Cara ini, anda juga boleh mengubah jenis atribut yang dikenal pasti oleh sistem.
+1. Untuk setiap atribut, pilih Jenis **semantik** yang paling sesuai untuk menerangkan atribut tersebut, seperti nama, bandar atau alamat e-mel.
 
-Semua atribut yang jenis semantik dikenal pasti secara automatik dikumpulkan dalam bahagian **Ulasan medan yang dipetakan**. Mengulas atribut ini dan jenis semantik kerana ia akan digunakan untuk menggabungkan entiti anda dalam langkah gabungan data penyatuan.
+   > [!NOTE]
+   > Satu medan harus memetakan ke jenis *semantik Person.FullName* untuk mengisi nama pelanggan dalam kad pelanggan. Jika tidak, kad pelanggan akan muncul tanpa nama.
 
-Atribut yang tidak dipetakan secara automatik kepada jenis semantik dikumpulkan dalam bahagian **Takrifkan data dalam bahagian medan tidak dipetakan**. Pilih medan jenis semantik untuk atribut yang tidak dipetakan atau masukkan nama jenis atribut tersuai anda.
+   1. Untuk mengubah jenis atribut yang dikenal pasti oleh sistem, pilih jenis lain. Jika jenis tidak wujud, cipta jenis semantik tersuai dengan **memilih medan Jenis** untuk atribut dan masukkan nama jenis semantik tersuai anda.
 
-> [!div class="mx-imgBorder"]
-> ![Kekunci utama dan jenis atribut.](media/data-manager-configure-map-add-attributes.png "Kekunci utama dan jenis atribut")
+   1. Untuk menambah atribut yang mengandungi URL pada imej profil atau logo yang tersedia secara umum, pilih entiti dan medan yang mengandungi URL. Dalam medan **Jenis**, masukkan yang berikut:
+      - Untuk seseorang: ImejProfil.Seseorang
+      - Untuk organisasi: ImejLogo.Organisasi
 
-> [!NOTE]
-> Satu medan perlu dipetakan kepada jenis semantik Person.FullName untuk mengisi nama pelanggan dalam kad pelanggan. Jika tidak, kad pelanggan akan muncul tanpa nama. 
+   1. Untuk atribut nama akaun, masukkan "Organization.Name" dalam **medan Jenis**.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Tambah dan alih keluar atribut dan entiti
+1. Semak atribut di mana jenis semantik dikenal pasti secara automatik. Atribut ini disenaraikan di bawah **Semak semula medan** yang dipetakan. Hanya atribut dengan jenis yang sama boleh digabungkan dalam **langkah Medan** pelanggan Disatukan. Jenis semantik digunakan untuk mencadangkan cerapan secara automatik. Pastikan jenis yang anda pilih adalah konsisten merentasi semua entiti yang dipilih.
 
-1. Pada **Satukan** > **Peta**, pilih **Edit medan**.
+1. Untuk atribut yang tidak dipetakan secara automatik kepada jenis semantik, pilih medan jenis semantik, masukkan nama jenis atribut tersuai anda atau biarkan ia dinyahpetakan. Atribut ini disenaraikan di bawah **Takrifkan data dalam medan** yang tidak dipetakan.
 
-2. Dalam anak tetingkap **Edit medan**, tambah atau alih keluar atribut dan entiti. Gunakan carian atau tatal untuk mencari dan memilih atribut dan entiti yang anda berminat. Anda tidak boleh mengalih keluar atribut atau entiti jika ia telah dipadankan.
+1. Selepas melengkapkan langkah untuk setiap entiti, pilih **Simpan medan** sumber.
 
-   > [!div class="mx-imgBorder"]
-   > ![Tambah atau alih keluar atribut.](media/configure-data-map-edit.png "Tambah atau alih keluar atribut")
+1. Pilih **Seterusnya**.
 
-3. Pilih **Guna**.
-
-## <a name="add-images-to-profiles"></a>Tambah imej pada profil
-
-Jika entiti mengandungi URL untuk imej atau logo profil yang tersedia secara umum, anda boleh menambahnya ke profil pelanggan disatukan.
-
-Pilih entiti dan cari medan yang mengandungi URL ke imej profil. Dalam medan input **Jenis**, masukkan secara manual nilai berikut: 
-- Untuk seseorang: ImejProfil.Seseorang
-- Untuk organisasi: ImejLogo.Organisasi
-
-Teruskan dengan langkah penyatuan dan pastikan atribut yang mengandungi URL imej juga ditambah dalam langkah [Gabungan](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Tetapkan atribut untuk organisasi
-
-Untuk organisasi (Pratonton), jenis atribut hendaklah dipetakan kepada "Organization.Name"
-> [!div class="mx-imgBorder"]
-> ![Kekunci utama dan jenis atribut niaga-ke-niaga.](media/configure-data-map-edit-b2b.png "Kekunci utama dan jenis atribut niaga-ke-niaga")
-
-## <a name="next-step"></a>Langkah seterusnya
-
-Sebagai sebahagian daripada proses penyatuan data, pergi ke halaman **Padan** . Lawat [**Padan**](match-entities.md) untuk mengetahui tentang peringkat ini.
-
-> [!TIP]
-> Semak video berikut: [Bermula: Cipta Profile Pelanggan Disatukan](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Langkah seterusnya: Alih keluar pendua](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Panduan sampel ramalan pengesyoran produk
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pengesyoran produk di luar kotak.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643587"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762697"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Panduan sampel ramalan pengesyoran produk
 
@@ -40,7 +40,7 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sum
 
 1. Cipta sumber data bernama **e-Dagang**, pilih pilihan import dan pilih penyambung **Teks/CSV**.
 
-1. Masukkan URL untuk kenalan e-Dagang https://aka.ms/ciadclasscontacts.
+1. Masukkan URL untuk kenalan eCommerce: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
 
@@ -50,15 +50,15 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sum
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Ubah tarikh lahir kepada tarikh ini.":::
 
-5. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
+1. Dalam medan 'Nama' pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
 
-6. **Simpan** sumber data.
+1. **Simpan** sumber data.
 
 ### <a name="ingest-online-purchase-data"></a>Inges data pembelian dalam talian
 
 1. Tambahkan set data lain pada sumber data **e-Dagang** yang sama. Pilih penyambung **Teks/CSV** semula.
 
-1. Masukkan URL untuk data **Pembelian Dalam Talian** https://aka.ms/ciadclassonline.
+1. Masukkan URL untuk **data Pembelian** Dalam Talian [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
 
@@ -70,12 +70,11 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sum
 
 1. **Simpan** sumber data.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingest data pelanggan daripada skema kesetiaan
 
 1. Cipta sumber data bernama **LoyaltyScheme**, pilih pilihan import dan pilih penyambung **Teks/CSV**.
 
-1. Masukkan URL untuk kenalan e-Dagang https://aka.ms/ciadclasscustomerloyalty.
+1. Masukkan URL untuk kenalan eCommerce [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
 
@@ -90,64 +89,11 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sum
 
 ## <a name="task-2---data-unification"></a>Tugas 2 - Penyatuan data
 
-Selepas pengingesan data, kami kini memulakan proses penyatuan data untuk mencipta profil pelanggan yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Penyatuan data](data-unification.md).
-
-### <a name="map"></a>Petakan
-
-1. Selepas menginges data, petakan kenalan daripada data e-Dagang dan Kesetiaan kepada jenis data umum. Pergi ke **Data** > **Satukan** > **Peta**.
-
-2. Pilih entiti yang mewakili profil pelanggan – **eCommerceContacts** dan **loyCustomers**.
-
-   ![menyatukan sumber data e-Dagang dan kesetiaan.](media/unify-ecommerce-loyalty.png)
-
-3. Pilih **ContactId** sebagai kunci utama untuk **eCommerceContacts** dan **LoyaltyID** sebagai kunci utama untuk **loyCustomers**.
-
-   ![Menyatukan LoyaltyId sebagai kunci utama.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Padankan
-
-1. Pergi ke tab **Padanan** dan pilih **Tetapkan Urutan**.
-
-2. Dalam senarai juntai bawah **Utama**, pilih **eCommerceContacts : eCommerce** sebagai sumber utama dan sertakan semua rekod.
-
-3. Dalam senarai juntai bawah **Entiti 2**, pilih **loyCustomers : LoyaltyScheme** dan sertakan semua rekod.
-
-   ![Menyatukan padanan e-Dagang dan Kesetiaan.](media/unify-match-order.png)
-
-4. Pilih **Cipta peraturan baharu**
-
-5. Tambah syarat pertama anda menggunakan FullName.
-
-   - Untuk eCommerceContacts pilih **FullName** dalam menu juntai bawah.
-   - Untuk loyCustomers pilih **FullName** dalam menu juntai bawah.
-   - Pilih senarai juntai bawah **Menormalkan** dan pilih **Jenis (Telefon, Nama, Alamat, ...)**.
-   - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
-
-6. Masukkan nama **FullName, Email** untuk peraturan baharu.
-
-   - Tambah syarat kedua untuk alamat e-mel dengan memilih **Tambah Syarat**
-   - Untuk entiti eCommerceContacts, pilih **EMail** dalam menu juntai bawah.
-   - Untuk entiti loyCustomers, pilih **EMail** dalam menu juntai bawah.
-   - Biarkan Menormalkan kosong.
-   - Tetapkan **Tahap Kepersisan** : **Asas** dan **Nilai** : **Tinggi**.
-
-   ![Menyatukan peraturan padanan untuk nama dan e-mel.](media/unify-match-rule.png)
-
-7. Pilih **Simpan** dan **Jalankan**.
-
-### <a name="merge"></a>Gabungkan
-
-1. Pergi ke tab **Gabungan**.
-
-1. Pada **ContactId** untuk entiti **loyCustomers**, tukar nama paparan kepada **ContactIdLOYALTY** untuk membezakannya daripada ID lain yang diinges.
-
-   ![namakan semula contactid daripada ID kesetiaan.](media/unify-merge-contactid.png)
-
-1. Pilih **Simpan** dan **Jalankan** untuk memulakan Proses Gabungan.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Tugas 3 - Mengkonfigurasikan ramalan pengesyoran produk
 
-Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan.
+Dengan adanya profil pelanggan yang bersatu, kami kini boleh menjalankan cadangan produk ramalan.
 
 1. Pergi ke **Kecerdasan** > **Ramalan** pilih **Pengesyoran produk**.
 
@@ -162,27 +108,36 @@ Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pu
    - **Pembelian berulang dijangka**: Pilih **Ya** untuk menunjukkan bahawa anda ingin menyertakan produk dalam pengesyoran yang dibeli oleh pelanggan anda sebelum ini.
 
    - **Tetingkap lihat kembali:** Pilih sekurang-kurangnya **365 hari**. Tetapan ini menakrifkan sejauh mana model akan melihat kembali pada aktiviti pelanggan untuk menggunakannya sebagai input kepada pengesyoran mereka.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Keutaaman model untuk model pengesyoran produk.":::
 
-1. Pilih **Data yang diperlukan** dan pilih **Tambah data** untuk sejarah pembelian.
+1. Dalam langkah Tambah data **yang** diperlukan, pilih **Tambah data**.
 
-1. Tambah entiti **eCommercePurchases : e-Dagang** dan petakan medan daripada e-Dagang kepada medan berkaitan yang diperlukan oleh model.
+1. **Dalam anak tetingkap Tambah data**, pilih **SalesOrderLine** sebagai entiti sejarah pembelian. Pada ketika ini, ia mungkin belum dikonfigurasikan. Buka pautan dalam anak tetingkap untuk mencipta aktiviti dengan langkah berikut:
+   1. **Masukkan nama** Aktiviti dan pilih *eCommercePurchases:eCommerce* sebagai **entiti** Aktiviti. Kekunci **Utama** ialah *PurchaseId*.
+   1. Tentukan dan namakan hubungan dengan *eCommerceContacts:eCommerce entiti* dan pilih **ContactId** sebagai kunci asing.
+   1. Untuk penyatuan Aktiviti, tetapkan **aktiviti** Acara sebagai *TotalPrice* dan Cap Masa kepada *PurchasedOn*. Anda boleh menentukan lebih banyak medan seperti yang digariskan dalam [aktiviti](activities.md) Pelanggan.
+   1. Untuk **Jenis** Aktiviti, pilih *SalesOrderLine*. Petakan medan aktiviti berikut:
+      - ID baris pesanan: PurchaseId
+      - ID Pesanan: PurchaseId
+      - Data pesanan: PurchasedOn
+      - ID Produk: ProductId
+      - Amaun: TotalPrice
+   1. Semak dan selesaikan aktiviti sebelum kembali ke konfigurasi model.
 
-1. Sertai entiti **eCommercePurchases : e-Dagang** dengan **eCommerceContacts : e-Dagang**.
+1. Kembali dalam **langkah Pilih aktiviti**, pilih aktiviti yang baru dibuat dalam bahagian **Aktiviti**. Pilih **Seterusnya** dan pemetaan atribut telah diisi. Pilih **Simpan**.
 
-   ![Sertai entiti e-Dagang.](media/model-purchase-join.png)
+1. Dalam panduan sampel ini, kami melangkau **set Tambah maklumat** produk dan **penapis** Produk kerana kami tidak mempunyai data maklumat produk.
 
-1. Pilih **Seterusnya** untuk menetapkan jadual model.
+1. **Dalam langkah Kemas kini** data, tetapkan jadual model.
 
    Model perlu dilatih secara tetap untuk belajar pola baharu apabila terdapat data baharu yang diinges. Untuk contoh ini, pilih **Bulanan**.
 
-1. Selepas menyemak semula semua butiran, pilih **Simpan dan Jalankan**.
-
+1. Selepas menyemak semula semua butiran, pilih **Simpan dan Jalankan**. Ia akan mengambil masa beberapa minit untuk menjalankan model pada kali pertama.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Tugas 4 - Semak semula hasil dan penerangan model
 
-Biarkan model melengkapkan latihan dan pemarkahan data. Anda kini boleh menyemak penerangan model pengesyoran pelanggan. Untuk mendapatkan maklumat lanjut, lihat [Semak semula status dan keputusan ramalan](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Biarkan model melengkapkan latihan dan pemarkahan data. Anda kini boleh menyemak penerangan model pengesyoran pelanggan. Untuk mendapatkan maklumat lanjut, lihat [Semak semula status dan keputusan ramalan](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Tugas 5 - Cipta segmen produk yang dibeli tinggi
 
@@ -190,21 +145,19 @@ Menjalankan model pengeluaran mewujudkan entiti baharu yang anda boleh lihat dal
 
 Anda boleh mencipta segmen baharu berdasarkan entiti yang dicipta oleh model.
 
-1. Pergi ke **Segmen**. Pilih **Baharu** dan pilih **Cipta daripada** > **Kecerdasan**.
+1. Pergi ke **Segmen**. Pilih **Baru** dan pilih **Cipta daripada Perisikan**.
 
    ![Mencipta segmen dengan output model.](media/segment-intelligence.png)
 
 1. Pilih titik tamat **OOBProductRecommendationModelPrediction** dan takrifkan segmen:
 
    - Medan: ProductID
-   - Operatori: Nilai
    - Nilai: Pilih tiga ID produk teratas
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Cipta segmen daripada hasil model.":::
 
-Anda kini mempunyai segmen yang secara dinamik dikemas kini yang mengenal pasti pelanggan yang lebih bersedia untuk membeli tiga produk paling disyorkan 
+Anda kini mempunyai segmen yang dikemas kini secara dinamik yang mengenal pasti pelanggan yang mungkin berminat untuk membeli tiga produk yang paling disyorkan.
 
 Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

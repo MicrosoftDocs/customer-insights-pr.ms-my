@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643060"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739219"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
@@ -35,9 +35,6 @@ Anda boleh menambah sumber data berikut:
 - [Daripada folder Common Data Model](connect-common-data-model.md)
 - [Daripada lake Microsoft Dataverse anda sendiri](connect-dataverse-managed-lake.md)
 - [Azure Synapse Analytics Daripada pangkalan data](connect-synapse.md)
-
-> [!NOTE]
-> Jika anda menggunakan versi percubaan, seksyen kaedah import termasuk **opsyen pustaka** data Wawasan Pelanggan. Pilih opsyen ini untuk memilih set data sampel yang tersedia untuk pelbagai industri. Untuk maklumat lanjut, lihat [Dynamics 365 Customer Insights percubaan](trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Tambah data daripada sumber data di premis
 

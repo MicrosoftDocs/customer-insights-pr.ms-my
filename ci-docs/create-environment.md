@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643099"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712913"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Mencipta persekitaran dalam Wawasan Pelanggan
 
@@ -63,8 +63,7 @@ Anda akan mempunyai dua pilihan: **Storan Customer Insights** (Azure danau data 
 Dengan menyimpan data kepada Azure Data Lake Storage, anda bersetuju bahawa data akan dipindahkan ke dan disimpan dalam lokasi geografi yang sesuai untuk akaun storan Azure tersebut. Lokasi ini mungkin berbeza dari mana data yang disimpan dalam Dynamics 365 Customer Insights. Ketahui lebih lanjut [Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights sedang menyokong yang berikut:
-> - Entiti yang diinjes daripada aliran data Power BI yang disimpan dalam Data Lake terurus Microsoft Dataverse.  
+> Customer Insights sedang menyokong yang berikut:  
 > - Azure Data Lake Storage akaun daripada rantau Azure yang sama yang anda pilih semasa mencipta persekitaran.
 > - Azure Data Lake Storage akaun yang Gen2 dan mempunyai *ruang* nama hierarki didayakan. Akaun storan Azure Data Lake Gen1 tidak disokong.
 
@@ -80,7 +79,7 @@ Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insi
 
 Sediakan persekitaran anda sendiri Microsoft Dataverse untuk berkongsi data (profil dan cerapan) dengan aplikasi perniagaan berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berpandukan model dalam Power Apps. Biarkan medan ini kosong jika anda tidak mempunyai persekitaran anda sendiri Dataverse dan kami akan menyediakan satu untuk anda.
 
-Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data daripada sumber data di premis menggunakan Power Platform aliran data dan get laluan](data-sources.md#add-data-from-on-premises-data-sources). Anda juga boleh menggunakan [model](predictions-overview.md?tabs=b2c#out-of-box-models) ramalan di luar kotak dengan Dataverse menyambung ke persekitaran.
+Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data daripada sumber data di premis menggunakan Power Platform aliran data dan get laluan](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Wawasan Pelanggan dan Dataverse perlu berada di rantau yang sama untuk mendayakan perkongsian data.

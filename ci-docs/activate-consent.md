@@ -1,23 +1,22 @@
 ---
 title: Aktifkan peraturan persetujuan untuk segmen
 description: Ikuti langkah-langkah ini untuk memautkan data persetujuan dan mengaktifkan semakan persetujuan dalam Dynamics 365 Customer Insights. Pentadbir juga boleh menyahdayakan semakan persetujuan.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643117"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755181"
 ---
 # <a name="activate-consent-rules"></a>Aktifkan peraturan persetujuan
 
-[Pusat Persetujuan (pratonton)](consent-management/overview.md) membantu anda mengharmonikan data persetujuan daripada pelbagai sumber. Gunakan entiti Persetujuan *bersatu* untuk menggunakan semakan persetujuan lalai. Selepas mengimport data persetujuan ke dalam Pusat Persetujuan dan mengkonfigurasi peraturan untuk data, *entiti Persetujuan* disegerakkan secara automatik ke Dynamics 365 Customer Insights.
+[Pusat Persetujuan (pratonton)](consent-management/overview.md) membantu anda mengharmonikan data persetujuan daripada pelbagai sumber. Gunakan entiti Persetujuan *bersatu* untuk menggunakan semakan persetujuan lalai. Selepas mengimport data persetujuan dan mengkonfigurasi peraturan peta, *entiti Persetujuan* disegerakkan secara automatik ke Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Dayakan semakan persetujuan
 

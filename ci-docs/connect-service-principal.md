@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643351"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739173"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Sambung ke akaun Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure
 
@@ -40,7 +40,7 @@ Sebelum mencipta prinsipal perkhidmatan baru untuk Wawasan Pelanggan, semak sama
 
 3. Di bawah **Urus**, pilih **Aplikasi Enterprise**.
 
-4. Cari ID `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` aplikasi Microsoft dengan nama `Dynamics 365 AI for Customer Insights`.
+4. Tambah penapis untuk **ID Aplikasi bermula dengan**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` atau cari nama `Dynamics 365 AI for Customer Insights`.
 
 5. Jika anda mendapati rekod yang sepadan, ia bermaksud bahawa prinsipal perkhidmatan sudah wujud. 
    

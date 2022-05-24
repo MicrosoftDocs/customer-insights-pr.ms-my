@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643369"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757443"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
 
@@ -23,7 +23,7 @@ ms.locfileid: "8643369"
 
 Model data yang dikongsi ini membolehkan aplikasi dan penyepadu data bekerjasama dengan lebih mudah dengan menyediakan definisi data yang disatukan. Model Data Lazim termasuk sistem metadata yang kaya dengan entiti standard, perhubungan, hierarki, sifat, dan banyak lagi. Ia berasal dari aplikasi Dynamics 365 dan bersumber terbuka pada GitHub dengan lebih daripada 260 entiti standard. Sistem besar rakan kongsi dalaman dan luaran menyumbang konsep khusus industri kepada Model Data Lazim.
 
-Berbilang sistem dan platform melaksanakan Model Data Biasa hari ini, termasuk Perkhidmatan aliran data Power BI dan Data Azure. Ia telah disokong dalam Microsoft Dataverse, Dynamics 365, Power Apps, Power BI dan perkhidmatan data Azure yang akan datang, mengakru nilai secara langsung ke arah [Inisiatif Data Terbuka](https://www.microsoft.com/open-data-initiative).
+Berbilang sistem dan platform melaksanakan Model Data Biasa hari ini, termasuk Perkhidmatan aliran data Power BI dan Data Azure. Ia telah disokong dalam Microsoft Dataverse, Dynamics 365, Power Apps, Power BI dan perkhidmatan data Azure yang akan datang, mengakru nilai secara langsung ke arah [Inisiatif Data Terbuka](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Skema entiti Customer Insights
 

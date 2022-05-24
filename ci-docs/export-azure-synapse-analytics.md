@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643164"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741514"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (Pratonton)
 
@@ -34,7 +34,7 @@ Dalam Azure:
 
 - Langganan Azure yang aktif.
 
-- Jika menggunakan akaun Gen2 baharu Azure Data Lake Storage, *prinsipal perkhidmatan untuk Wawasan* Pelanggan memerlukan **keizinan Penyumbang** Data Blob Storan. Ketahui lanjut tentang [menyambung ke akaun Azure Data Lake Storage Gen2 dengan prinsipal perkhidmatan Azure untuk wawasan khalayak](connect-service-principal.md). Data Lake Storage Gen2 **mesti mempunyai** [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace) didayakan.
+- Jika menggunakan akaun Gen2 baharu Azure Data Lake Storage, *prinsipal perkhidmatan untuk Wawasan* Pelanggan memerlukan **keizinan Penyumbang** Data Blob Storan. Ketahui lebih lanjut tentang [menyambung ke Azure Data Lake Storage akaun Gen2 dengan prinsipal perkhidmatan Azure untuk Wawasan](connect-service-principal.md) Pelanggan. Data Lake Storage Gen2 **mesti mempunyai** [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace) didayakan.
 
 - Pada kumpulan sumber di mana Azure Synapse ruang kerja berada, *prinsipal* perkhidmatan dan *Azure AD pengguna dengan keizinan pentadbir dalam Wawasan* Pelanggan perlu diperuntukkan sekurang-kurangnya **keizinan Pembaca**. Untuk maklumat lanjut, lihat [Tugaskan peranan Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 

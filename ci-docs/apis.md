@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643272"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755461"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights menyediakan API untuk membina aplikasi anda sendi
 > [!IMPORTANT]
 > Butiran API ini, disenaraikan pada [rujukan API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Ia termasuk maklumat tambahan mengenai operasi, parameter dan respons.
 
-Artikel ini menerangkan cara mengakses API Customer Insights, mencipta Pendaftaran Aplikasi Azure dan bermula dengan pustaka klien yang tersedia.
+Artikel ini menerangkan cara mengakses API Wawasan Pelanggan, mencipta Pendaftaran Aplikasi Azure dan bermula dengan pustaka klien.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Mula mencuba Customer Insights API
 
@@ -83,13 +83,13 @@ Anda boleh menggunakan Aplikasi/ID Klien untuk pendaftaran aplikasi ini dengan P
 
 Untuk mendapatkan maklumat lanjut tentang MSAL, lihat [Gambaran Keseluruhan Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Untuk mendapatkan maklumat lanjut tentang pendaftaran aplikasi dalam Azure, lihat [Daftar aplikasi](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Untuk mendapatkan maklumat lanjut tentang pendaftaran aplikasi dalam Azure, lihat [Daftar aplikasi](/graph/auth-register-app-v2).
 
 Untuk mendapatkan maklumat tentang penggunaan API dalam pustaka klien kami, lihat [Pustaka klien Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Keizinan aplikasi pelayan ke pelayan
 
-[Bahagian pendaftaran aplikasi](#create-a-new-app-registration-in-the-azure-portal) menggariskan cara untuk mendaftar aplikasi yang memerlukan pengguna mendaftar masuk untuk pengesahan. Ketahui cara untuk mencipta pendaftaran aplikasi yang tidak memerlukan interaksi pengguna dan boleh dijalankan pada pelayan.
+[Bahagian pendaftaran aplikasi](#create-a-new-app-registration-in-the-azure-portal) menggariskan cara untuk mendaftar aplikasi yang memerlukan pengguna mendaftar masuk untuk pengesahan. Ketahui cara membuat pendaftaran aplikasi yang tidak memerlukan interaksi pengguna dan boleh dijalankan pada pelayan.
 
 1. Pada pendaftaran Aplikasi anda dalam portal Azure, pergi ke **Keizinan API**.
 
@@ -112,6 +112,10 @@ Untuk mendapatkan maklumat tentang penggunaan API dalam pustaka klien kami, liha
    Buka Customer Insights, pergi ke **Pentadbir** > **Keizinan** dan pilih **Tambah pengguna**.
 
 1. Cari nama pendaftaran aplikasi anda, pilih nama daripada hasil carian dan pilih **Simpan**.
+
+## <a name="sample-queries"></a>Pertanyaan sampel
+
+Kami telah menyusun senarai pendek pertanyaan sampel OData untuk bekerja dengan API: [Contoh pertanyaan OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Pustaka klien Customer Insights
 
@@ -137,7 +141,7 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
 
 1. Gunakan [Pustaka Pengesahan Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) untuk memperoleh `AccessToken` menggunakan [pendaftaran aplikasi Azure](#create-a-new-app-registration-in-the-azure-portal) anda yang sedia ada.
 
-1. Selepas berjaya mengesahkan dan memperoleh token, bina yang baharu atau gunakan yang sedia ada `HttpClient` dengan set "Kebenaran"**DefaultRequestHeaders tambahan** kepada **"token akses"** pembawa dan **set Ocp-Apim-Subscription-Key** kepada [**kunci** langganan daripada persekitaran](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan anda.   
+1. Selepas berjaya mengesahkan dan memperoleh token, bina yang baharu atau gunakan yang sedia ada `HttpClient` dengan **set "Kebenaran"** DefaultRequestHeaders kepada **"token akses"** pembawa dan **set Ocp-Apim-Subscription-Key** kepada [**kunci** langganan daripada persekitaran](#get-started-trying-the-customer-insights-apis) Wawasan Pelanggan anda.   
  
    Tetapkan semula pengepala **Pengesahan** apabila sesuai. Contohnya, apabila token tamat tempoh.
 
@@ -147,7 +151,7 @@ Ketahui cara untuk mula menggunakan pustaka klien C# daripada NuGet.org. Untuk m
 
 1. Buat panggilan dengan klien pada "kaedah lanjutan"—contohnya, `GetAllInstancesAsync`. Jika akses kepada dasar `Microsoft.Rest.HttpOperationResponse` diutamakan, gunakan "kaedah mesej http"—contohnya, `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Respons mungkin akan menjadi jenis `object` kerana kaedah boleh kembali pelbagai jenis (contohnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk menyemak jenis pengembalian, anda boleh menyiarkan objek dengan selamat ke dalam jenis respons yang ditentukan pada [halaman butiran API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) untuk operasi tersebut.    
+1. Respons mungkin akan menjadi jenis `object` kerana kaedah boleh kembali pelbagai jenis (contohnya, `IList<InstanceInfo>` dan `ApiErrorResult`). Untuk menyemak jenis pemulangan, anda menggunakan objek dalam jenis respons yang ditentukan pada halaman [butiran API untuk operasi tersebut](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights).    
    
    Jika maklumat lanjut mengenai permintaan diperlukan, gunakan **kaedah mesej http** untuk mengakses objek respons mentah.
 

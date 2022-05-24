@@ -1,7 +1,7 @@
 ---
 title: Lihat profil pelanggan
 description: Dapatkan pandangan gabungan data pelanggan disatukan anda.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643073"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755793"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -29,7 +29,7 @@ Pelanggan boleh menjadi individu atau organisasi. Setiap profil pelanggan diwaki
 
 Pilih jubin untuk melihat data untuk pelanggan yang dipilih dalam halaman khusus yang dipanggil [Halaman butiran pelanggan](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Halaman pelanggan menunjukkan jubin hasil](media/customers-page-result-tiles-B2C.png "Halaman pelanggan menunjukkan jubin hasil")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Pilih jubin untuk melihat data untuk pelanggan yang dipilih dalam halaman khusus
 
 ## <a name="search-for-customers"></a>Carian untuk pelanggan
 
-Carian untuk pelanggan dengan memasukkan nama atau beberapa atribut yang lain dalam kotak carian. Carian hanya berfungsi dalam entiti _Pelanggan_ yang dicipta semasa proses data penyatuan.
+Carian untuk pelanggan dengan memasukkan nama atau beberapa atribut yang lain dalam kotak carian. Carian hanya berfungsi dalam entiti *Pelanggan* yang dicipta semasa proses data penyatuan.
 
 Sebagai pentadbir, anda boleh konfigurasikan atribut boleh dicari menggunakan halaman **Indeks Carian & Tapis**. Untuk mendapatkan maklumat lanjut, pergi ke [Urus indeks carian & penapis](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Tapis pelanggan
 
-Anda boleh menapis pelanggan mengikut medan entiti _Pelanggan_. Sama seperti carian, pada mulanya pentadbir anda perlu menakrif medan sebagai boleh ditapis menggunakan halaman **Indeks Carian & Tapis**.
+Anda boleh menapis pelanggan mengikut medan entiti *Pelanggan*. Sama seperti carian, pada mulanya pentadbir anda perlu menakrif medan sebagai boleh ditapis menggunakan halaman **Indeks Carian & Tapis**.
 
 1. Pilih **Tunjuk penapis** pada halaman **Pelanggan**.
 
@@ -55,24 +55,25 @@ Anda boleh menapis pelanggan mengikut medan entiti _Pelanggan_. Sama seperti car
 
 Pilih sebarang jubin pelanggan untuk membuka **halaman butiran pelanggan**. Pandangan ini mengandungi maklumat disatukan untuk pelanggan terpilih. Butiran pelanggan termasuk kandungan berikut:
 
-**Jubin profil pelanggan** : Jubin ini menunjukkan nilai berbeza daripada entiti _Pelanggan_ disatukan. Jika medan tidak mempunyai nilai untuk profil pelanggan yang dipilih, ia tidak akan dipaparkan. Jubin disusun ke dalam bahagian:  
-  - Bahagian pertama menunjukkan set medan ditetapkan semula diikuti oleh semua medan yang merupakan sebahagian daripada indeks carian & penapis. Semua medan berkaitan alamat digabungkan ke dalam satu baris tunggal jika profil mengandungi medan tersebut. 
-  - **Kenalan untuk pelanggan ini** : Dalam persekitaran untuk akaun perniagaan, anda akan melihat semua kenalan yang berkaitan untuk pelanggan ini sebagai bahagian kedua. Setiap kenalan ditunjukkan dengan medan mereka. Medan kosong disembunyikan.
-  - **Medan tambahan** : Menunjukkan medan selebihnya bagi pelanggan yang dipilih kecuali ID. 
-  - **ID** : Senaraikan semua ID di bawah nama entiti sepadan mereka. Medan dikenal pasti sebagai ID oleh semantik mereka yang mengkategorikan mereka sedemikian.
+**Jubin profil pelanggan** : Jubin ini menunjukkan nilai berbeza daripada entiti *Pelanggan* disatukan. Jika medan tidak mempunyai nilai untuk profil pelanggan yang dipilih, ia tidak akan dipaparkan. Jubin disusun ke dalam bahagian:
+
+- Bahagian pertama menunjukkan set medan ditetapkan semula diikuti oleh semua medan yang merupakan sebahagian daripada indeks carian & penapis. Semua medan berkaitan alamat digabungkan ke dalam satu baris tunggal jika profil mengandungi medan tersebut.
+- **Kenalan untuk pelanggan ini** : Dalam persekitaran untuk akaun perniagaan, anda akan melihat semua kenalan yang berkaitan untuk pelanggan ini sebagai bahagian kedua. Setiap kenalan ditunjukkan dengan medan mereka. Medan kosong disembunyikan.
+- **Medan tambahan** : Menunjukkan medan selebihnya bagi pelanggan yang dipilih kecuali ID.
+- **ID** : Senaraikan semua ID di bawah nama entiti sepadan mereka. Medan dikenal pasti sebagai ID oleh semantik mereka yang mengkategorikan mereka sedemikian.
 
 **Garis masa aktiviti** : Menunjukkan data jika anda telah mengkonfigurasi aktiviti. Pandangan garis masa mengandungi aktiviti yang diisih secara kronologi pelanggan yang dipilih, bermula dengan aktiviti paling terkini. Untuk mendapatkan maklumat lanjut, pergi ke [Aktiviti pelanggan](activities.md).
 
-**Cerapan**:  
-  - **Ukuran** : Menunjukkan jika anda mengkonfigurasikan satu atau lebih ukuran ukuran atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk mendapatkan maklumat lanjut, pergi ke [Takrifkan dan uruskan ukuran](measures.md).
+**Cerapan**:
 
-  - **Minat yang berpotensi, jenama berpotensi** : Menunjukkan jika anda mengkonfigurasi jenama atau pengayaan afiniti yang diminati. Ia mewakili minat berpotensi dan afiniti untuk jenama yang berdasarkan kepada pelanggan lain yang profil serupa dengan profil pelanggan yang dipilih. Untuk mendapatkan maklumat lanjut, pergi ke [Perkayakan profil pelanggan dengan jenama dan afiniti minat](enrichment-microsoft.md).
+- **Ukuran** : Menunjukkan jika anda mengkonfigurasikan satu atau lebih ukuran ukuran atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk mendapatkan maklumat lanjut, pergi ke [Takrifkan dan uruskan ukuran](measures.md).
+
+- **Minat yang berpotensi, jenama berpotensi** : Menunjukkan jika anda mengkonfigurasi jenama atau pengayaan afiniti yang diminati. Ia mewakili minat berpotensi dan afiniti untuk jenama yang berdasarkan kepada pelanggan lain yang profil serupa dengan profil pelanggan yang dipilih. Untuk mendapatkan maklumat lanjut, pergi ke [Perkayakan profil pelanggan dengan jenama dan afiniti minat](enrichment-microsoft.md).
 
 Untuk kembali ke halaman carian pelanggan, pilih **Kembali kepada Pelanggan**.
 
 ## <a name="next-steps"></a>Langkah seterusnya
 
 [Tambah lebih banyak sumber data](data-sources.md), [perkayakan profil disatukan](enrichment-hub.md) atau [cipta segmen](segments.md) untuk berfungsi dengan profil pelanggan disatukan dalam aplikasi lain.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643053"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755697"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (pratonton)
 
@@ -23,10 +23,10 @@ Gunakan data daripada sumber seperti Microsoft dan rakan kongsi lain untuk mempe
 
 Anda mesti mempunyai keizinan Penyumbang atau Pentadbir untuk mencipta atau mengedit pengayaan. Untuk maklumat lanjut, lihat [Keizinan](permissions.md).  
 
-1. Pergi ke **DataUnify** > **·**. Pilih entiti yang anda ingin memperkayakan dan pilih satu atribut sebagai kunci utama untuk entiti. Untuk maklumat lanjut, lihat [Pilih kekunci utama](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Pergi ke **Data** > **Unify**. Pilih entiti yang anda ingin memperkayakan dan pilih satu atribut sebagai kunci utama untuk entiti. Untuk maklumat lanjut, lihat [Pilih kekunci utama](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Pergi **Data** > **Sumber data**.
- 
+
 1. Pilih elipsis menegak di sebelah sumber data anda ingin memperkayakan dan pilih **Memperkayakan**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Halaman pengayaan sumber data.":::

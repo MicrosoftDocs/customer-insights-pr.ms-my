@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643279"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755509"
 ---
 # <a name="customer-activities"></a>Aktiviti pelanggan
 
-Gabungkan aktiviti pelanggan daripada [pelbagai sumber data](data-sources.md) dalam Dynamics 365 Customer Insights untuk mencipta garis masa yang menyenaraikan aktiviti secara kronologi. Sertakan garis masa dalam aplikasi Dynamics 365 dengan penyelesaian [Kad Pelanggan tambahan](customer-card-add-in.md) atau dalam papan pemuka Power BI.
+Gabungkan aktiviti pelanggan daripada [pelbagai sumber data](data-sources.md) dalam Dynamics 365 Customer Insights. Buat garis masa yang menyenaraikan aktiviti secara kronologi. Sertakan garis masa dalam aplikasi Dynamics 365 dengan [penyelesaian tambahan](customer-card-add-in.md) Kad Pelanggan.
 
 ## <a name="define-an-activity"></a>Takrifkan aktiviti
 
@@ -34,7 +34,7 @@ Sumber data anda boleh termasuk entiti dengan data transaksi dan aktiviti daripa
 
 Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang akan dimasukkan dalam garis masa pelanggan dan anda tidak boleh menambah entiti tanpa medan **Tarikh**. Kawalan **Tambah aktiviti** dinyahdayakan jika tiada entiti sedemikian ditemui.
 
-1. Pergi ke **DataActivities** > **·**.
+1. Pergi ke **Aktiviti Data** > **·**.
 
 1. Pilih **Tambah aktiviti** untuk memulakan pengalaman berpandu untuk proses persediaan aktiviti.
 
@@ -78,7 +78,7 @@ Entiti mesti mempunyai sekurang-kurangnya satu atribut jenis **Tarikh** yang aka
 
 1. Pilih **Seterusnya** untuk beralih ke langkah yang seterusnya. Anda boleh memilih **Selesai dan semak** untuk menyimpan aktiviti sekarang dengan jenis aktiviti yang ditetapkan kepada **Lain-lain**. 
 
-1. Dalam langkah **Jenis Aktiviti**, pilih jenis aktiviti dan secara pilihan, pilih jika anda mahu memetakan secara semantik sebahagian daripada jenis aktiviti untuk digunakan dalam bahagian lain dalam Customer Insights. Pada masa ini, jenis aktiviti *Maklum Balas*, *Kesetiaan*, *SalesOrder*, *SalesOrderLine*, dan *Langganan* boleh dipetakan secara semantik selepas bersetuju untuk memetakan medan. Jika jenis aktiviti tidak berkaitan dengan aktiviti baharu, anda boleh memilih *Lain-lain* atau *Cipta baharu* untuk jenis aktiviti yang tersuai.
+1. Dalam langkah **Jenis Aktiviti**, pilih jenis aktiviti dan secara pilihan, pilih jika anda mahu memetakan secara semantik sebahagian daripada jenis aktiviti untuk digunakan dalam bahagian lain dalam Customer Insights. *Pada masa ini,* Maklum Balas *,* Kesetiaan *, JurujualOrder*, *SalesOrderLine*, dan *jenis aktiviti Langganan* menyokong semantik selepas bersetuju untuk memetakan medan. Jika jenis aktiviti tidak berkaitan dengan aktiviti baharu, anda boleh memilih *Lain-lain* atau *Cipta baharu* untuk jenis aktiviti yang tersuai.
 
 1. Pilih **Seterusnya** untuk beralih ke langkah yang seterusnya. 
 
@@ -110,7 +110,7 @@ Selepas anda mengkonfigurasi aktiviti pelanggan, pilih **Tunjuk pada garis masa 
 
 Untuk membuka garis masa untuk pelanggan, pergi ke **Pelanggan** dan pilih profil pelanggan yang anda mahu lihat.
 
-Jika pelanggan telah mengambil bahagian dalam aktiviti yang telah anda konfigurasikan, anda akan menemuinya dalam bahagian **Garis masa aktiviti**.
+Jika pelanggan telah mengambil bahagian dalam aktiviti yang dikonfigurasikan, anda akan menemuinya dalam **bahagian Garis masa** Aktiviti.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Lihat aktiviti yang dikonfigurasikan dalam Profil Pelanggan.":::
 
