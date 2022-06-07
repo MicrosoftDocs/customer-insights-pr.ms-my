@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653488"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763590"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Bawa Azure key vault anda sendiri (pratonton)
 
@@ -31,17 +31,17 @@ Untuk mengkonfigurasi ruang simpan utama dalam Wawasan Pelanggan, prasyarat beri
 
 - Anda mempunyai langganan Azure aktif.
 
-- Anda mempunyai [peranan Pentadbir](permissions.md#admin) dalam Wawasan Pelanggan. Ketahui lebih lanjut tentang [keizinan pengguna dalam Wawasan](permissions.md#assign-roles-and-permissions) Pelanggan.
+- Anda mempunyai [peranan Pentadbir](permissions.md#admin) dalam Wawasan Pelanggan. Ketahui lebih lanjut tentang [keizinan pengguna dalam Wawasan Pelanggan](permissions.md#assign-roles-and-permissions).
 
 - Anda mempunyai [Penyumbang](/azure/role-based-access-control/built-in-roles#contributor) dan peranan [Pentadbir Akses Pengguna](/azure/role-based-access-control/built-in-roles#user-access-administrator) pada key vault atau kumpulan sumber pemilik key vault. Untuk mendapatkan maklumat lanjut, pergi ke [Tambah atau alih keluar tugasan peranan Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal). Jika anda tidak mempunyai peranan Pentadbir Akses Pengguna pada key vault, anda mesti menyediakan keizinan kawalan akses berdasarkan peranan untuk prinsipal perkhidmatan Azure untuk Dynamics 365 Customer Insights secara berasingan. Ikuti langkah untuk [menggunakan prinsipal perkhidmatan Azure](connect-service-principal.md) untuk key vault yang sepatutnya dipautkan.
 
 - Key vault mesti mempunyai tembok api Key Vault **dinyahdayakan**.
 
-- Ruang simpan utama berada dalam lokasi [Azure yang sama](https://azure.microsoft.com/global-infrastructure/geographies/#overview) dengan persekitaran Wawasan Pelanggan. Kawasan persekitaran dalam Wawasan Pelanggan disenaraikan di bawah **AdminSystemAboutRegion** > **·** > **·** > **·**.
+- Ruang simpan utama berada dalam lokasi [Azure yang sama](https://azure.microsoft.com/global-infrastructure/geographies/#overview) dengan persekitaran Wawasan Pelanggan. Kawasan persekitaran dalam Wawasan Pelanggan disenaraikan di bawah **Sistem** > **Pentadbir** > **Perihal** > **Wilayah**.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Pautkan key vault ke persekitaran
 
-1. Pergi ke **AdminSecurity** > **·**, kemudian pilih **tab Peti Besi** Kunci.
+1. Pergi ke **Keselamatan** > **Pentadbir**, kemudian pilih **tab Peti Besi** Kunci.
 1. Pada jubin **Key Vault**, pilih **Sediakan**.
 1. Pilih **Langganan**.
 1. Pilih key vault daripada senarai juntai bawah **Key Vault**. Jika terlalu banyak key vaults ditunjukkan, pilih kumpulan sumber untuk mengehadkan hasil carian.
@@ -89,9 +89,9 @@ Keizinan berikut diberikan kepada Wawasan Pelanggan pada peti besi kunci terpaut
 
 | Jenis        | Keizinan          |
 | ----------- | -------------------- |
-| Kekunci         | [Dapatkan Kekunci](/rest/api/keyvault/get-keys), [Dapatkan kekunci](/rest/api/keyvault/get-key)                                 |
-| Rahsia      | [Dapatkan Rahsia](/rest/api/keyvault/get-secrets), [Dapatkan Rahsia](/rest/api/keyvault/get-secret)                     |
-| Sijil | [Dapatkan Sijil](/rest/api/keyvault/get-certificates), [Dapatkan Sijil](/rest/api/keyvault/get-certificate) |
+| Kekunci         | [Dapatkan Kekunci](/rest/api/keyvault/keys/get-keys/get-keys), [Dapatkan kekunci](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Rahsia      | [Dapatkan Rahsia](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Dapatkan Rahsia](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Sijil | [Dapatkan Sijil](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Dapatkan Sijil](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Nilai sebelumnya ialah minimum untuk disenaraikan dan dibaca semasa pelaksanaan.
 

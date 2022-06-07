@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740730"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800661"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Lengkapkan data separa anda dengan ramalan (ditamatkan)
 
@@ -95,7 +95,7 @@ Sebagai sebahagian daripada aliran ini, anda akan memiilih atribut khusus untuk 
 
 2. Pilih ramalan yang anda mahu semak semula.
 
-3. Pilih elipsis dalam lajur **Tindakan** dan pilih **Lihat**.
+3. Pilih elipsis menegak (&vellip;) dalam **lajur Tindakan** dan pilih **Pandangan**.
 
 4. Anda akan melihat bilangan titik data dalam pandangan ramalan anda.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Selepas anda mencipta ramalan, anda boleh menyesuaikan model dalam AI Builder un
 
 2. Pilih ramalan yang anda mahu edit.
 
-3. Pilih elipsis dalam lajur **Tindakan** dan pilih **Lihat**.
+3. Pilih elipsis menegak (&vellip;) dalam **lajur Tindakan** dan pilih **Pandangan**.
 
 4. Pilih **Sesuaikan dalam AI Builder**.
 
@@ -139,7 +139,7 @@ Jalanan ramalan anda yang seterusnya akan menggunakan model dikemas kini yang an
 
 2. Pilih ramalan yang anda mahu padam.
 
-3. Pilih elipsis dalam lajur **Tindakan** dan pilih **Padam**.
+3. Pilih elipsis menegak (&vellip;) dalam **lajur Tindakan** dan pilih **Padam**.
 
 4. Sahkan pemadaman.
 
@@ -153,7 +153,7 @@ Jika anda tidak dapat melengkapkan proses lampir Dataverse kerana ralat, anda bo
 - Keizinan aplikasi tidak diberikan.
     1. Pergi ke [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Pilih **Persekitaran**.
-    1. Pilih elipsis yang bersebelahan dengan persekitaran yang anda mahu tambah keizinan dan pilih **Tetapan**.
+    1. Pilih elipsis menegak (&vellip;) di sebelah persekitaran yang anda ingin tambahkan keizinan dan pilih **Seting**.
     1. Kembangkan **Keizinan + pengguna** dan pilih **Pengguna**.
     1. Pilih **+ Baharu** dan pilih **Pengguna**.
     1. Pilih **Pengguna aplikasi** jika ia belum dipilih dan masukkan maklumat berikut:

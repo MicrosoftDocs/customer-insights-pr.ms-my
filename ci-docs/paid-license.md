@@ -1,41 +1,33 @@
 ---
-title: Mulakan dengan lesen berbayar Dynamics 365 Customer Insights
+title: Beli lesen Dynamics 365 Customer Insights
 author: m-hartmann
-description: Membiasakan diri dengan pengalaman jalanan pertama Dynamics 365 Customer Insights dan menerokai keupayaannya.
+description: Beli lesen Dynamics 365 Customer Insights, log masuk, dan membiasakan diri dengan aplikasi.
 ms.author: mhart
 ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9c83dc6716abd5f81eb7851d462d7d61791f542b
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641865"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768433"
 ---
-# <a name="get-started-after-purchasing-customer-insights"></a>Mulakan selepas pembelian Customer Insights
+# <a name="purchase-customer-insights"></a>Beli Wawasan Pelanggan
 
-Artikel ini menerangkan cara untuk anda mengambil langkah pertama dalam Dynamics 365 Customer Insights selepas organisasi anda membeli langganan. Jika anda ingin membeli Customer Insights, pilihan kenalan kami disenaraikan di [laman web Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
-
-Selepas membeli lesen langganan untuk Wawasan Pelanggan, pentadbir Microsoft 365 global penyewa menerima e-mel yang menjemput mereka untuk mencipta persekitaran. 
-
-Customer Insights telah dilesenkan setiap penyewa dan termasuk berbilang keupayaan. Anda boleh membeli lebih banyak kapasiti dan lesen untuk meningkatkan kuota lalai. 
-- [Gambaran keseluruhan penentuan harga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
-- Kapasiti dan kelayakan: [Panduan Pelesenan Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+Untuk membeli Dynamics 365 Customer Insights, lihat pilihan hubungan kami di [Dynamics 365 Customer Insights laman web](https://dynamics.microsoft.com/ai/customer-insights/).
 
 Jika anda ingin mencuba perkhidmatan dan ciri, lihat [Sediakan persekitaran percubaan](trial-signup.md).
 
-## <a name="start-with-customer-insights"></a>Bermula dengan Customer Insights
+Customer Insights telah dilesenkan setiap penyewa dan termasuk berbilang keupayaan. Anda boleh membeli lebih banyak kapasiti dan lesen untuk meningkatkan kuota lalai.
+- [Gambaran keseluruhan penentuan harga](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- Kapasiti dan kelayakan: [Panduan Pelesenan Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
 
-Pengalaman jalanan pertama membantu anda memilih fokus awal anda dengan Customer Insights dan menerokai keupayaan dengan data sampel. Sebagai langkah seterusnya, anda boleh mencipta persekitaran anda sendiri dan bekerja dengan data anda sendiri.
-
-**Untuk daftar masuk buat kali pertama**:
+## <a name="sign-in-for-the-first-time"></a>Log masuk buat kali pertama
 
 1. Pergi ke [URL aplikasi Customer Insights](https://home.ci.ai.dynamics.com).
-1. Daftar masuk dengan akaun sekolah atau kerja. 
+1. Daftar masuk dengan akaun sekolah atau kerja.
 1. Setuju dengan terma perkhidmatan dan tetapkan keutamaan kandungan untuk persekitaran Wawasan Pelanggan anda.
 
-## <a name="create-your-own-environment"></a>Cipta persekitaran anda sendiri
-
-Selepas daftar masuk pertama anda, anda akan nampak persekitaran dengan data sampel. Anda boleh menggunakan data tersebut untuk menerokai ciri dan membiasakan dengan aplikasi. Untuk menggunakan data anda sendiri, anda perlu [mencipta persekitaran](create-environment.md).
+Selepas daftar masuk pertama anda, anda akan nampak persekitaran dengan data sampel. Anda boleh menggunakan data tersebut untuk meneroka ciri dan membiasakan diri dengan aplikasi. Untuk menggunakan data anda sendiri, [buat persekitaran](create-environment.md).

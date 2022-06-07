@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653534"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800616"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -27,7 +27,7 @@ Gunakan data daripada sumber seperti Microsoft dan rakan kongsi lain untuk menga
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Halaman hab pengayaan.":::
 
-Pergi ke **DataEnrichment** > **untuk** bekerja dengan pilihan pengayaan.  
+Pergi ke **Pengayaan** > **Data** untuk bekerja dengan opsyen pengayaan.  
 
 Anda perlu mempunyai keizinan Penyumbang atau Pentadbir untuk mencipta atau mengedit pengayaan. Untuk maklumat lanjut, lihat [Keizinan](permissions.md).
 
@@ -63,7 +63,7 @@ Pada tab **Pengayaan saya**, anda boleh melihat pengayaan yang telah anda konfig
 
 Pergi ke tab **Pengayaan Saya** untuk melihat semua pengayaan yang dikonfigurasikan. Setiap pengayaan diwakili sebagai baris yang termasuk maklumat tambahan tentang pengayaan.
 
-Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga boleh memilih elipsis (...) pada item senarai untuk melihat pilihan. Jika anda mengkonfigurasi beberapa pengayaan, anda boleh menggunakan kotak carian untuk mencarinya dengan cepat.
+Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga boleh memilih elipsis menegak (&vellip;) pada item senarai untuk melihat pilihan. Jika anda mengkonfigurasi beberapa pengayaan, anda boleh menggunakan kotak carian untuk mencarinya dengan cepat.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Pilihan untuk mengurus pengayaan dalam senarai pengayaan.":::
 

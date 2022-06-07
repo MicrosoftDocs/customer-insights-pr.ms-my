@@ -1,19 +1,19 @@
 ---
 title: Pengayaan sumber data
 description: Memperkayakan sumber data sebelum melalui proses penyatuan data.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755697"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800292"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (pratonton)
 
@@ -27,7 +27,7 @@ Anda mesti mempunyai keizinan Penyumbang atau Pentadbir untuk mencipta atau meng
 
 1. Pergi **Data** > **Sumber data**.
 
-1. Pilih elipsis menegak di sebelah sumber data anda ingin memperkayakan dan pilih **Memperkayakan**.
+1. Pilih elipsis menegak (&vellip;) di sebelah sumber data anda ingin memperkayakan dan pilih **Enrich**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Halaman pengayaan sumber data.":::
 
@@ -41,11 +41,12 @@ Pengayaan berikut kini tersedia untuk sumber data. Semak langkah-langkah terperi
 
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md)
 - [Data syarikat dipertingkat](enrichment-enhanced-company-data.md)
+- [Data identiti dari LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Menguruskan pengayaan sumber data sedia ada
 
 Pergi ke tab **Pengayaan Saya** untuk melihat semua pengayaan yang dikonfigurasikan.
 
-Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga boleh memilih elipsis (...) pada item senarai untuk melihat pilihan. Jika anda mengkonfigurasi beberapa pengayaan, anda boleh menggunakan kotak carian untuk mencarinya dengan cepat.
+Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga boleh memilih elipsis menegak (&vellip;) pada item senarai untuk melihat pilihan. Jika anda mengkonfigurasi beberapa pengayaan, anda boleh menggunakan kotak carian untuk mencarinya dengan cepat.
 
 Anda boleh melihat, mengedit, menjalankan atau memadam pengayaan sumber data. Untuk maklumat lanjut, lihat [Menguruskan pengayaan](enrichment-hub.md) sedia ada.

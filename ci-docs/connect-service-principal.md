@@ -1,7 +1,7 @@
 ---
 title: Sambung ke akaun  Azure Data Lake Storage menggunakan prinsipal perkhidmatan
 description: Gunakan prinsipal perkhidmatan Azure untuk menyambung ke data lake anda sendiri.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739173"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833396"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Sambung ke akaun Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure
 
-Artikel ini membincangkan cara menyambung Dynamics 365 Customer Insights dengan akaun dengan Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure dan bukannya kunci akaun storan. 
+Artikel ini membincangkan cara menyambung Dynamics 365 Customer Insights dengan akaun dengan Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure dan bukannya kunci akaun storan.
 
 Alat automatik yang menggunakan perkhidmatan Azure harus sentiasa mempunyai keizinan terhad. Daripada mempunyai daftar masuk aplikasi sebagai pengguna yang layak sepenuhnya, Azure menawarkan prinsipal perkhidmatan. Anda boleh menggunakan prinsipal perkhidmatan untuk menambah atau mengedit folder Model Data Biasa dengan selamat [sebagai sumber data](connect-common-data-model.md) atau [mencipta atau mengemas kini persekitaran](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - Akaun Data Lake Storage yang akan menggunakan prinsipal perkhidmatan mestilah Gen2 dan mempunyai [ruang nama hierarki yang didayakan](/azure/storage/blobs/data-lake-storage-namespace). Akaun storan Azure Data Lake Gen1 tidak disokong.
-> - Anda memerlukan keizinan pentadbir untuk langganan Azure anda untuk mencipta prinsipal perkhidmatan.
+> - Anda memerlukan keizinan pentadbir untuk Penyewa Azure anda untuk mencipta prinsipal perkhidmatan.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Cipta prinsipal perkhidmatan Azure untuk Customer Insights
 
@@ -38,29 +39,15 @@ Sebelum mencipta prinsipal perkhidmatan baru untuk Wawasan Pelanggan, semak sama
 
 2. Daripada **perkhidmatan Azure**, pilih **Azure Active Directory**.
 
-3. Di bawah **Urus**, pilih **Aplikasi Enterprise**.
+3. Di bawah **Urus**, pilih **Aplikasi** Microsoft.
 
 4. Tambah penapis untuk **ID Aplikasi bermula dengan**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` atau cari nama `Dynamics 365 AI for Customer Insights`.
 
-5. Jika anda mendapati rekod yang sepadan, ia bermaksud bahawa prinsipal perkhidmatan sudah wujud. 
-   
+5. Jika anda mendapati rekod yang sepadan, ia bermaksud bahawa prinsipal perkhidmatan sudah wujud.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Syot layar menunjukkan prinsipal perkhidmatan sedia ada.":::
-   
-6. Jika tiada hasil dikembalikan, cipta prinsipal perkhidmatan baharu.
 
-### <a name="create-a-new-service-principal"></a>Cipta prinsipal perkhidmatan baharu
-
-1. Pasang versi terkini Azure Active Directory PowerShell untuk Graf. Untuk mendapatkan maklumat lanjut, pergi ke [Pasang Azure Active Directory PowerShell untuk Graf](/powershell/azure/active-directory/install-adv2).
-
-   1. Pada PC anda, pilih kekunci Windows pada papan kekunci anda dan cari untuk **Windows PowerShell** dan pilih **Jalankan sebagai pentadbir**.
-   
-   1. Dalam tetingkap PowerShell yang terbuka, masukkan `Install-Module AzureAD`.
-
-2. Cipta prinsipal perkhidmatan untuk Customer Insights dengan modul Azure AD PowerShell.
-
-   1. Dalam tetingkap PowerShell, masukkan `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Gantikan *[ID Direktori anda]* dengan ID Direktori sebenar langganan Azure anda di mana anda ingin mencipta prinsipal perkhidmatan. Parameter nama persekitaran `AzureEnvironmentName` adalah pilihan.
-  
-   1. Masukkan `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Perintah ini mencipta prinsipal perkhidmatan untuk Wawasan Pelanggan pada langganan Azure yang dipilih. 
+6. Jika tiada keputusan dikembalikan, anda boleh [mencipta prinsipal](#create-a-new-service-principal) perkhidmatan baru. Dalam kebanyakan kes, ia sudah wujud dan anda hanya perlu memberikan kebenaran untuk prinsipal perkhidmatan untuk mengakses akaun storan.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Berikan keizinan kepada prinsipal perkhidmatan untuk mengakses akaun storan
 
@@ -77,9 +64,9 @@ Pergi ke portal Azure untuk memberikan keizinan kepada prinsipal perkhidmatan un
 1. Pada anak tetingkap **Tambah penugasan peranan**, tetapkan sifat berikut:
    - Peranan: **Penyumbang Blob Data Storan**
    - Tugaskan akses kepada: **Pengguna, kumpulan atau prinsipal perkhidmatan**
-   - Pilih ahli: **Dynamics 365 AI for Customer Insights** (prinsipal perkhidmatan yang [anda](#create-a-new-service-principal) cipta sebelum ini dalam prosedur ini)
+   - Pilih ahli: **Dynamics 365 AI for Customer Insights** ([prinsipal](#create-a-new-service-principal) perkhidmatan yang anda cari lebih awal dalam prosedur ini)
 
-1.  Pilih **Semakan + serah hak**.
+1. Pilih **Semakan + serah hak**.
 
 Prses boleh mengambil masa sehingga 15 minit menyebarkan perubahan.
 
@@ -91,7 +78,7 @@ Anda boleh melampirkan akaun Storan Tasik Data dalam Wawasan Pelanggan untuk [me
 
 1. Pergi ke [portal pentadbir Azure](https://portal.azure.com), daftar masuk ke langganan anda dan buka akaun storan anda.
 
-1. Pada tetingkap kiri, pergi ke **Tetapan** > **Sifat**.
+1. Pada anak tetingkap kiri, pergi ke **Titik** > **Akhir Tetapan**.
 
 1. Salin nilai ID sumber akaun storan:
 
@@ -115,5 +102,18 @@ Anda boleh melampirkan akaun Storan Tasik Data dalam Wawasan Pelanggan untuk [me
 
 1. Teruskan dengan langkah yang tinggal dalam Wawasan Pelanggan untuk melampirkan akaun storan.
 
+### <a name="create-a-new-service-principal"></a>Cipta prinsipal perkhidmatan baharu
+
+1. Pasang versi terkini Azure Active Directory PowerShell untuk Graf. Untuk mendapatkan maklumat lanjut, pergi ke [Pasang Azure Active Directory PowerShell untuk Graf](/powershell/azure/active-directory/install-adv2).
+
+   1. Pada PC anda, tekan kekunci Windows pada papan kekunci anda dan cari **Windows PowerShell** dan pilih **Jalankan sebagai pentadbir**.
+
+   1. Dalam tetingkap PowerShell yang terbuka, masukkan `Install-Module AzureAD`.
+
+2. Cipta prinsipal perkhidmatan untuk Customer Insights dengan modul Azure AD PowerShell.
+
+   1. Dalam tetingkap PowerShell, masukkan `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Gantikan *[ID Direktori anda]* dengan ID Direktori sebenar langganan Azure anda di mana anda ingin mencipta prinsipal perkhidmatan. Parameter nama persekitaran `AzureEnvironmentName` adalah pilihan.
+  
+   1. Masukkan `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Perintah ini mencipta prinsipal perkhidmatan untuk Wawasan Pelanggan pada langganan Azure yang dipilih.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

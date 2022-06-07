@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739219"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800477"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
@@ -76,7 +76,7 @@ Untuk menyegar semula sumber data mengikut permintaan, ikuti langkah ini:
 
 1. Pergi **Data** > **Sumber data**.
 
-2. Pilih elipsis menegak di sebelah sumber data yang ingin anda segar semula dan pilih **Segar semula** daripada senarai juntai bawah.
+2. Pilih elipsis menegak (&vellip;) di sebelah sumber data yang anda ingin segar semula dan pilih **Segar Semula** daripada senarai juntai bawah.
 
 3. Sumber data kini dicetuskan untuk segar semula secara manual. Menyegarkan semula sumber data akan mengemas kini kedua-dua skema entiti dan data untuk semua entiti yang dinyatakan dalam sumber data.
 
@@ -86,7 +86,7 @@ Untuk menyegar semula sumber data mengikut permintaan, ikuti langkah ini:
 
 1. Pergi **Data** > **Sumber data**.
 
-2. Pilih elipsis menegak di sebelah sumber data yang ingin anda alih keluar dan pilih **Padam** daripada menu juntai bawah.
+2. Pilih elipsis menegak (&vellip;) di sebelah sumber data yang anda mahu alih keluar dan pilih **Padam** daripada menu juntai bawah.
 
 3. Sahkan pemadaman anda.
 

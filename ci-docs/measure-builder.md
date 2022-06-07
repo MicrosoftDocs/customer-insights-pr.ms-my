@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643767"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800337"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Gunakan pembina ukuran untuk membuat langkah-langkah dari awal
 
@@ -88,7 +88,7 @@ Anda boleh membuat langkah-langkah pada tahap pelanggan individu (atribut pelang
 
 1. Untuk menambah lebih banyak pengiraan untuk ukuran, pilih **Pengiraan baharu**. Anda hanya boleh menggunakan entiti pada laluan entiti yang sama untuk pengiraan baharu. Lebih banyak pengiraan akan ditunjukkan sebagai lajur baharu dalam mengukur entiti output.
 
-1. Pilih **...** pada pengiraan untuk **Duplikasi**, **Nama semula** atau **Alih keluar** pengiraan daripada ukuran.
+1. Pilih elipsis menegak (&vellip;) pada pengiraan kepada **Pendua**, **Namakan Semula** atau **Alih keluar** pengiraan daripada ukuran.
 
 1. Dalam kawasan **Pratonton**, anda akan melihat skema data bagi entiti output ukuran, termasuk penapis dan dimensi. Pratonton bertindak balas secara dinamik kepada perubahan dalam konfigurasi.
 
@@ -158,7 +158,7 @@ Anda boleh membuat langkah-langkah pada tahap akaun individu (ukuran pelanggan) 
    1. Pilih **Laluan perhubungan** dan pilih laluan entiti yang sepatutnya boleh digunakan untuk mengenal pasti ukuran anda. Jika hanya terdapat laluan tunggal kepada entiti *Pelanggan*, kawalan ini tidak akan ditunjukkan.
    1. Pilih **Selesai** untuk menggunakan pilihan anda.
 
-1. Pilih **...** pada pengiraan untuk **Duplikasi**, **Nama semula** atau **Alih keluar** pengiraan daripada ukuran.
+1. Pilih elipsis menegak (&vellip;) pada pengiraan kepada **Pendua**, **Namakan Semula** atau **Alih keluar** pengiraan daripada ukuran.
 
 1. Dalam kawasan **Pratonton**, anda akan melihat skema data bagi entiti output ukuran, termasuk penapis dan dimensi. Pratonton bertindak balas secara dinamik kepada perubahan dalam konfigurasi.
 

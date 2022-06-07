@@ -1,43 +1,113 @@
 ---
-title: Data Customer Insights dalam Microsoft Dataverse
-description: Gunakan entiti Customer Insights sebagai jadual dalam Microsoft Dataverse.
-ms.date: 04/05/2022
+title: Gunakan data Customer Insights dalam Microsoft Dataverse
+description: Ketahui cara menyambungkan Wawasan Pelanggan dan Microsoft Dataverse dan memahami entiti output yang dieksport ke Dataverse.
+ms.date: 05/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: wimohabb
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741376"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833687"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
 
-Customer Insights menyediakan pilihan untuk menjadikan entiti output tersedia dalam [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Integrasi ini membolehkan perkongsian data yang mudah dan pembangunan tersuai melalui pendekatan kod rendah / tanpa kod. Entiti [output](#output-entities) tersedia sebagai jadual dalam Dataverse persekitaran. Anda boleh menggunakan data untuk sebarang aplikasi lain berdasarkan Dataverse jadual. Jadual ini membolehkan senario seperti aliran kerja automatik melalui Power Automate atau membina aplikasi dengan Power Apps. Pelaksanaan semasa terutamanya menyokong carian di mana data daripada entiti Wawasan Pelanggan yang tersedia boleh diambil untuk ID pelanggan yang diberikan.
+Wawasan Pelanggan menyediakan pilihan untuk menjadikan entiti output tersedia sebagai [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Integrasi ini membolehkan perkongsian data yang mudah dan pembangunan tersuai melalui pendekatan kod rendah / tanpa kod. Entiti [output](#output-entities) tersedia sebagai jadual dalam Dataverse persekitaran. Anda boleh menggunakan data untuk sebarang aplikasi lain berdasarkan Dataverse jadual. Jadual ini membolehkan senario seperti aliran kerja automatik melalui Power Automate atau membina aplikasi dengan Power Apps.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Lampirkan persekitaran Dataverse kepada Customer Insights
+Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data daripada sumber data di premis menggunakan Power Platform aliran data dan get laluan](data-sources.md#add-data-from-on-premises-data-sources).
 
-**Organisasi sedia ada**
+## <a name="prerequisites"></a>Prasyarat
 
-Pentadbir boleh mengkonfigurasi Wawasan Pelanggan untuk [menggunakan persekitaran Dataverse sedia ada](create-environment.md) apabila mereka mencipta persekitaran Wawasan Pelanggan. Dengan menyediakan URL kepada Dataverse persekitaran, ia dilampirkan pada persekitaran Wawasan Pelanggan baharu mereka. Wawasan Pelanggan dan Dataverse persekitaran mesti dihoskan di rantau yang sama. 
+- Wawasan Pelanggan dan Dataverse persekitaran mesti dihoskan di rantau yang sama.
+- Anda mesti mempunyai peranan pentadbir global dalam Dataverse persekitaran. Sahkan sama ada persekitaran ini [Dataverse dikaitkan dengan](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) kumpulan keselamatan tertentu dan pastikan anda ditambahkan pada kumpulan keselamatan tersebut.
+- Tiada persekitaran Wawasan Pelanggan lain yang telah dikaitkan dengan persekitaran yang Dataverse anda ingin sambungkan. Ketahui cara mengalih [keluar sambungan sedia ada ke Dataverse persekitaran](#remove-an-existing-connection-to-a-dataverse-environment).
+- Persekitaran Microsoft Dataverse hanya boleh menyambung ke satu akaun storan. Ia hanya terpakai jika anda mengkonfigurasi persekitaran untuk [menggunakan Azure Data Lake Storage](own-data-lake-storage.md).
 
-Jika anda tidak mahu menggunakan persekitaran sedia ada Dataverse, sistem mencipta persekitaran baharu untuk data Wawasan Pelanggan dalam penyewa anda. 
+## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse Menyambungkan persekitaran ke Wawasan Pelanggan
 
-> [!NOTE]
-> Jika organisasi anda sudah menggunakan Dataverse penyewa mereka, adalah penting untuk diingat bahawa [Dataverse penciptaan persekitaran dikawal oleh pentadbir](/power-platform/admin/control-environment-creation). Contohnya, jika anda menyediakan persekitaran Wawasan Pelanggan baharu dengan akaun organisasi anda dan pentadbir telah menyahdayakan penciptaan Dataverse persekitaran percubaan untuk semua orang kecuali pentadbir, anda tidak boleh mencipta persekitaran percubaan baharu.
-> 
-> Persekitaran percubaan Dataverse yang dicipta dalam Customer Insights mempunyai 3 GB storan yang tidak akan mengira kapasiti keseluruhan yang diterima oleh penyewa. Langganan berbayar akan mendapat kelayakan Dataverse sebanyak 15 GB untuk pangkalan data dan 20 GB untuk storan fail.
+Langkah ini **Microsoft Dataverse** membolehkan anda menyambungkan Wawasan Pelanggan dengan persekitaran anda Dataverse sambil [mencipta persekitaran](create-environment.md) Wawasan Pelanggan.
 
-**Organisasi baharu**
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="perkongsian data dengan Microsoft Dataverse auto didayakan untuk persekitaran baru bersih.":::
 
-Jika anda mencipta organisasi baru apabila menyediakan Wawasan Pelanggan, sistem mencipta persekitaran baru Dataverse dalam organisasi anda secara automatik untuk anda.
+Pentadbir boleh mengkonfigurasi Wawasan Pelanggan untuk menyambungkan persekitaran sedia ada Dataverse. Dengan menyediakan URL kepada Dataverse persekitaran, ia dilampirkan pada persekitaran Wawasan Pelanggan baharu mereka.
+
+Jika anda tidak mahu menggunakan persekitaran sedia ada Dataverse, sistem mencipta persekitaran baharu untuk data Wawasan Pelanggan dalam penyewa anda. [Power Platform pentadbir boleh mengawal orang yang boleh mencipta persekitaran](/power-platform/admin/control-environment-creation). Apabila anda menyediakan persekitaran Wawasan Pelanggan baharu dan pentadbir telah menyahdayakan penciptaan Dataverse persekitaran untuk semua orang kecuali pentadbir, anda mungkin tidak dapat mencipta persekitaran baharu.
+
+**Mendayakan perkongsian** data dengan memilih Dataverse kotak semak perkongsian data.
+
+Jika anda menggunakan akaun Storan Tasik Data anda sendiri, anda juga memerlukan **pengecam** Keizinan. Untuk maklumat lanjut cara mendapatkan pengecam keizinan, semak semula seksyen berikut.
+
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Mendayakan perkongsian data dengan Dataverse daripada anda sendiri Azure Data Lake Storage (Pratonton)
+
+Mendayakan perkongsian data dengan Microsoft Dataverse masa persekitaran [anda menggunakan akaun Azure Data Lake Storage anda sendiri](own-data-lake-storage.md) memerlukan beberapa konfigurasi tambahan. Pengguna yang menyediakan persekitaran Wawasan Pelanggan mesti mempunyai sekurang-kurangnya **keizinan Pembaca** Data Blob Storan pada *bekas CustomerInsights* dalam Azure Data Lake Storage akaun.
+
+1. Cipta dua kumpulan keselamatan pada langganan Azure anda - satu **kumpulan keselamatan Pembaca** dan satu **kumpulan keselamatan Penyumbang** dan tetapkan Microsoft Dataverse perkhidmatan sebagai pemilik untuk kedua-dua kumpulan keselamatan.
+2. Urus Senarai Kawalan Akses (ACL) pada bekas CustomerInsights dalam akaun storan anda melalui kumpulan keselamatan ini. Microsoft Dataverse Tambahkan perkhidmatan dan sebarang Dataverse aplikasi perniagaan berasaskan seperti Dynamics 365 Marketing kepada **kumpulan keselamatan Pembaca** dengan **keizinan baca sahaja**. Tambah *hanya* aplikasi Wawasan Pelanggan kepada **kumpulan keselamatan Penyumbang** untuk memberikan kedua-dua **keizinan baca dan tulis** untuk menulis profil dan cerapan.
+
+### <a name="limitations"></a>Batasan
+
+Terdapat dua batasan apabila menggunakan Dataverse dengan akaun anda sendiri Azure Data Lake Storage:
+
+- Ada pemetaan satu-ke-satu antara Dataverse organisasi dan rekening Azure Data Lake Storage. Dataverse Setelah organisasi disambungkan ke akaun storan, ia tidak dapat menyambung ke akaun storan lain. Had ini menghalang bahawa a Dataverse tidak mengisi berbilang akaun storan.
+- Perkongsian data tidak akan berfungsi jika persediaan Azure Private Link diperlukan untuk mengakses akaun storan Azure Data Lake anda kerana ia berada di belakang tembok api. Dataverse pada masa ini tidak menyokong sambungan ke titik akhir peribadi melalui Pautan Peribadi.
+
+### <a name="set-up-powershell"></a>Sediakan PowerShell
+
+Untuk melaksanakan skrip PowerShell, anda perlu menyediakan PowerShell dengan sewajarnya.
+
+1. Pasang versi [Azure Active Directory terkini PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
+   1. Pada PC anda, pilih kekunci Windows pada papan kekunci anda dan cari untuk **Windows PowerShell** dan pilih **Jalankan sebagai pentadbir**.
+   1. Dalam tetingkap PowerShell yang terbuka, masukkan `Install-Module AzureAD`.
+2. Import tiga modul.
+    1. Dalam tetingkap PowerShell, masukkan `Install-Module -Name Az.Accounts` dan ikuti langkah-langkah.
+    1. Ulangi untuk `Install-Module -Name Az.Resources` dan `Install-Module -Name Az.Storage`.
+
+### <a name="configuration-steps"></a>Langkah konfigurasi
+
+1. Muat turun dua skrip PowerShell yang perlu anda jalankan dari repo [GitHub jurutera](https://github.com/trin-msft/byol) kami.
+    1. `CreateSecurityGroups.ps1`
+       - Anda memerlukan *keizinan pentadbir* penyewa untuk menjalankan skrip PowerShell ini.
+       - Skrip PowerShell ini mencipta dua kumpulan keselamatan pada langganan Azure anda. Satu untuk kumpulan Pembaca dan satu lagi untuk kumpulan Penyumbang dan akan menjadikan Microsoft Dataverse perkhidmatan sebagai pemilik untuk kedua-dua kumpulan keselamatan ini.
+       - Laksanakan skrip PowerShell ini dalam Windows PowerShell dengan menyediakan ID langganan Azure yang mengandungi .Azure Data Lake Storage Buka skrip PowerShell dalam editor untuk menyemak maklumat tambahan dan logik yang dilaksanakan.
+       - Simpan kedua-dua nilai ID kumpulan keselamatan yang dijana oleh skrip ini kerana kami akan menggunakannya dalam `ByolSetup.ps1` skrip.
+
+        > [!NOTE]
+        > Penciptaan kumpulan keselamatan boleh dilumpuhkan pada penyewa anda. Dalam kes itu, persediaan manual diperlukan dan pentadbir anda Azure AD perlu [mendayakan penciptaan](/azure/active-directory/enterprise-users/groups-self-service-management) kumpulan keselamatan.
+
+    2. `ByolSetup.ps1`
+        - Anda memerlukan *keizinan Pemilik* Data Blob Storan pada tahap akaun storan/bekas untuk menjalankan skrip ini atau skrip ini akan mencipta satu untuk anda. Tugasan peranan anda boleh dialih keluar secara manual selepas berjaya menjalankan skrip.
+        - Skrip PowerShell ini menambah kawalan akses berasaskan tole (RBAC) yang diperlukan untuk Microsoft Dataverse perkhidmatan dan sebarang Dataverse aplikasi perniagaan berasaskan. Ia juga mengemas kini Senarai Kawalan Akses (ACL) pada bekas CustomerInsights untuk kumpulan keselamatan yang `CreateSecurityGroups.ps1` dicipta dengan skrip. Kumpulan Penyumbang akan mempunyai *keizinan rwx* dan kumpulan Pembaca akan mempunyai *keizinan r-x* sahaja.
+        - Laksanakan skrip PowerShell ini dalam Windows PowerShell dengan menyediakan ID langganan Azure yang mengandungi nama akaun storan anda Azure Data Lake Storage, nama kumpulan sumber dan nilai ID kumpulan keselamatan Pembaca dan Penyumbang. Buka skrip PowerShell dalam editor untuk menyemak maklumat tambahan dan logik yang dilaksanakan.
+        - Salin rentetan output selepas berjaya menjalankan skrip. Rentetan output kelihatan seperti ini: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+2. Masukkan rentetan output yang disalin dari atas ke dalam **medan Pengecam** keizinan langkah konfigurasi persekitaran untuk Microsoft Dataverse.
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Pilihan konfigurasi untuk membolehkan perkongsian data daripada anda sendiri Azure Data Lake Storage dengan Microsoft Dataverse.":::
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Mengalih keluar sambungan sedia ada ke Dataverse persekitaran
+
+Apabila menyambung ke Dataverse persekitaran, mesej **ralat Organisasi CDS ini telah dilampirkan pada contoh** Wawasan Pelanggan yang Dataverse lain bermakna persekitaran telah digunakan dalam persekitaran Wawasan Pelanggan. Anda boleh mengalih keluar sambungan sedia ada sebagai pentadbir global pada Dataverse persekitaran. Ia boleh mengambil masa beberapa jam untuk mengisi perubahan.
+
+1. Pergi ke [Power Apps](https://make.powerapps.com).
+1. Pilih persekitaran daripada pemilih persekitaran.
+1. Pergi ke **Penyelesaian**
+1. Nyahpasang atau padamkan penyelesaian bernama **Dynamics 365 Customer Insights Tambahan Kad Pelanggan (Pratonton)**.
+
+ATAU
+
+1. Buka persekitaran anda Dataverse.
+1. Pergi ke **Penyelesaian** > **Seting** Lanjutan.
+1. **Nyahpasang penyelesaian CustomerInsightsCustomerCard**.
+
+Sekiranya penyingkiran sambungan gagal kerana kebergantungan, anda juga perlu mengeluarkan kebergantungan. Untuk maklumat lanjut, lihat [Mengalih keluar kebergantungan](/power-platform/alm/removing-dependencies).
 
 ## <a name="output-entities"></a>Entiti output
 
@@ -50,7 +120,6 @@ Sesetengah entiti output daripada Wawasan Pelanggan tersedia sebagai jadual dala
 - [Pengayaan](#enrichment)
 - [Ramalan](#prediction)
 - [Keahlian segmen](#segment-membership)
-
 
 ### <a name="customerprofile"></a>CustomerProfile
 
@@ -139,3 +208,34 @@ Jadual ini mengandungi maklumat keahlian segmen profil pelanggan.
 | Segmen       | Rentetan JSON  | Senarai segmen unik profil pelanggan adalah ahli      |
 | msdynci_identifier  | String   | Pengenalpasti unik rekod keahlian segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | GUID penentu dijana daripada`msdynci_identifier`          |
+
+<!--
+## FAQ: Update existing environments to use Microsoft Dataverse
+
+Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
+
+1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
+
+   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
+
+1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
+
+   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
+   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
+
+1. I proceeded with the update and it seems like nothing happened. Is the update complete?
+
+   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
+
+1. Why do I still see the banner after completing the update steps?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+
+1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
+
+   It can happen due to an upgrade or refresh failure. Contact support.
+   Common causes:
+    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
+    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
+    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
+    - -->

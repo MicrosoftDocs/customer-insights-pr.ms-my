@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755461"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808517"
 ---
 # <a name="work-with-customer-insights-apis"></a>Gunakan Customer Insights API
 
@@ -31,11 +31,11 @@ Artikel ini menerangkan cara mengakses API Wawasan Pelanggan, mencipta Pendaftar
 
 1. [Daftar Masuk](https://home.ci.ai.dynamics.com) ke Customer Insights. Jika anda tidak mempunyai langganan lagi, [daftar untuk percubaan Customer Insights](https://aka.ms/tryci).
 
-1. Untuk mendayakan API pada persekitaran Customer Insights anda, pergi ke **Pentadbir** > **Keizinan**. Anda memerlukan keizinan pentadbir untuk berbuat demikian.
+1. Untuk mendayakan API pada persekitaran Wawasan Pelanggan anda, pergi ke **Keselamatan Pentadbir** > **·**. Anda memerlukan keizinan pentadbir untuk berbuat demikian.
 
 1. Pergi ke tab **API** dan pilih butang **Daya**.    
  
-   Mendayakan API mencipta kunci langganan utama dan sekunder untuk tika anda yang akan digunakan dalam permintaan API. Anda boleh menjana semula kunci dengan memilih **Jana semula utama** atau **Jana semula sekunder** pada **Pentadbir** > **Keizinan** > **API**.
+   Mendayakan API mencipta kunci langganan utama dan sekunder untuk tika anda yang akan digunakan dalam permintaan API. Anda boleh menjana semula kekunci dengan **memilih Utama Jana Semula primer** atau **Jana Semula sekunder** pada **API** > **Keselamatan** > **Pentadbir**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Langkah-langkah ini membantu anda bermula dengan menggunakan API Customer Insigh
 1. Di sebelah kiri, pilih **Pendaftaran aplikasi**.
 
 1. Pilih **Pendaftaran baharu**, berikan nama aplikasi dan pilih jenis akaun.
- 
+
    Secara alternatif, tambah URL hala semula. http://localhost adalah mencukupi untuk membangunkan aplikasi pada komputer tempatan anda.
 
 1. Pada pendaftaran Aplikasi baharu anda, pergi ke **Keizinan API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Pilih **Tambah keizinan** dan pilih **Customer Insights** dalam tetingkap sisi.
+1. Pilih **Tambah keizinan** dan pilih **Dynamics 365 AI for Customer Insights** dalam anak tetingkap sisi.
 
 1. Untuk **Jenis keizinan**, pilih **Keizinan yang ditugaskan** dan kemudian pilih keizinan **user_impersonation**.
 
@@ -109,13 +107,13 @@ Untuk mendapatkan maklumat tentang penggunaan API dalam pustaka klien kami, liha
 
 1. Untuk menyimpulkan, kami perlu menambah nama pendaftaran aplikasi sebagai pengguna dalam Customer Insights.  
    
-   Buka Customer Insights, pergi ke **Pentadbir** > **Keizinan** dan pilih **Tambah pengguna**.
+   Buka Wawasan Pelanggan, pergi ke **Keselamatan** > **Pentadbir** dan pilih **Tambah pengguna**.
 
 1. Cari nama pendaftaran aplikasi anda, pilih nama daripada hasil carian dan pilih **Simpan**.
 
 ## <a name="sample-queries"></a>Pertanyaan sampel
 
-Kami telah menyusun senarai pendek pertanyaan sampel OData untuk bekerja dengan API: [Contoh pertanyaan OData](odata-examples.md).
+Kami telah menyusun senarai pendek pertanyaan sampel OData untuk bekerja dengan API: [Contoh](odata-examples.md) pertanyaan OData.
 
 ## <a name="customer-insights-client-libraries"></a>Pustaka klien Customer Insights
 

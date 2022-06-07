@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755273"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807592"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Log pemajuan masuk Dynamics 365 Customer Insights dengan Azure Monitor (Preview)
 
@@ -38,7 +38,7 @@ Untuk mengkonfigurasi diagnostik dalam Wawasan Pelanggan, prasyarat berikut mest
 
 - Anda mempunyai Langganan [Azure yang aktif](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Anda mempunyai [keizinan Pentadbir](permissions.md#admin) dalam Wawasan Pelanggan.
-- Anda mempunyai **peranan Pentadbir** Penyumbang **dan** Akses Pengguna pada sumber destinasi di Azure. Sumber boleh menjadi akaun Azure Storage, Azure Event Hub, atau ruang kerja Azure Log Analytics. Untuk maklumat lanjut, lihat [Menambah atau mengalih keluar tugasan peranan Azure menggunakan portal](/azure/role-based-access-control/role-assignments-portal) Azure.
+- Anda mempunyai **peranan Pentadbir** Penyumbang **dan** Akses Pengguna pada sumber destinasi di Azure. Sumber boleh menjadi Azure Data Lake Storage akaun, Azure Event Hub, atau ruang kerja Azure Log Analytics. Untuk maklumat lanjut, lihat [Menambah atau mengalih keluar tugasan peranan Azure menggunakan portal](/azure/role-based-access-control/role-assignments-portal) Azure. Keizinan ini diperlukan semasa mengkonfigurasi seting diagnostik dalam Wawasan Pelanggan, ia boleh diubah selepas persediaan yang berjaya.
 - [Keperluan destinasi](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) untuk Azure Storage, Azure Event Hub, atau Azure Log Analytics met.
 - Anda mempunyai sekurang-kurangnya **peranan Pembaca** pada kumpulan sumber yang dimiliki oleh sumber.
 

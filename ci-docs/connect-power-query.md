@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643362"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800168"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambung ke Power Query sumber data
 
@@ -76,7 +76,7 @@ Penyambung dengan tanda semak dalam **lajur Wawasan Pelanggan (Dataflows)** ters
 
 1. Pergi **Data** > **Sumber data**.
 
-2. Pilih elipsis menegak di sebelah sumber data yang ingin anda ubah dan pilih **Edit** daripada menu juntai bawah.
+2. Pilih elipsis menegak (&vellip;) di sebelah sumber data yang anda mahu ubah dan pilih **Edit** daripada menu juntai bawah.
 
    > [!div class="mx-imgBorder"]
    > ![Edit pilihan.](media/edit-option-data-sources.png "Edit pilihan")

@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653821"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833319"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Bekerja dengan profil pelanggan bersatu dalam Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ Dengan menyambungkan data Wawasan Pelanggan dengan Pemasaran, anda boleh:
 - Asaskan kandungan dinamik (seperti token diperibadikan) dalam e-mel, SMS dan pemberitahuan tolak pada langkah-langkah seperti status kesetiaan, tarikh pembaharuan langganan, akaun induk atau sebarang langkah lain yang telah anda tangkap dalam profil Wawasan Pelanggan yang bersatu.
 - Muatkan data daripada Pemasaran ke dalam Wawasan Pelanggan dan gabungkannya dengan data pelanggan daripada sumber lain.
 - Gunakan pembersihan data Wawasan Pelanggan, pengayaan dan alat pemadanan kabur.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Gunakan profil pelanggan yang kaya dalam pemasaran masa nyata
 
@@ -41,4 +40,4 @@ Ketahui lebih lanjut: [Gunakan segmen daripada Dynamics 365 Customer Insights de
 
 Anda tidak terhad kepada storan awan jika anda ingin menggunakan data Wawasan Pelanggan dengan Pemasaran. Sekiranya anda sudah mempunyai persediaan sendiri Azure Data Lake Storage, anda boleh berhubung dengan Wawasan Pelanggan, kemudian berkongsi data dengan aplikasi Pemasaran seperti yang anda lakukan dengan persediaan berasaskan awan.
 
-Ketahui lebih lanjut: [Dayakan perkongsian data dengan Dataverse anda sendiri Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Ketahui lebih lanjut: [Dayakan perkongsian data dengan Dataverse anda sendiri Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

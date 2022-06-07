@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643200"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800431"
 ---
 # <a name="custom-machine-learning-models"></a>Model pembelajaran mesin tersuai
 
@@ -92,7 +92,7 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 
 ## <a name="edit-a-workflow"></a>Edit satu aliran kerja
 
-1. Pada halaman **Model Tersuai**, pilih elipsis menegak dalam lajur **Tindakan** di sebelah aliran kerja yang anda cipta sebelum ini dan pilih **Edit**.
+1. **Pada halaman Model** Tersuai, pilih elipsis menegak (&vellip;) dalam lajur Tindakan **di** sebelah aliran kerja yang telah anda cipta sebelum ini dan pilih **Edit**.
 
 1. Anda boleh mengemas kini nama aliran kerja anda yang dikenali dalam medan **Nama paparan** tetapi anda tidak boleh mengubah perkhidmatan web atau talian paip yang dikonfigurasi. Pilih **Seterusnya**.
 
@@ -108,7 +108,7 @@ Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik
 
 ## <a name="run-a-workflow"></a>Jalankan aliran kerja
 
-1. Pada halaman **Model Tersuai**, pilih elipsis menegak dalam lajur **Tindakan** di sebelah aliran kerja yang anda cipta sebelum ini.
+1. **Pada halaman Model** Tersuai, pilih elipsis menegak (&vellip;) dalam lajur Tindakan **di** sebelah aliran kerja yang telah anda cipta sebelum ini.
 
 1. Pilih **Jalankan**.
 
@@ -116,7 +116,7 @@ Aliran kerja anda juga berjalan secara automatik dengan setiap muat semula berja
 
 ## <a name="delete-a-workflow"></a>Padam satu aliran kerja
 
-1. Pada halaman **Model Tersuai**, pilih elipsis menegak dalam lajur **Tindakan** di sebelah aliran kerja yang anda cipta sebelum ini.
+1. **Pada halaman Model** Tersuai, pilih elipsis menegak (&vellip;) dalam lajur Tindakan **di** sebelah aliran kerja yang telah anda cipta sebelum ini.
 
 1. Pilih **Padam** dan sahkan pemadaman anda.
 

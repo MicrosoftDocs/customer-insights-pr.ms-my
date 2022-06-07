@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700948"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833641"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Perkara baharu dalam Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp menyediakan resolusi identiti dan penyatuan data pelanggan. Anda boleh 
 Untuk maklumat lanjut, lihat [Memperkayakan profil pelanggan dengan data identiti daripada LiveRamp (Pratonton)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Mengatur segmen dan langkah dengan tag dan penapis
+
 Jika organisasi anda mengekalkan banyak segmen atau langkah, mencari yang betul kadangkala boleh berasa mencabar. Ciri baharu ini membolehkan anda mengatur senarai menggunakan tag dan lajur. Ia membantu mencari data dengan cepat dan mudah dan menyesuaikan pandangan.
 
 Untuk maklumat lanjut, lihat [Bekerja dengan tag dan lajur](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Untuk maklumat lanjut, lihat [Bekerja dengan tag dan lajur](work-with-tags-colum
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Mendayakan perkongsian data apabila Dataverse menggunakan akaun storan anda sendiri
 
 Jika persekitaran anda menggunakan Azure Data Lake Storage untuk menyimpan data Wawasan Pelanggan, perkongsian data dengan Microsoft Dataverse memerlukan beberapa konfigurasi tambahan.
-Terdahulu, anda hanya boleh mendayakan perkongsian data apabila Dataverse data anda disimpan dalam tasik data terurus kami. 
+Terdahulu, anda hanya boleh mendayakan perkongsian data apabila Dataverse data anda disimpan dalam tasik data terurus kami.
 
-Untuk maklumat lanjut, lihat [Mendayakan perkongsian data daripada Dataverse anda sendiri Azure Data Lake Storage (Pratonton)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Untuk maklumat lanjut, lihat [Mendayakan perkongsian data daripada Dataverse anda sendiri Azure Data Lake Storage (Pratonton)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Destinasi eksport baru: Iterable dan Braze
 
@@ -81,7 +82,6 @@ Menukar API dalam perkhidmatan yang disambungkan membawa kepada kemas kini untuk
 
 - Google Ads: Versi baharu penyambung eksport Google Ads memudahkan pengalaman pengesahan dan kini membolehkan anda membuat khalayak Google Ads baharu secara automatik. 
 - Marketo: Versi baru penyambung eksport Marketo menyediakan sokongan untuk ID Marketo, membolehkan anda mengelakkan pertindihan data, mengemas kini rekod sedia ada dan mencipta rekod baharu dalam Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Kemas kini Februari 2022
 

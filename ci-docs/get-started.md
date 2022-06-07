@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741144"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833586"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Mulakan Dengan Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Wawasan Pelanggan dapat membantu anda membina pemahaman yang lebih mendalam meng
 
 ## <a name="step-1-create-an-environment"></a>Langkah 1: Cipta persekitaran
 
-Untuk memulakan, anda perlu mencipta persekitaran untuk bekerja terlebih dahulu. Jika organisasi anda sudah membeli lesen, lihat [Cipta persekitaran](create-environment.md). Untuk memulakan percubaan untuk Wawasan Pelanggan, lihat [Menyediakan persekitaran percubaan](trial-signup.md).
+Pertama, wujudkan persekitaran untuk bekerja. Jika organisasi anda sudah membeli lesen, lihat [Cipta persekitaran](create-environment.md). Untuk memulakan percubaan untuk Wawasan Pelanggan, lihat [Menyediakan persekitaran percubaan](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Langkah 2: Terokai Wawasan Pelanggan
 
-Kali pertama anda log masuk ke Wawasan Pelanggan, anda boleh mengkonfigurasi tetapan dan meneroka produk.
+Kali pertama anda log masuk ke Wawasan Pelanggan, konfigurasikan tetapan dan meneroka produk.
 
 1. [log masuk ke Wawasan](https://home.ci.ai.dynamics.com) Pelanggan menggunakan akaun pengguna Microsoft Azure Active Directory (AAD) anda.
 
-1. [Tukar persekitaran](manage-environments.md#switch-environments) untuk melihat data demo dan [meneroka Wawasan Pelanggan](home.md).
+1. Tukar persekitaran untuk melihat data demo dan [meneroka Wawasan Pelanggan](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Langkah 3: Inges, satukan dan sediakan perhubungan untuk data anda
 
-Profil disatukan ialah asas untuk mendapatkan cerapan dan mengambil tindakan terhadap data. Bawa masuk data daripada pelbagai sumber dan jalankan proses penyatuan data untuk menggabungkan profil disatukan. Tentukan perhubungan antara entiti yang diinges dengan menggunakan ciri pengayaan untuk menambahkan maklumat pada profil.
+Profil disatukan ialah asas untuk mendapatkan cerapan dan mengambil tindakan terhadap data. Bawa masuk data daripada pelbagai sumber dan jalankan proses penyatuan data untuk menggabungkan profil disatukan. Tentukan hubungan antara entiti yang ditelan dan gunakan ciri pengayaan untuk menambah maklumat ke profil.
 
-1. Inges data dengan mencipta sumber data daripada pelbagai pilihan. Pilih antara [Power Query penyambung](connect-power-query.md), [folder](connect-common-data-model.md) Model Data Biasa, atau [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Inges data dengan mencipta sumber data daripada pelbagai pilihan. Pilih antara [Power Query penyambung](connect-power-query.md), [folder](connect-common-data-model.md) Model Data Biasa, atau [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. [Jalankan proses](data-unification.md) penyatuan data dengan mengenal pasti [medan](map-entities.md) sumber, mengalih keluar [pendua](remove-duplicates.md), [keadaan](match-entities.md) yang sepadan dan [medan](merge-entities.md) penyatuan.
 
@@ -47,7 +47,7 @@ Profil disatukan ialah asas untuk mendapatkan cerapan dan mengambil tindakan ter
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Langkah 4: Tingkatkan profil disatukan dengan ramalan, aktiviti dan langkah-langkah
 
-Dengan persediaan profil disatukan, anda boleh meningkatkan data anda dan meningkatkan lagi maklumat yang mereka sediakan.
+Dengan profil bersatu disediakan, tingkatkan data anda dan tingkatkan lagi maklumat yang mereka berikan.
 
 1. Pilih daripada pustaka pembekal pengayaan yang berkembang untuk [memperkaya data pelanggan anda](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Dengan persediaan profil disatukan, anda boleh meningkatkan data anda dan mening
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Langkah 5: Cipta segmen dan aktifkan data melalui pelbagai pilihan eksport
 
-Sekarang data anda lengkap dan mengandungi pelbagai maklumat tentang pelanggan anda, masa untuk mencari cara bertindak ke atas data tersebut.
+Sekarang data anda lengkap dan mengandungi pelbagai maklumat mengenai pelanggan anda, cari cara untuk mengambil tindakan ke atas data tersebut.
 
 1. [Cipta segmen](segments.md), subset asas pelanggan anda untuk memastikan tindakan anda relevan untuk pelanggan yang disasarkan.
 

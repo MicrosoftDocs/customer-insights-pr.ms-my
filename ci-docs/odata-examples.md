@@ -1,19 +1,19 @@
 ---
 title: Contoh OData untuk Dynamics 365 Customer Insights API
 description: Contoh yang biasa digunakan untuk Protokol Data Terbuka (OData) untuk bertanya API Wawasan Pelanggan untuk menyemak data.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740072"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808472"
 ---
 # <a name="odata-query-examples"></a>Contoh pertanyaan OData
 
@@ -33,16 +33,15 @@ Anda perlu mengubah suai sampel pertanyaan untuk menjadikannya berfungsi pada pe
 
 Jadual berikut mengandungi satu set pertanyaan sampel untuk *entiti Pelanggan*.
 
-
 |Jenis pertanyaan |Contoh  | Nota  |
 |---------|---------|---------|
 |ID pelanggan tunggal     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Kekunci alternatif    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Kekunci alternatif berterusan dalam entiti pelanggan bersatu       |
+|Kekunci alternatif    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Kekunci alternatif berterusan dalam entiti pelanggan bersatu       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Masuk    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Kekunci alternatif + Dalam   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Carian  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Mengembalikan 10 hasil teratas untuk rentetan carian      |
-|Keahlian segmen  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Mengembalikan nombor pratetap baris daripada entiti pembahagian.      |
+|Keahlian segmen  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Mengembalikan nombor pratetap baris daripada entiti pembahagian.      |
 
 ## <a name="unified-activity"></a>Aktiviti bersatu
 
@@ -53,7 +52,7 @@ Jadual berikut mengandungi satu set pertanyaan sampel untuk *entiti UnifiedActiv
 |Aktiviti CID     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Menyenaraikan aktiviti profil pelanggan tertentu |
 |Tempoh masa aktiviti    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Aktiviti profil pelanggan dalam jangka masa       |
 |Jenis aktiviti    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Aktiviti mengikut nama paparan     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Aktiviti mengikut nama paparan     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Pengisihan aktiviti    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Mengisih aktiviti menaik atau menurun       |
 |Aktiviti diperluaskan daripada keahlian segmen  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ Jadual berikut mengandungi satu set pertanyaan sampel untuk entiti lain.
 |Jenama CID yang diperkaya    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |Kepentingan CID yang diperkaya    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |In-Clause + Kembangkan     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>Pertanyaan OData tidak disokong
+
+Pertanyaan berikut tidak disokong oleh Wawasan Pelanggan:
+
+- `$filter` pada entiti sumber yang ditelan. Anda hanya boleh menjalankan pertanyaan $filter pada entiti sistem yang dicipta oleh Wawasan Pelanggan.
+- `$expand``$search` daripada pertanyaan. Contoh: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` daripada `$select` jika hanya subset atribut dipilih. Contoh: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- `$expand` jenama yang diperkaya atau pertalian minat untuk pelanggan tertentu. Contoh: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Pertanyaan ramalan entiti output model melalui kekunci alternatif. Contoh: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`
