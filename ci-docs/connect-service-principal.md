@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833396"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011852"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Sambung ke akaun Azure Data Lake Storage menggunakan prinsipal perkhidmatan Azure
 
@@ -51,7 +51,13 @@ Sebelum mencipta prinsipal perkhidmatan baru untuk Wawasan Pelanggan, semak sama
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Berikan keizinan kepada prinsipal perkhidmatan untuk mengakses akaun storan
 
-Pergi ke portal Azure untuk memberikan keizinan kepada prinsipal perkhidmatan untuk akaun storan yang anda ingin gunakan dalam Wawasan Pelanggan.
+Pergi ke portal Azure untuk memberikan keizinan kepada prinsipal perkhidmatan untuk akaun storan yang anda ingin gunakan dalam Wawasan Pelanggan. Salah satu peranan berikut mesti diberikan kepada akaun storan atau bekas:
+
+|Kelayakan|Keperluan|
+|----------|------------|
+|Pengguna yang dilog masuk pada masa ini|**Peranan**: Pembaca Data Blob Storan, Penyumbang Blob Storan atau Pemilik Blob Storan.<br>**Tahap**: Kebenaran boleh diberikan pada akaun storan atau bekas.</br>|
+|Prinsipal Perkhidmatan Wawasan Pelanggan -<br>Menggunakan Azure Data Lake Storage sebagai sumber data</br>|Pilihan 1<ul><li>**Peranan**: Pembaca Data Blob Storan, Penyumbang Data Blob Storan atau Pemilik Data Blob Storan.</li><li>**Tahap**: Kebenaran harus diberikan pada akaun storan.</li></ul>Pilihan 2 *(tanpa berkongsi akses Utama Perkhidmatan ke akaun storan)*<ul><li>**Peranan 1**: Pembaca Data Blob Storan, Penyumbang Data Blob Storan atau Pemilik Data Blob Storan.</li><li>**Tahap**: Kebenaran harus diberikan pada bekas.</li><li>**Peranan 2**: Storage Blob Data Delegator.</li><li>**Tahap**: Kebenaran harus diberikan pada akaun storan.</li></ul>|
+|Prinsipal Perkhidmatan Wawasan Pelanggan - <br>Menggunakan Azure Data Lake Storage sebagai output atau destinasi</br>|Pilihan 1<ul><li>**Peranan**: Penyumbang Data Blob Storan atau Pemilik Blob Storan.</li><li>**Tahap**: Kebenaran harus diberikan pada akaun storan.</li></ul>Pilihan 2 *(tanpa berkongsi akses Utama Perkhidmatan ke akaun storan)*<ul><li>**Peranan**: Penyumbang Data Blob Storan atau Pemilik Blob Storan.</li><li>**Tahap**: Kebenaran harus diberikan pada bekas.</li><li>**Peranan 2**: Storage Blob Delegator.</li><li>**Tahap**: Kebenaran harus diberikan pada akaun storan.</li></ul>|
 
 1. Pergi ke [Portal pentadbir Azure](https://portal.azure.com) dan daftar masuk ke organisasi anda.
 
@@ -62,7 +68,7 @@ Pergi ke portal Azure untuk memberikan keizinan kepada prinsipal perkhidmatan un
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Syot layar yang menunjukkan portal Azure semasa menambah penugasan peranan.":::
 
 1. Pada anak tetingkap **Tambah penugasan peranan**, tetapkan sifat berikut:
-   - Peranan: **Penyumbang Blob Data Storan**
+   - Peranan: Pembaca Data Blob Storan, Penyumbang Blob Storan atau Pemilik Blob Storan berdasarkan kelayakan yang disenaraikan di atas.
    - Tugaskan akses kepada: **Pengguna, kumpulan atau prinsipal perkhidmatan**
    - Pilih ahli: **Dynamics 365 AI for Customer Insights** ([prinsipal](#create-a-new-service-principal) perkhidmatan yang anda cari lebih awal dalam prosedur ini)
 

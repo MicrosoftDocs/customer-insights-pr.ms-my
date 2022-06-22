@@ -1,26 +1,26 @@
 ---
-title: Segar semula tambahan untuk Power Query sumber data berasaskan -
-description: Segar semula data baru dan terkini untuk sumber data besar berdasarkan Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Segar semula tambahan untuk Power Query dan sumber data Azure Data Lake
+description: Segar semula data baru dan dikemas kini untuk sumber data besar berdasarkan Power Query atau sumber data tasik data Azure.
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643667"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012036"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Segar semula tambahan untuk sumber data berdasarkan Power Query
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Segar semula tambahan untuk Power Query dan sumber data Azure Data Lake
 
-Artikel ini membincangkan cara mengkonfigurasi segar semula tambahan untuk sumber data berdasarkan Power Query.
+Artikel ini membincangkan cara mengkonfigurasi segar semula tambahan untuk sumber data berdasarkan Power Query atau Azure Data Lake.
 
 Segar semula peningkatan untuk sumber data memberikan kelebihan berikut:
 
@@ -28,15 +28,13 @@ Segar semula peningkatan untuk sumber data memberikan kelebihan berikut:
 - **Kebolehpercayaan dipertingkat** - Dengan menyegarkan semula yang lebih kecil, anda tidak perlu mengekalkan sambungan ke sistem sumber yang tidak menentu untuk jangka masa panjang, mengurangkan risiko isu sambungan.
 - **Penggunaan sumber dikurangkan** - Menyegar semula hanya sebahagian daripada jumlah data anda yang membawa kepada penggunaan sumber pengkomputeran yang lebih cekap dan mengurangkan jejak alam.
 
-## <a name="configure-incremental-refresh"></a>Konfigurasikan segar semula tokokan
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Mengkonfigurasikan segar semula tambahan untuk sumber data berdasarkan Power Query
 
 Wawasan Pelanggan membenarkan segar semula tambahan untuk sumber data yang diimport melalui Power Query pengingesan tambahan tersebut. Sebagai contoh, pangkalan data SQL Azure dengan medan tarikh dan masa, yang menunjukkan apabila rekod data terakhir dikemas kini.
 
 1. [Buat sumber data baru berdasarkan Power Query](connect-power-query.md).
 
-1. **Berikan nama** untuk sumber data.
-
-1. Pilih sumber data yang menyokong segar semula tambahan, seperti [pangkalan data](/power-query/connectors/azuresqldatabase) Azure SQL.
+1. Pilih sumber data yang menyokong segar semula tambahan, seperti [pangkalan data Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Pilih entiti atau jadual untuk dimasukkan.
 
@@ -48,7 +46,7 @@ Wawasan Pelanggan membenarkan segar semula tambahan untuk sumber data yang diimp
 
 1. Pada **Tetapan segar semula tokokan**, anda akan mengkonfigurasi segar semula tokokan untuk semua entiti yang anda pilih semasa mencipta sumber data.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Konfigurasikan entiti dalam sumber data untuk segar semula tokokan.":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Konfigurasikan seting segar semula tambahan.":::
 
 1. Pilih entiti dan berikan butiran berikut:
 
@@ -58,5 +56,31 @@ Wawasan Pelanggan membenarkan segar semula tambahan untuk sumber data yang diimp
 
 1. Pilih **Simpan** untuk melengkapkan penciptaan sumber data. Segar semula data awal akan menjadi segar semula sepenuhnya. Selepas itu, segar semula data tokokan berlaku seperti yang dikonfigurasikan dalam langkah sebelumnya.
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Konfigurasikan segar semula tambahan untuk sumber data Azure Data Lake
+
+Wawasan Pelanggan membenarkan segar semula tambahan untuk sumber data yang disambungkan ke Azure Data Lake Storage. Untuk menggunakan pengingesan tambahan dan segar semula untuk entiti, konfigurasikan entiti tersebut apabila menambah sumber data Azure Data Lake atau lebih baharu apabila mengedit sumber data. Folder data entiti mesti mengandungi folder berikut:
+
+- **FullData**: Folder dengan fail data yang mengandungi rekod awal
+- **Data** Tambahan: Folder dengan folder hierarki tarikh/masa dalam **format yyyy/mm/dd/hh** yang mengandungi kemas kini tambahan. **hh** mewakili jam UTC kemas kini dan mengandungi **folder Upserts** dan **Deletes**. **Upserts** mengandungi fail data dengan kemas kini kepada rekod sedia ada atau rekod baru. **Hapus** mengandungi fail data dengan rekod yang akan dialih keluar.
+
+1. Apabila menambah atau mengedit sumber data, navigasi ke **anak tetingkap Atribut** untuk entiti.
+
+1. Semak semula atribut. Pastikan atribut tarikh yang dicipta atau terakhir dikemas kini disediakan dengan *format Data DateTime* **dan** jenis *Semantik Calendar.Date* **.** Edit atribut jika perlu dan pilih **Selesai**.
+
+1. **Daripada anak tetingkap Pilih Entiti**, edit entiti. Kotak **semak pengambilan** tambahan dipilih.
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Konfigurasikan entiti dalam sumber data untuk segar semula tokokan.":::
+
+   1. Semak lalu ke folder root yang mengandungi fail .csv atau .parquet untuk data penuh, upserts data tambahan dan pemadaman data tambahan.
+   1. Masukkan sambungan untuk data penuh dan kedua-dua fail tambahan (\. csv atau \. parket).
+   1. Pilih **Simpan**.
+
+1. Untuk **Terakhir dikemas kini**, pilih atribut cap masa tarikh.
+
+1. Jika kekunci **Utama** tidak dipilih, pilih kekunci utama. Kunci utama ialah atribut yang unik kepada entiti. Untuk atribut menjadi kekunci utama yang sah, ia tidak boleh mengandungi nilai pendua, nilai yang hilang atau nilai tak sah. Atribut jenis data rentetan, integer dan GUID disokong sebagai kekunci utama.
+
+1. Pilih **Tutup** untuk menyimpan dan menutup anak tetingkap.
+
+1. Teruskan dengan menambah atau mengedit sumber data.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

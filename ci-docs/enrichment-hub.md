@@ -1,7 +1,7 @@
 ---
 title: Perkayakan profil pelanggan disatukan
 description: Gunakan keupayaan untuk memperkayakan data pelanggan anda.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800616"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954052"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Pengayaan untuk profil pelanggan (pratonton)
 
@@ -35,29 +35,29 @@ Pada tab **Terokai**, anda akan mencari semua pilihan pengayaan yang disokong.
 
 # <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
+- [Identiti](enrichment-liveramp.md) AbiliTec yang disediakan oleh LiveRamp AbiliTec
 - [Jenama](enrichment-microsoft.md) disediakan oleh Microsoft
-- [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
-- [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
 - [Demografi](enrichment-experian.md) disediakan oleh Experian
-- [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
-- [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
-- [Identiti](enrichment-liveramp.md) yang disediakan oleh LiveRamp AbiliTec
+- [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
+- [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
+- [Data lokasi yang](enrichment-azure-maps.md) disediakan oleh Microsoft Azure Peta
+- [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies
+- [Data](enrichment-SFTP-custom-import.md) tersuai SFTP melalui Protokol Pemindahan Fail Selamat (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
-- [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
-- [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft 
-- [Data syarikat dipertingkatkan yang](enrichment-enhanced-company-data.md) disediakan oleh Microsoft
-- [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies 
-- [Data tersuai](enrichment-SFTP-custom-import.md) melalui Protokol Pemindahan Fail Selamat (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) disediakan oleh Microsoft
-- [Data syarikat yang](enrichment-dnb.md) disediakan oleh Dun & Bradstreet
 - [Data penglibatan akaun yang](enrichment-office.md) disediakan oleh Microsoft
+- [Data syarikat yang](enrichment-dnb.md) disediakan oleh Dun & Bradstreet
+- [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
+- [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
+- [Data syarikat dipertingkatkan yang](enrichment-enhanced-company-data.md) disediakan oleh Microsoft
+- [Data lokasi yang](enrichment-azure-maps.md) disediakan oleh Microsoft Azure Peta
+- [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies
+- [Data](enrichment-SFTP-custom-import.md) tersuai SFTP melalui Protokol Pemindahan Fail Selamat (SFTP)
 
 ---
 
-Pada tab **Pengayaan saya**, anda boleh melihat pengayaan yang telah anda konfigurasikan dan mengedit sifatnya.
+Pada tab **Pengayaan saya**, anda boleh melihat pengayaan yang telah anda konfigurasikan dan mengedit sifatnya. Anda juga boleh membuat [segmen](segments.md) atau [langkah](measures.md) daripada pengayaan.
 
 ## <a name="manage-existing-enrichments"></a>Mengurus pengayaan sedia ada
 
@@ -81,36 +81,45 @@ Pengayaan pihak ketiga dikonfigurasikan menggunakan [sambungan](connections.md),
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Pelbagai pengayaan untuk jenis yang sama
 
-Entiti yang akan diperkaya ditentukan semasa konfigurasi pengayaan, yang membolehkan anda memperkayakan hanya subset profil anda. Contohnya, memperkaya data hanya untuk segmen tertentu. Anda boleh mengkonfigurasikan beberapa pengayaan jenis yang sama dan menggunakan semula sambungan yang sama. Sesetengah pengayaan mempunyai had bilangan pengayaan jenis yang sama yang boleh dicipta. Had dan penggunaan semasa boleh dilihat pada halaman **Pengayaan**.
+Entiti yang akan diperkaya ditentukan semasa konfigurasi pengayaan, yang membolehkan anda memperkayakan hanya subset profil anda. Contohnya, memperkaya data hanya untuk segmen tertentu. Anda boleh mengkonfigurasikan beberapa pengayaan jenis yang sama dan menggunakan semula sambungan yang sama. Sesetengah pengayaan mempunyai had bilangan pengayaan jenis yang sama yang boleh dicipta. Had dan penggunaan semasa boleh dilihat pada setiap jubin pada **tab** Discover **halaman Pengayaan**.
 
 ## <a name="enrich-data-sources-before-unification"></a>Memperkayakan sumber data sebelum penyatuan
 
 Anda boleh memperkayakan data pelanggan anda sebelum penyatuan data untuk membantu meningkatkan kualiti padanan data. Untuk maklumat lanjut, lihat [pengayaan](data-sources-enrichment.md) sumber data.
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
+## <a name="run-or-refresh-enrichments"></a>Jalankan atau segar semula pengayaan
+
+1. Untuk memulakan proses pengayaan, pilih **Jalankan**. Atau, biarkan sistem menjalankan pengayaan secara automatik sebagai sebahagian daripada segar semula [yang](system.md#schedule-tab) dijadualkan. Masa pemprosesan bergantung pada saiz data pelanggan anda.
+
+1. Secara pilihan, [lihat kemajuan proses](#see-the-progress-of-the-enrichment-process) pengayaan.
+
+1. Selepas proses pengayaan selesai, pergi ke **Pengayaan saya** untuk menyemak data profil pelanggan yang baru diperkaya, masa kemas kini terakhir, dan bilangan profil yang diperkaya.
+
+1. Pilih pengayaan untuk melihat [hasil](#enrichment-results) pengayaan.
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
 
 Anda boleh menemukan butiran tentang pemprosesan pengayaan, termasuk status dan isu yang berpotensi semasa penyegaran semula atau selepas segar semula selesai. Fahami proses yang terlibat untuk menyegarkan semula pengayaan dan tempoh masa yang diambil untuk menjalankan proses tersebut. Status pengayaan disokong untuk Experian, Leadspace, di sini teknologi, Import SFTP, dan Azure Maps.
 
-Untuk melihat status pengayaan
-
-1. Pergi ke **Data** > **Pengayaan**. 
-1. Dalam tab **Penggayaan saya**, pilih status pengayaan untuk membuka anak tetingkap sisi. 
-1. Dalam anak tetingkap **Butiran kemajuan**, kembangkan bahagian **Pengayaan**. 
-1. Di bawah pengayaan yang mahu anda lihat kemajuan, pilih **Lihat butiran**. 
-1. Dalam anak tetingkap **Butiran tugas**, pilih **Tunjukkan butiran** untuk melihat proses yang terlibat dalam pengemaskinian pengayaan dan status proses tersebut. 
+1. Pergi ke **Data** > **Pengayaan**.
+1. **Dalam tab Pengayaan saya**, pilih status pengayaan untuk membuka anak tetingkap sisi.
+1. Dalam anak tetingkap **Butiran kemajuan**, kembangkan bahagian **Pengayaan**.
+1. Di bawah pengayaan yang mahu anda lihat kemajuan, pilih **Lihat butiran**.
+1. Dalam anak tetingkap **Butiran tugas**, pilih **Tunjukkan butiran** untuk melihat proses yang terlibat dalam pengemaskinian pengayaan dan status proses tersebut.
 
 ## <a name="enrichment-results"></a>Keputusan pengayaan
 
-Selepas pengayaan selesai, anda boleh menyemak hasil pengayaan.
+Selepas pengayaan selesai, semak semula keputusan pengayaan.
 
-1. Pergi ke **Data** > **Pengayaan**. 
-1. Pilih pengayaan yang anda inginkan maklumat.
+1. Pergi ke **Data** > **Pengayaan**.
+1. **Dalam tab Pengayaan saya**, pilih pengayaan yang anda inginkan maklumat.
 
-Semua pengayaan menunjukkan maklumat asas seperti bilangan profil yang diperkaya, pratonton entiti pengayaan yang dijana, dan bilangan profil yang diperkaya dari masa ke masa. Sekiranya ada, **Bilangan pelanggan yang diperkaya oleh lapangan** menyediakan gerudi ke dalam liputan setiap medan yang diperkaya.
+Semua pengayaan menunjukkan maklumat asas seperti bilangan profil yang diperkaya dan bilangan profil yang diperkaya dari masa ke masa. Jubin **pratonton** pelanggan Enriched menunjukkan sampel entiti pengayaan yang dijana. Untuk melihat pandangan terperinci, pilih **Lihat lebih lanjut** dan pilih **tab Data**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Halaman hasil pengayaan.":::
 
-Sesetengah pengayaan juga menunjukkan maklumat khusus untuk jenis pengayaan. Rujuk dokumentasi untuk pengayaan yang berkaitan untuk maklumat lanjut.
+Sekiranya ada, **Bilangan pelanggan yang diperkaya oleh lapangan** menyediakan gerudi ke dalam liputan setiap medan yang diperkaya.
 
+Sesetengah pengayaan juga menunjukkan maklumat khusus untuk jenis pengayaan. Untuk maklumat lanjut, lihat dokumentasi yang berkaitan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Eksport data Wawasan Pelanggan ke hos SFTP (mengandungi video)
 description: Ketahui cara mengkonfigurasi sambungan dan mengeksport ke lokasi SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643236"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947195"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Eksport segmen dan data lain ke SFTP (pratonton)
 
@@ -28,8 +28,8 @@ Gunakan data pelanggan anda dalam aplikasi pihak ketiga dengan mengeksportnya ke
 ## <a name="known-limitations"></a>Had diketahui
 
 - Destinasi SFTP di belakang tembok api pada masa ini tidak disokong. 
-- Masa jalanan eksport bergantung pada prestasi sistem anda. Kami mengesyorkan dua CPU teras dan 1 Gb memori sebagai konfigurasi minimum pelayan anda. 
-- Mengeksport entiti sehingga 100 juta profil pelanggan boleh mengambil masa 90 minit apabila menggunakan konfigurasi minimum yang disyorkan iaitu dua CPU teras dan 1 Gb memori. 
+- Masa jalanan eksport bergantung pada prestasi sistem anda. Kami mengesyorkan dua CPU teras dan 1 Gb memori sebagai konfigurasi minimum pelayan anda.
+- Mengeksport entiti sehingga 100 juta profil pelanggan boleh mengambil masa 90 minit apabila menggunakan konfigurasi minimum yang disyorkan iaitu dua CPU teras dan 1 Gb memori.
 
 ## <a name="set-up-connection-to-sftp"></a>Sediakan sambungan ke SFTP
 
@@ -64,13 +64,17 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 1. Pilih entiti, contohnya segmen, yang anda mahu mengeksport.
 
    > [!NOTE]
-   > Setiap entiti yang dipilih akan dibahagikan kepada lima fail output apabila dieksport. 
+   > Setiap entiti yang dipilih akan dibahagikan kepada lima fail output apabila dieksport.
 
 1. Pilih **Simpan**.
 
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
+Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab).
+Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Eksport entiti yang mengandungi sejumlah besar data boleh membawa kepada berbilang fail CSV dalam folder yang sama untuk setiap eksport. Memisahkan eksport berlaku atas sebab prestasi untuk meminimumkan masa yang diperlukan untuk eksport selesai.
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 

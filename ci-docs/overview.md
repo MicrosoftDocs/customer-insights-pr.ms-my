@@ -6,22 +6,22 @@ ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641911"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947103"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Gambaran keseluruhan produk untuk Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) ialah platform data pelanggan (CDP) Microsoft yang membantu menyampaikan pengalaman pelanggan yang diperibadikan. Aplikasi ini memberikan pandangan holistik pelanggan dengan masa yang tidak dapat ditandingi untuk mendapatkan pandangan. Dapatkan pandangan pelanggan anda yang paling komprehensif dengan menyatukan data pelanggan dengan data operasi dan IoT dalam masa nyata. Memperkayakan profil pelanggan dengan sumber data pihak pertama dan ketiga. 
 
 Wawasan Pelanggan membantu anda mengubah perniagaan anda menjadi organisasi yang berpusatkan pelanggan dengan memperkasakan profesional pemasaran, jualan dan perkhidmatan anda untuk menyesuaikan interaksi 1:1 secara besar-besaran. Integrasi turnkey dengan Microsoft dan aplikasi pihak ketiga boleh digunakan untuk mengaktifkan cerapan masa nyata untuk mendorong tindakan yang bermakna.
- 
+
 Sambungkan data daripada sumber data transaksi, tingkah laku dan demografi untuk mencipta pandangan pelanggan 360 darjah. Keluarkan cerapan di luar kotak dengan model AI prabina atau bina, uji dan gunakan model AI/ML tersuai dengan pantas menggunakan penyelesaian analisis lanjutan pada skala tanpa had.
 
-Mengekalkan kawalan penuh ke atas data pelanggan anda untuk memastikan tahap tadbir urus data tertinggi dan pematuhan dengan CDP gred layan diri, perusahaan yang dibina di atas Microsoft Azure. Menyokong Peraturan Perlindungan Data Umum (GDPR) dan keperluan perundangan dan piawaian industri lain melalui privasi, keselamatan, dan tadbir urus terbina dalam, dan alat pengurusan persetujuan.
+Mengekalkan kawalan penuh ke atas data pelanggan anda untuk memastikan tahap tadbir urus data tertinggi dan pematuhan dengan CDP gred layan diri, perusahaan yang dibina di atas Microsoft Azure. Menyokong Peraturan Perlindungan Data Umum (GDPR) dan keperluan perundangan dan piawaian industri lain melalui alat privasi, keselamatan dan tadbir urus terbina dalam.
 
 ## <a name="pricing-and-licensing"></a>Penentuan harga dan pelesenan
 Wawasan Pelanggan dilesenkan bagi setiap penyewa dan merangkumi keupayaan perniagaan-ke-pengguna (B2C) dan perniagaan-ke-perniagaan (B2B). Anda boleh membeli kapasiti tambahan dengan lesen tambahan untuk meningkatkan bilangan profil dan akaun.

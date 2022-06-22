@@ -3,17 +3,17 @@ title: Gunakan akaun Gen2 anda sendiri Azure Data Lake Storage
 author: mukeshpo
 description: Ketahui tentang keperluan untuk menggunakan akaun anda sendiri Azure Data Lake Storage untuk menyimpan data Wawasan Pelanggan.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833951"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011944"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Gunakan akaun Gen2 anda sendiri Azure Data Lake Storage
 
@@ -37,6 +37,7 @@ Apabila anda mencipta persekitaran baharu, pastikan akaun Storan Tasik Data wuju
 1. Pilih cara **Menyambungkan storan** anda. Anda boleh memilih antara pilihan berasaskan sumber dan pilihan berasaskan langganan untuk pengesahan. Untuk maklumat lanjut, lihat [Menyambung ke Azure Data Lake Storage akaun menggunakan Azure Service Principal](connect-service-principal.md).
    - Untuk **langganan** Azure, pilih **akaun** Langganan **,** kumpulan **Sumber dan** Storan yang mengandungi `customerinsights` bekas.
    - Untuk **kunci** Akaun, berikan **nama** Akaun dan **kunci** Akaun untuk akaun Storan Data Lake. Menggunakan kaedah pengesahan ini menunjukkan bahawa anda dimaklumkan jika organisasi anda memutarkan kekunci. Anda mesti [mengemas kini konfigurasi](manage-environments.md#edit-an-existing-environment) persekitaran dengan kekunci baru apabila ia diputar.
+1. Pilih jika anda mahu menggunakan Azure Private Link untuk menyambung ke akaun storan dan [mencipta sambungan ke Pautan](security-overview.md#private-links-tab) Peribadi dengan proses dua langkah.
 
 Apabila proses sistem seperti pengambilan data selesai, sistem mencipta folder yang sepadan dalam akaun storan. Fail data dan fail *model.json* dicipta dan ditambah ke folder berdasarkan nama proses.
 

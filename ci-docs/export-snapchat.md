@@ -1,19 +1,19 @@
 ---
 title: Eksport data Customer Insight ke Snapchat
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan eksport ke Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643627"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947287"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Eksport segmen ke Snapchat (pratonton)
 
@@ -21,7 +21,8 @@ Eksport segmen profil pelanggan yang disatukan ke Snapchat dan gunakannya untuk 
 
 ## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
 
--   Anda mempunyai [akaun Perniagaan Snapchat](https://business.snapchat.com/), [akaun Iklan Snapchat](https://ads.snapchat.com/), dan kelayakan pentadbir yang sepadan.
+-   Anda mempunyai [akaun Perniagaan Snapchat](https://business.snapchat.com/), [akaun Iklan Snapchat](https://ads.snapchat.com/), dan kelayakan pentadbir yang sepadan. YOu mesti sekurang-kurangnya menjadi ahli Akaun Organisasi dan Pengurus Data Akaun Iklan tertentu. 
+-   Anda mempunyai sekurang-kurangnya satu khalayak dalam pengurus Khalayak Snapchat jenis SAM (Snap Audience Match). 
 -   Anda telah [mengkonfigurasi segmen](segments.md) dalam Wawasan Pelanggan.
 -   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
@@ -60,7 +61,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Snapchat. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
 
-1. Masukkan [**ID Khalayak Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Masukkan [**ID Segmen Snapchat / Penonton**](https://businesshelp.snapchat.com/s/article/custom-audiences). ID penonton boleh didapati di URL selepas memilih penonton dalam Pengurus Khalayak Snapchat. 
 
 1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. Ia diperlukan untuk mengeksport segmen ke Snapchat.
 

@@ -1,19 +1,19 @@
 ---
-title: Ciri baharu dan akan datang
+title: Ciri baharu dan dikemas kini
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833641"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843358"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Perkara baharu dalam Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tert
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Kemas kini Mei 2022
+
+Kemas kini pada Mei 2022 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="updated-data-unification-experience"></a>Pengalaman penyatuan data yang dikemas kini
+
+ Penyatuan data membolehkan anda menyatukan sumber data sekali berbeza ke dalam set data induk tunggal yang menyediakan pandangan bersatu data tersebut. Data boleh disatukan pada satu entiti atau berbilang entiti. Pertama, anda [memilih entiti dan medan](map-entities.md) sumber, [mengalih keluar rekod](remove-duplicates.md) pendua, menentukan peraturan untuk [keadaan](match-entities.md) yang sepadan dan menentukan medan yang [hendak disertakan dalam profil pelanggan yang bersatu](merge-entities.md).
+
+Untuk maklumat lanjut, lihat [Gambaran keseluruhan penyatuan data](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Halaman utama yang disegar semula dalam Wawasan Pelanggan
+
+**Rumah** membimbing anda melalui proses konfigurasi untuk ciri utama dan memberikan gambaran keseluruhan segmen, langkah dan data pengayaan. Kami telah menyegarkan pengalaman untuk memberikan maklumat yang lebih relevan sepintas lalu.
+
+Untuk maklumat lanjut, lihat [Terokai Wawasan](home.md) Pelanggan.
+
+### <a name="track-usage-of-a-segment"></a>Jejaki penggunaan segmen
+
+Anda kini [boleh menjejaki penggunaan segmen](segments.md#track-usage-of-a-segment) dalam aplikasi, yang berdasarkan Dataverse organisasi yang berkaitan dengan Wawasan Pelanggan. Untuk [segmen Wawasan Pelanggan yang digunakan dalam perjalanan pelanggan Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistem memberitahu anda tentang penggunaan segmen tersebut.
+
+### <a name="export-to-criteo"></a>Eksport ke Criteo
+
+Criteo adalah platform dalam talian yang membantu pengguna menguruskan pengiklanan digital. Anda kini boleh mengeksport segmen profil pelanggan bersatu untuk menjana kempen, menyediakan pemasaran e-mel dan menggunakan kumpulan pelanggan tertentu dengan Criteo.
+
+Untuk maklumat lanjut, lihat [Mengeksport segmen ke Criteo (pratonton)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Struktur dokumentasi yang diperhalusi untuk penciptaan persekitaran
+
+Kami telah melawat semula dokumen bantuan yang berkaitan dengan penciptaan dan pengurusan persekitaran dalam Wawasan Pelanggan. Artikel kini dikumpulkan di bawah nod Persekitaran dalam jadual kandungan. Artikel yang disusun semula memberikan lebih banyak panduan untuk cara yang berbeza untuk menyediakan persekitaran dan mempunyai struktur yang lebih jelas. Jika anda mempunyai maklum balas untuk dikongsi, beritahu kami melalui kawalan menjelang akhir artikel bantuan.
+
+Untuk maklumat lanjut, lihat [Cara: Mencipta persekitaran](create-environment.md) baharu.
 
 ## <a name="april-2022-updates"></a>Kemas kini April 2022
 
@@ -45,7 +76,7 @@ Untuk maklumat lanjut, lihat [Menggunakan pembangun ukuran untuk mencipta langka
 
 Kami telah menyemak semula artikel dokumentasi kami dan mengalih keluar sebutan cerapan penglibatan dan keupayaan cerapan khalayak. Melangkah ke hadapan, kami akan merujuk secara konsisten kepada nama produk Wawasan Pelanggan apabila kami menulis tentang ciri teras aplikasi. Perubahan ini juga membawa kepada penstrukturan semula jadual kandungan yang ketara, struktur URL, dan laluan fail dalam repositori dokumentasi asas. Semua penanda buku atau pautan sedia ada anda terus berfungsi dan mengubah hala ke URL yang dikemas kini.
 
-Sekiranya anda ingin memberitahu kami bagaimana anda melihat perubahan itu atau melihat sesuatu yang tidak berfungsi seperti yang diharapkan, beritahu kami [dengan menghantar maklum balas untuk halaman ini](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Sekiranya anda ingin memberitahu kami bagaimana anda melihat perubahan itu atau melihat sesuatu yang tidak berfungsi seperti yang diharapkan, beritahu kami [dengan menghantar maklum balas untuk halaman](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) ini.
 
 ## <a name="march-2022-updates"></a>Kemas kini Mac 2022
 
@@ -91,7 +122,7 @@ Kemas kini pada Februari 2022 termasuk ciri baharu, peningkatan prestasi dan pem
 
 Model ramalan di luar kotak, termasuk **churn** langganan, **churn** transaksi, dan **nilai seumur hidup pelanggan (CLV)** secara amnya tersedia sebagai sebahagian daripada Wawasan Pelanggan. 
 
-Untuk maklumat lanjut, lihat [Gambaran keseluruhan](predictions-overview.md) ramalan.
+Untuk maklumat lanjut, lihat [Gambaran keseluruhan ramalan](predictions-overview.md).
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>New sumber data: Integrasi dengan Azure Synapse Analytics (Pratonton)
 

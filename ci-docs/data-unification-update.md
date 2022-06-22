@@ -1,7 +1,7 @@
 ---
 title: Kemas kini tetapan penyatuan
 description: Kemas kini peraturan pendua, peraturan padanan atau medan bersatu dalam seting penyatuan.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755601"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844051"
 ---
 # <a name="update-the-unification-settings"></a>Kemas kini tetapan penyatuan
 
@@ -43,8 +43,9 @@ Untuk menyemak atau mengubah sebarang seting penyatuan sebaik sahaja profil bers
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Petikan skrin halaman Unify Data Unify dengan opsyen Unify diserlahkan.":::
 
-   - Untuk mengemas kini profil pelanggan yang bersatu (dengan atau tanpa kebergantungan), lihat [Jalankan kemas kini pada profil](#run-updates-to-the-unified-customer-profile) pelanggan.
-   - Untuk menilai kualiti keadaan padanan anda tanpa mengemas kini profil bersatu, lihat [Jalankan keadaan](#run-matching-conditions) yang sepadan. Opsyen **Jalankan keadaan pemadanan sahaja** tidak dipaparkan untuk entiti tunggal.
+   - [Jalankan keadaan](#run-matching-conditions) yang sepadan untuk menilai kualiti keadaan padanan anda dengan cepat (deduplication dan peraturan padanan) tanpa mengemas kini profil bersatu. Opsyen **Jalankan keadaan pemadanan sahaja** tidak dipaparkan untuk entiti tunggal.
+   - [Menyatukan profil](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan keadaan yang sepadan dan mengemas kini entiti profil pelanggan yang bersatu tanpa memberi kesan kepada kebergantungan (seperti pengayaan, segmen atau langkah). Proses bergantung tidak dijalankan, tetapi akan disegarkan semula seperti [yang ditakrifkan dalam jadual](system.md#schedule-tab) segar semula.
+   - [Menyatukan profil dan kebergantungan](#run-updates-to-the-unified-customer-profile) pelanggan untuk menjalankan keadaan yang sepadan dan mengemas kini entiti profil pelanggan yang bersatu dan semua kebergantungan (seperti pengayaan, segmen atau langkah). Semua proses dijalankan semula secara automatik.
 
 ## <a name="edit-source-fields"></a>Mengedit medan sumber
 
@@ -70,7 +71,7 @@ Anda tidak boleh mengalih keluar atribut atau entiti jika ia telah disatukan.
 
    Bilangan rekod pendua yang ditemui dipaparkan di bawah **Pendua**. Lajur **deduplicated** Rekod menunjukkan entiti mana yang mempunyai rekod pendua dan peratusan rekod pendua.
 
-1. Jika anda menambah entiti yang diperkaya, pilih **Gunakan entiti** yang diperkaya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md).
+1. Jika anda menambah entiti yang diperkaya, pilih **Gunakan entiti** yang diperkaya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. Untuk menguruskan peraturan deduplikasi, pilih mana-mana opsyen berikut:
    - **Cipta peraturan** baharu: Pilih **Tambah peraturan** di bawah entiti yang sesuai. Untuk maklumat lanjut, lihat [Mentakrifkan peraturan](remove-duplicates.md#define-deduplication-rules) deduplication.
@@ -103,7 +104,7 @@ Anda boleh mengkonfigurasikan semula dan menambah baik kebanyakan parameter pada
    - **Rekod yang dipadankan dan tidak dipadankan** menyerlahkan bilangan rekod unik yang kekal selepas memproses peraturan padanan.
    - **Rekod yang dipadankan sahaja** menunjukkan bilangan padanan merentasi semua pasangan padanan anda.
 
-1. Untuk melihat hasil semua peraturan dan skornya, pilih **Lihat larian terakhir**. Hasil dipaparkan, termasuk ID kenalan alternatif. Anda boleh memuat turun hasilnya.
+1. Untuk melihat hasil semua peraturan dan skornya, pilih **Lihat larian** terakhir. Hasil dipaparkan, termasuk ID kenalan alternatif. Anda boleh memuat turun hasilnya.
 
 1. Untuk melihat hasil dan skor peraturan tertentu, pilih peraturan dan kemudian **Pratonton**. Keputusan dipaparkan. Anda boleh memuat turun hasilnya.
 
@@ -111,7 +112,7 @@ Anda boleh mengkonfigurasikan semula dan menambah baik kebanyakan parameter pada
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Perwakilan grafik bagi rekod yang tidak sepadan dan sepadan termasuk senarai data.":::
 
-1. Jika anda menambah entiti yang diperkaya, pilih **Gunakan entiti** yang diperkaya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md).
+1. Jika anda menambah entiti yang diperkaya, pilih **Gunakan entiti** yang diperkaya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. Untuk menguruskan peraturan, pilih mana-mana opsyen berikut:
    - **Cipta peraturan** baharu: Pilih **Tambah peraturan** di bawah entiti yang sesuai. Untuk maklumat lanjut, lihat [Mentakrifkan peraturan untuk pasangan](match-entities.md#define-rules-for-match-pairs) padanan.
@@ -135,11 +136,13 @@ Anda boleh mengkonfigurasikan semula dan menambah baik kebanyakan parameter pada
 
 ## <a name="run-matching-conditions"></a>Jalankan keadaan yang sepadan
 
+Jalankan keadaan yang sepadan menjalankan deduplication dan peraturan padanan sahaja dan mengemas kini *entiti Deduplication_** dan *ConflationMatchPair*.
+
 1. **Daripada halaman Unify Data** > **Unify**, pilih **Jalankan syarat yang sepadan sahaja**.
 
-   Rekod **pendua** dan **jubin keadaan** padanan menunjukkan **Beratur** atau **Segar Semula**.
+   Jubin **rekod** pendua dan **keadaan** padanan menunjukkan **status Beratur** atau **Segar Semula**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Apabila proses pemadanan selesai, pilih **Edit** pada **jubin Keadaan** padanan.
 
@@ -153,10 +156,12 @@ Anda boleh mengkonfigurasikan semula dan menambah baik kebanyakan parameter pada
 
 1. **Daripada halaman Penyatuan** > **Data**, pilih:
 
-   - **Menyatukan profil** pelanggan: Mengemas kini entiti profil pelanggan yang bersatu tanpa menjejaskan kebergantungan (seperti pengayaan, segmen atau langkah). Proses bergantung tidak dijalankan, tetapi akan disegarkan semula seperti [yang ditakrifkan dalam jadual](system.md#schedule-tab) segar semula.
+   - **Menyatukan profil** pelanggan: Jalankan syarat yang sepadan dan kemas kini entiti profil pelanggan bersatu tanpa menjejaskan kebergantungan (seperti pengayaan, segmen atau langkah). Proses bergantung tidak dijalankan, tetapi akan disegarkan semula seperti [yang ditakrifkan dalam jadual](system.md#schedule-tab) segar semula.
 
-   - **Menyatukan profil dan kebergantungan** pelanggan: Kemas kini profil bersatu dan semua kebergantungan. Semua proses dijalankan semula secara automatik. Selepas semua proses hiliran selesai, profil pelanggan mencerminkan data yang dikemas kini.
+   - **Menyatukan profil dan kebergantungan** pelanggan: Menjalankan keadaan yang sepadan dan mengemas kini profil bersatu dan semua kebergantungan. Semua proses dijalankan semula secara automatik. Selepas semua proses hiliran selesai, profil pelanggan mencerminkan data yang dikemas kini.
 
-   Rekod **pendua**, **keadaan** pemadanan dan **jubin medan** pelanggan Disatukan menunjukkan **Beratur** atau **Segar Semula**.
+   Rekod pendua, syarat pemadanan dan **jubin medan** pelanggan Disatukan menunjukkan **status Beratur** atau **Segar Semula**.**·** **·**
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Hasil paparan larian yang berjaya pada **halaman Unify** menunjukkan bilangan profil pelanggan bersatu.

@@ -1,95 +1,93 @@
 ---
 title: Pengayaan data identiti LiveRamp
 description: Memperkayakan profil pelanggan dengan data LiveRamp.
-ms.date: 03/02/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 0727818f6df565d9a031966a68d521ae7167e484
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643189"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954006"
 ---
-# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Memperkayakan profil pelanggan dengan data identiti daripada LiveRamp (Pratonton) 
+# <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Memperkayakan profil pelanggan dengan data identiti daripada LiveRamp (pratonton)
 
-LiveRamp menyediakan resolusi identiti luar talian yang menentukan dan penyatuan data pelanggan. Anda boleh memetakan pengecam peribadi dalam data pelanggan anda ke graf identiti AbiliTec dan menerima ID AbiliTec. Anda kemudian boleh menggunakan ID ini untuk penyatuan data pelanggan anda dengan lebih baik. 
+LiveRamp menyediakan resolusi identiti luar talian yang menentukan dan penyatuan data pelanggan. Anda boleh memetakan pengecam peribadi dalam data pelanggan anda ke graf identiti AbiliTec dan menerima ID AbiliTec. Anda kemudian boleh menggunakan ID ini untuk penyatuan data pelanggan anda dengan lebih baik.
 
-## <a name="prerequisites"></a>Prasyarat 
+## <a name="supported-countriesregions"></a>Negara/rantau yang disokong
 
-Untuk mengkonfigurasi pengayaan, prasyarat berikut mesti dipenuhi: 
+Kami kini menyokong memperkayakan profil pelanggan dengan data LiveRamp di Amerika Syarikat sahaja.
 
-- Anda mempunyai langganan LiveRamp yang aktif. Untuk mendapatkan langganan, hubungi pasukan akaun LiveRamp anda atau untuk [dynamics@liveramp.com](mailto:dynamics@liveramp.com) maklumat lanjut.   
+## <a name="prerequisites"></a>Prasyarat
 
-- Langganan AbiliTec yang aktif dengan ID klien dan rahsia untuk mengakses API. Untuk maklumat lanjut, lihat [Hab Pembangun API AbiliTec](https://developers.liveramp.com/abilitec-api/). 
+- Langganan LiveRamp yang aktif. Untuk mendapatkan langganan, hubungi pasukan akaun LiveRamp anda atau untuk [dynamics@liveramp.com](mailto:dynamics@liveramp.com) maklumat lanjut.
 
-## <a name="supported-countriesregions"></a>Negara/rantau yang disokong 
+- Langganan AbiliTec yang aktif dengan ID klien dan rahsia untuk mengakses API. Untuk maklumat lanjut, lihat [Hab Pembangun API AbiliTec](https://developers.liveramp.com/abilitec-api/).
 
-Kami kini menyokong memperkayakan profil pelanggan dengan data LiveRamp di Amerika Syarikat sahaja. 
+- Sambungan LiveRamp [dikonfigurasikan](connections.md) [oleh](#configure-the-connection-for-liveramp) pentadbir.
 
-## <a name="configure-the-enrichment"></a>Konfigurasikan pengayaan 
+## <a name="configure-the-connection-for-liveramp"></a>Konfigurasikan sambungan untuk LiveRamp
 
-1. Pergi ke **Data** > **Pengayaan** dan pilih tab **Terokai**. 
+Anda mesti menjadi [pentadbir](permissions.md#admin) dalam Wawasan Pelanggan dan mempunyai ID dan rahsia klien LiveRamp yang aktif.
 
-1. Pilih **Memperkayakan data** saya pada **jubin Identiti**. 
+1. Pilih **Tambah sambungan** apabila mengkonfigurasi pengayaan, atau pergi ke **Sambungan** > **Pentadbir** dan pilih **Sediakan** pada jubin LiveRamp.
+
+   :::image type="content" source="media/liveramp-connection.png" alt-text="Anak tetingkap konfigurasi untuk menyediakan sambungan ke perkhidmatan LiveRamp AbiliTec.":::
+
+1. Masukkan nama untuk sambungan dan ID klien LiveRamp yang sah dan rahsia.
+
+1. Semak dan berikan persetujuan anda untuk [privasi dan pematuhan Data](#data-privacy-and-compliance) dengan memilih **Saya bersetuju**.
+
+1. Pilih **Sahkan** untuk mengesahkan konfigurasi dan kemudian pilih **Simpan**.
+
+### <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
+
+Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke LiveRamp, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa LiveRamp memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, semak [Kenyataan](https://go.microsoft.com/fwlink/?linkid=396732) Privasi Microsoft. Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.
+
+## <a name="configure-the-enrichment"></a>Konfigurasikan pengayaan
+
+1. Pergi ke **Data** > **Pengayaan** dan pilih tab **Terokai**.
+
+1. Pilih **Memperkayakan data** saya pada **Identiti** daripada jubin LiveRamp.
 
    :::image type="content" source="media/liveramp-tile.png" alt-text="Jubin identiti dalam halaman gambaran keseluruhan pengayaan.":::
 
-1. Pilih [sambungan](connections.md) daripada senarai juntai bawah. Hubungi pentadbir jika tiada sambungan tersedia. Jika anda seorang pentadbir, anda boleh mencipta sambungan dengan **memilih Tambah sambungan**. Pilih **LiveRamp** daripada senarai juntai bawah. 
+1. Semak semula gambaran keseluruhan dan kemudian pilih **Berikut**.
 
-1. Pilih **Seterusnya** dan pilih set **data Pelanggan yang** ingin anda memperkayakan dengan data identiti dari LiveRamp. Anda boleh memilih *entiti Pelanggan* untuk memperkayakan semua profil pelanggan anda atau memilih *entiti segmen* untuk memperkayakan hanya profil pelanggan yang terkandung dalam segmen tersebut. 
+1. Pilih sambungan. Hubungi pentadbir jika tidak tersedia.
 
-1. Pilih **Seterusnya** dan tentukan jenis medan daripada profil bersatu anda yang patut digunakan untuk mencari data identiti yang sepadan daripada LiveRamp. Sekurang-kurangnya satu daripada medan **Nama dan alamat**, **Telefon** atau **E-mel** diperlukan. 
+1. Pilih **Seterusnya**.
 
-   > [!TIP]
-   > Semakin banyak pengecam dan medan utama yang anda petakan, semakin banyak kemungkinan kadar padanan yang lebih tinggi 
+1. **Pilih set** data Pelanggan dan pilih profil atau segmen yang ingin anda memperkayakan dengan data identiti dari LiveRamp. Entiti *Pelanggan* memperkayakan semua profil pelanggan anda sedangkan segmen hanya memperkayakan profil pelanggan yang terkandung dalam segmen tersebut.
 
-1. Petakan medan daripada entiti Pelanggan *bersatu* anda yang akan digunakan untuk dipadankan dengan graf ID AbiliTec LiveRamp. 
+1. Tentukan jenis medan daripada profil bersatu anda untuk digunakan untuk memadankan data identiti daripada LiveRamp. Sekurang-kurangnya satu daripada medan **Nama dan alamat**, **E-mel** atau **Telefon** diperlukan. Untuk ketepatan padanan yang lebih tinggi, tambah medan lain. Pilih **Seterusnya**.
+
+1. Petakan medan anda ke data pengenalan daripada LiveRamp.
 
    :::image type="content" source="media/liveramp-data-mapping.png" alt-text="Pilihan pemetaan data untuk pengayaan LiveRamp.":::
 
-1. Pilih **Seterusnya** untuk melengkapkan pemetaan medan. 
+1. Pilih **Seterusnya** untuk melengkapkan pemetaan medan.
 
-1. **Berikan Nama** untuk pengayaan dan **entiti** Output. 
+1. **Berikan Nama** untuk pengayaan dan **nama** entiti Output.
 
-1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda. 
+1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda.
 
-## <a name="configure-the-connection-for-liveramp"></a>Konfigurasikan sambungan untuk LiveRamp 
+1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
 
-Anda perlu menjadi pentadbir untuk [mengkonfigurasi sambungan](connections.md). Pilih **Tambah sambungan** apabila mengkonfigurasi pengayaan atau pergi ke **Sambungan Pentadbir** > **dan** pilih **Sediakan** pada **jubin LiveRamp**. 
+## <a name="enrichment-results"></a>Keputusan pengayaan
 
-:::image type="content" source="media/liveramp-connection.png" alt-text="Anak tetingkap konfigurasi untuk menyediakan sambungan ke perkhidmatan LiveRamp AbiliTec.":::
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-1. Untuk **nama** Paparan, masukkan nama sambungan. 
-
-1. Berikan ID pelanggan LiveRamp yang sah dan rahsia. 
-
-1. Semak semula dan berikan persetujuan anda untuk **Privasi dan pematuhan data** dengan memilih kotak semak **Saya setuju**. 
-
-1. Pilih **Sahkan** untuk mengesahkan konfigurasi. 
-
-1. Untuk melengkapkan sambungan, pilih **Simpan**. 
-
-## <a name="enrichment-results"></a>Keputusan pengayaan 
-
-Untuk memulakan proses pengayaan, pilih Jalankan daripada bar arahan. Anda juga boleh membiarkan sistem menjalankan pengayaan secara automatik sebagai sebahagian daripada segar [semula](system.md#schedule-tab) berjadual. Masa pemprosesan bergantung pada saiz data pelanggan anda. 
-
-Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang baru diperkaya di bawah **Pengayaan saya**. Di samping itu, anda akan menemui masa kemas kini yang terakhir dan bilangan profil yang diperkaya. 
-
-Anda boleh mengakses pandangan terperinci setiap profil yang diperkaya dengan **memilihLihat data yang diperkaya**. 
+**Bilangan pelanggan yang diperkaya oleh lapangan** menyediakan gerudi ke dalam liputan setiap medan yang diperkaya.
 
 ## <a name="next-steps"></a>Langkah-langkah berikutnya
 
-Bina di atas data pelanggan anda yang diperkaya. Gunakan ID AbiliTec untuk menyatukan profil pelanggan ke dalam pandangan berasaskan individu. 
+Bina di atas data pelanggan anda yang diperkaya. Gunakan ID AbiliTec untuk menyatukan profil pelanggan ke dalam pandangan berasaskan individu.
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan 
-
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke LiveRamp, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa LiveRamp memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, semak [Kenyataan](https://go.microsoft.com/fwlink/?linkid=396732) Privasi Microsoft. Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini. 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

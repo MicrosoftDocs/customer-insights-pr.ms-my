@@ -1,19 +1,19 @@
 ---
 title: Permintaan Hak Subjek Data (DSR) di bawah GDPR | Microsoft Docs
 description: Respons kepada Permintaan Subjek Data untuk Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808572"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947379"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan Hak Subjek Data (DSR) di bawah GDPR
 
@@ -77,11 +77,5 @@ Pentadbir penyewa boleh mengikuti langkah-langkah ini untuk mengeksport data:
 1. Hantar e-mel kepada D365CI@microsoft.com untuk menentukan alamat e-mel pengguna di dalam permintaan. Pasukan Customer Insights akan menghantar e-mel kepada alamat e-mel pentadbir penyewa berdaftar, meminta pengesahan untuk mengeksport data.
 2. Memberitahu pengesahan untuk mengeksport data untuk pengguna yang diminta.
 3. Menerima data yang dieksport melalui alamat e-mel pentadbir penyewa.
-
-## <a name="consent-management-preview"></a>Pengurusan persetujuan (pratonton)
-
-Keupayaan pengurusan persetujuan tidak mengumpul data pengguna secara langsung. Ia hanya mengimport dan memproses data persetujuan yang disediakan oleh pengguna dalam aplikasi lain.
-
-Untuk mengalih keluar data persetujuan tentang pengguna tertentu, alih keluarnya dalam sumber data yang ditelan kepada keupayaan pengurusan persetujuan. Selepas menyegar semula sumber data, data yang dikeluarkan akan dipadamkan dalam Pusat Persetujuan juga. Aplikasi yang menggunakan entiti persetujuan juga akan memadamkan data yang telah dialih keluar pada sumber selepas [segar semula](system.md#refresh-processes). Kami mengesyorkan menyegar semula sumber data dengan cepat selepas bertindak balas terhadap permintaan subjek data untuk mengalih keluar data pengguna daripada semua proses dan aplikasi lain.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

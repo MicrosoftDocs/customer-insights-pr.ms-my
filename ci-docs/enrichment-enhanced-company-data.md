@@ -1,25 +1,25 @@
 ---
 title: Peningkatan data syarikat
 description: Memperkayakan dan menormalkan data syarikat dengan model Microsoft.
-ms.date: 04/22/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6aa38afa7f92b512d19b4967fc1652b5e43ad094
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642993"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953960"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil syarikat dengan data syarikat yang dipertingkatkan
 
 Gunakan model Microsoft dan data syarikat yang disusun untuk membetulkan, menambah dan menyeragamkan profil syarikat anda. Kami akan menggunakan [format](/common-data-model/schema/core/applicationcommon/account) Model Data Biasa untuk ketepatan dan cerapan yang lebih baik.
 
-Anda juga [boleh meningkatkan data syarikat pada sumber](data-sources-enrichment.md) data untuk meningkatkan ketepatan padanan dalam proses penyatuan data. 
+Anda juga [boleh meningkatkan data syarikat pada sumber](data-sources-enrichment.md) data untuk meningkatkan ketepatan padanan dalam proses penyatuan data.
 
 Bagi syarikat awam di Amerika Syarikat, maklumat seperti pendapatan, ticker saham, industri, dan banyak lagi tersedia.  
 
@@ -27,10 +27,9 @@ Bagi syarikat awam di Amerika Syarikat, maklumat seperti pendapatan, ticker saha
 
 Model kami melalui proses dua langkah untuk meningkatkan profil syarikat. Pertama, ia menormalkan nama syarikat. Sebagai contoh, *Microsoft Corp* akan diperbetulkan dan diseragamkan kepada *Microsoft Corporation*. Ia cuba mencari padanan dalam data syarikat yang disusun Microsoft. Sekiranya terdapat padanan, kami memperkayakan profil syarikat dengan maklumat dari data syarikat kami yang disusun, termasuk nama syarikat.
 
-
 ### <a name="example"></a>Contoh
 
-Maklumat syarikat anda mungkin tidak mengikut format standard dan mengandungi ralat ejaan. Model ini cuba membetulkan isu-isu ini dan mencipta maklumat yang konsisten.
+Maklumat syarikat anda mungkin tidak mengikut format standard dan mengandungi ralat ejaan. Model ini cuba membetulkan isu-isu ini dan membuat maklumat yang konsisten.
 
 ```Input
 Microsft
@@ -50,52 +49,52 @@ Microsft
 
 ## <a name="limitations"></a>Batasan
 
-Terdapat beberapa batasan dengan data yang dipertingkatkan. Item dalam senarai di bawah tidak disokong oleh model.
+Model tidak:
 
-1.  Sahkan identiti syarikat. Kami tidak mengesahkan sama ada input itu adalah organisasi sedia ada atau syarikat menggunakan output sebagai nama standardnya.
-2.  Secara komprehensif merangkumi syarikat di seluruh dunia. Data syarikat yang disusun Microsoft mempunyai liputan global, tetapi menawarkan kebanyakan liputan di Australia, Kanada, United Kingdom dan Amerika Syarikat.
-3.  Standardkan alamat syarikat di seluruh dunia. Kami kini menyokong penyeragaman alamat di negara atau wilayah ini: Australia, Kanada, Perancis, Jerman, Itali, Jepun, United Kingdom, dan Amerika Syarikat.
-4.  Ketepatan jaminan atau kesegaran data. Oleh kerana maklumat perniagaan sering berubah, kami tidak dapat menjamin bahawa data syarikat yang dipertingkatkan yang diberikan sentiasa tepat atau terkini.
+- Sahkan identiti syarikat. Kami tidak mengesahkan sama ada input itu adalah organisasi sedia ada atau syarikat menggunakan output sebagai nama standardnya.
+- Secara komprehensif merangkumi syarikat di seluruh dunia. Data syarikat yang disusun Microsoft mempunyai liputan global, tetapi menawarkan kebanyakan liputan di Australia, Kanada, United Kingdom dan Amerika Syarikat.
+- Standardkan alamat syarikat di seluruh dunia. Kami kini menyokong penyeragaman alamat di negara atau wilayah ini: Australia, Kanada, Perancis, Jerman, Itali, Jepun, United Kingdom, dan Amerika Syarikat.
+- Ketepatan jaminan atau kesegaran data. Oleh kerana maklumat perniagaan sering berubah, kami tidak dapat menjamin bahawa data syarikat yang dipertingkatkan yang diberikan sentiasa tepat atau terkini.
 
 ## <a name="configure-the-enrichment"></a>Konfigurasikan pengayaan
 
-1. Pergi ke **Data** > **Pengayaan**.
+1. Pergi ke **Data** > **Pengayaan** dan pilih tab **Terokai**.
 
 1. Pilih **Memperkayakan data** saya pada **jubin data** syarikat dipertingkatkan.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Jubin pengayaan di hab pengayaan untuk data syarikat.":::
 
-1. Pilih **Set data pelanggan** dan pilih entiti yang mengandungi alamat yang anda mahu perkayakan. Anda boleh memilih entiti *Pelanggan* untuk memperkayakan alamat dalam semua profil pelanggan anda atau memilih entiti segmen untuk memperkayakan alamat hanya dalam profil pelanggan yang terkandung dalam segmen itu.
+1. Semak semula gambaran keseluruhan dan kemudian pilih **Berikut**.
 
-1. Pilih jenis medan daripada profil syarikat anda yang patut digunakan untuk dipadankan dengan data syarikat yang disusun oleh Microsoft. Pemilihan ini akan mempengaruhi medan pemetaan yang anda boleh akses dalam langkah seterusnya.
+1. **Pilih set** data Pelanggan dan pilih profil atau segmen yang ingin anda memperkayakan. Entiti *Pelanggan* memperkayakan semua profil pelanggan anda sedangkan segmen hanya memperkayakan profil pelanggan yang terkandung dalam segmen tersebut.
 
-1.  Petakan medan syarikat dari entiti pelanggan bersatu anda. Semakin banyak pengecam dan medan utama yang anda petakan, semakin banyak kemungkinan kadar padanan yang lebih tinggi.
+1. Pilih jenis medan daripada profil syarikat anda untuk digunakan untuk dipadankan dengan data syarikat yang dikompil Microsoft. Pemilihan ini akan mempengaruhi medan pemetaan yang anda boleh akses dalam langkah seterusnya.
+
+1. Pilih **Seterusnya**.
+
+1. Petakan medan syarikat anda ke data syarikat daripada Microsoft. Untuk ketepatan padanan yang lebih tinggi, tambah lebih banyak medan.
 
     :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Langkah pemetaan data apabila mengkonfigurasi pengayaan syarikat.":::
 
 1. Pilih **Seterusnya** untuk melengkapkan pemetaan medan.
 
-1. Berikan nama untuk pengayaan dan entiti output.
+1. **Berikan Nama** untuk pengayaan dan **entiti** Output.
 
 1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda.
 
+1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
+
 ## <a name="enrichment-results"></a>Keputusan pengayaan
 
-Untuk memulakan proses pengayaan, pilih **Jalankan** daripada bar perintah. Anda juga boleh membiarkan sistem menjalankan pengayaan secara automatik sebagai sebahagian daripada [segar semula dijadualkan](system.md#schedule-tab). Masa pemprosesan bergantung pada saiz data pelanggan anda.
-
-Selepas proses pengayaan selesai, anda boleh menyemak data profil pelanggan yang baru diperkaya di bawah **Pengayaan saya**. Di samping itu, anda akan menemui masa kemas kini yang terakhir dan bilangan profil yang diperkaya.
-
-Anda boleh melihat sampel data yang diperkaya dalam **jubin pratonton** pelanggan Enriched. Pilih **Lihat lebih** lanjut **dan pilih tab Data** untuk mencapai pandangan terperinci bagi setiap profil yang diperkaya.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ### <a name="overview-card"></a>Kad Gambaran Keseluruhan
 
-Kad gambaran keseluruhan menunjukkan butiran mengenai liputan pengayaan. 
+Jubin **gambaran keseluruhan** Pelanggan menunjukkan butiran tentang liputan pengayaan
 
-* **Syarikat diproses dan berubah**: Bilangan profil syarikat pelanggan yang berjaya diperkaya.
-
-* **Syarikat diproses dan tidak berubah**: Bilangan profil syarikat pelanggan yang diiktiraf tetapi tidak berubah. Ini biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
-
-* **Syarikat tidak diproses dan tidak berubah**: Bilangan profil syarikat pelanggan yang tidak diiktiraf. Ini biasanya berlaku untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
+- **Syarikat diproses dan berubah**: Bilangan profil syarikat pelanggan yang berjaya diperkaya.
+- **Syarikat diproses dan tidak berubah**: Bilangan profil syarikat pelanggan yang diiktiraf tetapi tidak berubah. Ini biasanya berlaku apabila data input sah dan tidak boleh diperbaiki oleh pengayaan.
+- **Syarikat tidak diproses dan tidak berubah**: Bilangan profil syarikat pelanggan yang tidak diiktiraf. Ini biasanya berlaku untuk data input yang tidak sah atau tidak disokong oleh pengayaan.
 
 ## <a name="next-steps"></a>Langkah-langkah berikutnya
 

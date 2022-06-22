@@ -1,7 +1,7 @@
 ---
 title: Lihat profil pelanggan
 description: Dapatkan pandangan gabungan data pelanggan disatukan anda.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755793"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947057"
 ---
 # <a name="customer-profiles"></a>Profil pelanggan
 
@@ -55,9 +55,9 @@ Anda boleh menapis pelanggan mengikut medan entiti *Pelanggan*. Sama seperti car
 
 Pilih sebarang jubin pelanggan untuk membuka **halaman butiran pelanggan**. Pandangan ini mengandungi maklumat disatukan untuk pelanggan terpilih. Butiran pelanggan termasuk kandungan berikut:
 
-**Jubin profil pelanggan** : Jubin ini menunjukkan nilai berbeza daripada entiti *Pelanggan* disatukan. Jika medan tidak mempunyai nilai untuk profil pelanggan yang dipilih, ia tidak akan dipaparkan. Jubin disusun ke dalam bahagian:
+**Jubin profil pelanggan** : Jubin ini menunjukkan nilai berbeza daripada entiti *Pelanggan* disatukan. Jika medan tidak mempunyai nilai untuk profil pelanggan yang dipilih, ia tidak akan dipaparkan kecuali medan alamat. Jubin disusun ke dalam bahagian:
 
-- Bahagian pertama menunjukkan set medan ditetapkan semula diikuti oleh semua medan yang merupakan sebahagian daripada indeks carian & penapis. Semua medan berkaitan alamat digabungkan ke dalam satu baris tunggal jika profil mengandungi medan tersebut.
+- Bahagian pertama menunjukkan set medan ditetapkan semula diikuti oleh semua medan yang merupakan sebahagian daripada indeks carian & penapis. Semua medan berkaitan alamat digabungkan menjadi satu baris, yang menunjukkan walaupun profil tidak mengandungi maklumat alamat.
 - **Kenalan untuk pelanggan ini** : Dalam persekitaran untuk akaun perniagaan, anda akan melihat semua kenalan yang berkaitan untuk pelanggan ini sebagai bahagian kedua. Setiap kenalan ditunjukkan dengan medan mereka. Medan kosong disembunyikan.
 - **Medan tambahan** : Menunjukkan medan selebihnya bagi pelanggan yang dipilih kecuali ID.
 - **ID** : Senaraikan semua ID di bawah nama entiti sepadan mereka. Medan dikenal pasti sebagai ID oleh semantik mereka yang mengkategorikan mereka sedemikian.

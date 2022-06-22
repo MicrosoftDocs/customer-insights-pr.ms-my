@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833586"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011990"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Mulakan Dengan Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Kali pertama anda log masuk ke Wawasan Pelanggan, konfigurasikan tetapan dan men
 
 Profil disatukan ialah asas untuk mendapatkan cerapan dan mengambil tindakan terhadap data. Bawa masuk data daripada pelbagai sumber dan jalankan proses penyatuan data untuk menggabungkan profil disatukan. Tentukan hubungan antara entiti yang ditelan dan gunakan ciri pengayaan untuk menambah maklumat ke profil.
 
-1. Inges data dengan mencipta sumber data daripada pelbagai pilihan. Pilih antara [Power Query penyambung](connect-power-query.md), [folder](connect-common-data-model.md) Model Data Biasa, atau [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Inges data dengan mencipta sumber data daripada pelbagai pilihan. Pilih antara [Azure Data Lake Storage, termasuk Model](connect-common-data-model.md) Data Biasa, [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md), atau [Power Query penyambung](connect-power-query.md).
 
 1. [Jalankan proses](data-unification.md) penyatuan data dengan mengenal pasti [medan](map-entities.md) sumber, mengalih keluar [pendua](remove-duplicates.md), [keadaan](match-entities.md) yang sepadan dan [medan](merge-entities.md) penyatuan.
 

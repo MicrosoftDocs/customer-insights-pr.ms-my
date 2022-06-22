@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833687"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011539"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
 
 Wawasan Pelanggan menyediakan pilihan untuk menjadikan entiti output tersedia sebagai [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Integrasi ini membolehkan perkongsian data yang mudah dan pembangunan tersuai melalui pendekatan kod rendah / tanpa kod. Entiti [output](#output-entities) tersedia sebagai jadual dalam Dataverse persekitaran. Anda boleh menggunakan data untuk sebarang aplikasi lain berdasarkan Dataverse jadual. Jadual ini membolehkan senario seperti aliran kerja automatik melalui Power Automate atau membina aplikasi dengan Power Apps.
 
-Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data daripada sumber data di premis menggunakan Power Platform aliran data dan get laluan](data-sources.md#add-data-from-on-premises-data-sources).
+Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data daripada sumber data di premis menggunakan Power Platform aliran data dan get laluan](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -57,7 +57,7 @@ Mendayakan perkongsian data dengan Microsoft Dataverse masa persekitaran [anda m
 Terdapat dua batasan apabila menggunakan Dataverse dengan akaun anda sendiri Azure Data Lake Storage:
 
 - Ada pemetaan satu-ke-satu antara Dataverse organisasi dan rekening Azure Data Lake Storage. Dataverse Setelah organisasi disambungkan ke akaun storan, ia tidak dapat menyambung ke akaun storan lain. Had ini menghalang bahawa a Dataverse tidak mengisi berbilang akaun storan.
-- Perkongsian data tidak akan berfungsi jika persediaan Azure Private Link diperlukan untuk mengakses akaun storan Azure Data Lake anda kerana ia berada di belakang tembok api. Dataverse pada masa ini tidak menyokong sambungan ke titik akhir peribadi melalui Pautan Peribadi.
+- Perkongsian data tidak akan berfungsi jika persediaan Azure Private Link diperlukan untuk mengakses akaun anda Azure Data Lake Storage kerana ia berada di belakang tembok api. Dataverse pada masa ini tidak menyokong sambungan ke titik akhir peribadi melalui Pautan Peribadi.
 
 ### <a name="set-up-powershell"></a>Sediakan PowerShell
 

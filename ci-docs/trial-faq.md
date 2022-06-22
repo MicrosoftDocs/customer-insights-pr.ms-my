@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833779"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011898"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Soalan Lazim percubaan Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ Selepas mendaftar masuk kepada tika berbayar Customer Insights anda buat kali pe
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Apakah had percubaan dan kuota?
 
-- Anda tidak boleh menggunakan akaun storan Azure Data Lake anda sendiri untuk menyimpan data output semasa versi percubaan Wawasan Pelanggan. Walau bagaimanapun, anda boleh menginges data daripada akaun storan Data Lake.
+- Anda tidak boleh menggunakan akaun anda sendiri Azure Data Lake Storage untuk menyimpan data output semasa versi percubaan Wawasan Pelanggan. Walau bagaimanapun, anda boleh menelan data daripada akaun Storan Tasik Data.
 - Anda boleh menyimpan data hingga 3 GB dalam persekitaran Dataverse yang akan diperuntukkan secara automatik apabila anda memulakan percubaan Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Customer Insights-soalan khusus
@@ -83,7 +83,7 @@ Kebanyakan ciri keupayaan Customer Insights tersedia dalam percubaan.
 
 Ciri-ciri **berikut tidak tersedia**:
 
-- Anda tidak boleh mencipta persekitaran baharu yang menggunakan akaun Azure Data Lake Storage anda sendiri.
+- Anda tidak boleh membuat persekitaran baharu yang menggunakan akaun anda sendiri Azure Data Lake Storage.
 - Anda tidak boleh memadamkan persekitaran percubaan.
 
 ### <a name="how-long-does-the-trial-last"></a>Berapa lamakah tempoh percubaan?
