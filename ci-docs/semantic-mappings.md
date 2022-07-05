@@ -1,5 +1,5 @@
 ---
-title: Pemetaan semantik (Pratonton)
+title: Pemetaan semantik (pratonton)
 description: Gambaran keseluruhan pemetaan semantik dan cara untuk menggunakannya.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643534"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083147"
 ---
-# <a name="semantic-mappings-preview"></a>Pemetaan semantik (Pratonton)
+# <a name="semantic-mappings-preview"></a>Pemetaan semantik (pratonton)
 
 Semantik pemetaan membolehkan anda memetakan data bukan aktiviti anda kepada skema yang dipratentukan. Skema ini membantu Wawasan Pelanggan untuk memahami atribut data anda dengan lebih baik. Pemetaan semantik dan data yang disediakan membolehkan cerapan dan ciri baharu dalam Wawasan Pelanggan. Untuk memetakan data aktiviti anda kepada pengguna skema, semak dokumentasi [aktiviti](activities.md).
 
@@ -26,7 +26,7 @@ Semantik pemetaan membolehkan anda memetakan data bukan aktiviti anda kepada ske
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Takrifkan pemetaan entiti semantik ContactProfile
 
-1. Pergi ke **pemetaan DataSemantik** > **(pratonton)**.
+1. Pergi ke **pemetaan Semantik Data** > **(pratonton)**.
 
 1. Pilih **Tambah pemetaan semantik** untuk memulakan pengalaman dipandu.
 
@@ -102,7 +102,7 @@ Selepas membuat *pemetaan entiti semantik ContactProfile*, anda boleh menangkap 
 
 1. [*Tentukan pemetaan entiti semantik ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) Dan jalankan pemetaan semantik.
 
-1. Pergi ke **DataActivities** > **·**.
+1. Pergi ke **Aktiviti** > **Data**.
 
 1. Pilih **Tambah Aktiviti** untuk mencipta aktiviti baharu.
 
@@ -110,8 +110,8 @@ Selepas membuat *pemetaan entiti semantik ContactProfile*, anda boleh menangkap 
 
 1. **Dalam langkah Perhubungan**, cipta hubungan tidak langsung antara data sumber aktiviti anda kepada akaun, menggunakan data kenalan anda sebagai entiti perantara. Untuk maklumat lanjut, lihat [laluan](relationships.md#relationship-paths) perhubungan langsung dan tidak langsung.
    - Contoh perhubungan untuk aktiviti yang dipanggil *Pembelian*:
-      - **Pembelian Data** > **Aktiviti SumberContact Data** pada atribut **ContactID**
-      - **Hubungi Data Akaun Data** > **pada** Atribut **AccountID**
+      - **Pembelian Data** > **Hubungan Data** Aktiviti Sumber pada atribut **ContactID**
+      - **Data** > **Akaun Kenalan** pada Atribut **AccountID**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Contoh persediaan perhubungan.":::
 

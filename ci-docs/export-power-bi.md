@@ -1,5 +1,5 @@
 ---
-title: Penyambung Power BI
+title: Penyambung Power BI (pratonton)
 description: Ketahui cara menggunakan penyambung Dynamics 365 Customer Insights dalam Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643634"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051280"
 ---
-# <a name="connector-for-power-bi-preview"></a>Penyambung untuk Power BI (pratonton)
+# <a name="power-bi-connector-preview"></a>Penyambung Power BI (pratonton)
 
-Cipta visualisasi untuk data anda dengan Power BI Desktop. Menjana wawasan tambahan dan bina laporan dengan data pelanggan disatukan anda.
+Cipta penggambaran untuk data anda dengan Microsoft Power BI Desktop. Menjana wawasan tambahan dan bina laporan dengan data pelanggan disatukan anda.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -60,7 +60,7 @@ Persekitaran yang mempunyai lebih daripada satu [perhubungan](relationships.md) 
 
 Anda boleh mengenal pasti dan mengalih keluar perhubungan pendua.
 
-1. Pergi ke **DataRelationships** > **pada** persekitaran yang anda hilang Power BI.
+1. Pergi ke **Perhubungan** > **Data** pada persekitaran yang anda hilang Power BI.
 2. Kenal pasti hubungan pendua:
    - Semak sama ada terdapat lebih daripada satu perhubungan yang ditakrifkan antara dua entiti yang sama.
    - Semak sama ada terdapat hubungan yang dicipta antara dua entiti yang kedua-duanya dimasukkan dalam proses penyatuan. Terdapat perhubungan tersirat yang ditakrifkan antara semua entiti yang disertakan dalam proses penyatuan.

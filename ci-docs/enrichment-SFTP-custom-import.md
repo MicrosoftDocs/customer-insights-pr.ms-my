@@ -1,5 +1,5 @@
 ---
-title: Pengayaan dengan import tersuai SFTP
+title: Memperkayakan profil pelanggan dengan import tersuai SFTP (pratonton)
 description: Maklumat umum tentang pengayaan import tersuai SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953730"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082328"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Perkayakan profil pelanggan dengan data tersuai (pratonton)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Memperkayakan profil pelanggan dengan import tersuai SFTP (pratonton)
 
 Import tersuai Protokol Pemindahan Fail Selamat (SFTP) mendayakan anda mengimport data yang tidak perlu melalui proses penyatuan data. Ia adalah cara yang fleksibel, selamat dan mudah untuk membawa masuk data anda. Import tersuai SFTP boleh digunakan dalam kombinasi dengan [Eksport SFTP](export-sftp.md) membolehkan anda mengeksport data profil pelanggan yang diperlukan untuk pengayaan. Data kemudiannya boleh diproses dan diperkaya, dan import tersuai SFTP boleh digunakan untuk membawa data yang diperkaya kembali ke Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan in
 
 1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

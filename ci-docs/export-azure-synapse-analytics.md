@@ -1,21 +1,21 @@
 ---
-title: Eksport Data Customer Insights ke Azure Synapse Analytics
+title: Eksport data ke Azure Synapse Analytics (pratonton)
 description: Ketahui cara mengkonfigurasi sambungan ke Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741514"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082874"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (Pratonton)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (pratonton)
 
 Azure Synapse adalah perkhidmatan analitis yang mempercepatkan masa untuk wawasan merentasi gudang data dan sistem data besar. Anda boleh menginges dan menggunakan data Customer Insights anda dalam [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -72,13 +72,13 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada seksyen **Azure Synapse Analytics**. Jika anda tidak melihat nama bahagian ini, tiada [sambungan](connections.md) jenis ini tersedia untuk anda.
 
-1. Sediakan **Nama paparan** yang dikenali untuk eksport dan **Nama pangkalan data** anda.
+1. Sediakan **Nama paparan** yang dikenali untuk eksport dan **Nama pangkalan data** anda. Eksport akan mencipta pangkalan data [Azure Synapse tasik baru](/azure/synapse-analytics/database-designer/concepts-lake-database) dalam ruang kerja yang ditakrifkan dalam sambungan.
 
 1. Pilih entiti mana yang anda mahu eksport ke Azure Synapse Analytics.
    > [!NOTE]
    > Sumber data berdasarkan [folder Common Data Model](connect-common-data-model.md) tidak disokong.
 
-2. Pilih **Simpan**.
+1. Pilih **Simpan**.
 
 Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
 

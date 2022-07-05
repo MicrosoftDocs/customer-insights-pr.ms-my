@@ -1,5 +1,5 @@
 ---
-title: Pengayaan dengan pengayaan pihak ketiga HERE Technologies
+title: Memperkayakan profil pelanggan dengan TEKNOLOGI SINI (pratonton)
 description: Maklumat umum tentang pengayaan pihak ketiga HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953684"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052062"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Pengayaan profil pelanggan dengan HERE Technologies (pratonton)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Memperkayakan profil pelanggan dengan TEKNOLOGI SINI (pratonton)
 
 HERE Technologies adalah syarikat platform lokasi yang menyediakan data dan perkhidmatan yang mengutamakan lokasi. PERKHIDMATAN pengayaan data TEKNOLOGI DI SINI meningkatkan ketepatan maklumat lokasi mengenai pelanggan anda. Ia menyediakan normalisasi alamat, pengekstrakan latitud dan longitud, dan banyak lagi.
 
@@ -72,7 +72,7 @@ Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan in
 
 1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

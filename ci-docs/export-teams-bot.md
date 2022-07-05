@@ -1,5 +1,5 @@
 ---
-title: Bot untuk Microsoft Teams
+title: Pasukan bot untuk Dynamics 365 Customer Insights (pratonton)
 description: Carian profil pelanggan disatukan dalam Microsoft Teams dengan bantuan bot.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 89a293d5b6f9f5452b2ccba495d2475002806019
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643907"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082601"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Pasukan bot untuk Dynamics 365 Customer Insights (pratonton)
 
@@ -37,7 +37,7 @@ Untuk menyedia dan mengkonfigurasi bot, prasyarat berikut mesti dipenuhi:
 
 ## <a name="configure-the-bot"></a>Konfigurasi bot
 
-1. Pergi ke **Destinasi AdminExport** > **·**.
+1. Pergi ke **Destinasi Eksport Pentadbir** > **·**.
 1. Pada jubin Microsoft Teams, pilih **Sediakan**.
 1. Anda dihalakan semula ke kawasan **Aplikasi** dalam Teams. Anda juga boleh membuka Teams dan memilih **Aplikasi** di bahagian bawah sudut kiri atau [dapatkannya daripada AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) secara terus.
 1. Cari **Customer Insights** dan pilih aplikasi.

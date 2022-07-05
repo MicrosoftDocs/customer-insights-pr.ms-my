@@ -1,5 +1,5 @@
 ---
-title: Eksport Data Customer Insights kepada Klaviyo
+title: Eksport segmen ke Klaviyo (pratonton)
 description: Ketahui cara mengkonfigurasikan sambungan dan mengeksport kepada Klaviyo.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: aa6d43884e5e57af4627b7d5a857d3043abcd026
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2b60d9818a753e81e69f2bee6b1663e1840cb10
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643774"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051326"
 ---
-# <a name="export-segment-lists-to-klaviyo-preview"></a>Senarai segmen eksport kepada Klaviyo (pratonton)
+# <a name="export-segments-to-klaviyo-preview"></a>Eksport segmen ke Klaviyo (pratonton)
 
 Segmen eksport profil pelanggan disatukan kepada Klaviyo dan gunakan mereka untuk aktiviti pemasaran.
 

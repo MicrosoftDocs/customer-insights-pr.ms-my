@@ -1,5 +1,5 @@
 ---
-title: Peningkatan data syarikat
+title: Memperkayakan profil syarikat dengan data syarikat yang dipertingkatkan
 description: Memperkayakan dan menormalkan data syarikat dengan model Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953960"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054259"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Pengayaan profil syarikat dengan data syarikat yang dipertingkatkan
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>Memperkayakan profil syarikat dengan data syarikat yang dipertingkatkan
 
 Gunakan model Microsoft dan data syarikat yang disusun untuk membetulkan, menambah dan menyeragamkan profil syarikat anda. Kami akan menggunakan [format](/common-data-model/schema/core/applicationcommon/account) Model Data Biasa untuk ketepatan dan cerapan yang lebih baik.
 
@@ -84,7 +84,7 @@ Model tidak:
 
 1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

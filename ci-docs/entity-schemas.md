@@ -1,5 +1,5 @@
 ---
-title: Skema entiti Customer Insights dalam Common Data Model
+title: Skim entiti dalam Model Data Lazim
 description: Bekerja dengan entiti dalam Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757443"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054765"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
-
-
 
 [Model Data Lazim](/common-data-model/) ialah pengisytiharan spesifikasi, dan definisi bagi entiti standard yang mewakili konsep yang digunakan secara lazim dan aktiviti merentasi perniagaan dan aplikasi produktiviti. Model ini dilanjutkan kepada data pemerhatian dan analisis juga. Model Data Lazim menyediakan entiti perniagaan yang ditakrif dengan jelas, bermodul, dan boleh diperluaskan—seperti Akaun, Unit Perniagaan, Kes, Kenalan, Bakal Pelanggan, Peluang, dan Produk—serta interaksi dengan vendor, pekerja, dan pelanggan—seperti aktiviti dan perjanjian peringkat perkhidmatan. Sesiapa sahaja boleh membina dan melanjutkan definisi Model Data Biasa untuk merekodkan idea khusus perniagaan tambahan.
 

@@ -1,5 +1,5 @@
 ---
-title: Pengayaan profil syarikat dengan ruang pengayaan pihak ketiga Leadspace
+title: Memperkayakan profil syarikat dengan Leadspace (pratonton)
 description: Maklumat umum tentang pengayaan pihak ketiga Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954190"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082370"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Pengayaan profil syarikat dengan Leadspace (pratonton)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Memperkayakan profil syarikat dengan Leadspace (pratonton)
 
 Leadspace adalah sebuah syarikat sains data yang menyediakan Platform Data Pelanggan niaga-ke-niaga. Ia mendayakan persekitaran dengan profil pelanggan disatukan berdasarkan akaun untuk memperkayakan data mereka. Memperkayakan *Profil pelanggan* dengan atribut seperti saiz syarikat, lokasi atau industri. Memperkayakan *Profil kenalan* dengan atribut ciri seperti tajuk, persona atau pengesahan e-mel.
 
@@ -82,7 +82,7 @@ Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan in
 
 1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

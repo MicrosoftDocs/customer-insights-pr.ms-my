@@ -1,5 +1,5 @@
 ---
-title: Memperkayakan profil pelanggan dengan data dari Microsoft Office 365
+title: Memperkayakan profil pelanggan dengan data daripada Microsoft Office 365 (pratonton)
 description: Gunakan data proprietari untuk Microsoft Office memperkayakan profil pelanggan anda dengan data penglibatan.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954144"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055685"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Memperkayakan profil pelanggan dengan data penglibatan (pratonton)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Memperkayakan profil pelanggan dengan data daripada Microsoft Office 365 (pratonton)
 
 Gunakan data untuk Microsoft Office 365 memperkayakan profil akaun pelanggan anda dengan cerapan tentang penglibatan melalui Office 365 apl. Data penglibatan terdiri daripada e-mel dan aktiviti mesyuarat, yang diagregatkan pada tahap akaun. Sebagai contoh, bilangan e-mel dari akaun perniagaan atau bilangan mesyuarat dengan akaun. Tiada data tentang pengguna individu disediakan.
 
@@ -75,7 +75,7 @@ Pilih **Jalankan** untuk memulakan proses pengayaan.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Ini adalah *entiti Office*. *Office_UserEntity* mengandungi ID Active Directory untuk alamat e-mel yang dipilih semasa konfigurasi pengayaan.
 
@@ -111,6 +111,6 @@ Penglibatan akaun juga boleh dilihat pada kad pelanggan individu. Pergi ke **Pel
 ## <a name="next-steps"></a>Langkah-langkah berikutnya
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-Sebagai contoh, segmen yang mengandungi semua pelanggan yang mempunyai nilai lebih daripada 60 untuk *hari sejak e-mel* terakhir dan *hari sejak mesyuarat* terakhir. Segmen itu mengandungi akaun basi yang boleh anda cuba aktifkan semula.
+Sebagai contoh, segmen yang mengandungi semua pelanggan yang mempunyai nilai lebih daripada 60 untuk *hari sejak e-mel* terakhir dan *hari sejak mesyuarat terakhir*. Segmen itu mengandungi akaun basi yang boleh anda cuba aktifkan semula.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

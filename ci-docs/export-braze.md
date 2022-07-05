@@ -1,34 +1,35 @@
 ---
-title: Eksport data Wawasan Pelanggan ke Braze
+title: Eksport segmen ke Braze (pratonton)
 description: Ketahui cara mengkonfigurasi sambungan dan eksport ke Braze.
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643153"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082685"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>Eksport senarai segmen ke Braze (pratonton)
+# <a name="export-segments-to-braze-preview"></a>Eksport segmen ke Braze (pratonton)
 
 Eksport segmen profil pelanggan bersatu ke Braze dan gunakannya untuk aktiviti pemasaran.
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Anda mempunyai [akaun](https://www.braze.com/) Braze dan kelayakan pentadbir yang sepadan.
--   Anda telah [mengkonfigurasi segmen](segments.md) dalam Wawasan Pelanggan.
--   Profil pelanggan bersatu dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel dan ID pelanggan Braze. 
+- Akaun [Braze](https://www.braze.com/) dan kelayakan pentadbir yang sepadan.
+- Segmen sedia ada [dalam Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- Profil pelanggan bersatu dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel dan ID pelanggan Braze.
 
 ## <a name="known-limitations"></a>Had diketahui
 
 - Mengeksport ke Braze adalah terhad kepada segmen.
-- Mengeksport sehingga 1 juta profil pelanggan ke Braze boleh mengambil masa sehingga 40 minit untuk diselesaikan. 
+- Mengeksport sehingga 1 juta profil pelanggan ke Braze boleh mengambil masa sehingga 40 minit untuk diselesaikan.
 - Bilangan profil pelanggan yang boleh anda eksport ke Braze bergantung dan terhad pada kontrak anda dengan Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Sediakan sambungan ke Braze
@@ -41,7 +42,7 @@ Eksport segmen profil pelanggan bersatu ke Braze dan gunakannya untuk aktiviti p
 
 1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan kekunci [API Braze anda](https://www.braze.com/docs/api/basics/) untuk terus log masuk. 
+1. Berikan kekunci [API Braze anda](https://www.braze.com/docs/api/basics/) untuk terus log masuk.
 
 1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
 
@@ -59,9 +60,13 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada bahagian Braze. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.  
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada bahagian Braze. Jika anda tidak melihat seksyen ini, tiada sambungan jenis ini tersedia untuk anda.  
 
-3. **Dalam bahagian Pemadanan** data, dalam **medan E-mel**, pilih medan yang mewakili alamat e-mel pelanggan, dalam medan "ID Pelanggan", pilih medan yang mewakili ID Braze pelanggan. Ia diperlukan untuk mengeksport segmen ke Braze. Segmen dalam Braze akan dicipta dengan nama segmen yang sama seperti dalam Dynamics 365 Customer Insights. Anda boleh memilih medan pilihan tambahan untuk memadankan data. 
+1. **Tambah nama** Paparan untuk eksport anda.
+
+1. Tambah pengecam API segmen Braze yang anda ingin eksport dalam **medan Pengenalpasti** API Segmen Braze. Anda boleh mencari pengecam dalam butiran segmen pada platform Braze.
+
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. **Dalam medan ID** Pelanggan, pilih medan yang mewakili ID Braze pelanggan. Ia diperlukan untuk mengeksport segmen ke Braze. Anda boleh memilih lebih banyak medan secara pilihan.
 
 1. Pilih **Simpan**.
 
@@ -72,6 +77,6 @@ Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedul
 
 ## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
 
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke Braze, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa Braze memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke Braze, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan braze memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.

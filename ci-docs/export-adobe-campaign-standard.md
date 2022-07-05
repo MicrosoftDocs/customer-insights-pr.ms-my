@@ -1,5 +1,5 @@
 ---
-title: Export data Customer Insights ke Adobe Campaign Standard
+title: Eksport segmen Wawasan Pelanggan ke Adobe Standard Kempen (pratonton)
 description: Ketahui cara menggunakan segmen Wawasan Pelanggan dalam Adobe Standard Kempen.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643452"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082349"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Gunakan segmen Customer Insights dalam Adobe Campaign Standard (pratonton)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Eksport segmen Wawasan Pelanggan ke Adobe Standard Kempen (pratonton)
 
 Sebagai pengguna Dynamics 365 Customer Insights, anda mungkin telah membuat segmen untuk menjadikan kempen pemasaran anda lebih cekap dengan menyasarkan khalayak yang berkaitan. Untuk menggunakan segmen daripada Wawasan Adobe Experience Platform Pelanggan dan aplikasi seperti Adobe Standard Kempen, anda perlu mengikuti beberapa langkah yang digariskan dalam artikel ini.
 
@@ -23,9 +23,9 @@ Sebagai pengguna Dynamics 365 Customer Insights, anda mungkin telah membuat segm
 
 ## <a name="prerequisites"></a>Prasyarat
 
--   Lesen Dynamics 365 Customer Insights
--   Lesen Adobe Campaign Standard
--   Akaun Storan Blob Azure
+- Lesen Dynamics 365 Customer Insights
+- Lesen Adobe Campaign Standard
+- Akaun Storan Blob Azure
 
 ## <a name="campaign-overview"></a>Gambaran keseluruhan kempen
 

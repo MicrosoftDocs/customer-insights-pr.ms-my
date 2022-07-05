@@ -1,5 +1,5 @@
 ---
-title: Cari pelanggan yang serupa dengan AI (mengandungi video)
+title: Cari pelanggan yang serupa dengan AI (pratonton) (mengandungi video)
 description: Cari segmen pelanggan yang serupa dengan kepintaran buatan.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643387"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054812"
 ---
-# <a name="similar-customers-preview"></a>Pelanggan yang serupa (pratonton)
+# <a name="find-similar-customers-with-ai-preview"></a>Cari pelanggan yang serupa dengan AI (pratonton)
 
 Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan menggunakan kepintaran buatan. Anda perlu mempunyai sekurang-kurangnya satu segmen dicipta untuk menggunakan ciri ini. Mengembangkan kriteria segmen sedia ada membantu mencari pelanggan yang serupa kepada segmen itu.
 

@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643827"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055225"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Ramalan nilai sepanjang hayat pelanggan (CLV)
 
-Meramalkan nilai potensi (pendapatan) yang akan dibawa oleh pelanggan aktif individu kepada perniagaan anda melalui tempoh masa depan yang ditakrifkan. Ciri ini boleh membantu anda mencapai pelbagai matlamat: 
+Meramalkan nilai potensi (pendapatan) yang akan dibawa oleh pelanggan aktif individu kepada perniagaan anda melalui tempoh masa depan yang ditakrifkan. Ciri ini boleh membantu anda mencapai pelbagai matlamat:
 - Mengenal pasti pelanggan bernilai tinggi dan memproses wawasan ini
 - Mencipta segmen pelanggan yang strategik berdasarkan pada nilai potensi mereka untuk menjalankan kempen diperibadikan dengan jualan, pemasaran dan usaha sokongan yang disasarkan
 - Membimbing pembangunan produk dengan memberi tumpuan kepada ciri-ciri yang meningkatkan nilai pelanggan
@@ -74,7 +74,7 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Cipta ramalan Nilai Sepanjang Hayat Pelanggan (CLV)
 
-1. Pergi ke **PerisikanPredictions** > **·**.
+1. Pergi ke **Ramalan Perisikan** > **·**.
 
 1. Pilih jubin **Nilai sepanjang hayat pelanggan** dan pilih **Gunakan model**. 
 

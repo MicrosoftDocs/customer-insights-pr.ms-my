@@ -1,5 +1,5 @@
 ---
-title: Memperkayakan profil pelanggan dengan jenama dan data minat daripada Microsoft
+title: Memperkayakan profil pelanggan dengan jenama dan data minat daripada Microsoft (pratonton)
 description: Gunakan data proprietari daripada Microsoft untuk memperkayakan data pelanggan anda dengan pertalian dan perkongsian suara.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953776"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082706"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Memperkayakan profil pelanggan dengan pertalian dan perkongsian suara (pratonton)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Memperkayakan profil pelanggan dengan jenama dan data minat daripada Microsoft (pratonton)
 
 Gunakan data proprietari Microsoft untuk memperkayakan data pelanggan anda dengan pertalian jenama, pertalian minat dan perkongsian suara (SoV). Pertalian dan SoV ini berdasarkan data daripada orang yang mempunyai demografi yang serupa dengan pelanggan anda. Maklumat ini membantu anda untuk lebih memahami dan membahagikan pelanggan anda berdasarkan pertalian mereka atau SoV kepada jenama dan minat tertentu.
 
@@ -104,7 +104,7 @@ Kami kini menyokong pilihan negara/rantau berikut: Australia, Kanada (Bahasa Ing
 
    Apabila memperkaya profil, kami akan memperkaya semua profil pelanggan yang data diperoleh untuk jenama dan minat yang dipilih, termasuk profil yang tidak berada di negara atau rantau yang dipilih. Sebagai contoh, jika anda memilih Jerman, kami akan memperkayakan profil yang terletak di Amerika Syarikat jika kami mempunyai data yang tersedia untuk jenama dan minat yang dipilih di Amerika Syarikat.
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

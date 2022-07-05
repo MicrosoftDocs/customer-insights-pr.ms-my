@@ -1,5 +1,5 @@
 ---
-title: Konfigurasi sistem dalam Wawasan Pelanggan
+title: Konfigurasi sistem
 description: Ketahui tentang tetapan sistem dalam Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,16 +15,16 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653627"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050682"
 ---
 # <a name="system-configuration"></a>Konfigurasi sistem
 
-Untuk mencapai konfigurasi sistem, pergi ke **AdminSystem** > **untuk** melihat senarai tugas dan proses sistem.
+Untuk mencapai konfigurasi sistem, pergi ke **Sistem** > **Pentadbir** untuk melihat senarai tugas dan proses sistem.
 
 Halaman **Sistem** termasuk tab berikut:
 - [Status](#status-tab)
@@ -95,7 +95,7 @@ Gunakan tab **Jadual** untuk menjadualkan segar semula automatik semua [sumber d
 > Sumber data yang diuruskan oleh anda menyegar semula pada jadual mereka sendiri. Untuk menjadualkan segar semula sumber data yang diuruskan oleh anda, konfigurasikan seting segar semula pada sumber data tertentu daripada **halaman Sumber** data.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Seting segar semula aliran data.":::
 
-1. Pergi ke **AdminSystem** > **dan** pilih **tab Jadual**.
+1. Pergi ke **Sistem** > **Pentadbir** dan pilih **tab Jadual**.
 
 2. Keadaan lalai untuk segar semula dijadualkan adalah **Tutup**. Untuk mendayakan segar semula berjadual, ubah togel pada bahagian atas skrin ke **Hidup**.
 

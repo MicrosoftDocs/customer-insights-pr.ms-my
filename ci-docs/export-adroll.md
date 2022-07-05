@@ -1,5 +1,5 @@
 ---
-title: Eksport data Customer Insights ke AdRoll
+title: Eksport segmen ke AdRoll (pratonton)
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643182"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082832"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Eksport segmen ke AdRoll (pratonton)
 
@@ -21,9 +21,9 @@ Eksport segmen profil pelanggan yang disatukan ke AdRoll dan gunakan segmen ters
 
 ## <a name="prerequisites-for-a-connection"></a>Prasyarat untuk sambungan
 
--   Anda mempunyai [Akaun AdRoll](https://www.adroll.com/) dan kelayakan pentadbir yang berkaitan.
--   Anda telah [mengkonfigurasi segmen](segments.md) dalam Wawasan Pelanggan.
--   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
+- Anda mempunyai [Akaun AdRoll](https://www.adroll.com/) dan kelayakan pentadbir yang berkaitan.
+- Anda telah [mengkonfigurasi segmen](segments.md) dalam Wawasan Pelanggan.
+- Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 

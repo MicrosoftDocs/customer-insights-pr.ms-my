@@ -1,5 +1,5 @@
 ---
-title: Eksport data Wawasan Pelanggan ke Facebook Pengurus Iklan (mengandungi video)
+title: Eksport segmen ke Facebook Pengurus Iklan (pratonton) (mengandungi video)
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan Facebook Ads Manager.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f610ab1af83bfd512ec1861e7dc76ebb2eecfcbb
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643787"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082979"
 ---
-# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Eksport senarai segmen ke Facebook Ads Manager (pratonton)
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Eksport segmen ke Facebook Pengurus Iklan (pratonton)
 
 Eksport segmen profil pelanggan disatukan ke Pengurus Iklan Facebook untuk mencipta kempen pada Facebook dan Instagram.
 

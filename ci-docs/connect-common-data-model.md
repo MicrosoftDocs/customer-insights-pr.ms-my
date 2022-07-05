@@ -1,5 +1,5 @@
 ---
-title: Sambung data Common Data Model ke akaun Azure Data Lake
+title: Sambungkan ke folder Common Data Model menggunakan akaun Azure Data Lake
 description: Bekerja dengan data Common Data Model menggunakan Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011579"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082265"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Sambungkan ke data dalam Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Ingest data ke dalam Dynamics 365 Customer Insights menggunakan akaun Gen2 anda 
 
 - Anda Azure Data Lake Storage mahu menyambung dan menelan data daripada perlu berada dalam rantau Azure yang sama dengan Dynamics 365 Customer Insights persekitaran. Sambungan ke folder Common Data Model dari data lake dalam rantau Azure berbeza tidak disokong. Untuk mengetahui rantau Azure persekitaran, pergi ke **Sistem** > **Pentadbir** > **Perihal** dalam Wawasan Pelanggan.
 
-- Data yang disimpan dalam perkhidmatan dalam talian mungkin disimpan di lokasi yang berbeza daripada di mana data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat](https://www.microsoft.com/trust-center) Amanah Microsoft.
+- Data yang disimpan dalam perkhidmatan dalam talian mungkin disimpan di lokasi yang berbeza daripada di mana data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
 
 - Prinsipal perkhidmatan Wawasan Pelanggan mesti berada dalam salah satu peranan berikut untuk mengakses akaun storan. Untuk maklumat lanjut, lihat [Berikan keizinan kepada prinsipal perkhidmatan untuk mengakses akaun](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) storan.
   - Pembaca Data Blob Storan
@@ -82,9 +82,9 @@ Ingest data ke dalam Dynamics 365 Customer Insights menggunakan akaun Gen2 anda 
    :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog menunjukkan kekunci Diperlukan untuk Utama":::
 
    > [!TIP]
-   > Untuk mengedit entiti dalam antara muka penyuntingan JSON, pilih **Tunjukkan lebih banyak** > **Edit fail skema**. Buat perubahan dan pilih **Simpan**.
+   > Untuk mengedit entiti dalam antara muka penyuntingan JSON, pilih **Tunjukkan lebih banyak** > **Edit fail** skema. Buat perubahan dan pilih **Simpan**.
 
-1. Untuk entiti terpilih yang memerlukan pengambilan tambahan, **Diperlukan** dipaparkan di bawah **Segar semula** tambahan. Bagi setiap entiti ini, lihat [Konfigurasikan segar semula tambahan untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+1. Untuk entiti terpilih yang memerlukan pengambilan tambahan, **Diperlukan** dipaparkan di bawah **Segar semula tambahan**. Bagi setiap entiti ini, lihat [Konfigurasikan segar semula tambahan untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md).
 
 1. Untuk entiti terpilih di mana kekunci utama belum ditakrif, **Diperlukan** dipaparkan di bawah **kekunci** Utama. Bagi setiap entiti ini:
    1. Pilih **Diperlukan**. Panel **entiti** Edit dipaparkan.
@@ -138,7 +138,7 @@ Ingest data ke dalam Dynamics 365 Customer Insights menggunakan akaun Gen2 anda 
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog menunjukkan kekunci Diperlukan untuk Utama":::
 
-1. Untuk entiti terpilih yang memerlukan pengambilan tambahan, **Diperlukan** dipaparkan di bawah **Segar semula** tambahan. Bagi setiap entiti ini, lihat [Konfigurasikan segar semula tambahan untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+1. Untuk entiti terpilih yang memerlukan pengambilan tambahan, **Diperlukan** dipaparkan di bawah **Segar semula tambahan**. Bagi setiap entiti ini, lihat [Konfigurasikan segar semula tambahan untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md).
 
 1. Untuk entiti terpilih di mana kekunci utama belum ditakrif, **Diperlukan** dipaparkan di bawah **kekunci** Utama. Bagi setiap entiti ini:
    1. Pilih **Diperlukan**. Panel **entiti** Edit dipaparkan.

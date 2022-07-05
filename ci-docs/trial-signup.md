@@ -1,5 +1,5 @@
 ---
-title: Daftar untuk percubaan percuma - Dynamics 365 Customer Insights
+title: Daftar untuk percubaan Dynamics 365 Customer Insights percuma
 description: Ketahui cara mendaftar dengan cepat untuk memulakan percubaan Customer Insights percuma. Terokai aplikasi dan cari sumber pembelajaran tambahan.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641727"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082496"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Daftar untuk percubaan Dynamics 365 Customer Insights percuma
 

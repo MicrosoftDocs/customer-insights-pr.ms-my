@@ -1,5 +1,5 @@
 ---
-title: Pengayaan profil syarikat dengan Dun & Bradstreet
+title: Memperkayakan profil syarikat dengan Dun & Bradstreet (pratonton)
 description: Maklumat umum mengenai pengayaan pihak ketiga Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953902"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082559"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Pengayaan profil syarikat dengan Dun & Bradstreet (Preview)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Memperkayakan profil syarikat dengan Dun & Bradstreet (pratonton)
 
 Dun & Bradstreet menyediakan data komersial, analisis, dan pandangan untuk perniagaan. Ia membolehkan pelanggan dengan profil pelanggan yang disatukan untuk syarikat mengayakan data mereka. Pengayaan termasuk atribut seperti nombor DUNS, saiz syarikat, lokasi, industri dan banyak lagi.
 
@@ -102,7 +102,7 @@ Kami kini menyokong pilihan negara/rantau berikut: Kanada (Bahasa Inggeris) atau
 
 1. Pilih **Jalankan** untuk memulakan proses pengayaan atau hampir untuk kembali ke **halaman Pengayaan**.
 
-## <a name="enrichment-results"></a>Keputusan pengayaan
+## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

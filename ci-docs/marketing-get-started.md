@@ -6,14 +6,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833319"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054443"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Bekerja dengan profil pelanggan bersatu dalam Dynamics 365 Marketing
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>Gunakan profil pelanggan bersatu dalam Dynamics 365 Marketing
 
 [Dynamics 365 Marketing](/dynamics365/marketing/overview) meningkatkan pengalaman pelanggan, membolehkan anda mengatur perjalanan yang diperibadikan di semua titik sentuh untuk mengukuhkan hubungan dan memperoleh kesetiaan. Aplikasi Dynamics 365 Marketing berfungsi dengan lancar dengan Dynamics 365 Sales, Dynamics 365 Customer Insights,, Microsoft Teams, dan produk lain dan membolehkan anda membuat keputusan yang lebih cepat dan lebih baik menggunakan kuasa data dan AI.
 

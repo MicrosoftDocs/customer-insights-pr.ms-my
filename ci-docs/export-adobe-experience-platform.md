@@ -1,5 +1,5 @@
 ---
-title: Eksport Data Customer Insights ke Adobe Experience Platform
+title: Eksport segmen ke Adobe Experience Platform (pratonton)
 description: Ketahui cara menggunakan segmen Wawasan Pelanggan dalam Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643734"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052522"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Gunakan segmen Customer Insights dalam Adobe Experience Platform (pratonton)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Eksport segmen ke Adobe Experience Platform (pratonton)
 
 Sebagai pengguna Dynamics 365 Customer Insights, anda mungkin telah membuat segmen untuk menjadikan kempen pemasaran anda lebih cekap dengan menyasarkan khalayak yang berkaitan. Untuk menggunakan segmen daripada Wawasan Adobe Experience Platform Pelanggan dan aplikasi seperti Adobe Standard Kempen, anda perlu mengikuti beberapa langkah yang digariskan dalam artikel ini.
 
@@ -106,7 +106,7 @@ Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Takrifkan Model Data Pengalaman (XDM) dalam Adobe Experience Platform
 
-Sebelum data yang dieksport daripada Wawasan Pelanggan boleh digunakan dalam Adobe Experience Platform, kita perlu menentukan skema Model Data Pengalaman dan [mengkonfigurasi data untuk Profil Pelanggan Masa Nyata](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Sebelum data yang dieksport daripada Wawasan Pelanggan boleh digunakan dalam Adobe Experience Platform, kita perlu menentukan skema Model Data Pengalaman dan [mengkonfigurasi data untuk Profil](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials) Pelanggan Masa Nyata.
 
 Ketahui [maksud XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) dan fahami [asas komposisi skema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 

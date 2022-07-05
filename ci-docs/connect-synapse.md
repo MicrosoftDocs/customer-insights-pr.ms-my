@@ -1,5 +1,5 @@
 ---
-title: Ingest data daripada Azure Synapse Analytics
+title: Azure Synapse Sambungkan sumber data (pratonton)
 description: Gunakan pangkalan data sebagai Azure Synapse sumber data dalam Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011438"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052710"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Azure Synapse Analytics Sambungkan sumber data (pratonton)
 
@@ -59,7 +59,7 @@ Untuk maklumat lanjut, lihat [Azure Synapse gambaran keseluruhan](/azure/synapse
 
 1. Pilih sambungan [yang](connections.md) tersedia ke Azure Synapse Analytics atau cipta yang baru.
 
-1. **Pilih Pangkalan Data** daripada ruang kerja yang disambungkan dalam sambungan yang dipilih Azure Synapse Analytics dan pilih **Berikut**.
+1. **Pilih Pangkalan Data** daripada ruang kerja yang disambungkan dalam sambungan yang dipilih Azure Synapse Analytics dan pilih **Berikut**. Pada masa ini, kami hanya menyokong pangkalan data jenis *pangkalan data pangkalan data pangkalan data Pangkalan data* Lake.
 
 1. Pilih entiti untuk menelan daripada pangkalan data yang disambungkan dan pilih **Seterusnya**.
 
