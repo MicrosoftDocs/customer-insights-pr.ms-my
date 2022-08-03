@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083168"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121573"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Contoh pertanyaan OData untuk API Wawasan Pelanggan
 
@@ -23,7 +23,7 @@ Artikel ini menyenaraikan beberapa pertanyaan contoh yang sering diminta untuk m
 
 Anda perlu mengubah suai sampel pertanyaan untuk menjadikannya berfungsi pada persekitaran sasaran: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` di manakah {instanceId} GUID persekitaran Wawasan Pelanggan yang ingin anda tanya. Operasi [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) membolehkan anda mencari {InstanceId} akses kepada anda.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` di manakah {instanceId} GUID persekitaran Wawasan Pelanggan yang ingin anda tanya. Operasi [ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) membolehkan anda mencari {InstanceId} akses kepada anda.
 - {CID}: GUID rekod pelanggan yang bersatu. Contoh: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Pengenalpasti kunci utama rekod pelanggan dalam sumber data. Contoh: `CNTID_1002`
 - {DSname}: String dengan nama entiti sumber data yang akan ditelan ke Wawasan Pelanggan. Contoh: `Website_contacts`.
@@ -39,9 +39,10 @@ Jadual berikut mengandungi satu set pertanyaan sampel untuk *entiti Pelanggan*.
 |Kekunci alternatif    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Kekunci alternatif berterusan dalam entiti pelanggan bersatu       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Masuk    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Kekunci alternatif + Dalam   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Kekunci alternatif + Dalam   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Carian  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Mengembalikan 10 hasil teratas untuk rentetan carian      |
 |Keahlian segmen  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Mengembalikan nombor pratetap baris daripada entiti pembahagian.      |
+|Keahlian segmen untuk pelanggan | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Mengembalikan profil pelanggan jika mereka ahli segmen yang diberikan     |
 
 ## <a name="unified-activity"></a>Aktiviti bersatu
 

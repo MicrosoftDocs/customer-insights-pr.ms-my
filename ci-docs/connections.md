@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082097"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195185"
 ---
 # <a name="connections-preview-overview"></a>Gambaran keseluruhan sambungan (pratonton)
 
@@ -27,6 +27,12 @@ Pergi ke **Pentadbir** > **Sambungan** untuk mencipta dan melihat sambungan.
 Tab **Sambungan** menunjukkan anda semua sambungan aktif. Senarai menunjukkan baris untuk setiap sambungan.
 
 Dapatkan gambaran keseluruhan pantas, perihalan, dan ketahui perkara yang boleh anda lakukan dengan setiap pilihan kebolehsambungan pad tab **Temui**.
+
+## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
+
+Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data kepada pihak ketiga atau produk Microsoft lain, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa pihak ketiga memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Pentadbir anda Dynamics 365 Customer Insights boleh mengalih keluar sambungan pada bila-bila masa untuk menghentikan penggunaan fungsi.
 
 ## <a name="exports"></a>Eksport
 
@@ -41,8 +47,6 @@ Hanya pentadbir boleh mengkonfigurasikan sambungan baharu tetapi sambungan yang 
 Untuk menambah sambungan, anda perlu mempunyai [keizinan pentadbir](permissions.md). Jika anda bersambung ke perkhidmatan Microsoft lain, kami menganggap kedua-dua perkhidmatan berada dalam organisasi yang sama.
 
 1. Pergi ke **Pentadbir** > **Sambungan (pratonton)**.
-
-1. Pergi ke tab **Sambungan**.
 
 1. Pilih **Tambah sambungan** untuk mencipta sambungan baharu. Pilih daripada menu juntai bawah jenis sambungan yang mahu anda cipta.
 
@@ -99,3 +103,5 @@ Pengayaan dan eksport yang dialih menjadi tidak aktif. Anda mengaktifkan semula 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Sediakan sambungan dengan rahsia yang diuruskan oleh Key Vault anda sendiri
 
 Sesetengah sambungan memerlukan rahsia seperti kekunci API atau kata laluan. Sesetengah sambungan menyokong rahsia yang disimpan dalam Key Vault anda sendiri. Ketahui lebih lanjut tentang sambungan yang disokong dan cara menyediakan peti [besi kunci anda sendiri untuk Wawasan Pelanggan](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

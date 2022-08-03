@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947379"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146706"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Permintaan Hak Subjek Data (DSR) di bawah GDPR
 
@@ -31,18 +31,22 @@ Kami komited untuk membantu para pelanggan kami memenuhi keperluan GDPR mereka. 
 
 Wawasan Pelanggan menawarkan pengalaman dalam produk berikut untuk memadamkan data peribadi untuk pelanggan atau pengguna tertentu:
 
-- **Urus permintaan padam untuk data pelanggan**: Data pelanggan dalam Customer Insights telah ditelan daripada sumber data asal luaran kepada Customer Insights. Semua permintaan penghapusan GDPR mesti dilaksanakan di dalam sumber data asal.
+- **Urus permintaan padam untuk data pelanggan**: Data pelanggan dalam Customer Insights telah ditelan daripada sumber data asal luaran kepada Customer Insights. Lakukan permintaan padam GDPR dalam sumber data asal terlebih dahulu.
 - **Urus permintaan padam untuk data pengguna Customer Insights**: Data untuk pengguna dicipta oleh Customer Insights. Semua permintaan penghapusan GDPR mesti dilakukan di dalam Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Urus permintaan untuk memadamkan data pelanggan
 
-Pentadbir Customer Insights boleh mengikut langkah ini untuk mengalih keluar data pelanggan yang telah dipadamkan dalam sumber data:
+Pentadbir Wawasan Pelanggan boleh mengikuti langkah ini untuk mengalih keluar data pelanggan yang telah dipadamkan dalam sumber data. Pastikan permintaan padam telah dilakukan dalam sumber data anda sebelum meneruskan langkah-langkah yang disenaraikan di bawah. 
 
 1. Daftar masuk ke Dynamics 365 Customer Insights.
-2. Pergi ke **sumber Data Data** > **·**
-3. Untuk setiap sumber data dalam senarai yang mengandungi data pelanggan yang dipadamkan:
+1. Pergi ke **sumber Data Data** > **·**
+1. Untuk setiap sumber data dalam senarai yang mengandungi data pelanggan yang dipadamkan:
    1. Pilih elipsis menegak (&vellip;) dan kemudian pilih **Segar Semula**.
-   2. Semak status sumber data di bawah **Status**. Tanda semak bermaksud segar semula berjaya. Segi tiga amaran bermaksud berlaku suatu kesalahan. Jika segi tiga amaran dipaparkan, hubungi D365CI@microsoft.com.
+   1. Semak status sumber data di bawah **Status**. Tanda semak bermaksud segar semula berjaya. Segi tiga amaran bermaksud berlaku suatu kesalahan. Jika segi tiga amaran dipaparkan, hubungi D365CI@microsoft.com.
+1. Selepas segar semula sumber data yang berjaya, jalankan segar semula hiliran juga. Terutama, jika anda tidak mempunyai segar semula penuh berulang Wawasan Pelanggan yang dijadualkan. 
+
+> [!IMPORTANT]
+> Segmen statik tidak termasuk dalam segar semula penuh atau menjalankan segar semula hiliran selepas permintaan padam. Untuk memastikan data pelanggan dialih keluar daripada segmen statik juga, cipta semula segmen statik dengan data sumber yang disegarkan semula.
 
 > [!div class="mx-imgBorder"]
 > ![Mengendalikan permintaan pemadaman GDPR untuk data pelanggan.](media/gdpr-data-sources.png "Urus permintaan penghapusan GDPR untuk data pelanggan")
@@ -77,5 +81,10 @@ Pentadbir penyewa boleh mengikuti langkah-langkah ini untuk mengeksport data:
 1. Hantar e-mel kepada D365CI@microsoft.com untuk menentukan alamat e-mel pengguna di dalam permintaan. Pasukan Customer Insights akan menghantar e-mel kepada alamat e-mel pentadbir penyewa berdaftar, meminta pengesahan untuk mengeksport data.
 2. Memberitahu pengesahan untuk mengeksport data untuk pengguna yang diminta.
 3. Menerima data yang dieksport melalui alamat e-mel pentadbir penyewa.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Pengendalian penghapusan data dalam Dynamics 365 Customer Insights
+
+1. Data akan dipadamkan (sekatan data dan gambar data) jika partition data dan gambar data tidak aktif selama lebih dari 30 hari, yang bermaksud mereka telah digantikan dengan partition data baru dan gambar melalui segar semula sumber data.
+2. Tidak semua data dan gambar dipadamkan. Pembahagian data dan petikan data terkini adalah mengikut definisi aktif kerana ia digunakan dalam Wawasan Pelanggan. Untuk data terkini, tidak kira sama ada sumber data tidak disegar semula dalam tempoh 30 hari yang lalu.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

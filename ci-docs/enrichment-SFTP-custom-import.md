@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082328"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195807"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Memperkayakan profil pelanggan dengan import tersuai SFTP (pratonton)
 
@@ -104,7 +104,7 @@ Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan in
 
 1. Semak semula gambaran keseluruhan dan kemudian pilih **Berikut**.
 
-1. Pilih sambungan. Hubungi pentadbir jika tidak tersedia.
+1. Pilih sambungan. Hubungi pentadbir jika tiada sambungan tersedia.
 
 1. **Pilih set** data Pelanggan dan pilih profil atau segmen yang ingin anda memperkayakan. Entiti *Pelanggan* memperkayakan semua profil pelanggan anda sedangkan segmen hanya memperkayakan profil pelanggan yang terkandung dalam segmen tersebut.
 

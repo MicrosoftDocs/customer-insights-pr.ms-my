@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051694"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170784"
 ---
 # <a name="create-measures-from-templates"></a>Cipta langkah daripada templat
 
-Anda boleh menggunakan templat yang dipratentukan langkah-langkah [yang biasa digunakan](measures.md) untuk menciptanya. Penerangan terperinci mengenai templat dan pengalaman berpandu membantu anda dengan penciptaan langkah yang cekap. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
+Gunakan templat yang dipratentukan bagi langkah-langkah [yang biasa digunakan](measures.md) untuk menciptanya. Templat dibina pada data yang dipetakan daripada entit *Aktiviti Disatukan*. Oleh itu, pastikan anda telah mengkonfigurasikan [aktiviti pelanggan](activities.md) sebelum anda mencipta langkah daripada templat.
 
-Untuk mencipta langkah tersuai, lihat [Gunakan pembina ukuran untuk mencipta langkah dari awal](measure-builder.md).
+Templat ukuran hanya disokong dalam persekitaran untuk **pelanggan individu**. Untuk mencipta langkah tersuai atau mencipta langkah untuk B-ke-B, lihat [Gunakan pembina ukuran](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
-
-Templat langkah yang tersedia: 
+Templat langkah yang tersedia:
 - Purata nilai transaksi (ATV)
 - Jumlah nilai transaksi
 - Purata hasil harian
+- Purata hasil bulanan
 - Purata hasil tahunan
 - Kiraan transaksi
 - Mata kesetiaan diperoleh
@@ -57,21 +56,22 @@ Templat langkah yang tersedia:
 
 1. Pilih **Selesai**.
 
-1. Dalam bahagian **Tetapkan tempoh masa**, takrifkan tempoh masa data untuk digunakan. Pilih jika anda mahu ukuran baharu untuk merangkumi keseluruhan set data dengan memilih **Sepanjang masa**, atau jika anda mahu ukuran itu memberikan tumpuan kepada **Tempoh masa tertentu**.
+1. **Dalam seksyen Tetapkan tempoh** masa, tentukan rangka masa data. Pilih jika anda mahu ukuran baharu untuk merangkumi keseluruhan set data dengan memilih **Sepanjang masa**, atau jika anda mahu ukuran itu memberikan tumpuan kepada **Tempoh masa tertentu**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Tangkapan skrin menunjukkan bahagian tempoh masa apabila mengkonfigurasikan langkah daripada templat.":::
 
 1. Dalam bahagian seterusnya, pilih **Tambah data** untuk memilih aktiviti dan memetakan data yang sepadan daripada entiti *Aktiviti Disatukan* anda.
 
-    1. Langkah 1 daripada 2: Di bawah **Jenis aktiviti**, pilih jenis entiti yang anda mahu gunakan. Untuk **Aktiviti**, pilih entiti yang anda mahu petakan.
-    1. Langkah 2 daripada 2: Pilih atribut daripada entiti *Aktiviti Disatukan* untuk komponen yang diperlukan oleh formula. Contohnya, untuk nilai transaksi Purata, ia merupakan atribut yang mewakili nilai Transaksi. Untuk **Cap waktu aktiviti**, pilih atribut daripada entiti Aktiviti Disatukan yang mewakili tarikh dan masa aktiviti.
-   
-1. Sebaik sahaja pemetaan data berjaya, anda boleh melihat status sebagai **Lengkap** dan nama aktiviti dan atribut yang dipetakan.
+    1. Langkah 1 daripada 2: Di bawah **Jenis aktiviti**, pilih jenis entiti yang anda mahu gunakan. Untuk **Aktiviti**, pilih entiti yang anda ingin petakan, kemudian pilih **Berikut**.
+    1. Langkah 2 daripada 2: Pilih atribut daripada entiti *Aktiviti Disatukan* untuk komponen yang diperlukan oleh formula. Contohnya, untuk nilai transaksi Purata, ia merupakan atribut yang mewakili nilai Transaksi. Untuk **Cap masa** Aktiviti, pilih atribut daripada *entiti Aktiviti* Disatukan yang mewakili tarikh dan masa aktiviti.
+    1. Pilih **Simpan**.
 
-1. Anda kini boleh memilih **Jalankan** untuk mengira keputusan ukuran. Untuk memperhalusi kemudian, pilih **Simpan draf**.
+    Apabila pemetaan data berjaya, status menunjukkan **Lengkap** dan nama aktiviti dan atribut yang dipetakan dipaparkan.
 
-# <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
+1. Pilih **Jalankan** untuk mengira hasil ukuran. Pilih **Simpan draf** jika anda ingin mengekalkan konfigurasi semasa dan jalankan ukuran kemudian. Halaman **Langkah** dipaparkan.
 
-Ciri ini hanya tersedia untuk ukuran yang dicipta dalam persekitaran dengan pelanggan individu sebagai khalayak sasaran utama.
+## <a name="next-step"></a>Langkah seterusnya
 
----
+Gunakan langkah sedia ada untuk mencipta [segmen](segments.md) pelanggan.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

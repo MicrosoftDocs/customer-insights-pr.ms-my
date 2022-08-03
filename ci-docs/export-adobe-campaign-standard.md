@@ -1,31 +1,31 @@
 ---
 title: Eksport segmen Wawasan Pelanggan ke Adobe Standard Kempen (pratonton)
 description: Ketahui cara menggunakan segmen Wawasan Pelanggan dalam Adobe Standard Kempen.
-ms.date: 03/29/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 834880cac9c5023157983081ff2513d9b051491f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082349"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195531"
 ---
 # <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Eksport segmen Wawasan Pelanggan ke Adobe Standard Kempen (pratonton)
 
-Sebagai pengguna Dynamics 365 Customer Insights, anda mungkin telah membuat segmen untuk menjadikan kempen pemasaran anda lebih cekap dengan menyasarkan khalayak yang berkaitan. Untuk menggunakan segmen daripada Wawasan Adobe Experience Platform Pelanggan dan aplikasi seperti Adobe Standard Kempen, anda perlu mengikuti beberapa langkah yang digariskan dalam artikel ini.
+Eksport segmen yang menyasarkan khalayak yang berkaitan ke Adobe Standard Kempen.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Gambar rajah proses langkah digariskan dalam artikel ini.":::
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Lesen Dynamics 365 Customer Insights
-- Lesen Adobe Campaign Standard
-- Akaun Storan Blob Azure
+- Lesen Adobe Standard Kempen.
+- [Nama akaun](/azure/storage/blobs/create-data-lake-storage-account) Azure Blob Storage dan kunci akaun. Untuk mencari nama dan kunci, lihat [Menguruskan tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
+- An [Azure Blob Storage container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 ## <a name="campaign-overview"></a>Gambaran keseluruhan kempen
 
@@ -37,7 +37,7 @@ Dalam contoh ini, kami ingin menjalankan kempen e-mel promosi sekali. Artikel in
 
 ## <a name="identify-your-target-audience"></a>Kenal pasti khalayak sasaran anda
 
-Dalam senario kami, kami menganggap bahawa alamat e-mel pelanggan tersedia dan pilihan promosi mereka dianalisis untuk mengenal pasti ahli segmen.
+Dalam senario kami, kami menganggap bahawa alamat e-mel pelanggan tersedia dalam Wawasan Pelanggan dan pilihan promosi mereka dianalisis untuk mengenal pasti ahli segmen.
 
 Segmen [yang anda tentukan dalam Wawasan](segments.md) Pelanggan dipanggil **ChurnProneCustomers** dan anda merancang untuk menghantar promosi e-mel kepada pelanggan ini.
 
@@ -47,39 +47,37 @@ E-mel tawaran yang ingin anda hantar akan mengandungi nama pertama, nama akhir d
 
 ## <a name="export-your-target-audience"></a>Eksport khalayak sasaran anda
 
-### <a name="configure-a-connection"></a>Konfigurasikan sambungan
+### <a name="set-up-connection-to-adobe-campaign"></a>Sediakan sambungan ke Adobe Kempen
 
-Dengan khalayak sasaran kami dikenal pasti, kami boleh mengkonfigurasi eksport ke akaun Storan Azure Blob.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
-1. Dalam Wawasan Pelanggan, pergi ke **Sambungan Pentadbir** > **·**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pilih **Tambah sambungan** dan pilih **Adobe Campaign** untuk mengkonfigurasi sambungan atau pilih **Sediakan** dalam jubin **Adobe Campaign**.
-
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Jubin konfigurasi untuk Adobe Campaign Standard.":::
+1. Pilih **Tambah sambungan** dan pilih **Adobe Kempen**.
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+1. Pilih individu yang boleh menggunakan sambungan ini. Secara lalai, ia hanya pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Masukkan **Nama akaun**, **Kekunci akaun**, dan **Bekas** untuk akaun Storan Blob Azure anda di tempat anda mahu mengeksport segmen.  
-      
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Petikan skrin konfigurasi akaun storan. "::: 
+1. **Masukkan nama** Akaun, **Kunci** Akaun dan Kontena **untuk** akaun Storan Blob anda.  
 
-   - Untuk mengetahui lebih lanjut tentang cara mencari nama akaun dan kunci akaun Azure Blob Storage, lihat [Urus tetapan akaun storan dalam portal Azure](/azure/storage/common/storage-account-manage).
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Petikan skrin konfigurasi akaun storan. ":::
 
-   - Untuk mengetahui cara untuk mencipta bekas, lihat [Cipta bekas](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+1. [Semak privasi dan pematuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya bersetuju**.
 
 1. Pilih **Simpan** untuk melengkapkan sambungan.
 
 ### <a name="configure-an-export"></a>Konfigurasikan eksport
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Pergi ke **Data** > **Eksport**.
 
-1. Untuk mencipta eksport baharu, pilih **Tambah eksport**.
+1. Pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport** pilih sambungan daripada bahagian Adobe Campaign. Jika anda tidak melihat nama bahagian ini, maka tiada sambungan jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport** pilih sambungan daripada bahagian Adobe Campaign. Hubungi pentadbir jika tiada sambungan tersedia.
+
+1. Masukkan nama untuk eksport.
 
 1. Pilih segmen yang ingin anda eksport. Dalam contoh ini, ia **ChurnProneCustomers**.
 
@@ -87,7 +85,7 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Pilih **Seterusnya**.
 
-1. Kini kami memetakan **medan Sumber** daripada segmen Wawasan Pelanggan kepada **nama medan Sasaran** dalam Adobe skema profil Standard Kempen.
+1. Petakan **medan Sumber** daripada segmen Wawasan Pelanggan kepada **nama medan Sasaran** dalam Adobe skema profil Standard Kempen.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Pemetaan medan untuk penyambung Adobe Campaign Standard.":::
 
@@ -98,34 +96,28 @@ Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan
 
 1. Pilih **Simpan**.
 
-Selepas menyimpan destinasi eksport, anda akan menemuinya dalam **Data** > **Eksport**.
-
-Anda kini boleh [mengeksport segmen atas permintaan](export-destinations.md#run-exports-on-demand). Eksport juga akan berjalan dengan setiap [segar semula dijadualkan](system.md).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!NOTE]
 > Pastikan bilangan rekod dalam segmen yang dieksport adalah dalam had yang dibenarkan bagi lesen Adobe Campaign Standard.
 
-Data yang dieksport disimpan dalam bekas Storan Blob Azure yang anda konfigurasikan di atas. Laluan folder berikut dicipta secara automatik dalam bekas anda:
-
-*%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
+Data yang dieksport disimpan dalam bekas Storan Blob Azure yang anda konfigurasikan di atas. Laluan folder berikut dicipta secara automatik dalam bekas anda: *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
 Contoh: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo_ChurnProneCustomers_1613059542.csv
 
 ## <a name="configure-adobe-campaign-standard"></a>Konfigurasikan Adobe Campaign Standard
 
-Segmen yang dieksport mengandungi lajur yang anda pilih semasa menentukan destinasi eksport dalam langkah sebelumnya. Data ini boleh digunakan untuk [mencipta profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Segmen yang dieksport mengandungi lajur yang anda pilih semasa mengkonfigurasi eksport. Data ini boleh digunakan untuk [mencipta profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Untuk menggunakan segmen dalam Adobe Campaign Standard, kami perlu melanjutkan skema profil dalam Adobe Campaign Standard termasuk dua medan tambahan. Ketahui cara untuk [melanjutkan sumber profil](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) dengan medan baharu dalam Adobe Campaign Standard.
+Untuk menggunakan segmen dalam Adobe Standard Kempen, [lanjutkan skema](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) profil dalam Adobe Standard Kempen untuk memasukkan dua medan tambahan.
 
-Dalam contoh kami, medan ini ialah *Nama Segmen dan Tarikh Segmen (pilihan)*.
+Dalam contoh kami, medan ini ialah Nama Segmen dan Tarikh Segmen. Kami akan menggunakan medan ini untuk mengenal pasti profil dalam Adobe Campaign Standard yang kami mahu sasarkan untuk kempen ini.
 
-Kami akan menggunakan medan ini untuk mengenal pasti profil dalam Adobe Campaign Standard yang kami mahu sasarkan untuk kempen ini.
-
-Jika tiada rekod lain dalam Adobe Campaign Standard, selain daripada apa yang anda akan import, anda boleh melangkau langkah ini.
+Jika tiada rekod lain dalam Adobe Standard Kempen, selain daripada apa yang akan anda import, langkau langkah ini.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Import data ke dalam Adobe Campaign Standard
 
-Sekarang semuanya sudah ada, kita perlu mengimport data khalayak yang disediakan dari Wawasan Pelanggan ke dalam Adobe Standard Kempen untuk membuat profil. Ketahui [Cara mengimport profil dalam Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) menggunakan aliran kerja.
+Import data khalayak yang disediakan daripada Wawasan Pelanggan ke dalam Adobe Standard Kempen untuk [mencipta profil menggunakan aliran kerja](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences).
 
 Aliran kerja import dalam imej di bawah telah dikonfigurasikan untuk dijalankan setiap lapan jam dan mencari segmen Wawasan Pelanggan yang dieksport (.csv fail dalam Azure Blob Storage). Aliran kerja mengekstrak kandungan fail .csv dalam susunan lajur yang ditentukan. Aliran kerja ini telah dibina untuk melaksanakan pengendalian ralat asas dan memastikan setiap rekod mempunyai alamat e-mel sebelum penghidratan data dalam Adobe Campaign Standard. Aliran kerja juga mengekstrak nama segmen daripada nama fail sebelum upserting ke dalam data profil Adobe Campaign Standard.
 
@@ -133,10 +125,12 @@ Aliran kerja import dalam imej di bawah telah dikonfigurasikan untuk dijalankan 
 
 ## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Dapatkan khalayak dalam Adobe Campaign Standard
 
-Sebaik sahaja data diimport ke dalam Adobe Campaign Standard, anda [boleh mencipta aliran kerja](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) dan [pertanyaan](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) pelanggan berdasarkan pada *Nama Segmen* dan *Tarikh Segmen* untuk memilih profil yang telah dikenal pasti untuk kempen sampel kami.
+Setelah data diimport ke dalam Adobe Standard Kempen, [buat aliran kerja](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) dan [tanya](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) pelanggan berdasarkan Nama Segmen dan Tarikh Segmen untuk memilih profil yang dikenal pasti untuk kempen sampel kami.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Cipta dan hantar e-mel menggunakan Adobe Campaign Standard
 
 Cipta kandungan e-mel dan kemudian [uji dan hantar](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) e-mel anda.
 
 :::image type="content" source="media/contoso-sample-email.jpg" alt-text="E-mel sampel dengan tawaran pembaharuan daripada Adobe Campaign Standard.":::
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

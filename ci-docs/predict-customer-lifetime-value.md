@@ -1,7 +1,7 @@
 ---
 title: Ramalan nilai sepanjang hayat pelanggan (CLV)
 description: Meramalkan potensi pendapatan untuk pelanggan aktif pada masa akan datang.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055225"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186451"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Ramalan nilai sepanjang hayat pelanggan (CLV)
 
 Meramalkan nilai potensi (pendapatan) yang akan dibawa oleh pelanggan aktif individu kepada perniagaan anda melalui tempoh masa depan yang ditakrifkan. Ciri ini boleh membantu anda mencapai pelbagai matlamat:
+
 - Mengenal pasti pelanggan bernilai tinggi dan memproses wawasan ini
 - Mencipta segmen pelanggan yang strategik berdasarkan pada nilai potensi mereka untuk menjalankan kempen diperibadikan dengan jualan, pemasaran dan usaha sokongan yang disasarkan
 - Membimbing pembangunan produk dengan memberi tumpuan kepada ciri-ciri yang meningkatkan nilai pelanggan
 - Mengoptimumkan strategi jualan atau pemasaran dan memperuntukkan belanjawan dengan lebih tepat untuk jangkauan pelanggan
-- Mengiktiraf dan memberi ganjaran kepada pelanggan bernilai tinggi melalui program kesetiaan atau ganjaran 
+- Mengiktiraf dan memberi ganjaran kepada pelanggan bernilai tinggi melalui program kesetiaan atau ganjaran
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -35,7 +36,7 @@ Sebelum bermula, imbas semula maksud CLV untuk perniagaan anda. Pada masa ini, k
 
 Oleh kerana mengkonfigurasi dan menjalankan model CLV tidak mengambil banyak masa, pertimbangkan untuk mencipta beberapa model dengan pelbagai pilihan input dan membandingkan hasil model untuk melihat senario model yang paling sesuai dengan keperluan perniagaan anda.
 
-###  <a name="data-requirements"></a>Keperluan data
+### <a name="data-requirements"></a>Keperluan data
 
 Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk peningkatan prestasi model. Semakin banyak data model boleh memproses, semakin tepat ramalan anda. Oleh itu, kami menggalakkan anda untuk mengambil lebih banyak data aktiviti pelanggan, jika ada.
 
@@ -52,11 +53,12 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
     - Aktiviti web: sejarah lawatan tapak web, sejarah e-mel
     - Aktiviti kesetiaan: keakruan mata ganjaran kesetiaan dan sejarah penebusan
     - Log khidmat pelanggan, panggilan perkhidmatan, aduan atau sejarah pengembalian
+    - Maklumat profil pelanggan
 - Data tentang aktiviti pelanggan (pilihan):
     - Pengecam aktiviti untuk membezakan aktiviti jenis yang sama
     - Pengecam pelanggan untuk memetakan aktiviti kepada pelanggan anda
     - Maklumat aktiviti yang mengandungi nama dan tarikh aktiviti
-    - Skema data semantik untuk aktiviti termasuk: 
+    - Skema data semantik untuk aktiviti termasuk:
         - **Kunci utama:**: Pengecam unik untuk aktiviti
         - **Cap masa**: Tarikh dan masa peristiwa yang dikenal pasti oleh kunci utama
         - **Peristiwa (nama aktiviti)**: Nama peristiwa yang anda mahu gunakan
@@ -66,7 +68,7 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
     - Data sejarah yang mencukupi: Sekurang-kurangnya satu tahun data transaksi. Sebaik-baiknya dua hingga tiga tahun data transaksi untuk meramalkan CLV bagi satu tahun.
     - Berbilang pembelian setiap pelanggan: Secara ideal, sekurang-kurangnya dua hingga tiga transaksi setiap ID pelanggan, sebaik-baiknya merentas berbilang tarikh.
     - Bilangan pelanggan: Sekurang-kurangnya 100 pelanggan unik, sebaik-baiknya lebih daripada 10,000 pelanggan. Model ini akan gagal dengan kurang daripada 100 pelanggan dan data sejarah yang tidak mencukupi
-    - Kesempurnaan data: Kurang daripada 20% nilai hilang dalam medan yang diperlukan dalam data input   
+    - Kesempurnaan data: Kurang daripada 20% nilai hilang dalam medan yang diperlukan dalam data input
 
 > [!NOTE]
 > - Model ini memerlukan sejarah transaksi pelanggan anda. Hanya satu entiti sejarah transaksi boleh dikonfigurasikan buat masa ini. Sekiranya terdapat banyak entiti pembelian / transaksi, anda boleh menyatukannya Power Query sebelum pengambilan data.
@@ -122,11 +124,11 @@ Data berikut diperlukan, dan di tempat yang ditanda pilihan, disyorkan untuk pen
 
 1. Pilih **Seterusnya**.
 
-### <a name="add-optional-data"></a>Tambah data pilihan
+### <a name="add-optional-activity-data"></a>Tambah data aktiviti pilihan
 
-Data mencerminkan interaksi pelanggan utama (seperti log web, khidmat pelanggan dan peristiwa) menambahkan konteks kepada rekod transaksi. Lebih banyak corak ditemui dalam data aktiviti pelanggan anda boleh meningkatkan ketepatan ramalan. 
+Data mencerminkan interaksi pelanggan utama (seperti log web, khidmat pelanggan dan peristiwa) menambahkan konteks kepada rekod transaksi. Lebih banyak corak ditemui dalam data aktiviti pelanggan anda boleh meningkatkan ketepatan ramalan.
 
-1. Dalam langkah **Data Tambahan (pilihan)**, pilih **Tambah data**. Pilih entiti aktiviti pelanggan yang menyediakan maklumat aktiviti pelanggan seperti yang diterangkan dalam [prasyarat](#prerequisites).
+1. **Dalam langkah Data tambahan (pilihan**), pilih **Tambah data** di bawah **Galakkan cerapan model dengan data** aktiviti tambahan. Pilih entiti aktiviti pelanggan yang menyediakan maklumat aktiviti pelanggan seperti yang diterangkan dalam [prasyarat](#prerequisites).
 
 1. Petakan medan semantik kepada atribut dalam entiti aktiviti pelanggan anda dan pilih **Seterusnya**.
 
@@ -135,15 +137,34 @@ Data mencerminkan interaksi pelanggan utama (seperti log web, khidmat pelanggan 
 1. Pilih jenis aktiviti yang sepadan dengan jenis aktiviti pelanggan yang anda tambah. Pilih daripada jenis aktiviti sedia ada atau tambah jenis aktiviti baharu.
 
 1. Konfigurasikan hubungan daripada entiti aktiviti pelanggan anda kepada entiti *Pelanggan*.
-    
+
     1. Pilih medan yang mengenal pasti pelanggan dalam jadual aktiviti pelanggan. Ia boleh berkait secara langsung dengan ID pelanggan utama entiti *Pelanggan* anda.
     1. Pilih entiti *Pelanggan* yang memadankan entiti *Pelanggan* utama anda.
     1. Masukkan nama yang menghuraikan perhubungan.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Imej langkah dalam aliran konfigurasi untuk menambah data tambahan dan mengkonfigurasi aktiviti dengan contoh yang diisi.":::
 
-1. Pilih **Simpan**.    
+1. Pilih **Simpan**.
     Tambahkan lebih banyak data jika terdapat aktiviti pelanggan lain yang anda mahu sertakan.
+
+1. Tambah data pelanggan pilihan atau pilih **Seterusnya**.
+
+### <a name="add-optional-customer-data"></a>Tambah data pelanggan pilihan
+
+Pilih daripada 18 atribut profil pelanggan yang biasa digunakan untuk disertakan sebagai input kepada model. Atribut ini boleh membawa kepada hasil model yang lebih diperibadikan, relevan dan boleh diambil tindakan untuk kes penggunaan perniagaan anda.
+
+Sebagai contoh: Contoso Coffee ingin meramalkan nilai seumur hidup pelanggan untuk menyasarkan pelanggan bernilai tinggi dengan tawaran yang diperibadikan yang berkaitan dengan pelancaran mesin espresso baru mereka. Contoso menggunakan model CLV dan menambah semua 18 atribut profil pelanggan untuk melihat faktor mana yang mempengaruhi pelanggan nilai tertinggi mereka. Mereka mendapati lokasi pelanggan adalah faktor yang paling berpengaruh bagi pelanggan ini.
+Dengan maklumat ini, mereka menganjurkan acara tempatan untuk pelancaran mesin espresso dan bekerjasama dengan vendor tempatan untuk tawaran peribadi dan pengalaman istimewa pada acara tersebut. Tanpa maklumat ini, Contoso mungkin hanya menghantar e-mel pemasaran generik dan terlepas peluang untuk memperibadikan segmen tempatan pelanggan bernilai tinggi mereka.
+
+1. **Dalam langkah Data tambahan (pilihan**), pilih **Tambah data** di bawah **Galakkan cerapan model dengan lebih jauh dengan data** pelanggan tambahan.
+
+1. Untuk **Entiti**, pilih **Pelanggan: CustomerInsights** untuk memilih jadual profil pelanggan bersatu yang memetakan ke data atribut pelanggan. Untuk **ID** Pelanggan, pilih **System.Customer.CustomerId**.
+
+1. Petakan lebih banyak medan jika data tersedia dalam profil pelanggan bersatu anda.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Contoh medan yang dipetakan untuk data profil pelanggan.":::
+
+1. Pilih **Simpan** selepas memetakan atribut yang harus digunakan oleh model untuk membantu meramalkan nilai seumur hidup pelanggan.
 
 1. Pilih **Seterusnya**.
 

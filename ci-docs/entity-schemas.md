@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cc65314f1b083694b60ac0a2625bea906be7272b
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054765"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183504"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Skim entiti dalam Model Data Lazim
 
@@ -39,9 +39,8 @@ Untuk maklumat lanjut, lihat dokumentasi tentang [Skim entiti Customer Insights 
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Lihat entiti menggunakan Pengemudi Entiti Model Data Biasa
 
-Anda boleh melihat entiti dalam [Navigasi Entiti Common Data Model](https://microsoft.github.io/CDM/). Pilih entiti daripada bahagian Aplikasi Cerapan untuk mendapatkan senarai entiti Customer Insights dan definisi mereka.
-> [!div class="mx-imgBorder"]
-> ![Pengemudi Entiti CDM menunjukkan entiti CustomerActivity.](media/CDM-entity-navigator.png "Pengemudi Entiti CDM menunjukkan entiti CustomerActivity")
+Lihat entiti dalam [Navigator Entiti Model Data Biasa](https://microsoft.github.io/CDM/). Pilih entiti daripada bahagian Aplikasi Cerapan untuk mendapatkan senarai entiti Customer Insights dan definisi mereka.
 
+:::image type="content" source="media/CDM-entity-navigator.png" alt-text="Pengemudi Entiti CDM menunjukkan entiti CustomerActivity.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Sambungkan ke folder Common Data Model menggunakan akaun Azure Data Lake
 description: Bekerja dengan data Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082265"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207010"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Sambungkan ke data dalam Azure Data Lake Storage
 
@@ -82,7 +82,7 @@ Ingest data ke dalam Dynamics 365 Customer Insights menggunakan akaun Gen2 anda 
    :::image type="content" source="media/ADLS_required.png" alt-text="Kotak dialog menunjukkan kekunci Diperlukan untuk Utama":::
 
    > [!TIP]
-   > Untuk mengedit entiti dalam antara muka penyuntingan JSON, pilih **Tunjukkan lebih banyak** > **Edit fail** skema. Buat perubahan dan pilih **Simpan**.
+   > Untuk mengedit entiti dalam antara muka pengeditan JSON, pilih entiti dan kemudian **Edit fail** skema. Buat perubahan dan pilih **Simpan**.
 
 1. Untuk entiti terpilih yang memerlukan pengambilan tambahan, **Diperlukan** dipaparkan di bawah **Segar semula tambahan**. Bagi setiap entiti ini, lihat [Konfigurasikan segar semula tambahan untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Ingest data ke dalam Dynamics 365 Customer Insights menggunakan akaun Gen2 anda 
    1. Pilih **Selesai**.
 
 1. Pilih **Simpan**. Halaman **Sumber data** dibuka menunjukkan sumber data baru dalam **status Segar Semula**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuatkan data boleh mengambil masa. Selepas segar semula yang berjaya, data yang ditelan boleh disemak dari [**halaman Entiti**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Cipta fail skema baru
 
@@ -148,6 +152,9 @@ Ingest data ke dalam Dynamics 365 Customer Insights menggunakan akaun Gen2 anda 
 
 1. Pilih **Simpan**. Halaman **Sumber data** dibuka menunjukkan sumber data baru dalam **status Segar Semula**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuatkan data boleh mengambil masa. Selepas segar semula yang berjaya, data yang ditelan boleh disemak dari [**halaman Entiti**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Azure Data Lake Storage Mengedit sumber data
 
@@ -179,8 +186,16 @@ Anda boleh mengemas kini *Sambung ke akaun storan menggunakan* pilihan. Untuk ma
       > [!IMPORTANT]
       > Jika terdapat pergantungan pada fail model.json atau manifest.json sedia ada dan set entiti, anda akan melihat mesej ralat dan tidak boleh memilih fail model.json atau manifest.json yang berbeza. Keluarkan kebergantungan sebelum mengubah fail model.json atau manifest.json atau cipta sumber data baharu dengan fail model.json atau manifest.json yang anda mahu gunakan untuk mengelakkan daripada mengeluarkan kebergantungan.
    - Untuk menukar lokasi fail data atau kekunci utama, pilih **Edit**.
-   - Untuk mengubah data pengingesan tambahan, lihat [Mengkonfigurasikan segar semula tambahan untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md)
+   - Untuk mengubah data pengingesan tambahan, lihat [Mengkonfigurasikan segar semula tambahan untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
+   - Hanya tukar nama entiti untuk dipadankan dengan nama entiti dalam fail .json.
+
+     > [!NOTE]
+     > Sentiasa simpan nama entiti dalam Wawasan Pelanggan sama seperti nama entiti di dalam fail model.json atau manifest.json selepas pengingesan. Wawasan Pelanggan mengesahkan semua nama entiti dengan model.json atau manifest.json semasa setiap segar semula sistem. Jika nama entiti ditukar sama ada di dalam Wawasan Pelanggan atau di luar, ralat berlaku kerana Wawasan Pelanggan tidak dapat mencari nama entiti baharu dalam fail .json. Jika nama entiti yang ditelan ditukar secara tidak sengaja, edit nama entiti dalam Wawasan Pelanggan untuk dipadankan dengan nama dalam fail .json.
 
 1. Pilih **Atribut** untuk menambah atau mengubah atribut, atau untuk mendayakan pemprofilan data. Kemudian pilih **Selesai**.
 
 1. Klik **Simpan** untuk menggunakan perubahan anda dan kembali ke **halaman Sumber** data.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

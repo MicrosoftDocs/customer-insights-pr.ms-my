@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082223"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139512"
 ---
 # <a name="data-unification-overview"></a>Gambaran keseluruhan penyatuan data
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Selepas [menyediakan sumber data](data-sources.md), anda boleh menyatukan data. Penyatuan data membolehkan anda menyatukan sumber data sekali berbeza ke dalam set data induk tunggal yang menyediakan pandangan bersatu data tersebut. Bagi pengguna individu (B-to-C) di mana data berpusat pada individu, penyatuan memberikan pandangan bersatu pelanggan anda. Untuk akaun perniagaan (B-to-B) di mana data berpusat di sekitar akaun, penyatuan menyediakan paparan disatukan akaun anda.
 

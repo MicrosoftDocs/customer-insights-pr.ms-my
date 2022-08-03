@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054351"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170600"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Segmen yang dicadangkan berdasarkan pada aktiviti (pratonton)
+# <a name="suggested-segments-based-on-activity-preview"></a>Segmen yang dicadangkan berdasarkan aktiviti (pratonton)
 
 Terokai segmen yang menarik bagi pelanggan anda berdasarkan pada data aktiviti pelanggan yang diinges ke Customer Insights. Contoh data aktiviti ialah transaksi, tempoh panggilan sokongan, pembelian atau pulangan. Untuk mencadangkan segmen, data aktiviti akan dianalisis untuk keterkinian, kekerapan dan nilai kewangan (atau tempoh). Sebagai alternatif, anda boleh menjana [segmen yang dicadangkan untuk meningkatkan ukuran atau pemahaman yang lebih baik tentang perkara yang mempengaruhi atribut](suggested-segments.md).
 
@@ -35,33 +35,31 @@ Dengan [data aktiviti](activities.md) tersedia dalam Customer Insights, kami bol
 - pelanggan yang kerap berinteraksi dengan perniagaan anda  
 
 Jika anda mempunyai perniagaan runcit, anda boleh mengetahui pelanggan yang menjana hasil dan ganjaran mereka paling banyak dengan kupon. Atau anda boleh mengenal pasti pelanggan sekali-sekala dan menawarkan mereka menyertai program ganjaran supaya mereka melawat perniagaan anda dengan lebih kerap.
-Jika anda dalam perniagaan penjagaan kesihatan yang menyediakan penjagaan kesihatan awam dan matlamat anda ialah untuk meminimumkan perbelanjaan bagi pesakit individu. Satu cara untuk berbuat demikian berkemungkinan dengan mengurangkan lawatan berulang yang menyediakan penjagaan terbaik sebaik mungkin dalam kunjungan sekurang mungkin. Dalam kes ini, matlamat anda ialah untuk memastikan kekerapan lawatan rendah dan meminimumkan kos berulang untuk pesakit. Atau anda boleh mengenal pasti segmen pesakit yang mempunyai janji temu yang kerap dan kos berulang yang tinggi dan menganalisis kes ini untuk meningkatkan rawatan individu. 
+Jika anda menyediakan penjagaan kesihatan awam dan matlamat anda adalah untuk meminimumkan perbelanjaan untuk pesakit individu, anda boleh cuba mengurangkan lawatan berulang dengan menyediakan penjagaan yang terbaik dalam beberapa lawatan yang mungkin. Dalam kes ini, matlamat anda ialah untuk memastikan kekerapan lawatan rendah dan meminimumkan kos berulang untuk pesakit. Atau anda boleh mengenal pasti segmen pesakit yang mempunyai janji temu yang kerap dan kos berulang yang tinggi dan menganalisis kes ini untuk meningkatkan rawatan individu.
 
 ## <a name="required-data"></a>Data diperlukan
 
-Cadangan dijana berdasarkan pada data input yang dipilih. 
+Cadangan dijana berdasarkan pada data input yang dipilih.
 
-- Profil pelanggan: Semua pelanggan atau ahli segmen tertentu. 
+- Profil pelanggan: Semua pelanggan atau ahli segmen tertentu.
 
 - Tempoh masa: Bulan lepas, tahun lepas atau sebarang tempoh masa tersuai.
 
 - Jenis aktiviti: pembelian, transaksi runcit, transaksi dalam talian, kes sokongan pelanggan, langganan dan sebagainya.  
 
-- Entiti dalam Customer Insights yang mengandungi data aktiviti: Entiti UnifiedActivity atau entiti untuk aktiviti tertentu. 
+- Entiti dalam Customer Insights yang mengandungi data aktiviti: Entiti UnifiedActivity atau entiti untuk aktiviti tertentu.
 
 - Dimensi untuk dimasukkan: Keterkinian, kekerapan atau dimensi kewangan bergantung pada keperluan perniagaan anda.
 
 ## <a name="generate-suggested-segments"></a>Menjana segmen yang dicadangkan
 
-1. Pergi ke **Segmen**.
+1. Pergi ke **Segmen** dan pilih **tab Cadangan (pratonton**).
 
-1. Pilih tab **Cadangan (pratonton)**.
-
-1. Pilih **Cari cadangan baharu** dan pilih **Lihat atau jangkakan tingkah laku pelanggan**. Pilih **Mula** untuk menjalankan pengalaman berpandu.
+1. Pilih **Cari cadangan baharu** dan pilih **Lihat atau jangkakan tingkah laku pelanggan**. Pilih **Mula**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="Langkah pertama bagi wizard konfigurasi untuk segmen yang dicadangkan berdasarkan pada aktiviti.":::
 
-1. Sediakan data input yang diperlukan dan pilih **Seterusnya** teruskan.
+1. Sediakan data input yang diperlukan dan pilih **Seterusnya**.
 
    - Pilih pelanggan: termasuk semua pelanggan atau segmen tertentu.
    - Pilih aktiviti: Pilih jenis aktiviti dan entiti yang menerangkan aktiviti.
@@ -69,32 +67,17 @@ Cadangan dijana berdasarkan pada data input yang dipilih.
 
 1. Semak input anda dan pilih **Jalankan** untuk menjalankan model dan menjana cadangan.
 
-1. Bergantung pada bilangan profil pelanggan dan aktiviti yang dipilih, ini boleh mengambil masa beberapa minit untuk diselesaikan. 
+Bergantung pada bilangan profil pelanggan dan aktiviti yang dipilih, ini boleh mengambil masa beberapa minit untuk diselesaikan.
 
-Selepas menjana cadangan, anda boleh menapis dengan mengikut dimensi atau nilai yang paling menarik minat anda. 
+Selepas menjana cadangan, anda boleh menapis dengan mengikut dimensi atau nilai yang paling menarik minat anda.
 
-## <a name="view-details-of-a-suggested-segment"></a>Lihat butiran segmen yang dicadangkan
+## <a name="manage-suggested-segments"></a>Urus segmen yang dicadangkan
 
-Sebaik sahaja cadangan dijana, anda akan dapati cadangan disenaraikan pada **Segmen** > **Cadangan (pratonton)** dalam bahagian **Cadangan berasaskan aktiviti**.
+Pergi ke **Segmen** dan pilih **tab Cadangan (pratonton**). Dalam seksyen **Cadangan** berasaskan aktiviti, pilih segmen yang dicadangkan untuk melihat tindakan yang tersedia.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Anak tetingkap sisi yang dikembangkan menunjukkan data terperinci segmen yang dicadangkan.":::
-
-Pilih **Lihat cadangan** pada segmen yang dicadangkan untuk melihat butiran segmen itu. Anak tetingkap sisi memberikan butiran seperti had setiap dimensi dalam perbandingan ke kumpulan sasaran. Ia juga menyerlahkan bilangan ahli yang berpotensi dalam segmen dan peratusan yang bersamaan dengan jumlah pelanggan. Jika anda mahu menyimpan cadangan sebagai segmen, pilih **Cipta segmen**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Simpan cadangan sebagai segmen
-
-1. Pergi ke **Segmen** > **Cadangan (pratonton)**.
-
-1. Pilih segmen yang anda mahu simpan. 
-
-1. Dalam anak tetingkap sisi, pilih **Cipta segmen**. 
-
-1. Selepas menyimpan segmen itu, ia akan ditunjukkan dalam senarai segmen pada tab **Semua segmen**. Ia kini boleh [disegar semula atau dipadam seperti segmen lain](segments.md). Anda tidak boleh mengedit butiran segmen. Walau bagaimanapun, anda boleh mengubah kriteria input untuk cadangan dan menjana cadangan yang berbeza.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Muatkan semula atau edit set cadangan
-
-1. Pergi ke **Segmen** > **Cadangan (pratonton)** dan cari segmen dalam bahagian **Cadangan berasaskan aktiviti**.
-
-1. Pilih **Segar semula cadangan** untuk segar semula cadangan sambil menyimpan atribut yang dikonfigurasikan. Atau pilih **Edit cadangan** untuk mengubah suai atribut yang dikonfigurasi. Sistem akan menjalankan semula proses, menjana cadangan segmen berdasarkan data terkini dan menggantikan cadangan semasa.
+- **Lihat cadangan** untuk melihat butiran segmen tersebut seperti tahap setiap dimensi berbanding dengan kumpulan sasaran. Ia juga menyerlahkan bilangan ahli yang berpotensi dalam segmen dan peratusan yang bersamaan dengan jumlah pelanggan.
+- **Buat segmen** untuk menyimpan yang dicadangkan sebagai segmen. Ia dipaparkan pada **tab Semua segmen** dan boleh [disegar semula atau dipadamkan](segments.md). Anda tidak boleh mengedit butiran segmen. Walau bagaimanapun, anda boleh mengubah kriteria input untuk cadangan dan menjana cadangan yang berbeza.
+- **Edit cadangan** untuk mengubah suai atribut yang dikonfigurasi yang akan menggantikan cadangan semasa.
+- **Segar semula cadangan** untuk menyegar semula cadangan sambil mengekalkan atribut yang dikonfigurasi.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

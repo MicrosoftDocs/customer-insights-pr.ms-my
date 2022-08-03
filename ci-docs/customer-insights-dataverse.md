@@ -1,7 +1,7 @@
 ---
 title: Gunakan data Customer Insights dalam Microsoft Dataverse
 description: Ketahui cara menyambungkan Wawasan Pelanggan dan Microsoft Dataverse dan memahami entiti output yang dieksport ke Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011539"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153415"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
 
@@ -31,19 +31,31 @@ Menyambung ke persekitaran anda Dataverse juga membolehkan [anda menelan data da
 - Tiada persekitaran Wawasan Pelanggan lain yang telah dikaitkan dengan persekitaran yang Dataverse anda ingin sambungkan. Ketahui cara mengalih [keluar sambungan sedia ada ke Dataverse persekitaran](#remove-an-existing-connection-to-a-dataverse-environment).
 - Persekitaran Microsoft Dataverse hanya boleh menyambung ke satu akaun storan. Ia hanya terpakai jika anda mengkonfigurasi persekitaran untuk [menggunakan Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse kelayakan kapasiti storan
+
+Langganan Wawasan Pelanggan memberi anda kapasiti tambahan untuk kapasiti [Dataverse storan sedia ada](/power-platform/admin/capacity-storage) organisasi anda. Kapasiti tambahan bergantung pada bilangan profil yang digunakan oleh langganan anda.
+
+**Contoh:**
+
+Dengan mengandaikan anda mendapat storan pangkalan data 15 GB dan storan fail 20 GB setiap 100,000 profil pelanggan. Jika langganan anda termasuk 300,000 profil pelanggan, jumlah kapasiti storan anda ialah storan pangkalan data 45 GB (3 x 15 GB) dan storan fail 60 GB (3 x 20 GB). Begitu juga, jika anda mempunyai langganan B2B dengan akaun 30K, jumlah kapasiti storan anda ialah storan pangkalan data 45 GB (3 x 15 GB), dan storan fail 60 GB (3 x 20 GB).
+
+Kapasiti log tidak tambahan dan tetap untuk organisasi anda.
+
+Untuk maklumat lanjut tentang kelayakan kapasiti terperinci, lihat [Panduan](https://go.microsoft.com/fwlink/?LinkId=866544) Pelesenan Dynamics 365.
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Dataverse Menyambungkan persekitaran ke Wawasan Pelanggan
 
 Langkah ini **Microsoft Dataverse** membolehkan anda menyambungkan Wawasan Pelanggan dengan persekitaran anda Dataverse sambil [mencipta persekitaran](create-environment.md) Wawasan Pelanggan.
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="perkongsian data dengan Microsoft Dataverse auto didayakan untuk persekitaran baru bersih.":::
 
-Pentadbir boleh mengkonfigurasi Wawasan Pelanggan untuk menyambungkan persekitaran sedia ada Dataverse. Dengan menyediakan URL kepada Dataverse persekitaran, ia dilampirkan pada persekitaran Wawasan Pelanggan baharu mereka.
+Pentadbir boleh mengkonfigurasi Wawasan Pelanggan untuk menyambungkan persekitaran sedia ada Dataverse. Dengan menyediakan URL kepada Dataverse persekitaran, ia menyambung ke persekitaran Wawasan Pelanggan baharu mereka. Selepas mewujudkan sambungan antara Wawasan Pelanggan dan Dataverse, jangan ubah nama organisasi untuk Dataverse persekitaran. Nama organisasi digunakan dalam Dataverse URL dan nama yang diubah memecahkan sambungan dengan Wawasan Pelanggan.
 
 Jika anda tidak mahu menggunakan persekitaran sedia ada Dataverse, sistem mencipta persekitaran baharu untuk data Wawasan Pelanggan dalam penyewa anda. [Power Platform pentadbir boleh mengawal orang yang boleh mencipta persekitaran](/power-platform/admin/control-environment-creation). Apabila anda menyediakan persekitaran Wawasan Pelanggan baharu dan pentadbir telah menyahdayakan penciptaan Dataverse persekitaran untuk semua orang kecuali pentadbir, anda mungkin tidak dapat mencipta persekitaran baharu.
 
 **Mendayakan perkongsian** data dengan memilih Dataverse kotak semak perkongsian data.
 
-Jika anda menggunakan akaun Storan Tasik Data anda sendiri, anda juga memerlukan **pengecam** Keizinan. Untuk maklumat lanjut cara mendapatkan pengecam keizinan, semak semula seksyen berikut.
+Jika anda menggunakan akaun Storan Tasik Data anda sendiri, anda juga memerlukan **pengecam Keizinan**. Untuk maklumat lanjut cara mendapatkan pengecam keizinan, semak semula seksyen berikut.
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Mendayakan perkongsian data dengan Dataverse daripada anda sendiri Azure Data Lake Storage (Pratonton)
 
@@ -80,11 +92,11 @@ Untuk melaksanakan skrip PowerShell, anda perlu menyediakan PowerShell dengan se
        - Simpan kedua-dua nilai ID kumpulan keselamatan yang dijana oleh skrip ini kerana kami akan menggunakannya dalam `ByolSetup.ps1` skrip.
 
         > [!NOTE]
-        > Penciptaan kumpulan keselamatan boleh dilumpuhkan pada penyewa anda. Dalam kes itu, persediaan manual diperlukan dan pentadbir anda Azure AD perlu [mendayakan penciptaan](/azure/active-directory/enterprise-users/groups-self-service-management) kumpulan keselamatan.
+        > Penciptaan kumpulan keselamatan boleh dilumpuhkan pada penyewa anda. Dalam kes itu, persediaan manual diperlukan dan pentadbir anda Azure AD perlu [mendayakan penciptaan kumpulan keselamatan](/azure/active-directory/enterprise-users/groups-self-service-management).
 
     2. `ByolSetup.ps1`
         - Anda memerlukan *keizinan Pemilik* Data Blob Storan pada tahap akaun storan/bekas untuk menjalankan skrip ini atau skrip ini akan mencipta satu untuk anda. Tugasan peranan anda boleh dialih keluar secara manual selepas berjaya menjalankan skrip.
-        - Skrip PowerShell ini menambah kawalan akses berasaskan tole (RBAC) yang diperlukan untuk Microsoft Dataverse perkhidmatan dan sebarang Dataverse aplikasi perniagaan berasaskan. Ia juga mengemas kini Senarai Kawalan Akses (ACL) pada bekas CustomerInsights untuk kumpulan keselamatan yang `CreateSecurityGroups.ps1` dicipta dengan skrip. Kumpulan Penyumbang akan mempunyai *keizinan rwx* dan kumpulan Pembaca akan mempunyai *keizinan r-x* sahaja.
+        - Skrip PowerShell ini menambah kawalan akses berasaskan peranan yang diperlukan untuk Microsoft Dataverse perkhidmatan dan sebarang Dataverse aplikasi perniagaan berasaskan peranan. Ia juga mengemas kini Senarai Kawalan Akses (ACL) pada bekas CustomerInsights untuk kumpulan keselamatan yang `CreateSecurityGroups.ps1` dicipta dengan skrip. Kumpulan Penyumbang akan mempunyai *keizinan rwx* dan kumpulan Pembaca akan mempunyai *keizinan r-x* sahaja.
         - Laksanakan skrip PowerShell ini dalam Windows PowerShell dengan menyediakan ID langganan Azure yang mengandungi nama akaun storan anda Azure Data Lake Storage, nama kumpulan sumber dan nilai ID kumpulan keselamatan Pembaca dan Penyumbang. Buka skrip PowerShell dalam editor untuk menyemak maklumat tambahan dan logik yang dilaksanakan.
         - Salin rentetan output selepas berjaya menjalankan skrip. Rentetan output kelihatan seperti ini: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

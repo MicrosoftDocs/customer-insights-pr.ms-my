@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082580"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183578"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Hubungan antara entiti dan laluan entiti
 
 Perhubungan menghubungkan entiti dan mentakrifkan graf data anda apabila entiti berkongsi pengecam biasa, iaitu kunci asing. Kunci asing ini boleh dirujuk daripada satu entiti ke entiti lain. Entiti yang berhubung membolehkan definisi segmen dan ukuran berdasarkan berbilang sumber data.
 
 Terdapat tiga jenis perhubungan: 
-- Perhubungan sistem tidak boleh diedit, yang dicipta oleh sistem sebagai sebahagian daripada proses penyatuan data
-- Perhubungan yang diwarisi dan tidak boleh diedit, yang dicipta secara automatik daripada pengingesan sumber data 
-- Perhubungan tersuai boleh diedit, yang dicipta dan dikonfigurasikan oleh pengguna
+- Hubungan sistem yang tidak boleh diedit dicipta oleh sistem sebagai sebahagian daripada proses penyatuan data
+- Perhubungan warisan yang tidak boleh diedit dicipta secara automatik daripada menelan sumber data
+- Perhubungan tersuai yang boleh diedit dicipta dan dikonfigurasikan oleh pengguna
 
 ## <a name="non-editable-system-relationships"></a>Perhubungan sistem tidak boleh diedit
 
@@ -67,69 +67,66 @@ Perhubungan terdiri daripada *entiti sumber* yang mengandungi kunci asing dan *e
    - **Description**: Description bagi perhubungan.
    - **Entiti sumber**: Entiti yang digunakan sebagai sumber dalam perhubungan. Contoh: SupportCase.
    - **Entiti sasaran**: Entiti yang digunakan sebagai sasaran dalam perhubungan. Contoh: Pelanggan.
-   - **Kekardinalan sumber**: Tentukan kekardinalan entiti sumber. Kekardinalan menerangkan bilangan elemen yang mungkin dalam satu set. Ia sentiasa berkaitan dengan kekardinalan sasaran. Anda boleh memilih antara **Satu** dengan **Banyak**. Hanya perhubungan banyak-ke-satu dan satu-ke-satu disokong.  
+   - **Sumber kardinaliti**: Kardinaliti entiti sumber. Kekardinalan menerangkan bilangan elemen yang mungkin dalam satu set. Ia sentiasa berkaitan dengan kekardinalan sasaran. Anda boleh memilih antara **Satu** dengan **Banyak**. Hanya perhubungan banyak-ke-satu dan satu-ke-satu disokong.  
      - Banyak kepada satu: Berbilang rekod sumber boleh berkaitan dengan satu rekod sasaran. Contoh: Berbilang kes sokongan daripada pelanggan tunggal.
      - Satu kepada satu: Rekod sumber tunggal berkaitan dengan satu rekod sasaran. Contoh: Satu ID kesetiaan untuk pelanggan tunggal.
 
      > [!NOTE]
      > Perhubungan banyak kepada banyak boleh dicipta menggunakan dua perhubungan banyak kepada satu dan entiti pemautan, yang menghubungkan entiti sumber dan entiti sasaran.
 
-   - **Kekardinalan sasaran**: Pilih kekardinalan rekod entiti sasaran. 
-   - **Medan kunci sumber**: Medan kunci asing dalam entiti sumber. Contoh: SupportCase boleh menggunakan CaseID sebagai medan kunci asing.
-   - **Medan kunci sasaran**: Medan kunci entiti sasaran. Contoh Pelanggan boleh menggunakan medan kunci **CustomerID**.
+   - **Kardinaliti sasaran**: Kardinaliti rekod entiti sasaran.
+   - **Medan kekunci sumber**: Medan kunci asing dalam entiti sumber. Contoh: SupportCase menggunakan **CaseID** sebagai medan kunci asing.
+   - **Medan kekunci sasaran**: Medan utama entiti sasaran. Contoh: Pelanggan menggunakan **CustomerID** sebagai medan utama.
 
 4. Pilih **Simpan** untuk mencipta perhubungan tersuai.
 
 ## <a name="set-up-account-hierarchies"></a>Sediakan hierarki akaun
 
-Persekitaran yang dikonfigurasikan untuk menggunakan akaun perniagaan sebagai khalayak sasaran utama boleh mengkonfigurasi hierarki akaun untuk akaun perniagaan yang berkaitan. Contohnya, syarikat yang mempunyai unit perniagaan yang berasingan. 
+Persekitaran yang dikonfigurasikan untuk menggunakan akaun perniagaan sebagai khalayak sasaran utama boleh mengkonfigurasi hierarki akaun untuk akaun perniagaan yang berkaitan. Contohnya, syarikat yang mempunyai unit perniagaan yang berasingan.
 
 Organisasi mencipta hierarki akaun untuk menguruskan akaun yang lebih baik dan perhubungan mereka antara satu sama lain. Wawasan Pelanggan menyokong hierarki akaun ibu bapa-anak yang sudah wujud dalam data pelanggan yang ditelan. Sebagai contoh, akaun daripada Dynamics 365 Sales. Hierarki ini boleh dikonfigurasikan pada **halaman Perhubungan**.
 
 1. Pergi ke **Data** > **Perhubungan**.
 1. Pilih tab **Hierarki akaun** tab.
-1. Pilih **Hierarki akaun baharu**. 
-1. Dalam anak tetingkap **Hierarki akaun**, memberikan nama untuk hierarki. Sistem mencipta nama untuk entiti output. Anda boleh mengubah nama entiti nama output.
+1. Pilih **Hierarki akaun baharu**.
+1. Dalam anak tetingkap **Hierarki akaun**, memberikan nama untuk hierarki. Sistem ini mencipta nama untuk entiti output, tetapi anda boleh mengubahnya.
 1. Pilih entiti yang mengandungi hierarki akaun anda. Ia biasanya dalam entiti yang sama yang mengandungi akaun.
-1. Pilih **ID Akaun** dan **ID Induk Akaun** daripada entiti yang dipilih 
-1. Pilih **Simpan** untuk menggunakan tetapan dan memuktamadkan hierarki akaun.
+1. **Pilih UID** Akaun dan **UID** Ibu Bapa daripada entiti yang dipilih.
+1. Pilih **Simpan** untuk memuktamadkan hierarki akaun.
 
-## <a name="view-relationships"></a>Lihat perhubungan
+## <a name="manage-existing-relationships"></a>Urus perhubungan yang sedia ada
 
-Halaman Perhubungan menyenaraikan semua perhubungan yang telah dicipta. Setiap baris mewakili perhubungan, yang juga termasuk butiran tentang entiti sumber, entiti sasaran dan kekardinalan. 
+Pergi ke **halaman Perhubungan** untuk melihat semua perhubungan yang telah dicipta, entiti sumber mereka, entiti sasaran dan kardinaliti.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Senarai perhubungan dan pilihan dalam bar tindakan halaman Perhubungan.":::
 
-Halaman ini menawarkan satu set pilihan untuk perhubungan sedia ada dan baharu: 
-- **Perhubungan Baharu**: [Cipta perhubungan tersuai](#create-a-custom-relationship).
-- **Penampak**: [Terokai penampak perhubungan](#explore-the-relationship-visualizer) untuk melihat gambar rajah rangkaian perhubungan yang sedia ada dan kekardinalan.
-- **Tapis mengikut**: Pilih jenis perhubungan untuk ditunjukkan dalam senarai.
-- **Cari perhubungan**: Gunakan carian berdasarkan teks pada sifat perhubungan.
+**Gunakan opsyen Tapis mengikut** atau **Cari perhubungan** untuk mencari perhubungan tertentu. Untuk melihat gambarajah rangkaian perhubungan sedia ada dan kardinalitinya, pilih [**Visualizer**](#explore-the-relationship-visualizer).
+
+Pilih perhubungan untuk melihat tindakan yang tersedia:
+- **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
+- **Padam**: Padam perhubungan tersuai.
+- **Lihat**: Lihat perhubungan yang dicipta sistem dan diwarisi.
 
 ### <a name="explore-the-relationship-visualizer"></a>Terokai penampak perhubungan
 
 Penampak perhubungan menunjukkan gambar rajah rangkaian perhubungan yang sedia ada antara entiti yang berhubung dengan kekardinalan. Ia juga menggambarkan laluan perhubungan.
 
-Untuk menyesuaikan pandangan, anda boleh mengubah kedudukan kotak dengan menyeret kotak pada kanvas.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Syot layar gambar rajah rangkaian penampak perhubungan dengan sambungan antara entiti yang berkaitan.":::
 
-Pilihan yang tersedia: 
+Untuk menyesuaikan pandangan, anda boleh mengubah kedudukan kotak dengan menyeret kotak pada kanvas. Pilihan lain termasuk: 
 - **Eksport sebagai imej**: Simpan pandangan semasa sebagai fail imej.
 - **Tukar kepada tataletak mendatar/menegak**: Tukar penjajaran entiti dan perhubungan.
 - **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
 
 ## <a name="relationship-paths"></a>Laluan perhubungan
 
-Laluan perhubungan menerangkan entiti yang disambungkan dengan perhubungan antara entiti sumber dan entiti sasaran. Ia digunakan apabila mencipta segmen atau ukuran yang termasuk entiti lain daripada entiti profil disatukan dan terdapat beberapa pilihan untuk mencapai entiti profil disatukan. 
-
-Laluan perhubungan memberitahu sistem yang mana perhubungan untuk mengakses entiti profil bersepadu. Laluan perhubungan yang berbeza boleh menghasilkan keputusan yang berbeza.
+Laluan perhubungan menerangkan entiti yang disambungkan dengan perhubungan antara entiti sumber dan entiti sasaran. Ia digunakan semasa membuat segmen atau ukuran yang merangkumi entiti selain entiti profil bersatu dan terdapat banyak pilihan untuk mencapai entiti profil bersatu. Laluan perhubungan yang berbeza boleh menghasilkan keputusan yang berbeza.
 
 Contohnya, entiti *eCommerce_eCommercePurchases* mempunyai perhubungan berikut kepada entiti *Pelanggan* profil disatukan:
 
 - eCommerce_eCommercePurchases > Pelanggan
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan
 
 Laluan perhubungan menentukan entiti yang anda boleh gunakan apabila mencipta peraturan untuk ukuran atau segmen. Memilih pilihan dengan laluan perhubungan terpanjang mungkin menghasilkan kurang hasil kerana rekod yang sepadan perlu menjadi sebahagian daripada semua entiti. Dalam contoh ini, pelanggan perlu membeli barang melalui e-dagang(eCommerce_eCommercePurchases), pada tempat jualan (POS_posPurchases) dan mengambil bahagian dalam program kesetiaan kami (loyaltyScheme_loyCustomers). Apabila memilih pilihan pertama, anda mungkin akan mendapat lebih banyak keputusan kerana pelanggan perlu wujud dalam satu entiti tambahan.
 
@@ -155,7 +152,7 @@ Perhubungan dikelaskan sebagai **perhubungan tidak langsung** apabila entiti sum
 
 #### <a name="multi-hop-relationship"></a>Perhubungan berbilang hop
 
-*Perhubungan berbilang hop* adalah *perhubungan tidak langsung* yang membolehkan anda menyambungkan entiti sumber kepada entiti sasaran melalui satu atau lebih entiti perantara lain.
+**Perhubungan berbilang hop** adalah *perhubungan tidak langsung* yang membolehkan anda menyambungkan entiti sumber kepada entiti sasaran melalui satu atau lebih entiti perantara lain.
 
 Sebagai contoh, jika entiti aktiviti yang dipanggil *eCommerce_eCommercePurchasesWest* menyambung ke entiti pertengahan yang dipanggil *eCommerce_eCommercePurchasesEast* dan kemudian menyambung ke entiti sasaran yang dipanggil *eCommerce_eCommerceContacts* adalah perhubungan berbilang hop.
 
@@ -168,16 +165,6 @@ Perhubungan berbilang hop dan berbilang laluan boleh digunakan bersama-sama untu
 Sebagai contoh, jika entiti aktiviti dipanggil *eCommerce_eCommercePurchasesWest* menyambung ke entiti pertengahan dipanggil *eCommerce_eCommercePurchasesEast* dan kemudian menyambung ke dua entiti sasaran, kedua-duanya *eCommerce_eCommerceContacts* dan *loyaltyScheme_loyCustomers*, adalah perhubungan berbilang hop, berbilang laluan.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Entiti sumber menyambung secara terus kepada satu entiti sasaran dan menyambung ke entiti sasaran lain melalui entiti pertengahan.":::
-
-## <a name="manage-existing-relationships"></a>Urus perhubungan yang sedia ada 
-
-Pada halaman Perhubungan, setiap perhubungan diwakili oleh baris. 
-
-Pilih perhubungan dan pilih salah satu daripada pilihan berikut: 
- 
-- **Edit**: Kemas kini sifat perhubungan tersuai dalam anak tetingkap edit dan simpan perubahan.
-- **Padam**: Padam perhubungan tersuai.
-- **Lihat**: Lihat perhubungan yang dicipta sistem dan diwarisi. 
 
 ## <a name="next-step"></a>Langkah seterusnya
 

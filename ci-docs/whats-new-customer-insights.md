@@ -1,28 +1,56 @@
 ---
 title: Perkara baharu dalam Dynamics 365 Customer Insights
 description: Maklumat tentang ciri baharu, penambahbaikan dan pembetulan pepijat.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054029"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114257"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Perkara baharu dalam Dynamics 365 Customer Insights
 
 Kami berasa teruja untuk mengumumkan kemas kini terbaharu kami! Artikel ini meringkaskan ciri pratonton awam, penambahbaikan ketersediaan umum dan ciri kemas kini. Untuk melihat pelan ciri jangka panjang, sila lihat pada [Dynamics 365 dan Power Platform pelan keluaran](/dynamics365/release-plans/).
 
-Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tertentu mungkin melihat ciri sebelum orang lain. Melainkan dinyatakan berbeza, anda tidak perlu mengambil sebarang tindakan dan kami akan mengemas kini aplikasi secara automatik tanpa masa henti.
+Kami melancarkan kemas kini berasaskan rantau demi rantau. Oleh itu, rantau tertentu mungkin melihat ciri sebelum orang lain. Melainkan dinyatakan secara berbeza, anda tidak perlu mengambil sebarang tindakan, kami akan mengemas kini apl secara automatik tanpa waktu henti.
 
 > [!TIP]
 > Untuk menyerahkan dan mengundi tentang permintaan ciri dan cadangan produk, pergi ke [portal Idea Aplikasi Dynamics 365.](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Kemas kini Jun 2022
+
+Kemas kini pada Jun 2022 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Pengalaman pengguna yang dikemas kini untuk sumber data dan pengingesan data
+
+Mengimport data dari pelbagai sumber data adalah asas untuk menyatukan data pelanggan anda dalam Dynamics 365 Customer Insights. Kami telah menyemak semula pengalaman pengguna untuk import dan sambungan sumber data. Kemas kini ini bertujuan untuk memudahkan anda menelan data ke Wawasan Pelanggan.
+
+Untuk maklumat lanjut, lihat [Gambaran keseluruhan sumber data](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Eksport ke InMobi
+
+InMobi membantu jenama memahami, mengenal pasti, terlibat, dan memperoleh pengguna. Anda boleh mengeksport segmen dan data lain ke perkhidmatan InMobi melalui akaun Storan Azure Blob.
+
+Untuk maklumat lanjut, lihat [Eksport ke InMobi (pratonton)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Sokongan kotak kunci dalam Wawasan Pelanggan
+
+Kotak Kunci Pelanggan menyediakan antara muka untuk menyemak dan meluluskan (atau menolak) permintaan capaian data. Permintaan ini berlaku apabila akses data kepada data pelanggan diperlukan untuk menyelesaikan kes sokongan.
+
+Untuk maklumat lanjut, lihat [Akses data pelanggan dengan selamat dengan Kotak Kunci Pelanggan (Pratonton)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Sambung ke data anda menggunakan Azure Private Link
+
+Azure Private Link mari kita Wawasan Pelanggan menyambung ke akaun anda Azure Data Lake Storage melalui titik akhir peribadi dalam rangkaian maya anda. Untuk data dalam akaun storan, yang tidak terdedah kepada internet awam, Private Link mendayakan sambungan ke rangkaian terhad tersebut.
+
+Untuk maklumat lanjut, lihat [Menggunakan Pautan Peribadi dalam Wawasan](security-overview.md#private-links-tab) Pelanggan.
 
 ## <a name="may-2022-updates"></a>Kemas kini Mei 2022
 
@@ -30,7 +58,7 @@ Kemas kini pada Mei 2022 termasuk ciri baharu, peningkatan prestasi dan pembetul
 
 ### <a name="updated-data-unification-experience"></a>Pengalaman penyatuan data yang dikemas kini
 
- Penyatuan data membolehkan anda menyatukan sumber data sekali berbeza ke dalam set data induk tunggal yang menyediakan pandangan bersatu data tersebut. Data boleh disatukan pada satu entiti atau berbilang entiti. Pertama, anda [memilih entiti dan medan](map-entities.md) sumber, [mengalih keluar rekod](remove-duplicates.md) pendua, menentukan peraturan untuk [keadaan](match-entities.md) yang sepadan dan menentukan medan yang [hendak disertakan dalam profil pelanggan yang bersatu](merge-entities.md).
+ Penyatuan data membolehkan anda menyatukan sumber data sekali berbeza ke dalam set data induk tunggal yang menyediakan pandangan bersatu data tersebut. Data boleh disatukan pada satu entiti atau berbilang entiti. Pertama, anda [memilih entiti dan medan](map-entities.md) sumber, [mengalih keluar rekod](remove-duplicates.md) pendua, menentukan peraturan untuk [keadaan](match-entities.md) yang sepadan dan menentukan medan yang [hendak disertakan dalam profil](merge-entities.md) pelanggan yang bersatu.
 
 Untuk maklumat lanjut, lihat [Gambaran keseluruhan penyatuan data](data-unification.md).
 
@@ -122,7 +150,7 @@ Kemas kini pada Februari 2022 termasuk ciri baharu, peningkatan prestasi dan pem
 
 Model ramalan di luar kotak, termasuk **churn** langganan, **churn** transaksi, dan **nilai seumur hidup pelanggan (CLV)** secara amnya tersedia sebagai sebahagian daripada Wawasan Pelanggan. 
 
-Untuk maklumat lanjut, lihat [Gambaran keseluruhan ramalan](predictions-overview.md).
+Untuk maklumat lanjut, lihat [Gambaran keseluruhan](predictions-overview.md) ramalan.
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>New sumber data: Integrasi dengan Azure Synapse Analytics (Pratonton)
 

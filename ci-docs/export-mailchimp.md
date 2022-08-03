@@ -1,85 +1,80 @@
 ---
 title: Eksport segmen ke Mailchimp (pratonton)
 description: Ketahui cara mengkonfigurasikan sambungan dan eksport ke Mailchimp.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3a19c517eeca71a19649e3d07cf47e5d25df6a68
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082475"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196865"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Eksport segmen ke Mailchimp (pratonton)
 
 Segmen eksport profil pelanggan disatukan ke Mailchimp untuk mencipta surat berita dan kempen e-mel.
 
-## <a name="prerequisites-for-connection"></a>Prasyarat untuk sambungan
+## <a name="prerequisites"></a>Prasyarat
 
--   Anda mempunyai [Akaun Mailchimp](https://mailchimp.com/) dan kelayakan pentadbir yang berkaitan.
--   Terdapat khalayak sedia ada dalam Mailchimp dan ID yang berkaitan. Untuk maklumat lanjut, lihat [Khalayak Mailchimp](https://mailchimp.com/help/create-audience/).
--   Anda telah [mengkonfigurasi segmen](segments.md)
--   Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
+- Akaun [Mailchimp](https://mailchimp.com/) dan kelayakan pentadbir yang sepadan.
+- [Penonton sedia ada dalam Mailchimp](https://mailchimp.com/help/create-audience/) dan ID khalayak yang [sepadan](https://mailchimp.com/help/find-audience-id/).
+- [Segmen yang dikonfigurasikan](segments.md).
+- Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Hingga 1 juta profil pelanggan bagi setiap eksport kepada Mailchimp.
-- Mengeksport ke Mailchimp adalah terhad kepada segmen.
-- Mengeksport segmen dengan 1 juta profil pelanggan boleh mengambil masa sehingga tiga jam. 
-- Bilangan profil pelanggan yang boleh anda eksport kepada Mailchimp bergantung dan terhad pada kontrak anda dengan Mailchimp.
+- Sehingga 1 juta profil pelanggan setiap eksport ke Mailchimp, yang boleh mengambil masa sehingga tiga jam. Bilangan profil pelanggan yang boleh anda eksport ke Mailchimp bergantung pada kontrak anda dengan Mailchimp.
+- Segmen sahaja.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Sediakan sambungan ke Mailchimp
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pilih **Tambah sambungan** dan pilih **Mailchimp** untuk mengkonfigurasikan sambungan.
+1. Pilih **Tambah sambungan** dan pilih **Mailchimp**.
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
-1. Pilih individu yang boleh menggunakan sambungan ini. Jika anda tidak mengambil tindakan, lalai akan menjadi Pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Pilih individu yang boleh menggunakan sambungan ini. Secara lalai, ia hanya pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Pilih **Saya bersetuju** untuk mengesahkan **Privasi dan pematuhan data**.
+1. [Semak privasi dan pematuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya bersetuju**.
 
-1. Pilih **Sambung** untuk memulakan sambungan ke Mailchimp.
+1. Pilih **Sambung** untuk memulakan sambungan.
 
 1. Pilih **Sahkan dengan Mailchimp** dan berikan kelayakan Mailchimp anda.
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
-1. Pilih **Simpan** untuk melengkapkan sambungan. 
+1. Pilih **Simpan** untuk melengkapkan sambungan.
 
-## <a name="configure-the-connector"></a>Konfigurasi penyambung
+## <a name="configure-an-export"></a>Konfigurasikan eksport
 
-Anda boleh mengkonfigurasikan eksport ini jika anda mempunyai akses ke sambungan jenis ini. Untuk maklumat lanjut, lihat [Keizinan yang diperlukan untuk mengkonfigurasikan eksport](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
-1. Pergi ke **Data**> **Eksport**.
+1. Pergi ke **Data** > **Eksport**.
 
-1. Untuk mencipta eksport baharu, pilih **Tambah destinasi**.
+1. Pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Mailchimp. Jika anda tidak nampak nama bahagian ini, tiada sambungan jenis ini tersedia untuk anda.
+1. Dalam medan **Sambungan untuk eksport**, pilih sambungan dari bahagian Mailchimp. Hubungi pentadbir jika tiada sambungan tersedia.
 
-1. Masukkan **[ID khalayak Mailchimp](https://mailchimp.com/help/find-audience-id/)**
+1. Masukkan nama untuk eksport.
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. 
+1. Masukkan ID **khalayak Mailchimp anda**.
 
-1. Selain itu, anda boleh mengeksport **Nama pertama** dan **Nama keluarga** untuk mencipta e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan.
 
-1. Pilih segmen yang ingin anda eksport. Anda boleh mengeksport hingga 1 juta jumlah profil pelanggan ke Mailchimp.
+1. Secara pilihan, eksport **nama pertama** dan **nama akhir** untuk membuat e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
+
+1. Pilih segmen yang ingin anda eksport.
 
 1. Pilih **Simpan**.
 
-Menyimpan eksport tidak menjalankan eksport dengan serta-merta.
-
-Eksport berjalan dengan setiap [segar semula yang dijadualkan](system.md#schedule-tab). Anda juga boleh [mengeksport data atas permintaan](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
-
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data ke Mailchimp, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data sensitif berpotensi seperti Data Peribadi. Microsoft akan memindahkan data sedemikian mengikut arahan anda tetapi anda bertanggungjawab untuk memastikan bahawa Mailchimp memenuhi sebarang kewajipan privasi atau keselamatan yang anda mungkin miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar destinasi eksport ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

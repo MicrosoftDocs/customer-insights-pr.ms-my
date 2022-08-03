@@ -13,22 +13,20 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: MT
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742976"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139440"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Alih keluar pendua sebelum menyatukan data
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Langkah penyatuan ini secara pilihan membolehkan anda menyediakan peraturan untuk mengendalikan rekod pendua dalam entiti. *Deduplication* mengenal pasti rekod pendua dan menggabungkannya ke dalam satu rekod. Rekod sumber dikaitkan dengan rekod yang digabungkan dengan ID alternatif. Jika peraturan tidak dikonfigurasikan, peraturan takrifan sistem digunakan.
 
 ## <a name="include-enriched-entities-preview"></a>Sertakan entiti yang diperkaya (pratonton)
 
-Jika anda memperkayakan entiti di peringkat sumber data untuk membantu meningkatkan hasil penyatuan anda, pilihnya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md).
+Jika anda memperkayakan entiti di peringkat sumber data untuk membantu meningkatkan hasil penyatuan anda, pilihnya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data.
 
 1. **Pada halaman Rekod** pendua, pilih **Gunakan entiti** yang diperkaya di bahagian atas halaman.
 

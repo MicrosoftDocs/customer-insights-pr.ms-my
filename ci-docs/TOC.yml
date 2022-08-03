@@ -104,22 +104,26 @@
       href: enrichment-here.md
     - name: Import tersuai SFTP
       href: enrichment-SFTP-custom-import.md
-- name: Profil disatukan
+- name: Profil dan aktiviti pelanggan
   items:
-    - name: Semak semula profil pelanggan disatukan
+    - name: Lihat profil pelanggan
       href: customer-profiles.md
-    - name: Tapis profil pelanggan disatukan
+    - name: Urus indeks carian & penapis
       href: search-filter-index.md
     - name: Tentukan aktiviti pelanggan
       href: activities.md
     - name: Gunakan pengurusan persetujuan
       href: consent-management.md
+    - name: Gunakan data web untuk pemperibadian
+      href: unknown-to-known.md
 - name: Segmen
   items:
     - name: Gambaran keseluruhan segmen
       href: segments.md
-    - name: Cipta segmen
+    - name: Buat dengan pembina segmen
       href: segment-builder.md
+    - name: Cipta dengan segmen pantas
+      href: segment-quick.md
     - name: Segmen yang dicadangkan berdasarkan pada ukuran
       href: suggested-segments.md
     - name: Segmen yang dicadangkan berdasarkan pada aktiviti
@@ -132,9 +136,9 @@
   items:
     - name: Ukuran gambaran keseluruhan
       href: measures.md
-    - name: Buat langkah baru
+    - name: Buat dengan pembina ukuran
       href: measure-builder.md
-    - name: Gunakan templat ukuran
+    - name: Cipta dengan templat
       href: measure-templates.md
 - name: Ramalan
   items:
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Kempen Aktif
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Pengiklanan Microsoft
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks

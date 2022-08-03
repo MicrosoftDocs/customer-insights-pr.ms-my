@@ -1,34 +1,31 @@
 ---
 title: Pasukan bot untuk Dynamics 365 Customer Insights (pratonton)
 description: Carian profil pelanggan disatukan dalam Microsoft Teams dengan bantuan bot.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: d140ae72578b48091a41005c4acafe03bac540da
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082601"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195853"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Pasukan bot untuk Dynamics 365 Customer Insights (pratonton)
 
 Sambung dengan Microsoft Teams untuk membolehkan bot mencari profil pelanggan disatukan dalam saluran Teams.
 
-> [!div class="mx-imgBorder"]
-> ![Bot Teams menunjukkan rekod pelanggan.](media/teams-bot.png "Bot Teams menunjukkan rekod pelanggan")
+:::image type="content" source="media/teams-bot.png" alt-text="Bot Teams menunjukkan rekod pelanggan":::
 
 ## <a name="prerequisites"></a>Prasyarat
 
-Untuk menyedia dan mengkonfigurasi bot, prasyarat berikut mesti dipenuhi:
-
 - Sekurang-kurangnya satu [sumber data ditambah](data-sources.md).
 - [Proses penyatuan](data-unification.md) adalah lengkap.
-- Medan ditambah ke [indeks carian dan tapisan](search-filter-index.md).
+- Medan ditambah ke [indeks carian & penapis](search-filter-index.md).
 - Customer Insights dan Teams adalah dalam organisasi yang sama.
 - Persekitaran anda mempunyai khalayak sasaran utama yang ditetapkan kepada pelanggan individu. Akaun perniagaan tidak disokong.
 
@@ -37,24 +34,23 @@ Untuk menyedia dan mengkonfigurasi bot, prasyarat berikut mesti dipenuhi:
 
 ## <a name="configure-the-bot"></a>Konfigurasi bot
 
-1. Pergi ke **Destinasi Eksport Pentadbir** > **·**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 1. Pada jubin Microsoft Teams, pilih **Sediakan**.
 1. Anda dihalakan semula ke kawasan **Aplikasi** dalam Teams. Anda juga boleh membuka Teams dan memilih **Aplikasi** di bahagian bawah sudut kiri atau [dapatkannya daripada AppSource](https://go.microsoft.com/fwlink/?linkid=2124104) secara terus.
 1. Cari **Customer Insights** dan pilih aplikasi.
 1. Pilih **Tambah**.
-1. Selepas mendaftar masuk ke Customer Insights dalam Teams, anda akan melihat message selamat datang dan boleh bermula.
+1. Log masuk ke Wawasan Pelanggan dalam Pasukan. Mesej selamat datang dipaparkan.
 
 ## <a name="things-you-can-do-with-the-bot"></a>Perkara yang anda boleh lakukan dengan bot
 
 Bot menyediakan keupayaan carian untuk profil pelanggan disatukan.
 
-- Masukkan **Cari** diikuti dengan nama, alamat e-mel, atau mana-mana medan pada profil pelanggan disatukan yang ditambah ke indeks carian dan tapisan.
+- Masukkan **carian** diikuti dengan nama, alamat e-mel atau sebarang medan lain pada profil pelanggan bersatu yang ditambahkan pada indeks carian & penapis.
 
-  Anda akan mendapat kad dengan sehingga 15 medan daripada profil pelanggan yang terhasil. Berbilang padanan mengembalikan senarai hasil di mana anda boleh memilih profil. Anda boleh menambah istilah carian dalam petikan berganda untuk mencari padanan yang tepat.
+  Anda akan mendapat kad dengan sehingga 15 medan daripada profil pelanggan yang terhasil. Berbilang padanan mengembalikan senarai hasil di mana anda boleh memilih profil. Untuk mencari padanan yang tepat, tambahkan istilah carian dalam petikan berganda.
 
-- Jika organisasi anda mengekalkan berbilang persekitaran Customer Insights dalam organisasi yang sama, anda boleh memasukkan **switchinstance** untuk memilih persekitaran yang anda mahu sambungkan bot tersebut.
+- Jika organisasi anda mengekalkan berbilang persekitaran Wawasan Pelanggan dalam organisasi yang sama, masukkan **suis** untuk memilih persekitaran yang anda ingin sambungkan bot.
 
 - Masukkan **bantuan** untuk melihat senarai perintah yang tersedia untuk bot.  
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

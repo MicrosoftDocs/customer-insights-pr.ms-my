@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053032"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195947"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Memperkaya profil pelanggan dengan demografi daripada Experian (pratonton)
 
@@ -59,7 +59,7 @@ Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data kep
 
 1. Semak semula gambaran keseluruhan dan kemudian pilih **Berikut**.
 
-1. Pilih sambungan. Hubungi pentadbir jika tidak tersedia.
+1. Pilih sambungan. Hubungi pentadbir jika tiada sambungan tersedia.
 
 1. Pilih **Seterusnya**.
 

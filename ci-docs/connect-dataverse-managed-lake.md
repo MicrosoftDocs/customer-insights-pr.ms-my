@@ -1,7 +1,7 @@
 ---
 title: Sambung ke data dalam data lake terurus Microsoft Dataverse
 description: Import data daripada danau data terurus Microsoft Dataverse.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082160"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206964"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Sambung ke data dalam data lake terurus Microsoft Dataverse
 
-Microsoft Dataverse pengguna boleh menyambung dengan cepat ke entiti analisis di tasik yang Microsoft Dataverse diuruskan.
+Microsoft Dataverse pengguna boleh menyambung dengan cepat ke entiti analisis di tasik yang Microsoft Dataverse diuruskan. Hanya satu sumber data persekitaran boleh secara serentak menggunakan lake terurus Dataverse yang sama.
 
 > [!NOTE]
 > Anda mesti menjadi pentadbir organisasi Dataverse untuk meneruskan dan melihat senarai entiti yang terdapat di tasik yang diuruskan.
 
-## <a name="important-considerations"></a>Pertimbangan penting
+## <a name="prerequisites"></a>Prasyarat
 
-1. Data disimpan dalam perkhidmatan dalam talian seperti Azure Data Lake Storage, mungkin disimpan di lokasi lain daripada tempat data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
-2. Hanya Dataverse entiti dengan [penjejakan](/power-platform/admin/enable-change-tracking-control-data-synchronization) perubahan yang didayakan boleh dilihat. Entiti ini boleh dieksport ke Dataverse tasik data terurus dan digunakan dalam Wawasan Pelanggan. Jadual luar kotak Dataverse telah mengubah penjejakan yang didayakan secara lalai. Anda perlu menghidupkan penjejakan perubahan untuk jadual tersuai. Untuk menyemak sama ada Dataverse jadual didayakan untuk penjejakan perubahan, pergi ke [Power Apps](https://make.powerapps.com) > **Jadual** > **Data**. Cari jadual minat anda dan pilihnya. Pergi ke **Seting** > **Opsyen** lanjutan dan semak semula **seting Jejak perubahan**.
+- Data disimpan dalam perkhidmatan dalam talian seperti Azure Data Lake Storage, mungkin disimpan di lokasi lain daripada tempat data diproses atau disimpan dalam Dynamics 365 Customer Insights.Dengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
+
+- Hanya Dataverse entiti dengan [penjejakan](/power-platform/admin/enable-change-tracking-control-data-synchronization) perubahan yang didayakan boleh dilihat. Entiti ini boleh dieksport ke Dataverse tasik data terurus dan digunakan dalam Wawasan Pelanggan. Jadual luar kotak Dataverse telah mengubah penjejakan yang didayakan secara lalai. Anda perlu menghidupkan penjejakan perubahan untuk jadual tersuai. Untuk menyemak sama ada Dataverse jadual didayakan untuk penjejakan perubahan, pergi ke [Power Apps](https://make.powerapps.com) > **Jadual** > **Data**. Cari jadual minat anda dan pilihnya. Pergi ke **Seting** > **Opsyen** lanjutan dan semak semula **seting Jejak perubahan**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Sambung ke lake diurus Dataverse
 
@@ -51,7 +52,9 @@ Microsoft Dataverse pengguna boleh menyambung dengan cepat ke entiti analisis di
 
 1. Simpan pilihan anda untuk mula menyegerakkan jadual terpilih daripada Dataverse. Anda akan menemui sambungan yang baru ditambah pada halaman **Sumber data**. Ia akan dibaris gilir untuk segar semula dan menunjukkan kiraan entiti sebagai 0 sehingga semua jadual yang dipilih disegerakkan.
 
-Hanya satu sumber data persekitaran boleh secara serentak menggunakan lake terurus Dataverse yang sama.
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Memuatkan data boleh mengambil masa. Selepas segar semula yang berjaya, data yang ditelan boleh disemak dari [**halaman Entiti**](entities.md).
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Edit sumber data lake diurus Dataverse
 
@@ -62,4 +65,10 @@ Untuk bersambung ke danau data Dataverse yang lain, [cipta sumber data baharu](#
 
 1. Di sebelah sumber data yang anda ingin kemas kini, pilih **Edit**.
 
-1. Pilih entiti tambahan daripada senarai entiti yang tersedia dan pilih **Simpan**.
+1. Pilih entiti tambahan dari senarai entiti yang ada.
+
+1. Klik **Simpan** untuk menggunakan perubahan anda dan kembali ke **halaman Sumber** data.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

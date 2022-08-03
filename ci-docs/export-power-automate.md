@@ -1,19 +1,19 @@
 ---
 title: Power Automate| penyambung (pratonton) Dokumen Microsoft
 description: Cipta aliran dalam Microsoft Power Automate daripada Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082454"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196129"
 ---
 # <a name="power-automate-connector-preview"></a>Penyambung Power Automate (pratonton)
 
@@ -21,18 +21,18 @@ Pencetus peristiwa khusus untuk berlaku secara automatik apabila data anda berub
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Anda boleh melakukan maksimum 100 panggilan setiap 60 saat. Anda boleh memanggil titik akhir API beberapa kali dengan menggunakan parameter $skip. [Ketahui lebih lanjut tentang parameter $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Maksimum 100 panggilan setiap 60 saat. [Gunakan parameter](/connectors/customerinsights/#get-items-from-an-entity) $skip untuk memanggil titik akhir API beberapa kali.
 
 ## <a name="power-automate-triggers"></a>Power Automate pencetus
 
-Gunakan pencetus untuk mencipta aliran awan dan mengautomasikan tugas berulang, seperti pemberitahuan atau tindakan yang lebih lanjut.
+Gunakan pencetus untuk mencipta aliran awan dan mengautomasikan tugas berulang, seperti pemberitahuan atau tindakan yang lebih lanjut. Gunakan pencetus apabila:
 
-- Pencetus apabila muat semula sumber data gagal.
-- Pencetus apabila muat semula sumber data berjaya.
-- Pencetus apabila ambang bersilang pada segmen. Pencetus dihadkan untuk melintas di atas ambang.
-- Pencetus apabila ambang bersilang pada ukuran perniagaan. Hanya ukuran perniagaan tanpa dimensi disokong. Pencetus dihadkan untuk melintas di atas ambang.
-- Tercetus apabila segar semula penuh (sumber data, segmen, langkah,...) telah selesai.
-- Pencetus apabila segar semula proses penyatuan selesai.
+- Segar semula sumber data gagal.
+- Segar semula sumber data berjaya.
+- Ambang diseberang pada segmen. Pencetus dihadkan untuk melintas di atas ambang.
+- Ambang diseberang pada langkah perniagaan. Hanya ukuran perniagaan tanpa dimensi disokong. Pencetus dihadkan untuk melintas di atas ambang.
+- Segar semula berjadual penuh telah selesai. Pencetus ini tidak berfungsi untuk menyegar semula yang dimulakan secara manual.
+- Segar semula proses penyatuan telah selesai.
 
 [Konfigurasikan pencetus anda dalam Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Penyambung Power Automate menyediakan tindakan lain selain pencetus yang tersedi
 
 ## <a name="create-a-power-automate-flow"></a>Cipta aliran Power Automate
 
-1. Pergi ke **Pentadbir** > **Destinasi Eksport**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
 1. Pada jubin **Power Automate**, pilih **Sediakan**.
 
@@ -53,7 +53,5 @@ Penyambung Power Automate menyediakan tindakan lain selain pencetus yang tersedi
 Contoh cara menggunakan aliran: 
 - Siarkan mesej ke saluran Microsoft Teams jika segar semula sumber data gagal. 
 - Hantar e-mel kepada pemilik data apabila ambang pada segmen dilanggar.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

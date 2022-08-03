@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012036"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207148"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Segar semula tambahan untuk Power Query dan sumber data Azure Data Lake
 
-Artikel ini membincangkan cara mengkonfigurasi segar semula tambahan untuk sumber data berdasarkan Power Query atau Azure Data Lake.
-
-Segar semula peningkatan untuk sumber data memberikan kelebihan berikut:
+Segar semula tambahan untuk sumber data berdasarkan Power Query atau Azure Data Lake menyediakan kelebihan berikut:
 
 - **Lebih cepat menyegar semula** - Hanya data yang telah diubah akan disegar semula. Sebagai contoh, anda mungkin menyegar semula hanya lima hari yang lalu daripada set data yang bersejarah.
 - **Kebolehpercayaan dipertingkat** - Dengan menyegarkan semula yang lebih kecil, anda tidak perlu mengekalkan sambungan ke sistem sumber yang tidak menentu untuk jangka masa panjang, mengurangkan risiko isu sambungan.
@@ -73,6 +71,7 @@ Wawasan Pelanggan membenarkan segar semula tambahan untuk sumber data yang disam
 
    1. Semak lalu ke folder root yang mengandungi fail .csv atau .parquet untuk data penuh, upserts data tambahan dan pemadaman data tambahan.
    1. Masukkan sambungan untuk data penuh dan kedua-dua fail tambahan (\. csv atau \. parket).
+   1. Untuk fail .csv, pilih pembatas lajur dan jika anda mahu baris pertama fail sebagai pengepala lajur.
    1. Pilih **Simpan**.
 
 1. Untuk **Terakhir dikemas kini**, pilih atribut cap masa tarikh.

@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083126"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170832"
 ---
 # <a name="measures-overview"></a>Ukuran gambaran keseluruhan
 
-Langkah ini membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan. Mereka melihat nilai yang relevan daripada [profil disatukan](data-unification.md). Contohnya, perniagaan ingin melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu atau mengukur *jumlah jualan syarikat* untuk memahami hasil peringkat agregat dalam keseluruhan perniagaan.  
+Langkah ini membantu anda untuk lebih memahami tingkah laku pelanggan dan prestasi perniagaan. Mereka melihat nilai yang relevan daripada [profil disatukan](data-unification.md). Contohnya, perniagaan ingin melihat *jumlah perbelanjaan setiap pelanggan* untuk memahami sejarah pembelian pelanggan individu atau mengukur *jumlah jualan syarikat* untuk memahami hasil peringkat agregat dalam keseluruhan perniagaan.
 
-Langkah-langkah dibuat [menggunakan pembina](measure-builder.md) ukuran, platform pertanyaan data dengan pelbagai pengendali dan pilihan pemetaan mudah. Ia membolehkan anda menapis data, mengumpulkan hasil, mengesan [laluan perhubungan entiti](relationships.md) dan pratonton output. Anda boleh [menggunakan templat yang dipratentukan](measure-templates.md) untuk mengkonfigurasi langkah yang biasa digunakan dengan cekap.
+Buat langkah untuk merancang aktiviti perniagaan dengan menanya data pelanggan dan mengekstrak cerapan. Sebagai contoh, buat ukuran jumlah *perbelanjaan setiap pelanggan* dan *jumlah pulangan setiap pelanggan* untuk membantu mengenal pasti sekumpulan pelanggan dengan perbelanjaan yang tinggi namun pulangan yang tinggi. Kemudian, [buat segmen](segments.md) berdasarkan langkah-langkah ini untuk mendorong tindakan terbaik seterusnya.
 
-Gunakan pembina ukuran untuk merancang aktiviti perniagaan dengan bertanya pada data pelanggan dan mendapatkan wawasan. Sebagai contoh, mencipta ukuran *jumlah perbelanjaan setiap pelanggan* dan *jumlah pulangan setiap pelanggan* membantu mengenal pasti kumpulan pelanggan yang mempunyai perbelanjaan tinggi tetapi pulangan tinggi. Anda boleh [membuat segmen](segments.md) berdasarkan langkah-langkah ini untuk mendorong tindakan terbaik seterusnya.
+## <a name="create-a-measure"></a>Cipta ukuran
 
-## <a name="manage-your-measures"></a>Urus tindakan anda
+Pilih cara membuat ukuran berdasarkan khalayak sasaran anda.
 
-Anda boleh mendapatkan senarai langkah pada halaman **Langkah**.
+# <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
-Anda akan menemui maklumat tentang jenis ukuran, pencipta, tarikh penciptaan, status dan keadaan. Apabila anda memilih ukuran daripada senarai, anda boleh pratonton output dan memuat turun fail CSV.
+- Dari awal dengan pembina ukuran: [Bina sendiri](measure-builder.md).
+- Daripada langkah yang biasa digunakan: [Gunakan templat yang dipratentukan](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
+
+Dari awal dengan pembina ukuran: [Bina sendiri](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Menguruskan langkah-langkah sedia ada
+
+Pergi ke **halaman Langkah** untuk melihat langkah yang anda cipta, status, jenis ukuran dan kali terakhir data disegar semula. Anda boleh mengisih senarai langkah mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari ukuran yang anda ingin uruskan.
+
+Pilih di sebelah ukuran untuk melihat tindakan yang tersedia. Pilih nama ukuran untuk melihat output dan muat turun fail CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Tindakan untuk menguruskan langkah tunggal."lightbox="media/measures-actions.png":::
 
-Tindakan berikut tersedia apabila anda memilih ukuran:
-
-- **Edit** konfigurasi langkah.
-- **Menduplikasikan** ukuran. Anda boleh memilih untuk mengedit sifat dengan serta-merta atau hanya menyimpan duplikasi.
-- **Segar semula** ukuran berdasarkan data terkini. Untuk menyegar semula semua langkah anda pada masa yang sama, pilih semua langkah dan kemudian **Segar Semula**.
+- **Edit** ukuran untuk menukar sifatnya.
+- **Segar semula** langkah untuk memasukkan data terkini.
 - **Nama semula** langkah.
-- **Aktifkan** atau **Nyahaktifkan**. Langkah tidak aktif tidak akan dapat disegar semula semasa [segar semula yang dijadualkan](system.md#schedule-tab).
-- **Tag** untuk [menguruskan tag](work-with-tags-columns.md#manage-tags) untuk segmen.
+- **Mengaktifkan** atau **Menyahaktifkan** ukuran. Langkah-langkah tidak aktif tidak akan disegarkan semula semasa segar semula yang [dijadualkan dan mempunyai Status](system.md#schedule-tab) yang **disenaraikan sebagai** Dilangkau **, menunjukkan bahawa segar semula tidak** dicuba.
+- **Tag** untuk [menguruskan tag](work-with-tags-columns.md#manage-tags) untuk ukuran.
 - **Padam** langkah.
+- **Lajur** untuk [menyesuaikan lajur](work-with-tags-columns.md#customize-columns) yang dipaparkan.
+- **Tapis** untuk [menapis pada tag](work-with-tags-columns.md#filter-on-tags).
+- **Cari nama** untuk dicari mengikut ukuran nama.
+
+## <a name="refresh-measures"></a>Langkah-langkah segar semula
+
+Langkah-langkah boleh disegarkan semula pada jadual automatik atau disegarkan secara manual atas permintaan. Untuk menyegar semula satu atau lebih langkah secara manual, pilihnya dan pilih **Segar Semula**. Untuk [menjadualkan segar semula](system.md#schedule-tab) automatik, pergi ke **Jadual** > **Sistem** > **Pentadbir**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Langkah seterusnya
-
-Anda boleh menggunakan langkah sedia ada untuk mencipta [segmen pelanggan](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

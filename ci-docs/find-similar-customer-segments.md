@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054812"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170738"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Cari pelanggan yang serupa dengan AI (pratonton)
 
-Ciri ini membenarkan anda mencari pelanggan yang serupa dalam asas pelanggan menggunakan kepintaran buatan. Anda perlu mempunyai sekurang-kurangnya satu segmen dicipta untuk menggunakan ciri ini. Mengembangkan kriteria segmen sedia ada membantu mencari pelanggan yang serupa kepada segmen itu.
+Cari pelanggan serupa dalam pangkalan pelanggan anda menggunakan kecerdikan buatan. Anda memerlukan sekurang-kurangnya satu segmen yang dibuat untuk menggunakan ciri ini. Memperluaskan kriteria segmen sedia ada membantu mencari pelanggan yang serupa dengan segmen tersebut.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Cari pelanggan yang serupa* menggunakan tujuan automatik untuk menilai data dan membuat ramalan berasaskan pada data itu dan dengan itu mempunyai keupayaan untuk digunakan sebagai kaedah profiling seperti istilah yang ditakrifkan oleh Peraturan Perlindungan Data Umum (“GDPR”). Pelanggan menggunakan ciri ini untuk memproses data berkemungkinan tertakluk pada GDPR atau undang-undang atau peraturan yang lain. Anda bertanggungjawab untuk memastikan bahawa penggunaan Dynamics 365 Customer Insights anda, termasuk ramalan, mematuhi semua undang-undang dan peraturan yang berkaitan, termasuk undang-undang yang berkaitan dengan privasi, data peribadi, data biometrik, perlindungan data dan kerahsiaan komunikasi.
+> *Cari pelanggan* yang serupa menggunakan cara automatik untuk menilai data dan membuat ramalan berdasarkan data tersebut. Oleh itu, ia mempunyai keupayaan untuk digunakan sebagai kaedah pemprofilan, kerana istilah itu ditakrifkan oleh Peraturan Perlindungan Data Umum ("GDPR"). Pelanggan menggunakan ciri ini untuk memproses data berkemungkinan tertakluk pada GDPR atau undang-undang atau peraturan yang lain. Anda bertanggungjawab untuk memastikan bahawa penggunaan Dynamics 365 Customer Insights anda, termasuk ramalan, mematuhi semua undang-undang dan peraturan yang berkaitan, termasuk undang-undang yang berkaitan dengan privasi, data peribadi, data biometrik, perlindungan data dan kerahsiaan komunikasi.
 
-## <a name="finding-similar-customers"></a>Mencari pelanggan yang serupa
+## <a name="find-similar-customers"></a>Cari pelanggan serupa
 
 1. Pergi ke **Segmen** dan pilih segmen yang anda mahu asaskan segmen baharu anda. Itu adalah *segmen sumber* anda.
 
-1. Dalam bar tindakan, pilih **Cari pelanggan yang serupa**.
+1. Pilih **Cari pelanggan yang serupa**.
 
 1. Semak nama yang dicadangkan untuk segmen baharu anda dan ubahkannya jika perlu.
 
 1. Secara pilihan, tambah [tag](work-with-tags-columns.md#manage-tags) ke segmen baru.
 
-1. Semak medan yang menakrifkan segmen baharu anda. Medan ini menakrifkan asas pada sistem yang akan cuba mencari pelanggan yang serupa ke segmen sumber anda. Sistem akan memilih medan yang disyorkan secara lalai.
+1. Semak medan yang menakrifkan segmen baharu anda. Medan ini menakrifkan asas pada sistem yang akan cuba mencari pelanggan yang serupa ke segmen sumber anda. Sistem memilih medan yang disyorkan secara lalai. Jika perlu, tambah lebih banyak medan.
   Medan yang boleh mengurangkan prestasi model dengan ketara dikecualikan secara automatik:
   
    - Medan dengan jenis data berikut: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Medan dengan kekardinalan (bilangan elemen dalam medan) kurang daripada 2 atau lebih daripada 30
 
-1. Pilih jika anda mahu memasukkan **Semua pelanggan** atau hanya pelanggan dalam **Segmen sedia ada tertentu** dalam segmen baharu anda.
+1. Pilih jika anda ingin memasukkan **Semua pelanggan** kecuali segmen sumber atau hanya pelanggan dalam segmen **yang** berbeza dalam segmen baharu anda.
 
 1. Sistem mencadangkan masukkan hanya 20% saiz khalayak sasaran dalam output anda. Edit ambang bila diperlukan. Meningkatkan ambang akan mengurangkan ketepatan.
 
 1. Sertakan pelanggan dalam segmen sumber anda dengan **memilih kotak semak Sertakan ahli daripada segmen sumber selain pelanggan dengan atribut yang** serupa.
 
-1. Pilih **Jalankan** pada bahagian bawah halaman untuk memulakan tugas pengelasan perduaan (kaedah pembelajaran mesin) yang menganalisis set data.
+1. Pilih **Jalankan** di bahagian bawah halaman untuk memulakan [tugas](#about-similarity-scores) klasifikasi binari (kaedah Pembelajaran Mesin) yang menganalisis set data.
 
 ## <a name="view-the-similar-segment"></a>Lihat segmen yang serupa
 
-Selepas memproses segmen yang serupa, anda akan menemui segmen baharu disenaraikan pada halaman **Segmen**.
+Selepas memproses segmen yang serupa, anda akan menemui segmen baharu yang disenaraikan pada **halaman Segmen** dengan jenis **Pengembangan**.
 
-> [!div class="mx-imgBorder"]
-> ![Segmen pelanggan yang serupa.](media/expanded-segment.png "Segmen pelanggan yang serupa")
+Pilih **Lihat** untuk melihat taburan hasil merentasi [skor](#about-similarity-scores) persamaan dan nilai skor persamaan di bawah **Pratonton ahli segmen**.
 
-Pilih **Pandangan** dalam bar tindakan untuk membuka butiran segmen. Pandangan ini mengandungi maklumat tentang pengedaran merentas [skor persamaan](#about-similarity-scores). Anda juga menemui nilai skor persamaan dalam **Pratonton ahli segment**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Segmen pelanggan yang serupa.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Gunakan output segmen yang serupa
+## <a name="manage-a-similar-segment"></a>Urus segmen yang serupa
 
-Anda boleh [bekerja dengan output segmen yang serupa](segments.md) seperti yang anda lakukan dengan segmen lain. Contohnya, eksport segmen atau bina ukuran.
+[Bekerja dengan dan menguruskan segmen](segments.md#manage-existing-segments) yang serupa seperti yang anda lakukan dengan segmen lain. Contohnya, eksport segmen atau bina ukuran.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Segar semula dan edit segmen yang serupa
-
-Untuk menyegar semula segmen yang serupa, pilihnya pada halaman **Segmen** dan pilih **Segar semula** dalam bar tindakan.
-
-Mengedit segmen yang serupa akan memproses semula data anda. Segmen yang dicipta terdahulu dikemas kini dengan data yang disegar semula.
-Untuk mengedit segmen yang serupa, pilihnya pada halaman **Segmen** dan pilih **Edit** dalam bar tindakan. Gunakan perubahan anda dan pilih **Jalankan** untuk memulakan pemprosesan.
-
-## <a name="delete-a-similar-segment"></a>Padam segmen yang serupa
-
-Pilih segmen pada halaman **Segmen** dan pilih **Padam** dalam bar tindakan. Kemudian sahkan pemadaman anda.
+Edit, segar semula, namakan semula, muat turun dan padamkan segmen yang serupa. Mengedit segmen yang serupa memproses semula data anda. Segmen yang dicipta terdahulu dikemas kini dengan data yang disegar semula.
 
 ## <a name="about-similarity-scores"></a>Tentang skor persamaan
 

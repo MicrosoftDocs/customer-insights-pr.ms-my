@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
-ms.translationtype: MT
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082958"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139668"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Menyatukan medan pelanggan untuk penyatuan data
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Dalam langkah proses penyatuan ini, pilih dan kecualikan atribut untuk digabungkan dalam entiti profil bersatu anda. Sebagai contoh, jika tiga entiti mempunyai data e-mel, anda mungkin ingin menyimpan ketiga-tiga medan e-mel yang berasingan atau menggabungkannya ke dalam satu medan e-mel untuk profil bersatu. Sesetengah atribut digabungkan secara automatik oleh sistem. Anda boleh membuat ID pelanggan yang stabil dan unik dan profil berkaitan kumpulan ke dalam kelompok.
 

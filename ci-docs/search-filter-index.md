@@ -1,7 +1,7 @@
 ---
-title: 'Profil pelanggan: Indeks carian & tapis'
+title: Urus indeks carian & penapis untuk profil pelanggan
 description: Cari maklumat dengan cepat tentang profil pelanggan disatukan dan tapis untuk atribut tertentu.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050820"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187920"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Profil pelanggan: Indeks carian & tapis
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Urus indeks carian & penapis untuk profil pelanggan
 
-Hasil daripada menyatukan data pelanggan anda ialah entiti Profil Pelanggan yang menyediakan pandangan disatukan ke dalam jumlah dasar pelanggan anda. Untuk [mendapatkan maklumat dengan pantas mengenai pelanggan atau kumpulan pelanggan tertentu](customer-profiles.md), anda boleh mengkonfigurasi keupayaan **Carian** dan **Penapis** pada halaman **Pelanggan**. Baca untuk mengetahui cara pentadbir boleh mengedit atribut pada halaman **Indeks carian & penapis**, yang tersedia kepada pengguna untuk carian dan penapisan.
+Hasil penyatuan data pelanggan anda adalah entiti Pelanggan *yang* memberikan pandangan bersatu ke dalam jumlah asas pelanggan anda. Untuk pengguna mencari maklumat mengenai pelanggan atau kumpulan pelanggan tertentu dengan cepat [, pentadbir mesti mengkonfigurasi](customer-profiles.md) keupayaan Carian **dan** Penapis **untuk** halaman Pelanggan **.**
 
    :::image type="content" source="media/search-filter.png" alt-text="Penapis carian":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Mentakrifkan atribut boleh dicari dan medan berindeks
 
-## <a name="add-fields-and-specify-attributes"></a>Tambah medan dan tentukan atribut
+Jika ini kali pertama anda mentakrifkan atribut yang boleh dicari sebagai pentadbir, tentukan medan berindeks terlebih dahulu. Kami mencadangkan anda memilih semua atribut yang pengguna boleh mencari dan menapis pelanggan pada halaman **Pelanggan**. Hanya atribut yang wujud dalam *entiti Pelanggan* yang dicipta semasa proses penyatuan data boleh ditentukan.
 
-Jika ia ialah kali pertama anda mentakrifkan atribut yang boleh dicari sebagai pentadbir, anda perlu mentakrifkan medan berindeks terlebih dahulu. Kami mencadangkan anda memilih semua atribut yang pengguna boleh mencari dan menapis pelanggan pada halaman **Pelanggan**. Anda hanya boleh menentukan atribut yang wujud di dalam entiti Profil Pelanggan yang anda cipta semasa proses penyatuan data.
+1. Pergi ke **Pelanggan** dan pilih **Indeks** Carian & penapis.
 
-1. Buka halaman **Pelanggan** dan pilih **Cari & indeks penapis**.
+1. Pilih **+ Tambah**.
 
-2. Pilih **+ Tambah** untuk menentukan medan yang berindeks.
+1. Pilih atribut dalam senarai yang anda ingin tambah sebagai medan berindeks dan klik **Gunakan**.
 
-3. Pilih atribut di dalam senarai yang anda mahu tambah sebagai medan berindeks. Anda sentiasa boleh tambah lebih banyak atribut dengan memilih **Tambah**. Anda juga boleh mengalih keluar sebarang atribut yang dipilih dengan memilih simbol **Alih Keluar**.
+1. Untuk menambah lebih banyak atribut, pilih **Tambah**. Untuk mengalih keluar atribut yang dipilih, pilih atribut dan kemudian **Padam**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Terokai jadual medan pelanggan Berindeks
+   :::image type="content" source="media/search-filter-index.png" alt-text="Cari & tapis halaman indeks.":::
 
-Maklumat berikut ditunjukkan di dalam jadual.
+1. Pilih **Jalankan** setelah anda bersedia untuk menggunakan tetapan carian dan penapis anda. Selepas perubahan diproses, lihatnya dalam [kad pelanggan pada halaman](customer-profiles.md) Pelanggan.
 
-- **Nama**: Mewakili nama atribut yang muncul dalam entiti Profil Pelanggan.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Mentakrifkan opsyen penapisan untuk atribut yang diberikan
+
+Sediakan medan yang boleh digunakan untuk menapis pelanggan pada **halaman Pelanggan**.
+
+1. Pergi ke **Pelanggan** dan pilih **Indeks** Carian & penapis.
+
+1. Pilih atribut dan **Tambah Penapis**. Tentukan bilangan hasil dan urutan di mana ia akan dianjurkan. Bergantung pada jenis data atribut, salah satu anak tetingkap berikut muncul.
+
+   - Atribut jenis rentetan: Tentukan bilangan hasil yang diingini pada **anak tetingkap penapis** Rentetan dan dasar tertib yang akan disusun.
+
+   - Atribut jenis berangka: Tentukan selang yang disertakan pada **anak tetingkap penapis** Nombor dan dasar tertib yang akan disusun.
+
+   - Atribut jenis tarikh: Tentukan selang yang disertakan pada **anak tetingkap penapis** Tarikh dan dasar pesanan yang akan disusun.
+
+1. Pilih **OK**. Ulangi untuk semua atribut yang anda ingin tapis.
+
+1. Pilih **Jalankan** setelah anda bersedia untuk menggunakan tetapan carian dan penapis anda. Selepas perubahan diproses, lihatnya dalam [kad pelanggan pada halaman](customer-profiles.md) Pelanggan.
+
+## <a name="view-indexed-customer-fields"></a>Lihat medan pelanggan berindeks
+
+Halaman **indeks** Carian & penapis memaparkan maklumat berikut:
+
+- **Nama**: Mewakili nama atribut seperti yang muncul dalam *entiti Pelanggan*.
 - **Jenis data**: Menentukan sama ada jenis data ialah rentetan, nombor atau tarikh.
 - **Disertakan dalam carian**: Menentukan sama ada atribut ini boleh digunakan untuk mencari pelanggan pada halaman **Pelanggan** menggunakan medan **Carian**.
 - **Tambah Penapis**: Kawalan untuk mentakrifkan cara atribut ini boleh digunakan untuk menapis pada halaman **Pelanggan**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Mengedit pilihan penapisan untuk atribut yang diberikan
-
-Menu **Penapis** pada halaman **Pelanggan** boleh termasuk bilangan peringkat atribut (contohnya, menapis pelanggan berdasarkan kumpulan umur berbeza).
-
-1. Pilih **Tambah Penapis** untuk atribut tertentu pada halaman **Indeks Carian & penapis**. Anda boleh mentakrifkan bilangan keputusan dan arahan yang akan diaturkan. Bergantung pada jenis data atribut, salah satu daripada anak tetingkap berikut muncul.
-
-- Atribut jenis rentetan: Tentukan bilangan keputusan yang dikehendaki pada anak tetingkap **Pilihan penapis rentetan** dan dasar pesanan yang akan diaturkan.
-
-- Atribut jenis berangka: Tentukan selang yang termasuk pada anak tetingkap **Pilihan penapis nombor** dan dasar pesanan yang akan diaturkan.
-
-- Atribut jenis tarikh:  Tentukan selang yang termasuk pada anak tetingkap **Pilihan penapis tarikh** dan dasar pesanan yang akan diaturkan.
-
-2. Pilih **Simpan** untuk menggunakan perubahan anda.
-
-3. Pilih **Jalankan** sebaik sahaja anda bersedia untuk menggunakan tetapan anda. Selepas perubahan diproses, anda boleh mencarinya dalam [kad pelanggan pada halaman Pelanggan](customer-profiles.md). 
-
-## <a name="next-steps"></a>Langkah seterusnya
+## <a name="next-steps"></a>Langkah-langkah berikutnya
 
 Semak [halaman profil disatukan](customer-profiles.md) untuk mencari profil atau gunakan medan diindekskan untuk melihat subset semua profil disatukan.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

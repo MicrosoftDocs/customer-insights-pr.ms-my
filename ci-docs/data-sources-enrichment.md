@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082118"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207194"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Pengayaan untuk sumber data (pratonton)
 
@@ -21,9 +21,9 @@ Gunakan data daripada sumber seperti Microsoft dan rakan kongsi lain untuk mempe
 
 ## <a name="enrich-a-data-source"></a>Memperkayakan sumber data
 
-Anda mesti mempunyai keizinan Penyumbang atau Pentadbir untuk mencipta atau mengedit pengayaan. Untuk maklumat lanjut, lihat [Keizinan](permissions.md).  
+Anda mesti mempunyai keizinan [Penyumbang atau Pentadbir](permissions.md) untuk mencipta atau mengedit pengayaan.  
 
-1. Pergi ke **Data** > **Unify**. Pilih entiti yang anda ingin memperkayakan dan pilih satu atribut sebagai kunci utama untuk entiti. Untuk maklumat lanjut, lihat [Pilih kekunci utama](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Pergi ke **Data** > **Unify**. Pilih entiti yang anda ingin memperkayakan dan pilih satu atribut sebagai [kunci](map-entities.md#select-primary-key-and-semantic-type-for-attributes) utama untuk entiti.
 
 1. Pergi **Data** > **Sumber data**.
 
@@ -47,8 +47,8 @@ Pengayaan berikut kini tersedia untuk sumber data. Semak langkah-langkah terperi
 
 ## <a name="manage-existing-data-source-enrichments"></a>Menguruskan pengayaan sumber data sedia ada
 
-Pergi ke tab **Pengayaan Saya** untuk melihat semua pengayaan yang dikonfigurasikan.
+Pergi ke **Data** > **Pengayaan**. **Pada tab Pengayaan saya**, lihat pengayaan yang dikonfigurasi, status mereka, bilangan pelanggan yang diperkaya dan kali terakhir data disegarkan semula. Anda boleh mengisih senarai pengayaan mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari pengayaan yang anda ingin uruskan.
 
-Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga boleh memilih elipsis menegak (&vellip;) pada item senarai untuk melihat pilihan. Jika anda mengkonfigurasi beberapa pengayaan, anda boleh menggunakan kotak carian untuk mencarinya dengan cepat.
+Pilih pengayaan untuk melihat pilihan yang tersedia. Anda juga boleh memilih elipsis menegak (&vellip;) pada item senarai untuk melihat pilihan.
 
-Anda boleh melihat, mengedit, menjalankan atau memadam pengayaan sumber data. Untuk maklumat lanjut, lihat [Menguruskan pengayaan](enrichment-hub.md) sedia ada.
+Anda boleh melihat, mengedit, menjalankan atau memadam pengayaan sumber data. Untuk maklumat lanjut, lihat [Menguruskan pengayaan](enrichment-hub.md#manage-existing-enrichments) sedia ada.

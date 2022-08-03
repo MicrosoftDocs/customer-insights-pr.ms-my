@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082412"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139714"
 ---
 # <a name="match-conditions-for-data-unification"></a>Padankan syarat untuk penyatuan data
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Langkah dalam penyatuan ini mentakrifkan tertib dan peraturan padanan untuk pemadanan merentas entiti. Langkah ini memerlukan sekurang-kurangnya dua entiti.
 
@@ -32,7 +30,7 @@ Langkah dalam penyatuan ini mentakrifkan tertib dan peraturan padanan untuk pema
 
 ## <a name="include-enriched-entities-preview"></a>Sertakan entiti yang diperkaya (pratonton)
 
-Jika anda memperkayakan entiti di peringkat sumber data untuk membantu meningkatkan hasil penyatuan anda, pilihnya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber data](data-sources-enrichment.md). Jika anda memilih entiti yang diperkaya pada **halaman Rekod** pendua, anda tidak perlu memilihnya lagi.
+Jika anda memperkayakan entiti di peringkat sumber data untuk membantu meningkatkan hasil penyatuan anda, pilihnya. Untuk maklumat lanjut, lihat [Pengayaan untuk sumber](data-sources-enrichment.md) data. Jika anda memilih entiti yang diperkaya pada **halaman Rekod** pendua, anda tidak perlu memilihnya lagi.
 
 1. **Pada halaman Keadaan** pemadanan, pilih **Gunakan entiti** yang diperkaya di bahagian atas halaman.
 

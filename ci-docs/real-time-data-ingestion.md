@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083189"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195669"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Pengingesan data masa nyata (pratonton)
 
@@ -28,7 +28,7 @@ Kefungsian masa nyata menyediakan data dengan serta-merta untuk penggunaan, sehi
 
 Kemas kini masa nyata mempunyai masa tamat tempoh dan selepas masa ini, ia tidak lagi menulis ganti nilai daripada sumber data:
 
-- Kemas kini profil akan disimpan selama 4 jam
+- Kemas kini profil akan disimpan selama empat jam
 - Aktiviti akan disimpan selama 30 hari
 
 Nilai ini ialah parameter panggilan API yang boleh anda ubah. Ia bertujuan untuk memastikan data sumber anda mengekalkan sumber kepercayaan anda. Jika anda mahu kemas kini masa nyata dimasukkan lebih lama, anda perlu menambahnya ke sumber data supaya ia akan ditarik semasa segar semula yang dijadualkan seterusnya.

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643814"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171060"
 ---
 # <a name="subscription-churn-prediction"></a>Ramalan pulangan langganan
 
@@ -61,7 +61,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
 
 ## <a name="create-a-subscription-churn-prediction"></a>Cipta ramalan pulangan langganan
 
-1. Pergi ke **PerisikanPredictions** > **·**.
+1. Pergi ke **Ramalan Perisikan** > **·**.
 1. **Pilih jubin model** churn Langganan dan pilih **Gunakan model ini**.
    > [!div class="mx-imgBorder"]
    > ![Jubin model Pulangan Langganan dengan butang Gunakan model ini.](media/subscription-churn-usethismodel.PNG "Jubin model Pulangan Langganan dengan butang Gunakan model ini")
@@ -121,7 +121,7 @@ Ramalan pulangan langganan membantu meramal sama ada pelanggan berada dalam risi
    - **Nama ramalan:** Nama ramalan yang disediakan apabila menciptanya.
    - **Jenis ramalan:** Jenis model yang digunakan untuk ramalan
    - **Entiti output:** Nama entiti untuk menyimpan output ramalan. Anda boleh menemui entiti dengan nama ini pada **Data** > **Entiti**.    
-     Dalam entiti output, *ChurnScore* adalah kebarangkalian yang diramalkan untuk pulangan dan *IsChurn* adalah label binari berdasarkan *ChurnScore* dengan ambang 0.5. Ambang lalai mungkin tidak berfungsi untuk senario anda. [Cipta segmen baharu](segments.md#create-a-new-segment) dengan ambang pilihan anda.
+     Dalam entiti output, *ChurnScore* adalah kebarangkalian yang diramalkan untuk pulangan dan *IsChurn* adalah label binari berdasarkan *ChurnScore* dengan ambang 0.5. Ambang lalai mungkin tidak berfungsi untuk senario anda. [Cipta segmen baharu](segments.md#create-a-segment) dengan ambang pilihan anda.
    - **Medan yang diramal:** Medan ini diisi hanya untuk beberapa jenis ramalan dan tidak digunakan dalam ramalan pulangan langganan.
    - **Status:** Status semasa jalanan ramalan.
         - **Dibaris gilir:** Ramalan pada masa ini menunggu proses lain untuk berjalan.

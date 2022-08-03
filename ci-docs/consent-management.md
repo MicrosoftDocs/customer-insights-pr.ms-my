@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947527"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188059"
 ---
 # <a name="use-customer-consent"></a>Gunakan persetujuan pelanggan
 
@@ -50,13 +50,13 @@ Jadual contoh pangkalan data persetujuan mudah dengan berbilang opsyen persetuju
 
 ## <a name="import-and-unify-consent-data"></a>Mengimport dan menyatukan data persetujuan
 
-Anda boleh mengimport data persetujuan dengan cara yang sama seperti anda menelan sumber data lain ke Wawasan Pelanggan. Untuk maklumat lanjut tentang sumber data yang disokong dan cara mengimportnya, lihat [Gambaran keseluruhan sumber data](data-sources.md).
+Import data persetujuan dengan cara yang sama seperti anda menelan sumber data lain ke Wawasan Pelanggan. Untuk maklumat lanjut tentang sumber data yang disokong dan cara mengimportnya, lihat [Gambaran keseluruhan sumber data](data-sources.md).
 
 Untuk maklumat lanjut tentang menyatukan sumber data anda, lihat [Gambaran keseluruhan penyatuan data](data-unification.md).
 
 ## <a name="use-consent-data"></a>Gunakan data persetujuan
 
-Setelah data persetujuan anda adalah sebahagian daripada profil pelanggan bersatu anda, anda boleh menggunakannya dalam Wawasan Pelanggan. Sebagai contoh, buat segmen dengan peraturan untuk memastikan bahawa anda menghormati pilihan privasi dan perlindungan data pelanggan anda. Peraturan yang menyokong keutamaan persetujuan digunakan untuk mengecualikan pengguna daripada segmen berdasarkan atribut profil. Menambah peraturan pada segmen yang mengecualikan profil pelanggan yang tidak memberikan persetujuan untuk dihubungi.
+Setelah data persetujuan anda adalah sebahagian daripada profil pelanggan bersatu anda, anda boleh menggunakannya dalam Wawasan Pelanggan. Sebagai contoh, buat segmen dengan peraturan untuk memastikan bahawa anda menghormati pilihan privasi dan perlindungan data pelanggan anda. Peraturan yang menyokong keutamaan persetujuan digunakan untuk mengecualikan pengguna daripada segmen berdasarkan atribut profil. Tambah peraturan pada segmen yang mengecualikan profil pelanggan yang tidak memberikan persetujuan untuk dihubungi.
 
 Merujuk kepada jadual sampel di atas, segmen boleh mengandungi peraturan ini:`Consent option=Newsletter & Consent value=True`. Konfigurasi ini menghasilkan segmen yang menghormati keutamaan kenalan untuk menghantar surat berita.
 
@@ -71,3 +71,5 @@ Penting untuk memastikan status persetujuan untuk pelanggan anda dikemas kini. S
 Dengan kata lain, pastikan data sumber yang diimport ke Wawasan Pelanggan sentiasa mempunyai maklumat terkini.
 
 Untuk maklumat lanjut, lihat [Menyegar semula segmen secara manual](segments.md#refresh-segments) atau [mengkonfigurasikan segar semula](system.md#schedule-tab) berjadual.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Gambaran keseluruhan sumber data
 description: Ketahui cara mengimport atau menelan data daripada pelbagai sumber.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051464"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207102"
 ---
 # <a name="data-sources-overview"></a>Gambaran keseluruhan sumber data
 
 Dynamics 365 Customer Insights menyediakan sambungan untuk membawa data daripada set sumber yang luas. Menyambung kepada sumber data sering dirujukkan sebagai proses *menelan data*. Selepas menelan data, anda boleh [menyatukan](data-unification.md), menjana cerapan dan mengaktifkan data untuk membina pengalaman yang diperibadikan.
 
-## <a name="add-data-sources"></a>Tambah sumber data
+## <a name="add-or-edit-data-sources"></a>Menambah atau mengedit sumber data
 
-Anda boleh melampirkan atau mengimport sumber data ke dalam Wawasan Pelanggan. Pautan di bawah memberikan arahan untuk menambah sumber data.
+Anda boleh melampirkan atau mengimport sumber data ke dalam Wawasan Pelanggan. Pautan di bawah memberikan arahan untuk menambah dan mengedit sumber data.
 
 **Lampirkan sumber data**
 
@@ -50,13 +50,18 @@ Jika persekitaran anda dikonfigurasikan untuk menggunakan storan Wawasan Pelangg
 
 Jika persekitaran anda tidak menggunakan Power Platform aliran data, **halaman Sumber** Data hanya mengandungi senarai semua sumber data. Tiada bahagian dipaparkan.
 
-Pergi ke **sumber** > **Data Data** untuk melihat nama setiap sumber data yang ditelan, statusnya dan kali terakhir data disegar semula untuk sumber tersebut. Anda boleh mengisih senarai sumber data mengikut setiap lajur.
+## <a name="manage-existing-data-sources"></a>Menguruskan sumber data sedia ada
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Sumber data ditambah.":::
+Pergi ke **sumber** > **Data Data** untuk melihat nama setiap sumber data yang ditelan, statusnya dan kali terakhir data disegar semula untuk sumber tersebut. Anda boleh mengisih senarai sumber data mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari sumber data yang anda ingin uruskan.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Pilih sumber data untuk melihat tindakan yang tersedia.
 
-Memuatkan data boleh mengambil masa. Selepas segar semula berjaya, data yang dimasukkan boleh disemak daripada halaman **Entiti**. Untuk maklumat lanjut, lihat [Entiti](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Sumber data ditambah.":::
+
+- [**Edit**](#add-or-edit-data-sources) sumber data untuk menukar sifatnya.
+- [**Segar semula**](#refresh-data-sources) sumber data untuk memasukkan data terkini.
+- [**Memperkayakan**](data-sources-enrichment.md) sumber data sebelum penyatuan.
+- **Padamkan** sumber data. Satu sumber data boleh dipadamkan hanya jika data tidak digunakan dalam sebarang pemprosesan seperti penyatuan, cerapan, pengaktifan atau eksport.
 
 ## <a name="refresh-data-sources"></a>Segar semula sumber data
 
@@ -64,23 +69,12 @@ Sumber data boleh disegar semula mengikut jadual automatik atau disegar semula s
 
 Pergi ke **Jadual** > **Sistem** > [**Pentadbir**](system.md#schedule-tab) untuk mengkonfigurasi segar semula berjadual sistem sumber data anda yang ditelan.
 
-Untuk menyegar semula sumber data mengikut permintaan, ikuti langkah ini:
+Untuk menyegarkan sumber data atas permintaan:
 
 1. Pergi **Data** > **Sumber data**.
 
-1. Pilih elipsis menegak (&vellip;) di sebelah sumber data yang anda ingin segar semula dan pilih **Segar Semula** daripada senarai juntai bawah. Sumber data kini dicetuskan untuk segar semula secara manual. Menyegarkan semula sumber data akan mengemas kini kedua-dua skema entiti dan data untuk semua entiti yang dinyatakan dalam sumber data.
+1. Pilih sumber data yang anda mahu segar semula dan pilih **Segar Semula**. Sumber data kini dicetuskan untuk segar semula secara manual. Menyegarkan semula sumber data akan mengemas kini kedua-dua skema entiti dan data untuk semua entiti yang dinyatakan dalam sumber data.
 
-1. Pilih **Berhenti menyegar semula** jika anda mahu membatalkan segar semula sedia ada dan sumber data akan bertukar kembali ke status segar semula terakhir.
-
-## <a name="delete-a-data-source"></a>Padam sumber data
-
-Satu sumber data boleh dipadamkan hanya jika data tidak digunakan dalam sebarang pemprosesan seperti penyatuan, cerapan, pengaktifan atau eksport.
-
-1. Pergi **Data** > **Sumber data**.
-
-2. Pilih elipsis menegak (&vellip;) di sebelah sumber data yang anda mahu alih keluar dan pilih **Padam** daripada menu juntai bawah.
-
-3. Sahkan pemadaman anda.
-
+1. Pilih status untuk membuka **anak tetingkap Butiran** kemajuan dan lihat kemajuan. Untuk membatalkan kerja, pilih **Batalkan kerja** di bahagian bawah anak tetingkap.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

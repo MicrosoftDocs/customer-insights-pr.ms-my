@@ -1,5 +1,5 @@
 ---
-title: Profil pelanggan
+title: Lihat profil pelanggan
 description: Lihat data pelanggan bersatu anda termasuk menggunakan carian dan penapis
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -14,65 +14,85 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052200"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188104"
 ---
-# <a name="customer-profiles"></a>Profil pelanggan
+# <a name="view-customer-profiles"></a>Lihat profil pelanggan
 
-Halaman **Pelanggan** menunjukkan pandangan gabungan profil pelanggan anda yang disatukan. Profil pelanggan tersedia sebaik sahaja anda [mencipta entiti Pelanggan disatukan](data-unification.md). Halaman membenarkan anda mencari pelanggan dan mentakrifkan indeks untuk carian tersebut.
+Profil pelanggan tersedia sebaik sahaja anda [mencipta entiti Pelanggan *yang bersatu*](data-unification.md). Paparan gabungan profil pelanggan bersatu anda dipaparkan pada **halaman Pelanggan**. Pelanggan boleh menjadi individu atau organisasi.
 
-Pelanggan boleh menjadi individu atau organisasi. Setiap profil pelanggan diwakili oleh jubin. Gunakan kawalan penghalamanan untuk mendapatkan lebih banyak rekod. Kad memaparkan medan daripada entiti *Pelanggan* seperti yang ditakrifkan dalam **Indeks carian & penapis**. Urutan medan dalam setiap kad dipilih oleh sistem.
-
-Pilih jubin untuk melihat data untuk pelanggan yang dipilih dalam halaman khusus yang dipanggil [Halaman butiran pelanggan](customer-profiles.md#customer-details-page).
-
-> [!div class="mx-imgBorder"]
-> ![Halaman pelanggan menunjukkan jubin hasil](media/customers-page-result-tiles-B2C.png "Halaman pelanggan menunjukkan jubin hasil")
+Pergi ke **halaman Pelanggan** untuk melihat pelanggan dan profil mereka. Setiap profil pelanggan diwakili oleh jubin. Gunakan kawalan penghalamanan untuk mendapatkan lebih banyak rekod. Kad memaparkan medan daripada entiti *Pelanggan* seperti yang ditakrifkan dalam **Indeks carian & penapis**. Urutan medan dalam setiap kad dipilih oleh sistem.
 
 > [!NOTE]
-> Jika anda tidak dapat melihat jubin apabila anda memilih **Pelanggan** dalam navigasi, pentadbir anda perlu [mentakrifkan sekurang-kurangnya satu atribut yang boleh dicari](search-filter-index.md) dalam **Indeks carian & penapis**.
+> Jika anda tidak dapat melihat jubin apabila anda memilih **Pelanggan**, pentadbir anda perlu [mentakrifkan sekurang-kurangnya satu atribut](search-filter-index.md) yang boleh dicari dalam **indeks** Carian & penapis.
+
+:::image type="content" source="media/customers-page-result-tiles-B2C.png" alt-text="Halaman pelanggan menunjukkan jubin hasil.":::
+
+Pilih mana-mana tindakan berikut:
+- [Lihat butiran pelanggan](#view-customer-details)
+- [Urus indeks](search-filter-index.md) carian & penapis (pentadbir sahaja)
+- [Tapis pelanggan](#filter-customers)
+- **Kembangkan kad** atau **Kad** Runtuh untuk mengembangkan atau meruntuhkan maklumat yang dipaparkan pada jubin pelanggan
+- **Mengisih mengikut** atribut tertentu
+- [Carian untuk pelanggan](#search-for-customers)
+
+  > [!NOTE]
+  > Untuk menggunakan carian dan penapis, pentadbir mesti mengkonfigurasi atribut yang boleh dicari dan menentukan medan yang boleh ditapis menggunakan indeks carian & penapis.
 
 ## <a name="search-for-customers"></a>Carian untuk pelanggan
 
-Carian untuk pelanggan dengan memasukkan nama atau beberapa atribut yang lain dalam kotak carian. Carian hanya berfungsi dalam entiti *Pelanggan* yang dicipta semasa proses data penyatuan.
+Cari pelanggan dengan memasukkan nama atau beberapa atribut lain dalam **Cari pelanggan**. Atribut yang boleh dicari ditakrifkan oleh pentadbir dan berasal dari entiti Pelanggan *yang bersatu*.
 
-Sebagai pentadbir, anda boleh konfigurasikan atribut boleh dicari menggunakan halaman **Indeks Carian & Tapis**. Untuk mendapatkan maklumat lanjut, pergi ke [Urus indeks carian & penapis](search-filter-index.md).
+> [!NOTE]
+> **Rentetan** adalah satu-satunya jenis data yang disertakan dalam carian. Gunakannya dalam **medan Cari pelanggan** di halaman Pelanggan untuk mencari pelanggan.
 
 ## <a name="filter-customers"></a>Tapis pelanggan
 
-Anda boleh menapis pelanggan mengikut medan entiti *Pelanggan*. Sama seperti carian, pada mulanya pentadbir anda perlu menakrif medan sebagai boleh ditapis menggunakan halaman **Indeks Carian & Tapis**.
+Tapis pelanggan mengikut *medan entiti Pelanggan*. Medan yang boleh ditapis ditakrifkan oleh pentadbir.
 
-1. Pilih **Tunjuk penapis** pada halaman **Pelanggan**.
+1. **Pada halaman Pelanggan**, pilih **Tunjukkan penapis**. Anak tetingkap Penapis dipaparkan.
 
 1. Tandakan kotak di sebelah atribut bagi menapis pelanggan mengikut kemahuan anda.
 
-1. Alih keluar penapis anda dengan memilih **Kosongkan penapis** pada halaman **Pelanggan**.
+1. Alih keluar semua penapis dengan **memilih Kosongkan penapis** atau kosongkan kotak semak di sebelah atribut yang dipilih.
 
-## <a name="customer-details-page"></a>Halaman butiran pelanggan
+1. Pilih **Sembunyikan penapis** untuk menutup anak tetingkap penapis.
 
-Pilih sebarang jubin pelanggan untuk membuka **halaman butiran pelanggan**. Pandangan ini mengandungi maklumat disatukan untuk pelanggan terpilih. Butiran pelanggan termasuk kandungan berikut:
+1. Untuk menyimpan hasil penapis sebagai [segmen, pilih](segments.md) Simpan penapis sebagai **segmen**.
+   1. Masukkan nama untuk segmen.
+   1. Pilih **Simpan** untuk menyimpan segmen.
+   1. Pilih sama ada untuk menjalankan segmen sekarang dengan **memilih Aktifkan** atau jalankannya **Kemudian**.
 
-**Jubin profil pelanggan** : Jubin ini menunjukkan nilai berbeza daripada entiti *Pelanggan* disatukan. Jika medan tidak mempunyai nilai untuk profil pelanggan yang dipilih, ia tidak akan dipaparkan kecuali medan alamat. Jubin disusun ke dalam bahagian:
+## <a name="view-customer-details"></a>Lihat butiran pelanggan
+
+**Pada halaman Pelanggan**, pilih jubin pelanggan untuk melihat butiran untuk pelanggan yang dipilih.
+
+:::image type="content" source="media/customers-details-B2C.png" alt-text="Halaman butiran pelanggan.":::
+
+Butiran pelanggan termasuk:
+
+**Jubin profil pelanggan** menunjukkan nilai yang berbeza dari entiti Pelanggan *bersatu*. Jika medan tidak mempunyai nilai untuk profil pelanggan yang dipilih, ia tidak akan dipaparkan kecuali medan alamat. Jubin disusun ke dalam bahagian:
 
 - Bahagian pertama menunjukkan set medan ditetapkan semula diikuti oleh semua medan yang merupakan sebahagian daripada indeks carian & penapis. Semua medan berkaitan alamat digabungkan menjadi satu baris, yang menunjukkan walaupun profil tidak mengandungi maklumat alamat.
-- **Kenalan untuk pelanggan ini** : Dalam persekitaran untuk akaun perniagaan, anda akan melihat semua kenalan yang berkaitan untuk pelanggan ini sebagai bahagian kedua. Setiap kenalan ditunjukkan dengan medan mereka. Medan kosong disembunyikan.
-- **Medan tambahan** : Menunjukkan medan selebihnya bagi pelanggan yang dipilih kecuali ID.
-- **ID** : Senaraikan semua ID di bawah nama entiti sepadan mereka. Medan dikenal pasti sebagai ID oleh semantik mereka yang mengkategorikan mereka sedemikian.
+- **Kenalan untuk paparan pelanggan** ini dalam persekitaran untuk akaun perniagaan. Setiap kenalan ditunjukkan dengan medan mereka. Medan kosong disembunyikan.
+- **Medan** tambahan menunjukkan medan yang tinggal bagi pelanggan terpilih, kecuali ID.
+- **ID** menyenaraikan semua ID di bawah nama entiti yang sepadan. Bidang dikenal pasti sebagai ID oleh semantik mereka.
 
-**Garis masa aktiviti** : Menunjukkan data jika anda telah mengkonfigurasi aktiviti. Pandangan garis masa mengandungi aktiviti yang diisih secara kronologi pelanggan yang dipilih, bermula dengan aktiviti paling terkini. Untuk mendapatkan maklumat lanjut, pergi ke [Aktiviti pelanggan](activities.md).
+**Garis masa aktiviti** menunjukkan data jika anda telah mengkonfigurasi [aktiviti](activities.md). Pandangan garis masa mengandungi aktiviti yang diisih secara kronologi pelanggan yang dipilih, bermula dengan aktiviti paling terkini.
 
 **Cerapan**:
 
-- **Ukuran** : Menunjukkan jika anda mengkonfigurasikan satu atau lebih ukuran ukuran atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu. Untuk mendapatkan maklumat lanjut, pergi ke [Takrifkan dan uruskan ukuran](measures.md).
+- **Langkah** menunjukkan jika anda telah mengkonfigurasi [langkah](measures.md) atribut pelanggan. Ia termasuk KPI yang dikira pada pelanggan anda pada peringkat pelanggan individu.
 
-- **Minat yang berpotensi, jenama berpotensi** : Menunjukkan jika anda mengkonfigurasi jenama atau pengayaan afiniti yang diminati. Ia mewakili minat berpotensi dan afiniti untuk jenama yang berdasarkan kepada pelanggan lain yang profil serupa dengan profil pelanggan yang dipilih. Untuk mendapatkan maklumat lanjut, pergi ke [Perkayakan profil pelanggan dengan jenama dan afiniti minat](enrichment-microsoft.md).
+- **Potensi minat, jenama** berpotensi menunjukkan jika anda mengkonfigurasi [jenama atau pengayaan](enrichment-microsoft.md) pertalian minat. Ia mewakili minat berpotensi dan afiniti untuk jenama yang berdasarkan kepada pelanggan lain yang profil serupa dengan profil pelanggan yang dipilih.
 
-Untuk kembali ke halaman carian pelanggan, pilih **Kembali kepada Pelanggan**.
+Untuk kembali ke **halaman Pelanggan**, pilih **Kembali kepada Pelanggan**.
 
-## <a name="next-steps"></a>Langkah seterusnya
+## <a name="next-steps"></a>Langkah-langkah berikutnya
 
 [Tambah lebih banyak sumber data](data-sources.md), [perkayakan profil disatukan](enrichment-hub.md) atau [cipta segmen](segments.md) untuk berfungsi dengan profil pelanggan disatukan dalam aplikasi lain.
 

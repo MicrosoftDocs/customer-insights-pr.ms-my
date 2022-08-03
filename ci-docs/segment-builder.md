@@ -1,6 +1,6 @@
 ---
-title: Cipta segmen
-description: Buat segmen pelanggan untuk mengumpulkannya berdasarkan pelbagai atribut menggunakan pembina segmen atau segmen cepat.
+title: Buat segmen kompleks dengan pembina segmen
+description: Gunakan pembina segmen untuk mencipta segmen pelanggan yang kompleks dengan mengumpulkannya berdasarkan pelbagai atribut.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,20 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053983"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170646"
 ---
-# <a name="create-segments"></a>Cipta segmen
+# <a name="create-complex-segments-with-segment-builder"></a>Buat segmen kompleks dengan pembina segmen
 
-Takrifkan penapis kompleks sekitar entiti pelanggan disatukan dan entiti yang berkaitan. Setiap segmen, selepas pemprosesan, mencipta set rekod pelanggan yang boleh anda eksport dan ambil tindakan padanya. Segmen diuruskan pada halaman **Segmen**. Anda boleh [cipta segmen baharu](#create-a-new-segment) menggunakan pembina segmen atau [cipta segmen pantas](#quick-segments) daripada kawasan aplikasi lain.
+Takrifkan penapis kompleks sekitar entiti pelanggan disatukan dan entiti yang berkaitan. Setiap segmen, selepas pemprosesan, mencipta set rekod pelanggan yang boleh anda eksport dan ambil tindakan padanya.
 
 > [!TIP]
-> - Segmen pantas hanya disokong dalam persekitaran untuk **pelanggan individu**.
-> - Segmen berdasarkan **pelanggan individu** secara automatik menyertakan maklumat kenalan untuk ahli segmen. Dalam persekitaran untuk segmen **akaun perniagaan**, segmen adalah berdasarkan akaun (syarikat atau subsidiari). Untuk memasukkan maklumat kenalan dalam segmen, gunakan kefungsian **Atribut projek** dalam pembina segmen. Pastikan sumber data kenalan adalah [dipetakan secara semantiknya ke ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) entiti.
+> Segmen berdasarkan **pelanggan individu** secara automatik menyertakan maklumat kenalan untuk ahli segmen. Dalam persekitaran untuk segmen **akaun perniagaan**, segmen adalah berdasarkan akaun (syarikat atau subsidiari). Untuk memasukkan maklumat kenalan dalam segmen, gunakan kefungsian **Atribut projek** dalam pembina segmen. Pastikan sumber data kenalan adalah [dipetakan secara semantiknya ke ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) entiti.
 
 ## <a name="segment-builder"></a>Pembina segmen
 
@@ -34,7 +33,7 @@ Imej berikut menunjukkan pelbagai aspek pembina segmen. Imej menunjukkan segmen 
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemen dalam pembina segmen." lightbox="media/segment-builder-overview.png":::
 
-1. Menyusun segmen anda dengan peraturan dan subperaturan. Setiap peraturan atau subperaturan terdiri daripada syarat. Gabungkan syarat dengan operator logik
+1. Menyusun segmen anda dengan peraturan dan subperaturan. Setiap peraturan atau subperaturan terdiri daripada syarat. Gabungkan syarat dengan pengendali logik.
 
 1. Pilih [laluan perhubungan](relationships.md) antara entiti yang digunakan pada peraturan. Laluan perhubungan menentukan atribut yang boleh digunakan dalam syarat.
 
@@ -52,17 +51,15 @@ Imej berikut menunjukkan pelbagai aspek pembina segmen. Imej menunjukkan segmen 
 
 Contoh di atas menunjukkan keupayaan pembahagian. Kami telah menentukan segmen untuk pelanggan yang membeli sekurang-kurangnya barangan bernilai $500 dalam talian *dan* berminat dalam pembangunan perisian.
 
-## <a name="create-a-new-segment"></a>Cipta bahagian baharu
+## <a name="create-a-new-segment-with-segment-builder"></a>Buat segmen baru dengan pembina segmen
 
-Terdapat berbilang cara untuk mencipta segmen baharu. Bahagian ini menerangkan cara membina segmen anda sendiri dari awal. Anda juga boleh mencipta *segmen pantas* berdasarkan pada entiti sedia ada atau menggunakan model pembelajaran mesin untuk mendapatkan *segmen yang dicadangkan*. Untuk mendapatkan maklumat lanjut, pergi ke [Gambaran keseluruhan segmen](segments.md).
+1. Pergi ke **Segmen**.
 
-Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen disimpan sebagai segmen tidak aktif. Apabila anda melengkapkan konfigurasi segmen, jalankan ia untuk mengaktifkan segmen. Anda juga boleh **Aktifkan** segmen dari halaman **Semua segmen**.
+1. Pilih **Baharu** > **Bina sendiri**. Pada halaman pembina segmen, anda takrifkan atau karang peraturan. Peraturan terdiri daripada satu atau lebih keadaan yang mentakrifkan set pelanggan.
 
-1. Pergi ke halaman **Bahagian**.
+1. Pilih **Edit butiran** di sebelah segmen Tidak Bertajuk. Berikan nama untuk segmen anda dan kemas kini **Nama entiti output** yang dicadangkan untuk segmen tersebut. Secara pilihan, tambah perihalan dan [tag](work-with-tags-columns.md#manage-tags) pada segmen.
 
-1. Pilih **Baharu** > **Bina sendiri**.
-
-1. Pada halaman pembina segmen, anda takrifkan atau karang peraturan. Peraturan terdiri daripada satu atau lebih keadaan yang mentakrifkan set pelanggan.
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Kotak dialog Edit butiran butiran.":::
 
 1. Dalam seksyen **Rule1**, pilih atribut entiti yang anda ingin tapis pelanggan. Terdapat dua cara untuk memilih mencari:
    - Semak senarai entiti dan atribut yang tersedia dalam anak tetingkap **Tambahkan pada Peraturan** dan pilih ikon **+** bersebelahan dengan atribut untuk ditambahkan. Pilih sama ada anda ingin menambahkan atribut pada peraturan sedia ada atau menggunakannya untuk mencipta peraturan baharu.
@@ -72,38 +69,33 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen 
 
 1. Pilih **Tambah syarat** untuk menambahkan lebih banyak syarat pada peraturan. Untuk mencipta peraturan di bawah peraturan semasa, pilih **Tambah subperaturan**.
 
-1. Jika peraturan menggunakan entiti lain daripada entiti *Pelanggan*, anda perlu menetapkan laluan perhubungan. Laluan perhubungan ini diperlukan untuk memberitahu sistem yang perhubungan anda mahu untuk mengakses entiti pelanggan disatukan. Pilih **Tetapkan laluan perhubungan** untuk memetakan entiti yang dipilih pada entiti pelanggan disatukan. Jika hanya terdapat satu kemungkinan laluan perhubungan, sistem akan memilihnya secara automatik. Laluan perhubungan yang berbeza boleh menghasilkan keputusan yang berbeza. Setiap peraturan boleh mempunyai laluan perhubungannya sendiri.
+1. Jika peraturan menggunakan entiti lain daripada *entiti Pelanggan*, pilih **Tetapkan laluan** perhubungan untuk memetakan entiti yang dipilih kepada entiti pelanggan yang disatukan. Jika hanya terdapat satu laluan perhubungan yang mungkin, sistem memilihnya secara automatik. Laluan [hubungan yang berbeza](relationships.md#relationship-paths) boleh menghasilkan hasil yang berbeza. Setiap peraturan boleh mempunyai laluan perhubungannya sendiri.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Kemungkinan laluan perhubungan apabila mencipta peraturan berdasarkan entiti yang dipetakan pada entiti pelanggan disatukan.":::
 
-   Contohnya, entiti *eCommerce_eCommercePurchases* dalam syot layar mempunyai empat pilihan untuk dipetakan pada entiti *Pelanggan* profil disatukan:
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Pelanggan
-   - eCommerce_eCommercePurchases > Pelanggan
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Pelanggan
-   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Pelanggan Apabila memilih pilihan terakhir, kita boleh sertakan atribut daripada semua entiti yang disenaraikan dalam syarat peraturan. Kami mungkin akan mendapat hasil yang lebih sedikit kerana rekod pelanggan yang sepadan perlu menjadi sebahagian daripada semua entiti. Dalam contoh ini, mereka perlu membeli barang melalui e-dagang(*eCommerce_eCommercePurchases*), di tempat jualan(*POS_posPurchases*) dan mengambil bahagian dalam program kesetiaan kami (*loyaltyScheme_loyCustomers*). Apabila memilih pilihan kedua, kami hanya boleh memilih atribut daripada entiti *eCommerce_eCommercePurchases* dan *Pelanggan*. Ini mungkin mengakibatkan lebih banyak profil pelanggan.
-
-1. Jika terdapat berbilang syarat dalam peraturan, anda boleh memilih operator logik yang menghubungkannya.  
-   - **DAN** operator: Semua syarat mesti dipenuhi untuk memasukkan rekod dalam segmen. Pilihan ini adalah paling berguna apabila anda menakrif syarat dalam entiti yang berbeza.
-   - **ATAU** operator: Salah satu syarat mesti dipenuhi untuk memasukkan rekod dalam segmen. Pilihan ini paling berguna apabila anda menakrif berbilang syarat untuk entiti yang sama.
+1. Jika anda mempunyai berbilang syarat dalam peraturan, pilih operator logik yang menghubungkannya.  
+   - **DAN** operator: Semua syarat mesti dipenuhi untuk memasukkan rekod dalam segmen. Gunakan opsyen ini apabila anda mentakrifkan keadaan merentas entiti yang berbeza.
+   - **ATAU** operator: Salah satu syarat mesti dipenuhi untuk memasukkan rekod dalam segmen. Gunakan opsyen ini apabila anda mentakrifkan berbilang syarat untuk entiti yang sama.
 
    :::image type="content" source="media/segmentation-either-condition.png" alt-text="Peraturan dengan dua DAN syarat.":::
 
    Apabila menggunakan ATAU operator, semua syarat mestilah berdasarkan entiti yang dimasukkan dalam laluan perhubungan.
 
-   - Anda boleh mencipta berbilang peraturan untuk mencipta set rekod pelanggan yang berbeza. Anda boleh menggabungkan kumpulan untuk memasukkan pelanggan yang diperlukan bagi kes perniagaan anda. Untuk mencipta peraturan baharu, pilih **Tambah peraturan**. Khususnya, jika anda tidak boleh memasukkan dan entiti dalam peraturan kerana laluan perhubungan yang ditetapkan, anda perlu mencipta peraturan baharu untuk memilih borang atribut.
+1. Untuk mencipta set rekod pelanggan yang berbeza, buat berbilang peraturan. Untuk memasukkan pelanggan yang diperlukan untuk kes perniagaan anda, gabungkan kumpulan. Secara khusus, jika anda tidak dapat memasukkan entiti dalam peraturan kerana laluan perhubungan yang ditentukan, cipta peraturan baru untuk memilih atribut daripadanya.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Tambahkan peraturan baharu pada segmen dan pilih operator set.":::
 
-   - Pilih salah satu operator set: **Kesatuan**, **Bersilang** atau **Kecuali**.
+   1. Pilih **Tambah peraturan**.
+   1. Pilih salah satu operator set: **Kesatuan**, **Bersilang** atau **Kecuali**.
 
       - **Kesatuan** menyatukan dua kumpulan.
       - **Bersilang** dua kumpulan bertindih. Hanya data yang *lazim* kepada kedua-dua kumpulan kekal dalam kumpulan yang disatukan.
       - **Kecuali** menggabungkan dua kumpulan. Hanya data dalam Kumpulan A yang *tidak lazim* dengan data dalam kumpulan B disimpan.
 
-1. Secara lalai, segmen menjana entiti output yang mengandungi semua atribut profil pelanggan yang sepadan dengan penapis yang ditentukan. Jika segmen berdasarkan entiti lain daripada entiti *Pelanggan*, anda boleh menambahkan lebih banyak atribut daripada entiti tersebut kepada entiti output. Pilih **Atribut projek** untuk memilih atribut yang akan ditambah pada entiti output.
+1. Secara lalai, entiti output secara automatik akan mengandungi semua atribut profil pelanggan yang sepadan dengan penapis yang ditentukan. Jika segmen adalah berdasarkan entiti lain daripada *entiti Pelanggan*, pilih **atribut** Projek untuk menambah lebih banyak atribut daripada entiti ini pada entiti output.
 
    > [!IMPORTANT]
-   > Untuk segmen berdasarkan akaun perniagaan, butiran satu atau lebih kenalan bagi setiap akaun daripada entiti *ContactProfile* perlu dimasukkan dalam segmen untuk membenarkan segmen diaktifkan atau dieksport ke destinasi yang memerlukan maklumat kenalan. Untuk mendapatkan maklumat lanjut tentang entiti *ContactProfile*, lihat [Pemetaan semantik](semantic-mappings.md).
+   > Untuk segmen berdasarkan akaun perniagaan, butiran satu atau lebih kenalan setiap akaun daripada *entiti ContactProfile* mesti disertakan dalam segmen untuk membolehkan segmen tersebut diaktifkan atau dieksport ke destinasi yang memerlukan maklumat hubungan. Untuk mendapatkan maklumat lanjut tentang entiti *ContactProfile*, lihat [Pemetaan semantik](semantic-mappings.md).
    > Output sampel untuk segmen berdasarkan akaun perniagaan dengan atribut diunjurkan kenalan boleh kelihatan seperti ini:
    >
    > |ID  |Nama akaun  |Hasil  |Nama orang hubungan  | Peranan kenalan|
@@ -112,7 +104,7 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen 
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Contoh atribut unjuran yang dipilih dalam anak tetingkap untuk ditambahkan pada entiti output.":::
   
-   Sebagai contoh: Segmen adalah berdasarkan entiti yang mengandungi data pembelian yang berkaitan dengan entiti *Pelanggan*. Segmen tersebut mencari semua pelanggan dari Sepanyol yang membeli barangan pada tahun semasa. Anda boleh memilih untuk menambahkan atribut seperti harga barangan, atau tarikh pembelian pada semua rekod pelanggan yang sepadan dalam entiti output. Maklumat ini mungkin berguna untuk menganalisis korelasi bermusim dengan jumlah perbelanjaan.
+   Sebagai contoh: Segmen adalah berdasarkan entiti yang mengandungi data pembelian yang berkaitan dengan entiti *Pelanggan*. Segmen tersebut mencari semua pelanggan dari Sepanyol yang membeli barangan pada tahun semasa. Anda boleh memilih untuk menambah atribut seperti harga barangan, atau tarikh pembelian kepada semua rekod pelanggan yang sepadan dalam entiti output. Maklumat ini mungkin berguna untuk menganalisis korelasi bermusim dengan jumlah perbelanjaan.
 
    > [!NOTE]
    > - **Atribut projek** hanya berfungsi untuk entiti yang mempunyai perhubungan satu dengan banyak dengan entiti pelanggan. Contohnya, seorang pelanggan boleh mempunyai berbilang langganan.
@@ -120,50 +112,20 @@ Semasa mencipta segmen, anda boleh menyimpan draf. Dalam peringkat draf, segmen 
    > - Jika atribut yang anda mahu projek hanya lebih daripada satu hop daripada entiti *Pelanggan*, atribut tersebut tidak perlu wujud dalam setiap peraturan bagi pertanyaan segmen yang anda sedang bangunkan.
    > - **Atribut yang diunjurkan** difaktorkan apabila menggunakan operator set.
 
-1. Pilih **Edit butiran** di sebelah segmen Tidak Bertajuk. Berikan nama untuk segmen anda dan kemas kini **Nama entiti output** yang dicadangkan untuk segmen tersebut. Secara pilihan, tambah perihalan dan [tag](work-with-tags-columns.md#manage-tags) pada segmen.
+1. Pilih **Jalankan** untuk mencipta segmen. Pilih **Simpan** jika anda mahu mengekalkan konfigurasi semasa dan jalankan segmen kemudian. Halaman **Segmen** dipaparkan.
 
-   :::image type="content" source="media/segments_edit_details.png" alt-text="Kotak dialog Edit butiran butiran.":::
+### <a name="segment-builder-tips"></a>Petua pembina segmen
 
-1. Pilih **Jalankan** untuk menyimpan segmen, aktifkan dan mulakan pemprosesan segmen anda berdasarkan semua peraturan dan syarat. Jika tidak, ia akan disimpan sebagai segmen tidak aktif.
+Apabila mencipta segmen menggunakan pembina segmen, perlu diingat petua berikut:
 
-1. Pilih **Kembali ke segmen** untuk kembali ke halaman **Segmen**.
+- Pembina segmen tidak akan mencadangkan nilai sah daripada entiti apabila menetapkan operator untuk syarat. Anda boleh pergi ke **Data** > **Entiti** dan memuat turun data entiti untuk melihat nilai yang tersedia.
+- Syarat berdasarkan tarikh membolehkan anda bertukar antara tarikh tetap dan julat tarikh terapung.
+- Jika anda mempunyai berbilang peraturan untuk segmen anda, peraturan yang anda edit mempunyai baris biru menegak di sebelahnya.
+- Anda boleh memindahkan peraturan dan syarat ke tempat lain dalam definisi segmen. Pilih elipsis menegak (&vellip;) di sebelah peraturan atau syarat dan pilih bagaimana dan di mana untuk memindahkannya.
+- Kawalan **Buat asal** dan **Buat Semula** dalam bar perintah membenarkan anda menggulung balik perubahan.
+- Selepas mencipta segmen, sesetengah segmen membolehkan [anda menjejaki penggunaan segmen](segments.md#track-usage-of-a-segment).
 
-1. Secara lalai, segmen dicipta sebagai segmen dinamik. Ia bermaksud bahawa segmen itu disegar semula semasa sistem penyegaran semula. Untuk [menghentikan segar semula automatik](segments.md#manage-existing-segments), pilih segmen, pilih pilihan **Buat statik**. Segmen statik hanya boleh [disegar semula secara manual](segments.md#refresh-segments) pada bila-bila masa.
-
-> [!TIP]
-> - Pembina segmen tidak akan mencadangkan nilai sah daripada entiti apabila menetapkan operator untuk syarat. Anda boleh pergi ke **Data** > **Entiti** dan memuat turun data entiti untuk melihat nilai yang tersedia.
-> - Syarat berdasarkan tarikh yang membolehkan anda bertukar antara julat tarikh tetap dengan tarikh terapung.
-> - Jika anda mempunyai berbilang peraturan untuk segmen anda, peraturan yang anda edit mempunyai baris biru menegak di sebelahnya.
-> - Anda boleh memindahkan peraturan dan syarat ke tempat lain dalam definisi segmen. Pilih elipsis menegak (&vellip;) di sebelah peraturan atau syarat dan pilih bagaimana dan di mana untuk memindahkannya.
-> - Kawalan **Buat asal** dan **Buat Semula** dalam bar perintah membenarkan anda menggulung balik perubahan.
-> - Selepas mencipta segmen, sesetengah segmen membolehkan [anda menjejaki penggunaan segmen](segments.md#track-usage-of-a-segment).
-
-## <a name="quick-segments"></a>Segmen pantas
-
-Segmen pantas membolehkan anda membina segmen ringkas dengan operator tunggal dengan pantas untuk wawasan yang lebih pantas.
-
-1. Pada halaman **Segmen**, pilih **Baharu** > **Cipta daripada**.
-   - Pilih pilihan **Profil** untuk membina segmen yang berasaskan pada entiti *pelanggan disatukan*.
-   - Pilih pilihan **Ukuran** untuk membina segmen sekitar ukuran yang anda cipta sebelum ini.
-   - Pilih pilihan **Kecerdasan** untuk membina segmen di sekitar salah satu entiti output yang dijana anda menggunakan sama ada keupayaan **Ramalan** atau **Model Tersuai**.
-
-2. Dalam kotak dialog **Segmen pantas baharu**, pilih atribut daripada **Medan** juntai bawah.
-
-3. Sistem akan menyediakan lebih banyak cerapan yang membantu anda mencipta segmen pelanggan yang lebih baik.
-   - Untuk medan kategori, kami akan menunjukkan 10 kiraan pelanggan teratas. Pilih **Nilai** dan pilih **Semak Semula**.
-   - Untuk atribut numerik, sistem akan menunjukkan apakah nilai atribut yang jatuh dalam setiap persentil pelanggan. Pilih **Operator** dan **Nilai**, kemudian pilih **Semak Semula**.
-
-4. Sistem akan memberikan anda **saiz bahagian yang dianggarkan**. Anda boleh memilih sama ada untuk menjana bahagian yang anda takrif, atau kunjungi semula terlebih dahulu untuk mendapatkan saiz bahagian yang berbeza.
-
-   :::image type="content" source="media/quick-segment-name.png" alt-text="Nama dan anggaran untuk segmen pantas.":::
-
-5. **Berikan nama** entiti Nama **dan** Output untuk segmen anda. Secara pilihan, tambah [tag](work-with-tags-columns.md#manage-tags).
-
-6. Pilih **Simpan** untuk mencipta bahagian.
-
-7. Selepas bahagian selesai diproses, anda boleh melihatnya seperti bahagian lain yang anda cipta.
-
-## <a name="next-steps"></a>Langkah seterusnya
+## <a name="next-steps"></a>Langkah-langkah berikutnya
 
 [Eksport segmen](export-destinations.md) dan terokai [penyepaduan Kad Pelanggan](customer-card-add-in.md) untuk menggunakan segmen dalam aplikasi lain.
 

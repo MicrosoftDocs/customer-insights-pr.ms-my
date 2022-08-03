@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051602"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171014"
 ---
 # <a name="segment-insights-preview"></a>Wawasan segmen (pratonton)
 
@@ -43,26 +43,25 @@ Anda juga boleh menganalisis cara perubahan bertindih untuk atribut tertentu.
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Pandangan dan optimumkan analisis bertindih
 
-Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
+1. Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Butiran cerapan segmen bertindih.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Butiran cerapan segmen bertindih.":::
 
-Pilih wawasan untuk melihat hasil analisis:
+1. Pilih wawasan untuk melihat hasil analisis:
 
-- Bilangan ahli bertindih segmen yang dipilih untuk analisis.
-- Bilangan ahli yang termasuk dalam salah satu segmen tetapi tidak berada dalam segmen yang lain.
-- Jika anda memilih medan semasa mengkonfigurasikan analisis bertindih, anda akan dapati mereka dalam tab yang berkaitan. Anda boleh menggunakan penapis juntai bawah untuk memilih mana-mana tahap atribut kepentingan dan jadual di bahagian bawah akan menunjukkan data yang sepadan.
+   - Bilangan ahli bertindih segmen yang dipilih untuk analisis.
+   - Bilangan ahli yang termasuk dalam salah satu segmen tetapi tidak berada dalam segmen yang lain.
+   - Jika anda memilih medan semasa mengkonfigurasikan analisis bertindih, anda akan dapati mereka dalam tab yang berkaitan. Anda boleh menggunakan penapis juntai bawah untuk memilih mana-mana tahap atribut kepentingan dan jadual di bahagian bawah akan menunjukkan data yang sepadan.
 
 ## <a name="segment-differentiators"></a>Pembezaan bahagian
 
-Pembezaan segmen membantu anda ketahui apa yang membezakan segmen daripada seluruh pelanggan anda atau daripada segmen lain. Anda hanya perlu memilih segmen dan sistem akan mengenal pasti atribut dan langkah profil yang membezakan segmen yang dipilih.
+Pembezaan segmen membantu anda ketahui apa yang membezakan segmen daripada seluruh pelanggan anda atau daripada segmen lain. Pilih segmen dan sistem mengenal pasti atribut profil dan langkah-langkah yang membezakan segmen yang dipilih.
 
 ### <a name="run-a-differentiator-analysis"></a>Jalankan analisis pembezaan
 
 1. Pergi ke **Segmen** dan pilih tab **wawasan (pratonton)**.
 
-1. Pilih **Baharu** dan pilih pilihan **Bertindih** dalam anak tetingkap **Pilih Jenis Wawasan**.
+1. Pilih **Baru** dan pilih opsyen **Pembezaan** dalam **anak tetingkap Pilih Jenis** Wawasan.
 
 1. Pilih segmen yang anda mahu analisis sebagai **Segmen utama** dan pilih **Seterusnya**.
 
@@ -70,29 +69,29 @@ Pembezaan segmen membantu anda ketahui apa yang membezakan segmen daripada selur
 
 1. Secara alternatif, pilih satu atau lebih medan kepentingan untuk fokus analisis pada atribut tertentu dan pilih **Seterusnya**.
 
-1. Berikan nama untuk anda analisis bertindih, nama paparan pilihan dan perihalan.
+1. Berikan nama untuk anda analisis pembezaan, nama paparan pilihan dan perihalan.
 
-1. Pilih **Simpan** untuk memulakan analisis. Analisis bertindih sudah bersedia apabila status berubah daripada Menyegar semula kepada Berjaya.
+1. Pilih **Simpan** untuk memulakan analisis. Analisis pembezaan sudah siap apabila status berubah daripada Segar Semula kepada Berjaya.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Pandangan dan optimumkan analisis pembezaan
 
-Selepas melengkapkan analisis, cari butiran mengenai wawasan ini dalam **Segmen** > **Wawasan (pratonton)**.
+1. Selepas melengkapkan analisis, pergi ke **Wawasan Segmen** > **(pratonton)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Butiran cerapan pembeza segmen.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Butiran cerapan pembeza segmen.":::
 
-Pilih wawasan untuk melihat hasil analisis. Analisis pembezaan termasuk dua tab. Tab **Atribut** menyenaraikan atribut profil dianggap sebagai pembezaan. Tab **Langkah** menyenaraikan pembezaan. Setiap tab merangkumi butiran berikut:
+1. Pilih wawasan untuk melihat hasil analisis. Analisis pembezaan termasuk dua tab. Tab **Atribut** menyenaraikan atribut profil dianggap sebagai pembezaan. Tab **Langkah** menyenaraikan pembezaan. Setiap tab merangkumi butiran berikut:
 
-- Kedudukan senarai pembezaan, diisih oleh skor perbezaan.
-- **Skor perbezaan** untuk setiap pembezaan. Skor perbezaan mewakili darjah perbezaan atribut antara dua segmen. Semakin tinggi skor perbezaan, lebih banyak atribut berbeza antara kedua-dua segmen. Pilih skor untuk membuka anak tetingkap **Skor perbezaan** dengan pengagihan nilai untuk atribut tersebut.
+   - Kedudukan senarai pembezaan, diisih oleh skor perbezaan.
+   - **Skor perbezaan** untuk setiap pembezaan. Skor perbezaan mewakili darjah perbezaan atribut antara dua segmen. Semakin tinggi skor perbezaan, lebih banyak atribut berbeza antara kedua-dua segmen. Pilih skor untuk membuka anak tetingkap **Skor perbezaan** dengan pengagihan nilai untuk atribut tersebut.
 
 ## <a name="manage-segment-insights"></a>Uruskan wawasan segmen
 
-Anda boleh menggunakan pilihan berikut pada wawasan anda daripada bar perintah:
+Pergi ke **Wawasan Segmen** > **(pratonton)** untuk melihat cerapan segmen anda dan untuk mengurusnya. Pilih wawasan segmen untuk melihat tindakan yang tersedia.
 
-- **Kembali** untuk mengembalikan senarai wawasan
-- **Segar semula** untuk menjalankan analisis sekali lagi
-- **Padam** untuk alih keluar wawasan ini
-
+- **Lihat** analisis cerapan
+- **Edit** wawasan untuk mengubah sifatnya
+- **Segar semula** wawasan untuk menjalankan analisis sekali lagi
+- **Namakan semula** wawasan
+- **Padamkan** wawasan
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
