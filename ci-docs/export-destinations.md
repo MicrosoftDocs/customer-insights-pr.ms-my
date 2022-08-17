@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
-ms.translationtype: MT
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194979"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245338"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
@@ -28,7 +28,7 @@ ms.locfileid: "9194979"
 Terdapat dua jenis eksport utama:  
 
 - **Eksport data keluar**: eksport sebarang jenis entiti yang tersedia dalam Wawasan Pelanggan. Entiti yang anda pilih untuk eksport akan dieksport dengan semua medan data, metadata, skema dan butiran pemetaan.
-- **Eksport segmen**: entiti segmen eksport daripada Wawasan Pelanggan. Segmen mewakili senarai profil pelanggan. Semasa mengkonfigurasi eksport, anda memilih medan data yang disertakan, bergantung pada sistem sasaran yang anda eksport data.
+- **Eksport segmen**: entiti segmen eksport dari Wawasan Pelanggan. Segmen mewakili senarai profil pelanggan. Apabila mengkonfigurasi eksport, anda memilih medan data yang disertakan, bergantung pada sistem sasaran yang anda eksport data.
 
 ### <a name="export-segments"></a>Bahagian eksport
 
@@ -45,7 +45,7 @@ Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport s
 **Had pada eksport segmen**  
 - Sistem sasaran pihak ketiga boleh mengehadkan bilangan profil pelanggan yang boleh anda eksport. 
 - Untuk pelanggan individu, anda akan melihat bilangan sebenar ahli segmen apabila anda memilih segmen untuk eksport. Anda akan mendapat amaran jika segmen terlalu besar. 
-- Untuk akaun perniagaan, anda akan melihat bilangan akaun dalam segmen; walau bagaimanapun, bilangan kenalan yang mungkin diunjurkan tidak ditunjukkan. Dalam sesetengah kes, ini mungkin membawa kepada segmen yang dieksport sebenarnya mengandungi lebih banyak profil pelanggan daripada menerima sistem sasaran. Jika had sistem sasaran melebihi, eksport dilangkau.
+- Untuk akaun perniagaan, anda akan melihat bilangan akaun dalam segmen; walau bagaimanapun, bilangan kenalan yang mungkin diunjurkan tidak ditunjukkan. Dalam sesetengah kes, ini mungkin membawa kepada segmen yang dieksport sebenarnya mengandungi lebih banyak profil pelanggan daripada menerima sistem sasaran. Sekiranya had sistem sasaran melebihi, eksport dilangkau.
 
 ## <a name="set-up-a-new-export"></a>Sediakan eksport baharu
 
@@ -58,13 +58,13 @@ Untuk menyediakan atau mengedit eksport, anda memerlukan sambungan yang betul ya
 
 1. Pilih **Tambah eksport** untuk mencipta eksport baharu.
 
-1. **Dalam anak tetingkap Sediakan eksport**, pilih sambungan [yang](connections.md) hendak digunakan.
+1. Dalam anak tetingkap **Sediakan eksport**, pilih sambungan [yang](connections.md) hendak digunakan.
 
 1. Berikan butiran yang diperlukan dan pilih **Simpan** untuk mencipta eksport. Untuk butiran yang diperlukan, semak dokumentasi Wawasan Pelanggan untuk eksport tertentu.
 
 ## <a name="manage-existing-exports"></a>Urus eksport sedia ada
 
-Pergi ke **Eksport** > **Data** untuk melihat eksport, nama sambungan, jenis sambungan dan status mereka. Semua peranan pengguna boleh melihat eksport yang dikonfigurasikan. Anda boleh mengisih senarai eksport mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari eksport yang anda ingin uruskan.
+Pergi ke **Eksport** > **Data** untuk melihat eksport, nama sambungan mereka, jenis sambungan dan status. Semua peranan pengguna boleh melihat eksport yang dikonfigurasikan. Anda boleh mengisih senarai eksport mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari eksport yang anda ingin uruskan.
 
 Pilih eksport untuk melihat tindakan yang tersedia.
 
@@ -74,14 +74,14 @@ Pilih eksport untuk melihat tindakan yang tersedia.
 - **Jalankan** eksport untuk mengeksport data terkini.
 - **Buat pendua** eksport.
 - **[Jadualkan](#schedule-and-run-exports)** eksport.
-- **Tanggalkan sambungan** untuk mengalih keluar sambungan untuk eksport ini. Detach tidak mengalih keluar sambungan, tetapi menyahaktifkan eksport. Lajur **Sambungan yang digunakan** memaparkan Tiada Sambungan.
-- **Alih keluar** eksport.
+- **Buang sambungan** untuk mengalih keluar sambungan untuk eksport ini. Detach tidak mengalih keluar sambungan, tetapi menyahaktifkan eksport. Lajur Sambungan yang **digunakan** memaparkan Tiada Sambungan.
+- **Keluarkan** eksport.
 
 ## <a name="schedule-and-run-exports"></a>Jadualkan dan jalankan eksport
 
-Setiap eksport yang dikonfigurasikan mempunyai jadual segar semula. Semasa segar semula, sistem mencari data baharu atau yang dikemas kini untuk disertakan dalam eksport. Secara lalai, eksport dijalankan sebagai sebahagian daripada setiap [segar semula sistem yang dijadualkan](system.md#schedule-tab). Anda boleh menyesuaikan jadual segar semula atau mematikan proses itu untuk menjalankan eksport secara manual.
+Setiap eksport yang dikonfigurasikan mempunyai jadual segar semula. Semasa segar semula, sistem mencari data baharu atau yang dikemas kini untuk disertakan dalam eksport. Secara lalai, eksport dijalankan sebagai sebahagian daripada setiap [segar semula sistem yang dijadualkan](schedule-refresh.md). Anda boleh menyesuaikan jadual segar semula atau mematikan proses itu untuk menjalankan eksport secara manual.
 
-Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-processes) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Lajur **Segar Semula** menunjukkan apabila eksport terakhir disegar semula.
+Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-processes) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Lajur **Segar Semula** ditunjukkan apabila eksport kali terakhir disegarkan semula.
 
 ### <a name="schedule-exports"></a>Jadualkan eksport
 
@@ -99,16 +99,16 @@ Tentukan jadual segar semula tersuai untuk eksport individu atau beberapa ekspor
 
 1. Pilih **Simpan**.
 
-Apabila mengedit jadual untuk beberapa eksport, buat pilihan di bawah **Simpan atau batalkan** jadual:
+Apabila mengedit jadual untuk beberapa eksport, buat pilihan di bawah **Simpan atau batalkan jadual**:
 
-- **Kekalkan jadual** individu: Kekalkan jadual yang telah ditetapkan sebelum ini untuk eksport yang dipilih dan hanya lumpuhkan atau dayakannya.
+- **Kekalkan jadual** individu: Kekalkan jadual yang ditetapkan sebelum ini untuk eksport yang dipilih dan hanya lumpuhkan atau dayakannya.
 - **Tentukan jadual baharu untuk semua eksport yang dipilih**: Gantikan jadual sedia ada bagi eksport yang dipilih.
 
 ### <a name="run-exports-on-demand"></a>Jalankan eksport atas permintaan
 
 Untuk mengeksport data tanpa menunggu segar semula berjadual, pergi ke **Data** > **Eksport**.
 
-- Untuk menjalankan semua eksport, pilih **Jalankan semua** dalam bar perintah. Hanya eksport yang mempunyai jadual aktif yang dijalankan. Untuk menjalankan eksport yang tidak aktif, jalankan eksport tunggal.
+- Untuk menjalankan semua eksport, pilih **Jalankan semua** dalam bar perintah. Hanya eksport yang mempunyai jadual aktif dijalankan. Untuk menjalankan eksport yang tidak aktif, jalankan eksport tunggal.
 - Untuk menjalankan eksport tunggal, pilih dalam senarai dan pilih **Jalankan** dalam bar perintah.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]

@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195669"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246119"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Pengingesan data masa nyata (pratonton)
 
 Kefungsian hampir dengan masa nyata membolehkan anda melihat, dalam sekelip mata, interaksi terkini yang pelanggan anda telah lakukan dengan produk atau perkhidmatan anda.
 
-[Menyegarkan semula yang dijadualkan](system.md#schedule-tab) termasuk bilangan rekod yang besar dan beberapa operasi kompleks. Pertama, data ditarik daripada sumber data. Seterusnya, data disatukan dan kemudian diperkaya dengan maklumat tambahan. Setiap jalanan proses ini boleh mengambil masa berminit-minit hingga berjam-jam.
+[Menyegarkan semula yang dijadualkan](schedule-refresh.md) termasuk bilangan rekod yang besar dan beberapa operasi kompleks. Pertama, data ditarik daripada sumber data. Seterusnya, data disatukan dan kemudian diperkaya dengan maklumat tambahan. Setiap jalanan proses ini boleh mengambil masa berminit-minit hingga berjam-jam.
 
 Kefungsian masa nyata menyediakan data dengan serta-merta untuk penggunaan, sehingga segar semula dijadualkan seterusnya menarik data ini daripada sumber data.
 
@@ -85,7 +85,7 @@ Butiran API ini, termasuk parameter dan respons, boleh didapati dalam seksyen **
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami pengguna masa nyata anda dengan telemetri
 
-Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#api-usage-tab). 
+Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

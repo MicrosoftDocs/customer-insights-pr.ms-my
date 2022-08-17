@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Katalog pembelajaran
   items:
-    - name: Sahkan sebagai Pakar Platform Data Pelanggan Microsoft
+    - name: Certify sebagai Pakar Platform Data Pelanggan Microsoft
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Mari bermula dengan Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -42,7 +42,7 @@
       href: work-with-tags-columns.md
     - name: Bekerja dengan akaun perniagaan
       href: work-with-business-accounts.md
-    - name: Bersepadu dengan Dynamics 365 Marketing
+    - name: Bersepadu dengan Pemasaran Dynamics 365
       href: marketing-get-started.md
 - name: Sumber data
   items:
@@ -76,7 +76,7 @@
       href: merge-entities.md
     - name: Semak semula penyatuan data
       href: review-unification.md
-    - name: Kemas kini tetapan penyatuan
+    - name: Kemas kini seting penyatuan
       href: data-unification-update.md
 - name: Pengayaan data
   items:
@@ -98,7 +98,7 @@
       href: enrichment-enhanced-company-data.md
     - name: Identiti dengan LiveRamp
       href: enrichment-liveramp.md
-    - name: Location from Azure Maps
+    - name: Lokasi dari Peta Azure
       href: enrichment-azure-maps.md
     - name: Lokasi daripada HERE Technologies
       href: enrichment-here.md
@@ -114,7 +114,7 @@
       href: activities.md
     - name: Gunakan pengurusan persetujuan
       href: consent-management.md
-    - name: Gunakan data web untuk pemperibadian
+    - name: Menggunakan data web untuk pemperibadian
       href: unknown-to-known.md
 - name: Segmen
   items:
@@ -122,7 +122,7 @@
       href: segments.md
     - name: Buat dengan pembina segmen
       href: segment-builder.md
-    - name: Cipta dengan segmen pantas
+    - name: Buat dengan segmen cepat
       href: segment-quick.md
     - name: Segmen yang dicadangkan berdasarkan pada ukuran
       href: suggested-segments.md
@@ -134,11 +134,11 @@
       href: find-similar-customer-segments.md
 - name: Langkah
   items:
-    - name: Ukuran gambaran keseluruhan
+    - name: Gambaran keseluruhan langkah
       href: measures.md
     - name: Buat dengan pembina ukuran
       href: measure-builder.md
-    - name: Cipta dengan templat
+    - name: Buat dengan templat
       href: measure-templates.md
 - name: Ramalan
   items:
@@ -218,7 +218,7 @@
           href: export-google-ads.md
         - name: InMobi
           href: export-inmobi.md
-        - name: Iterable
+        - name: Boleh rosak
           href: export-iterable.md
         - name: Klaviyo
           href: export-klaviyo.md
@@ -280,22 +280,24 @@
       href: own-data-lake-storage.md
     - name: Urus tetapan persekitaran
       href: manage-environments.md
-    - name: Sambung ke akaun storan menggunakan Principal Perkhidmatan
+    - name: Sambung ke akaun storan menggunakan Prinsipal Perkhidmatan
       href: connect-service-principal.md
 - name: Pentadbiran
   items:
-    - name: Sediakan konfigurasi sistem
-      href: system.md
-    - name: Konfigurasikan seting keselamatan
-      href: security-overview.md
     - name: Tugaskan keizinan pengguna
       href: permissions.md
     - name: Bawa Key Vault anda sendiri
       href: use-azure-key-vault.md
+    - name: Konfigurasikan seting keselamatan
+      href: security-overview.md
     - name: Eksport log diagnostik
       href: diagnostics.md
-    - name: Gambaran keseluruhan sambungan
+    - name: Urus sambungan
       href: connections.md
+    - name: Jadualkan segar semula sistem
+      href: schedule-refresh.md
+    - name: Lihat konfigurasi sistem
+      href: system.md
 - name: API
   items:
     - name: Kerja dengan API

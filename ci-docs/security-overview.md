@@ -1,76 +1,75 @@
 ---
-title: Seting keselamatan dalam Wawasan Pelanggan
+title: Konfigurasikan seting keselamatan
 description: Ketahui tentang seting keselamatan dalam Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947426"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246073"
 ---
-# <a name="security-settings-in-customer-insights"></a>Seting keselamatan dalam Wawasan Pelanggan
+# <a name="configure-security-settings"></a>Konfigurasikan seting keselamatan
 
-Halaman **Keselamatan** menyenaraikan opsyen untuk mengkonfigurasi keizinan pengguna dan ciri yang membantu menjadikan Dynamics 365 Customer Insights lebih selamat. Hanya pentadbir boleh mencapai halaman ini.
+Urus kekunci API, akses data pelanggan dan sediakan Pautan Peribadi Azure.
 
-Pergi ke **Keselamatan** > **Pentadbir** untuk mengkonfigurasi seting.
+## <a name="manage-api-keys"></a>Urus kekunci API
 
-Halaman **Keselamatan** termasuk tab berikut:
+Lihat dan urus kekunci untuk menggunakan [API](apis.md) Wawasan Pelanggan dengan data dalam persekitaran anda.
 
-- [Pengguna](#users-tab)
-- [API](#apis-tab)
-- [Pautan Peribadi](#private-links-tab)
-- [Key Vault](#key-vault-tab)
-- [Akses data pelanggan dengan selamat dengan Kotak Kunci Pelanggan (Pratonton)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Pergi ke **Keselamatan** > **Sistem** dan pilih **tab API**.
 
-## <a name="users-tab"></a>Tab Pengguna
+1. Jika capaian API ke persekitaran belum disediakan, pilih **Dayakan**. Atau, untuk menyekat akses API ke persekitaran, pilih **Lumpuhkan** dan sahkan.
 
-Akses kepada Wawasan Pelanggan adalah terhad kepada pengguna dalam organisasi anda yang telah ditambahkan pada aplikasi oleh pentadbir. Tab **Pengguna** membolehkan anda menguruskan akses pengguna dan keizinan mereka. Untuk maklumat lanjut, lihat [Keizinan pengguna](permissions.md).
+1. Uruskan kekunci API utama dan sekunder:
 
-## <a name="apis-tab"></a>Tab API
+   1. Untuk menunjukkan kekunci API utama atau sekunder, pilih **simbol Tunjukkan**.
 
-Lihat dan urus kunci untuk menggunakan [API](apis.md) Wawasan Pelanggan dengan data persekitaran anda.
+   1. Untuk menyalin kekunci API utama atau sekunder, pilih **simbol Salin**.
 
-Anda boleh mencipta kekunci primer dan sekunder baru dengan **memilih Jana Semula primer** atau **Jana Semula sekunder**. 
+   1. Untuk mencipta kekunci API primer atau sekunder baru, pilih **Jana Semula primer** atau **Jana Semula sekunder**.
 
-Untuk menyekat akses API ke persekitaran, pilih **Lumpuhkan**. Jika API dinyahdayakan, anda boleh memilih **Dayakan** untuk memberikan capaian sekali lagi.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Akses data pelanggan dengan selamat dengan Peti Kunci Pelanggan (Pratonton)
 
-## <a name="private-links-tab"></a>Tab Pautan Peribadi
+Wawasan Pelanggan menggunakan Power Platform keupayaan Peti Kunci Pelanggan. Kotak Kunci Pelanggan menyediakan antara muka untuk menyemak dan meluluskan (atau menolak) permintaan akses data. Permintaan ini berlaku apabila akses data kepada data pelanggan diperlukan untuk menyelesaikan kes sokongan. Untuk menggunakan ciri ini, Wawasan Pelanggan mesti mempunyai sambungan sedia ada ke Microsoft Dataverse persekitaran dalam penyewa anda.
 
-[Azure Private Link](/azure/private-link/private-link-overview) mari kita Wawasan Pelanggan menyambung ke akaun anda Azure Data Lake Storage melalui titik akhir peribadi dalam rangkaian maya anda. Untuk data dalam akaun storan, yang tidak terdedah kepada internet awam, Private Link mendayakan sambungan ke rangkaian terhad tersebut.
+Untuk maklumat lanjut tentang Peti Kunci Pelanggan, lihat [ringkasan](/power-platform/admin/about-lockbox#summary)Power Platform Peti Kunci Pelanggan. Artikel ini juga menerangkan [aliran kerja](/power-platform/admin/about-lockbox#workflow) dan persediaan [yang diperlukan](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) untuk mendayakan Kotak Kunci Pelanggan.
+
+> [!IMPORTANT]
+> Pentadbir global untuk Power Platform atau Power Platform pentadbir boleh meluluskan permintaan Kotak Kunci Pelanggan yang dikeluarkan untuk Wawasan Pelanggan.
+
+## <a name="set-up-an-azure-private-link"></a>Sediakan Pautan Peribadi Azure
+
+[Azure Private Link](/azure/private-link/private-link-overview) mari kita Wawasan Pelanggan menyambung ke akaun anda Azure Data Lake Storage melalui titik akhir peribadi dalam rangkaian maya anda. Untuk data dalam akaun storan, yang tidak terdedah kepada internet awam, Pautan Peribadi mendayakan sambungan ke rangkaian terhad tersebut.
 
 > [!IMPORTANT]
 > Keperluan peranan minimum untuk menyediakan sambungan Pautan Peribadi:
 >
 > - Wawasan Pelanggan: Pentadbir
-> - Peranan terbina dalam Azure: [Penyumbang Akaun Storan](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Azure terbina dalam role: [Penyumbang Akaun Storan](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
 > - Keizinan untuk peranan Azure tersuai: [Microsoft.Storage/storageAccounts/read dan Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
 
-Menyediakan Pautan Peribadi dalam Wawasan Pelanggan ialah proses dua langkah. Pertama, anda memulakan penciptaan Pautan Peribadi daripada **Pautan Peribadi Keselamatan** > **Pentadbir** > **dalam Wawasan** Pelanggan. Anak **tetingkap Tambah Pautan** Peribadi menyenaraikan akaun storan daripada penyewa anda yang anda mempunyai keizinan untuk melihat. Pilih akaun storan dan berikan persetujuan untuk mencipta Pautan Peribadi.
+1. Dalam Wawasan Pelanggan, pergi ke **Keselamatan** > **Pentadbir** dan pilih tab **Pautan Peribadi**.
 
-Seterusnya, anda perlu meluluskan Pautan Peribadi di bahagian akaun Data Lake Storage. Buka pautan yang dibentangkan pada skrin untuk meluluskan Pautan Peribadi baharu.
+1. Pilih **Tambah Pautan Peribadi**.
 
-## <a name="key-vault-tab"></a>Tab Peti Besi Kekunci
+   Anak **tetingkap Tambah Pautan Peribadi** menyenaraikan akaun storan daripada penyewa anda yang anda mempunyai keizinan untuk dilihat.
 
-Tab **Peti Besi** Kunci membolehkan anda memaut dan menguruskan peti besi [kunci Azure anda sendiri](/azure/key-vault/general/basic-concepts) ke persekitaran.
-Key vault yang ditetapkan boleh digunakan untuk peringkat dan menggunakan rahsia dalam sempadan pematuhan organisasi. Wawasan Pelanggan boleh menggunakan rahsia dalam Azure Key Vault untuk [menyediakan sambungan](connections.md) ke sistem pihak ketiga.
+1. Pilih langganan, kumpulan sumber dan akaun storan.
 
-Untuk maklumat lanjut, lihat [Bawa Azure key vault anda sendiri](use-azure-key-vault.md).
+1. [Semak privasi dan pematuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya bersetuju**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Akses data pelanggan dengan selamat dengan Kotak Kunci Pelanggan (Pratonton)
+1. Pilih **Simpan**.
 
-Wawasan Pelanggan menggunakan Power Platform keupayaan Kotak Kunci Pelanggan. Kotak Kunci Pelanggan menyediakan antara muka untuk menyemak dan meluluskan (atau menolak) permintaan capaian data. Permintaan ini berlaku apabila akses data kepada data pelanggan diperlukan untuk menyelesaikan kes sokongan. Untuk menggunakan ciri ini, Wawasan Pelanggan mesti mempunyai sambungan sedia ada ke Microsoft Dataverse persekitaran dalam penyewa anda.
+1. Pergi ke akaun Penyimpanan Tasik Data anda dan buka pautan yang dipaparkan pada skrin.
 
-Untuk maklumat lanjut tentang Kotak Kunci Pelanggan, lihat [ringkasan](/power-platform/admin/about-lockbox#summary)Power Platform Kotak Kunci Pelanggan. Artikel ini juga menerangkan [aliran kerja](/power-platform/admin/about-lockbox#workflow) dan persediaan [yang diperlukan](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) untuk mendayakan Kotak Kunci Pelanggan.
+1. Luluskan Pautan Peribadi.
 
-> [!IMPORTANT]
-> Pentadbir global untuk Power Platform atau Power Platform pentadbir boleh meluluskan permintaan Peti Kunci Pelanggan yang dikeluarkan untuk Wawasan Pelanggan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

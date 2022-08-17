@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170692"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246304"
 ---
 # <a name="segments-overview"></a>Gambaran keseluruhan segmen
 
@@ -47,7 +47,7 @@ Pilih cara membuat segmen berdasarkan khalayak sasaran anda.
 
 ## <a name="manage-existing-segments"></a>Mengurus bahagian sedia ada
 
-Pergi ke **halaman Segmen** untuk melihat segmen yang anda cipta, status dan keadaan mereka, bilangan ahli dan kali terakhir data disegar semula. Anda boleh mengisih senarai segmen mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari segmen yang anda ingin uruskan.
+Pergi ke **halaman Segmen untuk melihat segmen yang** anda cipta, status dan keadaan mereka, bilangan ahli dan kali terakhir data disegarkan semula. Anda boleh mengisih senarai segmen mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari segmen yang anda ingin uruskan.
 
 Pilih segmen untuk melihat tindakan yang tersedia.
 
@@ -58,8 +58,8 @@ Pilih segmen untuk melihat tindakan yang tersedia.
 - **Edit** segmen untuk mengubah sifatnya.
 - **Cipta duplikasi** segmen. Anda boleh memilih untuk mengedit sifatnya dengan segera atau menyimpan pendua.
 - [**Segar semula**](#refresh-segments) segmen untuk memasukkan data terkini.
-- **Aktifkan** atau **Nyahaktifkan** segmen. Segmen tidak aktif tidak akan disegarkan semula semasa segar semula [yang dijadualkan dan mempunyai Status](system.md#schedule-tab) yang **disenaraikan** sebagai **Dilangkau**, menunjukkan bahawa segar semula tidak dicuba. Segmen aktif disegarkan semula berdasarkan jenisnya: statik atau dinamik.
-- **Jadikan statik** atau **Jadikan dinamik** jenis segmen. Segmen statik mesti disegar semula secara manual. Segmen dinamik disegar semula secara automatik semasa segar semula sistem.
+- **Aktifkan** atau **Nyahaktifkan** segmen. Segmen tidak aktif tidak akan disegar semula semasa [segar semula](schedule-refresh.md) berjadual dan **status** disenaraikan sebagai **Dilangkau**, menunjukkan bahawa segar semula tidak dicuba. Segmen aktif disegarkan semula berdasarkan jenisnya: statik atau dinamik.
+- **Jadikan statik** atau **Jadikan dinamik** jenis segmen. Segmen statik mesti disegarkan secara manual. Segmen dinamik disegarkan secara automatik semasa penyegaran semula sistem.
 - [**Cari pelanggan**](find-similar-customer-segments.md) yang serupa dari segmen ini.
 - **Nama semula** segmen.
 - **Tag** untuk [menguruskan tag](work-with-tags-columns.md#manage-tags) untuk segmen.
@@ -88,10 +88,10 @@ Bahagian bawah mengandungi senarai ahli bahagian.
 
 Segmen boleh disegarkan semula pada jadual automatik atau disegarkan secara manual atas permintaan. Untuk menyegar semula satu atau lebih segmen secara manual, pilihnya dan pilih **Segar Semula**.
 
-Untuk [menjadualkan segar semula](system.md#schedule-tab) automatik, pergi ke **Jadual** > **Sistem** > **Pentadbir**. Peraturan berikut terpakai:
+Untuk [menjadualkan segar semula](schedule-refresh.md) automatik, pergi ke **Jadual** > **Sistem** > **Pentadbir**. Peraturan berikut terpakai:
 
-- Semua segmen dengan jenis **Dinamik** atau **Pengembangan** akan disegarkan semula secara automatik pada irama yang ditetapkan. Setelah segar semula selesai, **Status** menunjukkan jika terdapat sebarang isu dalam menyegarkan segmen. Yang **terakhir disegarkan** menunjukkan cap masa bagi segar semula terakhir yang berjaya. Jika ralat berlaku, pilih ralat untuk melihat butiran tentang apa yang berlaku.
-- Segmen dengan jenis **Statik** *tidak* akan disegar semula secara automatik. Terakhir **disegarkan** menunjukkan cap masa kali terakhir segmen statik dijalankan atau disegarkan semula secara manual.
+- Semua segmen dengan jenis **Dinamik** atau **Pengembangan** akan disegarkan semula secara automatik pada irama yang ditetapkan. Setelah segar semula selesai, **Status** menunjukkan jika terdapat sebarang isu dalam menyegarkan segmen. Yang **terakhir disegarkan** menunjukkan cap waktu penyegaran terakhir yang berjaya. Jika ralat berlaku, pilih ralat untuk melihat butiran tentang apa yang berlaku.
+- Segmen dengan jenis **Statik** *tidak* akan disegarkan semula secara automatik. Yang **terakhir disegarkan** menunjukkan cap waktu kali terakhir segmen statik dijalankan atau disegarkan secara manual.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
@@ -101,7 +101,7 @@ Eksport segmen ke aplikasi lain untuk menggunakan data selanjutnya. Eksport segm
 
 1. Pergi ke **halaman Segmen** dan pilih segmen yang anda ingin eksport.
 
-1. Pilih **Uruskan eksport**. Halaman **Eksport (pratonton) untuk segmen** dibuka. Lihat semua eksport yang dikonfigurasi yang dikumpulkan oleh sama ada ia mengandungi segmen semasa atau tidak.
+1. Pilih **Uruskan eksport**. Halaman **Eksport (pratonton) untuk segmen** dibuka. Lihat semua eksport yang dikonfigurasi yang dikumpulkan sama ada ia mengandungi segmen semasa atau tidak.
 
    1. Untuk menambah segmen yang dipilih kepada eksport, **Edit** eksport masing-masing untuk memilih segmen yang sepadan kemudian simpan. Dalam persekitaran untuk pelanggan individu, pilih eksport dalam senarai dan pilih **Tambah segmen** untuk mencapai hasil yang sama.
 
@@ -111,21 +111,21 @@ Eksport segmen ke aplikasi lain untuk menggunakan data selanjutnya. Eksport segm
 
 ## <a name="track-usage-of-a-segment"></a>Jejaki penggunaan segmen
 
-Jika anda menggunakan segmen dalam app yang berdasarkan organisasi yang sama Microsoft Dataverse yang berkaitan dengan Wawasan Pelanggan, anda boleh menjejaki penggunaan segmen. Untuk [segmen Wawasan Pelanggan yang digunakan dalam perjalanan pelanggan Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistem memberitahu anda tentang penggunaan segmen tersebut.
+Jika anda menggunakan segmen dalam aplikasi yang berdasarkan organisasi yang sama Microsoft Dataverse yang berkaitan dengan Wawasan Pelanggan, anda boleh menjejaki penggunaan segmen. Untuk [segmen Wawasan Pelanggan yang digunakan dalam perjalanan pelanggan Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistem ini memberitahu anda tentang penggunaan segmen tersebut.
 
-Apabila mengedit segmen yang digunakan dalam persekitaran Wawasan Pelanggan atau dalam perjalanan pelanggan dalam Pemasaran, sepanduk dalam [pembangun](segment-builder.md) segmen memberitahu anda tentang kebergantungan. Periksa butiran pergantungan terus dari sepanduk atau dengan **memilih Penggunaan** dalam pembangun segmen.
+Apabila mengedit segmen yang digunakan dalam persekitaran Wawasan Pelanggan, atau dalam perjalanan pelanggan dalam Pemasaran, sepanduk dalam [pembangun](segment-builder.md) segmen memberitahu anda tentang kebergantungan. Periksa butiran pergantungan terus dari sepanduk atau dengan **memilih Penggunaan** dalam pembangun segmen.
 
 Anak **tetingkap penggunaan** Segmen menunjukkan butiran tentang penggunaan segmen ini dalam Dataverse aplikasi berasaskan. Untuk segmen yang digunakan dalam perjalanan pelanggan, anda akan menemui pautan untuk memeriksa perjalanan dalam Pemasaran di mana segmen ini digunakan. Jika anda mempunyai keizinan untuk mengakses aplikasi Pemasaran, lihat butiran lanjut di sana.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Anak tetingkap sisi dengan butiran penggunaan segmen dalam pembina segmen.":::
 
-Sistem ini memberitahu anda tentang penggunaan segmen yang dijejaki apabila anda cuba memadamkannya. Jika segmen yang akan anda padamkan digunakan dalam perjalanan pelanggan dalam Pemasaran, perjalanan tersebut akan berhenti untuk semua pengguna dalam segmen tersebut. Sekiranya perjalanan itu adalah sebahagian daripada kempen pemasaran, penghapusan akan mempengaruhi kempen tersebut sendiri. Walau bagaimanapun, anda masih boleh memadamkan segmen walaupun amaran.
+Sistem ini memberitahu anda tentang penggunaan segmen yang dijejaki apabila anda cuba memadamkannya. Jika segmen yang akan anda padamkan digunakan dalam perjalanan pelanggan dalam Pemasaran, perjalanan itu akan berhenti untuk semua pengguna dalam segmen tersebut. Sekiranya perjalanan adalah sebahagian daripada kempen pemasaran, penghapusan akan mempengaruhi kempen itu sendiri. Walau bagaimanapun, anda masih boleh memadamkan segmen walaupun terdapat amaran.
 
 :::image type="content" source="media/segment-usage-delete.png" alt-text="Kotak dialog untuk mengesahkan penghapusan segmen apabila segmen digunakan dalam Dataverse aplikasi.":::
 
 ### <a name="supported-apps"></a>Aplikasi yang disokong
 
-Penggunaan sedang dijejaki dalam aplikasi berasaskan berikut Dataverse:
+Penggunaan kini dijejaki dalam aplikasi berasaskan berikut Dataverse:
 
 - [Perjalanan pelanggan dalam Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 

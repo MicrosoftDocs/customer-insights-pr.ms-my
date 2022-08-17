@@ -1,7 +1,7 @@
 ---
-title: Uruskan keizinan pengguna
+title: Tugaskan keizinan pengguna
 description: Ketahui mengenai keizinan dan peranan pengguna.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054887"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245430"
 ---
-# <a name="manage-user-permissions"></a>Uruskan keizinan pengguna
+# <a name="assign-user-permissions"></a>Tugaskan keizinan pengguna
 
-Halaman **Keizinan** ialah tempat anda akan menyediakan peranan dan keizinan untuk menggunakan Wawasan Pelanggan.
-
-Anda perlu mempunyai keizinan pentadbir untuk melihat halaman. Untuk mencapai halaman keizinan, pergi ke **Pengguna Keselamatan** > **Pentadbir** > **·**.
-
-Terdapat tiga jenis peranan:
+Capaian kepada Wawasan Pelanggan adalah terhad kepada pengguna dalam organisasi anda yang ditambahkan pada aplikasi oleh pentadbir. Pentadbir boleh menambah, mengedit atau mengalih keluar pengguna. Pengguna boleh menjadi pengguna, kumpulan atau aplikasi tunggal. Terdapat tiga jenis peranan yang boleh dimiliki oleh pengguna:
 
 ## <a name="viewer"></a>Penonton
 
@@ -41,18 +37,18 @@ Terdapat tiga jenis peranan:
 
 - Semua keizinan tersedia untuk Penonton.
 - Muatkan dan ubah data menggunakan halaman **Sumber data**.
-- Lengkapkan ***Penyatuan** Data yang menghasilkan entiti profil pelanggan yang bersatu.
+- Penyatuan **Data Lengkap** yang menghasilkan entiti profil pelanggan yang bersatu.
 - Takrif **Perhubungan** dan **Aktiviti**.
 - Cipta segmen menggunakan halaman **Segmen**.
 - Cipta ukuran menggunakan halaman **Ukuran**.
 - Urus konfigurasi dan perkayakan profil pelanggan daripada halaman **Pengayaan** (untuk pengayaan pihak pertama sahaja).
-- Urus dan cipta eksport berdasarkan sambungan yang dikongsi dengan penyumbang. [Ketahui lebih lanjut tentang cara pentadbir membenarkan penyumbang menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Urus dan cipta eksport berdasarkan [sambungan yang dikongsi dengan penyumbang](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Pentadbiran
 
 - Semua keizinan tersedia untuk Penyumbang.
-- Tetapan ubah pada halaman **Sistem**, termasuk bahasa bekerja dan jadual segar semula untuk proses sistem anda.
-- Lihat dan tambah keizinan menggunakan halaman **Keizinan**.
+- Tukar seting pada **halaman Sistem**, termasuk bahasa kerja, segar semula jadual untuk proses sistem anda dan mengeksport log diagnostik.
+- Tukar seting pada **halaman Keselamatan**, termasuk pengguna, kekunci API, pautan peribadi dan peti besi kunci.
 - Tetapkan takrifan carian dan penapis untuk halaman Pelanggan menggunakan halaman **Carian & tapis indeks** (boleh diakses melalui halaman **Pelanggan**).
 - Uruskan sambungan dan benarkannya untuk peranan pengguna lain pada halaman **Sambungan**.
 - Urus konfigurasi dan perkayakan profil pelanggan daripada halaman **Pengayaan** (untuk semua pengayaan).
@@ -64,27 +60,30 @@ Terdapat tiga jenis peranan:
 
 ## <a name="admin-owner"></a>Pentadbir (pemilik)
 
-- Semua keizinan tersedia untuk Pentadbir.
+- Semua keizinan tersedia kepada Pentadbir.
 - [Tetapkan semula dan padamkan](manage-environments.md#reset-an-existing-environment-preview) persekitaran.
 
-## <a name="assign-roles-and-permissions"></a>Tugaskan peranan dan keizinan
+## <a name="add-users"></a>Tambah pengguna
 
-1. Pergi ke **> Keselamatan** > **Pentadbir****Pengguna***.
+1. Pergi ke **Keselamatan** > **Pentadbir** dan pilih tab **Pengguna**.
 
 1. Pilih **Tambah pengguna** untuk membuka anak tetingkap **Tambah/Edit keizinan**.
 
-1. Gunakan medan **Cari** untuk mencari pengguna atau kumpulan Azure Active Directory yang keizinannya anda mahu laraskan. Pilih **Peranan** untuk ditugaskan kepada pengguna atau kumpulan tersebut.
+1. **Gunakan medan Carian** untuk mencari pengguna atau kumpulan yang Azure Active Directory anda ingin tambah. Pilih **Peranan** untuk ditugaskan kepada pengguna atau kumpulan tersebut.
 
-1. Pilih **Simpan**. Persekitaran semasa akan dikongsi secara automatik dengan pengguna atau ahli kumpulan yang mana keizinan anda telah berubah. Pengguna boleh mengakses aplikasi Customer Insights dan bekerja mengikut peranan tertentu mereka.
+1. Pilih **Simpan**. Persekitaran semasa dikongsi secara automatik dengan pengguna atau ahli kumpulan. Pengguna boleh mengakses aplikasi Customer Insights dan bekerja mengikut peranan tertentu mereka.
 
 ## <a name="view-current-permissions"></a>Lihat keizinan semasa
 
-Pergi ke **Pengguna** > **Keselamatan** > **Pentadbir** untuk melihat tugasan peranan yang sedang aktif.
+Pergi ke **Keselamatan** > **Pentadbir** dan pilih tab **Pengguna** untuk melihat senarai pengguna aktif dan tugasan peranan mereka. Anda boleh mengisih senarai pengguna mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari pengguna tertentu.
 
-- Lajur **Jenis** menentukan pengguna tunggal, kumpulan, atau aplikasi. Sistem menyokong pengguna atau kumpulan individu.
-- Peranan ditentukan di bawah lajur **Peranan**.
-- Sila sebarang tajuk lajur untuk mengisihkan hasil mengikut nilai lajur tersebut.
-- Gunakan medan **Cari** di bahagian atas halaman untuk mengesan pengguna tertentu.
+## <a name="manage-current-users"></a>Uruskan pengguna semasa
 
+Pergi ke **Keselamatan** > **Pentadbir** dan pilih tab **Pengguna**. Anda boleh mengisih senarai pengguna mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari pengguna yang anda ingin uruskan.
+
+Pilih pengguna untuk melihat tindakan yang tersedia.
+
+- **Edit** untuk mengedit peranan pengguna dalam Wawasan Pelanggan. Pilih **Simpan** untuk mengesahkan perubahan.
+- **Alih keluar** untuk mengalih keluar pengguna daripada mempunyai akses kepada Wawasan Pelanggan. Pilih **Padam** untuk mengesahkan pemadaman.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

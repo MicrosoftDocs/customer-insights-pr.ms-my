@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196405"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259855"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Eksport data ke Azure Synapse Analytics (pratonton)
 
@@ -24,7 +24,7 @@ Azure Synapse adalah perkhidmatan analitis yang mempercepatkan masa untuk wawasa
 > [!NOTE]
 > Pastikan untuk menetapkan semua **tugasan peranan** seperti yang diterangkan.
 
-- Dalam Wawasan Pelanggan, akaun pengguna (AD) anda Azure Active Directory mesti mempunyai [peranan Pentadbir](permissions.md#assign-roles-and-permissions).
+- Dalam Wawasan Pelanggan, akaun pengguna (AD) anda Azure Active Directory mesti mempunyai [peranan Pentadbir](permissions.md#add-users).
 
 Dalam Azure:
 
@@ -32,13 +32,15 @@ Dalam Azure:
 
 - Jika menggunakan akaun Gen2 baharu Azure Data Lake Storage, [prinsipal perkhidmatan untuk Wawasan](connect-service-principal.md) Pelanggan mempunyai **keizinan Penyumbang** Data Blob Storan. Data Lake Storage Gen2 **mesti mempunyai** [ruang nama hierarki](/azure/storage/blobs/data-lake-storage-namespace) didayakan.
 
-- Pada kumpulan sumber di mana Azure Synapse ruang kerja berada, *prinsipal* perkhidmatan dan *Azure AD pengguna dengan keizinan pentadbir dalam Wawasan* Pelanggan mesti diperuntukkan sekurang-kurangnya **keizinan** Pembaca [...](/azure/role-based-access-control/role-assignments-portal).
+- Pada kumpulan sumber tempat Azure Synapse ruang kerja berada, *prinsipal* perkhidmatan dan *Azure AD pengguna dengan keizinan pentadbir dalam Wawasan* Pelanggan mesti diperuntukkan sekurang-kurangnya **keizinan** Pembaca [...](/azure/role-based-access-control/role-assignments-portal).
 
-- Pengguna *Azure AD dengan keizinan pentadbir dalam Wawasan* Pelanggan mempunyai **keizinan Penyumbang** Data Blob Storan pada Azure Data Lake Storage akaun Gen2 di mana data berada dan dipautkan ke Azure Synapse ruang kerja. Ketahui lanjut tentang [menggunakan portal Azure untuk menugaskan peranan Azure mengakses ke blob dan data baris](/azure/storage/common/storage-auth-aad-rbac-portal) dan [Keizinan Penyumbang Data Blob Storan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Pengguna *Azure AD dengan keizinan pentadbir dalam Wawasan* Pelanggan mempunyai **keizinan Penyumbang** Data Blob Storan pada Azure Data Lake Storage akaun Gen2 tempat data berada dan dipautkan ke Azure Synapse ruang kerja. Ketahui lanjut tentang [menggunakan portal Azure untuk menugaskan peranan Azure mengakses ke blob dan data baris](/azure/storage/common/storage-auth-aad-rbac-portal) dan [Keizinan Penyumbang Data Blob Storan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Identiti *[Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* terurus ruang kerja mempunyai **keizinan Penyumbang** Data Blob Storan pada Azure Data Lake Storage akaun Gen2 di mana data berada dan dipautkan ke Azure Synapse ruang kerja. Ketahui lanjut tentang [menggunakan portal Azure untuk menugaskan peranan Azure mengakses ke blob dan data baris](/azure/storage/common/storage-auth-aad-rbac-portal) dan [Keizinan Penyumbang Data Blob Storan](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Azure Synapse Pada ruang kerja, *prinsipal perkhidmatan untuk Wawasan* Pelanggan mempunyai **peranan Pentadbir**[Sinapse yang diberikan](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Azure Synapse Pada ruang kerja, *prinsipal perkhidmatan untuk Wawasan* Pelanggan mempunyai **peranan Pentadbir**[Synapse yang](/azure/synapse-analytics/security/how-to-set-up-access-control) ditugaskan.
+
+- Jika persekitaran Wawasan Pelanggan anda menyimpan data sendiri [Azure Data Lake Storage](own-data-lake-storage.md), pengguna yang menyediakan sambungan untuk Azure Synapse Analytics memerlukan sekurang-kurangnya peranan Pembaca **terbina dalam** pada akaun Storan Tasik Data. Untuk maklumat lanjut, lihat [Tugaskan peranan Azure menggunakan portal Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Sediakan sambungan ke Azure Synapse
 
@@ -60,17 +62,17 @@ Dalam Azure:
 
 ## <a name="configure-an-export"></a>Konfigurasikan eksport
 
-[!INCLUDE [export-permission-include](includes/export-permission.md)] Untuk mengkonfigurasi eksport dengan sambungan kongsi, anda memerlukan sekurang-kurangnya **keizinan Penyumbang** dalam Wawasan Pelanggan.
+[!INCLUDE [export-permission-include](includes/export-permission.md)] Untuk mengkonfigurasikan eksport dengan sambungan dikongsi, anda memerlukan sekurang-kurangnya **keizinan Penyumbang** dalam Wawasan Pelanggan.
 
 1. Pergi ke **Data** > **Eksport**.
 
 1. Pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada seksyen Azure Synapse Analytics. Hubungi pentadbir jika tiada sambungan tersedia.
+1. **Dalam medan Sambungan untuk eksport**, pilih sambungan daripada Azure Synapse Analytics seksyen. Hubungi pentadbir jika tiada sambungan tersedia.
 
-1. Sediakan **Nama paparan** yang dikenali untuk eksport dan **Nama pangkalan data** anda. Eksport akan mencipta pangkalan data [Azure Synapse tasik baru](/azure/synapse-analytics/database-designer/concepts-lake-database) dalam ruang kerja yang ditakrifkan dalam sambungan.
+1. Sediakan **Nama paparan** yang dikenali untuk eksport dan **Nama pangkalan data** anda. Eksport akan mewujudkan pangkalan data [Azure Synapse tasik baru](/azure/synapse-analytics/database-designer/concepts-lake-database) dalam ruang kerja yang ditakrifkan dalam sambungan.
 
-1. Pilih entiti mana yang anda mahu eksport ke Azure Synapse Analytics.
+1. Pilih entiti yang anda mahu eksport Azure Synapse Analytics.
    > [!NOTE]
    > Sumber data berdasarkan [folder Common Data Model](connect-common-data-model.md) tidak disokong.
 

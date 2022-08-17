@@ -1,7 +1,7 @@
 ---
 title: Gambaran keseluruhan sambungan (pratonton)
 description: Sambungan ke perkhidmatan lain daripada Customer Insights.
-ms.date: 04/09/2021
+ms.date: 08/04/2022
 ms.reviewer: nikeller
 ms.subservice: audience-insights
 ms.topic: overview
@@ -11,97 +11,95 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8580dc7d90c75f66f73efc15f8e38f5e10fbb8a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195185"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245522"
 ---
 # <a name="connections-preview-overview"></a>Gambaran keseluruhan sambungan (pratonton)
 
-Sambungan adalah kunci untuk mendayakan perkongsian data ke dan daripada Customer Insights. Setiap sambungan mewujudkan perkongsian data dengan perkhidmatan tertentu. Sambungan adalah asas untuk [mengkonfigurasikan pengayaan pihak ketiga](enrichment-hub.md) dan [mengkonfigurasi eksport](export-destinations.md). Sambungan yang sama boleh digunakan beberapa kali. Sebagai contoh, satu sambungan ke Dynamics 365 Marketing berfungsi untuk berbilang eksport dan satu sambungan Leadspace boleh digunakan untuk beberapa pengayaan.
+Sambungan adalah kunci untuk mendayakan perkongsian data ke dan daripada Customer Insights. Setiap sambungan mewujudkan perkongsian data dengan perkhidmatan tertentu. Gunakan sambungan untuk [mengkonfigurasi pengayaan](enrichment-hub.md) pihak ketiga dan [mengkonfigurasi eksport](export-destinations.md). Sambungan yang sama boleh digunakan beberapa kali. Sebagai contoh, satu sambungan ke Dynamics 365 Marketing berfungsi untuk berbilang eksport dan satu sambungan Leadspace boleh digunakan untuk beberapa pengayaan.
 
-Pergi ke **Pentadbir** > **Sambungan** untuk mencipta dan melihat sambungan.
+## <a name="export-connections"></a>Eksport sambungan
 
-Tab **Sambungan** menunjukkan anda semua sambungan aktif. Senarai menunjukkan baris untuk setiap sambungan.
+Hanya pentadbir boleh mengkonfigurasi sambungan baharu, tetapi mereka boleh [memberikan akses kepada penyumbang](#allow-contributors-to-use-a-connection-for-exports) untuk menggunakan sambungan sedia ada. Pentadbir mengawal tempat data boleh pergi, penyumbang mentakrifkan muatan dan kekerapan untuk memenuhi keperluan mereka.
 
-Dapatkan gambaran keseluruhan pantas, perihalan, dan ketahui perkara yang boleh anda lakukan dengan setiap pilihan kebolehsambungan pad tab **Temui**.
+## <a name="enrichment-connections"></a>Sambungan pengayaan
 
-## <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
-
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data kepada pihak ketiga atau produk Microsoft lain, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa pihak ketiga memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Pentadbir anda Dynamics 365 Customer Insights boleh mengalih keluar sambungan pada bila-bila masa untuk menghentikan penggunaan fungsi.
-
-## <a name="exports"></a>Eksport
-
-Hanya pentadbir boleh mengkonfigurasikan sambungan baharu, tetapi mereka boleh memberikan akses kepada penyumbang untuk menggunakan sambungan yang sedia ada. Pentadbir mengawal tempat data boleh pergi, penyumbang mentakrifkan muatan dan kekerapan untuk memenuhi keperluan mereka. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](#allow-contributors-to-use-a-connection-for-exports).
-
-## <a name="enrichments"></a>Pengayaan
-
-Hanya pentadbir boleh mengkonfigurasikan sambungan baharu tetapi sambungan yang dicipta sentiasa tersedia untuk pentadbir dan penyumbang. Pentadbir mengurus kelayakan dan memberi keizinan kepada pemindahan data. Sambungan boleh digunakan oleh pentadbir dan penyumbang untuk pengayaan.
+Hanya pentadbir boleh mengkonfigurasi sambungan baru, tetapi sambungan yang dibuat sentiasa tersedia untuk kedua-dua pentadbir dan penyumbang. Pentadbir mengurus kelayakan dan memberi keizinan kepada pemindahan data. Sambungan boleh digunakan oleh pentadbir dan penyumbang untuk pengayaan.
 
 ## <a name="add-a-new-connection"></a>Tambah sambungan baharu
 
-Untuk menambah sambungan, anda perlu mempunyai [keizinan pentadbir](permissions.md). Jika anda bersambung ke perkhidmatan Microsoft lain, kami menganggap kedua-dua perkhidmatan berada dalam organisasi yang sama.
+### <a name="prerequisites"></a>Prasyarat
 
-1. Pergi ke **Pentadbir** > **Sambungan (pratonton)**.
+- [Keizinan pentadbir](permissions.md)
+- Perkhidmatan Microsoft yang lain, jika ada, berada dalam organisasi yang sama
 
-1. Pilih **Tambah sambungan** untuk mencipta sambungan baharu. Pilih daripada menu juntai bawah jenis sambungan yang mahu anda cipta.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Dalam anak tetingkap **Sediakan sambungan**, berikan butiran yang diperlukan.
-   1. **Nama paparan** dan jenis sambungan yang menerangkan sambungan. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan ini.
-   1. Medan yang tepat bergantung pada perkhidmatan yang anda sambungkan. Anda boleh mengetahui tentang butiran jenis sambungan khusus dalam artikel mengenai perkhidmatan sasaran.
-   1. Jika anda [gunakan Key Vault anda sendiri](use-azure-key-vault.md) untuk menyimpan rahsia, aktifkan **Gunakan Key Vault** dan pilih rahsia daripada senarai.
+1. Pilih **Tambah sambungan** dan pilih jenis sambungan yang anda mahu cipta. Atau, pergi ke tab **Discover** dan pilih **Sediakan** pada jubin sambungan.
 
-1. Untuk mencipta sambungan, pilih **Simpan**.
+1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
-Anda juga boleh memilih **Sediakan** pada jubin pada tab **Temui**.
+1. Masukkan butiran yang diperlukan. Medan yang tepat bergantung pada perkhidmatan yang anda sambungkan. Untuk butiran jenis sambungan tertentu, rujuk artikel mengenai perkhidmatan sasaran.
 
-### <a name="allow-contributors-to-use-a-connection-for-exports"></a>Benarkan penyumbang untuk menggunakan sambungan untuk eksport
+1. Jika anda [gunakan Key Vault anda sendiri](use-azure-key-vault.md) untuk menyimpan rahsia, aktifkan **Gunakan Key Vault** dan pilih rahsia daripada senarai.
 
-Apabila menyediakan atau mengedit sambungan eksport, anda memilih pengguna yang dibenarkan untuk menggunakan sambungan khusus ini untuk mentakrifkan [eksport](export-destinations.md). Secara lalai, sambungan tersedia kepada pengguna yang mempunyai peranan pentadbir. Anda boleh mengubah tetapan ini di bawah **Pilih individu yang boleh menggunakan sambungan ini** dan membenarkan pengguna yang mempunyai peranan penyumbang untuk menggunakan sambungan ini.
+1. Semak privasi dan pematuhan data dan pilih **Saya bersetuju**.
+
+1. Pilih **Simpan** untuk mencipta sambungan.
+
+### <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
+
+Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data kepada pihak ketiga atau produk Microsoft lain, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa pihak ketiga memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Pentadbir anda Dynamics 365 Customer Insights boleh mengalih keluar sambungan pada bila-bila masa untuk menghentikan penggunaan kefungsian.
+
+## <a name="allow-contributors-to-use-a-connection-for-exports"></a>Benarkan penyumbang untuk menggunakan sambungan untuk eksport
+
+Apabila menyediakan atau mengedit sambungan eksport, pilih pengguna mana yang dibenarkan menggunakan sambungan khusus ini untuk mentakrifkan [eksport](export-destinations.md). Secara lalai, sambungan tersedia untuk pengguna dengan peranan pentadbir. Tukar Pilih orang **yang boleh menggunakan seting sambungan** ini untuk membenarkan pengguna dengan peranan penyumbang menggunakan sambungan ini.
 
 - Penyumbang tidak akan dapat melihat atau mengedit sambungan. Mereka hanya akan melihat nama paparan dan jenisnya semasa membuat eksport.
 - Dengan berkongsi sambungan, anda membenarkan penyumbang untuk menggunakan sambungan. Penyumbang akan melihat sambungan dikongsi apabila mereka menyediakan eksport. Mereka boleh mengurus setiap eksport yang menggunakan sambungan khusus ini.
 - Anda boleh mengubah tetapan ini di samping mengekalkan eksport yang telah ditakrifkan oleh penyumbang.
 
-## <a name="edit-a-connection"></a>Edit sambungan
+## <a name="manage-existing-connections"></a>Urus sambungan sedia ada
 
-1. Pergi ke **Pentadbir** > **Sambungan (pratonton)**.
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pergi ke tab **Sambungan**.
+1. Pilih tab **Pengayaan** atau **Eksport** untuk melihat senarai pengayaan atau sambungan eksport, jenis sambungan, apabila ia dicipta dan individu yang mempunyai capaian. Anda boleh mengisih senarai sambungan mengikut mana-mana lajur.
 
-1. Pilih elipsis menegak (&vellip;) untuk sambungan yang anda mahu edit.
+1. Pilih sambungan untuk melihat tindakan yang tersedia.
 
-1. Pilih **Edit**.
+   - **Edit** sambungan.
+   - [**Alih keluar**](#remove-a-connection) sambungan.
 
-1. Ubah nilai yang anda mahu kemas kini dan pilih **Simpan**.
+### <a name="remove-a-connection"></a>Alih keluar sambungan
 
-## <a name="remove-a-connection"></a>Alih keluar sambungan
+Jika sambungan yang anda alih keluar digunakan oleh pengayaan atau eksport, lepaskan dahulu atau alih keluarnya. Dialog alih keluar membimbing anda kepada pengayaan atau eksport yang berkaitan.
 
-Jika sambungan yang anda alih keluar digunakan oleh pengayaan atau eksport, anda perlu melepaskan atau mengalih keluarnya terlebih dahulu. Dialog yang dialih keluar akan membimbing anda kepada pengayaan atau eksport yang berkaitan.
+> [!TIP]
+> Pengayaan yang dinyahaktifkan dan eksport terpisah menjadi tidak aktif. Anda mengaktifkan semula dengan menambah sambungan lain kepadanya pada halaman [Pengayaan](enrichment-hub.md) atau [Eksport](export-destinations.md).
 
-Pengayaan dan eksport yang dialih menjadi tidak aktif. Anda mengaktifkan semula dengan menambah sambungan lain kepadanya pada halaman [Pengayaan](enrichment-hub.md) atau [Eksport](export-destinations.md).
+1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pergi ke **Pentadbir** > **Sambungan (pratonton)**.
+1. Pilih tab **Pengayaan** atau **Eksport**.
 
-1. Pergi ke tab **Sambungan**.
-
-1. Pilih elipsis menegak (&vellip;) untuk sambungan yang anda ingin alih keluar.
+1. Pilih sambungan yang anda mahu alih keluar.
 
 1. Pilih **Alih keluar** daripada menu juntai bawah. Dialog pengesahan muncul.
 
    1. Jika terdapat pengayaan atau eksport menggunakan sambungan ini, pilih butang untuk melihat apa yang menggunakan sambungan.
-      - **Eksport:** Anda boleh memilih sama ada untuk mengalih keluar atau nyahsambung eksport supaya dapat mengalih keluar sambungan. Untuk memutuskan sambungan eksport, pentadbir boleh menggunakan tindakan **Putuskan sambungan**. Tindakan ini tersedia untuk individu dan berbilang eksport terpilih. Dengan memutuskan sambungan, anda mengekalkan konfigurasi eksport, tetapi ia tidak akan berjalan sehingga sambungan yang lain ditambah padanya.
-      - **Pengayaan:** Anda boleh memilih sama ada untuk mengalih keluar atau menyahaktif pengayaan supaya dapat mengalih keluar sambungan.
+      - **Eksport:** Pilih sama ada **Alih keluar** eksport atau **Tanggalkan sambungan**. Melepaskan sambungan mengekalkan konfigurasi eksport, tetapi ia tidak akan dijalankan sehingga sambungan lain ditambah kepadanya.
+      - **Pengayaan:** Pilih sama ada **Padam** atau **Nyahaktifkan** pengayaan.
    1. Sebaik sahaja sambungan tidak mempunyai kebergantungan, pergi kembali ke **Pentadbir** > **Sambungan** dan cuba alih keluar sambungan semula.
 
 1. Untuk mengesahkan pemadaman, pilih **Alih keluar**.
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Sediakan sambungan dengan rahsia yang diuruskan oleh Key Vault anda sendiri
 
-Sesetengah sambungan memerlukan rahsia seperti kekunci API atau kata laluan. Sesetengah sambungan menyokong rahsia yang disimpan dalam Key Vault anda sendiri. Ketahui lebih lanjut tentang sambungan yang disokong dan cara menyediakan peti [besi kunci anda sendiri untuk Wawasan Pelanggan](use-azure-key-vault.md).
+Sesetengah sambungan memerlukan rahsia seperti kekunci API atau kata laluan. Sesetengah sambungan menyokong rahsia yang disimpan dalam Key Vault anda sendiri. Ketahui lebih lanjut tentang sambungan yang disokong dan cara menyediakan pada [Peti Besi Kunci anda sendiri untuk Wawasan](use-azure-key-vault.md) Pelanggan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

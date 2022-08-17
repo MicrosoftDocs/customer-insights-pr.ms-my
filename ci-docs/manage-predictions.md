@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082853"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245476"
 ---
 # <a name="manage-predictions"></a>Urus ramalan
 
@@ -51,14 +51,14 @@ Lajur berikut dalam laporan mengandungi maklumat yang berguna untuk meningkatkan
 
 - **Nama:** Nama perihalan ralat, amaran atau pengesyoran.
 - **Langkah:** Fasa model, kereta api atau skor, maklumat merujuk kepada.
-- **Keadaan:** Keterukan maklumat (ralat, amaran, cadangan).
+- **Negeri:** Keterukan maklumat (ralat, amaran, cadangan).
 - **Nama lajur:** Lajur dalam entiti yang perlu diubah suai untuk meningkatkan prestasi model.
 - **Nama entiti:** Nama entiti yang perlu diubah suai untuk meningkatkan prestasi model.
 - **Butiran:** Butiran tentang ralat, amaran atau pengesyoran.
 
 ## <a name="refresh-a-prediction"></a>Segar semula ramalan
 
-Ramalan akan menyegar semula secara automatik pada [jadual yang sama data anda menyegar semula](system.md#schedule-tab) seperti yang dikonfigurasikan dalam tetapan. Anda boleh juga menyegarkannya semula secara manual.
+Ramalan akan menyegar semula secara automatik pada [jadual yang sama data anda menyegar semula](schedule-refresh.md) seperti yang dikonfigurasikan dalam tetapan. Anda boleh juga menyegarkannya semula secara manual.
 
 1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
 

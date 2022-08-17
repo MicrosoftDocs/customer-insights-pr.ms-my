@@ -1,19 +1,19 @@
 ---
 title: Memperkayakan profil pelanggan dengan import tersuai SFTP (pratonton)
 description: Maklumat umum tentang pengayaan import tersuai SFTP.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195807"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237777"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Memperkayakan profil pelanggan dengan import tersuai SFTP (pratonton)
 
@@ -23,9 +23,9 @@ Import tersuai Protokol Pemindahan Fail Selamat (SFTP) mendayakan anda mengimpor
 
 - Nama fail dan lokasi (laluan) fail yang akan diimport pada hos SFTP diketahui.
 
-- Fail *model.json* yang menentukan skema Model Data Biasa untuk data yang akan diimport boleh didapati. Fail ini mestilah dalam direktori yang sama dengan fail untuk diimport.
+- Fail *model.json* yang menentukan skema Model Data Biasa untuk data yang akan diimport tersedia. Fail ini mestilah dalam direktori yang sama dengan fail untuk diimport.
 
-- Sambungan [SFTP](connections.md) dikonfigurasikan [...](#configure-the-connection-for-sftp-custom-import).
+- Sambungan [SFTP](connections.md) [dikonfigurasikan](#configure-the-connection-for-sftp-custom-import).
 
 ## <a name="file-schema-example"></a>Contoh skema fail
 
@@ -75,7 +75,7 @@ Direktori yang mengandungi fail untuk diimport pada pelayan SFTP juga mesti meng
 
 ## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurasikan sambungan untuk Import Tersuai SFTP
 
-Anda mesti menjadi [pentadbir](permissions.md#admin) dalam Wawasan Pelanggan dan mempunyai kelayakan pengguna, URL dan nombor port untuk lokasi SFTP di mana anda ingin mengimport data.
+Anda mesti menjadi pentadbir [dalam](permissions.md#admin) Wawasan Pelanggan dan mempunyai kelayakan pengguna, URL dan nombor port untuk lokasi SFTP di mana anda ingin mengimport data.
 
 1. Pilih **Tambah sambungan** apabila mengkonfigurasi pengayaan atau pergi ke **Sambungan** > **Pentadbir** dan pilih **Sediakan** pada jubin Import Tersuai.
 
@@ -85,14 +85,9 @@ Anda mesti menjadi [pentadbir](permissions.md#admin) dalam Wawasan Pelanggan dan
 
 1. Masukkan nama pengguna, kata laluan dan hos URL yang sah untuk pelayan SFTP yang data akan diimport berada.
 
-1. Semak dan berikan persetujuan anda untuk [privasi dan pematuhan Data](#data-privacy-and-compliance) dengan memilih **Saya bersetuju**.
+1. [Semak privasi dan pematuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya bersetuju**.
 
 1. Pilih **Sahkan** untuk mengesahkan konfigurasi dan kemudian pilih **Simpan**.
-
-### <a name="data-privacy-and-compliance"></a>Privasi data dan pematuhan
-
-Apabila anda mendayakan Dynamics 365 Customer Insights untuk menghantar data menggunakan Import Tersuai, anda membenarkan pemindahan data di luar sempadan pematuhan untuk Dynamics 365 Customer Insights, termasuk data yang berpotensi sensitif seperti Data Peribadi. Microsoft akan memindahkan data tersebut mengikut arahan anda, tetapi anda bertanggungjawab untuk memastikan bahawa data memenuhi sebarang kewajipan privasi atau keselamatan yang mungkin anda miliki. Untuk maklumat lanjut, lihat [Kenyataan Privasi Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan ini pada bila-bila masa untuk menamatkan penggunaan kefungsian ini.
 
 ## <a name="configure-the-import"></a>Konfigurasikan import
 
@@ -102,11 +97,11 @@ Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan in
 
    :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Jubin import tersuai SFTP.":::
 
-1. Semak semula gambaran keseluruhan dan kemudian pilih **Berikut**.
+1. Semak semula gambaran keseluruhan dan kemudian pilih **Seterusnya**.
 
 1. Pilih sambungan. Hubungi pentadbir jika tiada sambungan tersedia.
 
-1. **Pilih set** data Pelanggan dan pilih profil atau segmen yang ingin anda memperkayakan. Entiti *Pelanggan* memperkayakan semua profil pelanggan anda sedangkan segmen hanya memperkayakan profil pelanggan yang terkandung dalam segmen tersebut.
+1. **Pilih set** data Pelanggan dan pilih profil atau segmen yang ingin anda memperkayakan. Entiti *Pelanggan* memperkayakan semua profil pelanggan anda manakala segmen hanya memperkayakan profil pelanggan yang terkandung dalam segmen tersebut.
 
 1. Pilih **Seterusnya**.
 
@@ -114,7 +109,7 @@ Pentadbir Dynamics 365 Customer Insights anda boleh mengalih keluar pengayaan in
 
 1. Pilih **Seterusnya**.
 
-1. **Berikan Nama** untuk pengayaan dan **nama** entiti Output.
+1. **Sediakan Nama** untuk pengayaan dan **nama** entiti Output.
 
 1. Pilih **Simpan pengayaan** selepas menyemak pilihan anda.
 
