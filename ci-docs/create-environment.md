@@ -1,7 +1,7 @@
 ---
-title: 'Cara: Buat persekitaran baru'
+title: Cipta persekitaran baharu
 description: Langkah-langkah untuk mewujudkan persekitaran dalam Dynamics 365 Customer Insights.
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,73 +12,75 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: 0a45e2fd2bdb7b85883a536f8b42ee650e54db7e
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245568"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304255"
 ---
-# <a name="how-to-create-a-new-environment"></a>Cara: Buat persekitaran baru
+# <a name="create-a-new-environment"></a>Cipta persekitaran baharu
 
-Selepas [membeli lesen langganan untuk Dynamics 365 Customer Insights](paid-license.md), pentadbir Microsoft 365 global penyewa menerima e-mel yang menjemput mereka untuk mewujudkan persekitaran. Pergi ke [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk bermula. Dalam senario ini, anda boleh pergi terus ke [Langkah 1: Berikan maklumat asas](#step-1-provide-basic-information).
+Selepas [membeli lesen langganan untuk Dynamics 365 Customer Insights](paid-license.md), pentadbir Microsoft 365 global penyewa menerima e-mel yang menjemput mereka untuk mencipta persekitaran. Pergi ke [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) untuk bermula. Dalam senario ini, mulakan dengan [Langkah 1: Berikan maklumat asas](#step-1-provide-basic-information).
 
-Selepas persekitaran pertama dicipta, pentadbir Microsoft 365 global penyewa boleh [menambah pengguna membentuk organisasi mereka sebagai pentadbir](permissions.md). Melangkah ke hadapan, pentadbir ini boleh menguruskan pengguna dan persekitaran. Jika organisasi anda membeli lebih daripada satu lesen untuk Wawasan Pelanggan, [hubungi pasukan](https://go.microsoft.com/fwlink/?linkid=2079641) sokongan kami untuk meningkatkan bilangan persekitaran yang tersedia. Untuk maklumat lanjut tentang kapasiti dan kapasiti tambahan, semak [panduan](https://go.microsoft.com/fwlink/?LinkId=866544) pelesenan Dynamics 365.
+Selepas persekitaran pertama dicipta, pentadbir Microsoft 365 global penyewa boleh [menambah pengguna dari organisasi mereka sebagai pentadbir](permissions.md). Pentadbir ini kemudiannya boleh menguruskan pengguna dan persekitaran. Jika organisasi anda membeli lebih daripada satu lesen untuk Wawasan Pelanggan, [hubungi pasukan](https://go.microsoft.com/fwlink/?linkid=2079641) sokongan kami untuk menambah bilangan persekitaran yang tersedia. Untuk maklumat lanjut mengenai kapasiti dan kapasiti tambahan, semak [panduan](https://go.microsoft.com/fwlink/?LinkId=866544) pelesenan Dynamics 365. Sebaik sahaja anda mempunyai keupayaan untuk mencipta persekitaran tambahan, pergi ke [Mulakan proses](#start-the-environment-creation-process) penciptaan persekitaran.
 
 > [!TIP]
 > Jika anda sedang mencari untuk mencuba perkhidmatan ini, lihat [Sediakan persekitaran percubaan](trial-signup.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
-Anda memerlukan [keizinan](permissions.md) pentadbir dalam Wawasan Pelanggan untuk mencipta atau mengurus persekitaran.
+[Keizinan pentadbir](permissions.md) dalam Wawasan Pelanggan
 
 ## <a name="start-the-environment-creation-process"></a>Mulakan proses penciptaan persekitaran
 
-1. Buka pemilih persekitaran dan pilih **+ Baru**.
+1. Buka pemilih persekitaran dan pilih **+ Baharu**.
   
    :::image type="content" source="media/environment-picker.png" alt-text="Pilih pemilih persekitaran.":::
 
-1. Ikuti pengalaman berpandu yang digariskan dalam seksyen berikut untuk menyediakan semua maklumat yang diperlukan untuk persekitaran baru. Jika anda mengkonfigurasi persekitaran lebih awal, anda juga [boleh menyalin konfigurasi](#copy-the-environment-configuration).
+1. Ikuti pengalaman berpandu yang digariskan dalam seksyen berikut untuk menyediakan semua maklumat yang diperlukan untuk persekitaran baru.
 
 ## <a name="step-1-provide-basic-information"></a>Langkah 1: Berikan maklumat asas
 
-Dalam langkah **Maklumat asas**, pilih sama ada anda mahu mencipta persekitaran dari awal atau [menyalin data daripada persekitaran lain](#copy-the-environment-configuration).
+1. Pilih sama ada anda ingin mencipta persekitaran dari awal atau menyalin data dari persekitaran lain. [Menyalin data daripada persekitaran](#copy-the-environment-configuration) lain memerlukan langkah tambahan.
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Dialog untuk mencipta persekitaran Customer Insights baharu.":::
 
-Sediakan butiran berikut:
+1. Sediakan butiran berikut:
 
-- **Nama**: Nama untuk persekitaran ini. Medan ini sudah diisikan jika anda telah menyalin persekitaran sedia ada tetapi anda boleh mengubahnya. Jika anda mempunyai lebih daripada satu persekitaran kerja, berikan setiap nama yang mudah dikenal pasti.
-- **Pilih perniagaan anda**: Pilih khalayak utama untuk persekitaran baharu. Anda boleh bekerja dengan pengguna individu (niaga-ke-pengguna) atau niaga-ke-niaga [akaun perniagaan](work-with-business-accounts.md). Jika organisasi anda terutamanya menjalankan perniagaan dengan individu, seperti peruncit atau kedai kopi, pilih pengguna individu. Sekiranya khalayak utama anda adalah syarikat lain, seperti pengeluar kereta atau syarikat kertas, pilih akaun perniagaan.
-- **Jenis**: Pilih sama ada anda mahu mencipta persekitaran pengeluaran atau kotak pasir. Persekitaran kotak pasir tidak membenarkan segar semula data berjadual dan bertujuan untuk pra-pelaksanaan dan ujian. Persekitaran Kotak Pasir menggunakan cerapan utama yang sama dengan persekitaran pengeluaran dipilih pada masa ini.
-- **Rantau**: Rantau yang perkhidmatan diatur letak dan dihoskan di dalamnya. Untuk [menggunakan akaun Azure Data Lake Storage anda sendiri](own-data-lake-storage.md) atau [menyambung ke organisasi Microsoft Dataverse sedia](customer-insights-dataverse.md) ada, persekitaran Wawasan Pelanggan mesti berada di rantau yang sama.
+   - **Nama**: Nama untuk persekitaran ini. Medan ini sudah diisikan jika anda telah menyalin persekitaran sedia ada tetapi anda boleh mengubahnya.
+   - **Pilih perniagaan** anda: Khalayak utama untuk persekitaran baharu: pengguna individu (B-to-C) atau [akaun](work-with-business-accounts.md) perniagaan (B-to-B). Jika organisasi anda kebanyakannya menjalankan perniagaan dengan individu, seperti peruncit atau kedai kopi, pilih pengguna individu. Jika khalayak utama anda adalah syarikat lain, seperti pengeluar kereta atau syarikat kertas, pilih akaun perniagaan.
+   - **Jenis**: Jenis persekitaran: pengeluaran atau kotak pasir. Persekitaran kotak pasir tidak membenarkan segar semula data berjadual dan bertujuan untuk pra-pelaksanaan dan ujian. Persekitaran Kotak Pasir menggunakan cerapan utama yang sama dengan persekitaran pengeluaran dipilih pada masa ini.
+   - **Rantau**: Rantau di mana perkhidmatan itu digunakan dan dihoskan. Untuk [menggunakan akaun Azure Data Lake Storage anda sendiri](own-data-lake-storage.md) atau [menyambung kepada organisasi Microsoft Dataverse yang sedia](customer-insights-dataverse.md) ada, persekitaran Wawasan Pelanggan mesti berada di rantau yang sama.
+
+1. Pilih **Seterusnya**.
 
 ## <a name="step-2-configure-data-storage"></a>Langkah 2: Konfigurasikan storan data
 
-**Dalam langkah Storan data**, pilih tempat untuk menyimpan data Wawasan Pelanggan.
+1. Pilih tempat untuk menyimpan data Wawasan Pelanggan:
 
-Terdapat dua pilihan yang boleh anda pilih:
+   - **Storan** Wawasan Pelanggan: Storan data diuruskan secara automatik. Ini adalah pilihan lalai dan melainkan terdapat keperluan khusus untuk menyimpan data dalam akaun storan anda sendiri, kami mengesyorkan menggunakan pilihan ini.
+   - **Azure Data Lake Storage**: Akaun anda sendiri Azure Data Lake Storage untuk menyimpan data supaya anda mempunyai kawalan penuh di mana data disimpan. Ikut langkah dalam [Gunakan akaun Azure Data Lake Storage anda sendiri](own-data-lake-storage.md).
 
-- **Storan** Wawasan Pelanggan: Storan data diuruskan oleh pasukan Wawasan Pelanggan. Ini adalah pilihan lalai dan melainkan terdapat keperluan khusus untuk menyimpan data dalam akaun storan anda sendiri, kami mengesyorkan menggunakan pilihan ini.
-- **Azure Data Lake Storage**: Tentukan akaun anda sendiri Azure Data Lake Storage untuk menyimpan data supaya anda mempunyai kawalan penuh di mana data disimpan. Untuk maklumat lanjut, lihat [Menggunakan akaun Azure Data Lake Storage anda sendiri](own-data-lake-storage.md).
+   :::image type="content" source="media/data-storage-environment.png" alt-text="Pilih pilihan pilihan untuk menyimpan data anda.":::
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Pilih pilihan pilihan untuk menyimpan data anda.":::
+1. Pilih **Seterusnya**.
 
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Langkah 3: Sambungkan ke Microsoft Dataverse
 
-Langkah **Microsoft Dataverse** ini membolehkan anda menyambungkan Customer Insights dengan persekitaran Dataverse anda. Kongsi data dengan Dataverse menggunakannya dengan aplikasi perniagaan berdasarkan Dataverse, seperti Dynamics 365 Marketing atau aplikasi berpandukan model dalam Power Apps.
+Jika anda mempunyai Dataverse persekitaran, sambungkan Wawasan Pelanggan. Kongsi data dengan Dataverse menggunakannya dengan aplikasi perniagaan berdasarkan Dataverse, seperti Dynamics 365 Pemasaran atau aplikasi yang didorong oleh model dalam Power Apps.
 
-Biarkan medan ini kosong jika anda tidak mempunyai persekitaran anda sendiri Dataverse dan kami akan mencipta satu untuk anda.
+1. Ikuti langkah-langkah dalam [Mengendalikan data Wawasan Pelanggan dalam Microsoft Dataverse](customer-insights-dataverse.md).
 
-Untuk maklumat lanjut, lihat [Bekerja dengan data Wawasan Pelanggan dalam Microsoft Dataverse](customer-insights-dataverse.md).
+   :::image type="content" source="media/dataverse-provisioning.png" alt-text="perkongsian data dengan Microsoft Dataverse auto didayakan untuk persekitaran baharu bersih.":::
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="perkongsian data dengan Microsoft Dataverse didayakan secara automatik untuk persekitaran baharu bersih.":::
+1. Pilih **Seterusnya**.
 
-### <a name="step-4-finalize-the-settings"></a>Langkah 4: Muktamadkan tetapan
+## <a name="step-4-finalize-the-settings"></a>Langkah 4: Muktamadkan tetapan
 
-**Dalam langkah Semak Semula**, pergi melalui semua seting yang ditentukan. Apabila semuanya kelihatan lengkap, pilih **Cipta** untuk menetapkan persekitaran.
+Semak semula seting yang ditentukan. Apabila semuanya kelihatan lengkap, pilih **Cipta** untuk menetapkan persekitaran.
 
-Anda boleh menukar beberapa tetapan kemudian. Untuk maklumat lanjut, lihat [Uruskan persekitaran](manage-environments.md).
+Untuk mengubah beberapa seting kemudian, lihat [Menguruskan persekitaran](manage-environments.md).
 
 ## <a name="work-with-your-new-environment"></a>Bekerja dengan persekitaran baharu anda
 
@@ -92,11 +94,9 @@ Semak semula artikel berikut untuk membantu anda bermula dengan mengkonfigurasi 
 
 ## <a name="copy-the-environment-configuration"></a>Salin konfigurasi persekitaran
 
-Sebagai pentadbir, anda boleh memilih untuk menyalin konfigurasi daripada persekitaran sedia ada apabila anda mencipta yang baharu.
+Sebagai pentadbir, jika anda memilih untuk menyalin konfigurasi daripada persekitaran sedia ada, pilih daripada senarai semua persekitaran yang tersedia dalam organisasi anda.
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Syot layar pilihan tetapan dalam tetapan persekitaran.":::
-
-Anda akan melihat semua persekitaran yang tersedia dalam organisasi anda yang boleh anda salin data daripadanya.
 
 Tetapan konfigurasi berikut disalin:
 
@@ -113,25 +113,25 @@ Tetapan konfigurasi berikut disalin:
 - Ramalan model
 - Penugasan peranan
 
-## <a name="set-up-a-copied-environment"></a>Sediakan persekitaran yang disalin
+### <a name="set-up-a-copied-environment"></a>Menyediakan persekitaran yang disalin
 
-Apabila anda menyalin konfigurasi persekitaran, anda perlu melalui beberapa langkah tambahan untuk mengesahkan kelayakan:
+Apabila anda menyalin konfigurasi persekitaran, mesej pengesahan dipaparkan apabila persekitaran yang disalin telah dicipta. Laksanakan langkah-langkah berikut untuk mengesahkan kelayakan.
 
-- Profil pelanggan. Pertama, sahkan dan ambil sumber data anda dan jalankan penyatuan data untuk mencipta semula profil pelanggan.
-- Kelayakan sumber data. Anda perlu memberikan kelayakan untuk setiap sumber data untuk mengesahkan dan menyegar semula sumber data secara manual.
-- Sumber data daripada folder Model Data Biasa dan Dataverse. Anda perlu mencipta sumber data tersebut secara manual dengan nama yang sama seperti dalam persekitaran sumber.
-- Rahsia sambungan yang digunakan untuk eksport dan pengayaan. Anda perlu membenarkan semula sambungan dan kemudian mengaktifkan semula pengayaan dan eksport.
+1. Pilih **Pergi ke sumber data** untuk melihat senarai sumber data. Semua sumber data menunjukkan **status Kelayakan Diperlukan**.
 
-Anda akan melihat mesej pengesahan apabila persekitaran yang disalin telah dicipta. Pilih **Pergi ke sumber data** untuk melihat senarai sumber data.
+   :::image type="content" source="media/data-sources-copied.png" alt-text="Senarai sumber data yang telah disalin dan memerlukan pengesahan.":::
 
-Semua sumber data akan menunjukkan status **Kelayakan Diperlukan**. Edit sumber data dan masukkan kelayakan untuk menyegarkan semula.
+1. Edit sumber data dan masukkan kelayakan untuk menyegarkan semula. Sumber data daripada folder Model Data Biasa dan Dataverse mesti dicipta secara manual dengan nama yang sama seperti dalam persekitaran sumber.
 
-:::image type="content" source="media/data-sources-copied.png" alt-text="Senarai sumber data yang telah disalin dan memerlukan pengesahan.":::
+1. Selepas menyegar semula sumber data, pergi ke **Data** > **Satukan**. Di sini anda akan menemui tetapan daripada persekitaran sumber. Editnya mengikut keperluan atau pilih **Menyatukan** > **profil pelanggan dan kebergantungan untuk memulakan proses penyatuan data dan mewujudkan entiti pelanggan bersatu**.
 
-Selepas menyegar semula sumber data, pergi ke **Data** > **Satukan**. Di sini anda akan menemui tetapan daripada persekitaran sumber. Mengeditnya seperti yang diperlukan atau pilih **Jalankan** untuk memulakan proses data penyatuan dan mencipta entiti pelanggan disatukan.
+   > [!TIP]
+   > Untuk akaun dan kenalan, pilih **Menyatukan akaun** > **Menyatukan profil dan kebergantungan**.
 
-Apabila data penyatuan selesai, pergi ke **Langkah-langkah** dan **Segmen** untuk menyegarkan semula juga.
+1. Apabila penyatuan data selesai, pergi ke **Ukuran** dan **Segmen** untuk menyegar semulanya.
 
-Sebelum anda mengaktifkan semula eksport dan pengayaan, pergi ke **Sambungan** > **Pentadbir** untuk membenarkan semula sambungan dalam persekitaran baharu anda.
+1. Pergi ke **Sambungan** > **Pentadbir** untuk mengesahkan semula sambungan dalam persekitaran baru anda.
+
+1. Pergi ke **Pengayaan** > **Data** dan **Eksport** > **Data** untuk mengaktifkannya semula.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

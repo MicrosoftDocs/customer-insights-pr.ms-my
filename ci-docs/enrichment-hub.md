@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245890"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304530"
 ---
 # <a name="data-enrichment-preview-overview"></a>Gambaran keseluruhan pengayaan data (pratonton)
 
@@ -27,39 +27,39 @@ Gunakan data daripada sumber seperti Microsoft dan rakan kongsi lain untuk menga
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Pelbagai pengayaan untuk jenis yang sama
 
-Entiti yang akan diperkaya ditentukan semasa konfigurasi pengayaan, yang membolehkan anda memperkayakan hanya subset profil anda. Contohnya, memperkaya data hanya untuk segmen tertentu. Anda boleh mengkonfigurasikan beberapa pengayaan jenis yang sama dan menggunakan semula sambungan yang sama. Sesetengah pengayaan mempunyai had bilangan pengayaan jenis yang sama yang boleh dicipta. Had dan penggunaan semasa boleh dilihat pada setiap jubin pada **tab** Discover **halaman Pengayaan**.
+Entiti yang akan diperkaya ditentukan semasa konfigurasi pengayaan, yang membolehkan anda memperkayakan hanya subset profil anda. Contohnya, memperkaya data hanya untuk segmen tertentu. Anda boleh mengkonfigurasikan beberapa pengayaan jenis yang sama dan menggunakan semula sambungan yang sama. Sesetengah pengayaan mempunyai had bilangan pengayaan jenis yang sama yang boleh dicipta. Had dan penggunaan semasa boleh dilihat pada setiap jubin pada tab **Temui** **halaman Enrichment**.
 
 ## <a name="enrich-data-sources-before-unification"></a>Memperkayakan sumber data sebelum penyatuan
 
-Anda boleh memperkayakan data pelanggan anda sebelum penyatuan data untuk membantu meningkatkan kualiti padanan data. Untuk maklumat lanjut, lihat [pengayaan sumber data](data-sources-enrichment.md).
+Anda boleh memperkayakan data pelanggan anda sebelum penyatuan data untuk membantu meningkatkan kualiti padanan data. Untuk maklumat lanjut, lihat [sumber data pengayaan](data-sources-enrichment.md).
 
 ## <a name="create-an-enrichment"></a>Cipta pengayaan
 
 Anda perlu mempunyai keizinan [Penyumbang atau Pentadbir](permissions.md) untuk mencipta atau mengedit pengayaan.
 
-Pergi ke **Data** > **Pengayaan**. Tab **Discover** menunjukkan semua opsyen pengayaan yang disokong.
+Pergi ke **Data** > **Pengayaan**. Tab **Temui** menunjukkan semua opsyen pengayaan yang disokong.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Halaman hab pengayaan.":::
 
 # <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
-- [Identiti](enrichment-liveramp.md) AbiliTec yang disediakan oleh LiveRamp AbiliTec
+- [Identiti](enrichment-liveramp.md) AbiliTec disediakan oleh LiveRamp AbiliTec
 - [Jenama](enrichment-microsoft.md) disediakan oleh Microsoft
 - [Demografi](enrichment-experian.md) disediakan oleh Experian
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
 - [Minat](enrichment-microsoft.md) disediakan oleh Microsoft
-- [Data lokasi](enrichment-azure-maps.md) yang disediakan oleh Microsoft Azure Peta
+- [Data lokasi](enrichment-azure-maps.md) disediakan oleh Microsoft Azure Peta
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies
 - [Data](enrichment-SFTP-custom-import.md) tersuai SFTP melalui Protokol Pemindahan Fail Selamat (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
 - [Data penglibatan akaun](enrichment-office.md) yang disediakan oleh Microsoft
-- [Data syarikat](enrichment-dnb.md) yang disediakan oleh Dun & Bradstreet
+- [Data syarikat](enrichment-dnb.md) yang disediakan oleh Dun &Bradstreet
 - [Data syarikat](enrichment-leadspace.md) yang disediakan oleh Leadspace
 - [Alamat dipertingkatkan](enrichment-enhanced-addresses.md) yang disediakan oleh Microsoft
 - [Data](enrichment-enhanced-company-data.md) syarikat dipertingkatkan yang disediakan oleh Microsoft
-- [Data lokasi](enrichment-azure-maps.md) yang disediakan oleh Microsoft Azure Peta
+- [Data lokasi](enrichment-azure-maps.md) disediakan oleh Microsoft Azure Peta
 - [Data lokasi](enrichment-here.md) yang disediakan oleh HERE Technologies
 - [Data](enrichment-SFTP-custom-import.md) tersuai SFTP melalui Protokol Pemindahan Fail Selamat (SFTP)
 
@@ -67,7 +67,7 @@ Pergi ke **Data** > **Pengayaan**. Tab **Discover** menunjukkan semua opsyen pen
 
 ## <a name="manage-existing-enrichments"></a>Mengurus pengayaan sedia ada
 
-Pergi ke **Data** > **Pengayaan**. Pada tab **Pengayaan** saya, lihat pengayaan yang dikonfigurasi, status mereka, bilangan pelanggan yang diperkaya dan kali terakhir data disegarkan semula. Anda boleh mengisih senarai pengayaan mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari pengayaan yang anda ingin uruskan.
+Pergi ke **Data** > **Pengayaan**. Pada tab **Pengayaan** saya, lihat pengayaan yang dikonfigurasi, status mereka, bilangan pelanggan yang diperkaya dan kali terakhir data disegar semula. Anda boleh mengisih senarai pengayaan mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari pengayaan yang anda ingin uruskan.
 
 Pilih pengayaan untuk melihat tindakan yang tersedia.
 
@@ -76,14 +76,14 @@ Pilih pengayaan untuk melihat tindakan yang tersedia.
 - **Lihat** butiran pengayaan dengan bilangan profil pelanggan yang dikayakan.
 - **Edit** konfigurasi pengayaan.
 - [**Jalankan**](#run-or-refresh-enrichments) pengayaan untuk mengemas kini profil pelanggan dengan data terkini. Jalankan berbilang pengayaan sekaligus dengan memilihnya dalam senarai.
-- **Mengaktifkan** atau **Menyahaktifkan** pengayaan. Pengayaan tidak aktif tidak akan disegarkan semasa segar semula [yang](schedule-refresh.md) dijadualkan.
+- **Mengaktifkan** atau **Menyahaktifkan** pengayaan. Pengayaan tidak aktif tidak akan disegar semula semasa [segar semula](schedule-refresh.md) berjadual.
 - **Padamkan** pengayaan.
 
-Anda juga boleh membuat [segmen](segments.md) atau [langkah](measures.md) dari pengayaan.
+Anda juga boleh membuat [segmen](segments.md) atau [langkah daripada](measures.md) pengayaan.
 
-## <a name="run-or-refresh-enrichments"></a>Jalankan atau segar semula pengayaan
+## <a name="run-or-refresh-enrichments"></a>Menjalankan atau menyegar semula pengayaan
 
-Setelah dijalankan, pengayaan boleh disegarkan semula mengikut jadual automatik atau disegarkan secara manual atas permintaan.
+Setelah dijalankan, pengayaan boleh disegar semula pada jadual automatik atau disegar semula secara manual atas permintaan.
 
 1. Untuk menyegar semula satu atau lebih pengayaan secara manual, pilihnya dan pilih **Jalankan**. Untuk [menjadualkan segar semula](schedule-refresh.md) automatik, pergi ke **Jadual** > **Sistem** > **Pentadbir**. Masa pemprosesan bergantung pada saiz data pelanggan anda.
 
@@ -95,7 +95,7 @@ Setelah dijalankan, pengayaan boleh disegarkan semula mengikut jadual automatik 
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Lihat kemajuan proses pengayaan
 
-Anda boleh menemukan butiran tentang pemprosesan pengayaan, termasuk status dan isu yang berpotensi semasa penyegaran semula atau selepas segar semula selesai. Fahami proses yang terlibat untuk menyegarkan semula pengayaan dan tempoh masa yang diambil untuk menjalankan proses tersebut. Status pengayaan disokong untuk Experian, Leadspace, di sini teknologi, Import SFTP, dan Azure Maps.
+Anda boleh mendapatkan butiran tentang pemprosesan pengayaan, termasuk status dan isu yang berpotensi semasa ia menyegarkan semula atau selepas segar semula selesai. Fahami proses yang terlibat untuk menyegarkan semula pengayaan dan tempoh masa yang diambil untuk menjalankan proses tersebut. Status pengayaan disokong untuk Experian, Leadspace, di sini teknologi, Import SFTP, dan Azure Maps.
 
 1. Pergi ke **Data** > **Pengayaan**.
 1. Dalam tab **Pengayaan** saya, pilih status pengayaan untuk membuka anak tetingkap sisi.
@@ -105,9 +105,9 @@ Anda boleh menemukan butiran tentang pemprosesan pengayaan, termasuk status dan 
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="view-enrichment-results"></a>Lihat hasil pengayaan
+## <a name="view-enrichment-results"></a>Lihat keputusan pengayaan
 
-Selepas pengayaan selesai, semak semula hasil pengayaan.
+Selepas larian pengayaan yang lengkap, semak keputusan pengayaan.
 
 1. Pergi ke **Data** > **Pengayaan**.
 1. Dalam tab **Pengayaan** saya, pilih pengayaan yang anda ingin lihat.
@@ -116,8 +116,8 @@ Semua pengayaan menunjukkan maklumat asas seperti bilangan profil yang diperkaya
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Halaman hasil pengayaan.":::
 
-Sekiranya ada, **Bilangan pelanggan yang diperkaya oleh lapangan** memberikan gerudi ke dalam liputan setiap bidang yang diperkaya.
+Sekiranya ada, **Bilangan pelanggan yang diperkayakan oleh lapangan** menyediakan latihan ke dalam liputan setiap bidang yang diperkaya.
 
-Sesetengah pengayaan juga menunjukkan maklumat khusus untuk jenis pengayaan. Untuk maklumat lanjut, lihat dokumentasi yang berkaitan.
+Sesetengah pengayaan juga menunjukkan maklumat khusus untuk jenis pengayaan. Untuk maklumat lanjut, lihat dokumentasi berkaitan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

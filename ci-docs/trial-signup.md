@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
+ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082496"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "9305615"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Daftar untuk percubaan Dynamics 365 Customer Insights percuma
 
@@ -21,7 +21,7 @@ Customer Insights menawarkan percubaan 30 hari percuma. Selepas mendaftar dengan
 
 **Untuk mendaftar percubaan**:
 
-1. Pergi ke [halaman](https://dynamics.microsoft.com/ai/customer-insights/) gambaran keseluruhan percubaan dan pilih **Cuba Cerapan Pelanggan secara percuma**.
+1. Pergi ke [halaman](https://dynamics.microsoft.com/ai/customer-insights/) gambaran keseluruhan percubaan dan pilih **Cuba Wawasan Pelanggan secara percuma**.
 1. Ikuti panduan di skrin untuk memasukkan [e-mel yang berkaitan dengan akaun Microsoft anda](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) dan maklumat kenalan anda.
 1. Buat pilihan dan pilih fokus sehingga anda dapat ke halaman mula untuk keupayaan yang anda pilih.
 
@@ -31,7 +31,7 @@ Percubaan mengambil masa seketika untuk muatan dan kemudian anda boleh mula meng
 
 Persekitaran percubaan anda termasuk ciri yang sama dengan versi berbayar. Pautan dibawah memberikan panduan kepada anda dengan menggunakan beberapa ciri utama.
 
-- [Bermula dengan Wawasan Pelanggan.](get-started.md)
+- [Mulakan dengan Wawasan Pelanggan.](get-started.md)
 - [Tambah lebih ramai pengguna dan peruntukkan keizinan.](permissions.md)
 - [Injes sumber data anda](data-sources.md) dan jalankannya melalui [proses penyatuan data](data-unification.md) untuk mendapatkan [profil pelanggan disatukan](customer-profiles.md).
 - [Perkayakan profil pelanggan disatukan](enrichment-hub.md) atau [jalankan model ramalan](predictions-overview.md).
@@ -40,6 +40,6 @@ Persekitaran percubaan anda termasuk ciri yang sama dengan versi berbayar. Pauta
 
 ## <a name="additional-resources"></a>Sumber tambahan
 
-- [Terokai latihan tentang Microsoft Learn](/learn/browse/?filter-products=dynamics-dynamics-cust-insights)
+- [Terokai laluan pembelajaran dan modul untuk Wawasan Pelanggan](/learn/browse/?products=dynamics-cust-insights)
 - [Soalan Lazim Percubaan](trial-faq.md)
 - [Dynamics 365 Customer Insights butiran produk](https://dynamics.microsoft.com/ai/customer-insights/)

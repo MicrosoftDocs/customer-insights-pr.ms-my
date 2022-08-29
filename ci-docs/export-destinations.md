@@ -1,7 +1,7 @@
 ---
 title: Eksport gambaran keseluruhan (pratonton)
 description: Urus eksport untuk berkongsi data.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245338"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304070"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245338"
 
 Terdapat dua jenis eksport utama:  
 
-- **Eksport data keluar**: eksport sebarang jenis entiti yang tersedia dalam Wawasan Pelanggan. Entiti yang anda pilih untuk eksport akan dieksport dengan semua medan data, metadata, skema dan butiran pemetaan.
-- **Eksport segmen**: entiti segmen eksport dari Wawasan Pelanggan. Segmen mewakili senarai profil pelanggan. Apabila mengkonfigurasi eksport, anda memilih medan data yang disertakan, bergantung pada sistem sasaran yang anda eksport data.
+- **Eksport data keluar** membolehkan anda mengeksport sebarang jenis entiti yang tersedia dalam Wawasan Pelanggan. Entiti yang anda pilih untuk eksport akan dieksport dengan semua medan data, metadata, skema dan butiran pemetaan.
+- **Eksport segmen** membolehkan anda mengeksport entiti segmen dari Wawasan Pelanggan. Bagi pengguna individu (B-to-C), segmen mewakili senarai profil pelanggan. Untuk perniagaan (B-to-B), [segmen boleh mewakili senarai akaun atau kenalan](segment-builder.md#create-a-new-segment-with-segment-builder). Apabila mengkonfigurasi eksport, anda memilih medan data yang disertakan, bergantung pada sistem sasaran yang anda mengeksport data.
 
 ### <a name="export-segments"></a>Bahagian eksport
 
@@ -38,14 +38,15 @@ Kebanyakan pilihan eksport menyokong kedua-dua jenis persekitaran. Mengeksport s
 **Eksport segmen dalam persekitaran untuk pelanggan individu (Niaga-ke-Pengguna)**  
 - Segmen dalam konteks persekitaran untuk pelanggan individu dibina pada entiti *profil pelanggan disatukan*. Setiap segmen yang memenuhi keperluan sistem sasaran (contohnya, alamat e-mel) boleh dieksport.
 
-**Persekitaran eksport segmen untuk akaun perniagaan (niaga-ke-niaga)**  
-- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina pada entiti *akaun*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan **syarikat** semasa mentakrifkan eksport.
-- Semua sistem sasaran lain memerlukan medan daripada entiti kenalan. Untuk memastikan segmen akaun boleh mendapatkan data daripada kenalan yang berkaitan, takrifan segmen anda perlu untuk atribut projek entiti kenalan. Ketahui lebih lanjut tentang cara [mengkonfigurasikan segmen dan atribut projek](segment-builder.md).
+**Eksport segmen dalam persekitaran untuk akaun perniagaan (B-to-B)**  
+- Segmen dalam konteks persekitaran untuk akaun perniagaan dibina di atas *entiti akaun* atau *entiti hubungan*. Untuk mengeksport segmen akaun seperti sedia ada, sistem sasaran perlu menyokong segmen akaun tulen. Ini ialah kes untuk [LinkedIn](export-linkedin-ads.md) apabila anda memilih pilihan **syarikat** semasa mentakrifkan eksport.
+- Semua sistem sasaran lain memerlukan medan daripada entiti kenalan.
+- Dengan dua jenis segmen (kenalan dan akaun), Wawasan Pelanggan secara automatik mengenal pasti jenis segmen mana yang layak untuk dieksport berdasarkan sistem sasaran. Sebagai contoh, untuk sistem sasaran berfokuskan hubungan seperti Mailchimp, Wawasan Pelanggan hanya membolehkan anda memilih segmen kenalan untuk dieksport.
 
 **Had pada eksport segmen**  
 - Sistem sasaran pihak ketiga boleh mengehadkan bilangan profil pelanggan yang boleh anda eksport. 
 - Untuk pelanggan individu, anda akan melihat bilangan sebenar ahli segmen apabila anda memilih segmen untuk eksport. Anda akan mendapat amaran jika segmen terlalu besar. 
-- Untuk akaun perniagaan, anda akan melihat bilangan akaun dalam segmen; walau bagaimanapun, bilangan kenalan yang mungkin diunjurkan tidak ditunjukkan. Dalam sesetengah kes, ini mungkin membawa kepada segmen yang dieksport sebenarnya mengandungi lebih banyak profil pelanggan daripada menerima sistem sasaran. Sekiranya had sistem sasaran melebihi, eksport dilangkau.
+- Untuk akaun perniagaan, anda akan melihat bilangan akaun atau kenalan bergantung pada segmen tersebut. Anda akan mendapat amaran jika segmen terlalu besar. Melebihi had hasil sistem sasaran akan melangkau eksport.
 
 ## <a name="set-up-a-new-export"></a>Sediakan eksport baharu
 
@@ -58,13 +59,13 @@ Untuk menyediakan atau mengedit eksport, anda memerlukan sambungan yang betul ya
 
 1. Pilih **Tambah eksport** untuk mencipta eksport baharu.
 
-1. Dalam anak tetingkap **Sediakan eksport**, pilih sambungan [yang](connections.md) hendak digunakan.
+1. **Dalam anak tetingkap Sediakan eksport**, pilih sambungan [untuk](connections.md) digunakan.
 
 1. Berikan butiran yang diperlukan dan pilih **Simpan** untuk mencipta eksport. Untuk butiran yang diperlukan, semak dokumentasi Wawasan Pelanggan untuk eksport tertentu.
 
 ## <a name="manage-existing-exports"></a>Urus eksport sedia ada
 
-Pergi ke **Eksport** > **Data** untuk melihat eksport, nama sambungan mereka, jenis sambungan dan status. Semua peranan pengguna boleh melihat eksport yang dikonfigurasikan. Anda boleh mengisih senarai eksport mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari eksport yang anda ingin uruskan.
+Pergi ke **Eksport** > **Data** untuk melihat eksport, nama sambungan, jenis sambungan dan statusnya. Semua peranan pengguna boleh melihat eksport yang dikonfigurasikan. Anda boleh mengisih senarai eksport mengikut mana-mana lajur atau menggunakan kotak carian untuk mencari eksport yang anda ingin uruskan.
 
 Pilih eksport untuk melihat tindakan yang tersedia.
 
@@ -74,18 +75,18 @@ Pilih eksport untuk melihat tindakan yang tersedia.
 - **Jalankan** eksport untuk mengeksport data terkini.
 - **Buat pendua** eksport.
 - **[Jadualkan](#schedule-and-run-exports)** eksport.
-- **Buang sambungan** untuk mengalih keluar sambungan untuk eksport ini. Detach tidak mengalih keluar sambungan, tetapi menyahaktifkan eksport. Lajur Sambungan yang **digunakan** memaparkan Tiada Sambungan.
-- **Keluarkan** eksport.
+- **Tanggalkan sambungan** untuk mengalih keluar sambungan untuk eksport ini. Terlepas tidak mengalih keluar sambungan, tetapi menyahaktifkan eksport. Lajur Sambungan yang **digunakan** memaparkan Tiada Sambungan.
+- **Alih keluar** eksport.
 
 ## <a name="schedule-and-run-exports"></a>Jadualkan dan jalankan eksport
 
 Setiap eksport yang dikonfigurasikan mempunyai jadual segar semula. Semasa segar semula, sistem mencari data baharu atau yang dikemas kini untuk disertakan dalam eksport. Secara lalai, eksport dijalankan sebagai sebahagian daripada setiap [segar semula sistem yang dijadualkan](schedule-refresh.md). Anda boleh menyesuaikan jadual segar semula atau mematikan proses itu untuk menjalankan eksport secara manual.
 
-Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-processes) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Lajur **Segar Semula** ditunjukkan apabila eksport kali terakhir disegarkan semula.
+Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-processes) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Lajur **Disegar** semula menunjukkan apabila eksport terakhir disegar semula.
 
 ### <a name="schedule-exports"></a>Jadualkan eksport
 
-Tentukan jadual segar semula tersuai untuk eksport individu atau beberapa eksport sekaligus. Jadual yang ditentukan pada masa ini disenaraikan dalam lajur **Jadual** senarai eksport. Kebenaran untuk mengubah jadual adalah sama seperti [mengedit dan menentukan eksport](export-destinations.md#set-up-a-new-export).
+Tentukan jadual segar semula tersuai untuk eksport individu atau beberapa eksport sekaligus. Jadual yang ditentukan pada masa ini disenaraikan dalam lajur **Jadual** senarai eksport. Keizinan untuk mengubah jadual adalah sama seperti [mengedit dan mentakrifkan eksport](export-destinations.md#set-up-a-new-export).
 
 1. Pergi ke **Data** > **Eksport**.
 
@@ -99,9 +100,9 @@ Tentukan jadual segar semula tersuai untuk eksport individu atau beberapa ekspor
 
 1. Pilih **Simpan**.
 
-Apabila mengedit jadual untuk beberapa eksport, buat pilihan di bawah **Simpan atau batalkan jadual**:
+Apabila mengedit jadual untuk beberapa eksport, buat pilihan di bawah **Simpan atau penggantian jadual**:
 
-- **Kekalkan jadual** individu: Kekalkan jadual yang ditetapkan sebelum ini untuk eksport yang dipilih dan hanya lumpuhkan atau dayakannya.
+- **Simpan jadual** individu: Simpan jadual yang telah ditetapkan sebelum ini untuk eksport yang dipilih dan hanya nyahdayakan atau dayakannya.
 - **Tentukan jadual baharu untuk semua eksport yang dipilih**: Gantikan jadual sedia ada bagi eksport yang dipilih.
 
 ### <a name="run-exports-on-demand"></a>Jalankan eksport atas permintaan
@@ -110,6 +111,20 @@ Untuk mengeksport data tanpa menunggu segar semula berjadual, pergi ke **Data** 
 
 - Untuk menjalankan semua eksport, pilih **Jalankan semua** dalam bar perintah. Hanya eksport yang mempunyai jadual aktif dijalankan. Untuk menjalankan eksport yang tidak aktif, jalankan eksport tunggal.
 - Untuk menjalankan eksport tunggal, pilih dalam senarai dan pilih **Jalankan** dalam bar perintah.
+
+## <a name="troubleshooting"></a>Pencarisilapan
+
+### <a name="segment-not-eligible-for-export"></a>Segmen tidak layak untuk eksport
+
+**Masalah** Dalam persekitaran akaun perniagaan eksport anda gagal dengan mesej ralat: "Segmen berikut tidak layak untuk destinasi eksport ini: '{nama segmen}'. Sila pilih hanya segmen jenis ContactProfile dan cuba lagi.
+
+**Persekitaran Wawasan Pelanggan Resolusi** untuk akaun perniagaan telah dikemas kini untuk menyokong segmen hubungan sebagai tambahan kepada segmen akaun. Oleh kerana perubahan itu, eksport yang memerlukan butiran hubungan hanya berfungsi dengan segmen berdasarkan kenalan.
+
+1. [Cipta segmen berdasarkan kenalan](segment-builder.md) yang sepadan dengan segmen yang anda gunakan sebelum ini.
+
+1. Sebaik sahaja segmen kenalan itu dijalankan, edit eksport masing-masing dan pilih segmen baharu.
+
+1. Pilih **Simpan** untuk menyimpan konfigurasi atau **Simpan dan jalankan** untuk menguji eksport ini dengan segera.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

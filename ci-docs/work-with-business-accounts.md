@@ -4,21 +4,21 @@ description: Ketahui tentang akaun perniagaan sebagai khalayak sasaran utama dal
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053124"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303927"
 ---
 # <a name="work-with-business-accounts"></a>Bekerja dengan akaun perniagaan
 
@@ -30,7 +30,7 @@ Pentadbir boleh [mencipta persekitaran dalam organisasi sedia ada](create-enviro
 
 Anda boleh kemudian [menginjes data](data-sources.md) untuk akaun perniagaan dan kenalan yang berkaitan sebagai sumber data dari semua sumber yang disokong.
 
-Selepas menyatukan data, [tentukan hierarki akaun](relationships.md#set-up-account-hierarchies) sebagai sebahagian daripada konfigurasi perhubungan. Anda juga boleh [mengkonfigurasi pemetaan semantik](semantic-mappings.md) untuk menyambungkan entiti kenalan dan akaun. 
+ [Menyatukan](data-unification.md) data akaun anda diikuti dengan data hubungan anda untuk menyambungkan kenalan dan entiti akaun.
 
 ## <a name="switch-between-primary-target-audience"></a>Tukar antara khalayak sasaran utama
 
@@ -43,11 +43,12 @@ Jika organisasi anda mengekalkan persekitaran untuk pelanggan individu dan akaun
 - [Aktiviti](activities.md): Sokongan untuk akaun dan kenalan berkaitan untuk mencipta aktiviti dan menunjukkannya dalam garis masa.
 - [Perhubungan](relationships.md): Wizard aktiviti membantu mencipta perhubungan antara entiti supaya pandangan akaun boleh menunjukkan semua aktiviti daripada kenalan. Kenalan boleh menggerudi untuk melihat kenalan pandangan dan hierarki boleh digunakan untuk pengagregatan aktiviti akaun.
 - [Ukuran](measures.md): Menyokong ukuran yang dicipta daripada pembina ukuran dengan satu pengiraan. Tetapan pilihan membenarkan gulungan untuk sub akaun apabila mencipta ukuran.
-- [Segmen](segments.md): Menyokong segmen yang dicipta dari awal dengan pembina segmen. Pengendali baharu membenarkan penggabungan hierarki akaun apabila membina segmen.
+- [Segmen](segments.md): Menyokong segmen yang dicipta dari awal dengan pembina segmen. Segmen boleh berdasarkan akaun atau kenalan.
 - [Data diinjes](data-sources.md): Semua ciri dalam kawasan ini adalah sama untuk akaun perniagaan dan pelanggan individu.
-- [Data penyatuan](data-unification.md): Semua ciri dalam kawasan ini adalah sama untuk akaun perniagaan dan pelanggan individu.
+- Penyatuan data B-to-B sangat mirip dengan penyatuan data B-to-C tetapi mempunyai langkah tambahan untuk menyatukan kenalan selepas penyatuan akaun. Lihat [Akaun perniagaan (B-to-B)](data-unification.md).
 - [Pengayaan](enrichment-hub.md): Sesetengah jenis pengayaan tersedia hanya untuk senario pelanggan individu sementara yang lain tersedia secara eksklusif untuk akaun perniagaan.
 - [Ramalan dan model di luar kotak](predictions-overview.md): Ramalan pulangan transaksi mengandungi langkah tambahan untuk akaun perniagaan. Ramalan lain hanya tersedia untuk pelanggan individu.
 - [Pengaktifan dan eksport](export-destinations.md): Eksport tersedia untuk akaun perniagaan dan pelanggan individu. Sesetengah eksport memerlukan konfigurasi tambahan dan maklumat kenalan diunjurkan dalam segmen dasar untuk menjadi sah untuk akaun perniagaan.
 - [Tetapan sistem](system.md) dan [pengurusan pengguna](permissions.md): Semua ciri dalam kawasan ini adalah sama untuk akaun perniagaan dan pelanggan individu.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]
