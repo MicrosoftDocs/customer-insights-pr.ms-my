@@ -1,7 +1,7 @@
 ---
 title: Gunakan data Customer Insights dalam Microsoft Dataverse
 description: Ketahui cara menyambungkan Wawasan Pelanggan dan Microsoft Dataverse memahami entiti output yang dieksport ke Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303840"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424320"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Gunakan data Customer Insights dalam Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Sekiranya penyingkiran sambungan gagal disebabkan kebergantungan, anda juga perl
 Sesetengah entiti output dari Wawasan Pelanggan tersedia sebagai jadual dalam Dataverse. Bahagian di bawah menerangkan skema yang dijangka bagi jadual ini.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Sesetengah entiti output dari Wawasan Pelanggan tersedia sebagai jadual dalam Da
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Jadual ini mengandungi profil pelanggan yang disatukan daripada Customer Insights. Skema untuk profil pelanggan bersatu bergantung pada entiti dan atribut yang digunakan dalam proses penyatuan data. Skema profil pelanggan biasanya mengandungi subset atribut daripada [definisi Common Data Model bagi CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Jadual ini mengandungi profil pelanggan yang disatukan daripada Customer Insights. Skema untuk profil pelanggan bersatu bergantung pada entiti dan atribut yang digunakan dalam proses penyatuan data. Skema profil pelanggan biasanya mengandungi subset atribut daripada [definisi Common Data Model bagi CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Untuk senario B-ke-B, profil pelanggan mengandungi akaun bersatu dan skema biasanya mengandungi subset atribut daripada [definisi Model Data Umum Akaun](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile mengandungi maklumat disatukan mengenai kenalan. Kenalan ialah [individu yang dipetakan pada akaun](data-unification-contacts.md) dalam senario B-ke-B.
+
+| Column                       | Taip                | Description     |
+| ---------------------------- | ------------------- | --------------- |
+|  Tarikh lahir            | TarikhMasa       |  Tarikh lahir kenalan               |
+|  Bandar                 | Teks |  Alamat hubungan bandar               |
+|  ContactId            | Teks |  ID profil kenalan               |
+|  ContactProfileId     | Pengecam unik   |  GUID untuk kenalan               |
+|  CountryOrRegion      | Teks |  Negara/Rantau alamat hubungan               |
+|  CustomerId           | Teks |  ID akaun kenalan dipetakan kepada               |
+|  EntityName           | Teks |  Entiti dari mana data berasal                |
+|  FirstName            | Teks |  Nama pertama kenalan               |
+|  Jantina               | Teks |  Jantina kenalan               |
+|  ID                   | Teks |  GUID deterministik berdasarkan`Identifier`               |
+|  Pengecam           | Teks |  ID dalaman profil kenalan: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Teks |  Tajuk kerja kenalan               |
+|  LastName             | Teks |  Nama akhir kenalan               |
+|  PostalCode           | Teks |  Poskod alamat hubungan               |
+|  PrimaryEmail         | Teks |  Alamat e-mel kenalan               |
+|  Telefon Utama         | Teks |  Nombor telefon kenalan               |
+|  StateOrProvince      | Teks |  Negeri atau wilayah alamat hubungan               |
+|  StreetAddress        | Teks |  Jalan alamat hubungan               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 Jadual AlternateKey mengandungi kunci entiti, yang mengambil bahagian dalam proses penyatuan.
 
-|Column  |Jenis  |Penerangan  |
+|Column  |Taip  |Description  |
 |---------|---------|---------|
-|DataSourceName    |Jalur         | Nama sumber data. Contohnya: `datasource5`        |
-|EntityName        | String        | Nama entiti dalam Wawasan Pelanggan. Contohnya: `contact1`        |
-|AlternateValue    |String         |ID alternatif yang dipetakan kepada ID pelanggan. Contoh: `cntid_1078`         |
-|KeyRing           | Teks berbilang baris        | Nilai JSON  </br> Sampel: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | Jalur        | ID profil pelanggan yang disatukan.         |
-|AlternateKeyId     | GUID         |  GUID berketentuan AlternateKey berdasarkan msdynci_identifier       |
-|msdynci_identifier |   Jalur      |   `DataSourceName|EntityName|AlternateValue`  </br> Sampel: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Teks         | Nama sumber data. Contohnya: `datasource5`        |
+|EntityName        | Teks        | Nama entiti dalam Wawasan Pelanggan. Contohnya: `contact1`        |
+|AlternateValue    |Teks         |ID alternatif yang dipetakan kepada ID pelanggan. Contoh: `cntid_1078`         |
+|KeyRing           | Teks        | Nilai JSON  </br> Sampel: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Teks        | ID profil pelanggan yang disatukan.         |
+|AlternateKeyId     | Pengecam unik        |  GUID deterministik AlternateKey berdasarkan`Identifier`      |
+|Pengecam |   Teks      |   `DataSourceName|EntityName|AlternateValue`  </br> Sampel: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Jadual ini mengandungi aktiviti oleh pengguna yang tersedia dalam Customer Insig
 
 | Column            | Taip        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | ID profil pelanggan                                                                      |
-| ActivityId        | String      | ID Dalaman aktiviti pelanggan (kunci utama)                                       |
-| SourceEntityName  | Jalur      | Nama entiti sumber                                                                |
-| SourceActivityId  | Jalur      | Kunci utama daripada entiti sumber                                                       |
-| ActivityType      | Jalur      | Jenis aktiviti semantik atau nama aktiviti tersuai                                        |
-| ActivityTimeStamp | DATETIME    | Setem masa aktiviti                                                                      |
-| Gelaran             | String      | Tajuk atau nama aktiviti                                                               |
-| Description       | Jalur      | Perihalan aktiviti                                                                     |
-| URL               | Jalur      | Pautan ke URL luaran yang khusus untuk aktiviti                                         |
-| SemanticData      | Rentetan JSON | Termasuk senarai pasangan nilai utama untuk medan pemetaan semantik yang khusus untuk jenis aktiviti |
-| RangeIndex        | Jalur      | Cap masa unix digunakan untuk menyusun garis masa aktiviti dan pertanyaan julat yang berkesan |
-| mydynci_unifiedactivityid   | GUID | ID Dalaman aktiviti pelanggan (ActivityId) |
+| CustomerId        | Teks      | ID profil pelanggan                                                                      |
+| ActivityId        | Teks      | ID Dalaman aktiviti pelanggan (kunci utama)                                       |
+| SourceEntityName  | Teks      | Nama entiti sumber                                                                |
+| SourceActivityId  | Teks      | Kunci utama daripada entiti sumber                                                       |
+| ActivityType      | Teks      | Jenis aktiviti semantik atau nama aktiviti tersuai                                        |
+| ActivityTimeStamp | TarikhMasa    | Setem masa aktiviti                                                                      |
+| Gelaran             | Teks      | Tajuk atau nama aktiviti                                                               |
+| Description       | Teks      | Perihalan aktiviti                                                                     |
+| URL               | Teks      | Pautan ke URL luaran yang khusus untuk aktiviti                                         |
+| SemanticData      | Teks | Termasuk senarai pasangan nilai utama untuk medan pemetaan semantik yang khusus untuk jenis aktiviti |
+| RangeIndex        | Teks      | Cap masa unix digunakan untuk menyusun garis masa aktiviti dan pertanyaan julat yang berkesan |
+| UnifiedActivityId   | Pengecam unik | ID Dalaman aktiviti pelanggan (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Jadual ini mengandungi data output langkah berasaskan atribut pelanggan.
 
-| Column             | Jenis             | Penerangan                 |
+| Column             | Taip             | Description                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | Jalur           | ID profil pelanggan        |
-| Ukuran           | Rentetan JSON      | Termasuk senarai pasangan nilai utama untuk nama dan nilai ukuran bagi pelanggan yang ditetapkan | 
-| msdynci_identifier | Jalur           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID profil pelanggan |
-
+| CustomerId         | Teks           | ID profil pelanggan        |
+| Langkah           | Teks      | Termasuk senarai pasangan nilai utama untuk nama dan nilai ukuran bagi pelanggan yang ditetapkan |
+| Pengecam | Teks           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Pengecam unik     | ID profil pelanggan |
 
 ### <a name="enrichment"></a>Pengayaan
 
 Jadual ini mengandungi output proses pengayaan.
 
-| Column               | Jenis             |  Penerangan                                          |
+| Column               | Taip             |  Description                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | Jalur           | ID profil pelanggan                                 |
-| EnrichmentProvider   | Jalur           | Nama pembekal untuk pengayaan                                  |
-| EnrichmentType       | Jalur           | Jenis pengayaan                                      |
-| Nilai               | Rentetan JSON      | Senarai atribut yang dihasilkan oleh proses pengayaan |
-| msdynci_enrichmentid | GUID             | GUID berketentuan yang dijana daripada msdynci_identifier |
-| msdynci_identifier   | Jalur           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Teks           | ID profil pelanggan                                 |
+| EnrichmentProvider   | Teks           | Nama pembekal untuk pengayaan                                  |
+| EnrichmentType       | Teks           | Jenis pengayaan                                      |
+| Nilai               | Teks      | Senarai atribut yang dihasilkan oleh proses pengayaan |
+| EnrichmentId | Pengecam unik            | GUID deterministik dijana daripada`Identifier` |
+| Pengecam   | Teks           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Ramalan
 
@@ -211,12 +236,12 @@ Jadual ini mengandungi output ramalan model.
 
 | Column               | Taip        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | ID profil pelanggan                                  |
-| ModelProvider        | String      | Nama pembekal model                                      |
-| Model                | Jalur      | Nama model                                                |
-| Nilai               | Rentetan JSON | Senarai atribut yang dihasilkan oleh model |
-| msdynci_predictionid | GUID        | GUID berketentuan yang dijana daripada msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Teks      | ID profil pelanggan                                  |
+| ModelProvider        | Teks      | Nama pembekal model                                      |
+| Model                | Teks      | Nama model                                                |
+| Nilai               | Teks | Senarai atribut yang dihasilkan oleh model |
+| RamalanId | Pengecam unik       | GUID deterministik dijana daripada`Identifier` |
+| Pengecam   | Teks      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Keahlian segmen
 
@@ -224,12 +249,11 @@ Jadual ini mengandungi maklumat keahlian segmen profil pelanggan.
 
 | Column        | Taip | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID Profil Pelanggan        |
-| SegmentProvider      | String       | Aplikasi yang menerbitkan segmen.      |
-| SegmentMembershipType | String       | Jenis pelanggan untuk rekod keahlian segmen ini. Menyokong pelbagai jenis seperti Pelanggan, Kenalan atau Akaun. Lalai: Pelanggan  |
-| Segmen       | Rentetan JSON  | Senarai segmen unik profil pelanggan adalah ahli      |
-| msdynci_identifier  | String   | Pengecam unik rekod keahlian segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID deterministik dijana daripada`msdynci_identifier`          |
-
+| CustomerId        | Teks       | ID Profil Pelanggan        |
+| SegmentProvider      | Teks       | Aplikasi yang menerbitkan segmen.      |
+| SegmentMembershipType | Teks       | Jenis pelanggan untuk rekod keahlian segmen ini. Menyokong pelbagai jenis seperti Pelanggan, Kenalan atau Akaun. Lalai: Pelanggan  |
+| Segmen       | Teks  | Senarai segmen unik profil pelanggan adalah ahli      |
+| Pengecam  | Teks   | Pengecam unik rekod keahlian segmen. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Pengecam unik      | GUID deterministik dijana daripada`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

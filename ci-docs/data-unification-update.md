@@ -1,7 +1,7 @@
 ---
 title: Mengemas kini tetapan penyatuan pelanggan, akaun atau kenalan
 description: Kemas kini peraturan pendua, peraturan padanan atau medan bersatu dalam tetapan penyatuan pelanggan atau akaun.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304346"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392482"
 ---
 # <a name="update-unification-settings"></a>Mengemas kini seting penyatuan
 
@@ -38,7 +38,7 @@ Untuk menyemak semula atau mengubah sebarang seting penyatuan sebaik sahaja prof
    > Jubin **Syarat** pemadanan dipaparkan hanya jika berbilang entiti dipilih.
 
 1. Pilih perkara yang anda mahu kemas kini:
-   - [Medan sumber](#edit-source-fields) untuk menambah entiti atau atribut atau mengubah jenis atribut.
+   - [Medan sumber](#edit-source-fields) untuk menambah atribut atau entiti atau mengubah jenis atribut. Untuk mengalih keluar atribut, lihat [Alih keluar medan](#remove-a-unified-field) bersatu. Untuk mengalih keluar entiti, lihat [Alih keluar entiti](#remove-a-unified-entity) bersatu.
    - [Menduplikasi rekod](#manage-deduplication-rules) untuk menguruskan peraturan pertindihan atau keutamaan cantuman.
    - [Syarat](#manage-match-rules) yang sepadan untuk mengemas kini peraturan padanan merentasi dua atau lebih entiti.
    - [Bidang pelanggan bersatu](#manage-unified-fields) untuk menggabungkan atau mengecualikan bidang. Anda juga boleh mengumpulkan profil yang berkaitan ke dalam kluster.
@@ -53,8 +53,6 @@ Untuk menyemak semula atau mengubah sebarang seting penyatuan sebaik sahaja prof
 
 ## <a name="edit-source-fields"></a>Mengedit medan sumber
 
-Anda tidak boleh mengalih keluar atribut atau entiti jika ia telah disatukan.
-
 1. Pilih **Edit** pada **jubin medan** Sumber.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Petikan skrin halaman medan Sumber menunjukkan bilangan kekunci primer, medan dipetakan dan dinyahlap":::
@@ -66,6 +64,80 @@ Anda tidak boleh mengalih keluar atribut atau entiti jika ia telah disatukan.
 1. Secara pilihan, anda boleh menukar kunci primer untuk entiti, jenis atribut dan togol **Pemetaan** pintar hidup atau mati. Untuk maklumat lanjut, lihat [Pilih medan](map-entities.md) sumber.
 
 1. Pilih **Berikut** untuk membuat perubahan pada peraturan pertindihan atau pilih **Simpan dan tutup** dan kembali ke [Kemas kini seting](#update-unification-settings) penyatuan.
+
+### <a name="remove-a-unified-field"></a>Mengalih keluar medan bersatu
+
+Untuk mengalih keluar medan yang telah disatukan, medan mesti dialih keluar daripada sebarang kebergantungan seperti segmen, ukuran, pengayaan atau perhubungan.
+
+1. Setelah semua kebergantungan untuk medan telah dialih keluar, pergi ke **Penyatuan** > **Data**.
+
+1. Pilih **Edit** pada **jubin Medan** Pelanggan Disatukan.
+
+1. Pilih semua kejadian medan kemudian pilih **Kecualikan**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Petikan skrin halaman medan Disatukan menunjukkan medan terpilih dan butang Kecualikan":::
+
+1. Pilih **Selesai** untuk mengesahkan kemudian pilih **Simpan dan tutup**.
+
+   > [!TIP]
+   > Jika anda melihat mesej "Tidak dapat menyimpan penyatuan. Sumber yang ditentukan tidak boleh diubah suai atau dipadamkan kerana kebergantungan hiliran", maka medan itu masih digunakan dalam pergantungan hiliran.
+
+1. Jika medan digunakan dalam peraturan untuk rekod pendua atau syarat yang sepadan, lakukan langkah berikut. Jika tidak, pergi ke langkah seterusnya.
+   1. Pilih **Edit** pada **jubin Rekod** pendua.
+   1. Alih keluar medan daripada semua peraturan yang digunakan dalam, jika ada, kemudian pilih **Seterusnya**.
+   1. **Pada halaman Syarat** sepadan, alih keluar medan daripada semua peraturan yang digunakan dalam, jika ada, kemudian pilih **Simpan dan tutup**.
+   1. Pilih **Menyatukan** > **Profil dan** Kebergantungan Pelanggan Penyatuan. Tunggu penyatuan selesai sebelum pergi ke langkah seterusnya.
+
+1. Pilih **Edit** pada **jubin medan** Sumber.
+
+1. Pilih **Pilih entiti dan medan** dan kosongkan kotak semak di sebelah setiap kejadian medan.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Petikan skrin bagi kotak dialog Pilih entiti dan medan menunjukkan kotak semak yang dikosongkan":::
+
+1. Pilih **Guna**.
+
+1. Pilih **Simpan dan tutup**.
+
+1. Pilih **Menyatukan** > **Profil pelanggan dan kebergantungan** untuk mengemas kini profil bersatu.
+
+### <a name="remove-a-unified-entity"></a>Alih keluar entiti bersatu
+
+Untuk menghapuskan entiti yang telah disatukan, entiti mesti dikeluarkan dari sebarang kebergantungan seperti segmen, langkah, pengayaan atau hubungan.
+
+1. Setelah semua kebergantungan untuk entiti telah dialih keluar, pergi ke **Penyatuan** > **Data**.
+
+1. Pilih **Edit** pada **jubin Medan** Pelanggan Disatukan.
+
+1. Pilih semua medan untuk entiti kemudian pilih **Kecualikan**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Petikan skrin medan Disatukan dengan semua medan untuk entiti dipilih dan butang Kecualikan":::
+
+1. Pilih **Selesai** untuk mengesahkan kemudian pilih **Simpan dan tutup**.
+
+   > [!TIP]
+   > Jika anda melihat mesej "Tidak dapat menyimpan penyatuan. Sumber yang ditentukan tidak boleh diubah suai atau dipadamkan kerana kebergantungan hiliran", maka entiti itu masih digunakan dalam pergantungan hiliran.
+
+1. Pilih **Edit** pada **jubin Rekod** pendua.
+
+1. Alih keluar semua peraturan daripada entiti, jika ada, kemudian pilih **Seterusnya**.
+
+1. Pada halaman **Syarat** sepadan, pilih entiti kemudian pilih **Padam**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Petikan skrin syarat padanan dengan entiti dipilih dan butang Padam":::
+
+1. Pilih **Simpan dan tutup**.
+
+1. Pilih **Edit** pada **jubin medan** Sumber.
+
+1. Pilih **Pilih entiti dan medan** dan kosongkan kotak semak di sebelah entiti.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Petikan skrin kotak dialog Pilih entiti dan medan dengan kotak semak entiti dikosongkan":::
+
+1. Pilih **Guna**.
+
+1. Pilih **Simpan dan tutup**.
+
+1. Pilih **Menyatukan** > **Profil pelanggan dan kebergantungan** untuk mengemas kini profil bersatu.
 
 ## <a name="manage-deduplication-rules"></a>Menguruskan peraturan pertindihan
 

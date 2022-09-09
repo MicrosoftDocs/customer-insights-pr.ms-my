@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083105"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411842"
 ---
 # <a name="predictions-overview"></a>Gambaran keseluruhan ramalan
 
@@ -38,15 +38,12 @@ Cara paling mudah untuk bermula dengan meramalkan data adalah model yang ditakri
 ---
 
 > [!TIP]
-> Kami mengesyorkan agar anda sentiasa menyegarkan semula model di luar kotak dengan data yang dikemas kini untuk memastikan ia memaklumkan kes penggunaan perniagaan anda dengan tepat. Data disegar semula secara ad-hoc apabila sistem menelan sumber data baru atau dikemas kini. Walau bagaimanapun, model hanya akan rescore dalam kes ini dan terus menggunakan data latihan sedia ada.
-> 
-> Anda boleh mengkonfigurasi **jadual** Kemas Kini dengan menetapkan jadual latihan semula model dalam pengalaman konfigurasi. Model ini akan melatih semula dan menyusun semula jadual ini, yang boleh anda ubah pada bila-bila masa.
-
+> Kami mengesyorkan agar anda sentiasa menyegarkan semula model luar kotak dengan data yang dikemas kini untuk memastikan ia memaklumkan kes penggunaan perniagaan anda dengan tepat. Data disegar semula secara ad hoc apabila sistem menelan sumber data baharu atau dikemas kini. Walau bagaimanapun, model hanya akan diselaraskan semula dalam kes ini dan terus menggunakan data latihan sedia ada.
+>
+> Anda boleh mengkonfigurasikan **jadual** Kemas Kini dengan mengesetkan jadual latihan semula model dalam pengalaman konfigurasi. Model ini akan melatih semula dan menyusun semula jadual ini, yang boleh anda ubah pada bila-bila masa.
 
 ## <a name="azure-machine-learning-integration"></a>Penyepaduan Pembelajaran Mesin Azure
 
 Jika sesebuah organisasi sudah menggunakan senario pembelajaran mesin berdasarkan eksperimen Pembelajaran Mesin Azure, ciri model tersuai dalam Customer Insights membantu untuk menyambungkan titik. Cipta aliran kerja yang membantu anda memilih data yang ingin anda janakan cerapan dan petakan hasil kepada profil pelanggan anda yang disatukan. Untuk mendapatkan maklumat lanjut, lihat [Model pembelajaran mesin tersuai](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder ramalan
-
-Kadang-kadang, set data tidak lengkap dan beberapa nilai tidak diisi. Customer Insights boleh membantu untuk meramalkan nilai yang tidak diisi untuk entiti dan segmen Pelanggan. Untuk mendapatkan maklumat lanjut, lihat [Lengkapkan data separa anda dengan ramalan](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

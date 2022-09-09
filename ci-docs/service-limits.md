@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387167"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411751"
 ---
 # <a name="service-limits-in-customer-insights"></a>Had perkhidmatan dalam Wawasan Pelanggan
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387167"
 
 | Kawasan  | Had  | Nota |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmen, ukuran dan ramalan | 300  | Jumlah [segmen](segments.md), [ukuran](measures.md) dan [ramalan](predictions.md) yang digabungkan tidak boleh melebihi 300.  |
+| Segmen, ukuran dan ramalan | 300  | Jumlah [segmen](segments.md), [ukuran](measures.md) dan [ramalan](predictions-overview.md) yang digabungkan tidak boleh melebihi 300.  |
 | Perhubungan | 20 tahap kedalaman pada perhubungan dalam laluan entiti. | Apabila mencipta [segmen](segments.md) atau [ukuran](measures.md) menggunakan antara muka pembina, laluan entiti boleh mempunyai sehingga 20 lompatan perhubungan antara entiti permulaan dengan entiti sasaran.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Penjadualan pekerjaan yang adil

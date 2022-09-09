@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387305"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409368"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Perkara baharu dalam Dynamics 365 Customer Insights
 
@@ -42,6 +42,14 @@ Terima kasih kepada penyatuan kenalan baharu, anda boleh mencipta segmen kenalan
 
 Untuk maklumat lanjut, lihat [Gambaran keseluruhan eksport](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Rantau penggunaan sejajar dengan Microsoft Dataverse
+
+Apabila mencipta persekitaran Wawasan Pelanggan yang baru, anda boleh memilih rantau di mana anda mahu perkhidmatan itu digunakan dan dihoskan. Kami telah mengemas kini pemilihan rantau untuk sejajar dengan Microsoft Dataverse dan Power Platform.
+
+Anda kini boleh memilih rantau yang sama dengan mudah seperti persekitaran sedia Microsoft Dataverse ada anda atau akaun storan Azure Data Lake anda (jika anda memilih opsyen tersebut), tertakluk pada ketersediaan Wawasan Pelanggan di rantau tersebut.
+
+Untuk maklumat lanjut, lihat [Mencipta persekitaran](create-environment.md) baru dan [Ketersediaan produk mengikut geografi](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>Kemas kini Julai 2022
 
 Kemas kini pada Julai 2022 termasuk ciri baharu, peningkatan prestasi dan pembetulan pepijat.
@@ -56,11 +64,11 @@ Untuk maklumat lanjut, lihat [Segmen eksport ke MoEngage](export-moengage.md).
 
 Pilih sama ada anda ingin mengesahkan melalui SSH atau nama pengguna/kata laluan untuk sambungan ke destinasi eksport SFTP.
 
-Untuk maklumat lanjut, lihat [Mengeksport data ke hos SFTP](export-sftp.md).
+Untuk maklumat lanjut, lihat [Mengeksport data ke hos](export-sftp.md) SFTP.
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Memperibadikan pengalaman dengan data mengenai pengguna yang diketahui dan tidak diketahui
 
-Menguruskan data pelanggan bukanlah satu cabaran baharu tetapi ia semakin menjadi lebih sukar apabila pengguna menavigasi pelbagai tawaran jenama saluran digital. Pengguna yang diketahui (disahkan) dalam satu saluran menjadi tidak diketahui (tidak disahkan) dalam saluran lain jika tidak didaftar masuk. Masalahnya selalunya ialah pengguna yang tidak disahkan (tidak diketahui) tidak mempunyai ID biasa. Ia boleh digunakan untuk mengaitkan atribut profil yang bermakna dan menjana profil pelanggan yang bersatu. Wawasan Pelanggan membantu menyelesaikan masalah ini dengan menelan data daripada kaedah penjejakan pada sistem sumber anda.
+Menguruskan data pelanggan bukanlah satu cabaran baharu, tetapi ia semakin menjadi lebih sukar apabila pengguna menavigasi pelbagai tawaran jenama saluran digital. Pengguna yang diketahui (disahkan) dalam satu saluran menjadi tidak diketahui (tidak disahkan) dalam saluran lain jika tidak log masuk. Masalahnya selalunya ialah pengguna yang tidak disahkan (tidak diketahui) tidak mempunyai ID biasa. Ia boleh digunakan untuk mengaitkan atribut profil yang bermakna dan menjana profil pelanggan yang bersatu. Wawasan Pelanggan membantu menyelesaikan masalah ini dengan menelan data daripada kaedah penjejakan pada sistem sumber anda.
 
 Untuk maklumat lanjut, lihat [Peribadikan pengalaman anda dengan data tentang pengguna](unknown-to-known.md) yang diketahui dan tidak diketahui.
 
@@ -122,7 +130,7 @@ Untuk maklumat lanjut, lihat [Segmen eksport ke Criteo (pratonton)](export-crite
 
 Kami telah melihat semula dokumen bantuan yang berkaitan dengan penciptaan dan pengurusan persekitaran dalam Wawasan Pelanggan. Artikel kini dikumpulkan di bawah nod Persekitaran dalam jadual kandungan. Artikel yang disusun semula memberikan lebih banyak panduan untuk cara yang berbeza untuk menubuhkan persekitaran dan mempunyai struktur yang lebih jelas. Jika anda mempunyai maklum balas untuk dikongsi, beritahu kami melalui kawalan menjelang akhir artikel bantuan.
 
-Untuk maklumat lanjut, lihat [Cara untuk: Mencipta persekitaran](create-environment.md) baru.
+Untuk maklumat lanjut, lihat [Cara untuk: Mencipta persekitaran baru](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Kemas kini April 2022
 
@@ -144,7 +152,7 @@ Untuk maklumat lanjut, lihat [Gunakan ukuran pembina untuk mencipta ukuran dari 
 
 Kami telah menyemak semula artikel dokumentasi kami dan mengalih keluar sebutan tentang wawasan penglibatan dan keupayaan wawasan khalayak. Melangkah ke hadapan, kami akan merujuk secara konsisten kepada nama produk Wawasan Pelanggan apabila kami menulis tentang ciri-ciri teras aplikasi. Perubahan ini juga membawa kepada penstrukturan semula jadual kandungan yang ketara, struktur URL dan laluan fail dalam repositori dokumentasi asas. Semua penanda buku atau pautan sedia ada anda terus berfungsi dan mengubah hala ke URL yang dikemas kini.
 
-Jika anda ingin memberitahu kami bagaimana anda melihat perubahan itu atau mengesan sesuatu yang tidak berfungsi seperti yang dijangkakan, beritahu kami [dengan menyerahkan maklum balas untuk halaman ini](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Jika anda ingin memberitahu kami bagaimana anda melihat perubahan itu atau mengesan sesuatu yang tidak berfungsi seperti yang dijangkakan, beritahu kami [dengan menyerahkan maklum balas untuk halaman](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**) ini.
 
 ## <a name="march-2022-updates"></a>Kemas kini Mac 2022
 

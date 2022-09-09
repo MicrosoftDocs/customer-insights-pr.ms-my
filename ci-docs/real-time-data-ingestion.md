@@ -1,6 +1,6 @@
 ---
 title: Pengingesan data masa nyata (pratonton)
-description: Maklumat umum tentang keupayaan masa nyata dalam Wawasan Pelanggan.
+description: Maklumat umum mengenai keupayaan masa nyata dalam Wawasan Pelanggan.
 ms.date: 10/27/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246119"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396072"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Pengingesan data masa nyata (pratonton)
 
@@ -82,10 +82,5 @@ Anda boleh menggunakan keupayaan masa nyata dengan membina talian paip anda send
 Anda boleh menyiarkan aktiviti dalam format sistem sumber anda atau dalam format UnifiedActivity. Dapatkan format dengan membuat panggilan API kepada /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Butiran API ini, termasuk parameter dan respons, boleh didapati dalam seksyen **EntityData** pada [Rujukan Customer Insights API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Untuk mendapatkan maklumat lanjut, lihat [Kerja dengan Customer Insights API](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Memahami pengguna masa nyata anda dengan telemetri
-
-Dapatkan gambaran keseluruhan jumlah permintaan kepada API masa nyata dan maklumat mengenai isu yang mungkin dihadapi oleh sistem. Anda boleh [mengakses telemetri masa nyata](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
