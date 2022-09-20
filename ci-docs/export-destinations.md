@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304070"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460201"
 ---
 # <a name="exports-preview-overview"></a>Eksport gambaran keseluruhan (pratonton)
 
@@ -81,6 +81,11 @@ Pilih eksport untuk melihat tindakan yang tersedia.
 ## <a name="schedule-and-run-exports"></a>Jadualkan dan jalankan eksport
 
 Setiap eksport yang dikonfigurasikan mempunyai jadual segar semula. Semasa segar semula, sistem mencari data baharu atau yang dikemas kini untuk disertakan dalam eksport. Secara lalai, eksport dijalankan sebagai sebahagian daripada setiap [segar semula sistem yang dijadualkan](schedule-refresh.md). Anda boleh menyesuaikan jadual segar semula atau mematikan proses itu untuk menjalankan eksport secara manual.
+
+> [!TIP]
+> Kurangkan masa pemprosesan eksport segmen dengan amalan terbaik berikut:
+> - Mengedarkan entiti segmen merentasi eksport mutiple.
+> - Elakkan menjadualkan semua eksport pada masa yang sama. Biarkan 30 minit atau satu jam antara masa yang dijadualkan bagi setiap eksport.
 
 Jadual eksport bergantung pada keadaan persekitaran anda. Jika terdapat kemas kini yang sedang berjalan pada [kebergantungan](system.md#refresh-processes) apabila eksport yang dijadualkan harus bermula, sistem akan melengkapkan kemas kini terlebih dahulu dan kemudian menjalankan eksport. Lajur **Disegar** semula menunjukkan apabila eksport terakhir disegar semula.
 

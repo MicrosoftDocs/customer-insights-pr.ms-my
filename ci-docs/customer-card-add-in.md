@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194934"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473653"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Tambahan Kad Pelanggan untuk aplikasi Dynamics 365 (pratonton)
 
@@ -28,23 +28,24 @@ Dapatkan pandangan 360 darjah pelanggan anda secara langsung dalam aplikasi Dyna
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Aplikasi berpandukan model Dynamics 365, seperti Jualan atau khidmat pelanggan, versi 9.0 dan lebih baharu.
-- Untuk data Dynamics 365 anda memetakan ke profil pelanggan Wawasan Pelanggan, kami mengesyorkan ia [ditelan daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), pastikan `contactid` medan (atau `accountid`) ditetapkan sebagai [kunci utama untuk sumber data tersebut semasa proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
-- Semua pengguna Dynamics 365 Tambahan Kad Pelanggan mesti ditambah [sebagai pengguna](permissions.md) dalam Wawasan Pelanggan untuk melihat data.
+- Aplikasi berpandukan model Dynamics 365, seperti Jualan atau khidmat pelanggan, versi 9.0 dan lebih baru.
+- Untuk data Dynamics 365 anda dipetakan [ke profil pelanggan Wawasan Pelanggan, kami mengesyorkan ia ditelan daripada aplikasi Dynamics 365 menggunakan Microsoft Dataverse penyambung](connect-power-query.md). Jika anda menggunakan kaedah yang berbeza untuk menelan kenalan Dynamics 365 (atau akaun), pastikan `contactid` medan (atau`accountid`) disetkan sebagai [kunci primer bagi sumber data tersebut semasa proses penyatuan data](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Pengguna All Dynamics 365 bagi Tambahan Kad Pelanggan mesti [ditambah sebagai pengguna](permissions.md) dalam Wawasan Pelanggan untuk melihat data.
 - [Mengkonfigurasi keupayaan carian dan menapis](search-filter-index.md) dalam Customer Insights.
-- Setiap kawalan tambahan bergantung pada data tertentu dalam Wawasan Pelanggan. Sesetengah data dan kawalan hanya tersedia dalam persekitaran jenis tertentu. Konfigurasi tambahan akan memberitahu anda jika kawalan tidak tersedia kerana jenis persekitaran yang dipilih. Ketahui lebih lanjut tentang [kes penggunaan persekitaran](work-with-business-accounts.md).
-  - **Kawalan ukuran** memerlukan [langkah](measures.md) atribut pelanggan yang dikonfigurasi.
-  - **Kawalan perisikan** memerlukan data yang dijana menggunakan [ramalan atau model](predictions-overview.md) tersuai.
-  - **Kawalan butiran pelanggan** menunjukkan semua medan daripada profil yang tersedia dalam profil pelanggan bersatu.
-  - **Kawalan** pengayaan memerlukan pengayaan aktif [yang](enrichment-hub.md) digunakan pada profil pelanggan. Tambahan kad menyokong pengayaan ini: [Jenama](enrichment-microsoft.md) yang disediakan oleh Microsoft, [Kepentingan](enrichment-microsoft.md) yang disediakan oleh Microsoft dan [data](enrichment-office.md) penglibatan Office yang disediakan oleh Microsoft.
-  - **Kawalan kenalan** memerlukan jenis entiti semantik kenalan.
-  - **Kawalan** garis masa memerlukan [aktiviti](activities.md) yang dikonfigurasikan.
+- Sesetengah data dan kawalan hanya tersedia dalam persekitaran jenis tertentu. Konfigurasi tambahan akan memberitahu anda jika kawalan tidak tersedia kerana jenis persekitaran yang dipilih. Ralat ini akan ditunjukkan dalam kawalan apabila memaparkannya. Ketahui lebih lanjut tentang [kes penggunaan persekitaran](work-with-business-accounts.md).
+- Setiap kawalan tambahan bergantung pada data tertentu dalam Wawasan Pelanggan.
+  - **Kawalan ukur** memerlukan [langkah atribut pelanggan yang](measures.md) dikonfigurasi.
+  - **Kawalan kecerdasan** memerlukan data yang dijana menggunakan [ramalan atau model](predictions-overview.md) tersuai.
+  - **Kawalan** butiran pelanggan menunjukkan semua bidang dari profil yang terdapat dalam profil pelanggan bersatu.
+  - **Kawalan** pengayaan memerlukan pengayaan aktif [yang](enrichment-hub.md) digunakan untuk profil pelanggan. Tambahan kad menyokong pengayaan ini: [Jenama](enrichment-microsoft.md) yang disediakan oleh Microsoft, [Minat](enrichment-microsoft.md) yang disediakan oleh Microsoft dan [data](enrichment-office.md) penglibatan Office yang disediakan oleh Microsoft.
+  - **Kawalan** kenalan memerlukan jenis entiti semantik kenalan.
+  - **Kawalan** garis masa memerlukan aktiviti [yang](activities.md) dikonfigurasi.
 
 ## <a name="install-the-customer-card-add-in"></a>Pasangkan Tambahan Kad Pelanggan
 
 Tambahan Kad Pelanggan ialah penyelesaian untuk aplikasi penglibatan pelanggan dalam Dynamics 365. Untuk memasang penyelesaian:
 
-1. Pergi ke AppSource dan cari **Kad** Pelanggan Dinamik.
+1. Pergi ke AppSource dan cari **Kad** Pelanggan Dynamics.
 
 1. Pilih [Tambahan Kad Pelanggan pada AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) dan pilih **Dapatkannya Sekarang**.
 
@@ -130,19 +131,19 @@ Tambahan Kad Pelanggan tidak naik taraf secara automatik. Untuk menaik taraf kep
 
 **Masalah:**
 
-Walaupun dengan medan ID yang dikonfigurasikan dengan betul, kawalan tidak dapat mencari data untuk mana-mana pelanggan.  
+Walaupun dengan medan ID yang dikonfigurasi dengan betul, kawalan tidak dapat mencari data untuk mana-mana pelanggan.  
 
 **Penyelesaian:**
 
-1. Pastikan anda mengkonfigurasi Tambahan Kad mengikut arahan: [Konfigurasikan Tambahan Kad Pelanggan](#configure-the-customer-card-add-in)
+1. Pastikan anda mengkonfigurasikan Tambahan Kad mengikut arahan: [Konfigurasikan Tambahan Kad Pelanggan](#configure-the-customer-card-add-in)
 
-1. Semak konfigurasi pengingesan data. Edit sumber data untuk sistem Dynamics 365 yang mengandungi ID kenalan GUID. Jika ID kenalan GUID ditunjukkan dengan aksara huruf besar dalam Power Query editor, cuba langkah berikut:
+1. Semak semula konfigurasi pengingesan data. Edit sumber data untuk sistem Dynamics 365 yang mengandungi ID kenalan GUID. Jika GUID ID kenalan ditunjukkan dengan aksara huruf besar dalam Power Query editor, cuba langkah berikut:
     1. Edit sumber data untuk membuka sumber data dalam Power Query Editor.
     1. Pilih lajur ID kenalan.
-    1. Pilih **Transform** dalam bar pengepala untuk melihat tindakan yang tersedia.
+    1. Pilih **Ubah** dalam bar pengepala untuk melihat tindakan yang tersedia.
     1. Pilih **huruf kecil**. Sahkan jika GUID dalam jadual kini huruf kecil.
     1. Simpan sumber data.
-    1. Jalankan proses pengambilan data, penyatuan, dan hiliran untuk menyebarkan perubahan kepada GUID.
+    1. Jalankan pengingesan data, penyatuan, dan proses hiliran untuk menyebarkan perubahan kepada GUID.
 
 Selepas sistem selesai segar semula penuh, kawalan Tambahan Kad Pelanggan harus menunjukkan data yang dijangkakan.
 

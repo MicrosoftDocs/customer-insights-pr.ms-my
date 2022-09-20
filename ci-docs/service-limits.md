@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411751"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463230"
 ---
 # <a name="service-limits-in-customer-insights"></a>Had perkhidmatan dalam Wawasan Pelanggan
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411751"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmen, ukuran dan ramalan | 300  | Jumlah [segmen](segments.md), [ukuran](measures.md) dan [ramalan](predictions-overview.md) yang digabungkan tidak boleh melebihi 300.  |
 | Perhubungan | 20 tahap kedalaman pada perhubungan dalam laluan entiti. | Apabila mencipta [segmen](segments.md) atau [ukuran](measures.md) menggunakan antara muka pembina, laluan entiti boleh mempunyai sehingga 20 lompatan perhubungan antara entiti permulaan dengan entiti sasaran.  |
+|Pengingesan data| Penilaian serentak untuk Power Query sumber data adalah terhad. | Wawasan Pelanggan mempunyai had segar semula yang sama [seperti Aliran Data dalam PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Penjadualan pekerjaan yang adil
 
