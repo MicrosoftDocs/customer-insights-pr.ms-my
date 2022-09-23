@@ -7,21 +7,21 @@
 - name: Katalog pembelajaran
   items:
     - name: Sahkan sebagai Pakar Platform Data Pelanggan Microsoft
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Mari bermula dengan Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Inges data
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Cipta profil pelanggan disatukan
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Bekerjasama dengan Wawasan Pelanggan
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Memperkayakan data dan membuat ramalan
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Menguruskan sambungan luaran
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Mentadbir Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Percubaan percuma
   items:
     - name: ' Mendaftar untuk percubaan percuma'
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Menggunakan data web untuk pemperibadian
       href: unknown-to-known.md
+    - name: Urus profil pelanggan yang tidak diketahui
+      href: manage-unknown-profiles.md
 - name: Segmen
   items:
     - name: Gambaran keseluruhan segmen
