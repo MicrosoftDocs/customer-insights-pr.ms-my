@@ -1,175 +1,124 @@
 ---
-title: Transaksi churn ramalan (mengandungi video)
+title: Ramalan churn transaksi (mengandungi video)
 description: Ramalkan sama ada pelanggan mempunyai risiko kerana tidak lagi membeli produk atau perkhidmatan anda.
-ms.date: 01/13/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: fd8df0f0a168ddfab9e8ad3af9e1f1fc0bc1b7a2
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9171106"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610523"
 ---
-# <a name="transaction-churn-prediction"></a>Ramalan pulangan transaksi
+# <a name="predict-transaction-churn"></a>Pulangan transaksi ramalan
 
-Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membeli produk atau perkhidmatan anda dalam tetingkap masa tertentu. Anda boleh mencipta ramalan pulangan baharu pada **Kecerdasan** > **Ramalan**. Pilih **Ramalan saya** untuk melihat ramalan lain yang telah anda cipta. 
+Ramalan pulangan transaksi membantu meramal jika pelanggan tidak lagi akan membeli produk atau perkhidmatan anda dalam tetingkap masa tertentu.
+
+Anda mesti mempunyai pengetahuan perniagaan untuk memahami apa maksud churn untuk perniagaan anda. Kami menyokong definisi pulangan berasaskan masa yang bermaksud pelanggan dianggap sebagai telah mendapat pulangan selepas tempoh tiada pembelian.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6Eg]
 
-Untuk persekitaran berdasarkan akaun perniagaan, kita boleh meramalkan pulangan transaksi untuk akaun dan juga kombinasi akaun dan satu lagi tahap maklumat seperti kategori produk. Menambahkan dimensi boleh membantu mengetahui cara berkemungkinan akaun tersebut "Contoso" akan berhenti membeli kategori produk "alat tulis pejabat." Selain itu, untuk akaun perniagaan, kami juga boleh menggunakan AI untuk menjana senarai sebab yang berpotensi mengapa akaun berkemungkinan untuk pulangan untuk kategori maklumat peringkat kedua.
+Untuk persekitaran berdasarkan akaun perniagaan, kita boleh meramalkan pulangan transaksi untuk akaun dan juga kombinasi akaun dan satu lagi tahap maklumat seperti kategori produk. Sebagai contoh, menambah dimensi boleh membantu menentukan kemungkinan akaun "Contoso" akan berhenti membeli kategori produk "alat tulis pejabat." Selain itu, untuk akaun perniagaan, kami juga boleh menggunakan AI untuk menjana senarai sebab yang berpotensi mengapa akaun berkemungkinan untuk pulangan untuk kategori maklumat peringkat kedua.
 
 > [!TIP]
-> Cuba tutorial untuk transaksi churn ramalan menggunakan data sampel: [Transaksi churn ramalan panduan sampel](sample-guide-predict-transactional-churn.md).
+> Cuba ramalan churn transaksi menggunakan data sampel: [Panduan sampel ramalan churn transaksi](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
-# <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
+- Sekurang-kurangnya [Keizinan penyumbang](permissions.md).
+- Sekurang-kurangnya 10 profil pelanggan, lebih baik daripada 1,000 pelanggan unik.
+- Pengecam Pelanggan, pengecam unik untuk memadankan transaksi dengan pelanggan anda.
+- Data transaksi sekurang-kurangnya dua kali ganda tetingkap masa yang dipilih seperti dua hingga tiga tahun sejarah transaksi. Sebaik-baiknya sekurang-kurangnya dua transaksi bagi setiap pelanggan. Sejarah transaksi mesti termasuk:
+  - **ID** Transaksi: Pengecam unik pembelian atau transaksi.
+  - **Tarikh** Transaksi: Tarikh pembelian atau transaksi.
+  - **Nilai transaksi**: Mata wang atau jumlah nilai berangka transaksi.
+  - **ID** produk unik: ID produk atau perkhidmatan yang dibeli jika data anda berada pada tahap item baris.
+  - **Sama ada transaksi ini adalah pulangan**: Medan benar / palsu yang mengenal pasti sama ada transaksi itu adalah pulangan atau tidak. **Sekiranya Nilai transaksi** negatif, kami menyimpulkan pulangan.
+- Data aktiviti pelanggan:
+  - Pengecam Pelanggan, pengecam unik untuk memetakan aktiviti kepada pelanggan anda.
+  - **Kekunci primer:** Pengecam unik untuk sesuatu aktiviti. Contohnya, lawatan laman web atau rekod penggunaan yang menunjukkan pelanggan telah mencuba sampel produk anda.
+  - **Cap Waktu:** Tarikh dan masa acara yang dikenal pasti oleh kunci utama.
+  - **Acara:** Nama acara yang anda ingin gunakan. Contohnya, medan yang dipanggil "UserAction" di dalam stor runcit mungkin kupon yang digunakan oleh pelanggan.
+  - **Butiran:** Maklumat terperinci tentang peristiwa. Contohnya, medan yang dipanggil "CouponValue" dalam stor runcit mungkin nilai mata wang kupon tersebut.
+- Kurang daripada 20% nilai yang hilang dalam medan data entiti yang disediakan
 
-- Sekurang-kurangnya [Keizinan penyumbang](permissions.md) dalam Customer Insights.
-- Pengetahuan perniagaan untuk memahami makna pulangan untuk perniagaan anda. Kami menyokong definisi pulangan berasaskan masa yang bermaksud pelanggan dianggap sebagai telah mendapat pulangan selepas tempoh tiada pembelian.
-- Data mengenai transaksi/pembelian anda dan sejarah mereka:
-    - Pengecam transaksi untuk membezakan pembelian/transaksi.
-    - Pengecam pelanggan untuk memadankan transaksi kepada pelanggan anda.
-    - Tarikh peristiwa transaksi, yang mentakrifkan tarikh transaksi berlaku.
-    - Skema data semantik untuk pembelian/transaksi memerlukan maklumat berikut:
-        - **ID Transaksi**: Pengecam unik bagi pembelian atau transaksi.
-        - **Tarikh Transaksi**: Tarikh pembelian atau transaksi.
-        - **Nilai transaksi**: Nilai mata wang/berangka bagi transaksi/item.
-        - (Pilihan) **ID produk unik**: ID produk atau perkhidmatan yang dibeli jika data anda berada pada peringkat baris item.
-        - (Pilihan) **Sama ada transaksi ini adalah pulangan**: Medan benar/palsu yang mengenal pasti jika transaksi tersebut ialah pulangan atau tidak. Jika **Nilai transaksi** adalah negatif, kami juga akan menggunakan maklumat ini untuk simpulkan pulangan.
-- (Pilihan) Data mengenai aktiviti pelanggan:
-    - Pengecam aktiviti untuk membezakan aktiviti jenis yang sama.
-    - Pengecam pelanggan untuk memetakan aktiviti kepada pelanggan anda.
-    - Maklumat aktiviti yang mengandungi nama dan tarikh aktiviti.
-    - Skema data semantik untuk aktiviti pelanggan termasuk:
-        - **Kunci utama:** Pengecam unik untuk aktiviti. Contohnya, lawatan laman web atau rekod penggunaan yang menunjukkan pelanggan telah mencuba sampel produk anda.
-        - **Cap masa:** Tarikh dan masa peristiwa dikenal pasti oleh kunci utama.
-        - **Peristiwa:** Nama peristiwa yang anda mahu gunakan. Contohnya, medan yang dipanggil "UserAction" di dalam stor runcit mungkin kupon yang digunakan oleh pelanggan.
-        - **Butiran:** Maklumat terperinci tentang peristiwa. Contohnya, medan yang dipanggil "CouponValue" dalam stor runcit mungkin nilai mata wang kupon tersebut.
-
-# <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
-
-- Sekurang-kurangnya [Keizinan penyumbang](permissions.md) dalam Customer Insights.
-- Pengetahuan perniagaan untuk memahami makna pulangan untuk perniagaan anda. Kami menyokong definisi pulangan berasaskan masa yang bermaksud pelanggan dianggap sebagai telah mendapat pulangan selepas tempoh tiada pembelian.
-- Data mengenai transaksi/pembelian anda dan sejarah mereka:
-    - Pengecam transaksi untuk membezakan pembelian/transaksi.
-    - Pengecam pelanggan untuk memadankan transaksi kepada pelanggan anda.
-    - Tarikh peristiwa transaksi, yang mentakrifkan tarikh transaksi berlaku.
-    - Skema data semantik untuk pembelian/transaksi memerlukan maklumat berikut:
-        - **ID Transaksi**: Pengecam unik bagi pembelian atau transaksi.
-        - **Tarikh Transaksi**: Tarikh pembelian atau transaksi.
-        - **Nilai transaksi**: Nilai mata wang/berangka bagi transaksi/item.
-        - (Pilihan) **ID produk unik**: ID produk atau perkhidmatan yang dibeli jika data anda berada pada peringkat baris item.
-        - (Pilihan) **Sama ada transaksi ini adalah pulangan**: Medan benar/palsu yang mengenal pasti jika transaksi tersebut ialah pulangan atau tidak. Jika **Nilai transaksi** adalah negatif, kami juga akan menggunakan maklumat ini untuk simpulkan pulangan.
-- (Pilihan) Data mengenai aktiviti pelanggan:
-    - Pengecam aktiviti untuk membezakan aktiviti jenis yang sama.
-    - Pengecam pelanggan untuk memetakan aktiviti kepada pelanggan anda.
-    - Maklumat aktiviti yang mengandungi nama dan tarikh aktiviti.
-    - Skema data semantik untuk aktiviti pelanggan termasuk:
-        - **Kunci utama:** Pengecam unik untuk aktiviti. Contohnya, lawatan laman web atau rekod penggunaan yang menunjukkan pelanggan telah mencuba sampel produk anda.
-        - **Cap masa:** Tarikh dan masa peristiwa dikenal pasti oleh kunci utama.
-        - **Peristiwa:** Nama peristiwa yang anda mahu gunakan. Contohnya, medan yang dipanggil "UserAction" di dalam stor runcit mungkin kupon yang digunakan oleh pelanggan.
-        - **Butiran:** Maklumat terperinci tentang peristiwa. Contohnya, medan yang dipanggil "CouponValue" dalam stor runcit mungkin nilai mata wang kupon tersebut.
-- (Pilihan) Data tentang pelanggan anda:
-    - Data ini sepatutnya sejajar ke arah lebih banyak atribut statik untuk memastikan model melakukan yang terbaik.
-    - Skema data semantik untuk data pelanggan termasuk:
-        - **CustomerID:** Pengecam unik untuk pelanggan.
-        - **Tarikh Dicipta:** Tarikh pelanggan telah ditambah pada awalnya.
-        - **Negeri atau Wilayah:** Negeri atau lokasi wilayah pelanggan.
-        - **Negara:** Negara pelanggan.
-        - **Industri:** Jenis industri pelanggan. Sebagai contoh, medan yang dipanggil "Industri" di dalam pemanggang kopi mungkin menunjukkan jika pelanggan adalah runcit.
-        - **Pengelasan:** Pengkategorian pelanggan untuk perniagaan anda. Sebagai contoh, medan yang dipanggil "ValueSegment" dalam pemanggang kopi mungkin merupakan peringkat pelanggan berdasarkan saiz pelanggan.
-
----
-
-- Ciri data yang disyorkan:
-    - Data sejarah yang mencukupi: Data transaksi sekurang-kurangnya dua kali ganda tetingkap masa yang dipilih. Sebaik-baiknya, dua hingga tiga tahun sejarah transaksi. 
-    - Berbilang pembelian bagi setiap pelanggan: Sesuai sekurang-kurangnya dua urus niaga bagi setiap pelanggan.
-    - Bilangan pelanggan: Sekurang-kurangnya 10 profil pelanggan, sebaik-baiknya lebih daripada 1,000 pelanggan unik. Model ini akan gagal dengan kurang daripada 10 pelanggan dan data sejarah yang tidak mencukupi.
-    - Kesempurnaan data: Kurang daripada 20% daripada nilai yang hilang dalam medan data entiti yang disediakan.
+Untuk akaun perniagaan (B-to-B), tambah data pelanggan yang sejajar dengan atribut yang lebih statik untuk memastikan model berfungsi dengan baik:
+- **CustomerID:** Pengecam unik untuk pelanggan.
+- **Tarikh Dicipta:** Tarikh pelanggan pada mulanya ditambah.
+- **Negeri atau Wilayah:** Lokasi negeri atau wilayah pelanggan.
+- **Negara:** Negara pelanggan.
+- **Industri:** Jenis industri pelanggan. Sebagai contoh, medan yang dipanggil "Industri" di dalam pemanggang kopi mungkin menunjukkan jika pelanggan adalah runcit.
+- **Klasifikasi:** Pengkategorian pelanggan untuk perniagaan anda. Sebagai contoh, medan yang dipanggil "ValueSegment" dalam pemanggang kopi mungkin merupakan peringkat pelanggan berdasarkan saiz pelanggan.
 
 > [!NOTE]
 > Untuk perniagaan yang mempunyai kekerapan pembelian pelanggan yang tinggi (setiap beberapa minggu), anda disyorkan untuk memilih tetingkap ramalan yang lebih pendek dan definisi pulangan. Untuk kekerapan pembelian rendah (setiap beberapa bulan atau sekali setahun), pilih tetingkap ramalan lebih panjang dan definisi pulangan.
 
 ## <a name="create-a-transaction-churn-prediction"></a>Mencipta ramalan pulangan transaksi
 
-1. Dalam Customer Insights, pergi ke **Kepintaran** > **Ramalan**.
+1. Pergi ke **Ramalan** > **Perisikan**.
 
-1. **Pilih jubin model** churn Pelanggan dan pilih **Gunakan model ini**.
+1. Pada tab **Cipta**, pilih **Gunakan model** pada **jubin model** churn Pelanggan.
 
-1. Dalam anak tetingkap **Model pulangan pelanggan**, pilih **Transaksi** dan pilih **Mari Bermula**.
+1. Pilih **Transaksi** untuk jenis churn dan kemudian **Bermula**.
 
-:::image type="content" source="media/select-transaction-churn.PNG" alt-text="Syot layar dengan transaksi dipilih pilihan dalam tetingkap model pulangan Pelanggan.":::
- 
-### <a name="name-model"></a>Model nama
-
-1. Berikan nama untuk model bagi membezakannya daripada model lain.
-
-1. Berikan nama untuk entiti output menggunakan huruf dan nombor sahaja, tanpa sebarang ruang. Itulah nama yang entiti model akan gunakan. 
+1. **Namakan model ini** dan **Nama entiti output** untuk membezakannya daripada model atau entiti lain.
 
 1. Pilih **Seterusnya**.
 
 ### <a name="define-customer-churn"></a>Takrifkan pulangan pelanggan
 
-1. **Tetapkan tetingkap ramalan**. Sebagai contoh, ramalkan risiko pulangan untuk pelanggan anda sepanjang 90 hari yang akan datang untuk menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih panjang atau lebih pendek boleh menjadikan lebih sukar untuk menangani faktor dalam profil risiko pulangan anda, tetapi ia bergantung kepada keperluan perniagaan khusus anda.
-   >[!TIP]
-   > Anda boleh memilih **Simpan draf** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Anda akan menemui ramalan draf dalam tab **Ramalan saya** untuk meneruskan.
+Pilih **Simpan draf** pada bila-bila masa untuk menyimpan ramalan sebagai draf. Draf ramalan dipaparkan dalam tab **Ramalan** saya.
 
-1. Masukkan bilangan hari untuk mentakrifkan churn dalam **medan definisi** Churn. Sebagai contoh, jika pelanggan tidak membuat pembelian dalam tempoh 30 hari yang lalu, mereka mungkin dianggap sebagai telah memberikan pulangan untuk perniagaan anda. 
+1. Setkan **tetingkap** ramalan. Sebagai contoh, ramalkan risiko pulangan untuk pelanggan anda sepanjang 90 hari yang akan datang untuk menyelaraskan usaha pengekalan pemasaran anda. Meramalkan risiko pulangan untuk tempoh masa yang lebih panjang atau lebih pendek boleh menjadikan lebih sukar untuk menangani faktor dalam profil risiko pulangan anda, tetapi ia bergantung kepada keperluan perniagaan khusus anda.
 
-1. Pilih **Seterusnya** untuk teruskan.
+1. Masukkan bilangan hari untuk mentakrifkan churn dalam **medan definisi** Churn. Sebagai contoh, jika pelanggan tidak membuat pembelian dalam tempoh 30 hari yang lalu, mereka mungkin dianggap sebagai churned untuk perniagaan anda.
 
-### <a name="add-required-data"></a>Tambah data yang diperlukan
+1. Pilih **Seterusnya**.
 
-1. Pilih **Tambah data** dan pilih jenis aktiviti pada anak tetingkap sisi yang mengandungi transaksi yang diperlukan atau maklumat sejarah pembelian.
+### <a name="add-purchase-history"></a>Tambah sejarah pembelian
 
-1. Di bawah **Pilih aktiviti**, pilih aktiviti khusus daripada jenis aktiviti terpilih yang anda mahu pengiraan difokuskan.
+1. Pilih **Tambah data** untuk **sejarah** transaksi Pelanggan.
+
+1. Pilih jenis aktiviti semantik, **SalesOrder** atau **SalesOrderLine**, yang mengandungi maklumat sejarah transaksi. Jika aktiviti belum disediakan, pilih **di sini** dan buatnya.
+
+1. Di bawah **Aktiviti**, jika atribut aktiviti dipetakan secara semantik apabila aktiviti dicipta, pilih atribut atau entiti tertentu yang ingin anda fokuskan pengiraan. Jika pemetaan semantik tidak berlaku, pilih **Edit dan petakan** data anda.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Anak tetingkap sisi menunjukkan pemilihan aktiviti tertentu di bawah jenis semantik.":::
 
-   Jika anda belum memetakan aktiviti pada jenis semantik lagi, pilih **Edit** untuk berbuat demikian. Pengalaman berpandu untuk memetakan aktiviti semantik terbuka. Petakan data anda kepada medan yang sepadan dalam jenis aktiviti yang dipilih.
+1. Pilih **Seterusnya** dan semak atribut yang diperlukan untuk model ini.
 
-1. Petakan atribut semantik pada medan yang diperlukan untuk menjalankan model. Jika medan di bawah tidak diisikan, konfigurasikan hubungan daripada entiti sejarah pembelian anda kepada entiti *Pelanggan*. Pilih **Simpan**.
+1. Pilih **Simpan**.
 
-1. **Dalam langkah Tambah data** yang diperlukan, pilih **Seterusnya** untuk meneruskan jika anda tidak mahu menambah lebih banyak aktiviti.
-
+1. Tambah lebih banyak aktiviti atau pilih **Seterusnya**.
 
 # <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
 ### <a name="add-additional-data-optional"></a>Tambah data tambahan (pilihan)
 
-Konfigurasikan hubungan daripada entiti aktiviti pelanggan anda kepada entiti *Pelanggan*.
+1. Pilih **Tambah data** untuk **aktiviti** Pelanggan.
 
-1. Pilih medan yang mengenal pasti pelanggan dalam jadual aktiviti pelanggan. Ia boleh berkait secara langsung dengan ID pelanggan utama entiti *Pelanggan* anda.
+1. Pilih jenis aktiviti semantik yang mengandungi data yang anda ingin gunakan. Jika aktiviti belum disediakan, pilih **di sini** dan buatnya.
 
-1. Pilih entiti yang merupakan entiti *Pelanggan* utama anda.
+1. Di bawah **Aktiviti**, jika atribut aktiviti dipetakan secara semantik apabila aktiviti dicipta, pilih atribut atau entiti tertentu yang ingin anda fokuskan pengiraan. Jika pemetaan semantik tidak berlaku, pilih **Edit dan petakan** data anda.
 
-1. Masukkan nama yang menghuraikan perhubungan.
+1. Pilih **Seterusnya** dan semak atribut yang diperlukan untuk model ini.
 
-#### <a name="customer-activities"></a>Aktiviti pelanggan
+1. Pilih **Simpan**.
 
-1. Secara alternatif, pilih **Tambah data** untuk **Aktiviti pelanggan**.
-
-1. Pilih jenis aktiviti semantik yang mengandungi data yang anda mahu gunakan, kemudian pilih satu atau lebih aktiviti dalam bahagian **Aktiviti**.
-
-1. Pilih jenis aktiviti yang sepadan dengan jenis aktiviti pelanggan yang anda konfigurasikan. Pilih **Cipta baharu** dan pilih jenis aktiviti tersedia atau cipta jenis baharu.
-
-1. Pilih **Seterusnya**, kemudian **Simpan**.
-
-1. Jika anda mempunyai sebarang aktiviti pelanggan lain yang anda mahu sertakan, ulangi langkah di atas.
+1. Pilih **Seterusnya**
 
 # <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
 ### <a name="select-prediction-level"></a>Pilih tahap ramalan
 
-Kebanyakan ramalan dicipta pada tahap pelanggan. Dalam sesetengah keadaan, ia mungkin tidak cukup perincian untuk menangani keperluan perniagaan anda. Anda boleh menggunakan ciri ini untuk meramalkan pulangan untuk cawangan pelanggan, sebagai contoh, bukannya untuk pelanggan secara keseluruhan.
+Kebanyakan ramalan dicipta pada tahap pelanggan. Dalam sesetengah keadaan, ia mungkin tidak cukup perincian untuk menangani keperluan perniagaan anda. Gunakan ciri ini untuk meramalkan churn untuk cawangan pelanggan, sebagai contoh, dan bukannya untuk pelanggan secara keseluruhan.
 
-1. Untuk mencipta ramalan pada peringkat lebih banyak butiran daripada pelanggan, pilih **Pilih entiti untuk peringkat kedua**. Jika pilihan tidak tersedia, pastikan anda telah melengkapkan bahagian sebelum ini.
+1. Pilih **Pilih entiti untuk peringkat** menengah. Jika pilihan tidak tersedia, pastikan anda telah melengkapkan bahagian sebelum ini.
 
 1. Kembangkan entiti yang anda mahu pilih peringkat kedua daripada atau gunakan kotak penapis carian untuk menapis pilihan yang dipilih.
 
@@ -182,27 +131,17 @@ Kebanyakan ramalan dicipta pada tahap pelanggan. Dalam sesetengah keadaan, ia mu
 
 ### <a name="add-additional-data-optional"></a>Tambah data tambahan (pilihan)
 
-Konfigurasikan hubungan daripada entiti aktiviti pelanggan anda kepada entiti *Pelanggan*.
+1. Pilih **Tambah data** untuk **aktiviti** Pelanggan.
 
-1. Pilih medan yang mengenal pasti pelanggan dalam jadual aktiviti pelanggan. Ia boleh berkait secara langsung dengan ID pelanggan utama entiti *Pelanggan* anda.
+1. Pilih jenis aktiviti semantik yang mengandungi data yang anda ingin gunakan. Jika aktiviti belum disediakan, pilih **di sini** dan buatnya.
 
-1. Pilih entiti yang merupakan entiti *Pelanggan* utama anda.
+1. Di bawah **Aktiviti**, jika atribut aktiviti dipetakan secara semantik apabila aktiviti dicipta, pilih atribut atau entiti tertentu yang ingin anda fokuskan pengiraan. Jika pemetaan semantik tidak berlaku, pilih **Edit dan petakan** data anda.
 
-1. Masukkan nama yang menghuraikan perhubungan.
+1. Pilih **Seterusnya** dan semak atribut yang diperlukan untuk model ini.
 
-#### <a name="customer-activities"></a>Aktiviti pelanggan
+1. Pilih **Simpan**.
 
-1. Secara alternatif, pilih **Tambah data** untuk **Aktiviti pelanggan**.
-
-1. Pilih jenis aktiviti semantik yang mengandungi data yang anda mahu gunakan, kemudian pilih satu atau lebih aktiviti dalam bahagian **Aktiviti**.
-
-1. Pilih jenis aktiviti yang sepadan dengan jenis aktiviti pelanggan yang anda konfigurasikan. Pilih **Cipta baharu** dan pilih jenis aktiviti tersedia atau cipta jenis baharu.
-
-1. Pilih **Seterusnya**, kemudian **Simpan**.
-
-1. Jika anda mempunyai sebarang aktiviti pelanggan lain yang anda mahu sertakan, ulangi langkah di atas.
-
-#### <a name="customers-data"></a>Data pelanggan
+1. Pilih **Seterusnya**
 
 1. Secara pilihan, pilih **Tambah data** untuk **Data pelanggan**.
 
@@ -212,111 +151,78 @@ Konfigurasikan hubungan daripada entiti aktiviti pelanggan anda kepada entiti *P
 
 ### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Menyediakan senarai pilihan akaun penanda aras
 
-Tambah senarai pelanggan dan akaun perniagaan anda yang anda mahu gunakan sebagai penanda aras. Anda akan mendapat [butiran untuk akaun penanda aras ini](#review-a-prediction-status-and-results) termasuk skor pulangan mereka dan ciri paling berpengaruh yang menjejaskan ramalan pulangan mereka.
+Tambah senarai pelanggan dan akaun perniagaan anda yang anda mahu gunakan sebagai penanda aras. Butiran [untuk akaun](#view-prediction-results) penanda aras ini termasuk skor churn mereka dan ciri-ciri paling berpengaruh yang memberi kesan kepada ramalan churn mereka.
 
 1. Pilih **+ Tambah pelanggan**.
 
 1. Pilih pelanggan yang bertindak sebagai penanda aras.
 
-1. Pilih **Seterusnya** untuk teruskan.
+1. Pilih **Seterusnya**.
 
 ---
 
-### <a name="set-schedule-and-review-configuration"></a>Tetapkan jadual dan konfigurasi ulasan
+### <a name="set-update-schedule"></a>Tetapkan jadual kemas kini
 
-1. Tetapkan kekerapan untuk melatih semula model anda. Tetapan ini adalah penting untuk mengemas kini ketepatan ramalan kerana data baru telah dimasukkan. Kebanyakan perniagaan boleh melatih semula sekali setiap bulan dan mendapatkan ketepatan yang baik untuk ramalan mereka.
+1. **Untuk langkah Kemas Kini** data, pilih kekerapan untuk melatih semula model anda. Tetapan ini penting untuk mengemas kini ketepatan ramalan kerana data baru ditelan ke dalam Wawasan Pelanggan. Kebanyakan perniagaan boleh melatih semula sekali setiap bulan dan mendapatkan ketepatan yang baik untuk ramalan mereka.
 
 1. Pilih **Seterusnya**.
 
-1. Semak semula konfigurasi ramalan. Anda boleh kembali ke langkah awal dengan memilih **Edit** di bawah nilai yang ditunjukkan. Atau anda boleh memilih langkah konfigurasi daripada penunjuk kemajuan.
+### <a name="review-and-run-the-model-configuration"></a>Semak dan jalankan konfigurasi model
 
-1. Jika semua nilai dikonfigurasikan dengan betul, pilih **Simpan dan jalankan** untuk memulakan proses ramalan. Pada tab **Langganan saya**, anda boleh melihat status ramalan anda. Proses mungkin mengambil masa beberapa jam untuk dilengkapkan bergantung kepada amaun data yang digunakan dalam ramalan.
+Langkah **Semak semula dan jalankan** menunjukkan ringkasan konfigurasi dan menyediakan peluang untuk membuat perubahan sebelum anda mencipta ramalan.
 
-## <a name="review-a-prediction-status-and-results"></a>Semak semula status dan hasil ramalan
+1. Pilih **Edit** pada sebarang langkah untuk menyemak semula dan membuat sebarang perubahan.
 
-1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
+1. Jika anda berpuas hati dengan pilihan anda, pilih **Simpan dan jalankan** untuk mula menjalankan model. Pilih **Selesai**. Tab **Ramalan** saya dipaparkan semasa ramalan sedang dicipta. Proses mungkin mengambil masa beberapa jam untuk dilengkapkan bergantung kepada amaun data yang digunakan dalam ramalan.
 
-1. Pilih ramalan yang anda mahu semak semula.
-   - **Nama ramalan**: Nama ramalan yang diberikan semasa menciptanya.
-   - **Jenis ramalan**: Jenis model yang digunakan untuk ramalan
-   - **Entiti output**: Nama entiti untuk menyimpan output ramalan. Anda boleh menemui entiti dengan nama ini pada **Data** > **Entiti**.
-     Dalam entiti output, *ChurnScore* adalah kebarangkalian yang diramalkan untuk pulangan dan *IsChurn* adalah label binari berdasarkan *ChurnScore* dengan ambang 0.5. Ambang lalai mungkin tidak berfungsi untuk senario anda. [Cipta segmen baharu](segments.md#create-a-segment) dengan ambang pilihan anda.
-     Tidak semua pelanggan semestinya pelanggan aktif. Sebahagian daripada mereka mungkin tidak mempunyai apa-apa aktiviti untuk jangka masa panjang dan dianggap sebagai sudah dipulangkan, berdasarkan kepada definisi pulangan anda. Meramalkan risiko pulangan untuk pelanggan yang sudah pun membuat pulangan tidak berguna kerana mereka bukan khalayak yang minat.
-   - **Medan ramalan**: Medan ini diisikan hanya untuk beberapa jenis ramalan dan tidak digunakan dalam ramalan pulangan.
-   - **Status**: Status jalanan ramalan.
-        - **Dibariskan**: Ramalan sedang menunggu proses lain untuk berjalan.
-        - **Menyegarkan semula**: Ramalan sedang berjalan untuk menghasilkan hasil yang akan mengalir ke dalam entiti output.
-        - **Gagal**: Jalanan ramalan gagal. [Ulasan log](manage-predictions.md#troubleshoot-a-failed-prediction) untuk maklumat lanjut.
-        - **Berjaya**: Ramalan telah berjaya. Pilih **Pandangan** di bawah elipsis menegak untuk menyemak semula langganan
-   - **Diedit**: Tarikh konfigurasi untuk ramalan telah diubah.
-   - **Terakhir disegar semula**: Tarikh ramalan menyegar semula hasil dalam entiti output.
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1. Pilih elipsis menegak di sebelah ramalan yang anda mahu semak semula hasilnya dan pilih **Pandangan**.
+## <a name="view-prediction-results"></a>Lihat keputusan ramalan
 
-   :::image type="content" source="media/model-subs-view.PNG" alt-text="Lihat kawalan untuk melihat keputusan ramalan.":::
+1. Pergi ke **Ramalan** > **Perisikan**.
+
+1. Dalam tab **Ramalan** saya, pilih ramalan yang anda ingin lihat.
 
 # <a name="individual-consumers-b-to-c"></a>[Pengguna individu (niaga-ke-pengguna)](#tab/b2c)
 
-1. Terdapat tiga bahagian utama data dalam halaman hasil:
-   - **Melatih prestasi model**: A, B atau C ialah skor yang berkemungkinan. Skor ini menunjukkan prestasi ramalan dan boleh membantu anda membuat keputusan untuk menggunakan hasil yang disimpan dalam entiti output. Skor ditentukan berdasarkan peraturan yang berikut: 
-        - **A** apabila model meramalkan dengan tepat sekurang-kurangnya 50% daripada jumlah ramalan dan apabila peratusan ramalan yang tepat untuk pelanggan yang telah memberikan pulangan adalah lebih besar daripada kadar garis dasar sekurang-kurangnya 10%.
-            
-        - **B** apabila model meramalkan dengan tepat sekurang-kurangnya 50% daripada jumlah ramalan dan apabila peratusan ramalan yang tepat untuk pelanggan yang telah memberikan pulangan adalah sehingga 10% lebih besar daripada garis dasar.
-            
-        - **C** apabila model meramalkan dengan tepat kurang 50% daripada jumlah ramalan atau apabila peratusan ramalan yang tepat untuk pelanggan yang telah memberikan pulangan adalah kurang daripada garis dasar.
-               
-        - **Garis dasar** mengambil input tetingkap masa ramalan untuk model (contohnya, satu tahun) dan model mencipta pecahan masa yang berbeza dengan membahagikannya kepada 2 sehingga ia mencapai satu bulan atau kurang. Ia menggunakan bahagian ini untuk mewujudkan satu peraturan perniagaan bagi pelanggan yang belum membeli dalam tempoh masa ini. Pelanggan ini dianggap sebagai yang memberi pulangan. Peraturan perniagaan berasaskan masa dengan keupayaan tertinggi untuk meramalkan siapa yang mungkin memberikan pulangan dipilih sebagai model garis dasar.
-            
-    - **Kecenderungan untuk pulangan (bilangan pelanggan)**: Kumpulan pelanggan berdasarkan risiko pulangan mereka yang diramalkan. Data ini boleh membantu anda kemudian jika anda mahu mencipta segmen pelanggan dengan risiko pulangan yang tinggi. Segmen seperti ini dapat membantu memahami tempat penggalan anda yang sepatutnya bagi keahlian segmen.
-       
-    - **Faktor paling mempengaruhi**: Terdapat banyak faktor yang diambil kira apabila mencipta ramalan anda. Setiap faktor mempunyai kepentingannya yang dikira untuk ramalan teragregat yang dicipta oleh model. Anda boleh menggunakan faktor ini untuk membantu mengesahkan keputusan ramalan anda atau anda boleh menggunakan maklumat ini kemudian untuk [mencipta segmen](segments.md) yang boleh membantu mempengaruhi risiko pulangan untuk pelanggan.
+Terdapat tiga bahagian utama data dalam halaman hasil:
 
+[!INCLUDE [predict-transaction-results](includes/predict-transaction-results.md)]
 
 # <a name="business-accounts-b-to-b"></a>[Akaun perniagaan (niaga-ke-niaga)](#tab/b2b)
 
-1. Terdapat tiga bahagian utama data dalam halaman hasil:
-   - **Melatih prestasi model**: A, B atau C ialah skor yang berkemungkinan. Skor ini menunjukkan prestasi ramalan dan boleh membantu anda membuat keputusan untuk menggunakan hasil yang disimpan dalam entiti output. Skor ditentukan berdasarkan peraturan yang berikut: 
-        - **A** apabila model meramalkan dengan tepat sekurang-kurangnya 50% daripada jumlah ramalan dan apabila peratusan ramalan yang tepat untuk pelanggan yang telah memberikan pulangan adalah lebih besar daripada kadar garis dasar sekurang-kurangnya 10%.
-            
-        - **B** apabila model meramalkan dengan tepat sekurang-kurangnya 50% daripada jumlah ramalan dan apabila peratusan ramalan yang tepat untuk pelanggan yang telah memberikan pulangan adalah sehingga 10% lebih besar daripada garis dasar.
-            
-        - **C** apabila model meramalkan dengan tepat kurang 50% daripada jumlah ramalan atau apabila peratusan ramalan yang tepat untuk pelanggan yang telah memberikan pulangan adalah kurang daripada garis dasar.
-               
-        - **Garis dasar** mengambil input tetingkap masa ramalan untuk model (contohnya, satu tahun) dan model mencipta pecahan masa yang berbeza dengan membahagikannya kepada 2 sehingga ia mencapai satu bulan atau kurang. Ia menggunakan bahagian ini untuk mewujudkan satu peraturan perniagaan bagi pelanggan yang belum membeli dalam tempoh masa ini. Pelanggan ini dianggap sebagai yang memberi pulangan. Peraturan perniagaan berasaskan masa dengan keupayaan tertinggi untuk meramalkan siapa yang mungkin memberikan pulangan dipilih sebagai model garis dasar.
-            
-    - **Kecenderungan untuk pulangan (bilangan pelanggan)**: Kumpulan pelanggan berdasarkan risiko pulangan mereka yang diramalkan. Data ini boleh membantu anda kemudian jika anda mahu mencipta segmen pelanggan dengan risiko pulangan yang tinggi. Segmen seperti ini dapat membantu memahami tempat penggalan anda yang sepatutnya bagi keahlian segmen.
-       
-    - **Faktor paling mempengaruhi**: Terdapat banyak faktor yang diambil kira apabila mencipta ramalan anda. Setiap faktor mempunyai kepentingannya yang dikira untuk ramalan teragregat yang dicipta oleh model. Anda boleh menggunakan faktor ini untuk membantu mengesahkan keputusan ramalan anda atau anda boleh menggunakan maklumat ini kemudian untuk [mencipta segmen](segments.md) yang boleh membantu mempengaruhi risiko pulangan untuk pelanggan.
+Terdapat tiga bahagian utama data dalam halaman hasil:
 
+[!INCLUDE [predict-transaction-results](includes/predict-transaction-results.md)]
 
-1. Untuk akaun perniagaan, anda akan menemui halaman maklumat **Analisis ciri yang berpengaruh**. Ia mengandungi empat seksyen data:
+**Halaman maklumat analisis** ciri Berpengaruh mengandungi empat bahagian data:
 
-    - Item yang dipilih dalam tetingkap kanan menentukan kandungan pada halaman ini. Pilih item daripada **Pelanggan teratas** atau **Pelanggan penanda aras**. Kedua-dua senarai disusun mengikut nilai yang berkurangan daripada skor pulangan, sama ada skor hanya untuk pelanggan atau skor gabungan untuk pelanggan dan peringkat kedua seperti kategori produk.
-        
-        - **Pelanggan teratas** : Senarai 10 pelanggan yang berada di risiko tertinggi pulangan dan risiko paling rendah pulangan berdasarkan skor pulangan mereka. 
-        - **Pelanggan penanda aras** : Senarai hingga 10 pelanggan yang dipilih semasa mengkonfigurasi model.
- 
-    - **Skor pulangan:** Menunjukkan skor pulangan untuk item terpilih dalam tetingkap kanan.
-    
-    - **Pengagihan risiko pulangan:** Menunjukkan pengagihan risiko pulangan merentasi pelanggan dan persentil dalam mana pelanggan yang terpilih. 
-    
-    - **Ciri teratas meningkat dan mengurangkan risiko pulangan:** Untuk item terpilih dalam tetingkap kanan, lima ciri teratas yang meningkat dan menurun risiko pulangan disenaraikan. Untuk setiap ciri yang berpengaruh, anda mendapati nilai ciri untuk item tersebut dan pengaruh pada skor pulangan. Nilai purata setiap ciri merentas segmen pelanggan yang rendah, sederhana dan pulangan tinggi juga ditunjukkan. Ia membantu untuk kontekstual lebih baik nilai ciri yang paling berpengaruh untuk item terpilih dan bandingkan dengan segmen pelanggan rendah, sederhana dan pulangan tinggi.
+- Dalam anak tetingkap kanan, pilih item daripada **Pelanggan** teratas atau **pelanggan** Penanda Aras. Kedua-dua senarai disusun mengikut nilai yang berkurangan daripada skor pulangan, sama ada skor hanya untuk pelanggan atau skor gabungan untuk pelanggan dan peringkat kedua seperti kategori produk. Item yang dipilih menentukan kandungan pada halaman ini.
 
-       - Rendah: akaun atau gabungan akaun dan peringkat kedua dengan skor pulangan antara 0 dan 0.33
-       - Sederhana: akaun atau gabungan akaun dan peringkat kedua dengan skor pulangan antara 0.33 dan 0.66
-       - Tinggi: akaun atau gabungan akaun dan peringkat kedua dengan skor pulangan lebih besar daripada 0.66
-    
-       Apabila anda meramalkan pulangan pada peringkat akaun, semua akaun dianggap dalam mendapatkan nilai ciri purata untuk segmen pulangan. Untuk ramalan pulangan pada peringkat kedua untuk setiap akaun, pemerolehan segmen pulangan bergantung pada peringkat kedua item yang dipilih dalam tetingkap sisi. Sebagai contoh, jika item mempunyai peringkat kedua kategori produk = bekalan pejabat, kemudian hanya item yang mempunyai bekalan pejabat sebagai kategori produk dipertimbangkan apabila mendapatkan nilai ciri purata untuk segmen pulangan. Logik ini digunakan untuk memastikan perbandingan saksama nilai ciri item dengan nilai purata merentas segmen rendah, sederhana dan pulangan tinggi.
+  - **Pelanggan teratas** : Senarai 10 pelanggan yang berada di risiko tertinggi pulangan dan risiko paling rendah pulangan berdasarkan skor pulangan mereka.
+  - **Pelanggan penanda aras** : Senarai hingga 10 pelanggan yang dipilih semasa mengkonfigurasi model.
 
-       Dalam sesetengah kes, nilai purata segmen rendah, sederhana atau pulangan tinggi adalah kosong atau tidak tersedia kerana tidak ada item yang dimiliki oleh segmen pulangan yang sepadan berdasarkan definisi di atas.
-       
-       > [!NOTE]
-       > Pentafsiran nilai di bawah purata lajur rendah, sederhana dan tinggi adalah berbeza untuk ciri kategori seperti negara atau industri. Oleh kerana idea nilai ciri "purata", tidak diguna pakai pada ciri kategori, nilai dalam lajur ini ialah perkadaran pelanggan dalam segmen pulangan rendah, sederhana atau tinggi yang mempunyai nilai yang sama dengan ciri kategori yang sama berbanding dengan item yang dipilih dalam panel tepi.
+- **Skor pulangan:** Menunjukkan skor pulangan untuk item terpilih dalam tetingkap kanan.
+
+- **Pengedaran risiko Churn:** Menunjukkan pengedaran risiko churn di seluruh pelanggan dan persentil pelanggan terpilih berada.
+
+- **Ciri-ciri teratas meningkatkan dan mengurangkan risiko churn:** Menyenaraikan lima ciri teratas yang meningkat dan mengurangkan risiko churn untuk item yang dipilih dalam anak tetingkap kanan. Menunjukkan nilai ciri untuk item tersebut dan pengaruhnya terhadap skor churn untuk setiap ciri berpengaruh. Nilai purata setiap ciri merentas segmen pelanggan yang rendah, sederhana dan pulangan tinggi juga ditunjukkan. Ia membantu untuk kontekstual lebih baik nilai ciri yang paling berpengaruh untuk item terpilih dan bandingkan dengan segmen pelanggan rendah, sederhana dan pulangan tinggi.
+
+  - Rendah: akaun atau gabungan akaun dan peringkat menengah dengan skor churn antara 0 dan 0.33.
+  - Sederhana: akaun atau gabungan akaun dan peringkat menengah dengan skor churn antara 0.33 dan 0.66.
+  - Tinggi: akaun atau gabungan akaun dan peringkat menengah dengan skor churn lebih besar daripada 0.66.
+
+  Apabila anda meramalkan pulangan pada peringkat akaun, semua akaun dianggap dalam mendapatkan nilai ciri purata untuk segmen pulangan. Untuk ramalan pulangan pada peringkat kedua untuk setiap akaun, pemerolehan segmen pulangan bergantung pada peringkat kedua item yang dipilih dalam tetingkap sisi. Sebagai contoh, jika item mempunyai tahap sekunder kategori produk (bekalan pejabat), maka hanya item yang mempunyai bekalan pejabat sebagai kategori produk dipertimbangkan apabila memperoleh nilai ciri purata untuk segmen churn. Logik ini digunakan untuk memastikan perbandingan saksama nilai ciri item dengan nilai purata merentas segmen rendah, sederhana dan pulangan tinggi.
+
+  Dalam sesetengah kes, nilai purata segmen rendah, sederhana atau pulangan tinggi adalah kosong atau tidak tersedia kerana tidak ada item yang dimiliki oleh segmen pulangan yang sepadan berdasarkan definisi di atas.
+
+  Pentafsiran nilai di bawah purata lajur rendah, sederhana dan tinggi adalah berbeza untuk ciri kategori seperti negara atau industri. Oleh kerana idea nilai ciri "purata", tidak diguna pakai pada ciri kategori, nilai dalam lajur ini ialah perkadaran pelanggan dalam segmen pulangan rendah, sederhana atau tinggi yang mempunyai nilai yang sama dengan ciri kategori yang sama berbanding dengan item yang dipilih dalam panel tepi.
 
 ---
 
-## <a name="manage-predictions"></a>Urus ramalan
-
-Ada kemungkinan untuk mengoptimumkan, menyelesaikan masalah, menyegarkan semula atau memadam ramalan. Semak laporan kebolehgunaan data input untuk mengetahui cara membuat ramalan lebih cepat dan lebih dipercayai. Untuk maklumat lanjut, pergi ke [Urus ramalan](manage-predictions.md).
+ > [!NOTE]
+ > Dalam entiti output untuk model ini, *ChurnScore* menunjukkan kebarangkalian churn dan *IsChurn* yang diramalkan adalah label binari berdasarkan *ChurnScore* dengan ambang 0.5. Jika ambang lalai ini tidak berfungsi untuk senario anda, [cipta segmen](segments.md#create-a-segment) baharu dengan ambang pilihan anda. Tidak semua pelanggan semestinya pelanggan aktif. Sebahagian daripada mereka mungkin tidak mempunyai apa-apa aktiviti untuk jangka masa panjang dan dianggap sebagai sudah dipulangkan, berdasarkan kepada definisi pulangan anda. Meramalkan risiko pulangan untuk pelanggan yang sudah pun membuat pulangan tidak berguna kerana mereka bukan khalayak yang minat.
+>
+> Untuk melihat skor churn, pergi ke **Entiti** > **Data** dan lihat tab data untuk entiti output yang anda takrifkan untuk model ini.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

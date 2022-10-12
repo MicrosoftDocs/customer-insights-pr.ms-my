@@ -1,7 +1,7 @@
 ---
 title: Sambungkan ke folder Common Data Model menggunakan akaun Azure Data Lake
 description: Bekerja dengan data Common Data Model menggunakan Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396102"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609959"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Sambungkan ke data dalam Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Menelan data menggunakan Dynamics 365 Customer Insights akaun Gen2 anda Azure Da
 
 - Anda Azure Data Lake Storage ingin menyambung dan menelan data daripada perlu berada dalam rantau Azure yang sama dengan Dynamics 365 Customer Insights persekitaran. Sambungan ke folder Common Data Model dari data lake dalam rantau Azure berbeza tidak disokong. Untuk mengetahui rantau Azure persekitaran, pergi ke **Perihal Sistem** > **·** > **Pentadbir** dalam Wawasan Pelanggan.
 
-- Data yang disimpan dalam perkhidmatan dalam talian boleh disimpan di lokasi yang berbeza daripada tempat data diproses atau disimpan.Dynamics 365 Customer InsightsDengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat](https://www.microsoft.com/trust-center) Amanah Microsoft.
+- Data yang disimpan dalam perkhidmatan dalam talian boleh disimpan di lokasi yang berbeza daripada tempat data diproses atau disimpan.Dynamics 365 Customer InsightsDengan mengimport atau menyambung ke data yang disimpan dalam perkhidmatan dalam talian, anda bersetuju bahawa data boleh dipindahkan dan disimpan dengan Dynamics 365 Customer Insights. [Ketahui lebih lanjut di Pusat Amanah Microsoft](https://www.microsoft.com/trust-center).
 
 - Prinsipal perkhidmatan Wawasan Pelanggan mestilah berada dalam salah satu peranan berikut untuk mengakses akaun storan. Untuk maklumat lanjut, lihat [Berikan keizinan kepada prinsipal perkhidmatan untuk mengakses akaun](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account) storan.
   - Pembaca Data Blob Storan
@@ -43,6 +43,10 @@ Menelan data menggunakan Dynamics 365 Customer Insights akaun Gen2 anda Azure Da
 - Pengguna yang menyediakan sambungan sumber data memerlukan keizinan Penyumbang Data Blob Storan paling sedikit pada akaun storan.
 
 - Data dalam Storan Tasik Data anda harus mengikut standard Model Data Umum untuk penyimpanan data anda dan mempunyai model data umum yang manifes untuk mewakili skema fail data (*.csv atau *.parket). Manifes mesti memberikan butiran entiti seperti lajur entiti dan jenis data, dan lokasi fail data dan jenis fail. Untuk maklumat lanjut, lihat [Manifes](/common-data-model/sdk/manifest) Model Data Biasa. Jika manifes tidak hadir, pengguna Pentadbir dengan Pemilik Data Storan Blob atau capaian Penyumbang Data Blob Storan boleh menentukan skema apabila menelan data.
+
+## <a name="recommendations"></a>Pengesyoran
+
+Untuk prestasi optimum, Wawasan Pelanggan mengesyorkan saiz partition menjadi 1 GB atau kurang dan bilangan fail partition dalam folder tidak boleh melebihi 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Sambungkan ke Azure Data Lake Storage
 
@@ -188,7 +192,7 @@ Anda boleh mengemas kini *Connect ke akaun storan menggunakan* pilihan. Untuk ma
       > [!IMPORTANT]
       > Jika terdapat pergantungan pada fail model.json atau manifest.json sedia ada dan set entiti, anda akan melihat mesej ralat dan tidak boleh memilih fail model.json atau manifest.json yang berbeza. Keluarkan kebergantungan sebelum mengubah fail model.json atau manifest.json atau cipta sumber data baharu dengan fail model.json atau manifest.json yang anda mahu gunakan untuk mengelakkan daripada mengeluarkan kebergantungan.
    - Untuk mengubah lokasi fail data atau kunci utama, pilih **Edit**.
-   - Untuk mengubah data pengingesan tambahan, lihat [Mengkonfigurasikan segar semula tambahan untuk sumber data Azure Data Lake](incremental-refresh-data-sources.md).
+   - Untuk mengubah data pengingesan tambahan, lihat [Mengkonfigurasikan segar semula tambahan untuk sumber](incremental-refresh-data-sources.md) data Azure Data Lake.
    - Hanya tukar nama entiti agar sepadan dengan nama entiti dalam fail .json.
 
      > [!NOTE]
@@ -199,5 +203,101 @@ Anda boleh mengemas kini *Connect ke akaun storan menggunakan* pilihan. Untuk ma
 1. Klik **Simpan** untuk menggunakan perubahan anda dan kembali ke **halaman Sumber data**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Sebab biasa untuk kesilapan pengingesan atau data yang rosak
+
+Semasa pengingesan data, beberapa sebab yang paling biasa rekod mungkin dianggap rosak termasuk:
+
+- Jenis data dan nilai medan tidak sepadan antara fail sumber dan skema
+- Bilangan lajur dalam fail sumber tidak sepadan dengan skema
+- Medan mengandungi aksara yang menyebabkan lajur condong berbanding skema yang dijangkakan. Contohnya: petikan yang tidak diformatkan dengan betul, petikan tidak terkandung, aksara baris baru atau aksara bertab.
+- Fail partition hilang
+- Jika terdapat lajur datetime/date/datetimeoffset, formatnya mesti ditentukan dalam skema jika ia tidak mengikut format standard.
+
+### <a name="schema-or-data-type-mismatch"></a>Skema atau ketidakpadanan jenis data
+
+Jika data tidak mematuhi skema, proses pengingesan selesai dengan kesilapan. Betulkan sama ada data sumber atau skema dan termakan semula data.
+
+### <a name="partition-files-are-missing"></a>Fail partition hilang
+
+- Jika pengingesan berjaya tanpa sebarang rekod rasuah, tetapi anda tidak dapat melihat sebarang data, edit model.json atau fail manifest.json anda untuk memastikan pembahagian ditentukan. Kemudian, [segarkan semula sumber data](data-sources.md#refresh-data-sources).
+
+- Jika pengingesan data berlaku pada masa yang sama dengan sumber data sedang disegar semula semasa segar semula jadual automatik, fail partition mungkin kosong atau tidak tersedia untuk diproses oleh Wawasan Pelanggan. Untuk menyelaraskan dengan jadual segar semula hulu, ubah [jadual segar semula sistem atau jadual](schedule-refresh.md) segar semula untuk sumber data. Selaraskan masa supaya segar semula tidak semua berlaku sekaligus dan menyediakan data terkini yang akan diproses dalam Wawasan Pelanggan.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Medan Datetime dalam format yang salah
+
+Medan datetime dalam entiti tidak berada dalam format ISO 8601 atau en-US. Format datetime lalai dalam Wawasan Pelanggan ialah format en-AS. Semua medan datetime dalam entiti hendaklah dalam format yang sama. Wawasan Pelanggan menyokong format lain yang disediakan anotasi atau ciri dibuat di peringkat sumber atau entiti dalam model atau manifest.json. Contohnya: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Dalam manifest.json, format datetime boleh ditentukan di peringkat entiti atau pada tahap atribut. Di peringkat entiti, gunakan "exhibitsTraits" dalam entiti dalam *.manifest.cdm.json untuk menentukan format datetime. Di peringkat atribut, gunakan "appliedTraits" dalam atribut dalam nama entiti.cdm.json.
+
+**Manifest.json di peringkat entiti**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json pada tahap atribut**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Gunakan model berasaskan Pembelajaran Mesin Azure
 description: Gunakan model berasaskan Pembelajaran Mesin Azure dalam Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082286"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609836"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Gunakan model berasaskan Pembelajaran Mesin Azure
 
@@ -35,7 +35,7 @@ Data yang disatukan dalam Dynamics 365 Customer Insights adalah ialah untuk memb
 ## <a name="work-with-azure-machine-learning-designer"></a>Gunakan pereka bentuk Pembelajaran Mesin Azure
 
 Pereka bentuk Azure Pembelajaran Mesin menyediakan kanvas visual di mana anda boleh menyeret dan melepaskan set data dan modul. Talian paip kelompok yang dicipta daripada pereka bentuk boleh disepadukan ke dalam Customer Insights jika ia dikonfigurasikan dengan sewajarnya. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Gunakan SDK Pembelajaran Mesin Azure
 
 Ahli sains data dan pembangun AI menggunakan [SDK Pembelajaran Mesin Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) untuk membina aliran kerja pembelajaran mesin. Buat masa ini, model yang dilatih menggunakan SDK tidak boleh disepadukan secara langsung dengan Customer Insights. Talian paip inferens kelompok yang menggunakan model tersebut diperlukan untuk penyepaduan dengan Customer Insights.
@@ -44,17 +44,16 @@ Ahli sains data dan pembangun AI menggunakan [SDK Pembelajaran Mesin Azure](/pyt
 
 ### <a name="dataset-configuration"></a>Konfigurasi set data
 
-Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Insights ke talian paip inferens kelompok anda. Set data ini perlu didaftarkan dalam ruang kerja. Buat masa ini, kami hanya menyokong [set data berjadual](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .csv. Set data yang sesuai dengan data entiti perlu diparameterkan sebagai parameter talian paip.
-   
-* Parameter set data dalam Pereka Bentuk
-   
-     Dalam pereka bentuk, buka **Pilih Lajur dalam Set Data** dan pilih **Tetapkan sebagai parameter talian paip**, tempat anda menyediakan nama untuk parameter.
+Cipta set data untuk menggunakan data entiti daripada Wawasan Pelanggan untuk saluran paip inferens kelompok anda. Daftarkan set data ini dalam ruang kerja. Buat masa ini, kami hanya menyokong [set data berjadual](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) dalam format .csv. Parameterkan set data yang sepadan dengan data entiti sebagai parameter saluran paip.
 
-     > [!div class="mx-imgBorder"]
-     > ![Pemparameteran set data dalam pereka bentuk.](media/intelligence-designer-dataset-parameters.png "Pemparameteran set data dalam pereka bentuk")
-   
-* Parameter set data dalam SDK (Python)
-   
+- Parameter set data dalam Pereka Bentuk
+
+  Dalam pereka bentuk, buka **Pilih Lajur dalam Set Data** dan pilih **Tetapkan sebagai parameter talian paip**, tempat anda menyediakan nama untuk parameter.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Pemparameteran set data dalam pereka bentuk.":::
+
+- Parameter set data dalam SDK (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Ins
 
 ### <a name="batch-inference-pipeline"></a>Talian paip inferens kelompok
   
-* Dalam pereka bentuk, talian paip latihan boleh digunakan untuk mencipta atau mengemas kini talian paip inferens. Buat masa ini, hanya talian paip inferens kelompok disokong.
+- Dalam pereka bentuk, gunakan saluran paip latihan untuk membuat atau mengemas kini saluran paip kesimpulan. Buat masa ini, hanya talian paip inferens kelompok disokong.
 
-* Menggunakan SDK, anda boleh menerbitkan talian paip ke titik tamat. Buat masa ini, Customer Insights menyepadukan dengan talian paip lalai pada titik tamat talian paip kelompok dalam ruang kerja Pembelajaran Mesin.
-   
+- Menggunakan SDK, terbitkan saluran paip ke titik akhir. Buat masa ini, Customer Insights menyepadukan dengan talian paip lalai pada titik tamat talian paip kelompok dalam ruang kerja Pembelajaran Mesin.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Anda perlu mencipta set data untuk menggunakan data entiti daripada Customer Ins
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Import data talian paip ke dalam Customer Insights
 
-* Pereka bentuk menyediakan [modul Data Eksport](/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
-   > [!div class="mx-imgBorder"]
-   > ![Eksport Konfigurasi Modul Data.](media/intelligence-designer-importdata.png "Eksport Konfigurasi Modul Data")
-   
-* Apabila menulis output inferens menggunakan kod, anda boleh memuat naik output kepada laluan dalam *storan data berdaftar* dalam ruang kerja. Jika laluan dan storan data adalah diparameterkan dalam talian paip, Customer insights akan dapat membaca dan mengimport output inferens. Buat masa ini, output berjadual tunggal dalam format csv disokong. Laluan mesti disertakan dengan direktori dan nama fail.
+- Pereka bentuk menyediakan [modul Data Eksport](/azure/machine-learning/algorithm-module-reference/export-data) yang membenarkan output talian paip dieksport ke storan Azure. Buat masa ini, modul mesti menggunakan jenis storan data **Storan Blob Azure** dan memparameterkan **Storan data** dan **Laluan** relatif. Customer Insights menggantikan kedua-dua parameter ini semasa pelaksanaan talian paip dengan storan data dan laluan yang boleh diakses oleh produk.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Eksport Konfigurasi Modul Data.":::
+
+- Semasa menulis output kesimpulan menggunakan kod, muat naik output ke laluan dalam *kedai* data berdaftar di ruang kerja. Jika laluan dan storan data adalah diparameterkan dalam talian paip, Customer insights akan dapat membaca dan mengimport output inferens. Buat masa ini, output berjadual tunggal dalam format csv disokong. Laluan mesti disertakan dengan direktori dan nama fail.
 
    ```python
    # In Pipeline setup script

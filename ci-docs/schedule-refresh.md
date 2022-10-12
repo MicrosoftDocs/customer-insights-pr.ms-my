@@ -1,7 +1,7 @@
 ---
 title: Menjadualkan segar semula sistem
 description: Jadualkan masa apabila sistem perlu disegar semula
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395967"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610339"
 ---
 # <a name="schedule-system-refresh"></a>Menjadualkan segar semula sistem
 
 Menjadualkan segar semula automatik bagi semua sumber data tertelan [anda](data-sources.md). Muat semula automatik membantu memastikan bahawa kemas kini daripada sumber data anda ditunjukkan dalam profil pelanggan anda yang disatukan.
 
 > [!NOTE]
-> Power Query sumber data yang diuruskan oleh anda menyegar semula jadual mereka sendiri. Untuk menjadualkan segar semula sumber data ini Power Query, konfigurasikan seting segar semula pada sumber data khusus daripada **halaman Sumber data**.
+> Power Query sumber data yang diuruskan oleh anda menyegar semula jadual mereka sendiri. Untuk menjadualkan segar semula sumber data ini Power Query, konfigurasikan seting segar semula pada sumber data khusus daripada **halaman Sumber data**. Jajarkan pemasaan dengan jadual segar semula data hulu supaya penyegaran semula tidak semua berlaku sekaligus.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Seting segar semula aliran data.":::
 
 ## <a name="set-system-refresh-schedule"></a>Tetapkan jadual segar semula sistem

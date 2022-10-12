@@ -1,23 +1,23 @@
 ---
-title: Buat segmen berdasarkan model ramalan
+title: Mencipta segmen berdasarkan model ramalan
 description: Cipta segmen berdasarkan entiti output untuk model ramalan.
-ms.date: 03/24/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: d67594f2467c1a0fde84b1ba0bd1afa4025e7b71
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ed9c6247a1f9148628dc9b5217484e98a576224e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082433"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610431"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Cipta segmen berdasarkan model ramalan (pratonton)
 
-Keputusan ramalan kadang kala hanya diguna pakai pada subset pelanggan anda. Tingkatkan pemperibadian pengesyoran dengan mencipta segmen daripada hasil model ramalan. Sebagai contoh, anda mungkin mahu memberikan pengesyoran khusus kepada pelanggan yang lebih suka jenis perkhidmatan tertentu. 
+Keputusan ramalan kadang kala hanya diguna pakai pada subset pelanggan anda. Tingkatkan pemperibadian pengesyoran dengan mencipta segmen daripada hasil model ramalan. Sebagai contoh, anda mungkin mahu memberikan pengesyoran khusus kepada pelanggan yang lebih suka jenis perkhidmatan tertentu.
 
 ## <a name="prerequisites"></a>Prasyarat
 
@@ -34,10 +34,15 @@ Keputusan ramalan kadang kala hanya diguna pakai pada subset pelanggan anda. Tin
 
 1. Pergi ke **Kecerdasan** > **Ramalan** dan pilih tab **Ramalan saya**.
 
-1. Pilih elipsis menegak bersebelahan dengan model yang anda mahu semak dan pilih **Lihat**.
+1. Pilih model yang anda ingin semak semula dan pilih **Lihat**.
 
 1. Pada halaman hasil, pilih **Cipta segmen**. Untuk maklumat lanjut mengenai halaman keputusan, kaji semula artikel mengenai model.
 
    :::image type="content" source="media/prediction-create-segment.png" alt-text="Tangkapan skrin halaman hasil ramalan dengan serlahan pada tindakan segmen Cipta.":::
 
-1. Cipta segmen baharu berdasarkan pada entiti output untuk model terpilih. Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
+1. Buat segmen baharu menggunakan atribut daripada entiti output model yang dipilih. Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
+
+> [!TIP]
+> Anda juga boleh mencipta segmen untuk model ramalan daripada **halaman Segmen** dengan **memilih Baharu** dan memilih **Cipta daripada** > **Kecerdasan**. Untuk maklumat lanjut, lihat [Mencipta segmen baharu dengan segmen](segment-quick.md) pantas.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

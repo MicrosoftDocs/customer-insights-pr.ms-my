@@ -1,7 +1,7 @@
 ---
 title: Langganan panduan sampel ramalan pulangan
 description: Gunakan panduan sampel ini untuk mencuba model ramalan pulangan langganan luar kotak.
-ms.date: 03/31/2022
+ms.date: 09/19/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,77 +11,73 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 7e754be9a2cb9450949c6b3667bbd37aa39cf0bf
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741422"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610017"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Langganan panduan sampel ramalan pulangan
 
-Kami akan menerangkan kepada anda contoh ramalan pulangan langganan hujung ke hujung menggunakan data sampel yang diberikan di bawah. 
+Panduan ini akan menerangkan kepada anda contoh ramalan churn langganan hujung ke hujung menggunakan data sampel. Kami mengesyorkan agar anda mencuba ramalan [ini dalam persekitaran yang baru](manage-environments.md).
 
 ## <a name="scenario"></a>Senario
 
-Contoso ialah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi, yang mereka jual melalui laman web Contoso Coffee mereka. Mereka baru memulakan perniagaan langganan untuk pelanggan mereka untuk mendapatkan kopi secara tetap. Matlamat mereka ialah untuk memahami, pelanggan yang melanggan yang mana mungkin membatalkan langganan mereka dalam beberapa bulan akan datang. Mengetahui pelanggan mereka yang **cenderung untuk memulangkan**, boleh membantu mereka menjimatkan usaha pemasaran dengan memberikan tumpuan dalam mengekalkan mereka.
+Contoso adalah sebuah syarikat yang menghasilkan mesin kopi dan kopi berkualiti tinggi. Mereka menjual produk melalui laman web Contoso Coffee mereka. Mereka baru memulakan perniagaan langganan untuk pelanggan mereka untuk mendapatkan kopi secara tetap. Matlamat mereka adalah untuk memahami pelanggan yang melanggan mungkin membatalkan langganan mereka dalam beberapa bulan akan datang. Mengetahui mana antara pelanggan **mereka yang mungkin churn** boleh membantu mereka menjimatkan usaha pemasaran dengan memberi tumpuan kepada menjaga mereka.
 
 ## <a name="prerequisites"></a>Prasyarat
 
 - Sekurang-kurangnya [Keizinan penyumbang](permissions.md) dalam Customer Insights.
-- Kami mengesyorkan agar anda melaksanakan langkah berikut [dalam persekitaran baharu](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>Tugas 1 - Inges data
 
-Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sumber data menggunakan Power Query penyambung](connect-power-query.md) secara khusus. Maklumat berikut menganggap anda membiasakan diri dengan pengingesan data secara umum. 
+Semak artikel [tentang pengingesan](data-sources.md) data dan [menyambung ke Power Query sumber data](connect-power-query.md). Maklumat berikut menganggap anda sudah biasa dengan pengambilan data secara umum.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Inges data pelanggan daripada platform e-Dagang
 
-1. Cipta sumber data bernama **e-Dagang**, pilih pilihan import dan pilih penyambung **Teks/CSV**.
+1. Buat Power Query sumber data bernama **eCommerce** dan pilih **penyambung Teks /CSV**.
 
 1. Masukkan URL untuk kenalan e-Dagang https://aka.ms/ciadclasscontacts.
 
-1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
+1. Semasa mengedit data, pilih **Ubah** kemudian **Gunakan baris pertama sebagai pengepala**.
 
 1. Kemas kini jenis data untuk lajur yang disenaraikan di bawah:
-
    - **DateOfBirth**: Tarikh
    - **CreatedOn**: Zon waktu tarikh
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Ubah tarikh lahir kepada tarikh ini.":::
 
-1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **eCommerceContacts**
+1. **Dalam medan Nama** pada anak tetingkap kanan, namakan semula sumber data anda kepada **eCommerceHubungi**
 
 1. Simpan sumber data.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingest data pelanggan daripada skema kesetiaan
 
-1. Cipta sumber data bernama **LoyaltyScheme**, pilih pilihan import dan pilih penyambung **Teks/CSV**.
+1. Buat sumber data bernama **LoyaltyScheme** dan pilih **penyambung Teks/CSV**.
 
-1. Masukkan URL untuk kenalan e-Dagang https://aka.ms/ciadclasscustomerloyalty.
+1. Masukkan URL untuk pelanggan https://aka.ms/ciadclasscustomerloyalty kesetiaan.
 
-1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
+1. Semasa mengedit data, pilih **Ubah** kemudian **Gunakan baris pertama sebagai pengepala**.
 
 1. Kemas kini jenis data untuk lajur yang disenaraikan di bawah:
-
    - **DateOfBirth**: Tarikh
    - **RewardsPoints**: Nombor Bulat
    - **CreatedOn**: Tarikh/Masa
 
-1. Dalam medan **Nama** pada anak tetingkap di sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **loyCustomers**.
+1. **Dalam medan Nama** pada anak tetingkap kanan, namakan semula sumber data anda kepada **loyCustomers**.
 
 1. Simpan sumber data.
 
 ### <a name="ingest-subscription-information"></a>Ingeskan maklumat langganan
 
-1. Cipta sumber data bernama **SubscriptionHistory**, pilih pilihan import dan pilih penyambung **Text/CSV**.
+1. Cipta sumber data bernama **SubscriptionHistory** dan pilih **penyambung Teks/CSV**.
 
-1. Masukkan URL untuk kenalan e-dagang https://aka.ms/ciadchurnsubscriptionhistory.
+1. Masukkan URL untuk langganan https://aka.ms/ciadchurnsubscriptionhistory.
 
-1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
+1. Semasa mengedit data, pilih **Ubah** kemudian **Gunakan baris pertama sebagai pengepala**.
 
 1. Kemas kini jenis data untuk lajur yang disenaraikan di bawah:
-
    - **SubscriptioID**: Nombor Bulat
    - **SubscriptionAmount**: Mata Wang
    - **SubscriptionEndDate** : Tarikh/Masa
@@ -91,92 +87,107 @@ Semak artikel [mengenai pengambilan](data-sources.md) data dan [pengimportan sum
    - **Is_auto_renew** : Benar/Palsu
    - **RecurringFrequencyInMonths**: Nombor Bulat
 
-1. Dalam medan **Nama** pada anak tetingkap sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **SubscriptionHistory**.
+1. **Dalam medan Nama** pada anak tetingkap kanan, namakan semula sumber data anda kepada **SubscriptionHistory**.
 
 1. Simpan sumber data.
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>Inges data pelanggan daripada ulasan laman web
 
-1. Cipta sumber data bernama **Laman Web**, pilih pilihan import dan pilih penyambung **Text/CSV**.
+1. Buat sumber data bernama **Laman Web** dan pilih **penyambung Teks / CSV**.
 
-1. Masukkan URL untuk kenalan e-dagang https://aka.ms/ciadclasswebsite.
+1. Masukkan URL untuk ulasan https://aka.ms/ciadclasswebsite laman web.
 
-1. Semasa mengedit data, pilih **Ubah**, kemudian **Gunakan Baris Pertama sebagai Pengepala**.
+1. Semasa mengedit data, pilih **Ubah** kemudian **Gunakan baris pertama sebagai pengepala**.
 
 1. Kemas kini jenis data untuk lajur yang disenaraikan di bawah:
-
    - **ReviewRating**: Nombor Bulat
    - **ReviewDate**: Tarikh
 
-1. Dalam medan 'Nama' pada anak tetingkap sebelah kanan, namakan semula sumber data anda daripada **Pertanyaan** kepada **webReviews**.
+1. **Dalam medan Nama** pada anak tetingkap kanan, namakan semula sumber data anda kepada **paparan webReviews**.
 
 ## <a name="task-2---data-unification"></a>Tugas 2 - Penyatuan data
 
+Semak semula artikel [tentang penyatuan](data-unification.md) data. Maklumat berikut menganggap anda sudah biasa dengan penyatuan data secara umum.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-the-subscription-churn-prediction"></a>Tugas 3 - Konfigurasikan ramalan pulangan langganan
+## <a name="task-3---create-transaction-history-activity"></a>Tugas 3 - Buat aktiviti sejarah transaksi
 
-Dengan adanya profil pelanggan disatukan, kini kami dapat menjalankan ramalan pulangan langganan. Untuk langkah terperinci, lihat [artikel ramalan](predict-subscription-churn.md) churn langganan. 
+Semak artikel [mengenai aktiviti](activities.md) pelanggan. Maklumat berikut menganggap anda sudah biasa dengan membuat aktiviti secara umum.
 
-1. Pergi ke **Kecerdasan** > **Teroka** dan pilih untuk menggunakan **Model pulangan pelanggan**.
+1. Cipta aktiviti yang dipanggil **SubscriptionHistory** dengan *entiti Langganan* dan kunci utamanya, **CustomerId**.
 
-1. Pilih pilihan **Langganan** dan pilih **Mari Bermula**.
+1. Buat hubungan antara *SubscriptionHistory:Langganan* dan *eCommerceHubungka:eCommerce* dengan **CustomerID** sebagai kunci asing untuk menghubungkan kedua-dua entiti.
+
+1. Pilih **Jenis Langganan untuk** EventActivity **dan** SubscriptionEndDate **untuk** TimeStamp **·**.
+
+1. Pilih **Langganan** untuk **Jenis** Aktiviti dan memetakan data aktiviti secara semantik.
+
+1. Jalankan aktiviti tersebut.
+
+1. Tambah aktiviti lain dan petakan nama medannya pada medan yang sepadan:
+   - Entiti aktiviti pelanggan: Reviews:Website
+   - Kunci utama: Website.Reviews.ReviewId
+   - Cap masa: Website.Reviews.ReviewDate
+   - Peristiwa (nama aktiviti): Website.Reviews.ActivityTypeDisplay
+   - Butiran (amaun atau nilai): Website.Reviews.ReviewRating
+
+1. Jalankan aktiviti tersebut.
+
+## <a name="task-4---configure-the-subscription-churn-prediction"></a>Tugas 4 - Konfigurasikan ramalan pulangan langganan
+
+Dengan profil pelanggan bersatu di tempat dan aktiviti yang dibuat, jalankan ramalan churn langganan. Untuk langkah terperinci, lihat [ramalan churn langganan](predict-subscription-churn.md).
+
+1. Pergi ke **Ramalan** > **Perisikan**.
+
+1. Pada tab **Cipta**, pilih **Gunakan model** pada **jubin model** churn Pelanggan.
+
+1. Pilih **Langganan** untuk jenis churn kemudian **Bermula**.
 
 1. Namakan model **Ramalan Pulangan Langganan OOB** dan **OOBSubscriptionChurnPrediction** entiti output.
 
-1. Takrifkan dua syarat untuk model pulangan:
+1. Tentukan keutamaan model:
+   - **Hari sejak langganan tamat**: **60** hari untuk menunjukkan bahawa pelanggan dianggap tergelak jika mereka tidak memperbaharui langganan dalam tempoh ini selepas langganan mereka tamat.
+   - **Hari untuk menyiasat masa depan untuk meramalkan churn**: **93** hari yang merupakan tempoh model meramalkan pelanggan mana yang mungkin churn. Semakin jauh masa hadapan anda melihat, semakin kurang tepat keputusan.
 
-   * **Hari sejak langganan tamat**: **sekurang-kurangnya 60** hari. Jika pelanggan tidak memperbaharui langganan dalam tempoh ini selepas langganan mereka tamat, mereka dianggap telah memberikan pulangan. 
+   :::image type="content" source="media/model-subs-levers.PNG" alt-text="Pilih keutamaan model dan definisi churn.":::
 
-   * **Definisi pulangan**: **sekurang-kurangnya 93** hari. Tempoh model meramalkan pelanggan mana yang mungkin akan memberikan pulangan. Semakin jauh masa hadapan anda melihat, semakin kurang tepat keputusan.
+1. Pilih **Seterusnya**.
 
-     :::image type="content" source="media/model-subs-levers.PNG" alt-text="Pilih Tetingkap Ramalan tuil model dan Definisi Ramalan.":::
+1. Dalam langkah Data **yang** Diperlukan, pilih **Tambah data** untuk menyediakan sejarah langganan.
 
-1. Pilih **Tambah data yang diperlukan** dan pilih **Tambah data** untuk sejarah langganan.
+1. Pilih **Langganan** dan entiti SubscriptionHistory dan pilih **Berikut**. Data yang diperlukan diisi secara automatik daripada aktiviti tersebut. Pilih **Simpan**.
 
-1. Tambah **Langganan: Entiti SubscriptionHistory** dan petakan medan daripada e-Dagang kepada medan berkaitan yang diperlukan oleh model.
+1. Di bawah Aktiviti Pelanggan, pilih **Tambah data**.
 
-1. Sertai **Langganan: Entiti SubscriptionHistory** dengan **eCommerceContacts : e-Dagang**, namakan hubungan **eCommerceSubscription**.
+1. Untuk contoh ini, tambahkan aktiviti semakan web.
 
-   :::image type="content" source="media/model-subscription-join.PNG" alt-text="Sertai entiti e-Dagang.":::
+1. Pilih **Seterusnya**.
 
-1. Di bawah Aktiviti Pelanggan, tambah **webReviews : Entiti Laman Web** dan petakan medan daripada webReviews kepada medan berkaitan yang diperlukan oleh model. 
-   - Kunci utama: ReviewId
-   - Cap waktu: ReviewDate
-   - Peristiwa: ReviewRating
-
-1. Konfigurasikan aktiviti untuk ulasan laman web. Pilih aktiviti **Ulasan** dan sertai **webReviews: Entiti laman web** dengan **eCommerceContacts: e-Dagang**.
-
-1. Pilih **Seterusnya** untuk menetapkan jadual model.
-
-   Model perlu dilatih secara tetap untuk belajar pola baharu apabila terdapat data baharu yang diinges. Untuk contoh ini, pilih **Bulanan**.
+1. **Dalam langkah Kemas kini data**, pilih **Bulanan** untuk jadual model.
 
 1. Selepas menyemak semula semua butiran, pilih **Simpan dan Jalankan**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>Tugas 4 - Semak semula hasil dan penerangan model
+## <a name="task-5---review-model-results-and-explanations"></a>Tugas 5 - Semak semula hasil dan penerangan model
 
-Biarkan model melengkapkan latihan dan pemarkahan data. Anda kini boleh menyemak semula penerangan model pulangan langganan. Untuk mendapatkan maklumat lanjut, lihat [Semak semula status dan keputusan ramalan](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Biarkan model melengkapkan latihan dan pemarkahan data. Semak penjelasan model churn langganan. Untuk maklumat lanjut, lihat [Melihat hasil](predict-subscription-churn.md#view-prediction-results) ramalan.
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Tugas 5 - Cipta segmen pelanggan risiko pulangan tinggi
+## <a name="task-6---create-a-segment-of-high-churn-risk-customers"></a>Tugas 6 - Cipta segmen pelanggan risiko pulangan tinggi
 
-Menjalankan model pengeluaran mewujudkan entiti baharu yang anda boleh lihat dalam **Data** > **Entiti**.   
+Menjalankan model mencipta entiti baharu, yang disenaraikan pada **Data** > **Entiti**. Anda boleh mencipta segmen baharu berdasarkan entiti yang dicipta oleh model.
 
-Anda boleh mencipta segmen baharu berdasarkan entiti yang dicipta oleh model.
+1. Pada halaman hasil, pilih **Cipta segmen**.
 
-1.  Pergi ke **Segmen**. Pilih **Baharu** dan pilih **Cipta daripada** > **Kecerdasan**. 
+1. Buat peraturan menggunakan **entiti OOBSubscriptionChurnPrediction** dan tentukan segmen:
+   - **Padang**: ChurnScore
+   - **Pengendali**: lebih besar daripada
+   - **Nilai**: 0.6
 
-   :::image type="content" source="media/segment-intelligence.PNG" alt-text="Mencipta segmen dengan output model.":::
+1. Pilih **Simpan** dan **Jalankan** segmen.
 
-1. Pilih titik tamat **OOBSubscriptionChurnPrediction** dan takrifkan segmen: 
-   - Medan: ChurnScore
-   - Operator: lebih daripada
-   - Nilai: 0.6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Sediakan segmen pulangan langganan.":::
+Kini anda mempunyai segmen yang dikemas kini secara dinamik yang mengenal pasti pelanggan risiko pulangan tinggi untuk perniagaan langganan ini. Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
 
-Kini anda mempunyai segmen yang dikemas kini secara dinamik yang mengenal pasti pelanggan risiko pulangan tinggi untuk perniagaan langganan ini.
-
-Untuk maklumat lanjut, lihat: [Cipta dan urus bahagian](segments.md).
-
+> [!TIP]
+> Anda juga boleh mencipta segmen untuk model ramalan daripada **halaman Segmen** dengan **memilih Baharu** dan memilih **Cipta daripada** > **Kecerdasan**. Untuk maklumat lanjut, lihat [Mencipta segmen baharu dengan segmen](segment-quick.md) pantas.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

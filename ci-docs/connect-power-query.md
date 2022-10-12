@@ -1,7 +1,7 @@
 ---
 title: Menyambung ke Power Query sumber data (mengandungi video)
 description: Menelan data melalui Power Query penyambung (mengandungi video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463276"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609901"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Sambung ke Power Query sumber data
 
@@ -43,16 +43,17 @@ Menambah sumber data berdasarkan Power Query penyambung secara amnya mengikut la
 
 1. Pilih **Ubah data**.
 
-1. Dialog **Power Query Edit pertanyaan** membolehkan anda menyemak dan memperincikan data. Entiti yang dikenal pasti sistem dalam sumber data terpilih anda muncul dalam anak tetingkap kiri.
+1. Semak semula dan perhalusi data anda dalam **Power Query halaman - Edit pertanyaan**. Entiti yang dikenal pasti sistem dalam sumber data terpilih anda muncul dalam anak tetingkap kiri.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Edit dialog pertanyaan":::
 
-1. Anda juga boleh mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan pilihan dalam Power Query tetingkap untuk menggunakan transformasi. Setiap transformasi disenaraikan di bawah **langkah** Gunaan. Power Query menyediakan banyak [pilihan transformasi](/power-query/power-query-what-is-power-query#transformations) pra-binaan.
+1. Mengubah data anda. Pilih entiti untuk mengedit atau mengubah. Gunakan pilihan dalam Power Query tetingkap untuk menggunakan transformasi. Setiap transformasi disenaraikan di bawah **langkah** Gunaan. Power Query menyediakan banyak [pilihan transformasi](/power-query/power-query-what-is-power-query#transformations) pra-binaan.
 
-   Kami mengesyorkan agar anda menggunakan transformasi berikut:
-
-   - Jika anda sedang mengambil data dari fail CSV, baris pertama selalunya mengandungi tajuk. Pergi ke **Ubah** dan pilih **Gunakan baris pertama sebagai pengepala**.
-   - Pastikan jenis data ditetapkan dengan sewajarnya. Contohnya, untuk medan tarikh, pilih jenis tarikh.
+   > [!IMPORTANT]
+   > Kami mengesyorkan agar anda menggunakan transformasi berikut:
+   >
+   > - Jika anda sedang mengambil data dari fail CSV, baris pertama selalunya mengandungi tajuk. Pergi ke **Ubah** dan pilih **Gunakan baris pertama sebagai pengepala**.
+   > - Memastikan jenis data ditetapkan dengan sewajarnya dan sepadan dengan data. Contohnya, untuk medan tarikh, pilih jenis tarikh.
 
 1. Untuk menambah entiti tambahan pada sumber data anda dalam **dialog Edit pertanyaan**, pergi ke **Rumah** dan pilih **Dapatkan data**. Ulangi langkah 5-10 sehingga anda telah menambah semua entiti untuk sumber data ini. Jika anda mempunyai pangkalan data yang merangkumi set data berbilang, setiap set data adalah entiti sendiri.
 
@@ -102,5 +103,51 @@ Get laluan data daripada persekitaran sedia Power BI ada atau Power Apps perseki
 1. Pilih **Simpan** untuk menggunakan perubahan anda dan kembali ke **halaman Sumber data**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Sebab biasa untuk kesilapan pengingesan atau data yang rosak
+
+### <a name="data-type-does-not-match-data"></a>Jenis data tidak sepadan dengan data
+
+Ketidakpadanan jenis data yang paling biasa berlaku apabila medan tarikh tidak disetkan kepada format tarikh yang betul.
+
+Data boleh diperbaiki di sumber dan ditelan semula. Atau betulkan transformasi dalam Wawasan Pelanggan. Untuk membetulkan transformasi:
+
+1. Pergi **Data** > **Sumber data**.
+
+1. Di sebelah sumber data dengan data yang rosak, pilih **Edit**.
+
+1. Pilih **Seterusnya**.
+
+1. Pilih setiap pertanyaan dan cari transformasi yang digunakan dalam "Langkah Terpakai" yang salah atau lajur tarikh yang belum diubah dengan format tarikh.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Edit menunjukkan format tarikh yang salah":::
+
+1. Ubah jenis data agar sepadan dengan data dengan betul.
+
+1. Pilih **Simpan**. Itu sumber data disegarkan semula.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Menyelesaikan masalah isu segar semula sumber data berasaskan PPDF Power Query
+
+Jika data basi atau anda menerima ralat selepas segar semula sumber data, lakukan langkah berikut:
+
+1. Navigasi ke [Power Platform](https://make.powerapps.com).
+
+1. **Pilih Persekitaran** untuk contoh Wawasan Pelanggan anda.
+
+1. Navigasi ke **Aliran** Data.
+
+1. Untuk aliran data yang sepadan dengan sumber data dalam Wawasan Pelanggan, pilih elipsis menegak (&vellip;) kemudian pilih **Tunjukkan sejarah** segar semula.
+
+1. **Jika Status** aliran data **berjaya**, pemilikan Power Query sumber data berasaskan mungkin telah berubah:
+
+   1. Semak semula jadual segar semula daripada sejarah segar semula.
+   1. Tetapkan jadual pemilik baru dan simpan seting.
+
+1. **Jika Status** aliran **data Gagal**:
+
+   1. Muat turun fail sejarah segar semula.
+   1. Semak fail yang dimuat turun atas sebab kegagalan.
+   1. Jika ralat tidak dapat diselesaikan, pilih **?** Untuk membuka tiket sokongan. Sertakan fail sejarah segar semula yang dimuat turun.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

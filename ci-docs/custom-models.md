@@ -1,7 +1,7 @@
 ---
 title: Model pembelajaran mesin tersuai | Dokumen Microsoft
 description: Kerja dengan model tersuai daripada Azure Machine Learning dalam Dynamics 365 Customer Insights.
-ms.date: 12/01/2021
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,120 +11,114 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 89553b511d249fd586e36a1c4944a977513b0643
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245814"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609757"
 ---
 # <a name="custom-machine-learning-models"></a>Model pembelajaran mesin tersuai
 
 > [!NOTE]
-> Sokongan untuk Pembelajaran Mesin Studio (klasik) akan berakhir pada 31 Ogos 2024. Kami mengesyorkan agar anda beralih ke [Azure Pembelajaran Mesin](/azure/machine-learning/overview-what-is-azure-machine-learning) pada tarikh tersebut.
+> Sokongan untuk studio Pembelajaran Mesin (klasik) akan berakhir pada 31 Ogos 2024. Kami mengesyorkan anda beralih kepada [Azure Pembelajaran Mesin](/azure/machine-learning/overview-what-is-azure-machine-learning) pada tarikh tersebut.
 >
-> Mulai 1 Disember 2021, anda tidak akan dapat mencipta sumber Pembelajaran Mesin Studio (klasik) baharu. Melalui 31 Ogos 2024, anda boleh terus menggunakan sumber Pembelajaran Mesin Studio (klasik) yang sedia ada. Untuk maklumat lanjut, lihat [Berhijrah ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
+> Bermula 1 Disember 2021, anda tidak akan dapat mencipta sumber studio Pembelajaran Mesin (klasik) baharu. Sehingga 31 Ogos 2024, anda boleh terus menggunakan sumber studio Pembelajaran Mesin (klasik) sedia ada. Untuk maklumat lanjut, lihat [Migrasi ke Azure Pembelajaran Mesin](/azure/machine-learning/migrate-overview).
 
-
-**Kecerdasan** > **Model tersuai** membolehkan anda mengurus aliran kerja berasaskan model Pembelajaran Mesin Azure. Aliran kerja membantu anda memilih data yang anda mahukan untuk menjana wawasan dan memetakan keputusan kepada data pelanggan disatukan anda. Untuk maklumat lanjut tentang membina model ML tersuai, lihat [Gunakan model berasaskan Pembelajaran Mesin Azure](azure-machine-learning-experiments.md).
-
-## <a name="responsible-ai"></a>AI Yang Bertanggungjawab
-
-Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik, meningkatkan keupayaan perniagaan dan strim hasil. Kami amat mengesyorkan agar anda mengimbangkan nilai ramalan anda terhadap kesan yang telah diberikan dan bias yang mungkin diperkenalkan dengan cara yang beretika. Ketahui lebih lanjut tentang cara Microsoft [menangani AI Yang Bertanggungjawab](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Anda juga boleh mengetahui tentang [teknik dan proses untuk pembelajaran mesin yang bertanggungjawab](/azure/machine-learning/concept-responsible-ml) khusus kepada Pembelajaran Mesin Azure.
+Model tersuai membolehkan anda menguruskan aliran kerja berdasarkan model Azure Pembelajaran Mesin. Aliran kerja membantu anda memilih data yang anda mahukan untuk menjana wawasan dan memetakan keputusan kepada data pelanggan disatukan anda. Untuk maklumat lanjut tentang membina model ML tersuai, lihat [Gunakan model berasaskan Pembelajaran Mesin Azure](azure-machine-learning-experiments.md).
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Ciri ini menyokong perkhidmatan web yang diterbitkan melalui [saluran paip kumpulan Azure Pembelajaran Mesin](/azure/machine-learning/concept-ml-pipelines).
+- Perkhidmatan web yang diterbitkan melalui [Azure Pembelajaran Mesin saluran paip kelompok](/azure/machine-learning/concept-ml-pipelines).
+- Saluran paip mesti diterbitkan di bawah [titik akhir saluran paip](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+- Akaun [storan](/azure/storage/blobs/data-lake-storage-quickstart-create-account) Azure Data Lake Gen2 yang dikaitkan dengan tika Azure Studio anda.
+- Untuk Azure Pembelajaran Mesin ruang kerja dengan saluran paip, keizinan Pemilik atau Pentadbir Capaian Pengguna kepada Azure Pembelajaran Mesin Workspace.
 
-- Anda memerlukan akaun storan Azure Data Lake Gen2 yang berkaitan dengan tika Azure Studio anda untuk menggunakan ciri ini. Untuk mendapatkan maklumat lanjut, lihat [Cipta akaun storan Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
-
-- Untuk ruang kerja Pembelajaran Mesin Azure dengan talian paip, anda memerlukan keizinan Pemilik atau Pentadbir Akses Pengguna untuk Ruang Kerja Pembelajaran Mesin Azure.
-
-   > [!NOTE]
-   > Data dipindahkan antara tika Customer Insights anda dengan perkhidmatan web Azure atau talian paip yang dipilih dalam aliran kerja. Apabila anda memindahkan data kepada perkhidmatan Azure, sila pastikan perkhidmatan dikonfigurasikan untuk memproses data mengikut cara dan lokasi yang diperlukan untuk mematuhi apa-apa keperluan undang-undang atau peraturan bagi data tersebut untuk organisasi anda.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
+  > [!NOTE]
+  > Data dipindahkan antara tika Customer Insights anda dengan perkhidmatan web Azure atau talian paip yang dipilih dalam aliran kerja. Apabila anda memindahkan data kepada perkhidmatan Azure, sila pastikan perkhidmatan dikonfigurasikan untuk memproses data mengikut cara dan lokasi yang diperlukan untuk mematuhi apa-apa keperluan undang-undang atau peraturan bagi data tersebut untuk organisasi anda.
 
 ## <a name="add-a-new-workflow"></a>Tambah aliran kerja baharu
 
 1. Pergi ke **Kecerdasan** > **Model tersuai** dan pilih **Aliran kerja baharu**.
 
-1. Berikan model tersuai anda nama yang mudah dikenali dalam medan **Nama**.
+1. Berikan Nama yang **dikenali**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Syot layar anak tetingkap aliran kerja Baharu.](media/new-workflowv2.png "Petikan skrin anak tetingkap aliran kerja Baharu")
+   :::image type="content" source="media/new-workflowv2.png" alt-text="Syot layar anak tetingkap aliran kerja Baharu.":::
 
 1. Pilih organisasi yang mengandungi perkhidmatan web dalam **Penyewa yang mengandungi perkhidmatan web anda**.
 
 1. Jika langganan Pembelajaran Mesin Azure berada dalam penyewa yang berbeza daripada Customer Insights, pilih **Daftar masuk** dengan kelayakan anda untuk organisasi yang dipilih.
 
-1. Pilih **Ruang kerja** yang berkaitan dengan perkhidmatan web anda. 
+1. Pilih **Ruang kerja** yang berkaitan dengan perkhidmatan web anda.
 
-1. Pilih saluran paip Azure Pembelajaran Mesin dalam **perkhidmatan Web yang mengandungi juntai bawah model** anda. Kemudian pilih **Seterusnya**.    
-   Ketahui lebih lanjut tentang [menerbitkan talian paip dalam Pembelajaran Mesin Azure menggunakan pereka bentuk](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Talian paip anda mesti diterbitkan di bawah [titik tamat talian paip](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Pilih saluran paip Azure Pembelajaran Mesin dalam **perkhidmatan Web yang mengandungi juntai bawah model** anda. Kemudian pilih **Seterusnya**.
+   Ketahui lebih lanjut tentang [menerbitkan talian paip dalam Pembelajaran Mesin Azure menggunakan pereka bentuk](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) atau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk).
 
-1. Untuk setiap **input Perkhidmatan web** pilih **Entiti** pemadanan daripada Customer Insights dan pilih **Seterusnya**.
+1. Untuk setiap **input Perkhidmatan web** pilih **Entiti** pemadanan daripada Customer Insights. Kemudian pilih **Seterusnya**.
    > [!NOTE]
    > Aliran kerja model tersuai akan menggunakan heuristik untuk memetakan medan input perkhidmatan web kepada atribut entiti berdasarkan nama dan jenis data medan. Anda akan melihat ralat jika medan perkhidmatan web tidak dapat dipetakan kepada entiti.
 
-   > [!div class="mx-imgBorder"]
-   > ![Konfigurasikan aliran kerja.](media/intelligence-screen2-updated.png "Konfigurasikan aliran kerja")
+   :::image type="content" source="media/intelligence-screen2-updated.png" alt-text="Konfigurasikan aliran kerja.":::
 
-1. Dalam langkah **Parameter Output Model**, tetapkan ciri berikut:
-      1. Masukkan output **Nama entiti** yang anda mahu hasil output talian paip mengalir masuk.
-      1. Pilih **Nama parameter storan data output** bagi talian paip kelompok daripada juntai bawah.
-      1. Pilih **Nama parameter Laluan Output** bagi talian paip kelompok daripada juntai bawah.
+1. Untuk **Parameter** Output Model, setkan sifat berikut:
+   - **Nama entiti** untuk hasil output saluran paip
+   - **Nama parameter** output storan data bagi saluran paip kelompok anda
+   - **Nama** parameter Laluan Output bagi saluran paip kelompok anda
 
-      > [!div class="mx-imgBorder"]
-      > ![Anak tetingkap Parameter Output Model.](media/intelligence-screen3-outputparameters.png "Anak tetingkap Parameter Output Model")
+   :::image type="content" source="media/intelligence-screen3-outputparameters.png" alt-text="Anak tetingkap Parameter Output Model.":::
 
-1. Pilih atribut sepadan daripada senarai juntai bawah **ID Pelanggan dalam hasil** yang mengenal pasti pelanggan dan pilih **Simpan**.
+1. Pilih atribut yang sepadan daripada **ID Pelanggan dalam hasil** yang mengenal pasti pelanggan dan pilih **Simpan**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Kaitkan hasil dengan anak tetingkap data Pelanggan.](media/intelligence-screen4-relatetocustomer.png "Kaitkan hasil dengan anak tetingkap data Pelanggan")
+   :::image type="content" source="media/intelligence-screen4-relatetocustomer.png" alt-text="Kaitkan hasil dengan anak tetingkap data Pelanggan.":::
 
-1. Anda akan melihat skrin **Aliran Kerja Disimpan** dengan butiran tentang aliran kerja tersebut.    
-   Jika anda mengkonfigurasi aliran kerja untuk saluran paip Azure Pembelajaran Mesin, Customer Insights melekat pada ruang kerja yang mengandungi saluran paip. Wawasan Pelanggan akan mendapat **peranan Penyumbang** pada ruang kerja Azure.
+   Skrin **Disimpan** Aliran Kerja memaparkan butiran tentang aliran kerja. Jika anda mengkonfigurasikan aliran kerja untuk saluran paip Azure Pembelajaran Mesin, Wawasan Pelanggan melekat pada ruang kerja yang mengandungi saluran paip. Wawasan Pelanggan akan mendapat **peranan Penyumbang** pada ruang kerja Azure.
 
-1. Pilih **Selesai**.
+1. Pilih **Selesai**. Halaman **Model** Tersuai dipaparkan.
 
-1. Anda kini boleh menjalankan aliran kerja daripada halaman **Model Tersuai**.
+1. Pilih elipsis menegak (&vellip;) untuk aliran kerja dan pilih **Jalankan**. Aliran kerja anda juga berjalan secara automatik dengan setiap [segar semula](schedule-refresh.md) berjadual.
 
-## <a name="edit-a-workflow"></a>Edit satu aliran kerja
+## <a name="manage-an-existing-workflow"></a>Menguruskan aliran kerja sedia ada
 
-1. **Pada halaman Model** Tersuai, pilih elipsis menegak (&vellip;) dalam lajur Tindakan **di** sebelah aliran kerja yang anda cipta sebelum ini dan pilih **Edit**.
+Pergi ke **model** > **Tersuai Kecerdasan** untuk melihat aliran kerja yang anda cipta.
 
-1. Anda boleh mengemas kini nama aliran kerja anda yang dikenali dalam medan **Nama paparan** tetapi anda tidak boleh mengubah perkhidmatan web atau talian paip yang dikonfigurasi. Pilih **Seterusnya**.
+Pilih aliran kerja untuk melihat tindakan yang tersedia.
 
-1. Untuk setiap **input** perkhidmatan Web, anda boleh mengemas kini Entiti **yang sepadan** daripada Wawasan Pelanggan. Kemudian pilih **Seterusnya**.
+- **Mengedit** aliran kerja
+- **Menjalankan** aliran kerja
+- [**Memadamkan**](#delete-a-workflow) aliran kerja
 
-1. Dalam langkah **Parameter Output Model**, tetapkan ciri berikut:
-      1. Masukkan output **Nama entiti** yang anda mahu hasil output talian paip mengalir masuk.
-      1. Pilih **Nama parameter storan data output** untuk talian paip ujian anda.
-      1. Pilih **Nama parameter Laluan Output** untuk talian paip ujian anda.
+### <a name="edit-a-workflow"></a>Edit satu aliran kerja
 
-1. Pilih atribut sepadan daripada senarai juntai bawah **ID Pelanggan dalam hasil** yang mengenal pasti pelanggan dan pilih **Simpan**.
-   Pilih atribut daripada output inferens dengan nilai yang serupa dengan lajur ID Pelanggan bagi entiti Pelanggan. Jika tidak mempunyai lajur sedemikian dalam set data anda, pilih atribut yang mengenal pasti baris secara unik.
+1. Pergi ke **Model** > **Tersuai Perisikan**.
 
-## <a name="run-a-workflow"></a>Jalankan aliran kerja
+1. Di sebelah aliran kerja yang ingin dikemas kini, pilih elipsis menegak (&vellip;) dan pilih **Edit**.
 
-1. **Pada halaman Model** Tersuai, pilih elipsis menegak (&vellip;) dalam lajur Tindakan **di** sebelah aliran kerja yang anda cipta sebelum ini.
+1. Ubah **Nama** paparan jika perlu dan pilih **Berikut**.
 
-1. Pilih **Jalankan**.
+1. Untuk setiap **input** perkhidmatan Web, kemas kini Entiti **yang** sepadan daripada Wawasan Pelanggan, jika perlu. Kemudian pilih **Seterusnya**.
 
-Aliran kerja anda juga berjalan secara automatik dengan setiap muat semula berjadual. Ketahui lebih lanjut tentang [menyediakan menyegarkan semula berjadual](schedule-refresh.md).
+1. Untuk **Parameter** Output Model, ubah mana-mana yang berikut:
+   - **Nama entiti** untuk hasil output saluran paip
+   - **Nama parameter** output storan data bagi saluran paip kelompok anda
+   - **Nama** parameter Laluan Output bagi saluran paip kelompok anda
 
-## <a name="delete-a-workflow"></a>Padam satu aliran kerja
+1. Tukar atribut yang sepadan daripada **ID Pelanggan dalam hasil** untuk mengenal pasti pelanggan. Pilih atribut daripada output inferens dengan nilai yang serupa dengan lajur ID Pelanggan bagi entiti Pelanggan. Jika anda tidak mempunyai lajur sedemikian dalam set data anda, pilih atribut yang mengenal pasti baris secara unik.
 
-1. **Pada halaman Model** Tersuai, pilih elipsis menegak (&vellip;) dalam lajur Tindakan **di** sebelah aliran kerja yang anda cipta sebelum ini.
+1. Pilih **Simpan**
 
-1. Pilih **Padam** dan sahkan pemadaman anda.
+### <a name="delete-a-workflow"></a>Padam satu aliran kerja
 
-Aliran kerja anda akan dipadamkan. [Entiti](entities.md) yang telah dicipta apabila anda mencipta aliran kerja berlanjutan dan boleh dilihat daripada halaman **Entiti**.
+1. Pergi ke **Model** > **Tersuai Perisikan**.
 
-## <a name="results"></a>Keputusan
+1. Di sebelah aliran kerja yang ingin dipadamkan, pilih elipsis menegak (&vellip;) dan pilih **Padam**.
 
-Hasil daripada aliran kerja disimpan dalam entiti yang dikonfigurasikan semasa fasa Parameter Output Model. Anda boleh mengakses data ini daripada [halaman entiti](entities.md) atau dengan [akses API](apis.md).
+1. Sahkan pemadaman anda.
+
+Aliran kerja anda akan dipadamkan. Entiti [yang](entities.md) dicipta apabila anda mencipta aliran kerja berterusan dan boleh dilihat daripada **halaman Entiti** > **Data**.
+
+## <a name="view-the-results"></a>Lihat keputusan
+
+Hasil daripada aliran kerja disimpan dalam nama entiti yang ditakrifkan untuk **Parameter** Output Model. Akses data ini daripada [**halaman** > **Entiti** Data](entities.md) atau dengan [akses](apis.md) API.
 
 ### <a name="api-access"></a>Akses API
 
@@ -132,18 +126,27 @@ Untuk pertanyaan OData khusus untuk mendapatkan data daripada entiti model tersu
 
 `https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
 
-1. Gantikan `<your instance id>` dengan ID persekitaran Customer Insights anda, yang anda dapati dalam bar alamat pelayar anda semasa mengakses Customer Insights.
+1. Gantikan `<your instance id>` dengan ID persekitaran Wawasan Pelanggan anda, yang dipaparkan dalam bar alamat pelayar anda semasa mengakses Wawasan Pelanggan.
 
-1. Gantikan `<custom model output entity>` dengan nama entiti yang anda berikan semasa langkah Parameter Output Model konfigurasi model tersuai.
+1. Gantikan `<custom model output entity>` dengan nama entiti yang anda berikan untuk **Parameter** Output Model.
 
-1. Gantikan `<guid value>` dengan ID Pelanggan yang anda mahu mengakses rekod. Anda biasanya boleh mencari ID ini pada [halaman profil pelanggan](customer-profiles.md) dalam medan CustomerID.
+1. Gantikan `<guid value>` dengan ID Pelanggan pelanggan yang ingin anda akses. ID ini dipaparkan pada [halaman](customer-profiles.md) profil pelanggan dalam medan Id Pelanggan.
 
 ## <a name="frequently-asked-questions"></a>Soalan Lazim
 
-- Mengapakah saya tidak dapat melihat talian paip saya apabila menyediakan aliran kerja model tersuai?    
+- Mengapakah saya tidak dapat melihat talian paip saya apabila menyediakan aliran kerja model tersuai?
   Isu ini sering disebabkan oleh isu konfigurasi dalam talian paip. Pastikan [parameter input dikonfigurasikan](azure-machine-learning-experiments.md#dataset-configuration) dan [parameter laluan dan storan data output](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) juga dikonfigurasikan.
 
-- Apakah makna ralat "Tidak dapat menyimpan aliran kerja kecerdasan"?    
+- Apakah makna ralat "Tidak dapat menyimpan aliran kerja kecerdasan"? 
   Pengguna biasanya melihat mesej ralat ini jika mereka tidak mempunyai kelayakan Pentadbir Akses Pengguna atau Pemilik di ruang kerja. Pengguna memerlukan keizinan yang lebih tinggi untuk mendayakan Customer Insights untuk memproses aliran kerja sebagai perkhidmatan dan bukannya menggunakan kelayakan pengguna untuk menjalankan aliran kerja yang seterusnya.
+
+- Adakah endpoint peribadi / pautan peribadi untuk aliran kerja model tersuai saya disokong?
+  Wawasan Pelanggan pada masa ini tidak menyokong titik akhir peribadi untuk model tersuai di luar kotak, tetapi penyelesaian manual tersedia. Sila hubungi sokongan untuk maklumat lanjut.
+
+## <a name="responsible-ai"></a>AI Yang Bertanggungjawab
+
+Ramalan menawarkan keupayaan untuk mencipta pengalaman pelanggan yang lebih baik, meningkatkan keupayaan perniagaan dan strim hasil. Kami amat mengesyorkan agar anda mengimbangkan nilai ramalan anda terhadap kesan yang telah diberikan dan bias yang mungkin diperkenalkan dengan cara yang beretika. Ketahui lebih lanjut tentang cara Microsoft [menangani AI Yang Bertanggungjawab](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Anda juga boleh mengetahui tentang [teknik dan proses untuk pembelajaran mesin yang bertanggungjawab](/azure/machine-learning/concept-responsible-ml) khusus kepada Pembelajaran Mesin Azure.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
