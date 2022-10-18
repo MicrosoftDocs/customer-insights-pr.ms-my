@@ -1,37 +1,39 @@
 ---
-title: Eksport segmen ke Braze (pratonton)
+title: Segmen eksport ke Braze (pratonton)
 description: Ketahui cara mengkonfigurasi sambungan dan eksport ke Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195118"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655302"
 ---
-# <a name="export-segments-to-braze-preview"></a>Eksport segmen ke Braze (pratonton)
+# <a name="export-segments-to-braze-preview"></a>Segmen eksport ke Braze (pratonton)
 
-Eksport segmen profil pelanggan bersatu ke Braze dan gunakannya untuk aktiviti pemasaran.
+Segmen eksport profil pelanggan bersatu ke Braze dan menggunakannya untuk aktiviti pemasaran.
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [Braze](https://www.braze.com/) dan kelayakan pentadbir yang sepadan.
+- [Akaun](https://www.braze.com/) Braze dan kelayakan pentadbir yang sepadan.
 - Kekunci [API Braze](https://www.braze.com/docs/api/basics/)
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- Titik akhir Braze REST [anda](https://www.braze.com/docs/api/basics/#api-definitions) 
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
 - Profil pelanggan bersatu dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel dan ID pelanggan Braze.
 
 ## <a name="known-limitations"></a>Had diketahui
 
 - Sehingga 1 juta profil pelanggan ke Braze, yang boleh mengambil masa sehingga 40 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Braze bergantung pada kontrak anda dengan Braze.
 - Segmen sahaja.
+- Azure Private Link tidak disokong untuk eksport Braze.
 
-## <a name="set-up-connection-to-braze"></a>Sediakan sambungan ke Braze
+## <a name="set-up-connection-to-braze"></a>Menyediakan sambungan kepada Braze
 
 [!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
@@ -43,7 +45,7 @@ Eksport segmen profil pelanggan bersatu ke Braze dan gunakannya untuk aktiviti p
 
 1. Pilih individu yang boleh menggunakan sambungan ini. Secara lalai, ia hanya pentadbir. Untuk maklumat lanjut, lihat [Benarkan penyumbang untuk menggunakan sambungan untuk eksport](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Berikan kekunci API Braze anda untuk terus log masuk.
+1. Berikan kunci Braze API anda untuk terus log masuk.
 
 1. [Semak privasi dan pematuhan](connections.md#data-privacy-and-compliance) data dan pilih **Saya bersetuju**.
 
@@ -61,13 +63,15 @@ Eksport segmen profil pelanggan bersatu ke Braze dan gunakannya untuk aktiviti p
 
 1. Pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada bahagian Braze. Hubungi pentadbir jika tiada sambungan tersedia.
+1. **Dalam medan Sambungan untuk eksport**, pilih sambungan daripada seksyen Braze. Hubungi pentadbir jika tiada sambungan tersedia.
+
+1. Masukkan Titik Akhir REST anda ke dalam medan Nama hos dalam **format berikut:**.`rest.iad-03.braze.com`
 
 1. Masukkan nama untuk eksport.
 
-1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. **Dalam medan ID** Pelanggan, pilih medan yang mewakili ID Braze pelanggan. Segmen dalam Braze akan dicipta dengan nama segmen yang sama seperti dalam Dynamics 365 Customer Insights. Anda boleh memilih lebih banyak, medan pilihan untuk memadankan data.
+1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan. **Dalam medan ID Pelanggan, pilih medan yang mewakili ID** Braze pelanggan. Segmen dalam Braze akan dicipta dengan nama segmen yang sama seperti dalam Dynamics 365 Customer Insights. Anda boleh memilih lebih banyak, medan pilihan untuk memadankan data.
 
-1. Pilih entiti atau segmen yang anda mahu eksport.
+1. Pilih entiti atau segmen yang ingin anda eksport.
 
 1. Pilih **Simpan**.
 
