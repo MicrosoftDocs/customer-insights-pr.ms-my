@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196313"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724695"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Eksport segmen ke Campaign Monitor (pratonton)
 
@@ -21,15 +21,16 @@ Eksport segmen profil pelanggan yang disatukan ke Campaign Monitor dan gunakanny
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [Monitor](https://www.campaignmonitor.com/) Kempen dan kelayakan pentadbir yang sepadan.
+- [Akaun](https://www.campaignmonitor.com/) Monitor Kempen dan kelayakan pentadbir yang sepadan.
 - [ID Senarai Monitor Kempen](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
 - Kunci [API](https://www.campaignmonitor.com/api/getting-started/) Dijana daripada **Tetapan** Akaun dalam Monitor Kempen untuk mendapatkan ID senarai API.
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Sehingga 1 juta profil pelanggan setiap eksport ke Monitor Kempen, yang boleh mengambil masa sehingga 20 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Monitor Kempen bergantung pada kontrak anda dengan Monitor Kempen.
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
+- Sehingga 1 juta profil pelanggan setiap eksport ke Campaign Monitor, yang boleh mengambil masa sehingga 20 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Campaign Monitor bergantung pada kontrak anda dengan Campaign Monitor.
 - Segmen sahaja.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Sediakan sambungan ke Campaign Monitor

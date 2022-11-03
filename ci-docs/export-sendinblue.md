@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196957"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724905"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Eksport segmen pada Sendinblue (pratonton)
 
@@ -21,14 +21,15 @@ Eksport segmen profil pelanggan disatukan untuk menjana kempen, menyediakan pema
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [Sendinblue](https://www.sendinblue.com/) dan kelayakan pentadbir yang sesuai.
-- Kekunci [API SendinBlue](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
-- Senarai sedia ada dalam Sendinblue dan ID yang sepadan.
+- A [Sendinblue akaun](https://www.sendinblue.com/) dan kelayakan pentadbir yang sepadan.
+- A [SendinBlue API kunci](https://developers.sendinblue.com/docs/getting-started#:~:text=Get%20your%20API%20key&text=You%20can%20create%20one%20from,your%20settings%20This%20API%20key).
+- Senarai sedia ada di Sendinblue dan ID yang sepadan.
 - [Segmen yang dikonfigurasikan](segments.md).
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 1 juta profil pelanggan setiap eksport ke Sendinblue, yang boleh mengambil masa sehingga 90 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Sendinblue bergantung pada kontrak anda dengan Sendinblue.
 - Segmen sahaja.
 

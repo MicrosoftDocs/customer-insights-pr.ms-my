@@ -1,5 +1,5 @@
 ---
-title: Eksport segmen ke Facebook Pengurus Iklan (pratonton) (mengandungi video)
+title: Segmen eksport ke Facebook Pengurus Iklan (pratonton) (mengandungi video)
 description: Ketahui cara untuk mengkonfigurasikan sambungan dan Facebook Ads Manager.
 ms.date: 07/25/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195025"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724615"
 ---
-# <a name="export-segments-to-facebook-ads-manager-preview"></a>Eksport segmen ke Facebook Pengurus Iklan (pratonton)
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Segmen eksport ke Facebook Pengurus Iklan (pratonton)
 
 Eksport segmen profil pelanggan disatukan ke Pengurus Iklan Facebook untuk mencipta kempen pada Facebook dan Instagram.
 
@@ -23,16 +23,18 @@ Eksport segmen profil pelanggan disatukan ke Pengurus Iklan Facebook untuk menci
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- [Facebook Akaun](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) Iklan yang [Facebook termasuk Akaun Perniagaan](https://business.facebook.com/).
+- [Facebook Akaun Iklan yang merangkumi](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) Akaun [Facebook Perniagaan](https://business.facebook.com/).
 - Keistimewaan pentadbir pada [Facebook Akaun Iklan](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Terma Khalayak Tersuai perlu diterima oleh pengguna yang menyediakan sambungan dalam Wawasan Pelanggan.
 
 ## <a name="known-limitations"></a>Had diketahui
 
 - Sehingga 10 juta profil pelanggan setiap eksport ke Facebook Pengurus Iklan, yang boleh mengambil masa sehingga 90 minit.
 - Segmen sahaja.
-- Facebook *jenis senarai* pelanggan dalam [khalayak](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) tersuai sahaja.
+- Facebook Penyepaduan iklan tidak menyokong pengguna dengan lebih daripada 25 akaun iklan.
+- Facebook *Senarai* pelanggan taipkan [khalayak](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) tersuai sahaja.
   > [!NOTE]
-  > Dalam sesetengah kes, anda mungkin melihat khalayak tersuai bagi pelbagai jenis dalam senarai juntai bawah. Jika anda memilih jenis lain selain daripada *senarai* pelanggan, eksport gagal.
+  > Dalam sesetengah kes, anda mungkin melihat khalayak tersuai pelbagai jenis dalam senarai juntai bawah. Jika anda memilih jenis lain selain *daripada senarai* pelanggan, eksport gagal.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Sediakan sambungan ke Facebook Ads Manager
 
@@ -68,11 +70,11 @@ Eksport segmen profil pelanggan disatukan ke Pengurus Iklan Facebook untuk menci
 
 1. Pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada bahagian Facebook Pengurus Iklan. Hubungi pentadbir jika tiada sambungan tersedia.
+1. **Dalam medan Sambungan untuk eksport**, pilih sambungan daripada Facebook bahagian Pengurus Iklan. Hubungi pentadbir jika tiada sambungan tersedia.
 
 1. Masukkan nama untuk eksport.
 
-1. Dalam medan **Sambungkan data**, pilih **E-mel**, **Nama dan alamat** atau **Telefon** untuk dihantar kepada Facebook Pengurus Iklan.
+1. Dalam medan Sambungkan **data**, pilih **E-mel**, **Nama dan alamat** atau **Telefon** untuk dihantar kepada Facebook Pengurus Iklan.
 
 1. Petakan atribut yang sepadan daripada entiti pelanggan disatukan anda untuk pengecam kunci yang dipilih.
    > [!TIP]

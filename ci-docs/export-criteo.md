@@ -1,6 +1,6 @@
 ---
-title: Eksport segmen ke Criteo (pratonton)
-description: Ketahui cara mengkonfigurasi sambungan dan eksport ke Criteo.
+title: Segmen eksport ke Criteo (pratonton)
+description: Ketahui cara mengkonfigurasi sambungan dan mengeksport ke Criteo.
 ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,29 +8,30 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195347"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724800"
 ---
-# <a name="export-segments-to-criteo-preview"></a>Eksport segmen ke Criteo (pratonton)
+# <a name="export-segments-to-criteo-preview"></a>Segmen eksport ke Criteo (pratonton)
 
 Eksport segmen profil pelanggan bersatu untuk menjana kempen, menyediakan pemasaran e-mel dan menggunakan kumpulan pelanggan tertentu dengan Criteo.
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [penargetan](https://www.criteo.com/login/) Semula Criteo Dynamics dan kelayakan pentadbir yang sepadan.
+- [Akaun](https://www.criteo.com/login/) Criteo Dynamics Retargeting dan kelayakan pentadbir yang sepadan.
 - [Segmen yang dikonfigurasikan](segments.md).
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 1 juta profil pelanggan setiap eksport ke Criteo, yang boleh mengambil masa sehingga 30 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Criteo bergantung pada kontrak anda dengan Criteo.
 - Segmen sahaja.
 
-## <a name="set-up-connection-to-criteo"></a>Sediakan sambungan ke Criteo
+## <a name="set-up-connection-to-criteo"></a>Menyediakan sambungan kepada Criteo
 
 [!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
@@ -46,7 +47,7 @@ Eksport segmen profil pelanggan bersatu untuk menjana kempen, menyediakan pemasa
 
 1. Pilih **Sambung** untuk memulakan sambungan.
 
-1. Pilih **Sahkan dengan Criteo** dan berikan nama pengguna dan kelayakan Pentadbir anda untuk Criteo.
+1. Pilih **Sahkan dengan Criteo dan berikan nama pengguna dan kelayakan Pentadbir anda untuk Criteo**.
 
 1. Pilih **Tambah diri anda sebagai pengguna eksport** dan berikan kelayakan Customer Insights anda.
 
@@ -60,13 +61,11 @@ Eksport segmen profil pelanggan bersatu untuk menjana kempen, menyediakan pemasa
 
 1. Pilih **Tambah eksport**.
 
-1. Dalam medan **Sambungan untuk eksport**, pilih sambungan daripada seksyen Criteo. Hubungi pentadbir jika tiada sambungan tersedia.
+1. **Dalam medan Sambungan untuk eksport**, pilih sambungan daripada seksyen Criteo. Hubungi pentadbir jika tiada sambungan tersedia.
 
 1. Masukkan nama untuk eksport.
 
 1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan.
-
-1. Secara pilihan, eksport **ID** pengiklan dan **Nama**.
 
 1. Pilih segmen yang ingin anda eksport.
 

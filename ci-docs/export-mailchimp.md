@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196865"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725043"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Eksport segmen ke Mailchimp (pratonton)
 
@@ -21,13 +21,14 @@ Segmen eksport profil pelanggan disatukan ke Mailchimp untuk mencipta surat beri
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [Mailchimp](https://mailchimp.com/) dan kelayakan pentadbir yang sepadan.
-- [Penonton sedia ada dalam Mailchimp](https://mailchimp.com/help/create-audience/) dan ID khalayak yang [sepadan](https://mailchimp.com/help/find-audience-id/).
+- [Akaun](https://mailchimp.com/) Mailchimp dan kelayakan pentadbir yang sepadan.
+- [Khalayak sedia ada di Mailchimp](https://mailchimp.com/help/create-audience/) dan ID khalayak yang [sepadan](https://mailchimp.com/help/find-audience-id/).
 - [Segmen yang dikonfigurasikan](segments.md).
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 1 juta profil pelanggan setiap eksport ke Mailchimp, yang boleh mengambil masa sehingga tiga jam. Bilangan profil pelanggan yang boleh anda eksport ke Mailchimp bergantung pada kontrak anda dengan Mailchimp.
 - Segmen sahaja.
 

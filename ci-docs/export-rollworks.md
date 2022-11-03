@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195623"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725136"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Eksport segmen ke RollWorks (pratonton)
 
@@ -23,11 +23,12 @@ Eksport segmen profil pelanggan yang disatukan ke RollWorks dan gunakannya untuk
 
 - Akaun [RollWorks](https://www.rollworks.com/) dan kelayakan pentadbir yang sepadan.
 - [ID Pengiklan RollWorks](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 250,000 profil pelanggan setiap eksport ke RollWorks, yang boleh mengambil masa sehingga 10 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke RollWorks bergantung pada kontrak anda dengan RollWorks.
 - Segmen sahaja.
 

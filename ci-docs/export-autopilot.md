@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195071"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724768"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Eksport segmen ke Autopilot (pratonton)
 
@@ -23,11 +23,12 @@ Eksport segmen bagi profil pelanggan disatukan untuk Autopilot dan gunakannya un
 
 - Akaun [Autopilot](https://www.autopilothq.com/) dan kelayakan pentadbir yang sepadan.
 - Kekunci [API Autopilot](https://autopilot.docs.apiary.io/#)
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 100,000 profil pelanggan setiap eksport ke Autopilot, yang boleh mengambil masa sehingga beberapa jam untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Autopilot bergantung pada kontrak anda dengan Autopilot.
 - Segmen sahaja.
 
@@ -67,9 +68,9 @@ Eksport segmen bagi profil pelanggan disatukan untuk Autopilot dan gunakannya un
 
 1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan.
 
-1. Secara pilihan, eksport medan lain seperti **nama pertama** dan **nama akhir**.
+1. Secara pilihan, eksport bidang lain seperti **nama pertama** dan **nama akhir**.
 
-1. Pilih segmen yang anda ingin eksport yang mematuhi had yang diketahui.
+1. Pilih segmen yang ingin anda eksport mematuhi had yang diketahui.
 
 1. Pilih **Simpan**.
 

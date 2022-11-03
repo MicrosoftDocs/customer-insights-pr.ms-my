@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196589"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725089"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Eksport segmen ke Google ads (pratonton)
 
@@ -21,16 +21,17 @@ Eksport segmen profil pelanggan disatukan pada senarai khalayak Google Ads dan g
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [Google Ads](https://ads.google.com/) dan kelayakan pentadbir yang sepadan.
+- Akaun [Google](https://ads.google.com/) Ads dan kelayakan pentadbir yang sepadan.
 - [ID pelanggan Google Ads](https://support.google.com/google-ads/answer/1704344).
-- Keperluan [Dasar](https://support.google.com/adspolicy/answer/6299717) Padanan Pelanggan dipenuhi.
+- Keperluan [Polisi](https://support.google.com/adspolicy/answer/6299717) Padanan Pelanggan dipenuhi.
 - Keperluan [saiz](https://support.google.com/google-ads/answer/7558048) senarai pemasaran semula dipenuhi.
-- [Segmen yang dikonfigurasikan](segments.md).
-- Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel, telefon, ID pengiklan mudah alih, ID pengguna pihak ketiga atau alamat.
+- [Segmen yang](segments.md) dikonfigurasikan.
+- Profil pelanggan yang disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel, telefon, ID pengiklan mudah alih, ID pengguna pihak ketiga atau alamat.
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Eksport sehingga 1 juta profil pelanggan setiap eksport ke Google Ads, yang boleh mengambil masa sehingga 30 minit untuk diselesaikan kerana batasan di pihak penyedia.
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
+- Eksport sehingga 1 juta profil pelanggan setiap eksport ke Google Ads, yang boleh mengambil masa sehingga 30 minit untuk diselesaikan kerana batasan pada bahagian penyedia.
 - Segmen sahaja.
 - Perlawanan dalam Google Ads boleh mengambil masa sehingga 48 jam.
 
@@ -68,9 +69,9 @@ Eksport segmen profil pelanggan disatukan pada senarai khalayak Google Ads dan g
 
 1. Masukkan nama untuk eksport.
 
-1. Pilih sama ada untuk menggunakan khalayak sedia ada atau mencipta yang baharu:
+1. Pilih sama ada untuk menggunakan khalayak sedia ada atau mencipta khalayak baharu:
    - Untuk mengemas kini khalayak Google Ads sedia ada, masukkan ID [khalayak Google Ads anda](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
-   - Untuk mencipta khalayak baharu, biarkan medan ID Khalayak Google kosong. Wawasan Pelanggan akan membuat khalayak baharu secara automatik dalam akaun Google Ads anda dan menggunakan nama segmen yang dieksport.
+   - Untuk membuat khalayak baharu, biarkan medan ID Khalayak Google kosong. Wawasan Pelanggan akan membuat khalayak baharu secara automatik dalam akaun Google Ads anda dan menggunakan nama segmen yang dieksport.
 
 1. **Dalam seksyen Pemadanan** data, pilih satu atau lebih medan data untuk dieksport dan pilih medan yang mewakili medan data yang sepadan dalam Wawasan Pelanggan.
 

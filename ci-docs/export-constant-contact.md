@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196497"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724512"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Eksport segmen ke Kenalan Pemalar (pratonton)
 
@@ -21,13 +21,14 @@ Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakanny
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [Constant Contact](https://www.constantcontact.com/account-home) dan kelayakan pentadbir yang sepadan.
+- [Akaun](https://www.constantcontact.com/account-home) Hubungan Malar dan kelayakan pentadbir yang sepadan.
 - [ID Senarai Kenalan Malar](https://app.constantcontact.com/pages/contacts/ui#lists). Buka senarai dalam Constant Contact untuk mencari ID senarai dalam URL.
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 1 juta profil pelanggan setiap eksport ke Constant Contact, yang boleh mengambil masa sehingga satu jam untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Constant Contact bergantung pada kontrak anda dengan Constant Contact.
 - Segmen sahaja.
 
@@ -37,7 +38,7 @@ Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakanny
 
 1. Pergi ke **Pentadbir** > **Sambungan**.
 
-1. Pilih **Tambah sambungan** dan pilih **Kenalan Malar**.
+1. Pilih **Tambah sambungan** dan pilih **Constant Contact**.
 
 1. Berikan sambungan anda nama yang dikenali dalam medan **Nama paparan**. Nama dan jenis sambungan menerangkan sambungan ini. Kami mengesyorkan agar anda memilih nama yang menerangkan tujuan dan sasaran sambungan.
 
@@ -65,7 +66,7 @@ Eksport segmen profil pelanggan yang disatukan ke Constant Contact dan gunakanny
 
 1. Masukkan nama untuk eksport.
 
-1. Masukkan ID **Senarai Kenalan Berterusan anda**.
+1. Masukkan ID **Senarai Kenalan Malar anda**.
 
 1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655302"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725227"
 ---
 # <a name="export-segments-to-braze-preview"></a>Segmen eksport ke Braze (pratonton)
 
@@ -29,6 +29,7 @@ Segmen eksport profil pelanggan bersatu ke Braze dan menggunakannya untuk aktivi
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 1 juta profil pelanggan ke Braze, yang boleh mengambil masa sehingga 40 minit untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport ke Braze bergantung pada kontrak anda dengan Braze.
 - Segmen sahaja.
 - Azure Private Link tidak disokong untuk eksport Braze.

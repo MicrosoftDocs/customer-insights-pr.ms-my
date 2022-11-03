@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196175"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725181"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Eksport segmen ke Omnisend (pratonton)
 
@@ -23,11 +23,12 @@ Eksport segmen profil pelanggan yang disatukan ke Omnisend dan gunakan segmen te
 
 - Akaun [Omnisend](https://www.omnisend.com/) dan kelayakan pentadbir yang sepadan.
 - Kekunci [API Omnisend](https://support.omnisend.com/en/articles/1061890-generating-api-key).
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
 - Profil pelanggan disatukan dalam segmen yang dieksport mengandungi medan yang mewakili alamat e-mel.
 
 ## <a name="known-limitations"></a>Had diketahui
 
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
 - Sehingga 1 juta profil pelanggan setiap eksport ke Omnisend, yang boleh mengambil masa sehingga empat jam untuk diselesaikan. Bilangan profil pelanggan yang boleh anda eksport kepada Omnisend bergantung pada kontrak anda dengan Omnisend.
 - Segmen sahaja.
 
@@ -67,7 +68,7 @@ Eksport segmen profil pelanggan yang disatukan ke Omnisend dan gunakan segmen te
 
 1. Dalam bahagian **Pemadanan data** dalam medan **E-mel**, pilih medan yang mewakili alamat e-mel pelanggan.
 
-1. Secara pilihan, eksport **nama pertama**, **nama akhir**, Alamat **,** **Negara / Wilayah**, Negeri **,** **Bandar**, dan **Poskod** untuk membuat e-mel yang lebih diperibadikan. Pilih **Tambah atribut** untuk memetakan medan ini.
+1. Secara pilihan, eksport **nama pertama, nama akhir**, **Alamat**, Negara/Wilayah **, Negeri**, **·** **Bandar** dan **Kod** **Pos untuk mencipta e-mel yang lebih diperibadikan.** Pilih **Tambah atribut** untuk memetakan medan ini.
 
 1. Pilih segmen yang ingin anda eksport.
 

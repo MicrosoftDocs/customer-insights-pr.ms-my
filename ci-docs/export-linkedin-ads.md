@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ms-MY
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304714"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725319"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Eksport segmen ke LinkedIn Ads (pratonton)
 
@@ -21,14 +21,15 @@ Eksport segmen profil pelanggan yang disatukan kepada LinkedIn Ads untuk mencipt
 
 ## <a name="prerequisites"></a>Prasyarat
 
-- Akaun [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) dan bukti kelayakan pentadbir yang sepadan.
+- [LinkedIn Campaign Manager Akaun](https://business.linkedin.com/marketing-solutions/ads) dan kelayakan pentadbir yang sepadan.
 - ID [LinkedIn Campaign Manager Akaun](https://www.linkedin.com/help/lms/answer/a424270).
-- [Segmen yang](segments.md) dikonfigurasikan dalam Wawasan Pelanggan.
-- Segmen yang dieksport memerlukan sekurang-kurangnya satu bidang tertentu bergantung sama ada anda memilih [penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) kenalan atau [penyasaran](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) syarikat di LinkedIn. Medan yang mungkin disenaraikan dalam **langkah pemadanan** Data apabila [mengkonfigurasi eksport](#configure-an-export).
+- [Segmen](segments.md) yang dikonfigurasikan dalam Wawasan Pelanggan.
+- Segmen yang dieksport memerlukan sekurang-kurangnya satu bidang tertentu bergantung sama ada anda memilih [penyasaran kenalan atau](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) penyasaran [syarikat](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) di LinkedIn. Medan yang mungkin disenaraikan dalam **Langkah pemadanan** data apabila [mengkonfigurasi eksport](#configure-an-export).
 
 ## <a name="known-limitations"></a>Had diketahui
 
-- Sehingga 100,000 profil pelanggan setiap eksport ke Iklan LinkedIn, yang boleh mengambil masa sehingga 10 minit untuk diselesaikan.
+- Pautan peribadi dalam kombinasi dengan Bawa storan anda sendiri (BYOS) tidak disokong.
+- Sehingga 100,000 profil pelanggan setiap eksport ke LinkedIn Ads, yang boleh mengambil masa sehingga 10 minit untuk diselesaikan.
 - Segmen sahaja. Segmen mesti mengandungi sekurang-kurangnya 300 profil unik.
 
 ## <a name="set-up-connection-to-linkedin-ads"></a>Menyediakan sambungan kepada Iklan LinkedIn
@@ -71,7 +72,7 @@ Eksport segmen profil pelanggan yang disatukan kepada LinkedIn Ads untuk mencipt
 
 1. Dalam bahagian **Pemadanan Data**, untuk penyasaran kenalan, pilih sekurang-kurangnya satu medan yang mewakili alamat e-mel pelanggan, ID Iklan Apple, ID Iklan Google, ID Pengguna Google atau nama pertama dan akhir. Jika anda memilih penyasaran syarikat, pilih sekurang-kurangnya satu medan yang mewakili nama syarikat, domain e-mel, URL Halaman LinkedIn, simbol Stock atau Tapak Web.
 
-1. Secara pilihan, tambahkan medan untuk menentukan eksport anda dengan lebih lanjut. Pilih **Tambah atribut** untuk memetakan medan ini.
+1. Secara pilihan, tambah medan untuk menentukan eksport anda dengan lebih lanjut. Pilih **Tambah atribut** untuk memetakan medan ini.
 
 1. Pilih segmen yang ingin anda eksport. Matched audiences dalam LinkedIn Campaign Manager akan dicipta secara automatik dengan nama segmen yang anda pilih untuk dieksport. Setiap segmen akan menghasilkan matched audiences yang berasingan.
 
